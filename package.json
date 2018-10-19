@@ -1,0 +1,37 @@
+{
+  "name": "v5-playground",
+  "version": "1.0.0",
+  "description": "A basic playground with a website attached to see results",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XavierUniversity/v5-playground.git"
+  },
+  "author": "Xavier University",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XavierUniversity/v5-playground/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-includes": "latest",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-newer": "^1.2.0",
+    "grunt-postcss": "^0.8.0",
+    "jshint-stylish": "^2.2.1"
+  },
+  "homepage": "https://github.com/XavierUniversity/v5-playground#readme"
+}

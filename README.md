@@ -22,3 +22,33 @@ piece called HTML includes. No reason to have this run PHP as it's just a playgr
 ## Getting started
 
 Clone the repository, `npm start` should get it rolling.
+
+## Where to put things
+
+### Stylesheets 
+
+All CSS files should live within the `src/css` directory aligned with where it belongs in the structure and written with `scss` syntax.
+
+### JavaScript
+
+ALL JS files should live within the `src/js` directory and broken down into various components. We will use grunt
+to lint, concatenate and minify, as needed.
+
+### HTML Files
+
+All HTML files should live within the `src/html` directory. Files can be written as independent pieces
+and then included onto various pages, as needed. HTML Includes does *not* include the ability to process
+variables.
+
+Files in the `html` root will be rendered as actual pages. Files in `includes` will not.
+
+### Images 
+
+Images for production use belong in the `src/images` folder, and should be semantically named. All of these
+images will be processed via `imagemin` giving us a lighter image footprint. 
+
+## Viewing the playground
+
+Everything we do can be run in the web browser, via browsersync. But it can also be viewed on GitHub pages.
+This is set up through the docs folder. All of the HTML files will render out at [xavieruniversity.github.io/v5-playground](https://xavieruniversity.github.io/v5-playground/).
+

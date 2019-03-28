@@ -1,0 +1,10 @@
+.c-divider{
+  background: white;
+  height: 0.15rem;
+  width: 100%;
+  display: block;
+  border:none;
+  &--accent{
+    background: $accent;
+  }
+}

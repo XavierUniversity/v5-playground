@@ -1,0 +1,35 @@
+// Headings
+$heading-font-color:                                $font-color;
+$heading-font-weight:                               300;
+$heading-font-family:                               $font-family;
+$heading-line-height:                               1.2;
+
+// Mobile heading font-size
+$h1-mobile:                                         28px;
+$h2-mobile:                                         24px;
+$h3-mobile:                                         20px;
+$h4-mobile:                                         18px;
+$h5-mobile:                                         16px;
+
+// Heading font size
+$h1:                                                36px;
+$h2:                                                32px;
+$h3:                                                28px;
+$h4:                                                24px;
+$h5:                                                20px;
+
+h1{ @include font-size($h1-mobile, $heading-line-height); }
+h2{ @include font-size($h2-mobile, $heading-line-height); }
+h3{ @include font-size($h3-mobile, $heading-line-height); }
+h4{ @include font-size($h4-mobile, $heading-line-height); }
+h5{ @include font-size($h5-mobile, $heading-line-height); }
+
+@include for-size("desktop-up"){
+  h1{ @include font-size($h1); }
+  h2{ @include font-size($h2, $heading-line-height); }
+  h3{ @include font-size($h3, $heading-line-height); }
+  h4{ @include font-size($h4, $heading-line-height); }
+  h5{ @include font-size($h5, $heading-line-height); }  
+}
+
+p{ @include font-size(16px); }

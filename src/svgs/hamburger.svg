@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="16px" viewBox="0 0 32 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Menu</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1315.000000, -59.000000)" fill="#FEFEFE">
+            <g id="Hamburger-Menu" transform="translate(1315.000000, 59.000000)">
+                <g>
+                    <polygon id="Fill-1" points="0.918 1.90816 31.918 1.90816 31.918 0.30976 0.918 0.30976"></polygon>
+                    <polygon id="Fill-2" points="0.918 15.77616 31.918 15.77616 31.918 14.17776 0.918 14.17776"></polygon>
+                    <polygon id="Fill-3" points="0.918 8.84176 31.918 8.84176 31.918 7.24336 0.918 7.24336"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

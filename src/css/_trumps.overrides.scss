@@ -1,0 +1,13 @@
+
+// For the toggles
+[data-state=is-hidden]{
+  display:none;
+}
+[data-state=is-visible]{
+  display: inherit;
+}
+
+.sr-only{
+  position: absolute!important;
+  clip: rect(1px,1px,1px,1px);
+}

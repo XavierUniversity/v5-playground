@@ -1,0 +1,47 @@
+///** Global
+//  * ====================
+//  *
+//  *
+//  * All variables and most of the configuration is defined here. */
+$base-font-size:        16px !default;
+$base-line-height:      24px !default;
+$base-text-color:       #333 !default;
+$base-background-color: #fff !default;
+$base-fr-color:         #005639 !default;
+$base-fr-color-border:  #002317 !default;
+
+//* Breakpoints -- These values should be based on OUR designs and needs...
+// * Names
+//   - phone-only
+//   - tablet-portrait-up
+//   - tablet-landscape-up
+//   - desktop-up
+//   - big-desktop-up */
+$phone-upper-boundary:                              37.5em;     // ~ 600px
+$tablet-portrait-upper-boundary:                    56.25em;    // ~ 900px
+$tablet-landscape-upper-boundary:                   75em;       // ~ 1200px
+$desktop-upper-boundary:                            112.5em;    // ~ 1800px
+
+// Colors
+$background:                                        white;
+$primary:                                           #0c2340;
+$secondary:                                         #9ea3a3;
+$accent:                                            darken(#0099cc, 8%);
+$alternate-background:                              '';
+$link-color:                                        $primary;
+$link-hover-color:                                  darken($link-color, 15%);
+
+// Typography
+$font-size:                                         1rem;       // 1rem     == 16px;
+$font-style:                                        normal;
+$font-variant:                                      normal;
+$font-weight:                                       200;
+$font-color:                                        #333333;
+$font-family:                                       "Frutiger W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$line-height:                                       1.6;
+
+// Padding //
+$padding:                                           0.5rem;     // 0.5rem   == 8px
+$margin:                                            1.5rem;     // 1.5rem   == 24px
+$content-padding:                                   3.75rem 0;  // 3.75     == 60px
+$content-padding-mobile:                            1.875rem 0; // 1.875rem == 30px

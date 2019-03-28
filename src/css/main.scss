@@ -1,0 +1,24 @@
+///**
+//  * Main.scss
+//  * ====================
+//  *
+//  * Contains all of the Imports, but no CSS.
+//  * Xavier University Web Services
+//**/
+
+// 
+
+@import 'settings.global';
+
+@import 'tools.mixins';
+@import 'generic.sanitize';
+
+@import 'objects.buttons';
+
+@import 'components.typography';
+@import 'components.header';
+// @import 'components.slideout';
+// @import 'components.buttons';
+// @import 'components.divider';
+// Overrides
+@import 'trumps.overrides';

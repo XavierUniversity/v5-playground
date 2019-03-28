@@ -1,0 +1,33 @@
+.c-btn {
+  &--header {
+    color: white;
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    border-radius: 0.25rem;
+    
+    &:not(:last-child){
+      @include margin(null, 1.5rem, null, null);
+    }
+    
+    &:hover, &:focus, &:active {
+      background: white;
+      color: $primary;
+    }
+  }
+}
+
+/*SVG ICON SYSTEM*/
+.icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.icon svg, .icon img {
+    height: 1em;
+    width: 1em;
+    fill: currentColor;
+}
+
+.icon.baseline svg, .icon img {
+    top: .125em;
+    position: relative;
+}

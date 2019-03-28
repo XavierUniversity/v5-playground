@@ -1,0 +1,121 @@
+:root {
+  --slideout-width: 100vw;
+  --slideout-padding: 3rem;
+}
+
+@include for-size("tablet-landscape-up"){
+  :root {
+    --slideout-width: 30vw;
+  }  
+}
+
+
+.slideout{
+  &[data-state=is-hidden]{
+    background: none;
+  }
+  &[data-state=is-visible] {
+    background: $primary;
+    width: var(--slideout-width);
+    height: 100vh;
+    position: fixed;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    @include padding(null, var(--slideout-padding), null, var(--slideout-padding));
+    .c-btn--close{
+      display: block;
+    }
+  }
+  &--right{
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  &__search{
+    @include margin(5rem, null, null, null);
+  }
+  
+}
+
+.c-btn--close{
+  position: absolute;
+  top: 0;
+  right: var(--slideout-padding);
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: white;
+  display: none;
+  @include padding(1rem, 1rem, 1rem, 1rem);
+  &:hover, &:active, &:focus{
+    outline: none;
+    background: white;
+    color: $primary;
+  }
+}
+
+.c-btn--nav{
+  float: right;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.form{
+  &__input{
+    width: 100%;
+    box-shadow: none;
+    border: solid 1px $accent;
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+  }
+  &__btn--search{
+    background-color: $accent;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+  }
+}
+
+.nav-list{
+  $self: &;
+  padding: 0;
+  @include margin(1rem, null, null, null);
+  width: 100%;
+  font-weight: 200;
+  @include font-size(14px);
+  &__item{
+    text-transform: uppercase;
+    border-bottom: solid 0.15rem $accent;
+    @include padding(1rem, 0.5rem, 1rem, 0.5rem);
+    @include margin(0.5rem, null, 0.5rem, null);
+    
+    &:first-child{
+      border-top: solid 0.15rem $accent;
+    }
+  }
+  
+  &__link{
+    color: white;
+    text-decoration: none;
+    
+    &:hover, &:focus, &:active{
+      text-decoration: underline;
+    }
+  }
+  
+  &__child{
+    padding: 0;
+    margin: 0;
+    #{ $self }__item{
+      font-style: italic; 
+      text-transform: none;
+      @include padding(0.25rem, 0.15rem, 0.25rem, 0.15rem);
+      @include margin(0, 1rem, 0, 1rem);
+      &:first-child{
+        border-top: none !important;
+      }
+    }
+  }
+  
+}

@@ -26,6 +26,7 @@ module.exports = function (grunt) {
       		environment:  'development',
       		outputStyle:  'nested',
       		imagesDir:    'docs/images',
+      		fontsDir:     'docs/fonts',
       		relativeAssets: true
     		}
   		}

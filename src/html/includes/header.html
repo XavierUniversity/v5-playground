@@ -1,32 +1,29 @@
+<!-- Skip Header & Navigation -->
 <nav aria-label="Skip Link">
-  <a id="skip-nav" class="skip-nav sr-only" href="#main-content">Skip to content</a>
+  <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
 </nav>
-<header class="site-header" id="site-header">
-  <a class="branding" href="/">
-    <div class="sr-only">Xavier University</div>
-    include "logo.html"
-  </a>
-  
-  include "header.ui.html"
-  
-  <div class="c-navigation" id="navPanel" role="tabpanel" data-state="is-visible">
-  <!-- This closes the navigation panel button -->
-    <button class="o-btn c-btn--close" data-toggle="#navPanel"><svg class="close" width="26" height="26"><use xlink:href="#xu-close" /></svg></button>
-    
-    include "header.form.html"
-    
-    <nav class="navigation-list" id="">
-      <ul class="o-nav-list c-header-nav">
-        <li class=""><a class="" href="">Navigation Item</a>
-          <ul class="o-nav-list c-header-nav c-header-nav--child">
-            <li class=""><a class="" href="#"></a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    
+<header class="header">
+  <!-- Branding == Logo and Navigation -->
+  <div class="branding">
+    <a href="/" class="branding__link">
+      <span class="branding__text sr-only">Xavier University</span>
+      <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+    </a>
   </div>
-  
+  <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
+  <nav class="navigation" aria-label="">
+    <ul class="list--inline cta-nav">
+      <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Apply</a></li>
+      <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Visit</a></li>
+      <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Request Info</a></li>
+    </ul>
+  </nav>
+  <!-- UI Elements == Search and Menu -->
+  <div class="header-ui">
+    <a href="#" class="header__link o-btn header-ui__btn">Search<svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+    <button class="header__link o-btn header-ui__btn">Menu<svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
+  <!-- Hidden Navigation == Close Button, Search Form, Nav Lists, Audience Lists, Main Navigation vertical layout -->
+</header>
   
 <!--
   <div class="slideout slideout--right" id="site-header__nav" role="tabpanel" data-state="is-hidden">

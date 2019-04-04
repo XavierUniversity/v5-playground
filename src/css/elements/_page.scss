@@ -1,6 +1,7 @@
 html{
-  @include font-size(14px);
+  @include font-size(16px);
   overflow-y: scroll;
   min-height: 100%;
   font-family: $font-family;
+  font-weight: 200;
 }

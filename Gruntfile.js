@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       options: {
         prefix : 'xu-', // This will prefix each <g> ID
         inheritviewbox: true,
-        includeTitleElement: true,
+        includeTitleElement: false,
         includedemo: false
       },
       default : {

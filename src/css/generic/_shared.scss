@@ -7,6 +7,11 @@
  * csswizardry.com/2012/06/single-direction-margin-declarations
  */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 address,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
@@ -26,9 +31,4 @@ fieldset {
 
 dd, ol, ul {
   margin-left: $global-spacing;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

@@ -38,21 +38,6 @@
 
 html {
   cursor: default; /* 1 */
-  font-family:
-    system-ui,
-    /* macOS 10.11-10.12 */ -apple-system,
-    /* Windows 6+ */ Segoe UI,
-    /* Android 4+ */ Roboto,
-    /* Ubuntu 10.10+ */ Ubuntu,
-    /* Gnome 3+ */ Cantarell,
-    /* KDE Plasma 5+ */ Noto Sans,
-    /* fallback */ sans-serif,
-    /* macOS emoji */ "Apple Color Emoji",
-    /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol",
-    /* Linux emoji */ "Noto Color Emoji"; /* 2 */
-
-  line-height: 1.5; /* 3 */
   -moz-tab-size: 4; /* 4 */
   tab-size: 4; /* 4 */
   -ms-text-size-adjust: 100%; /* 5 */
@@ -69,16 +54,6 @@ html {
 
 body {
   margin: 0;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content

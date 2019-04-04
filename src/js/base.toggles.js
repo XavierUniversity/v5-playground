@@ -21,7 +21,6 @@ function toggleState(elem, stateOne, stateTwo){
 
 function toggleStateEvent(event){
   toggleState(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
-  event.preventDefault();
 }
 
 document.addEventListener('click', toggleStateEvent);

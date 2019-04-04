@@ -1,5 +1,11 @@
+a, button {
+    > * {
+    pointer-events: none;
+  }
+}
 :root {
   --nav-height: 86px;
+  --nav-height-fixed: 68px;
 }
 
 .site-header {
@@ -12,25 +18,43 @@
   justify-content: space-between;
   background: $primary;
   width: 100vw;
-  @include padding(null, 3rem, null, 3rem);
-  
+  @include padding(null, 2rem, null, 2rem);
+  transition: height 250ms ease-in-out;
+  &--fixed{
+    height: var(--nav-height-fixed);
+    position: fixed;
+    top: 0;
+    .logo{
+      &__x{
+        height: 40px;
+        width: 51px;
+      }
+      &__wordmark{
+        height: 40px;
+        width: 149px;
+        @include margin(null, null, null, 0.25rem);
+      }
+    }
+  }
   &__logo {
     @include for-size("tablet-portrait-up"){
       flex-grow: 1;  
     }
     
   }
-  &__svg{
-    width: 85px;
-    @include for-size("tablet-portrait-up"){
-      width: 200px;
-    }
-  }
   &__nav {
     display: flex;
   }
   
-  &__buttons {
+  &__btn {
+    height: 16px;
+    @include margin(-0.25rem, null, null, 0.5rem);
+    &--menu{
+      width: 32px;
+    }
+    &--search{
+      width: 16px;
+    }
   }
 }
 
@@ -77,8 +101,4 @@
       display: inline;
     }
   }
-}
-
-.header__ui{
-  
 }

@@ -4,7 +4,7 @@
   display:none;
 }
 [data-state=is-visible]{
-  display: inherit;
+  display: block;
 }
 
 .sr-only{

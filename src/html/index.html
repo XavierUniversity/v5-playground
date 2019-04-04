@@ -9,7 +9,28 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    include "includes/header.html"
+    <header class="header">
+      <!-- Branding == Logo and Navigation -->
+      <a href="/" class="branding">
+        <span class="branding__text sr-only">Xavier University</span>
+        <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+      </a>
+      <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
+      <nav class="navigation" aria-label="">
+        <ul class="list--inline cta-nav">
+          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Apply</a></li>
+          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Visit</a></li>
+          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Request Info</a></li>
+        </ul>
+      </nav>
+      <!-- UI Elements == Search and Menu -->
+      <div class="header-ui">
+        <a href="#" class="header__link o-btn header-ui__btn">Search<svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+        <button class="header__link o-btn header-ui__btn">Menu<svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
+      <!-- Hidden Navigation == Close Button, Search Form, Nav Lists, Audience Lists, Main Navigation vertical layout -->
+    </header>
+    
+    
     <!-- Add your site or application content here -->
     
     <!-- End site or application content -->

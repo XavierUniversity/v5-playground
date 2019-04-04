@@ -1,0 +1,14 @@
+.list--bare{
+  list-style: none;
+  margin: 0;
+  &__item{
+    margin-left: 0;
+  }
+}
+
+.list--inline{
+  @extend .list--bare;
+  &__item{
+    display: inline-block;
+  }
+}

@@ -1,6 +1,6 @@
 :root {
   --slideout-width: 100vw;
-  --slideout-padding: 3rem;
+  --slideout-padding: 2rem;
 }
 
 @include for-size("tablet-landscape-up"){
@@ -8,6 +8,23 @@
     --slideout-width: 30vw;
   }  
 }
+
+.c-navigation{
+  @include padding( null, var(--slideout-padding), null, var(--slideout-padding) );
+  background: $primary;
+  width: var(--slideout-width);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  z-index: 1001;
+}
+
+
+
+
+
 
 
 .slideout{
@@ -22,6 +39,7 @@
     z-index: 1001;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     @include padding(null, var(--slideout-padding), null, var(--slideout-padding));
     .c-btn--close{
       display: block;
@@ -40,6 +58,9 @@
 }
 
 .c-btn--close{
+  .close{
+    fill: white;
+  }
   position: absolute;
   top: 0;
   right: var(--slideout-padding);
@@ -48,10 +69,14 @@
   color: white;
   display: none;
   @include padding(1rem, 1rem, 1rem, 1rem);
+  z-index: 1002;
   &:hover, &:active, &:focus{
+    .close{
+      fill: $primary;  
+    }
+    
     outline: none;
     background: white;
-    color: $primary;
   }
 }
 
@@ -59,6 +84,7 @@
   float: right;
   height: 2.4rem;
   width: 2.4rem;
+  @include margin(-0.5rem, null, null, null);
 }
 
 .form{
@@ -77,21 +103,38 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
 .nav-list{
   $self: &;
   padding: 0;
-  @include margin(1rem, null, null, null);
   width: 100%;
-  font-weight: 200;
+  font-weight: 400;
   @include font-size(14px);
+  &__toggle{
+    height: 2rem;
+    width: 2rem;
+  }
+  
   &__item{
     text-transform: uppercase;
-    border-bottom: solid 0.15rem $accent;
+    border-bottom: solid 0.05rem $accent;
     @include padding(1rem, 0.5rem, 1rem, 0.5rem);
-    @include margin(0.5rem, null, 0.5rem, null);
     
     &:first-child{
-      border-top: solid 0.15rem $accent;
+      border-top: solid 0.05rem $accent;
+    }
+    &--secondary{
+      border:none;
+      @include padding(0.25rem, null, null, null);
     }
   }
   
@@ -102,6 +145,13 @@
     &:hover, &:focus, &:active{
       text-decoration: underline;
     }
+    
+    &--secondary{
+      text-decoration: underline;
+      &:hover, &:focus, &:active{
+        text-decoration: none;
+      }
+    }
   }
   
   &__child{
@@ -110,7 +160,7 @@
     #{ $self }__item{
       font-style: italic; 
       text-transform: none;
-      @include padding(0.25rem, 0.15rem, 0.25rem, 0.15rem);
+      @include padding(0.5rem, 0.15rem, 0.5rem, 0.15rem);
       @include margin(0, 1rem, 0, 1rem);
       &:first-child{
         border-top: none !important;

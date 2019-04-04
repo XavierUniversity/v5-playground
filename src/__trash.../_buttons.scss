@@ -1,16 +1,14 @@
 .c-btn {
   &--header {
     color: white;
-    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
-    border-radius: 0.25rem;
-    
+    @include padding(0.25rem, 0.25rem, 0.25rem, 0.25rem);
+    border-bottom: solid 0.15rem transparent;
     &:not(:last-child){
       @include margin(null, 1.5rem, null, null);
     }
     
     &:hover, &:focus, &:active {
-      background: white;
-      color: $primary;
+      border-bottom-color: $accent;
     }
   }
 }

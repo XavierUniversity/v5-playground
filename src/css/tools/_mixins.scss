@@ -92,7 +92,9 @@
 
 }
 
-
+@function px-to-rem($size){
+  @return #{$size/$base-font-size}rem;
+}
 
 
 

@@ -1,75 +1,10 @@
-.header{
-  align-items: center;
-  background: $primary;
-  display: flex;
-  flex-direction: row;
-  height: px-to-rem(96px);
-  justify-content: space-between;
-  @include padding(null, 2rem, null, 2rem);
-  &__link{
-    font-weight: 200;
-    color: white;
-    text-decoration: none;
-    border-bottom: solid 0.15rem transparent;
-    display: inline-block;
-    line-height: 1.5;
-    &:hover, &:focus, &:active{
-      border-bottom-color: white;
-    }
-  }
-}
+// =====================================
+//  
+// Header
+//
+// =====================================
 
-.branding{
-  @include for-size("tablet-portrait-up"){
-    flex-grow: 1;
-  }
-  &__text{
-    color: white;
-  }
-  
-  &__logo{
-    height: px-to-rem(40px);
-    
-    &--x{
-      width: px-to-rem(51px);
-    }
-    &--wordmark{
-      display: none;
-      width: px-to-rem(149px);
-      @include margin(null, null, null, 0.35rem);
-      @include for-size("tablet-portrait-up"){
-        display: inline-block;
-      }
-    }
-  }
-}
-
-.cta-nav{
-  display: none;
-  @include for-size("tablet-landscape-up"){
-    display: block;
-  }
-  text-transform: uppercase;
-  &__item{
-    @include margin( null, 1rem, null, 1rem);
-  }
-}
-
-.header-ui{
-  @include margin(null, null, null, 3rem);
-  &__btn{
-    text-transform: uppercase;
-    @include margin(null, null, null, 0.75rem);
-  }
-  &__icon{
-    height: px-to-rem(16px);
-    fill: white;
-    @include margin(-0.2rem, null, null, 0.5rem);
-    &--search{
-      width: px-to-rem(16px); 
-    }
-    &--menu{
-      width: 32px;
-    }
-  }
-}
+@import 'header';
+@import 'header.branding';
+@import 'header.ui';
+@import 'header.cta';

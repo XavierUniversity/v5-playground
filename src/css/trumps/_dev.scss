@@ -1,0 +1,43 @@
+.dev{
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: auto;
+  z-index: 99999;
+}
+
+.phone-only{
+  display: none;
+  @include for-size("phone-only"){
+    display: block;
+  }
+}
+.portrait-up{
+  display: none;
+  @include for-size("tablet-portrait-up"){
+    display: block;
+  }
+}
+.landscape-up{
+  display: none;
+  @include for-size("tablet-landscape-up"){
+    display: block;
+  }
+}
+.desktop-up{
+  display: none;
+  @include for-size("desktop-up"){
+    display: block;
+  }
+}
+.big-desktop-up{
+  display: none;
+  @include for-size("big-desktop-up"){
+    display: block;
+  }
+}

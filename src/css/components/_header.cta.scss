@@ -1,0 +1,10 @@
+.cta-nav{
+  display: none;
+  @include for-size("tablet-landscape-up"){
+    display: block;
+  }
+  text-transform: uppercase;
+  &__item{
+    @include margin( null, 1rem, null, 1rem);
+  }
+}

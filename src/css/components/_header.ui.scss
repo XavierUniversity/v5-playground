@@ -1,0 +1,20 @@
+.header-ui{
+  @include margin(null, null, null, 3rem);
+  &__btn{
+    text-transform: uppercase;
+    &:first-child{
+      @include margin(null, px-to-rem(40px), null, null);
+    }
+  }
+  &__icon{
+    height: px-to-rem(16px);
+    fill: white;
+    @include margin(-0.2rem, null, null, 0.5rem);
+    &--search{
+      width: px-to-rem(16px); 
+    }
+    &--menu{
+      width: 32px;
+    }
+  }
+}

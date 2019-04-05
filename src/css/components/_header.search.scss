@@ -1,0 +1,21 @@
+.site-search{
+  margin-top: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  &__btn{
+    color: white;
+    background: $accent;
+    font-weight: 200;
+    text-transform: uppercase;
+    border: solid px-to-rem(2px) $accent;
+    width: px-to-rem(100px);
+    padding: 0.4rem;
+  }
+  &__input-text{
+    font-size: 1rem;
+    font-weight: 200;
+    border: solid px-to-rem(2px) $accent;
+    width: 100%;
+    padding: 0.4rem;
+  }
+}

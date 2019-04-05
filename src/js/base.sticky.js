@@ -10,7 +10,7 @@
   * 
 **/
 
-var h = document.getElementById("site-header");
+var h = document.getElementById("header");
 var stuck = false;
 var stickPoint = getDistance();
 

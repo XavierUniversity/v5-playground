@@ -10,7 +10,7 @@
   * 
 **/
 
-var h = document.getElementById("site-header");
+var h = document.getElementById("header");
 var stuck = false;
 var stickPoint = getDistance();
 
@@ -43,6 +43,18 @@ window.onscroll = function(e) {
   *  - Hide entities that were open when a new item is clicked
 **/
 
+function toggleOverlay(elem, stateOne, stateTwo){
+  var overlay = document.getElementById("overlay");
+  var elem = document.querySelectorAll(elem);
+  if ( !elem ) return;
+  elem.forEach( function(el){
+    if ( el.id === 'main-nav' ) {
+      el.getAttribute('data-state') === stateOne ? overlay.classList.toggle("show") : overlay.classList.remove("show");
+      el.getAttribute('data-state') === stateOne ? document.body.classList.add("nav-open") : document.body.classList.remove("nav-open");  
+    }
+  });
+}
+
 function toggleState(elem, stateOne, stateTwo){
   var elem = document.querySelectorAll(elem);
   if ( !elem ) return;
@@ -53,6 +65,8 @@ function toggleState(elem, stateOne, stateTwo){
 
 function toggleStateEvent(event){
   toggleState(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
+  toggleOverlay(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
+  event.target.classList.toggle("on");
 }
 
 document.addEventListener('click', toggleStateEvent);

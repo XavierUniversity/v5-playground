@@ -1,0 +1,85 @@
+.nav-list{
+  @include margin(2rem, null, null, null);
+  padding: 0;
+  font-weight: 200;
+  &--border-top{
+    border-top: solid px-to-rem(1px) $accent;
+  }
+  
+  &__item{
+    display: block;
+    width: 100%;
+    
+    &--border-bottom{
+      border-bottom: solid px-to-rem(1px) $accent;  
+      @include padding(1rem, null, 1rem, null);
+    }
+  }
+  
+  &--child{
+    @include margin( 0.75rem, 1rem, 0.5rem, 1rem);
+    font-style: italic;
+    &__item{
+      @include padding(0.725rem, null, 0.725rem, null);
+    }
+  }
+  
+  &__link{
+    color: white;
+    text-decoration: none;
+    &--upper{
+      text-transform: uppercase;
+    }
+    
+    &:hover, &:focus, &:active{
+      text-decoration: underline;
+    }
+  }
+  &__btn{
+    float: right;
+    @include margin(-0.25rem, null, null, null);
+    &.on{
+      .nav-list__icon--plus{
+        display: none;
+      }
+      .nav-list__icon--minus{
+        display: block;
+      }
+    }
+  }
+  &__icon{
+    height: px-to-rem(33px);
+    width: px-to-rem(33px);
+    &--plus{
+      display: block;
+    }
+    &--minus{
+      display: none;
+    }
+  }
+  &--secondary{
+    font-size: px-to-rem(14px);
+    &__item{
+      @include margin(0.5rem, null, 0.5rem, null);
+    }
+    &__link{
+      text-decoration: underline;
+      &:hover, &:focus, &:active{
+        font-weight: 300;
+      }
+    }
+  }
+  &--cta{
+    @include margin(null, null, 8rem, null);
+    &__link{
+      width: 100%;
+      display: block;
+      border: solid px-to-rem(1px) $accent;
+      background: lighten($primary, 6%);
+      border-radius: 0.5rem;
+      text-align: center;
+      @include padding(0.65rem, 0.5rem, 0.65rem, 0.5rem);
+      @include margin (1rem, null, 1rem, null);
+    }
+  }
+}

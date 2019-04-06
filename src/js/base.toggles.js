@@ -32,6 +32,7 @@ function toggleState(elem, stateOne, stateTwo){
 };
 
 function toggleStateEvent(event){
+  event.preventDefault();
   toggleState(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
   toggleOverlay(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
   event.target.classList.toggle("on");

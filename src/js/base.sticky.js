@@ -22,11 +22,11 @@ function getDistance() {
 window.onscroll = function(e) {
   var distance = getDistance() - window.pageYOffset;
   var offset = window.pageYOffset;
-  if ( (distance <= 0) && !stuck) {
-    h.classList.add('site-header--fixed');
+  if ( (distance < 0) && !stuck) {
+    h.classList.add('header--fixed');
     stuck = true;
   } else if (stuck && (offset <= stickPoint)){
-    h.classList.remove('site-header--fixed');
+    h.classList.remove('header--fixed');
     stuck = false;
   }
 }

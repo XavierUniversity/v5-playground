@@ -2,9 +2,12 @@
   align-items: center;
   background: $primary;
   display: flex;
+  width: 100vw;
   flex-direction: row;
   height: px-to-rem(96px);
   justify-content: space-between;
+  transition: height 250ms ease;
+  z-index: 1;
   @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
   @include for-size("desktop-up"){
     @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
@@ -19,6 +22,21 @@
     transition: border-color 250ms ease;
     &:hover, &:focus, &:active{
       border-bottom-color: white;
+    }
+  }
+  &--fixed{
+    position: fixed;
+    top: 0;
+    height: px-to-rem(58px);
+    
+    .branding__logo{
+      height: px-to-rem(30px);
+      &--x{
+        width: px-to-rem(39px);
+      }
+      &--wordmark{
+        width: px-to-rem(112px);
+      }
     }
   }
 }

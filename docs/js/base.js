@@ -22,11 +22,11 @@ function getDistance() {
 window.onscroll = function(e) {
   var distance = getDistance() - window.pageYOffset;
   var offset = window.pageYOffset;
-  if ( (distance <= 0) && !stuck) {
-    h.classList.add('site-header--fixed');
+  if ( (distance < 0) && !stuck) {
+    h.classList.add('header--fixed');
     stuck = true;
   } else if (stuck && (offset <= stickPoint)){
-    h.classList.remove('site-header--fixed');
+    h.classList.remove('header--fixed');
     stuck = false;
   }
 }
@@ -64,6 +64,7 @@ function toggleState(elem, stateOne, stateTwo){
 };
 
 function toggleStateEvent(event){
+  event.preventDefault();
   toggleState(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
   toggleOverlay(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
   event.target.classList.toggle("on");

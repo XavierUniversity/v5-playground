@@ -13,26 +13,28 @@
     <nav aria-label="Skip Link">
       <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
     </nav>
-    <header class="header" id="header">
-      <!-- Branding == Logo and Navigation -->
-      <div class="branding">
-        <a href="/" class="branding__link">
-          <span class="branding__text sr-only">Xavier University</span>
-          <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
-        </a>
-      </div>
-      <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
-      <nav class="navigation" aria-label="Quick Links">
-        <ul class="list--inline cta-nav">
-          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Apply</a></li>
-          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Request Info</a></li>
-          <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Visit Campus</a></li>
-        </ul>
-      </nav>
-      <!-- UI Elements == Search and Menu -->
-      <div class="header-ui">
-        <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" target="_blank" class="header__link o-btn header-ui__btn">Search<svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
-        <button class="header__link o-btn header-ui__btn" data-toggle="#main-nav">Menu<svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
+    <header>
+      <div class="header" id="header">
+        <!-- Branding == Logo and Navigation -->
+        <div class="branding">
+          <a href="/" class="branding__link">
+            <span class="branding__text sr-only">Xavier University</span>
+            <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+          </a>
+        </div>
+        <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
+        <nav class="navigation" aria-label="Quick Links">
+          <ul class="list--inline cta-nav">
+            <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Apply</a></li>
+            <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Request Info</a></li>
+            <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Visit Campus</a></li>
+          </ul>
+        </nav>
+        <!-- UI Elements == Search and Menu -->
+        <div class="header-ui">
+          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" target="_blank" class="header__link o-btn header-ui__btn">Search<svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+          <button class="header__link o-btn header-ui__btn" data-toggle="#main-nav">Menu<svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
+        </div>
       </div>
       <!-- Hidden Navigation == Close Button, Search Form, Nav Lists, Audience Lists, Main Navigation vertical layout -->
       <div id="main-nav" class="drawer" data-state="is-hidden">
@@ -45,7 +47,7 @@
           <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
           <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
         </form>
-        
+      
         <nav id="" aria-label="Main Navigation">
           <ul class="nav-list nav-list--border-top">
             <li class="nav-list__item nav-list__item--border-bottom">
@@ -149,7 +151,6 @@
             <li class="nav-list__item nav-list--cta__item"><a class="nav-list__link nav-list__link--upper nav-list--cta__link" href="#visit">Visit Campus</a></li>
           </ul>
         </nav>
-        
       </div>
     </header>
     <!-- Add your site or application content here -->

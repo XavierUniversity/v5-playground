@@ -8,7 +8,7 @@
   
   &__logo{
     height: px-to-rem(40px);
-    
+    transition: all 250ms ease;
     &--x{
       width: px-to-rem(51px);
     }

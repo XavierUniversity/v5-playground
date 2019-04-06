@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   overflow-y: scroll;
-  z-index: 101;
+  z-index: 100;
   @include padding(null, 3rem, null, 3rem);
   
   @include for-size(tablet-landscape-up){

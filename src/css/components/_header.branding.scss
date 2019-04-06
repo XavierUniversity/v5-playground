@@ -7,14 +7,20 @@
   }
   
   &__logo{
-    height: px-to-rem(40px);
     transition: all 250ms ease;
+    height: px-to-rem(30px);
+    @include for-size("tablet-portrait-up"){
+      height: px-to-rem(40px);
+    }
     &--x{
-      width: px-to-rem(51px);
+      width: px-to-rem(39px);  
+      @include for-size("tablet-portrait-up"){
+        width: px-to-rem(51px);
+      }
     }
     &--wordmark{
       display: none;
-      width: px-to-rem(149px);
+      width: px-to-rem(149px);  
       @include margin(null, null, null, 0.35rem);
       @include for-size("desktop-up"){
         display: inline-block;

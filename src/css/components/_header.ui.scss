@@ -1,9 +1,14 @@
 .header-ui{
-  @include margin(null, null, null, 3rem);
+  @include for-size(tablet-portrait-up){
+    @include margin(null, null, null, 3rem);  
+  }
   &__btn{
     text-transform: uppercase;
     &:first-child{
-      @include margin(null, px-to-rem(40px), null, null);
+      @include margin(null, px-to-rem(20px), null, null);
+      @include for-size(tablet-portrait-up){
+        @include margin(null, px-to-rem(40px), null, null);
+      }
     }
   }
   &__icon{

@@ -1,21 +1,25 @@
 .site-search{
-  margin-top: 5.5rem;
+  @include margin(5.5rem, null, null, null);
   display: flex;
   justify-content: space-between;
   &__btn{
     color: white;
-    background: $accent;
+    background: $medBlue;
     font-weight: 200;
     text-transform: uppercase;
-    border: solid px-to-rem(2px) $accent;
+    text-align: center;
     width: px-to-rem(100px);
-    padding: 0.4rem;
+    @include padding(0.6rem, 0.4rem, 0.6rem, 0.4rem);
+    
+    &:hover, &:focus, &:active{
+      background: #0077AA;
+    }
   }
   &__input-text{
     font-size: 1rem;
     font-weight: 200;
-    border: solid px-to-rem(2px) $accent;
+    border: none;
     width: 100%;
-    padding: 0.4rem;
+    @include padding(0.6rem, 0.4rem, 0.6rem, 0.4rem);
   }
 }

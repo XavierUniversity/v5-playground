@@ -53,3 +53,4 @@ config.*
 # Ignore test and debug files
 *.dev.*
 test.*
+src/__trash/*

@@ -1,27 +1,38 @@
+:root{
+  --drawer-width: 100vw;
+  @include for-size(tablet-landscape-up){
+    --drawer-width: px-to-rem(532px);  
+  }
+}
+
 .drawer{
-  background: $primary;
+  background: $darkNavy;
   width: 100vw;
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: calc(-1*var(--drawer-width));
   overflow-y: scroll;
   z-index: 100;
+  width: var(--drawer-width);
   @include padding(null, 1rem, null, 1rem);
-  
+  transition: right 250ms;
   @include for-size(tablet-landscape-up){
-    width: 42.5vw;
     @include padding(null, 3rem, null, 3rem);
   }
   
+  &.visible{
+    right: 0;
+  }
+  
   &__btn{
-    color: white; // Without a fill color; this will take hold.
+    color: rgba(white, 0.75); // Without a fill color; this will take hold.
     @include margin(1.5rem, null, null, null);
     float: right;
     padding: 0.5rem;
     &:hover, &:focus, &:active{
-      color: $primary;
-      background: white;
+      color: $darkNavy;
+      background: rgba(white, 0.75);
     }
     @include clearfix();
   }

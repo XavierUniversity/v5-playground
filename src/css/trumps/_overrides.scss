@@ -1,12 +1,4 @@
-
-// For the toggles
-[data-state=is-hidden]{
-  display:none;
-}
-[data-state=is-visible]{
-  display: block;
-}
-
+// Scren reader only text. Doesn't display on the screen, but flows with the normal content.
 .sr-only{
   position: absolute!important;
   clip: rect(1px,1px,1px,1px);

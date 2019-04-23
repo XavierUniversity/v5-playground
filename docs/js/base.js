@@ -43,31 +43,34 @@ window.onscroll = function(e) {
   *  - Hide entities that were open when a new item is clicked
 **/
 
-function toggleOverlay(elem, stateOne, stateTwo){
+// Turns on/off the overlay when we need it for the navigation drawer
+function toggleOverlay(elem, stateOne){
   var overlay = document.getElementById("overlay");
   var elem = document.querySelectorAll(elem);
   if ( !elem ) return;
   elem.forEach( function(el){
     if ( el.id === 'main-nav' ) {
-      el.getAttribute('data-state') === stateOne ? overlay.classList.toggle("show") : overlay.classList.remove("show");
-      el.getAttribute('data-state') === stateOne ? document.body.classList.add("nav-open") : document.body.classList.remove("nav-open");  
+      el.classList.contains(stateOne) ? document.body.classList.add("nav-open") : document.body.classList.remove("nav-open");  
     }
   });
 }
 
-function toggleState(elem, stateOne, stateTwo){
+// Toggles the visible state as needed.
+function toggleState(elem, stateOne){
   var elem = document.querySelectorAll(elem);
   if ( !elem ) return;
   elem.forEach( function(el){
-    el.setAttribute('data-state', el.getAttribute('data-state') === stateOne ? stateTwo : stateOne);
+    el.classList.toggle(stateOne);
   });
 };
 
+// Monitors the click events....Grabs the to be toggled item
 function toggleStateEvent(event){
   event.preventDefault();
-  toggleState(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
-  toggleOverlay(event.target.getAttribute('data-toggle'), 'is-visible', 'is-hidden');
+  toggleState(event.target.getAttribute('data-toggle'), 'visible');
+  toggleOverlay(event.target.getAttribute('data-toggle'), 'visible');
   event.target.classList.toggle("on");
 }
 
+// Obvi...the event listener.
 document.addEventListener('click', toggleStateEvent);

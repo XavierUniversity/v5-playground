@@ -24,12 +24,15 @@ $desktop-upper-boundary:                            112.5em;    // ~ 1800px
 
 // Colors
 $background:                                        white;
-$primary:                                           #0c2340;
-$secondary:                                         #9ea3a3;
-$accent:                                            darken(#0099cc, 8%);
-$alternate-background:                              '';
-$link-color:                                        $primary;
-$link-hover-color:                                  darken($link-color, 15%);
+$darkNavy:                                          #0B223F;
+$darkNavyHover:                                     null;
+$medBlue:                                           #007DB3;
+$medBlueHover:                                      #1B4675;
+$grey:                                              #9ea3a3;
+$lightBlue:                                         #0099CC;
+$lightBlueHover:                                    #0077AA;
+$link-color:                                        $darkNavy;
+$link-hover-color:                                  $darkNavyHover;
 
 // Typography
 $font-size:                                         1rem;       // 1rem     == 16px;

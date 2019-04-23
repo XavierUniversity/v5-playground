@@ -1,9 +1,10 @@
 .nav-list{
+  $self: &;
   @include margin(2rem, null, null, null);
   padding: 0;
   font-weight: 200;
   &--border-top{
-    border-top: solid px-to-rem(1px) $accent;
+    border-top: solid px-to-rem(1px) $medBlue;
   }
   
   &__item{
@@ -11,7 +12,7 @@
     width: 100%;
     
     &--border-bottom{
-      border-bottom: solid px-to-rem(1px) $accent;  
+      border-bottom: solid px-to-rem(1px) $medBlue;  
       @include padding(1rem, null, 1rem, null);
     }
   }
@@ -19,8 +20,12 @@
   &--child{
     @include margin( 0.75rem, 1rem, 0.5rem, 1rem);
     font-style: italic;
+    display: none;
     &__item{
       @include padding(0.725rem, null, 0.725rem, null);
+    }
+    &.visible{
+      display: block;
     }
   }
   
@@ -37,6 +42,8 @@
   }
   &__btn{
     float: right;
+    background: #13355A;
+    border-radius: 0.6rem;
     @include margin(-0.25rem, null, null, null);
     &.on{
       .nav-list__icon--plus{
@@ -46,10 +53,15 @@
         display: block;
       }
     }
+    &:hover, &:focus, &:active {
+      background: #1B4675;
+    }
   }
   &__icon{
     height: px-to-rem(33px);
     width: px-to-rem(33px);
+    color: white;
+    
     &--plus{
       display: block;
     }
@@ -57,29 +69,30 @@
       display: none;
     }
   }
-  &--secondary{
-    font-size: px-to-rem(14px);
-    &__item{
-      @include margin(0.5rem, null, 0.5rem, null);
-    }
-    &__link{
-      text-decoration: underline;
-      &:hover, &:focus, &:active{
-        font-weight: 300;
-      }
-    }
-  }
   &--cta{
-    @include margin(null, null, 8rem, null);
     &__link{
       width: 100%;
       display: block;
-      border: solid px-to-rem(1px) $accent;
-      background: lighten($primary, 6%);
+      border: solid px-to-rem(1px) $medBlue;
+      background: lighten($darkNavy, 6%);
       border-radius: 0.5rem;
       text-align: center;
       @include padding(0.65rem, 0.5rem, 0.65rem, 0.5rem);
       @include margin (1rem, null, 1rem, null);
+    }
+  }
+  &--secondary{
+    font-size: px-to-rem(14px);
+    @include margin(null, null, 8rem, null);
+    &__item{
+      @include margin(0.5rem, null, 0.5rem, null);
+    }
+    &__link{
+      text-decoration: none;
+      &:hover, &:focus, &:active{
+        font-weight: 300;
+        text-decoration: underline;
+      }
     }
   }
 }

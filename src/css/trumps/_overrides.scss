@@ -19,5 +19,6 @@
     	left: 0;
     width: 100%;
     	z-index: 99; /* places the modal overlay between the main page and the modal dialog*/
+    	transition: all 250ms;
   }
 }

@@ -31,8 +31,7 @@
     float: right;
     padding: 0.5rem;
     &:hover, &:focus, &:active{
-      color: $darkNavy;
-      background: rgba(white, 0.75);
+      color: white;
     }
     @include clearfix();
   }
@@ -40,5 +39,9 @@
   &__icon{
     height: px-to-rem(24px);
     width: px-to-rem(24px);
+  }
+  
+  &--search{
+    background: rgba(27,70,117,1);
   }
 }

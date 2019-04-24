@@ -22,7 +22,7 @@
       display: none;
       width: px-to-rem(149px);  
       @include margin(null, null, null, 0.35rem);
-      @include for-size("desktop-up"){
+      @include for-size("tablet-portrait-up"){
         display: inline-block;
       }
     }

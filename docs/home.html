@@ -38,8 +38,8 @@
         </nav>
         <!-- UI Elements == Search and Menu -->
         <div class="header-ui">
-          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" target="_blank" class="o-btn header-ui__btn">Search<svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
-          <button class="o-btn header-ui__btn menu_toggle" data-toggle="#main-nav">Menu<svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
+          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" target="_blank" class="o-btn header-ui__btn"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+          <button class="o-btn header-ui__btn menu_toggle" data-toggle="#main-nav"><svg class="icon header-ui__icon header-ui__icon--menu"><use xlink:href="#xu-hamburger" /></svg></button>
         </div>
       </div>
       <!-- Hidden Navigation == Close Button, Search Form, Nav Lists, Audience Lists, Main Navigation vertical layout -->
@@ -47,13 +47,6 @@
         <button class="o-btn drawer__btn menu_toggle"  data-toggle="#main-nav" aria-label="Close Main Navigation">
           <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
         </button>
-        <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search">
-          <input type="hidden" name="collection" value="xavu-meta" />
-          <label class="sr-only" for="query">Search Xavier University:</label>
-          <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
-          <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
-        </form>
-      
         <nav id="" aria-label="Main Navigation">
           <ul class="nav-list nav-list--border-top">
             <li class="nav-list__item nav-list__item--border-bottom">
@@ -158,6 +151,14 @@
             <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Parents</a></li>
           </ul>
         </nav>
+      </div>
+      <div id="search" class="drawer--search" style="background: blue; margin: 0 25vw;">
+        <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search">
+          <input type="hidden" name="collection" value="xavu-meta" />
+          <label class="sr-only" for="query">Search Xavier University:</label>
+          <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
+          <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
+        </form>
       </div>
     </header>
     <!-- Add your site or application content here -->

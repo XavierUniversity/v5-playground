@@ -1,6 +1,6 @@
 .nav-list{
   $self: &;
-  @include margin(2rem, null, null, 0);
+  @include margin(5rem, null, null, 0);
   padding: 0;
   font-weight: 200;
   &--border-top{
@@ -32,18 +32,19 @@
   &__link{
     color: white;
     text-decoration: none;
+    transition: margin 75ms ease;
     &--upper{
       text-transform: uppercase;
     }
     
     &:hover, &:focus, &:active{
-      text-decoration: underline;
+      margin-left: 0.75rem;
     }
   }
   &__btn{
     float: right;
     background: #13355A;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
     @include margin(-0.25rem, null, null, null);
     &.on{
       .nav-list__icon--plus{
@@ -70,6 +71,7 @@
     }
   }
   &--cta{
+    @include margin(2rem, null, null, null);
     &__link{
       width: 100%;
       display: block;
@@ -77,22 +79,25 @@
       background: lighten($darkNavy, 6%);
       border-radius: 0.5rem;
       text-align: center;
+      transition: all 0.25s ease;
       @include padding(0.65rem, 0.5rem, 0.65rem, 0.5rem);
       @include margin (1rem, null, 1rem, null);
+      
+      &:hover, &:focus, &:active{
+        background: #1B4675;
+        border-color: #1B4675;
+        margin-left: 0;
+      }
     }
   }
   &--secondary{
     font-size: px-to-rem(14px);
-    @include margin(null, null, 8rem, null);
+    @include margin(2rem, null, 8rem, null);
     &__item{
       @include margin(0.5rem, null, 0.5rem, null);
     }
     &__link{
-      text-decoration: none;
-      &:hover, &:focus, &:active{
-        font-weight: 300;
-        text-decoration: underline;
-      }
+      text-decoration: underline;
     }
   }
 }

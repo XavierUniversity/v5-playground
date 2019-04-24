@@ -8,9 +8,6 @@
     text-transform: uppercase;
     &:first-child{
       @include margin(null, px-to-rem(20px), null, null);
-      @include for-size(tablet-portrait-up){
-        @include margin(null, px-to-rem(40px), null, null);
-      }
     }
   }
   &__icon{

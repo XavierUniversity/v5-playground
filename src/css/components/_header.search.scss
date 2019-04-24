@@ -1,9 +1,9 @@
 .search-drawer{
-  background: rgba(27,70,117,1);
   position: fixed;
   transition: all 250ms;
   width: 100vw;
   right: calc(-1*100vw);
+  top: px-to-rem(96px);
   &.visible{
     right: 0;
   }    

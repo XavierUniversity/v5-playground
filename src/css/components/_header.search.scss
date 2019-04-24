@@ -1,7 +1,19 @@
+.search-drawer{
+  background: rgba(27,70,117,1);
+  position: fixed;
+  transition: all 250ms;
+  width: 100vw;
+  right: calc(-1*100vw);
+  &.visible{
+    right: 0;
+  }    
+}
 .site-search{
-  @include margin(5.5rem, null, null, null);
   display: flex;
   justify-content: space-between;
+  width: 80vw;
+  @include margin(0, auto, 0, auto);
+  @include padding(2rem, null, 2rem, null);
   &__btn{
     color: white;
     background: $medBlue;

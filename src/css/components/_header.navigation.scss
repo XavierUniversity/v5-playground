@@ -1,6 +1,6 @@
 .nav-list{
   $self: &;
-  @include margin(2rem, null, null, null);
+  @include margin(2rem, null, null, 0);
   padding: 0;
   font-weight: 200;
   &--border-top{

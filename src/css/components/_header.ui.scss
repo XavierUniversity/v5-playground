@@ -1,14 +1,10 @@
 .header-ui{
-  @include for-size(tablet-portrait-up){
-    @include margin(null, null, null, 3rem);  
-  }
+  $self: &;
+  
   &__btn{
     color: white;
     font-weight: 200;
     text-transform: uppercase;
-    &:first-child{
-      @include margin(null, px-to-rem(30px), null, null);
-    }
     
     &--menu{
       color: white;
@@ -54,6 +50,21 @@
         }
       }
     }
+    
+    &--search{
+      @include for-size(tablet-portrait-up){
+        @include margin(null, px-to-rem(30px), null, 3rem);
+      }
+      &:hover, &:active, &:focus{
+        @include for-size(tablet-portrait-up){
+          @include margin(null, px-to-rem(30px), null, px-to-rem(44px));
+        }
+        #{$self}__icon--search{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
   }
   &__icon{
     height: px-to-rem(16px);
@@ -61,6 +72,7 @@
     @include margin(-0.2rem, null, null, 0.5rem);
     &--search{
       width: px-to-rem(16px); 
+      transition: height 250ms ease, width 250ms ease;
     }
   }
 }

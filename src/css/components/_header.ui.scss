@@ -57,11 +57,10 @@
       }
       &:hover, &:active, &:focus{
         @include for-size(tablet-portrait-up){
-          @include margin(null, px-to-rem(30px), null, px-to-rem(44px));
+
         }
         #{$self}__icon--search{
-          width: 20px;
-          height: 20px;
+          transform: scale(1.5);
         }
       }
     }
@@ -72,7 +71,7 @@
     @include margin(-0.2rem, null, null, 0.5rem);
     &--search{
       width: px-to-rem(16px); 
-      transition: height 250ms ease, width 250ms ease;
+      transition: transform 250ms ease;
     }
   }
 }

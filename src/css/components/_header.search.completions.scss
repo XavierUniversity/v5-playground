@@ -1,0 +1,20 @@
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-menu{
+  border-top: solid $medBlue px-to-rem(2px);
+  background: white;
+  @include padding(null, 1rem, 1rem, 1rem);
+  width: 100%;
+  box-shadow: 0 px-to-rem(2px) px-to-rem(5px) rgba(black, 0.5);
+  
+  .tt-suggestion{
+    transition: padding 250ms ease-in-out;
+    cursor: pointer;
+    &:hover, &:active, &:focus{
+      @include padding(null, null, null, 0.5rem);
+      text-decoration: underline;
+    }
+  }
+}

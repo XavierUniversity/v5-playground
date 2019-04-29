@@ -52,9 +52,7 @@
     }
     
     &--search{
-      @include for-size(tablet-portrait-up){
-        @include margin(null, px-to-rem(30px), null, 3rem);
-      }
+      @include margin(null, px-to-rem(30px), null, 3rem);
       &:hover, &:active, &:focus{
         @include for-size(tablet-portrait-up){
 

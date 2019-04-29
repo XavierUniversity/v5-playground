@@ -7,22 +7,24 @@
 
 .drawer{
   background: $darkNavy;
+  display: none;
   width: 100vw;
+  transform: translateX(100%);
   position: fixed;
   top: 0;
   bottom: 0;
-  right: calc(-1*var(--drawer-width));
+  right: 0;
   overflow-y: scroll;
   z-index: 100;
   width: var(--drawer-width);
   @include padding(null, 1rem, null, 1rem);
-  transition: right 250ms;
+//   transition: right 250ms;
   @include for-size(tablet-landscape-up){
     @include padding(null, 3rem, null, 3rem);
   }
-  
   &.visible{
-    right: 0;
+    display: block;
+    animation: slide-in 250ms forwards;
   }
   
   &__btn{
@@ -39,5 +41,17 @@
   &__icon{
     height: px-to-rem(24px);
     width: px-to-rem(24px);
+  }
+}
+
+@keyframes slide-in{
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out{
+  100%{
+    transform: translateX(100%);
   }
 }

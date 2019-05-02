@@ -2,6 +2,9 @@
   @include for-size("tablet-portrait-up"){
     flex-grow: 1;
   }
+  &__link{
+    display: inline-block;
+  }
   &__text{
     color: white;
   }
@@ -26,5 +29,9 @@
         display: inline-block;
       }
     }
+  }
+  &--footer{
+    text-align: center;
+    @include margin(null, null, px-to-rem(24px), null);
   }
 }

@@ -1,0 +1,13 @@
+.social{
+  text-align: center;
+  @include padding(px-to-rem(32px), null, px-to-rem(16px), null);
+  
+  &__link{
+    text-decoration: none;
+    @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
+  }
+  &__icon{
+    height: px-to-rem(48px);
+    width: px-to-rem(48px);
+  }
+}

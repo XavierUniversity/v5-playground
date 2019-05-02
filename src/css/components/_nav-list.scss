@@ -100,4 +100,7 @@
       text-decoration: underline;
     }
   }
+  &--margin-both{
+    @include margin(null, 1rem, null, 1rem);
+  }
 }

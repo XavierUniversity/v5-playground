@@ -21,9 +21,9 @@ piece called HTML includes. No reason to have this run PHP as it's just a playgr
 
 ## Getting started
 
-Clone the repository: git clone <project URL>
-`npm install` to make sure npm is set up.
-`grunt`
+- Clone the repository: git clone PROJECT URL
+- `npm install` to make sure npm is set up.
+- `grunt`
 
 ## Where to put things
 

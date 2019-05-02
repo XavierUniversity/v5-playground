@@ -21,7 +21,7 @@ piece called HTML includes. No reason to have this run PHP as it's just a playgr
 
 ## Getting started
 
-- Clone the repository: git clone PROJECT URL
+- Clone the repository: `git clone https://github.com/XavierUniversity/v5-playground`
 - `npm install` to make sure npm is set up.
 - `grunt`
 

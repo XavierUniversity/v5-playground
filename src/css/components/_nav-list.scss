@@ -1,16 +1,14 @@
 .nav-list{
   $self: &;
-  @include margin(5rem, null, null, 0);
-  padding: 0;
   font-weight: 200;
+  padding: 0;
+  margin: 0;
   &--border-top{
     border-top: solid px-to-rem(1px) $medBlue;
+    @include margin(5rem, null, null, null)
   }
   
   &__item{
-    display: block;
-    width: 100%;
-    
     &--border-bottom{
       border-bottom: solid px-to-rem(1px) $medBlue;  
       @include padding(1rem, null, 1rem, null);
@@ -102,5 +100,47 @@
   }
   &--margin-both{
     @include margin(null, 1rem, null, 1rem);
+  }
+}
+
+.nav-header{
+  display: none;
+  @include for-size("tablet-landscape-up"){
+    display: block;
+  }
+  text-transform: uppercase;
+  &__item{
+    display: inline-block;
+    @include margin( null, 1rem, null, 1rem);
+  }
+  &__link{
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 0.15rem transparent;
+    display: inline-block;
+    line-height: 1.5;
+    position: relative;
+    
+    &::after{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: px-to-rem(3px);
+      @include margin(0.75rem, null, null, null);
+      transform: scale(0,1);
+      transition: transform 0.4s cubic-bezier(1,0,0,1);
+      background: white;
+      content: '';
+      transform-origin: right top;
+    }
+    
+    &:hover, &:focus, &:active{
+      &::after{
+        transform: scale(1,1);
+        transform-origin: left top;  
+      }
+    }
   }
 }

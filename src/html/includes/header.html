@@ -12,13 +12,7 @@
       </a>
     </div>
     <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
-    <nav class="navigation" aria-label="Quick Links">
-      <ul class="list--inline cta-nav">
-        <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Apply</a></li>
-        <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Request Info</a></li>
-        <li class="list--inline__item cta-nav__item"><a class="header__link cta-nav__link" href="#">Visit Campus</a></li>
-      </ul>
-    </nav>
+    include "header.cta.html"
     <!-- UI Elements == Search and Menu -->
     <div class="header-ui">
       <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" data-toggle="#search" target="_blank" class="o-btn header-ui__btn header-ui__btn--search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
@@ -27,115 +21,6 @@
 			</button>
     </div>
   </div>
-  <!-- Hidden Navigation == Close Button, Search Form, Nav Lists, Audience Lists, Main Navigation vertical layout -->
-  <div id="main-nav" class="drawer">
-    <button class="o-btn drawer__btn menu_toggle"  data-toggle="#main-nav" aria-label="Close Main Navigation">
-      <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-    </button>
-    <nav id="" aria-label="Main Navigation">
-      <ul class="nav-list nav-list--border-top">
-        <li class="nav-list__item nav-list__item--border-bottom">
-          <a class="nav-list__link nav-list__link--upper" href="#">Admission</a>
-          <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#admission-sub">
-            <svg class="icon nav-list__icon nav-list__icon--plus">
-              <use xlink:href="#xu-plus" />
-            </svg>
-            <svg class="icon nav-list__icon nav-list__icon--minus">
-              <use xlink:href="#xu-minus" />
-            </svg>
-          </button>
-          <ul id="admission-sub" class="nav-list nav-list--child" >
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Undergraduate Admission</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Graduate Admission</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Tuition and Financial Aid</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Schedule a Visit</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Apply</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Admission Contacts</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="">Virtual Tour</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item nav-list__item--border-bottom">
-          <a class="nav-list__link nav-list__link--upper" href="#">Academics</a>
-          <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#academic-sub">
-            <svg class="icon nav-list__icon nav-list__icon--plus">
-              <use xlink:href="#xu-plus" />
-            </svg>
-            <svg class="icon nav-list__icon nav-list__icon--minus">
-              <use xlink:href="#xu-minus" />
-            </svg>
-          </button>
-          <ul id="academic-sub" class="nav-list nav-list--child" >
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item nav-list__item--border-bottom">
-          <a class="nav-list__link nav-list__link--upper" href="#">Campus Life</a>
-          <button class="o-btn nav-list__btn" aria-label="Toggle Campus Life Sub Menu" data-toggle="#life-sub">
-            <svg class="icon nav-list__icon nav-list__icon--plus">
-              <use xlink:href="#xu-plus" />
-            </svg>
-            <svg class="icon nav-list__icon nav-list__icon--minus">
-              <use xlink:href="#xu-minus" />
-            </svg>
-          </button>
-          <ul id="life-sub" class="nav-list nav-list--child" >
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item nav-list__item--border-bottom">
-          <a class="nav-list__link nav-list__link--upper" href="#">About</a>
-          <button class="o-btn nav-list__btn" aria-label="Toggle About Sub Menu" data-toggle="#about-sub">
-            <svg class="icon nav-list__icon nav-list__icon--plus">
-              <use xlink:href="#xu-plus" />
-            </svg>
-            <svg class="icon nav-list__icon nav-list__icon--minus">
-              <use xlink:href="#xu-minus" />
-            </svg>
-          </button>
-          <ul id="about-sub" class="nav-list nav-list--child" >
-            <li class="nav-list__item nav-list__item--border-bottom nav-list__item nav-list__item--border-bottom--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-          </ul>
-        </li>
-        <li class="nav-list__item nav-list__item--border-bottom">
-          <a class="nav-list__link nav-list__link--upper" href="#">Athletics</a>
-          <button class="o-btn nav-list__btn" aria-label="Toggle Athletics Sub Menu" data-toggle="#athletics-sub">
-            <svg class="icon nav-list__icon nav-list__icon--plus">
-              <use xlink:href="#xu-plus" />
-            </svg>
-            <svg class="icon nav-list__icon nav-list__icon--minus">
-              <use xlink:href="#xu-minus" />
-            </svg>
-          </button>
-          <ul id="athletics-sub" class="nav-list nav-list--child" >
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-            <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="">Child Navigation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    
-    <nav aria-label="CTA Items">
-      <ul class="nav-list nav-list--cta">
-        <li class="nav-list__item nav-list--cta__item"><a class="nav-list__link nav-list__link--upper nav-list--cta__link" href="#apply">Apply</a></li>
-        <li class="nav-list__item nav-list--cta__item"><a class="nav-list__link nav-list__link--upper nav-list--cta__link" href="#info">Request Info</a></li>
-        <li class="nav-list__item nav-list--cta__item"><a class="nav-list__link nav-list__link--upper nav-list--cta__link" href="#visit">Visit Campus</a></li>
-        <li class="nav-list__item nav-list--cta__item"><a class="nav-list__link nav-list__link--upper nav-list--cta__link" href="#give">Give</a></li>
-      </ul>
-    </nav>
-    
-    <nav aria-label="Secondary links">
-      <ul class="nav-list nav-list--secondary">
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Maps &amp; Directions</a></li>
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Employment Opportunities</a></li>
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Current Students</a></li>
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Alumni</a></li>
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Employees</a></li>
-        <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Parents</a></li>
-      </ul>
-    </nav>
-  </div>
+  include "header.drawer.html"
   include "header.form.html"
 </header>

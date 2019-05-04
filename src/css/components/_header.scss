@@ -16,37 +16,6 @@
   &--background{
     background: $darkNavy;
   }
-  
-  &__link{
-    font-weight: 200;
-    color: white;
-    text-decoration: none;
-    border-bottom: solid 0.15rem transparent;
-    display: inline-block;
-    line-height: 1.5;
-    position: relative;
-    
-    &::after{
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: px-to-rem(3px);
-      @include margin(0.75rem, null, null, null);
-      transform: scale(0,1);
-      transition: transform 0.4s cubic-bezier(1,0,0,1);
-      background: white;
-      content: '';
-      transform-origin: right top;
-    }
-    
-    &:hover, &:focus, &:active{
-      &::after{
-        transform: scale(1,1);
-        transform-origin: left top;  
-      }
-    }
-  }
   &--fixed{
     top: 0;
     height: px-to-rem(58px);

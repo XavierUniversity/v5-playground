@@ -36,7 +36,7 @@
     }
     
     &:hover, &:focus, &:active{
-      margin-left: 0.75rem;
+      margin-left: px-to-rem(12px);
     }
   }
   &__btn{
@@ -70,23 +70,7 @@
   }
   &--cta{
     @include margin(2rem, null, null, null);
-    &__link{
-      width: 100%;
-      display: block;
-      border: solid px-to-rem(1px) $medBlue;
-      background: lighten($darkNavy, 6%);
-      border-radius: 0.5rem;
-      text-align: center;
-      transition: all 0.25s ease;
-      @include padding(0.65rem, 0.5rem, 0.65rem, 0.5rem);
-      @include margin (1rem, null, 1rem, null);
-      
-      &:hover, &:focus, &:active{
-        background: #1B4675;
-        border-color: #1B4675;
-        margin-left: 0;
-      }
-    }
+    text-transform: uppercase;
   }
   &--secondary{
     font-size: px-to-rem(14px);

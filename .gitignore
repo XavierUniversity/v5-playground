@@ -54,3 +54,4 @@ config.*
 *.dev.*
 test.*
 src/__trash/*
+package-lock.json

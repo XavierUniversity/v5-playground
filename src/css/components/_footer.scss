@@ -12,6 +12,31 @@
   }
 }
 
+.nav-colophone{
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding-top: 0.5rem;
+  @include font-size(14px);
+  &__item{
+    display: block;
+    @media screen and (min-width: 1070px){
+      display: inline;
+    }  
+  }
+  &__link{
+    text-decoration: underline;
+    color: white;
+    text-transform: uppercase;
+    @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
+    &--border-right:not(:last-child) {
+      @media screen and (min-width: 1070px){
+        border-right: solid 1px white;
+      }
+    }  
+  }
+}
+
 .colophon{
   margin: 0;
   color: white;
@@ -22,24 +47,6 @@
   }
   &__item{
     display: block; 
-    @media screen and (min-width:1070px){
-      display: inline;
-      @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
-    }
-    
-    &--border-right{
-      &:not(:last-child){
-        @media screen and (min-width:1070px){
-          border-right: solid 1px white;
-        }
-      }
-    }
-  }
-  &__link{
-    display: block; 
-    text-decoration: underline;
-    color: white;
-    text-transform: uppercase;
     @media screen and (min-width:1070px){
       display: inline;
       @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));

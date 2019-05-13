@@ -6341,3 +6341,8 @@ function toggleStateEvent(event){
 
 // Obvi...the event listener.
 document.addEventListener('click', toggleStateEvent);
+
+$("#overlay").on('click', function(){
+  toggleState("#main-nav", 'visible');
+  toggleOverlay("#main-nav", 'visible');
+});

@@ -20,20 +20,20 @@
   @include font-size(14px);
   &__item{
     display: block;
-    @media screen and (min-width: 1070px){
+    @include for-size("tablet-landscape-up"){
       display: inline;
-    }  
+      &--border-right {
+        @include for-size("tablet-landscape-up"){
+          border-right: solid 1px white;
+        }
+      }
+    }
   }
   &__link{
     text-decoration: underline;
     color: white;
     text-transform: uppercase;
-    @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
-    &--border-right:not(:last-child) {
-      @media screen and (min-width: 1070px){
-        border-right: solid 1px white;
-      }
-    }  
+    @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));  
   }
 }
 
@@ -47,16 +47,13 @@
   }
   &__item{
     display: block; 
-    @media screen and (min-width:1070px){
+    @include for-size("tablet-landscape-up"){
       display: inline;
       @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
     }
-    
     &--border-right{
-      &:not(:last-child){
-        @media screen and (min-width:1070px){
-          border-right: solid 1px white;
-        }
+      @include for-size("tablet-landscape-up"){
+        border-right: solid 1px white;
       }
     }
   }

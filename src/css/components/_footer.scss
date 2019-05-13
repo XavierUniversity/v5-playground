@@ -22,7 +22,7 @@
     display: block;
     @include for-size("tablet-landscape-up"){
       display: inline;
-      &--border-right {
+      &--border-right:not(:last-child) {
         @include for-size("tablet-landscape-up"){
           border-right: solid 1px white;
         }

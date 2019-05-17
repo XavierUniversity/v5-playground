@@ -1,16 +1,30 @@
 .social{
+  $self: &;
   @include padding(px-to-rem(32px), null, px-to-rem(16px), null);
   text-align: center;
   &__link{
+    display: inline-block;
+    color: white;
     text-decoration: none;
     @include margin(null, px-to-rem(4px), null, px-to-rem(4px));
     @include for-size("tablet-portrait-up"){
       @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
     }
+    
+    &:hover, &:active, &:focus{
+      #{$self}__icon{
+        background: #1B4675;
+        border-color: #1B4675;
+      }
+    }
   }
   &__icon{
+    background: lighten($darkNavy, 6%);
+    border-radius: 100%;
+    border: solid px-to-rem(0.715px) $medBlue;
     height: px-to-rem(40px);
     width: px-to-rem(40px);
+    transition: all 0.25s ease;
     @include for-size("tablet-portrait-up"){
       height: px-to-rem(48px);
       width: px-to-rem(48px);

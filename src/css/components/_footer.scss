@@ -1,7 +1,7 @@
 .footer{
   background: $darkNavy;
   border-top: solid px-to-rem(4px) $medBlue;
-  @include padding(px-to-rem(32px), null, px-to-rem(64px), null);
+  @include padding(px-to-rem(64px), null, px-to-rem(64px), null);
   &__nav-list{
     @include padding(0, null, px-to-rem(32px), null);
     @include margin(0, null, 0, null);
@@ -9,6 +9,10 @@
   &__nav-item{
     text-transform: uppercase;
     width: 100%;
+    
+    @include for-size("tablet-portrait-up"){
+      @include margin(null, 1rem, null, 1rem);
+    }
   }
 }
 
@@ -32,8 +36,11 @@
   &__link{
     text-decoration: underline;
     color: white;
-    text-transform: uppercase;
+//     text-transform: uppercase;
     @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));  
+    &:hover{
+      text-decoration: none;  
+    }
   }
 }
 

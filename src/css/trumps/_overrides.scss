@@ -6,7 +6,7 @@
 
 // When the navigation is open, use this to stop the scroll events on body.
 .nav-open{
-  overflow: hidden;
+  overflow: hidden !important;
   
   .overlay{
     display: initial;

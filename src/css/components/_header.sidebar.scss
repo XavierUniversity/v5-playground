@@ -7,18 +7,17 @@
 
 .drawer{
   background: $darkNavy;
-  display: none;
-  width: 100vw;
-  transform: translateX(100%);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
   overflow-y: scroll;
-  z-index: 100;
+  position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  transform: translateX(100%);
+  transition: 250ms linear all;
   width: var(--drawer-width);
+  visibility: hidden;
+  z-index: 100;
   @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
-//   transition: right 250ms;
   @include for-size(tablet-landscape-up){
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
@@ -28,15 +27,16 @@
   }
   
   &.visible{
-    display: block;
-    animation: slide-in 250ms forwards;
+//     display: block;
+    transform: translateX(0);
+    visibility: visible;
   }
   
   &__btn{
     color: rgba(white, 0.75); // Without a fill color; this will take hold.
-    @include margin(px-to-rem(24px), null, null, null);
     float: right;
-    padding: px-to-rem(8px);
+    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
+    @include margin(px-to-rem(24px), null, null, null);
     &:hover, &:focus, &:active{
       color: white;
     }

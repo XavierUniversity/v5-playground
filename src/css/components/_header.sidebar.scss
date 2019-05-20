@@ -22,6 +22,11 @@
   @include for-size(tablet-landscape-up){
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
+  
+  &--full{
+    width: 100%;
+  }
+  
   &.visible{
     display: block;
     animation: slide-in 250ms forwards;

@@ -1,16 +1,3 @@
-.search-drawer{
-  position: fixed;
-  transition: all 250ms;
-  width: 100vw;
-  right: 0;
-  top: px-to-rem(96px);
-  transform: translateX(100%);
-  display: none;
-  &.visible{
-    display: block;
-    animation: slide-in 250ms forwards;
-  }    
-}
 .site-search{
   display: flex;
   justify-content: space-between;

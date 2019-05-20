@@ -12,27 +12,30 @@ function setFocusToFirstItemInModal(obj){
   o.filter(focusableElementsString).filter(':visible').first().focus();
 }
 
-function toggleMenu(){
+function toggleDrawer(target){
   // toggle the visibility of the nav and overlay
-  $("#main-nav").toggleClass("visible");
-  $("body").toggleClass("nav-open");
+  $(target.data.t).toggleClass("visible");
+  if ( target.data.t == "#main-nav" ){
+    $("body").toggleClass("nav-open");  
+  }
   // Set the aria attributes for showing/hiding appropriate content
-  $('#main-nav').attr('aria-hidden', $('#main-nav').attr('aria-hidden') == 'false' ? 'true' : 'false');
-  $("#content").attr('aria-hidden', $('#main-nav').attr('aria-hidden') == 'false' ? 'true' : 'false');
+  $(target.data.t).attr('aria-hidden', $(target.data.t).attr('aria-hidden') == 'false' ? 'true' : 'false');
+  $("#content").attr('aria-hidden', $(target.data.t).attr('aria-hidden') == 'false' ? 'true' : 'false');
   
   // attach an event listener to redirect the tab to the modal window.
   $('body').on('focusin', '#content', function(){
-    setFocusToFirstItemInModal($("#main-nav"));
+    setFocusToFirstItemInModal($(target.data.t));
   });
   
   focusedElementBeforeModal = jQuery(':focus');
   if ( state == 'closed' ){
-    setFocusToFirstItemInModal($("#main-nav")); 
+    setFocusToFirstItemInModal($("target")); 
     state = 'opened';
   } else{
     focusedElementBeforeModal.focus();
     state = 'closed';
   }
+  return false;
 }
 
 function trapEscapeKey(obj, evt) {
@@ -43,16 +46,19 @@ function trapEscapeKey(obj, evt) {
     // get list of focusable items
     
     var cancelElement;
-    cancelElement = o.filter(".menu_toggle");
+    cancelElement = o.filter(['.menu_toggle', '.search_toggle']);
 
     // close the modal window
     cancelElement.click();
     evt.preventDefault();
   }
+  return false;
 }
 
-$(".menu_toggle, #overlay").on("click", toggleMenu);
-
-$('#main-nav').keydown(function(event) {
+// Click events...
+$(".menu_toggle, #overlay").on("click", { t: "#main-nav" }, toggleDrawer);
+$(".search_toggle").on("click", { t: "#search" }, toggleDrawer);
+// Trap the escape key...
+$('#main-nav, #search').keydown(function(event) {
   trapEscapeKey($(this), event);
 });

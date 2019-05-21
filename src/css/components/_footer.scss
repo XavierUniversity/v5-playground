@@ -35,10 +35,11 @@
   }
   &__link{
     text-decoration: underline;
-    color: white;
-//     text-transform: uppercase;
+    color: rgba(white, 0.75);
     @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));  
+    transition: color 300ms ease;
     &:hover{
+      color: white;
       text-decoration: none;  
     }
   }

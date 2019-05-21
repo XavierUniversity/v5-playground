@@ -34,7 +34,7 @@
     }
   }
   &__link{
-    text-decoration: underline;
+    text-decoration: none;
     color: rgba(white, 0.75);
     @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));  
     transition: color 300ms ease;

@@ -9,3 +9,7 @@ img {
     max-width: none;
   }
 }
+
+body > svg {
+  display: none;
+}

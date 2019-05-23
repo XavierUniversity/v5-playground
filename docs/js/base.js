@@ -6437,7 +6437,11 @@ function toggleState(elem, stateOne){
 function toggleStateEvent(event){
   event.preventDefault();
   toggleState(event.target.getAttribute('data-toggle'), 'visible');
-  event.target.classList.toggle("on");
+  
+  var e = document.querySelectorAll('[data-toggle="'+ event.target.getAttribute('data-toggle') +'"]');
+  e.forEach( function(el){
+    el.classList.toggle("on");
+  })
 }
 
 // Obvi...the event listener.

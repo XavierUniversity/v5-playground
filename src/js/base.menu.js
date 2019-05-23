@@ -82,7 +82,7 @@ function setFocusToFirstItem(obj) {
   var o = obj.find('*');
 
   // set focus to first focusable item
-  o.filter(focusableElementsString).filter(':visible').first().focus();
+  setTimeout(function(){o.filter(focusableElementsString).filter(':visible').first().focus()}, 250);
 }
 
 function openDrawer(obj){

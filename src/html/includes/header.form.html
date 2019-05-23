@@ -1,11 +1,11 @@
 <div id="search" class="drawer drawer--full" aria-hidden="true">
-  <button class="o-btn drawer__btn search_toggle" aria-label="Close Main Navigation">
-    <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-  </button>
   <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search">
     <input type="hidden" name="collection" value="xavu-meta" />
     <label class="sr-only" for="query">Search Xavier University:</label>
     <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
     <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
   </form>
+  <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#search">
+    <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+  </button>
 </div>

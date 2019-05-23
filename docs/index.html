@@ -32,20 +32,17 @@
         </nav>
         <!-- UI Elements == Search and Menu -->
         <div class="header-ui">
-          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta" data-toggle="#search" target="_blank" class="o-btn header-ui__btn header-ui__btn--search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
-          <button class="o-btn header-ui__btn header-ui__btn--menu menu_toggle">
+          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+          <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
     				<span>Open Navigation Menu</span>
     			</button>
         </div>
       </div>
       <div id="main-nav" class="drawer" aria-hidden="true">
-          <button class="o-btn drawer__btn menu_toggle" aria-label="Close Main Navigation">
-            <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-          </button>
           <nav id="" aria-label="Main Navigation">
             <ul class="nav-list nav-list--border-top">
               <li class="nav-list__item nav-list__item--border-bottom">
-                <a class="nav-list__link nav-list__link--upper" href="#">Admission</a>
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu" id="1">Admission</a>
                 <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#admission-sub">
                   <svg class="icon nav-list__icon nav-list__icon--plus">
                     <use xlink:href="#xu-plus" />
@@ -146,17 +143,20 @@
               <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="#">Parents</a></li>
             </ul>
           </nav>
+          <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#main-nav">
+            <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+          </button>
         </div>
       <div id="search" class="drawer drawer--full" aria-hidden="true">
-        <button class="o-btn drawer__btn search_toggle" aria-label="Close Main Navigation">
-          <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-        </button>
         <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search">
           <input type="hidden" name="collection" value="xavu-meta" />
           <label class="sr-only" for="query">Search Xavier University:</label>
           <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
           <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
         </form>
+        <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#search">
+          <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+        </button>
       </div>
     </header>
     <!-- Add your site or application content here -->

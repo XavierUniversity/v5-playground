@@ -7,6 +7,7 @@
 
 .drawer{
   background: $darkNavy;
+  display: block;
   overflow-y: scroll;
   position: fixed;
     top: 0;
@@ -34,9 +35,11 @@
   
   &__btn{
     color: rgba(white, 0.75); // Without a fill color; this will take hold.
-    float: right;
+    position: fixed;
+      top:0;
+      right: 0;
     @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
-    @include margin(px-to-rem(24px), null, null, null);
+    @include margin(px-to-rem(24px), px-to-rem(40px), null, null);
     &:hover, &:focus, &:active{
       color: white;
     }

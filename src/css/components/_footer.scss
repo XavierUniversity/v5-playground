@@ -9,7 +9,6 @@
   &__nav-item{
     text-transform: uppercase;
     width: 100%;
-    
     @include for-size("tablet-portrait-up"){
       @include margin(null, 1rem, null, 1rem);
     }
@@ -24,6 +23,7 @@
   @include font-size(14px);
   &__item{
     display: block;
+    @include margin(null, null, 0.75rem, null);
     @include for-size("tablet-landscape-up"){
       display: inline;
       &--border-right:not(:last-child) {
@@ -46,7 +46,7 @@
 }
 
 .colophon{
-  color: rgba(white, 0.75);
+  color: white;
   text-align: center;
   &__address{
     @include font-size(14px, 1.25);

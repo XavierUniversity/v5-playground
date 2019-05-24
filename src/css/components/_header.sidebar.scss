@@ -38,7 +38,11 @@
       top:0;
       right: 0;
     @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
-    @include margin(px-to-rem(24px), px-to-rem(40px), null, null);
+    @include margin(px-to-rem(24px), px-to-rem(10px), null, null);
+    @include for-size(tablet-landscape-up){
+      @include margin(px-to-rem(24px), px-to-rem(40px), null, null);  
+    }
+    
     &:hover, &:focus, &:active{
       color: white;
     }

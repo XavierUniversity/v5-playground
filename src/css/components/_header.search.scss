@@ -1,9 +1,10 @@
+.search__header{
+  background: white;
+  @include padding(1.5rem, 3rem, 1.5rem, 3rem);
+}
+
 .site-search{
-  display: flex;
-  justify-content: space-between;
-  width: 80vw;
-  @include margin(4rem, auto, 0, auto);
-  @include padding(2rem, null, 2rem, null);
+  width: 100%;
   &__btn{
     color: white;
     background: $medBlue;
@@ -18,10 +19,100 @@
     }
   }
   &__input-text{
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 200;
     border: none;
+    width: 92%;
+    @include padding(0.7rem, 0.6rem, 0.7rem, 0.6rem);
+  }
+}
+
+.search{
+  @include margin(2rem, 3rem, 3rem, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  &__intro{
+    text-align: center;
+    font-size: px-to-rem(20px);
+    color: lighten(black, 45%);
+    flex-grow: 3;
+    @include for-size(tablet-landscape-up){
+      @include padding(null, 15%, null, 15%);  
+    }
+  }
+  
+  &__sidebar{
+    display: none;
+    width: 300px;
+    margin-right: 50px;
+  }
+  
+  &__heading{
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: solid px-to-rem(1px) darken(#F9FAFB, 10%);
+    @include padding(null, null, 0.5rem, null);
+  }
+  
+  &__facets{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__facet-item{}
+  &__facet-link{
+    color: $medBlue;
+    text-decoration: none;
+    &:hover, &:focus, &:active{
+      color: darken($medBlue, 15%);
+    }
+    
+    &.is-active{
+      font-weight: 300;
+    }
+  }
+  &__results{
+    width: calc(100% - 350px);
+  }
+  
+  &__result{
+    text-decoration: none;
+    display: block;
     width: 100%;
-    @include padding(0.6rem, 0.4rem, 0.6rem, 0.4rem);
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    &:hover, &:focus, &:active{
+      background: white;
+      box-shadow: 0 0 px-to-rem(8px) rgba(black, 0.15);
+    }
+  }
+  &__title{
+    @include font-size(20px, 1.25);
+    font-weight: 300;
+    color: $darkNavy;
+  }
+  &__content{
+    @include margin(0, 0, 0, 0);
+    @include padding(0, 0, 0, 0);
+  }
+  &__url{
+    color: lighten(black, 45%);
+    display: block;
+  }
+  &__description{
+    display: block;
+    border-left: solid px-to-rem(1px) darken(#F9FAFB, 10%);
+    @include padding(px-to-rem(4px), null, px-to-rem(4px), px-to-rem(8px));
+    color: $base-text-color;
+  }
+  &__tag{
+    display: inline-block;
+    @include margin(0.5rem, null, 0.5rem, 0);
+    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    color: $darkNavy;
+    background: white;
+    @include font-size(14px);
+    text-transform: uppercase;
   }
 }

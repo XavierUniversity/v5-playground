@@ -23,8 +23,10 @@
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
   
-  &--full{
+  &--search{
+    background: #F9FAFB;
     width: 100%;
+    @include padding(0,0,0,0);
   }
   
   &.visible{
@@ -42,11 +44,17 @@
     @include for-size(tablet-landscape-up){
       @include margin(px-to-rem(24px), px-to-rem(40px), null, null);  
     }
-    
+     
     &:hover, &:focus, &:active{
       color: white;
     }
-    @include clearfix();
+    
+    &--inverted{
+      color: rgba($darkNavy, 0.75);
+      &:hover, &:focus, &:active{
+        color: $darkNavy;
+      }  
+    }
   }
   
   &__icon{

@@ -6217,6 +6217,7 @@ THE SOFTWARE.
 String.prototype.capitalize = function() { return this.charAt(0).toUpperCase() + this.slice(1); }
 
 
+/*
 Handlebars.registerHelper('replaceComma', function(value){
   var t = value.replace(/,/g, ', ');
   return t;
@@ -6242,7 +6243,7 @@ jQuery('#header-search #query').qc({
       collection: 'xavu-meta',
       profile: '_default',
       show: '5'
-    }/*
+    }
 ,
     programs: {
       name: 'Programs',
@@ -6262,9 +6263,58 @@ jQuery('#header-search #query').qc({
         suggestion: '<div class="media">{{#if extra.disp.metaData.I}}<img src="{{extra.disp.metaData.I}}" alt="{{extra.disp.title}}" />{{/if}}<div class="media-body"><h6>{{extra.disp.metaData.stencilsPeopleFirstName}} {{extra.disp.metaData.stencilsPeopleLastName}}</h6><p><em>{{{replaceComma extra.disp.metaData.stencilsPeoplePosition}}}</em>{{#if extra.disp.metaData.stencilsPeoplePhone}}<br />{{extra.disp.metaData.stencilsPeoplePhone}}{{/if}}</p></div></div>'
       }
     }
-*/
   }
 });
+*/
+
+function delay(callback, ms){
+  var timer = 0;
+  return function(){
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      callback.apply(context, args);
+    }, ms || 0);
+  };
+}
+
+$('#query').on("keyup", delay(function(e){
+  e.preventDefault();
+  var query = $(this).val();
+  var resultHTML = '';
+  $.ajax({
+    url: 'https://search.xavier.edu/s/search.json',
+    method: 'GET',
+    data: { 'collection': 'xavu-meta', 'query': query, 'show': 15 }
+  }).done(function(a, b){
+    $.each(a.response.resultPacket.results, function(index, item){      
+      var description = item.summary;
+      var title = item.title.replace(' | Xavier University', '');
+      console.log(title);
+      if ( typeof item.metaData.stencilsCourseDesc !== 'undefined' ){
+        description = item.metaData.stencilsCourseDesc;
+      }
+      resultHTML += '<a href="https://search.xavier.edu'+ "LINK" +'" class="search__result">';
+      resultHTML += '<h2 class="search__title">' + title +'</h2>';
+      resultHTML += '<p class="search__content">';
+      resultHTML += '<span class="search__url">'+ item.liveUrl +'</span>';
+      resultHTML += '<span class="search__description">'+ description +'</span>';
+      resultHTML += '<span class="search__tag">' + item.collection + '</span>';  
+      resultHTML += '</p></a>';
+    });
+    if ( resultHTML.length > 1 ){
+      $(".search__results").html('<h1 class="sr-only">Search Results</h1>' + resultHTML);
+      $(".search__sidebar").show();
+      $(".search__intro").hide();
+    } else {
+      $(".search__results").html('<h1 class="sr-only">Search Results</h1><p class="search__content">No results found</p>');
+      $(".search__sidebar").hide();
+    }
+  });
+}, 250));
+
+
+
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 

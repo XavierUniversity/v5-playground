@@ -1,11 +1,27 @@
-<div id="search" class="drawer drawer--full" aria-hidden="true">
-  <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search">
+<div id="search" class="drawer drawer--search visible" aria-hidden="true" aria-describedby="search_intro">
+  <div class="search__header">
+    <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search">
     <input type="hidden" name="collection" value="xavu-meta" />
     <label class="sr-only" for="query">Search Xavier University:</label>
     <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
-    <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
-  </form>
-  <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#search">
-    <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-  </button>
+    <button class="o-btn site-search__btn sr-only" type="submit" aria-label="Submit Search">Search</button>
+    </form>
+    <button class="o-btn drawer__btn drawer__btn--inverted drawer-close" aria-label="Close Main Navigation" data-controls="#search">
+      <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+    </button>
+  </div>
+  <div class="search">
+    <p class="search__intro" id="search_intro">Find anything about Xavier University, our faculty, staff and more. Enter a query in the search input above, and results will be displayed as you type.</p>
+    <div class="search__sidebar">
+      <h2 class="search__heading">Website Facet</h2>
+      <ul class="search__facets">
+        <li class="search__facet-item"><a class="search__facet-link is-active" href="#">All</a></li>
+        <li class="search__facet-item"><a class="search__facet-link" href="#">Website</a></li>
+        <li class="search__facet-item"><a class="search__facet-link" href="#">Programs</a></li>
+        <li class="search__facet-item"><a class="search__facet-link" href="#">Faculty</a></li>
+      </ul>
+    </div>
+    <div class="search__results">
+    </div>
+  </div>
 </div>

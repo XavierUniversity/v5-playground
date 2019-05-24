@@ -32,6 +32,17 @@
   }
   &--footer{
     text-align: center;
-    @include margin(null, null, px-to-rem(24px), null);
+    @include for-size("tablet-landscape-up"){
+      text-align: right;  
+    }
+    
+    
+    &--x{
+      @include for-size("phone-only"){
+        width: px-to-rem(51px);
+        height: px-to-rem(40px);  
+      }
+    }
+    
   }
 }

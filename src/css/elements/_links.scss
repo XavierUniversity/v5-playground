@@ -1,0 +1,7 @@
+a{
+  color: $medBlue;
+  text-decoration: none;
+  &:hover, &:focus, &:active{
+    color: darken($medBlue, 15%);
+  }  
+}

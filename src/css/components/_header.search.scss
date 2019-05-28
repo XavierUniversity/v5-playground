@@ -43,8 +43,11 @@
   
   &__sidebar{
     display: none;
-    width: 300px;
+    width: 150px;
     margin-right: 50px;
+    @include for-size("tablet-landscape-up"){
+      width: 300px;
+    }
   }
   
   &__heading{
@@ -60,21 +63,25 @@
     margin: 0;
     padding: 0;
   }
-  
-  &__facet-item{}
+  &__facet-count{
+    color: lighten(black, 45%);
+    float: right;
+    @include font-size(14px);
+    display: inline-block;
+  }
+  &__facet-item{
+    display: block;
+  }
   &__facet-link{
-    color: $medBlue;
-    text-decoration: none;
-    &:hover, &:focus, &:active{
-      color: darken($medBlue, 15%);
-    }
-    
     &.is-active{
       font-weight: 300;
     }
   }
   &__results{
-    width: calc(100% - 350px);
+    width: calc(100% - 200px);
+    @include for-size("tablet-landscape-up"){
+      width: calc(100% - 350px);  
+    }
   }
   
   &__result{
@@ -95,6 +102,16 @@
   &__content{
     @include margin(0, 0, 0, 0);
     @include padding(0, 0, 0, 0);
+  }
+  &__image{
+    width: px-to-rem(150px);
+    height: px-to-rem(150px);
+    float: right;
+    display: none;
+  }
+  &__contact{
+    display: block;
+    @include margin(0.5rem, null, null, null);
   }
   &__url{
     color: lighten(black, 45%);

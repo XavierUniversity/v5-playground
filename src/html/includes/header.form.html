@@ -1,6 +1,6 @@
-<div id="search" class="drawer drawer--search" aria-hidden="true" aria-describedby="search_intro">
+<div id="search" class="drawer drawer--search visible" aria-hidden="true" aria-describedby="search_intro">
   <div class="search__header">
-    <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search">
+    <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search" aria-controls="search-results">
     <input type="hidden" name="collection" value="xavu-meta" />
     <label class="sr-only" for="query">Search Xavier University:</label>
     <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
@@ -13,15 +13,11 @@
   <div class="search">
     <p class="search__intro" id="search_intro">Find anything about Xavier University, our faculty, staff and more. Enter a query in the search input above, and results will be displayed as you type.</p>
     <div class="search__sidebar">
-      <h2 class="search__heading">Website Facet</h2>
-      <ul class="search__facets">
-        <li class="search__facet-item"><a class="search__facet-link is-active" href="#">All</a></li>
-        <li class="search__facet-item"><a class="search__facet-link" href="#">Website</a></li>
-        <li class="search__facet-item"><a class="search__facet-link" href="#">Programs</a></li>
-        <li class="search__facet-item"><a class="search__facet-link" href="#">Faculty</a></li>
+      <h2 class="search__heading">Filter Results</h2>
+      <ul class="search__facets" id="search-tabs">
       </ul>
     </div>
-    <div class="search__results">
+    <div class="search__results" id="search-results" aria-live="polite">
     </div>
   </div>
 </div>

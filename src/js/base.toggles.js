@@ -21,7 +21,6 @@ function toggleState(elem, stateOne){
 
 // Monitors the click events....Grabs the to be toggled item
 function toggleStateEvent(event){
-  event.preventDefault();
   toggleState(event.target.getAttribute('data-toggle'), 'visible');
   
   var e = document.querySelectorAll('[data-toggle="'+ event.target.getAttribute('data-toggle') +'"]');

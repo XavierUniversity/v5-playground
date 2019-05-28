@@ -136,7 +136,6 @@ function search(query){
     $.each(a.response.resultPacket.results, function(index, item){      
       var description = item.summary;
       var title = item.title.replace(' | Xavier University', '');
-      console.log(title);
       if ( typeof item.metaData.stencilsCourseDesc !== 'undefined' ){
         description = item.metaData.stencilsCourseDesc;
       }
@@ -163,6 +162,7 @@ $('#query').on("keyup", delay(function(e){
   e.preventDefault();
   search($(this).val());
 }, 250));
+
 
 $("#header-search").on("submit", function(e){
   e.preventDefault();
@@ -212,24 +212,10 @@ window.onscroll = function(e) {
   * Improvements:
   *  - Hide entities that were open when a new item is clicked
 **/
-// Toggles the visible state as needed.
-function toggleState(elem, stateOne){
-  var elem = document.querySelectorAll(elem);
-  if ( !elem ) return;
-  elem.forEach( function(el){
-    el.classList.toggle(stateOne);
-  });
-};
-
-// Monitors the click events....Grabs the to be toggled item
-function toggleStateEvent(event){
-  toggleState(event.target.getAttribute('data-toggle'), 'visible');
-  
-  var e = document.querySelectorAll('[data-toggle="'+ event.target.getAttribute('data-toggle') +'"]');
-  e.forEach( function(el){
-    el.classList.toggle("on");
-  })
-}
-
-// Obvi...the event listener.
-document.addEventListener('click', toggleStateEvent);
+$("[data-toggle]").on('click', function(e){
+  e.preventDefault();
+  console.log(e);
+  var list = $(this).data("toggle");
+  $(list).toggleClass("visible");
+  $('[data-toggle='+list+']').toggleClass("on");
+});

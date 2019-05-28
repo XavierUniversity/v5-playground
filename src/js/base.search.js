@@ -21,7 +21,6 @@ function search(query){
     $.each(a.response.resultPacket.results, function(index, item){      
       var description = item.summary;
       var title = item.title.replace(' | Xavier University', '');
-      console.log(title);
       if ( typeof item.metaData.stencilsCourseDesc !== 'undefined' ){
         description = item.metaData.stencilsCourseDesc;
       }
@@ -48,6 +47,7 @@ $('#query').on("keyup", delay(function(e){
   e.preventDefault();
   search($(this).val());
 }, 250));
+
 
 $("#header-search").on("submit", function(e){
   e.preventDefault();

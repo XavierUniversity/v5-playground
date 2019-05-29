@@ -137,14 +137,13 @@ function buildTabs(tabArray, id){
   var id = (typeof id !== 'undefined' ? "#facets" : id);
   if ( tabArray.length > 1 ){
     $.each(tabArray, function(index, item){
-      html += '<li class="search__facet-item"><a class="search__facet-link" href="'+item.toggleUrl+'">'+ item.label +'</a><span class="search__facet-count">'+item.count+'</span></li>';
+      html += '<li class="search__facet-item"><a class="search__facet-link' + (item.selected == true ? ' is-active' : '') +'" href="'+item.toggleUrl+'">'+ item.label +'</a><span class="search__facet-count">'+item.count+'</span></li>';
     });
     $('#search-tabs').html(html);
   }
 }
 
 function buildResult(object){
-  console.log(object);
   var title = object.title.replace(" | Xavier University", '');
   var open = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'" class="search__result">';
   var close = '</a>';
@@ -194,28 +193,7 @@ function search(query){
     resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
     
     $.each(results, function(index, item){
-      console.log(item);
-      
       resultHTML += buildResult(item);
-      
-/*
-      var description = item.summary;
-      var title = item.title.replace(' | Xavier University', '');
-      var tags = '<span class="search__tag">'+item.collection.replace('xavu-','')+'</span>';
-      if ( typeof item.metaData.stencilsCourseDesc !== 'undefined' ){
-        description = item.metaData.stencilsCourseDesc;
-      }
-      if ( typeof item.metaData.stencilsCourseLevel !== 'undefined' ){
-        tags += '<span class="search__tag">' + item.metaData.stencilsCourseLevel + '</span>';
-      }
-      resultHTML += '<a href="https://search.xavier.edu'+ item.clickTrackingUrl +'" class="search__result">';
-      resultHTML += '<h2 class="search__title">' + title +'</h2>';
-      resultHTML += '<p class="search__content">';
-      resultHTML += '<span class="search__url">'+ item.liveUrl +'</span>';
-      resultHTML += '<span class="search__description">'+ description +'</span>';
-      resultHTML += tags;  
-      resultHTML += '</p></a>';
-*/
     });
     
     var prev = ( nav.previousUrl !== null ) ? '<a href="'+nav.previousUrl+'" class="o-btn c-btn search__nav">Previous</a>' : '';
@@ -226,6 +204,7 @@ function search(query){
       $(".search__sidebar").show();
       $(".search__intro").hide();
     } else {
+      $(".search__intro").show();
       $(".search__results").html('<h1 class="sr-only">Search Results</h1><p class="search__content">No results found</p>');
       $(".search__sidebar").hide();
     }

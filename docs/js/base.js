@@ -232,6 +232,13 @@ $(document).on('click', '.search__facet-link', function(e){
   e.preventDefault();
   search($(this).attr('href').replace("?",""));
 });
+
+$('[data-controls="#search"]').on('click', function(e){
+  $("#query").val('');
+  $('.search__results').html('');
+  $('.search__sidebar').hide();
+  $('.search__intro').show();
+});
 /**
   * base.sticky.js
   * =======================

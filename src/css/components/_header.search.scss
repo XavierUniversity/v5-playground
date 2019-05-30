@@ -1,6 +1,17 @@
 .search__header{
   background: white;
   @include padding(1.5rem, 3rem, 1.5rem, 3rem);
+  top: -100px;
+  transition: all 300ms linear;
+  position: absolute;
+  width: 100%;
+}
+
+.drawer--search.visible {
+  .search__header{
+    top:0;
+    position: relative;
+  }
 }
 
 .site-search{
@@ -147,5 +158,19 @@
     background: white;
     @include font-size(14px);
     text-transform: uppercase;
+  }
+  &__nav-container{
+    border-top: solid px-to-rem(1px) darken(#F9FAFB, 10%);
+    text-align: center;
+  }
+  &__nav{
+    display: inline-block;
+    @include margin(1rem, 0.5rem, 1rem, 0.5rem);
+    color: $medBlue;
+    text-decoration: none;
+    &:hover, &:focus, &:active{
+      color: darken($medBlue, 15%);
+      text-decoration: underline;
+    }  
   }
 }

@@ -196,9 +196,9 @@ function search(query){
       resultHTML += buildResult(item);
     });
     
-    var prev = ( nav.previousUrl !== null ) ? '<a href="'+nav.previousUrl+'" class="o-btn c-btn search__nav">Previous</a>' : '';
-    var next = ( nav.nextUrl !== null ) ? '<a href="'+nav.nextUrl+'" class="o-btn c-btn search__nav">Next</a>' : '';
-    resultHTML += '<hr />' + prev + next;
+    var prev = ( nav.previousUrl !== null ) ? '<a href="'+nav.previousUrl+'" class="search__nav" title="Previous page of search results">Previous</a>' : '';
+    var next = ( nav.nextUrl !== null ) ? '<a href="'+nav.nextUrl+'" class="search__nav" title="Next page of search results">Next</a>' : '';
+    resultHTML += '<div class="search__nav-container">' + prev + next + '</div>';
     if ( resultHTML.length > 1 ){
       $(".search__results").html('<h1 class="sr-only">Search Results</h1>' + resultHTML);
       $(".search__sidebar").show();

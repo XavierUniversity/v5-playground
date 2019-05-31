@@ -538,9 +538,11 @@ textarea,
  * Change the cursor on control elements in all browsers (opinionated).
  */
 
+/*
 [aria-controls] {
   cursor: pointer;
 }
+*/
 
 /*
  * Change the cursor on disabled, not-editable, or otherwise

@@ -59,6 +59,11 @@
     @include for-size("tablet-landscape-up"){
       width: 300px;
     }
+    &.visible{
+      @include for-size("tablet-landscape-up"){
+        display: block;
+      }
+    }
   }
   
   &__heading{
@@ -95,7 +100,7 @@
     }
   }
   &__results{
-    width: calc(100% - 200px);
+    width: 100%;
     @include for-size("tablet-landscape-up"){
       width: calc(100% - 350px);  
     }

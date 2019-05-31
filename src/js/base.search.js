@@ -86,12 +86,12 @@ function search(query){
     resultHTML += '<div class="search__nav-container">' + prev + next + '</div>';
     if ( resultHTML.length > 1 ){
       $(".search__results").html('<h1 class="sr-only">Search Results</h1>' + resultHTML);
-      $(".search__sidebar").show();
+      $(".search__sidebar").addClass('visible');
       $(".search__intro").hide();
     } else {
       $(".search__intro").show();
       $(".search__results").html('<h1 class="sr-only">Search Results</h1><p class="search__content">No results found</p>');
-      $(".search__sidebar").hide();
+      $(".search__sidebar").removeClass('visible');
     }
   });
 }
@@ -121,6 +121,6 @@ $(document).on('click', '.search__facet-link', function(e){
 $('[data-controls="#search"]').on('click', function(e){
   $("#query").val('');
   $('.search__results').html('');
-  $('.search__sidebar').hide();
+  $('.search__sidebar').removeClass('visible');
   $('.search__intro').show();
 });

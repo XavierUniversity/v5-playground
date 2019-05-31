@@ -5,7 +5,7 @@
   transition: all 400ms linear;
   position: absolute;
   width: 100%;
-  box-shadow: 0 0 px-to-rem(8px) rgba(black, 0.5);
+  box-shadow: 0 15px px-to-rem(16px) rgba(black, 0.10);
 }
 
 .drawer--search.visible {
@@ -30,12 +30,36 @@
       background: #0077AA;
     }
   }
+  
+  &__icon{
+    color: lighten(black, 45%);
+    cursor: default;
+    height: px-to-rem(20px);
+    width: px-to-rem(20px);
+    position: fixed;
+      top:0;
+      left: 0;
+    @include margin(px-to-rem(40px), null, null, px-to-rem(20px));
+    @include for-size(tablet-landscape-up){
+      @include margin(null, null, null, px-to-rem(40px));
+    }
+  }
   &__input-text{
     font-size: 1.25rem;
     font-weight: 200;
     border: none;
-    width: 92%;
-    @include padding(0.7rem, 0.6rem, 0.7rem, 0.6rem);
+    @include margin(null, null, null, 0);
+    width: 90%;
+    @include padding(px-to-rem(10px), 0.6rem, px-to-rem(10px), 0.6rem);
+    @include for-size(tablet-landscape-up){
+      @include margin(null, null, null, 1.5rem);  
+    }
+    
+    &:focus {
+      ~ .site-search__icon{
+        color: $medBlue;
+      }
+    }
   }
 }
 
@@ -43,6 +67,12 @@
   @include margin(2rem, 3rem, 3rem, 3rem);
   display: flex;
   flex-wrap: wrap;
+  &__close{
+    @include margin(px-to-rem(27px) !important, null, null, px-to-rem(10px));
+    @include for-size(tablet-landscape-up){
+      @include margin(null, null, null, px-to-rem(40px));
+    }
+  }
   &__intro{
     text-align: center;
     font-size: px-to-rem(20px);
@@ -52,7 +82,6 @@
       @include padding(null, 15%, null, 15%);  
     }
   }
-  
   &__sidebar{
     display: none;
     width: 150px;

@@ -58,14 +58,14 @@
     &--inverted{
       color: rgba($darkNavy, 0.75);
       &:hover, &:focus, &:active{
-        color: $darkNavy;
+        color: $medBlue;
       }  
     }
   }
   
   &__icon{
-    height: px-to-rem(24px);
-    width: px-to-rem(24px);
+    height: px-to-rem(20px);
+    width: px-to-rem(20px);
   }
 }
 

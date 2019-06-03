@@ -5,22 +5,22 @@
   margin: 0;
   &--border-top{
     border-top: solid px-to-rem(1px) $medBlue;
-    @include margin(5rem, null, null, null)
+    @include margin(px-to-rem(80px), null, null, null)
   }
   
   &__item{
     &--border-bottom{
-      border-bottom: solid px-to-rem(1px) $medBlue;  
-      @include padding(1rem, null, 1rem, null);
+      border-bottom: solid px-to-rem(1px) $medBlue; 
+      @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
     }
   }
   
   &--child{
-    @include margin( 0.75rem, 1rem, 0.5rem, 1rem);
+    @include margin( px-to-rem(12px), px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
     font-style: italic;
     display: none;
     &__item{
-      @include padding(0.725rem, null, 0.725rem, null);
+      @include padding(px-to-rem(11.6px), null, px-to-rem(11.6px), null);
     }
     &.visible{
       display: block;
@@ -42,8 +42,8 @@
   &__btn{
     float: right;
     background: #13355A;
-    border-radius: 0.5rem;
-    @include margin(-0.25rem, null, null, null);
+    border-radius: px-to-rem(8px);
+    @include margin(- px-to-rem(4px), null, null, null);
     &.on{
       .nav-list__icon--plus{
         display: none;
@@ -69,14 +69,14 @@
     }
   }
   &--cta{
-    @include margin(2rem, null, null, null);
+    @include margin(px-to-rem(32px), null, null, null);
     text-transform: uppercase;
   }
   &--secondary{
     font-size: px-to-rem(14px);
-    @include margin(2rem, null, 8rem, null);
+    @include margin(px-to-rem(32px), null, px-to-rem(128px), null);
     &__item{
-      @include margin(0.5rem, null, 0.5rem, null);
+      @include margin(px-to-rem(8px), null, px-to-rem(8px), null);
     }
     &__link{
       text-decoration: underline;
@@ -92,13 +92,13 @@
   text-transform: uppercase;
   &__item{
     display: inline-block;
-    @include margin( null, 1rem, null, 1rem);
+    @include margin( null, px-to-rem(16px), null, px-to-rem(16px));
   }
   &__link{
     font-weight: 200;
     color: white;
     text-decoration: none;
-    border-bottom: solid 0.15rem transparent;
+    border-bottom: solid px-to-rem(2.4px) transparent;
     display: inline-block;
     line-height: 1.5;
     position: relative;
@@ -109,7 +109,7 @@
       left: 0;
       width: 100%;
       height: px-to-rem(3px);
-      @include margin(0.75rem, null, null, null);
+      @include margin(px-to-rem(12px), null, null, null);
       transform: scale(0,1);
       transition: transform 0.4s cubic-bezier(1,0,0,1);
       background: white;

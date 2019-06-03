@@ -1,11 +1,11 @@
 .search__header{
   background: white;
-  @include padding(1.5rem, 3rem, 1.5rem, 3rem);
-  top: -100px;
+  @include padding(px-to-rem(24px), px-to-rem(48px), px-to-rem(24px), px-to-rem(48px));
+  top: px-to-rem(-100px);
   transition: all 400ms linear;
   position: absolute;
   width: 100%;
-  box-shadow: 0 15px px-to-rem(16px) rgba(black, 0.10);
+  box-shadow: 0 px-to-rem(15px) px-to-rem(16px) rgba(black, 0.10);
 }
 
 .drawer--search.visible {
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     text-align: center;
     width: px-to-rem(100px);
-    @include padding(0.6rem, 0.4rem, 0.6rem, 0.4rem);
+    @include padding(px-to-rem(9.6px), px-to-rem(6.4px), px-to-rem(9.6px), px-to-rem(6.4px));
     
     &:hover, &:focus, &:active{
       background: #0077AA;
@@ -50,9 +50,9 @@
     border: none;
     @include margin(null, null, null, 0);
     width: 90%;
-    @include padding(px-to-rem(10px), 0.6rem, px-to-rem(10px), 0.6rem);
+    @include padding(px-to-rem(10px), px-to-rem(9.6px), px-to-rem(10px), px-to-rem(9.6px));
     @include for-size(tablet-landscape-up){
-      @include margin(null, null, null, 1.5rem);  
+      @include margin(null, null, null, px-to-rem(24px));  
     }
     
     &:focus {
@@ -64,7 +64,7 @@
 }
 
 .search{
-  @include margin(2rem, 3rem, 3rem, 3rem);
+  @include margin(2rem, px-to-rem(48px), px-to-rem(48px), px-to-rem(48px));
   display: flex;
   flex-wrap: wrap;
   &__close{
@@ -85,10 +85,10 @@
   }
   &__sidebar{
     display: none;
-    width: 150px;
-    margin-right: 50px;
+    width: px-to-rem(150px);
+    margin-right: px-to-rem(50px);
     @include for-size("tablet-landscape-up"){
-      width: 300px;
+      width: px-to-rem(300px);
     }
     &.visible{
       @include for-size("tablet-landscape-up"){
@@ -98,11 +98,11 @@
   }
   
   &__heading{
-    font-size: 1rem;
+    font-size: px-to-rem(16px);
     font-weight: 300;
     text-transform: uppercase;
     border-bottom: solid px-to-rem(1px) darken(#F9FAFB, 10%);
-    @include padding(null, null, 0.5rem, null);
+    @include padding(null, null, px-to-rem(8px), null);
   }
   
   &__facets{
@@ -133,7 +133,7 @@
   &__results{
     width: 100%;
     @include for-size("tablet-landscape-up"){
-      width: calc(100% - 350px);  
+      width: calc(100% - 350px);
     }
   }
   
@@ -141,7 +141,7 @@
     text-decoration: none;
     display: block;
     width: 100%;
-    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
     &:hover, &:focus, &:active{
       background: white;
       box-shadow: 0 0 px-to-rem(8px) rgba(black, 0.15);
@@ -174,7 +174,7 @@
   }
   &__contact{
     display: block;
-    @include margin(0.5rem, null, null, null);
+    @include margin(px-to-rem(8px), null, null, null);
   }
   &__url{
     color: lighten(black, 45%);
@@ -188,12 +188,16 @@
   }
   &__tag{
     display: inline-block;
-    @include margin(0.5rem, null, 0.5rem, 0);
-    @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+    @include margin(px-to-rem(8px), null, px-to-rem(8px), null);
+    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
     color: $darkNavy;
     background: white;
     @include font-size(14px);
     text-transform: uppercase;
+    
+    &:not(:first-child){
+      @include margin(null, null, null, px-to-rem(8px));
+    }
   }
   &__nav-container{
     border-top: solid px-to-rem(1px) darken(#F9FAFB, 10%);
@@ -201,7 +205,7 @@
   }
   &__nav{
     display: inline-block;
-    @include margin(1rem, 0.5rem, 1rem, 0.5rem);
+    @include margin(px-to-rem(16px), px-to-rem(8px), px-to-rem(16px), px-to-rem(8px));
     color: $medBlue;
     text-decoration: none;
     &:hover, &:focus, &:active{

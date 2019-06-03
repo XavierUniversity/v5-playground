@@ -10,7 +10,7 @@
     text-transform: uppercase;
     width: 100%;
     @include for-size("tablet-portrait-up"){
-      @include margin(null, 1rem, null, 1rem);
+      @include margin(null, px-to-rem(16px), null, px-to-rem(16px));
     }
   }
 }
@@ -19,11 +19,11 @@
   margin: 0;
   color: white;
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: px-to-rem(8px);
   @include font-size(14px);
   &__item{
     display: block;
-    @include margin(null, null, 0.75rem, null);
+    @include margin(null, null, px-to-rem(12px), null);
     @include for-size("tablet-landscape-up"){
       display: inline;
       &--border-right:not(:last-child) {
@@ -50,9 +50,9 @@
   text-align: center;
   &__address{
     @include font-size(14px, 1.25);
-    @include margin(1.5rem, null, null, null);  
+    @include margin(px-to-rem(24px), null, null, null);  
     @include for-size("tablet-landscape-up"){
-      @include margin(-0.3rem, null, null, null);  
+      @include margin(- px-to-rem(4.8px), null, null, null);  
     }
   }
   &__item{
@@ -75,6 +75,6 @@
   
   &__item{
     flex-grow: 1;
-    @include padding(null, 0.5rem, null, 0.5rem);
+    @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 }

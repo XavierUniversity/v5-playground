@@ -3,14 +3,15 @@
   display: block;
   border: solid px-to-rem(1px) $medBlue;
   background: lighten($darkNavy, 6%);
-  border-radius: 0.5rem;
+  border-radius: px-to-rem(8px);
   text-align: center;
   transition: all 0.25s ease;
-  @include padding(0.65rem, 0.5rem, 0.65rem, 0.5rem);
-  @include margin (1rem, null, 1rem, null);
+  @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
+  @include margin (px-to-rem(16px), null, px-to-rem(16px), null);
   &:hover, &:focus, &:active{
     background: #1B4675;
     border-color: #1B4675;
+    color: white;
     margin-left: 0;
   }
 }

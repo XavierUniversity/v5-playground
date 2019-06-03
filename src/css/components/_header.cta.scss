@@ -5,6 +5,6 @@
   }
   text-transform: uppercase;
   &__item{
-    @include margin( null, 1rem, null, 1rem);
+    @include margin( null, px-to-rem(16px), null, px-to-rem(16px));
   }
 }

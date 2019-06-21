@@ -10,7 +10,7 @@ Templates, HTML, CSS and planning for the v5 website revision.
 ## Setup Instructions
 
 1. Download and install [Docker](https://www.docker.com). Register for a [Docker Hub](https://hub.docker.com) account (required to download docker hub images).
-2. Download and install [Lando](https://docs.devwithlando.io/installation/macos.html).
+2. Download and install [Lando](https://docs.devwithlando.io/installation/macos.html). Latest working version for our environment is [`3.0.0-beta47`](https://github.com/lando/lando/releases/tag/v3.0.0-beta.47)
 3. Clone or update your local repository: `git clone/pull git@github.com:XavierUniversity/v5-playground.git`
 4. Inside of your repo folder, run `lando start` and all of the components will be built for you and `grunt` will automatically start.
   - If you don't stop Lando but need to run grunt simply use `lando grunt` to get it running again.

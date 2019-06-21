@@ -4,7 +4,7 @@
   "description": "A basic playground with a website attached to see results",
   "main": "index.html",
   "scripts": {
-    "start": "echo \"Starting Browsersync...\" && grunt"
+    "start": "grunt"
   },
   "repository": {
     "type": "git",
@@ -16,23 +16,24 @@
     "url": "https://github.com/XavierUniversity/v5-playground/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-compass": "^1.1.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^2.2.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "autoprefixer": "latest",
+    "grunt": "latest",
+    "grunt-browser-sync": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
     "grunt-includes": "latest",
-    "grunt-modernizr": "^1.0.2",
-    "grunt-newer": "^1.2.0",
-    "grunt-postcss": "^0.8.0",
-    "grunt-svgstore": "^2.0.0",
-    "jshint-stylish": "^2.2.1"
+    "grunt-modernizr": "latest",
+    "grunt-newer": "latest",
+    "grunt-postcss": "latest",
+    "grunt-sass": "latest",
+    "grunt-svgstore": "latest",
+    "jshint-stylish": "latest",
+    "node-sass": "^4.12.0"
   },
   "homepage": "https://github.com/XavierUniversity/v5-playground#readme"
 }

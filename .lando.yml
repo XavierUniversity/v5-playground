@@ -1,0 +1,26 @@
+name: v5
+recipe: lemp
+config:
+  webroot: docs
+  database: mariadb
+services:
+  node:
+    type: node
+    build:
+      - npm install
+      - grunt
+    globals:
+      requirejs: latest
+      grunt-cli: latest
+    overrides:
+      services:
+        ports:
+          - 3000:3000
+          - 3001:3001
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  grunt:
+    service: node

@@ -1,10 +1,12 @@
 // Xavier University HTML Template
 module.exports = function (grunt) {
+  const sass = require('node-sass');
+  
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		// These test must pass!
 		jshint: {
-			files:['Gruntfile.js', 'src/javascripts/*.js'],
+			files:['src/javascripts/*.js'],
 			options: {
 				reporter: require('jshint-stylish')
 			}
@@ -18,27 +20,23 @@ module.exports = function (grunt) {
 			}
 		},
 		// Compile SASS (uses Compass, follow Ruby Install instructions)
-		compass: {
-  		dev: { // local serving point
-    		options: {
-      		sassDir:      'src/css',
-      		cssDir:       'docs/css',
-      		environment:  'development',
-      		outputStyle:  'nested',
-      		imagesDir:    'docs/images',
-      		fontsDir:     'docs/fonts',
-      		relativeAssets: true
-    		}
+		sass: {
+  		options: {
+  			implementation: sass,
+  			sourceMap: true
+  		},
+  		dist: {
+  			files: {
+  				'docs/css/main.css': 'src/css/main.scss'
+  			}
   		}
-		},
+  	},
 		// Check for required Prefixes
 		postcss: {
   		options: {
     		map: true,
     		processors: [
-      		require('autoprefixer')({
-        		browsers: ['last 3 versions']
-      		})
+      		require('autoprefixer')
     		]
   		},
   		dist: {
@@ -100,6 +98,8 @@ module.exports = function (grunt) {
         src : 'docs/**/*'
       },
       options: {
+        proxy: 'v5.lndo.site',
+        port: '80',
         watchTask: true,
           server: {
               baseDir: "./docs"
@@ -114,7 +114,7 @@ module.exports = function (grunt) {
   		},
   		css: {
     		files: 'src/css/**/*.scss',
-        tasks: ['compass:dev', 'newer:postcss']
+        tasks: ['sass', 'newer:postcss']
   		},
   		images: {
     		files: 'src/images/**/*.{png,jpg,gif,svg}',
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	// CSS
-	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-postcss');
 	// HTML
 	grunt.loadNpmTasks('grunt-includes');
@@ -153,8 +153,7 @@ module.exports = function (grunt) {
 	// Setup the Task list of things to run
 	// Default: Setup, and run the Dev suite
 	grunt.registerTask('dev', [
-  	'browserSync',
-  	'compass',
+  	'sass',
   	'includes',
   	'svgstore',
   	'watch'

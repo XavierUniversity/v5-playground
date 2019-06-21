@@ -1104,7 +1104,7 @@ input[type="search"] {
   --drawer-width: 100vw; }
   @media (min-width: 56.25em) {
     :root {
-      --drawer-width: px-to-rem(532px); } }
+      --drawer-width: 33.25rem; } }
 
 .drawer {
   background: #0B223F;

@@ -1,7 +1,8 @@
+$width: px-to-rem(532px);
 :root{
   --drawer-width: 100vw;
   @include for-size(tablet-landscape-up){
-    --drawer-width: px-to-rem(532px);  
+    --drawer-width: #{$width};  
   }
 }
 

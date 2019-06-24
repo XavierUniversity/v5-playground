@@ -98,12 +98,14 @@ module.exports = function (grunt) {
         src : 'docs/**/*'
       },
       options: {
-        proxy: 'v5.lndo.site',
-        port: '80',
+        proxy: 'http://nginx',
         watchTask: true,
-          server: {
-              baseDir: "./docs"
-          }
+    		notify: false,
+    		ghostMode: false,
+    		open: false,
+        server: {
+            baseDir: "./docs"
+        }
       }
 		},
 		// Watch files for the sake of running various tasks
@@ -153,6 +155,7 @@ module.exports = function (grunt) {
 	// Setup the Task list of things to run
 	// Default: Setup, and run the Dev suite
 	grunt.registerTask('dev', [
+  	'browserSync',
   	'sass',
   	'includes',
   	'svgstore',

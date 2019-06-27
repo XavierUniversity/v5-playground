@@ -9,8 +9,6 @@ services:
     globals:
       requirejs: latest
       grunt-cli: latest
-    build: 
-      - npm install requirejs node-sass && npm install
 tooling:
   npm:
     service: node

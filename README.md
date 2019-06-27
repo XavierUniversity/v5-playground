@@ -12,10 +12,12 @@ Templates, HTML, CSS and planning for the v5 website revision.
 1. Download and install [Docker](https://www.docker.com). Register for a [Docker Hub](https://hub.docker.com) account (required to download docker hub images).
 2. Download and install [Lando](https://docs.devwithlando.io/installation/macos.html). Latest working version for our environment is [`3.0.0-beta47`](https://github.com/lando/lando/releases/tag/v3.0.0-beta.47)
 3. Clone or update your local repository: `git clone/pull git@github.com:XavierUniversity/v5-playground.git`.
-4. Inside of your repo folder, run `lando start` and all of the dev dependencies will be built for you.
-5. Run `lando grunt` or `lando npm start`.
-  - If you don't stop Lando but need to run grunt simply use `lando grunt` to get it running again.
-  
+4. Inside of your repo folder, run `lando start`, all of the server components will be built and the server setup to run.
+5. Run `lando npm i requirejs node-sass && lando npm install` inside of terminal to install the pesky packages that won't work without this
+6. Run `lando npm start` to get the watch command to run. 
+  - If you don't stop Lando but need to run grunt simply use `lando npm start` to get it running again.
+7. LiveReload will be taking over for BrowserSync, you can simply run whatever URL you want from the `lando start` command in your browser.
+
 ### Stopping or Rebuilding
 
 If we change components, you'll need to rebuild the Lando containers. To do so you just need to stop `grunt` with `ctrl+c` and then run `lando build`. 

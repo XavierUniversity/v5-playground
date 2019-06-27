@@ -6,17 +6,11 @@ config:
 services:
   node:
     type: node
-    build:
-      - npm install
-      - grunt
     globals:
       requirejs: latest
       grunt-cli: latest
-    overrides:
-      services:
-        ports:
-          - 3000:3000
-          - 3001:3001
+    build: 
+      - npm install requirejs node-sass && npm install
 tooling:
   npm:
     service: node

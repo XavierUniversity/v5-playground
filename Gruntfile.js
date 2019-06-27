@@ -98,7 +98,7 @@ module.exports = function (grunt) {
         src : 'docs/**/*'
       },
       options: {
-        proxy: 'http://nginx',
+        proxy: 'http://nginx/',
         watchTask: true,
     		notify: false,
     		ghostMode: false,
@@ -129,7 +129,13 @@ module.exports = function (grunt) {
   		html: {
 				files: ['src/html/**/*.html'],
 				tasks: ['includes']
-			}
+			},
+			livereload: {
+        // Here we watch the files the sass task will compile to
+        // These files are sent to the live reload server after sass compiles to them
+        options: { livereload: 3000 },
+        files: ['docs/**/*'],
+      }
 		}
 	});
 	
@@ -155,7 +161,6 @@ module.exports = function (grunt) {
 	// Setup the Task list of things to run
 	// Default: Setup, and run the Dev suite
 	grunt.registerTask('dev', [
-  	'browserSync',
   	'sass',
   	'includes',
   	'svgstore',

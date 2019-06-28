@@ -133,7 +133,7 @@ module.exports = function (grunt) {
 			livereload: {
         // Here we watch the files the sass task will compile to
         // These files are sent to the live reload server after sass compiles to them
-        options: { livereload: 3000 },
+        options: { livereload: 35729 },
         files: ['docs/**/*'],
       }
 		}
@@ -154,7 +154,6 @@ module.exports = function (grunt) {
 	// SVG combos
 	grunt.loadNpmTasks('grunt-svgstore');
 	// Maintenance
-	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-newer');
 	

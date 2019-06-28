@@ -9,6 +9,10 @@ services:
     globals:
       requirejs: latest
       grunt-cli: latest
+    overrides:
+       services:
+         ports:		
+           - 35729:35729
 tooling:
   npm:
     service: node

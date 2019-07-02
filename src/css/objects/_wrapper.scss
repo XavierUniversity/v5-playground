@@ -1,7 +1,17 @@
 .wrapper{
-  @include margin(null, auto, null, auto);
+  @include margin(px-to-rem(48px), auto, px-to-rem(48px), auto);
   @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
   @include for-size("desktop-up"){
     @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
+  }
+  
+  &--academic{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @include for-size('tablet-landscape-up'){
+      flex-wrap: nowrap;
+    }
   }
 }

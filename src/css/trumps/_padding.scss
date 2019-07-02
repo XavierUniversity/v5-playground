@@ -1,0 +1,5 @@
+.pad{
+  &--right16{
+    @include padding(null, px-to-rem(16px), null, null);
+  }
+}

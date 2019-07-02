@@ -6,6 +6,7 @@
   border-radius: px-to-rem(8px);
   text-align: center;
   transition: all 0.25s ease;
+  text-transform: uppercase;
   @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
   @include margin (px-to-rem(16px), null, px-to-rem(16px), null);
   &:hover, &:focus, &:active{
@@ -19,4 +20,16 @@
     border-color: darken($darkNavy, 10%);
   }
 
+}
+
+.action{
+  button{
+    @extend .c-btn;
+    font-weight: 200;
+    @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
+    @include margin(null, auto, null, auto);
+    &:hover, &:focus, &:active{
+      @include margin(null, auto, null, auto);
+    }
+  }
 }

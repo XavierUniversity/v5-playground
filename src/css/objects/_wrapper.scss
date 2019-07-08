@@ -1,4 +1,5 @@
 .wrapper{
+  position: relative;
   @include margin(px-to-rem(48px), auto, px-to-rem(48px), auto);
   @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
   @include for-size("desktop-up"){

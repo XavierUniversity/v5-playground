@@ -14,7 +14,7 @@
 
 // Navigation Items
 @import 'nav-list';
-
+@import 'breadcrumbs';
 @import 'buttons';
 // Footer
 @import 'footer';
@@ -22,3 +22,7 @@
 
 // Hero!
 @import 'hero';
+
+// content
+@import 'content.title';
+@import 'content.tabs';

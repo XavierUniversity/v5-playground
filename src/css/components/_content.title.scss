@@ -1,0 +1,12 @@
+.title{
+  font-weight: 500;
+  text-transform: uppercase;
+  @include margin(0, 0,0,0);
+  @include font-size(24px);
+  color: $darkNavy;
+}
+
+.sub{
+  font-weight: 300;
+  @include font-size(16px);
+}

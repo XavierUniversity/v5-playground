@@ -2,3 +2,53 @@ input[type="search"]{
   -webkit-appearance: none;
   border-radius: 0;
 }
+
+select{
+  &::after{
+    
+  }
+}
+
+
+/* Reset Select */
+select {
+  appearance: none;
+  box-shadow: none;
+  border: 0 !important;
+  background: white;
+  background-image: none;
+  color: black;
+  flex: 1;
+  @include font-size(16px);
+  @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.form_select .form_responses {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  border-radius: px-to-rem(4px);
+}
+/* Arrow */
+.form_select .form_responses::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+  @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
+}
+/* Transition */
+.form_select .form_responses:hover::after {
+  color: lighten($base-text-color, 10%);
+}

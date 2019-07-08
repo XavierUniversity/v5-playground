@@ -1,0 +1,41 @@
+.tab{
+  @include padding(0,0,0,0);
+  @include margin(0,0,0,0);
+  list-style: none;
+  
+  &__item{
+    display: block;
+    background: $grey;
+    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
+    @include margin( px-to-rem(8px), null, px-to-rem(8px), null);
+    @include for-size("desktop-up"){
+      display: table-cell;
+      vertical-align: middle;
+      width: px-to-rem(135px);
+      height: px-to-rem(50px);
+      @include font-size(14px, 1);
+      word-break: break-word;
+      text-align: center;
+      
+      border-right: solid px-to-rem(8px) white;
+      border-bottom: solid px-to-rem(8px) white;  
+    }
+    
+    
+    & .on {
+      border-bottom-color: $grey;
+    }
+  }
+  
+  &__link{
+    color: $darkNavy;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  
+  &__content{
+    background: $grey;
+    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
+  }
+}

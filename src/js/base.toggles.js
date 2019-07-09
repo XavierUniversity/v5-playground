@@ -12,7 +12,6 @@
 **/
 $("[data-toggle]").on('click', function(e){
   e.preventDefault();
-  console.log(e);
   var list = $(this).data("toggle");
   $(list).toggleClass("visible");
   $('[data-toggle='+list+']').toggleClass("on");

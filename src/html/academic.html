@@ -7,62 +7,134 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+      :root{
+        --background: url('/images/hero/ProgamPage_Hero_Art_1x.png') 1x, url('/images/hero/ProgamPage_Hero_Art_2x.png') 2x;
+      }
+    </style>
   </head>
   <body>
     include "includes/header.html"
     <!-- Add your site or application content here -->
     <main id="content">
-      <section class="hero hero--academic" style="background-image: url('http://lorempixel.com/1200/540/people/4/');">
+      <section class="hero hero--academic">
         <h1 class="hero__title hero__title--large">Art</h1>
       </section>
 
-      <div class="wrapper">
-          <div class="academic-cta">
-            <ul class="nav-list flex list--bare hidden-mobile academic-cta__list">
-              <li class="nav-list__nav-item academic-cta__item pad--right16"><a href="#" class="nav-list__link c-btn">Apply</a></li>
-              <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link c-btn">Request Info</a></li>
+      <div class="wrapper academic-wrapper">
+        <div class="academic-cta">
+          <ul class="nav-list flex list--bare hidden-mobile academic-cta__list">
+            <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Apply</a></li>
+            <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Request Info</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <nav>
+            <ul class="crumbs list--inline list--bare">
+              <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="/">Home</a></li>
+              <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Academics</a></li>
+              <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Explore Majors &amp; Programs</a></li>
+              <li class="crumbs__item list--inline__item crumbs__current">Art</li>
             </ul>
-            
-            <nav>
-              <ul class="crumbs list--inline list--bare">
-                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="/">Home</a></li>
-                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Academics</a></li>
-                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Explore Majors &amp; Programs</a></li>
-                <li class="crumbs__item list--inline__item crumbs__current">Art</li>
+          </nav>
+          <h2 class="title">Degrees Awarded: Bachelor of Arts, Bachelor of Fine Arts</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+          <h3 class="sub">Concentrations Offered:</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              
+          <h3 class="sub">Scholarships Offered:</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          
+          <div class="tabs">  
+            <nav role='navigation' class="tab">
+              <ul class="tab__list">
+                <li class="tab__item"><a href="#curriculum" class="tab__link active">Curriculum</a></li>
+                <li class="tab__item"><a href="#related" class="tab__link">Related Programs</a></li>
+                <li class="tab__item"><a href="#courses" class="tab__link">Sample Courses</a></li>
+                <li class="tab__item"><a href="#outcomes" class="tab__link">Outcomes</a></li>
               </ul>
             </nav>
-          
-          <h2 class="title">Degrees offered: BLAH BLAH</h2>
-        
-          <h3 class="sub">Concentrations Offered:</h3>
-          <p>Content blah blah blah blah blah</p>
-          
-          <h3 class="sub">Scholarships Offered:</h3>
-          <p>Content blah blah blah blah blah</p>
+            
+            <div id="curriculum" class="tabs__content active">
+              <h2>Tab 1</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum non iure magnam dolores earum nemo quo tempora ab unde! Nesciunt ea iste impedit suscipit cupiditate quam earum explicabo quas veniam doloribus sed aut aliquam repellendus deleniti laudantium molestias fuga nihil quidem voluptatum atque sapiente perferendis facilis. Tempora mollitia odio?
+            </div>
+            
+            <div id="related" class="tabs__content">
+              <h2>Tab 2</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur est natus esse minima nihil quidem tenetur alias pariatur. Obcaecati repudiandae temporibus provident sapiente iure doloribus praesentium voluptates dolores quia eos velit fugit cum ipsam. Deleniti fugiat maxime vel tempore illum esse illo fugit quam recusandae aut aperiam omnis at quaerat!
+            </div>
+            
+            <div id="courses" class="tabs__content">
+              <h2>Tab 3</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam cupiditate aliquam quisquam repellendus fugit eaque asperiores voluptatem ut accusamus soluta corporis in facere quae provident itaque magni eum repellat ducimus dolore. Beatae aperiam accusamus at voluptatem ad sunt mollitia perspiciatis tempora numquam rerum aliquam deserunt illum necessitatibus nisi omnis.
+            </div>
+            
+            <div id="outcomes" class="tabs__content">
+              <h2>Tab 4</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.
+            </div>
+          </div><!-- /tabs -->
+        </div><!-- /content -->
+        <div class="sidebar">
+          <div class="panel panel--academic">
+            <h2 class="panel__title panel__title--form text--centered">Take the Next Step</h2>
+            <div class="slate-form" id="form_2eef9e9b-8dab-4187-a827-df99a927a983">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://admissions.xavier.edu/register/?id=2eef9e9b-8dab-4187-a827-df99a927a983&output=embed&div=form_2eef9e9b-8dab-4187-a827-df99a927a983&form_sys:program=Art' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
+          </div><!-- /panel -->
+          <div class="panel">
+            <h2 class="panel__title text--centered">Get More Information</h2>
+            <ul class="nav-list list--bare">
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link c-btn">Contact Us</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link c-btn">Program Details</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link c-btn">Honors Program</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link c-btn">Financial Aid</a>
+              </li>
+            </ul>
+          </div><!-- /panel -->
+        </div><!-- /sidebar -->
+      </div><!-- /academic-wrapper -->
       
-        
-          <ul class="tab">
-            <li class="tab__item"><a href="#" class="tab__link">Curriculum</a></li>
-            <li class="tab__item"><a href="#" class="tab__link">Related Programs</a></li>
-            <li class="tab__item"><a href="#" class="tab__link">Sample Courses</a></li>
-            <li class="tab__item"><a href="#" class="tab__link">Outcomes</a></li>
-          </ul>
-          
-          <div class="tab__content">
-          <p>Tab content #1</p>
-          <p>Tab content #2</p>
-          <p>Tab content #3</p>
-          <p>Tab content #4</p>
+      <section class="wrapper">
+        <h2 class="title text--centered">All for one. One for all.</h2>
+        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
+      </section>
+      
+      <section class="wrapper">
+        <div class="flex">
+          <div class="panel panel--features">
+            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
+            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
+            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr class="panel__hr" />
+            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
+          </div>
+          <div class="panel panel--features">
+            <h2 class="panel__title panel--features__title">Internship Opportunities</h2>
+            <img src='https://loremflickr.com/320/240/art?locked=2' alt='' class="panel__img" />
+            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr class="panel__hr" />
+            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
+          </div>
+          <div class="panel panel--features">
+            <h2 class="panel__title panel--features__title">Study Abroad</h2>
+            <img src='https://loremflickr.com/320/240/art?locked=3' alt='' class="panel__img" />
+            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr class="panel__hr" />
+            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
           </div>
         </div>
-        <div>
-          <h2>Sidebar content</h2>
-          <p>Form data here</p>
-          
-          <h2>Sidebar content</h2>
-          <p>Links go here</p>
-        </div>
-      </div>
+      </section>
+      
     </main>
     <!-- End site or application content -->
     include "includes/footer.html"
@@ -75,57 +147,13 @@
             <div class="bread">
               <a class="bread__crumb" href="#">Home</a> > <a class="bread__crumb" href="#Academics">Academics</a> > <a class="bread__crumb" href="#explore">Explore Majors &amp; Programs</a> > <span class="bread__crumb">Art</span>
             </div>
-            <div class="academic-cta">
-              <ul class="nav-list flex list--bare hidden-mobile academic-cta__list">
-                <li class="nav-list__nav-item academic-cta__item pad--right16"><a href="#" class="nav-list__link c-btn">Apply</a></li>
-                <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link c-btn">Request Info</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="div3">
-            <h2 class="title">Degrees Awarded: Bachelor of Arts, Bachelor of Fine Arts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-            <h3 class="academic-sub">Concentrations Offered:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-            <h3 class="academic-sub">Scholarships Offered:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="div2">
             <div class="panel">
               <div class="panel__content">
-                <h2 class="title title--sub panel__title">Take the Next Step</h2>
-                <div class="slate-form" id="form_2eef9e9b-8dab-4187-a827-df99a927a983">Loading...</div><script>/*<![CDATA[*/var script = document.createElement('script'); script.async = 1; script.src = 'https://admissions.xavier.edu/register/?id=2eef9e9b-8dab-4187-a827-df99a927a983&output=embed&div=form_2eef9e9b-8dab-4187-a827-df99a927a983&form_sys:program=Art' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);/*]]>*/</script>
-                </div>
-              </div>
-            <div class="panel">
-              <div class="panel__content">
-                <h2 class="title title--sub panel__title">Get More Information</h2>
-                <ul class="nav-list list--bare">
-                  <li class="nav-list__item">
-                    <a href="#" class="nav-list__link c-btn">Contact Us</a>
-                  </li>
-                  <li class="nav-list__item">
-                    <a href="#" class="nav-list__link c-btn">Program Details</a>
-                  </li>
-                  <li class="nav-list__item">
-                    <a href="#" class="nav-list__link c-btn">Honors Program</a>
-                  </li>
-                  <li class="nav-list__item">
-                    <a href="#" class="nav-list__link c-btn">Financial Aid</a>
-                  </li>
-                </ul>
+                
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="wrapper">
-        <h2 class="title text--centered">All for one. One for all.</h2>
-        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
       </section>
       <div class="wrapper wrapper--academic">
         <div class="panel panel--thirds">

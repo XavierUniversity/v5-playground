@@ -32,4 +32,10 @@ h5{ @include font-size($h5-mobile, $heading-line-height); }
   h5{ @include font-size($h5, $heading-line-height); }  
 }
 
-p{ @include font-size(16px); }
+p{ 
+  @include font-size(16px); 
+  @include margin(0, null, px-to-rem(24px), null);
+  &:first-of-type{
+    @include margin(px-to-rem(24px), null, null, null);
+  }
+}

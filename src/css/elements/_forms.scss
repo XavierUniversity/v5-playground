@@ -3,52 +3,78 @@ input[type="search"]{
   border-radius: 0;
 }
 
-select{
-  &::after{
-    
+textarea{
+  resize: vertical;
+}
+
+.slate-form{
+  
+  div[data-required='1']{
+    label{
+      &::before{
+        content: "*";
+      }
+    }
+  }
+  
+  label{
+    font-weight: 200;
+    @include padding(null, null, px-to-rem(10px), null);
+  }
+  
+  input, textarea, select{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: px-to-rem(1px) solid rgb(230, 232, 236);
+    border-radius: px-to-rem(4px);
+    font-weight: 200;
+    @include padding(px-to-rem(6px), px-to-rem(24px), px-to-rem(6px), px-to-rem(24px));
+    &:focus, &:active{
+      box-shadow: 0 0 px-to-rem(5px) $medBlue;
+      border: px-to-rem(1px) solid $medBlue;
+    }
+  }
+  select {
+    appearance: none;
+    box-shadow: none;
+    border: 0 !important;
+    background: white;
+    background-image: none;
+    color: black;
+    flex: 1;
+    @include font-size(16px);
+    @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .form_select .form_responses {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    border-radius: px-to-rem(4px);
+  }
+  /* Arrow */
+  .form_select .form_responses::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+    @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
+  }
+  /* Transition */
+  .form_select .form_responses:hover::after {
+    color: lighten($base-text-color, 10%);
   }
 }
 
-
-/* Reset Select */
-select {
-  appearance: none;
-  box-shadow: none;
-  border: 0 !important;
-  background: white;
-  background-image: none;
-  color: black;
-  flex: 1;
-  @include font-size(16px);
-  @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
-  cursor: pointer;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
-/* Custom Select */
-.form_select .form_responses {
-  position: relative;
-  display: flex;
-  width: 100%;
-  background: white;
-  overflow: hidden;
-  border-radius: px-to-rem(4px);
-}
-/* Arrow */
-.form_select .form_responses::after {
-  content: '\25BC';
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: white;
-  cursor: pointer;
-  pointer-events: none;
-  transition: .25s all ease;
-  @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
-}
-/* Transition */
-.form_select .form_responses:hover::after {
-  color: lighten($base-text-color, 10%);
-}

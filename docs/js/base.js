@@ -283,6 +283,45 @@ window.onscroll = function(e) {
   }
   
 }
+var Tabs = {
+  init: function() {
+    this.bindUIfunctions();
+    this.pageLoadCorrectTab();
+  },
+  bindUIfunctions: function() {
+    // Delegation
+    $(document)
+      .on("click", ".tabs a[href^='#']:not('.active')", function(event) {
+        Tabs.changeTab(this.hash);
+        event.preventDefault();
+      })
+      .on("click", ".tabs a.active", function(event) {
+        Tabs.toggleMobileMenu(event, this);
+        event.preventDefault();
+      });
+  },
+  changeTab: function(hash) {
+    var anchor = $('[href="' + hash + '"]');
+    var div = $(hash);
+    // activate correct anchor (visually)
+    anchor.addClass("active").parent().siblings().find("a").removeClass("active");
+    // activate correct div (visually)
+    div.addClass("active").siblings().removeClass("active");
+    // update URL, no history addition
+    window.history.replaceState("", "", hash);
+    // Close menu, in case mobile
+    anchor.closest("ul").removeClass("open");
+
+  },
+  // If the page has a hash on load, go to that tab
+  pageLoadCorrectTab: function() {
+    this.changeTab(document.location.hash);
+  },
+  toggleMobileMenu: function(event, el) {
+    $(el).closest("ul").toggleClass("open");
+  }
+}
+Tabs.init();
 /**
   * base.toggles.js
   * =======================
@@ -297,7 +336,6 @@ window.onscroll = function(e) {
 **/
 $("[data-toggle]").on('click', function(e){
   e.preventDefault();
-  console.log(e);
   var list = $(this).data("toggle");
   $(list).toggleClass("visible");
   $('[data-toggle='+list+']').toggleClass("on");

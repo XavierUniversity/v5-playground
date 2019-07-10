@@ -1,41 +1,95 @@
-.tab{
-  @include padding(0,0,0,0);
-  @include margin(0,0,0,0);
-  list-style: none;
-  
-  &__item{
-    display: block;
-    background: $grey;
-    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
-    @include margin( px-to-rem(8px), null, px-to-rem(8px), null);
-    @include for-size("desktop-up"){
-      display: table-cell;
-      vertical-align: middle;
-      width: px-to-rem(135px);
-      height: px-to-rem(50px);
-      @include font-size(14px, 1);
-      word-break: break-word;
-      text-align: center;
-      
-      border-right: solid px-to-rem(8px) white;
-      border-bottom: solid px-to-rem(8px) white;  
-    }
+.tab {
+  $self : &;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    @include padding(null, 6px, null, null);
     
-    
-    & .on {
-      border-bottom-color: $grey;
+    &:first-child, &:last-child{
+      #{$self}__link{
+        @include padding(px-to-rem(16px), null, null, null);
+      }
     }
   }
-  
-  &__link{
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    background: $grey;
     color: $darkNavy;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
+    width: px-to-rem(135px);
+    height: px-to-rem(50px);
+    word-break: break-word;
+    text-align: center;
+    @include font-size(16px, 1);
+    @include padding(px-to-rem(6px), null, null, null);
+    border-bottom: solid px-to-rem(6px) white;
+    &.active {
+      position: relative;
+      border-bottom-color: $grey;
+    }
   }
-  
-  &__content{
+  @media (max-width: 700px) {
+    &__list {
+      border-bottom: 0;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: "☰";
+        position: absolute;
+        top: 6px;
+        right: 15px;
+        z-index: 2;
+        pointer-events: none;
+        color: $darkNavy;
+      }
+      &.open {
+        #{$self}__link {
+          position: relative;
+          display: block;
+        }
+      }
+    }
+    &__item {
+      display: block;
+
+      @include padding(null, 0, null, null);
+    }
+    &__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      @include padding(px-to-rem(8px) !important, px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
+      @include margin(px-to-rem(4px), null, null, null);
+      text-align: left;
+      border: 0;
+      &.active {
+        z-index: 1;
+        background: $grey;
+        color: $medBlue;
+      }
+    }
+  }
+}
+
+.tabs {
+  &__content {
+    display: none;
+    padding: 1rem;
     background: $grey;
-    @include padding(px-to-rem(8px), px-to-rem(8px), px-to-rem(8px), px-to-rem(8px));
+    
+    &.active{
+      display: block;
+    }
   }
 }

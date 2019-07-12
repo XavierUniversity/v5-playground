@@ -1,16 +1,36 @@
 .content-page {
-  width: 95vw;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
-  @include for-size("desktop-up"){
-    @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
+  flex-direction: column;
+  @include margin(null, null, px-to-rem(100px), null);
+  @include for-size("tablet-landscape-up"){
+    flex-direction: row;  
+    justify-content: space-between;
   }
   
+  
   &--nav {
-    @include padding(px-to-rem(15px), px-to-rem(85px), null, null);
-    width: px-to-rem(350px);
+    @include padding(px-to-rem(15px), null, null, null);
+    @include margin( null, 0, null, null);
+    @include for-size("tablet-landscape-up"){
+      @include margin( null, px-to-rem(135px), null, null);
+      flex: none;
+      flex-basis: px-to-rem(350px);
+      
+    }
+    &__controls{
+      // Button styles here
+      display: block;
+      
+      @include for-size("tablet-landscape-up"){
+        display: none;
+      }
+    }
+    &__list{
+      display: none;
+      @include for-size("tablet-landscape-up"){
+        display: block;
+      }
+    }
     
     &__link{
       color: $base-text-color;
@@ -55,9 +75,6 @@
   }
   
   &--main {
-    @include padding(null, null, px-to-rem(100px), px-to-rem(50px));
-    width: px-to-rem(900px);
-    
     
     h2{
       text-transform: uppercase;

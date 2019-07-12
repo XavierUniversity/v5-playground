@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .site-header--fixed{
+        position: fixed;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip Header & Navigation -->
+    <nav aria-label="Skip Link">
+      <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
+    </nav>
+    <header>
+      <div class="header header--fixed" id="header">
+        <!-- Branding == Logo and Navigation -->
+        <div class="branding">
+          <a href="/" class="branding__link">
+            <span class="branding__text sr-only">Xavier University</span>
+            <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+          </a>
+        </div>
+        <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
+        <nav class="navigation" aria-label="Quick Links">
+          <ul class="nav-list nav-header">
+            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Apply</a></li>
+            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Request Info</a></li>
+            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Visit Campus</a></li>
+          </ul>
+        </nav>
+        <!-- UI Elements == Search and Menu -->
+        <div class="header-ui">
+          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+          <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
+    				<span>Open Navigation Menu</span>
+    			</button>
+        </div>
+      </div>
+      <div id="main-nav" class="drawer" aria-hidden="true" role="dialog">
+          <nav id="" aria-label="Main Navigation">
+            <ul class="nav-list nav-list--border-top">
+              <li class="nav-list__item nav-list__item--border-bottom">
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/admission/">Admission</a>
+                <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#admission-sub">
+                  <svg class="icon nav-list__icon nav-list__icon--plus">
+                    <use xlink:href="#xu-plus" />
+                  </svg>
+                  <svg class="icon nav-list__icon nav-list__icon--minus">
+                    <use xlink:href="#xu-minus" />
+                  </svg>
+                </button>
+                <ul id="admission-sub" class="nav-list nav-list--child" >
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/undergraduate-admission/">Undergraduate</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/graduate-admission/">Graduate</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="http://online.xavier.edu/?utm_medium=organic&utm_source=campus&utm_campaign=onlineadmissions">Online</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/adult-and-professional/">Adult Students</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/international-admission/">International</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/transfer-admission/">Transfer</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/veterans/">Veterans</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/undergraduate-admission/family">Family</a></li>
+                  <li class="sr-only"><a href="#" data-toggle="#admission-sub">Close Admission submenu</a></li>
+                </ul>
+              </li>
+              <li class="nav-list__item nav-list__item--border-bottom">
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/academics/">Academics</a>
+                <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#academic-sub">
+                  <svg class="icon nav-list__icon nav-list__icon--plus">
+                    <use xlink:href="#xu-plus" />
+                  </svg>
+                  <svg class="icon nav-list__icon nav-list__icon--minus">
+                    <use xlink:href="#xu-minus" />
+                  </svg>
+                </button>
+                <ul id="academic-sub" class="nav-list nav-list--child" >
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/academics/undergraduate">Undergraduate</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/graduate-admission/index">Graduate</a></li>
+                  <li class="sr-only"><a href="#" data-toggle="#academic-sub">Close Academic submenu</a></li>
+                </ul>
+              </li>
+              <li class="nav-list__item nav-list__item--border-bottom">
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/life-at-xavier/">Life at Xavier</a>
+                <button class="o-btn nav-list__btn" aria-label="Toggle Campus Life Sub Menu" data-toggle="#life-sub">
+                  <svg class="icon nav-list__icon nav-list__icon--plus">
+                    <use xlink:href="#xu-plus" />
+                  </svg>
+                  <svg class="icon nav-list__icon nav-list__icon--minus">
+                    <use xlink:href="#xu-minus" />
+                  </svg>
+                </button>
+                <ul id="life-sub" class="nav-list nav-list--child" >
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/residence-halls">Residence Halls</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/residence-halls">Dining</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/clubs">Clubs</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/faith-service">Faith &amp; Service</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/diversity/index">Diversity</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/health-wellness">Health &amp; Wellness</a></li>
+                  <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/sports">Sports</a></li>
+                  <li class="sr-only"><a href="#" data-toggle="#life-sub">Close Life at Xavier submenu</a></li>
+                </ul>
+              </li>
+              <li class="nav-list__item nav-list__item--border-bottom">
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/athletics/">Athletics</a>
+              </li>
+              <li class="nav-list__item nav-list__item--border-bottom">
+                <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/about/">About Xavier</a>
+              </li>
+            </ul>
+          </nav>
+          
+          <nav aria-label="CTA Items">
+            <ul class="nav-list nav-list--cta">
+              <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/apply">Apply</a></li>
+              <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/request-info">Request Info</a></li>
+              <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/undergraduate-admission/visit/">Visit Campus</a></li>
+              <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/giving/">Give</a></li>
+            </ul>
+          </nav>
+          
+          <nav aria-label="Secondary links">
+            <ul class="nav-list nav-list--secondary">
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/about/map">Maps &amp; Directions</a></li>
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/working-at-xavier/">Employment Opportunities</a></li>
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/students/">Current Students</a></li>
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/alumni/">Alumni</a></li>
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/employees/">Employees</a></li>
+              <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/family-hub/">Parents</a></li>
+            </ul>
+          </nav>
+          <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#main-nav">
+            <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+          </button>
+        </div>
+      <div id="search" class="drawer drawer--search" aria-hidden="true" aria-describedby="search_intro">
+        <div class="search__header">
+          <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search" aria-controls="search-results">
+            <input type="hidden" name="collection" value="xavu-meta" />
+            <label class="sr-only" for="query">Search Xavier University:</label>
+            <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
+            <svg class="icon site-search__icon"><use xlink:href="#xu-search" /></svg>
+            <button class="o-btn site-search__btn sr-only" type="submit" aria-label="Submit Search">Search</button>
+          </form>
+          <button class="o-btn drawer__btn drawer__btn--inverted drawer-close search__close" aria-label="Close Search" data-controls="#search">
+            <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
+          </button>
+        </div>
+        <div class="search">
+          <p class="search__intro" id="search_intro">Find anything about Xavier University, our faculty, staff and more. Enter a query in the search input above, and results will be displayed as you type.</p>
+          <div class="search__sidebar">
+            <h2 class="search__heading">Filter Results</h2>
+            <ul class="search__facets" id="search-tabs">
+            </ul>
+          </div>
+          <div class="search__results" id="search-results" aria-live="polite">
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <!-- End site or application content -->
+    <footer class="footer">
+      <div class="wrapper">
+        <nav aria-label="">
+          <ul class="nav-list footer__nav-list flex">
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/apply">Apply</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/request-info">Request Info</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/visit/">Visit Campus</a></li>
+          </ul>
+        </nav>
+        <div class="footer-flex">
+          <div class="branding branding--footer footer-flex__item">
+            <a href="/" class="branding__link">
+              <span class="branding__text sr-only">Xavier University</span>
+              <svg class="branding__logo branding__logo--x branding--footer--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+            </a>
+          </div>
+        
+          <div class="colophon footer-flex__item" itemscope="" itemtype="http://schema.org/EducationalOrganization">
+        		<p class="colophon__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+        			<span class="colophon__item" itemprop="streetAddress">3800 Victory Parkway</span>
+        			<span class="colophon__item">
+          			<span itemprop="addressLocality">Cincinnati</span>, <span itemprop="addressRegion">OH</span> <span itemprop="postalCode">45207</span>
+          		</span>
+        			<span class="colophon__item" itemprop="telephone">513-745-3000</span>
+        		</p>
+      		</div>
+        </div>
+      	<nav aria-label="Policy Content">
+    			<ul class="nav-list nav-colophon">
+    					<li class="nav-list__item nav-colophon__item nav-colophon__item--border-right"><a class="nav-colophon__link" href="https://www.xavier.edu/policy/documents/Web-Privacy-Policy.pdf">Privacy Policy</a></li>
+    					<li class="nav-list__item nav-colophon__item nav-colophon__item--border-right"><a class="nav-colophon__link" href="https://www.xavier.edu/policy/documents/Electronic-Information-Technology-Web-Accessibility-Policy.pdf">Accessibility Policy</a></li>
+    					<li class="nav-list__item nav-colophon__item nav-colophon__item--border-right"><a class="nav-colophon__link" href="https://www.xavier.edu/titleix/">Non-Discrimination Policy</a></li>
+    					<li class="nav-list__item nav-colophon__item"><a class="nav-colophon__link" href="#">Contact Us</a></li>
+    			</ul>
+    		</nav>
+
+      	<div class="social">
+          <a class="social__link" href="http://www.facebook.com/XavierUniversity" target="_blank">
+            <span class="sr-only">Like Xavier University on Facebook</span><svg class="social__icon"><use xlink:href="#xu-facebook" /></svg>
+          </a>
+          <a class="social__link" href="http://twitter.com/XavierUniv" target="_blank">
+          	<span class="sr-only">Follow Xavier University on Twitter</span><svg class="social__icon"><use xlink:href="#xu-twitter" /></svg>
+          </a>
+          <a class="social__link" href="https://www.linkedin.com/groups?gid=65551&amp;trk=hb_side_g" target="_blank">
+          	<span class="sr-only">Xavier University Alumni Group on LinkedIn</span><svg class="social__icon"><use xlink:href="#xu-linkedin" /></svg>
+          </a>
+          <a class="social__link" href="https://www.youtube.com/user/xavieruniversity" target="_blank">
+            <span class="sr-only">Xavier You Tube Channel</span><svg class="social__icon"><use xlink:href="#xu-youtube" /></svg>
+          </a>
+          <a class="social__link" href="http://instagram.com/xavieruniversity" target="_blank">
+            <span class="sr-only">Follow Xavier University on Instagram</span><svg class="social__icon"><use xlink:href="#xu-instagram" /></svg>
+          </a>					
+        </div>
+      </div>
+    </footer>
+
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="dev">
+    	<div class="phone-only">phone-only &lt; 600</div>
+    	<div class="portrait-up">tablet-portrait-up &gt;= 600</div>
+    	<div class="landscape-up">tablet-landscape-up &gt;= 900</div>
+    	<div class="desktop-up">desktop-up &gt;= 1200</div>
+    	<div class="big-desktop-up">big-desktop-up &gt;= 1800</div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <!-- <script src="js/plugins.js"></script> -->
+    <script src="js/base.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <script src="js/plyr.js"></script>
+        
+        <script>
+            $("#vid-btn").click(function(){
+              $("iframe").attr('src', $(this).data('video'));
+              $("#video-overlay").show();
+            });
+            $("#close-video-overlay").click(function(){
+              $("#video-overlay").hide();
+              $("iframe").attr('src','');  
+                });
+          </script>
+
+    <svg xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 24 24" id="xu-close">  <polygon points="0 21.9201 1.413 23.3331 23.333 1.4131 21.919 0.0001"/> <polygon points="0 1.4127 21.919 23.3327 23.333 21.9197 1.413 0.0007"/> </symbol><symbol viewBox="0 0 46 45" id="xu-facebook">  <path d="M24.3,19.1v-1.4c0-0.7,0.4-0.8,0.7-0.8h1.9v-2.9h-2.6c-2.9,0-3.6,2.1-3.6,3.5v1.5h-1.7v2v1.3h1.7v8.4h3.4v-8.4h2.5l0.1-1.3
+    	l0.2-2.1H24.3z"/> </symbol><symbol viewBox="0 0 32 16" id="xu-hamburger">  <polygon class="line" points="0.918 1.90816 31.918 1.90816 31.918 0.30976 0.918 0.30976"/> <polygon class="line" points="0.918 15.77616 31.918 15.77616 31.918 14.17776 0.918 14.17776"/> <polygon class="line" points="0.918 8.84176 31.918 8.84176 31.918 7.24336 0.918 7.24336"/> </symbol><symbol viewBox="0 0 46 45" id="xu-instagram">  <path d="M27.9,22.5c0-2.7-2.2-4.9-4.9-4.9c-2.7,0-4.9,2.2-4.9,4.9c0,2.7,2.2,4.9,4.9,4.9C25.7,27.4,27.9,25.2,27.9,22.5 M27.8,16.9
+    	c-0.4,0-0.8,0.4-0.8,0.8c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8C28.6,17.3,28.3,16.9,27.8,16.9 M19,15.8H27
+    	c1.5,0,2.7,1.2,2.7,2.7v8.1c0,1.5-1.2,2.7-2.7,2.7H19c-1.5,0-2.7-1.2-2.7-2.7v-8.1C16.2,17,17.5,15.8,19,15.8 M27,14.8H19
+    	c-2,0-3.6,1.6-3.6,3.6v8.1c0,2,1.6,3.6,3.6,3.6H27c2,0,3.6-1.6,3.6-3.6v-8.1C30.7,16.5,29,14.8,27,14.8 M19.1,22.5
+    	c0-2.2,1.8-3.9,3.9-3.9c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9C20.8,26.4,19.1,24.7,19.1,22.5"/> </symbol><symbol viewBox="0 0 46 45" id="xu-linkedin">  <path d="M17.5,15.4c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7s1.7-0.7,1.7-1.7C19.2,16.1,18.5,15.4,17.5,15.4z M30,23.1
+    	c-0.2-1.8-1-2.9-3.5-2.9c-1.4,0-2.4,0.5-2.8,1.3h0v-1.3h-2.6V22v7.7h2.8v-4.7c0-1.2,0.2-2.4,1.8-2.4c1.5,0,1.6,1.4,1.6,2.5v4.6h2.8
+    	v-5.2C30.1,23.9,30.1,23.5,30,23.1z M15.9,22.7v7h3.3v-7.5v-2h-3.3V22.7z"/> </symbol><symbol viewBox="0 0 121.2 96.5" id="xu-logo">  <path d="M51.2,84.3l9.4-14.1L70,84.3l-9.4,5.4Zm0-72.1,9.4-5.4L70,12.2,60.6,26.3ZM0,0,14.9,13.7,37.5,48.2,15.1,82.6.1,96.5h121l-15-13.9L83.7,48.2l22.5-34.4L121.2,0Z" fill="#9c9799"/> <path d="M65,89.8l-4.4,2.6-4.5-2.6-8.2-4.7L60.6,66,73.3,85.1ZM56.1,6.6l4.5-2.5L65,6.6l8.3,4.8L60.6,30.5,47.9,11.4Zm48.2,77.5L81,48.2l23.4-36,10.8-9.9H5.9l10.8,9.9,23.5,36L16.9,84.1,6,94.2H115.2Z" fill="#001641"/> <path d="M78.2,48.2l24.4-37.5,6.7-6.1H66.2l10.4,6-16,24-16-24L55,4.6H11.9l6.6,6.1L43,48.2,18.7,85.6l-6.8,6.3H55l-10.4-6,16-24.1,16,24.1-10.4,6h43.1l-6.8-6.3Z" fill="#fff"/> <path d="M108.2,77.7a4,4,0,1,1,4,4A4,4,0,0,1,108.2,77.7Zm7,0a3,3,0,1,0-3,3.2A3,3,0,0,0,115.2,77.7Zm-4.5-2.2h1.7c1.1,0,1.7.4,1.7,1.3s-.4,1.1-1.2,1.2l1.2,2h-.9L112,78.1h-.5V80h-.8Zm.8,1.9h.7c.5,0,.9-.1.9-.7s-.5-.6-.9-.6h-.7Z" fill="#9ea1a2"/> </symbol><symbol viewBox="0 0 33 33" id="xu-minus"> <polygon transform="translate(9.000000, 16.000000)" id="minus-foreground" points="0 1 15 1 15 0 0 0"/> </symbol><symbol viewBox="0 0 33 33" id="xu-plus"> <g id="plus-Group" transform="translate(9.000000, 9.000000)"> <polygon id="plus-Fill-4" points="0 8 15 8 15 7 0 7"/> <polygon id="plus-Fill-6" points="7 15 8 15 8 0 7 0"/> </g> </symbol><symbol viewBox="0 0 15 15" id="xu-search"> <path d="M11.0146879,5.89935866 C11.0146879,8.54626958 8.79794048,10.6996813 6.07317924,10.6996813 C3.34797509,10.6996813 1.13167059,8.54626958 1.13167059,5.89935866 C1.13167059,3.25244773 3.34797509,1.09903597 6.07317924,1.09903597 C8.79794048,1.09903597 11.0146879,3.25244773 11.0146879,5.89935866 M14.4959336,13.7772746 L10.52129,9.91576202 C11.5705356,8.82120067 12.1463142,7.40308975 12.1463142,5.89935866 C12.1463142,2.64622252 9.42155294,0.00017210084 6.07317924,0.00017210084 C2.72436263,0.00017210084 4.42906574e-05,2.64622252 4.42906574e-05,5.89935866 C4.42906574e-05,9.15249479 2.72436263,11.7985452 6.07317924,11.7985452 C7.28142837,11.7985452 8.44095779,11.4573553 9.4388263,10.8106864 L13.4945218,14.7500746 C13.6260651,14.8782897 13.8014561,14.9488511 13.9879197,14.9488511 L13.9923488,14.9488511 C14.1796983,14.9475603 14.3568609,14.875278 14.4906187,14.7453418 C14.7665495,14.4772948 14.7692069,14.0431704 14.4959336,13.7772746"/> </symbol><symbol viewBox="0 0 46 45" id="xu-twitter"> <style type="text/css"> .st0{fill:#FEFEFE;} </style>  <path id="twitter-Fill-59" class="st0" d="M31.2,17.5c-0.6,0.3-1.2,0.4-1.9,0.5c0.7-0.4,1.2-1.1,1.5-1.8c-0.7,0.4-1.4,0.7-2.1,0.8
+    	c-0.6-0.6-1.5-1.1-2.5-1.1c-1.9,0-3.4,1.5-3.4,3.3c0,0.3,0,0.5,0.1,0.8c-2.8-0.1-5.3-1.5-6.9-3.5c-0.3,0.5-0.5,1.1-0.5,1.7
+    	c0,1.2,0.6,2.2,1.5,2.8c-0.6,0-1.1-0.2-1.5-0.4v0c0,0.4,0.1,0.8,0.2,1.2c0.4,1,1.3,1.8,2.5,2c-0.3,0.1-0.6,0.1-0.9,0.1
+    	c-0.2,0-0.4,0-0.6-0.1c0.4,1.3,1.7,2.3,3.1,2.3c-1.2,0.9-2.6,1.4-4.2,1.4c-0.3,0-0.5,0-0.8,0c1.5,0.9,3.3,1.5,5.2,1.5
+    	c5.3,0,8.5-3.6,9.4-7.4c0.2-0.7,0.2-1.3,0.2-2v-0.4C30.2,18.7,30.8,18.2,31.2,17.5"/> </symbol><symbol viewBox="0 0 357.8 97" id="xu-wordmark">  <path d="M0,0H2.4V96.5H0ZM45.5,82.9c0,9.2-4.7,14.1-12.8,14.1S20,92.1,20,82.9V63.7h4.7V82.3c0,6.3,2,10.6,8,10.6s8.1-4.3,8.1-10.6V63.7h4.7ZM83.6,63.7V90.1h-.1L69.1,63.7H62.7V96.5h4.7v-27h.1l14.8,27h6V63.7Zm22,0h4.7V96.5h-4.7Zm44.1,0L139.3,92.3h-.1l-10-28.6h-5.3l12.3,32.8h5.9l12.5-32.8Zm18.7,0V96.5h18.4V92.3H173.1V81.5h12.5V77.4H173.1V67.8h13.7V63.7Zm38.7,14.1h4c4.5,0,7.1-2,7.1-5.2s-2.2-4.8-6.5-4.8h-4.6Zm-4.7-14.1h8.1c6.5,0,12.7,1,12.7,8.9,0,3.9-3,6.8-6.8,7.4,1.5.6,2.2,1.3,3.2,3.3l6.2,13.1h-5.3l-5-11.4c-1.5-3.2-3.1-3.2-5.5-3.2h-2.9V96.4h-4.7V63.7Zm53.3,4.9a14.24,14.24,0,0,0-6.1-1.3c-2.6,0-5.7.9-5.7,4.3,0,6.3,14.1,4.9,14.1,15.7,0,6.9-5.4,9.7-12,9.7a21.54,21.54,0,0,1-6.7-1.3l.4-4.4a23.23,23.23,0,0,0,6.8,1.6c2.7,0,6.5-1.5,6.5-5.4,0-7.3-14.1-5.3-14.1-15.5,0-5.8,4.6-8.9,10.5-8.9a21,21,0,0,1,7,1.2l-.7,4.3Zm17.4-4.9h4.7V96.5h-4.7Zm18.4,0v4.1h10.2V96.5h4.7V67.8h10.2V63.7Zm60.8,0-9.5,14.7L333,63.7h-5.5l12.9,19V96.5h4.7V82.7l12.7-19Z" fill="#9c9799"/> <path d="M101.2,31.7,111,10l9.2,21.7Zm41.3,10.6-17.1-39a2.77,2.77,0,0,1-.3-1.3c0-.2,0-.4.4-.7L127.1,0H100.4l.7,1.1c.3.5.4.6.4.8s0,.3-.5,1.2L81.6,44.8a13.44,13.44,0,0,1-1.2,2.4l-.3-.3-.6-.6-.3-.4-.6-.7-.4-.3-.9-1.2s-7.9-9.9-15.4-19.5l14-16c3.5-4,5-5.5,7-6.9L84.8,0h-24l1.8,1.3c1.3.9,1.4,1.4,1.4,1.9a10,10,0,0,1-2.2,4.1L55,15.6,49.3,7.3a8.43,8.43,0,0,1-2-4c0-.6.2-1.3,1.7-1.9L48.7,0H20.1V1.4c4.6,1.8,7.2,4.1,11.7,9.5L44.9,27.5l-12.3,14c-4.5,5-6.8,6.6-12.8,9.4v1.3H44.1l.3-1.3c-1.8-.9-1.9-1.4-1.9-2.1s.3-1.7,2.2-3.8l7.1-8.7c3,3.8,5.2,6.5,5.1,6.5,2.6,3.3,3.1,4.9,3.1,5.7s-.2,1.4-1.6,2.5l-1.8,1.2h42L97.4,51c-1.6-1.6-2-2.4-2-4.2a7.92,7.92,0,0,1,1-4l.5-1.1h27.4l2.6,5.9a3.5,3.5,0,0,1-1.6,4.6h23l-.8-1.1a51.1,51.1,0,0,1-5-8.8M324.9,23.6H313.7V9.2h9.8a25.6,25.6,0,0,1,5.5.5,7.27,7.27,0,0,1,5.3,6.6c0,4.2-3.9,7.3-9.4,7.3m6,27.4-1.4,1.2h28.3L355.9,51c-2.5-1.8-3.3-2.6-6.4-7.7-5.7-9.4-6.9-11.2-10.1-12.9,7.6-2,11.9-7.3,11.9-14.9,0-5.7-2.6-10.5-7.2-12.9S327.3,0,323.7,0H292V1.4c3.2,1.5,4.3,3.9,4.3,9.3v31c0,5.1-.9,7.3-4.1,9.2v1.3h28l-2.3-1.3c-3.3-1.8-4.2-4-4.2-9.2V32.8h2.1c5.4,0,9.7,2.5,13.2,7.6,1.9,2.9,3.4,6.4,3.4,8.1s-.2,1.4-1.5,2.5M290,38l-1.1-.8a17.53,17.53,0,0,1-6.4,3.9A42.18,42.18,0,0,1,269.3,43H252.8V30.5h14.8c3.3,0,5.5-1.1,6.9-3.4l3.9-6.8,1.2-2.1-2.1,1.1a12,12,0,0,1-5.9,1.2H252.8V9.2h16.4a33.17,33.17,0,0,1,17.4,4.4l1.6,1-.6-1.8L285,4.2c0,.1-.1-.6-.1-.6a6.37,6.37,0,0,1-.2-.9,1.8,1.8,0,0,1,.7-1.5L286.6,0H231.4V1.3c3.3,2.4,4,4.1,4,9V41.8c0,5.3-1.1,7.6-4.2,9.1v1.3h56.3L286.1,51c-.8-.7-.9-1-.9-1.4s0-.2.4-1.2L290,38Zm-67.9,3.7V10.5c0-5.2,1.1-7.6,4.2-9.1V0H182.4l-.3,1.4a2.94,2.94,0,0,1,2.1,3.2c0,1.9-.9,4.8-2.7,9L170.3,38.4,158.4,10.3c-1.2-3-1.7-4.8-1.7-6.1s.3-1.8,2.1-2.9L161.2,0H132.1l1.7,1.3c1.7,1.2,3,3.2,5.3,7.9l18.2,39.6a4.42,4.42,0,0,1,.5,1.5c0,.1,0,.3-.6.6l-2.1,1.3H180L178.6,51c-.5-.5-.6-.7-.6-.9a11.28,11.28,0,0,1,.8-2.4L197.3,9.2a32.17,32.17,0,0,1,4.6-7.5c2.7,1.6,3.7,4,3.7,8.8V41.7c0,5.2-1.2,7.6-4.3,9.2v1.3h25V50.9c-3.1-1.6-4.2-4-4.2-9.2" fill="#fff"/> </symbol><symbol viewBox="0 0 46 45" id="xu-youtube">  <path d="M26,22.3l-4.9,2.6v-4v-1.2l2.2,1.2L26,22.3z M31.8,18.8c0,0-0.2-1.3-0.7-1.9c-0.7-0.7-1.5-0.8-1.8-0.8
+    	c-2.5-0.2-6.3-0.2-6.3-0.2h0c0,0-3.8,0-6.3,0.2c-0.4,0-1.1,0.1-1.8,0.8c-0.5,0.6-0.7,1.9-0.7,1.9s-0.2,1.5-0.2,3V22v1.2
+    	c0,1.5,0.2,3,0.2,3s0.2,1.3,0.7,1.9c0.7,0.8,1.6,0.7,2,0.8c1.4,0.1,6.1,0.2,6.1,0.2s3.8,0,6.3-0.2c0.3,0,1.1,0,1.8-0.8
+    	c0.5-0.6,0.7-1.9,0.7-1.9s0.2-1.5,0.2-3v-1.2v-0.3C32,20.3,31.8,18.8,31.8,18.8z"/> </symbol></svg>
+
+  </body>
+</html>

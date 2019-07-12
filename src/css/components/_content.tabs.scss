@@ -31,35 +31,45 @@
     @include font-size(16px, 1);
     @include padding(px-to-rem(6px), null, null, null);
     border-bottom: solid px-to-rem(6px) white;
-    &.active {
+    &.active, &:active {
       position: relative;
       border-bottom-color: $grey;
     }
+    &:hover, &:focus{ 
+      color: $medBlueHover;
+    }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1199px) {
     &__list {
       border-bottom: 0;
       overflow: hidden;
       position: relative;
       &::after {
-        content: "☰";
+        height: px-to-rem(36px);
+        width: px-to-rem(36px);
+        border-radius: px-to-rem(8px);
+        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 33 33' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Group' transform='translate(9.000000, 9.000000)'%3E%3Cpolygon id='Fill-4' points='0 8 15 8 15 7 0 7'%3E%3C/polygon%3E%3Cpolygon id='Fill-6' points='7 15 8 15 8 0 7 0'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
         position: absolute;
-        top: 6px;
-        right: 15px;
-        z-index: 2;
+        top: px-to-rem(19px);
+        right: px-to-rem(19px);
+        z-index: 1;
         pointer-events: none;
         color: $darkNavy;
+        border: solid px-to-rem(1.25px) $darkNavy;
       }
       &.open {
         #{$self}__link {
           position: relative;
           display: block;
         }
+        &::after {
+          content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='33px' height='33px' viewBox='0 0 33 33' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpolygon transform='translate(9.000000, 16.000000)' id='foreground' points='0 1 15 1 15 0 0 0'%3E%3C/polygon%3E%3C/svg%3E");
+        }
       }
     }
     &__item {
       display: block;
-
+      
       @include padding(null, 0, null, null);
     }
     &__link {
@@ -68,15 +78,13 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 100%;
-      @include padding(px-to-rem(8px) !important, px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
+      height: auto;
+      @include padding(px-to-rem(24px) !important, px-to-rem(16px), px-to-rem(24px), px-to-rem(16px));
       @include margin(px-to-rem(4px), null, null, null);
       text-align: left;
       border: 0;
       &.active {
         z-index: 1;
-        background: $grey;
-        color: $medBlue;
       }
     }
   }
@@ -85,9 +93,12 @@
 .tabs {
   &__content {
     display: none;
-    padding: 1rem;
+    @include padding(px-to-rem(16px), px-to-rem(24px), px-to-rem(16px), px-to-rem(24px));
     background: $grey;
-    
+    @include margin(px-to-rem(4px), null, null, null);
+    @include for-size("desktop-up"){
+      @include margin(0, null, null, null);
+    }
     &.active{
       display: block;
     }

@@ -7,7 +7,7 @@
   height: px-to-rem(96px);
   justify-content: space-between;
   transition: height 250ms ease, background 100ms ease;
-  z-index: 1;
+  z-index: 5;
   @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
   @include for-size("desktop-up"){
     @include padding(null, px-to-rem(94px), null, px-to-rem(94px));

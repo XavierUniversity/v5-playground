@@ -72,4 +72,17 @@
 <script src="js/base.js"></script>
 <script src="//localhost:35729/livereload.js"></script>
 
+<script src="js/plyr.js"></script>
+    
+    <script>
+        $("#vid-btn").click(function(){
+          $("iframe").attr('src', $(this).data('video'));
+          $("#video-overlay").show();
+        });
+        $("#close-video-overlay").click(function(){
+          $("#video-overlay").hide();
+          $("iframe").attr('src','');  
+            });
+      </script>
+
 include "svg.html"

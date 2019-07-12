@@ -1,0 +1,22 @@
+.crumbs{
+  @include padding(px-to-rem(28px), null, px-to-rem(24px), 0);
+  @include font-size(14px);
+  &__item{
+    font-weight: 300;
+    &:not(:last-child):after{
+      content: ">";
+      @include padding(null, px-to-rem(1px), null, px-to-rem(4px));
+    }
+  }
+  &__link{
+    text-decoration: underline;
+    color: $medBlue;
+    
+    &:hover, &:focus, &:active {
+      color: $medBlueHover;
+    }
+  }
+  &__current{
+    color: $medBlue;
+  }
+}

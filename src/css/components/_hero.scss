@@ -1,0 +1,186 @@
+:root{
+  --sidebar-width: 100%;
+  @include for-size("tablet-landscape-up") {
+    --sidebar-width: #{px-to-rem(515px)};
+  }
+}
+
+.hero{
+  background-size: cover;
+  background-position: center center;
+  background-color: black;
+  background-image: image-set( var(--background) );
+
+  &--academic{
+    height: px-to-rem(618px / 2);
+    @include for-size("tablet-landscape-up"){
+      height: px-to-rem(618px);
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  &--content {
+    height: px-to-rem(266px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    @include margin(px-to-rem(58px), null, null, null);
+    
+    &__title {
+      color: white;
+      text-transform: uppercase;
+      text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(2px) black;
+    }
+  }
+  
+  &--video{
+    width: 100%;
+    display: table;
+    position: relative;
+    @include margin(px-to-rem(58px), null, null, null);
+  
+    &__wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    &__btn {
+      width: px-to-rem(340px);
+      margin: 0 auto !important;
+    }
+  }
+      
+    
+  
+  &__title{
+    color: white;
+    text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(4px) black;
+    letter-spacing: px-to-rem(3px);
+    text-transform: uppercase;
+    font-weight: 300;
+    &--large{
+      @include font-size(80px);
+    }
+  }
+}
+
+
+  
+/*
+.panel{
+  background: $grey;
+  
+  &--thirds{
+    width: 100%;
+    @include margin(px-to-rem(24px), null, null, null);
+    
+    @include for-size("desktop-up"){
+      width: calc( (100% - 6rem) / 3 );
+    }
+    
+  }
+  &__title{
+    text-align: center;
+    @include padding(null, null, px-to-rem(16px), null);
+    
+    &--border{
+      text-align: left;
+      @include font-size(16px);
+      font-weight: 300;
+      text-transform: uppercase;
+      border-left: solid px-to-rem(8px) $medBlue;
+      @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(42px));
+    }
+  }
+  &__image{
+    @include margin( px-to-rem(16px), auto, px-to-rem(16px), auto);
+    display: block;
+  }
+  &__content{
+    @include font-size(14px);
+    @include padding(px-to-rem(16px),px-to-rem(54px),px-to-rem(16px),px-to-rem(54px));
+    @include margin(null, null, px-to-rem(24px), null);
+  }
+  
+  &__hr{
+    display: block;
+    background: none;
+    border: solid px-to-rem(0.5px) $base-text-color;
+    @include margin(px-to-rem(16px), null, px-to-rem(16px), null);
+  }
+}
+
+.slate-form{
+  label{
+    @include font-size(14px, 1);
+    @include padding(px-to-rem(8px), null, px-to-rem(8px), null);
+  }
+  input, textarea {
+    @include font-size(16px);
+    @include padding(px-to-rem(4px), px-to-rem(8px), px-to-rem(4px), px-to-rem(8px));
+    border-radius: px-to-rem(4px);
+    border: solid px-to-rem(1px) lighten($grey, 25%);
+    width: 100%;
+    display: block;
+    font-weight: 200;
+  }
+  select{
+    font-weight: 200;
+  }
+}
+
+.cdn{
+  align-items: center;
+  justify-content: center;
+  &__image{}
+  &__content{
+    @include padding( null, null, null, px-to-rem(60px));
+  }
+}
+
+.tab{
+  padding: 0;
+  margin: 24px 0 0 0;
+  &__item{
+  }
+  
+  &__link{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    @include font-size(14px, 1);
+    border-spacing: 0;
+    background: $grey;
+    text-align: center;
+    color: $darkNavy;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: solid 0.5rem white;
+    &:first-child{
+      margin-left: 0;
+    }
+    &.on{
+      border-bottom-color: $grey;
+    }
+  }
+  
+  &__content{
+    background: $grey;
+    padding: 36px;
+    p{
+      margin-top: 0;
+    }
+  }
+}
+*/

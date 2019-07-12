@@ -1,0 +1,96 @@
+.content-page {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
+  @include for-size("desktop-up"){
+    @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
+  }
+  
+  &--nav {
+    @include padding(px-to-rem(15px), px-to-rem(85px), null, null);
+    width: px-to-rem(350px);
+    
+    &__link{
+      color: $base-text-color;
+      text-decoration: none;
+      width: 100%;
+      min-height: 56px;
+      display: table;
+      border-top: 1px #d8d8d8 solid;
+      @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
+      &:first-child{
+        border-top: none;
+      }
+    }
+    
+    &__item {
+      @include font-size(14px);
+      display: table-cell;
+      vertical-align: middle;
+      
+      &.active{
+        font-weight: 400;
+      }
+    }
+  }
+  
+  &--subnav{
+    
+    &__list{
+      font-size: 14px;
+      font-style: italic;
+      margin-left: 0px;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 3px solid #497f90;
+    }
+    
+    &__item {
+      @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  
+  &--main {
+    @include padding(null, null, px-to-rem(100px), px-to-rem(50px));
+    width: px-to-rem(900px);
+    
+    
+    h2{
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
+    }
+    
+    h3{
+      color: $base-text-color;
+      font-weight: 300;
+      @include font-size(20px);
+    }
+  }
+}
+
+#video-overlay{
+  background: rgba(0,0,0,.85);
+  transition: all .75s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999!important;
+  overflow: hidden;
+  user-select: none;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5%;
+}
+
+.video-overlay-container{
+  padding: 5%;
+  vertical-align: middle;
+}
+
+

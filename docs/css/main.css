@@ -1605,7 +1605,8 @@ textarea {
     .hero--content__title {
       color: white;
       text-transform: uppercase;
-      text-shadow: 0.125rem 0.125rem 0.125rem black; }
+      text-shadow: 0.125rem 0.125rem 0.125rem black;
+      margin-top: 0px; }
   .hero--video {
     width: 100%;
     display: table;

@@ -1812,9 +1812,9 @@ textarea {
 .tabs__content {
   display: none;
   padding-top: 1rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
   background: #F0F2F3;
   margin-top: 0.25rem; }
   @media (min-width: 75em) {
@@ -1887,6 +1887,42 @@ textarea {
     background: #cfd0d1;
     height: 0.125rem;
     border: none; }
+
+.accordion__btn {
+  display: block;
+  width: 100%;
+  border-top: solid 0.125rem #cfd0d1;
+  color: #0B223F;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+  .accordion__btn:last-of-type {
+    border-bottom: solid 0.125rem #cfd0d1; }
+
+.accordion__icon {
+  float: right;
+  height: 1.75rem;
+  width: 1.75rem;
+  color: #0B223F;
+  border: solid 0.125rem #0B223F;
+  border-radius: 0.5rem;
+  margin-top: -0.125rem;
+  margin-right: 1.5rem; }
+  .accordion__icon--plus {
+    display: block; }
+  .accordion__icon--minus {
+    display: none; }
+
+.accordion__content {
+  display: none;
+  border-top: solid 0.125rem #cfd0d1; }
+  .accordion__content:last-of-type {
+    border-top: none;
+    border-bottom: solid 0.125rem #cfd0d1; }
+  .accordion__content.visible {
+    display: block; }
 
 .academic-wrapper {
   position: relative; }

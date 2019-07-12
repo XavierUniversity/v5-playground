@@ -33,9 +33,13 @@ h5{ @include font-size($h5-mobile, $heading-line-height); }
 }
 
 p{ 
-  @include font-size(16px); 
+  @include font-size(16px, 1.65); 
   @include margin(0, null, px-to-rem(24px), null);
   &:first-of-type{
-    @include margin(px-to-rem(24px), null, null, null);
+    @include margin(px-to-rem(16px), null, null, null);
+    
+    @include for-size("tablet-portrait-up"){
+      @include margin(px-to-rem(24px), null, null, null);  
+    }
   }
 }

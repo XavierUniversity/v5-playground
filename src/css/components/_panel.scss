@@ -1,7 +1,11 @@
 .panel{
   background: $grey;
-  @include padding(px-to-rem(50px), px-to-rem(60px), px-to-rem(50px), px-to-rem(60px));
+  @include padding(px-to-rem(50px), px-to-rem(30px), px-to-rem(50px), px-to-rem(30px));
   @include margin(px-to-rem(24px), null, null, null);
+  
+  @include for-size("tablet-landscape-up"){ 
+    @include padding(px-to-rem(50px), px-to-rem(60px), px-to-rem(50px), px-to-rem(60px));  
+  }
   &__title{
     @include font-size(20px);
     @include margin(0, null, px-to-rem(40px), null);
@@ -21,7 +25,7 @@
   }
   
   &--features{
-    @include padding(px-to-rem(42px), 0, px-to-rem(50px), 0);
+    @include padding(px-to-rem(42px), 0, px-to-rem(8px), 0);
     @include for-size('tablet-landscape-up'){
       width: calc( (100% / 3) -  32px);
       @include margin(null, px-to-rem(32px), null, null);
@@ -29,10 +33,12 @@
         @include margin(null, 0, null, null);
       } 
     }
-    
+    &:not:first-of-type{
+      @include margin(px-to-rem(24px), null, null, null);  
+    }
     &__title{
       @include font-size(16px);
-      border-left: solid px-to-rem(6px) $medBlue;
+      border-left: solid px-to-rem(8px) $medBlue;
       
       @include padding( px-to-rem(16px), null, px-to-rem(16px), px-to-rem(24px));
     }
@@ -40,13 +46,15 @@
   
   &__img {
     @include padding(null, px-to-rem(24px), null, px-to-rem(24px));
+    display: block;
+    width: 100%;
   }
   &__content {
     @include margin(null, px-to-rem(42px), null, px-to-rem(42px));
   }
   
   &__hr{
-    @include margin(null, px-to-rem(24px), px-to-rem(16px), px-to-rem(24px));
+    @include margin(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
     background: rgb(207, 208, 209);
     height: px-to-rem(2px);
     border: none;

@@ -5,3 +5,9 @@
     width: 100%;
   }
 }
+
+.mobile-break{
+  @include for-size("phone-only"){
+    display: block;
+  }
+}

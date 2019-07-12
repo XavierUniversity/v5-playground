@@ -1,0 +1,6 @@
+.spacer{
+  display: block;
+  &--32{
+    @include margin(px-to-rem(32px), null, null, null);
+  }
+}

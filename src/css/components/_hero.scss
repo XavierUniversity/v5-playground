@@ -96,14 +96,7 @@
   }
 }
 
-.cdn{
-  align-items: center;
-  justify-content: center;
-  &__image{}
-  &__content{
-    @include padding( null, null, null, px-to-rem(60px));
-  }
-}
+
 
 .tab{
   padding: 0;

@@ -1,5 +1,5 @@
-#main-content{
-  a{
+#content{
+  a[class=""], a:not([class]){
     color: $medBlue;
     text-decoration: none;
     &:hover, &:focus, &:active{

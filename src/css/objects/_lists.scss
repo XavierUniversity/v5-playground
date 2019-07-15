@@ -1,6 +1,7 @@
 .list--bare{
   list-style: none;
-  margin: 0;
+  @include margin(0, null, null, 0);
+  @include padding(0, null, null, 0);
   &__item{
     margin-left: 0;
   }
@@ -10,5 +11,18 @@
   @extend .list--bare;
   &__item{
     display: inline-block;
+  }
+}
+.list--dash{
+  list-style: none;
+  padding-left: 0;
+  
+  li{
+    margin-left: 15px;  
+    
+    &::before{
+      content: "-\a0";
+      margin-left: -15px;
+    }
   }
 }

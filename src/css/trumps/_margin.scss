@@ -1,0 +1,68 @@
+.margin{
+  &--right{
+    &-8{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(8px), null, null);
+      }      
+    }
+    &-16{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(16px), null, null);
+      }
+    }
+    &-24{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(24px), null, null);
+      }
+    }
+    &-48{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(48px), null, null);
+      }
+    }
+  }
+  &--both{
+    &-8{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
+      }
+    }
+    &-16{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(16px), null, px-to-rem(16px));
+      }
+    }
+    &-24{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(24px), null, px-to-rem(24px));
+      }
+    }
+    &-48{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, px-to-rem(48px), null, px-to-rem(48px));
+      }
+    }
+  }
+  &--left{
+    &-8{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, null, null, px-to-rem(8px));
+      }
+    }
+    &-16{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, null, null, px-to-rem(16px));
+      }
+    }
+    &-24{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, null, null, px-to-rem(24px));
+      }
+    }
+    &-48{
+      @include for-size("tablet-portrait-up"){
+        @include margin(null, null, null, px-to-rem(48px));
+      }
+    }
+  }
+}

@@ -3,14 +3,24 @@
     display: block;
     width: 100%;
     border-top: solid px-to-rem(2px) rgb(207, 208, 209);
-    color: $darkNavy;
-    font-weight: 300;
-    text-transform: uppercase;
     text-align: left;
+    @include font-size(16px);
     @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
+    @include margin(0, null, null, null);
+    transition: none;
+    
+    &.on{
+      @include padding(null, null, 0, null);
+    }
     
     &:last-of-type{
       border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+    }
+    
+    &:last-of-type{
+      &.on{
+        border-bottom: none;
+      }
     }
   }
   &__icon{
@@ -18,7 +28,7 @@
     height: px-to-rem(28px);
     width: px-to-rem(28px);
     color: $darkNavy;
-    border: solid px-to-rem(2px) $darkNavy;
+    border: solid px-to-rem(1.25px) $darkNavy;
     border-radius: px-to-rem(8px);
     @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
     &--plus{
@@ -29,10 +39,14 @@
       display: none;
     }
   }
-  
+  &__title{
+    @include margin(0, null, null, null);
+    @include font-size(16px);
+    font-weight: 200;
+    font-style: italic;
+  }
   &__content{
     display: none;
-    border-top: solid px-to-rem(2px) rgb(207, 208, 209);
     
     &:last-of-type{
       border-top: none;
@@ -42,5 +56,9 @@
     &.visible{
       display: block;
     }
+  }
+  
+  &__list{
+    @include margin(0, null, px-to-rem(32px), px-to-rem(16px));
   }
 }

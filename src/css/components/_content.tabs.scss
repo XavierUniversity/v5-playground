@@ -91,6 +91,16 @@
 }
 
 .tabs {
+  &__title{
+    color: $darkNavy;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include font-size(18px);
+    @include margin(px-to-rem(32px), null, 0, null);
+    &:first-of-type{
+      @include margin(0, null, 0, null);
+    }
+  }
   &__content {
     display: none;
     @include padding(px-to-rem(16px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));

@@ -788,12 +788,24 @@ textarea {
 
 .list--bare, .list--inline {
   list-style: none;
-  margin: 0; }
+  margin-top: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-left: 0; }
   .list--bare__item {
     margin-left: 0; }
 
 .list--inline__item {
   display: inline-block; }
+
+.list--dash {
+  list-style: none;
+  padding-left: 0; }
+  .list--dash li {
+    margin-left: 15px; }
+    .list--dash li::before {
+      content: "-\a0";
+      margin-left: -15px; }
 
 .flex {
   display: -webkit-box;
@@ -1809,6 +1821,19 @@ textarea {
     .tab__link.active {
       z-index: 1; } }
 
+.tabs__title {
+  color: #0B223F;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+  margin-top: 2rem;
+  margin-bottom: 0; }
+  .tabs__title:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0; }
+
 .tabs__content {
   display: none;
   padding-top: 1rem;
@@ -1892,21 +1917,28 @@ textarea {
   display: block;
   width: 100%;
   border-top: solid 0.125rem #cfd0d1;
-  color: #0B223F;
-  font-weight: 300;
-  text-transform: uppercase;
   text-align: left;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
   padding-top: 1.25rem;
-  padding-bottom: 1.25rem; }
+  padding-bottom: 1.25rem;
+  margin-top: 0;
+  -webkit-transition: none;
+  transition: none; }
+  .accordion__btn.on {
+    padding-bottom: 0; }
   .accordion__btn:last-of-type {
     border-bottom: solid 0.125rem #cfd0d1; }
+  .accordion__btn:last-of-type.on {
+    border-bottom: none; }
 
 .accordion__icon {
   float: right;
   height: 1.75rem;
   width: 1.75rem;
   color: #0B223F;
-  border: solid 0.125rem #0B223F;
+  border: solid 0.078125rem #0B223F;
   border-radius: 0.5rem;
   margin-top: -0.125rem;
   margin-right: 1.5rem; }
@@ -1915,14 +1947,26 @@ textarea {
   .accordion__icon--minus {
     display: none; }
 
+.accordion__title {
+  margin-top: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 200;
+  font-style: italic; }
+
 .accordion__content {
-  display: none;
-  border-top: solid 0.125rem #cfd0d1; }
+  display: none; }
   .accordion__content:last-of-type {
     border-top: none;
     border-bottom: solid 0.125rem #cfd0d1; }
   .accordion__content.visible {
     display: block; }
+
+.accordion__list {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  margin-left: 1rem; }
 
 .academic-wrapper {
   position: relative; }

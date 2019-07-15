@@ -1,4 +1,5 @@
 .accordion{
+  $self: &;
   &__btn{
     display: block;
     width: 100%;
@@ -11,6 +12,13 @@
     
     &.on{
       @include padding(null, null, 0, null);
+      
+      #{$self}__icon--plus{
+        display: none;
+      }
+      #{$self}__icon--minus{
+        display: block;
+      }
     }
     
     &:last-of-type{

@@ -1928,6 +1928,10 @@ textarea {
   transition: none; }
   .accordion__btn.on {
     padding-bottom: 0; }
+    .accordion__btn.on .accordion__icon--plus {
+      display: none; }
+    .accordion__btn.on .accordion__icon--minus {
+      display: block; }
   .accordion__btn:last-of-type {
     border-bottom: solid 0.125rem #cfd0d1; }
   .accordion__btn:last-of-type.on {

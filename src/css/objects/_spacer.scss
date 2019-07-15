@@ -1,0 +1,18 @@
+.spacer{
+  display: block;
+  &--32{
+    @include margin(px-to-rem(32px), null, null, null);
+  }
+  &--64{
+    @include margin(px-to-rem(64px), null, null, null);
+  }
+  &--72{
+    @include margin(px-to-rem(72px), null, null, null);
+  }
+  &--128{
+    @include margin(px-to-rem(128px), null, null, null);
+  }
+  &--256{
+    @include margin(px-to-rem(256px), null, null, null);
+  }
+}

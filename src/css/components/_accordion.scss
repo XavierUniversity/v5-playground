@@ -1,0 +1,64 @@
+.accordion{
+  &__btn{
+    display: block;
+    width: 100%;
+    border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+    text-align: left;
+    @include font-size(16px);
+    @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
+    @include margin(0, null, null, null);
+    transition: none;
+    
+    &.on{
+      @include padding(null, null, 0, null);
+    }
+    
+    &:last-of-type{
+      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+    }
+    
+    &:last-of-type{
+      &.on{
+        border-bottom: none;
+      }
+    }
+  }
+  &__icon{
+    float: right;
+    height: px-to-rem(28px);
+    width: px-to-rem(28px);
+    color: $darkNavy;
+    border: solid px-to-rem(1.25px) $darkNavy;
+    border-radius: px-to-rem(8px);
+    @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+    &--plus{
+      display: block;
+    }
+    
+    &--minus{
+      display: none;
+    }
+  }
+  &__title{
+    @include margin(0, null, null, null);
+    @include font-size(16px);
+    font-weight: 200;
+    font-style: italic;
+  }
+  &__content{
+    display: none;
+    
+    &:last-of-type{
+      border-top: none;
+      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+    }
+    
+    &.visible{
+      display: block;
+    }
+  }
+  
+  &__list{
+    @include margin(0, null, px-to-rem(32px), px-to-rem(16px));
+  }
+}

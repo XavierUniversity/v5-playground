@@ -10,7 +10,7 @@
   * 
 **/
 
-var h = document.getElementById("header");
+var h = document.querySelector("#header");
 var stuck = false;
 var stickPoint = getDistance();
 
@@ -20,13 +20,16 @@ function getDistance() {
 }
 
 window.onscroll = function(e) {
-  var distance = getDistance() - window.pageYOffset;
-  var offset = window.pageYOffset;
-  if ( (distance < 0) && !stuck) {
-    h.classList.add('header--fixed');
-    stuck = true;
-  } else if (stuck && (offset <= stickPoint)){
-    h.classList.remove('header--fixed');
-    stuck = false;
+  if ( document.querySelector("body").classList.contains("homepage") ){
+    var distance = getDistance() - window.pageYOffset;
+    var offset = window.pageYOffset;
+    if ( (distance < 0) && !stuck) {
+      h.classList.add('header--fixed');
+      stuck = true;
+    } else if (stuck && (offset <= stickPoint)){
+      h.classList.remove('header--fixed');
+      stuck = false;
+    }  
   }
+  
 }

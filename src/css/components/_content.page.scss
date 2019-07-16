@@ -9,12 +9,15 @@
   
   
   &--nav {
-    @include padding(px-to-rem(15px), null, null, null);
-    @include margin( null, 0, null, null);
+    @include margin(px-to-rem(16px), null, null, null);
+    @include padding(null, px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+    background: $grey;
     @include for-size("tablet-landscape-up"){
       @include margin( null, px-to-rem(135px), null, null);
+      padding: 0;
       flex: none;
       flex-basis: px-to-rem(350px);
+      background: none;
       
     }
     &__controls{
@@ -31,7 +34,7 @@
     
     &__item {
       @include font-size(14px);
-      border-top: 1px #d8d8d8 solid;
+      border-top: px-to-rem(1px) #d8d8d8 solid;
        
       &:first-child{
         border-top: none;
@@ -41,7 +44,7 @@
     &__link{
       color: $base-text-color;
       text-decoration: none;
-      min-height: 56px;
+      min-height: px-to-rem(56px);
       display: flex;
       align-items:center;
       @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
@@ -55,12 +58,11 @@
   &--subnav{
     
     &__list{
-      font-size: 14px;
+      @include font-size(14px);
       font-style: italic;
-      margin-left: 0px;
-      margin-bottom: 15px;
-      padding-left: 10px;
-      border-left: 3px solid #497f90;
+      @include margin(null, null, px-to-rem(15px), px-to-rem(0px));
+      @include padding(null, null, null, px-to-rem(10px));
+      border-left: px-to-rem(3px) solid #497f90;
     }
   }
   
@@ -79,6 +81,8 @@
     }
   }
 }
+
+// VIDEO
 
 #video-overlay{
   background: rgba(0,0,0,.85);
@@ -103,48 +107,53 @@
 
 // MENU
 
-.sidenav__btn {
-    display: block;
-    width: 100%;
-    border-top: solid 0.125rem #cfd0d1;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    margin-top: 0;
-    -webkit-transition: none;
-    transition: none;
-}
+.sidenav {
+    &__btn {
+      width: 100%;
+      border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+      text-align: left;
+      @include font-size(16px);
+      @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
+      @include margin(0, null, null, null);
+      transition: none;
+      
+      &.on{
+      }
+      
+      &:first-child{
+        border-top: none;
+      }
+  }
 
-.sidenav__icon {
-    float: right;
-    height: 1.75rem;
-    width: 1.75rem;
-    color: #0B223F;
-    border: solid 0.078125rem #0B223F;
-    border-radius: 0.5rem;
-    margin-top: -0.125rem;
-    margin-right: 1.5rem;
-    
-    &--plus {
-        display: block;
-    }
-    &--minus {
+  &__icon {
+      float: right;
+      height: px-to-rem(28px);
+      width: px-to-rem(28px);
+      color: $darkNavy;
+      border: solid px-to-rem(1.25px) $darkNavy;
+      border-radius: px-to-rem(8px);
+      @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+      
+      &--plus{
+      display: block;
+      }
+      
+      &--minus{
         display: none;
+      }
+  }
+  
+  &__content {
+    @include for-size("tablet-landscape-up"){
+      display: block;
     }
-}
+      display: none;
+      
+      &.visible {
+      display: block;
+    }
+  }
 
-.sidenav__content {
-  @include for-size("tablet-landscape-up"){
-    display: block;
-  }
-    display: none;
-    
-    &.visible {
-    display: block;
-  }
 }
 
 

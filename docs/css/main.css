@@ -1748,14 +1748,19 @@ textarea {
       -webkit-box-pack: justify;
               justify-content: space-between; } }
   .content-page--nav {
-    padding-top: 0.9375rem;
-    margin-right: 0; }
+    margin-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    background: #F0F2F3; }
     @media (min-width: 56.25em) {
       .content-page--nav {
         margin-right: 8.4375rem;
+        padding: 0;
         -webkit-box-flex: 0;
                 flex: none;
-        flex-basis: 21.875rem; } }
+        flex-basis: 21.875rem;
+        background: none; } }
     .content-page--nav__controls {
       display: block; }
       @media (min-width: 56.25em) {
@@ -1765,13 +1770,13 @@ textarea {
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 1.7142857143;
-      border-top: 1px #d8d8d8 solid; }
+      border-top: 0.0625rem #d8d8d8 solid; }
       .content-page--nav__item:first-child {
         border-top: none; }
     .content-page--nav__link {
       color: #333;
       text-decoration: none;
-      min-height: 56px;
+      min-height: 3.5rem;
       display: -webkit-box;
       display: flex;
       -webkit-box-align: center;
@@ -1782,11 +1787,13 @@ textarea {
         font-weight: 400; }
   .content-page--subnav__list {
     font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.7142857143;
     font-style: italic;
-    margin-left: 0px;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 3px solid #497f90; }
+    margin-bottom: 0.9375rem;
+    margin-left: 0rem;
+    padding-left: 0.625rem;
+    border-left: 0.1875rem solid #497f90; }
   .content-page--main h2 {
     text-transform: uppercase;
     color: #0B223F;
@@ -1821,7 +1828,6 @@ textarea {
   vertical-align: middle; }
 
 .sidenav__btn {
-  display: block;
   width: 100%;
   border-top: solid 0.125rem #cfd0d1;
   text-align: left;
@@ -1833,6 +1839,8 @@ textarea {
   margin-top: 0;
   -webkit-transition: none;
   transition: none; }
+  .sidenav__btn:first-child {
+    border-top: none; }
 
 .sidenav__icon {
   float: right;

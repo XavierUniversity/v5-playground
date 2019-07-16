@@ -9,8 +9,21 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: -webkit-image-set( url("/images/hero/ProgamPage_Hero_Art_1x.png") 1x, url("/images/hero/ProgamPage_Hero_Art_2x.png") 2x );
-        background-image: image-set( "/images/hero/ProgamPage_Hero_Art_1x.png" 1x, "/images/hero/ProgamPage_Hero_Art_2x.png" 2x );
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent 1px,
+          rgba(0, 0, 0, 0.2) 2px
+        ), url("images/hero/ProgamPage_Hero_Art_1x.png");
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent 1px,
+          rgba(0, 0, 0, 0.2) 2px
+        ), -webkit-image-set( url("images/hero/ProgamPage_Hero_Art_1x.png") 1x, url("images/hero/ProgamPage_Hero_Art_2x.png") 2x );
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent 1px,
+          rgba(0, 0, 0, 0.2) 2px
+        ), image-set( "images/hero/ProgamPage_Hero_Art_1x.png" 1x, "images/hero/ProgamPage_Hero_Art_2x.png" 2x );
       }
     </style>
   </head>
@@ -253,57 +266,3 @@
     include "includes/footer.html"
   </body>
 </html>
-
-<!-- <section class="wrapper">
-        <div class="parent">
-          <div class="div1">
-            <div class="bread">
-              <a class="bread__crumb" href="#">Home</a> > <a class="bread__crumb" href="#Academics">Academics</a> > <a class="bread__crumb" href="#explore">Explore Majors &amp; Programs</a> > <span class="bread__crumb">Art</span>
-            </div>
-            <div class="panel">
-              <div class="panel__content">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="wrapper wrapper--academic">
-        <div class="panel panel--thirds">
-          <h3 class="panel__title panel__title--border">Studio and Gallery Space</h3>
-          <img class="panel__image" src="//lorempixel.com/317/238/people/1" alt="" />
-          <div class="panel__content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
-            <hr class="panel__hr" />
-            
-            <a href="#">&gt; Learn More</a>
-            
-          </div>
-        </div>
-        <div class="panel panel--thirds margin--both-48">
-          <h3 class="panel__title panel__title--border">Studio and Gallery Space</h3>
-          <img class="panel__image" src="//lorempixel.com/317/238/abstract/2" alt="" />
-          <div class="panel__content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-            
-            <hr class="panel__hr" />
-            
-            <a href="#">&gt; Learn More</a>
-            
-          </div>
-        </div>
-        <div class="panel panel--thirds">
-          <h3 class="panel__title panel__title--border">Studio and Gallery Space</h3>
-          <img class="panel__image" src="//lorempixel.com/317/238/sports/3" alt="" />
-          <div class="panel__content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
-            <hr class="panel__hr" />
-            
-            <a href="#">&gt; Learn More</a>
-            
-          </div>
-        </div>
-      </div>
- -->

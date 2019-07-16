@@ -1761,29 +1761,24 @@ textarea {
       @media (min-width: 56.25em) {
         .content-page--nav__controls {
           display: none; } }
-    .content-page--nav__list {
-      display: none; }
-      @media (min-width: 56.25em) {
-        .content-page--nav__list {
-          display: block; } }
-    .content-page--nav__link {
-      color: #333;
-      text-decoration: none;
-      width: 100%;
-      min-height: 56px;
-      display: table;
-      border-top: 1px #d8d8d8 solid;
-      padding-top: 0.625rem;
-      padding-bottom: 0.625rem; }
-      .content-page--nav__link:first-child {
-        border-top: none; }
     .content-page--nav__item {
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 1.7142857143;
-      display: table-cell;
-      vertical-align: middle; }
-      .content-page--nav__item.active {
+      border-top: 1px #d8d8d8 solid; }
+      .content-page--nav__item:first-child {
+        border-top: none; }
+    .content-page--nav__link {
+      color: #333;
+      text-decoration: none;
+      min-height: 56px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem; }
+      .content-page--nav__link.active {
         font-weight: 400; }
   .content-page--subnav__list {
     font-size: 14px;
@@ -1792,11 +1787,6 @@ textarea {
     margin-bottom: 15px;
     padding-left: 10px;
     border-left: 3px solid #497f90; }
-  .content-page--subnav__item {
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    display: table-cell;
-    vertical-align: middle; }
   .content-page--main h2 {
     text-transform: uppercase;
     color: #0B223F;
@@ -1829,6 +1819,42 @@ textarea {
 .video-overlay-container {
   padding: 5%;
   vertical-align: middle; }
+
+.sidenav__btn {
+  display: block;
+  width: 100%;
+  border-top: solid 0.125rem #cfd0d1;
+  text-align: left;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-top: 0;
+  -webkit-transition: none;
+  transition: none; }
+
+.sidenav__icon {
+  float: right;
+  height: 1.75rem;
+  width: 1.75rem;
+  color: #0B223F;
+  border: solid 0.078125rem #0B223F;
+  border-radius: 0.5rem;
+  margin-top: -0.125rem;
+  margin-right: 1.5rem; }
+  .sidenav__icon--plus {
+    display: block; }
+  .sidenav__icon--minus {
+    display: none; }
+
+.sidenav__content {
+  display: none; }
+  @media (min-width: 56.25em) {
+    .sidenav__content {
+      display: block; } }
+  .sidenav__content.visible {
+    display: block; }
 
 .panel {
   background: #F0F2F3;

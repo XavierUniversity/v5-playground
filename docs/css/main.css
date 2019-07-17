@@ -1758,12 +1758,16 @@ textarea {
     padding-left: 1rem; }
     @media (min-width: 56.25em) {
       .content-page--nav {
-        margin-right: 8.4375rem;
+        margin-right: 4.21875rem;
         padding: 0;
         -webkit-box-flex: 0;
                 flex: none;
         flex-basis: 21.875rem;
         background: none; } }
+    @media (min-width: 75em) {
+      .content-page--nav {
+        flex-basis: 18.75rem;
+        margin-right: 8.4375rem; } }
     .content-page--nav__controls {
       display: block;
       text-transform: uppercase;

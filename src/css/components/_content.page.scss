@@ -12,12 +12,15 @@
     @include margin(px-to-rem(16px), null, null, null);
     @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
     @include for-size("tablet-landscape-up"){
-      @include margin( null, px-to-rem(135px), null, null);
+      @include margin( null, px-to-rem(135px / 2 ), null, null);
       padding: 0;
       flex: none;
       flex-basis: px-to-rem(350px);
       background: none;
-      
+    }
+    @include for-size("desktop-up"){
+      flex-basis: px-to-rem(300px);
+      @include margin( null, px-to-rem(135px), null, null);
     }
     &__controls{
       // Button styles here

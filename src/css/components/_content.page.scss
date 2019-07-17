@@ -10,8 +10,7 @@
   
   &--nav {
     @include margin(px-to-rem(16px), null, null, null);
-    @include padding(null, px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
-    background: $grey;
+    @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
     @include for-size("tablet-landscape-up"){
       @include margin( null, px-to-rem(135px), null, null);
       padding: 0;
@@ -23,6 +22,10 @@
     &__controls{
       // Button styles here
       display: block;
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-size: 18px !important;
+      font-weight: 300 !important;
       
       @include for-size("tablet-landscape-up"){
         display: none;
@@ -108,6 +111,13 @@
 // MENU
 
 .sidenav {
+  $self: &;
+  border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+  border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+    @include for-size("tablet-landscape-up"){
+      border:none;
+    }
+  
     &__btn {
       width: 100%;
       border-top: solid px-to-rem(2px) rgb(207, 208, 209);
@@ -118,7 +128,15 @@
       transition: none;
       
       &.on{
+      @include padding(null, null, 0, null);
+      
+      #{$self}__icon--plus{
+       display: none;
       }
+      #{$self}__icon--minus{
+       display: block;
+      }
+  }
       
       &:first-child{
         border-top: none;
@@ -136,10 +154,12 @@
       
       &--plus{
       display: block;
+      color: $darkNavy;
       }
       
       &--minus{
         display: none;
+        color: $darkNavy;
       }
   }
   

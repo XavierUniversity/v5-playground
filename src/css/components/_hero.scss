@@ -30,8 +30,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    text-align: center;
     width: 100%;
+    font-size: px-to-rem(24px);
     @include margin(px-to-rem(58px), null, null, null);
+      
+      @include for-size("tablet-landscape-up"){
+      font-size: px-to-rem(36px);
+      }
     
     &__title {
       color: white;

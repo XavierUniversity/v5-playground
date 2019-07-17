@@ -7,6 +7,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+    
   </head>
   <body>
     <!-- Skip Header & Navigation -->
@@ -160,7 +169,7 @@
     <!-- Add your site or application content here -->
     <main id="content">
       
-      <section class="hero hero--content" style="background-image: url('/images/hero/content-page-header.jpg');">
+      <section class="hero hero--content">
           <h1 class="hero--content__title">Department of Lorem Ipsum</h1>
       </section>
       
@@ -173,9 +182,9 @@
             </button>
             <nav id="content-menu" class="sidenav__content" aria-label="">
               <ul class="nav-list content-page--nav__list">
-                <li class="content-page--nav__item"><a class="content-page--nav__link active sidenav__btn" data-toggle="#nav-item-one" aria-label="Toggle Sub Menu" href="#">Nav Item One</a></li>
+                <li class="content-page--nav__item"><a class="content-page--nav__link active sidenav__btn" href="#">Nav Item One</a></li>
               
-                  <ul id="nav-item-one" class="nav-list content-page--subnav__list sidenav__content">
+                  <ul class="nav-list content-page--subnav__list">
                     <li class="content-page--subnav__item"><a class="content-page--nav__link" href="#">Sub Nav Item</a></li>
                     <li class="content-page--subnav__item"><a class="content-page--nav__link" href="#">Really Long Subnav Item Name That Wraps Around to the Next Line</a></li>
                   </ul>

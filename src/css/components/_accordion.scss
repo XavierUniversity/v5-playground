@@ -38,7 +38,11 @@
     color: $darkNavy;
     border: solid px-to-rem(1.25px) $darkNavy;
     border-radius: px-to-rem(8px);
-    @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+    @include margin(- px-to-rem(2px), px-to-rem(12px), null, null);
+    @include for-size("tablet-landscape-up"){
+      @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+    }
+    
     &--plus{
       display: block;
     }

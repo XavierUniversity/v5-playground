@@ -25,6 +25,13 @@
     border-color: darken($darkNavy, 10%);
   }
 
+  &--hero{
+    border-color: white;
+    color: white;
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 .action{

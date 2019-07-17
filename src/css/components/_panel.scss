@@ -63,5 +63,8 @@
   &__link{
     color: $medBlue;
     text-decoration: none;
+    &:hover, &:focus, &:active{
+      color: $medBlueHover;
+    }
   }
 }

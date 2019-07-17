@@ -1450,6 +1450,12 @@ textarea {
     margin-left: 0; }
   .c-btn--dark-navy {
     border-color: #030b14; }
+  .c-btn--hero {
+    border-color: white;
+    color: white;
+    background: transparent;
+    display: inline-block;
+    text-align: center; }
 
 .action button {
   font-weight: 200;
@@ -1589,16 +1595,16 @@ textarea {
 .hero {
   background-size: cover;
   background-position: center center;
-  background-color: black; }
+  background-color: black;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: relative; }
   .hero--academic {
-    height: 19.3125rem;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-            justify-content: center;
-    position: relative; }
+    height: 19.3125rem; }
     @media (min-width: 56.25em) {
       .hero--academic {
         height: 38.625rem; } }
@@ -1735,14 +1741,16 @@ textarea {
 .tabs__content {
   display: none;
   padding-top: 1rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
   padding-bottom: 2rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   background: #F0F2F3;
   margin-top: 0.25rem; }
   @media (min-width: 75em) {
     .tabs__content {
-      margin-top: 0; } }
+      margin-top: 0;
+      padding-right: 2rem;
+      padding-left: 2rem; } }
   .tabs__content.active {
     display: block; }
 
@@ -1813,6 +1821,8 @@ textarea {
   .panel__link {
     color: #007DB3;
     text-decoration: none; }
+    .panel__link:hover, .panel__link:focus, .panel__link:active {
+      color: #1B4675; }
 
 .accordion__btn {
   display: block;
@@ -1846,7 +1856,11 @@ textarea {
   border: solid 0.078125rem #0B223F;
   border-radius: 0.5rem;
   margin-top: -0.125rem;
-  margin-right: 1.5rem; }
+  margin-right: 0.75rem; }
+  @media (min-width: 56.25em) {
+    .accordion__icon {
+      margin-top: -0.125rem;
+      margin-right: 1.5rem; } }
   .accordion__icon--plus {
     display: block; }
   .accordion__icon--minus {
@@ -1942,6 +1956,8 @@ textarea {
   .cdn__link {
     color: #007DB3;
     text-decoration: none; }
+    .cdn__link:hover, .cdn__link:focus, .cdn__link:active {
+      color: #1B4675; }
 
 .sr-only {
   position: absolute !important;

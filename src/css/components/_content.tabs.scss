@@ -103,11 +103,12 @@
   }
   &__content {
     display: none;
-    @include padding(px-to-rem(16px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
+    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));
     background: $grey;
     @include margin(px-to-rem(4px), null, null, null);
     @include for-size("desktop-up"){
       @include margin(0, null, null, null);
+      @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
     }
     &.active{
       display: block;

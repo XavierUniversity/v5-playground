@@ -14,6 +14,10 @@
     @include for-size("tablet-landscape-up"){
       @include padding( null, null, null, px-to-rem(60px));  
     }
-    
+  }
+  
+  &__link{
+    color: $medBlue;
+    text-decoration: none;
   }
 }

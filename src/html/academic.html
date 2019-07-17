@@ -9,25 +9,9 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/ProgamPage_Hero_Art_1x.jpg");
-/*
-        background-position: left bottom, center center;
-        background-repeat: repeat, no-repeat;
-        background-color: transparent;
-        background-size: auto, cover;
-*/
-/*
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent 1px,
-          rgba(0, 0, 0, 0.2) 2px
-        ), -webkit-image-set( url("images/hero/ProgamPage_Hero_Art_1x.png") 1x, url("images/hero/ProgamPage_Hero_Art_2x.png") 2x );
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent 1px,
-          rgba(0, 0, 0, 0.2) 2px
-        ), image-set( "images/hero/ProgamPage_Hero_Art_1x.png" 1x, "images/hero/ProgamPage_Hero_Art_2x.png" 2x );
-*/
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
       }
     </style>
   </head>
@@ -36,7 +20,7 @@
     <!-- Add your site or application content here -->
     <main id="content">
       <section class="hero hero--academic">
-        <h1 class="hero__title hero__title--large">Art</h1>
+        <h1 class="hero__title hero--academic__title">Art</h1>
       </section>
 
       <div class="wrapper academic-wrapper">
@@ -208,16 +192,16 @@
             <h2 class="panel__title text--centered">Get More Information</h2>
             <ul class="nav-list list--bare">
               <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Contact Us</a>
+                <a href="#Program-Specific-Contact" class="nav-list__link c-btn">Contact Us</a>
               </li>
               <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Program Details</a>
+                <a href="#Program-Specific-Details" class="nav-list__link c-btn">Program Details</a>
               </li>
               <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Honors Program</a>
+                <a href="https://www.xavier.edu/honors/" class="nav-list__link c-btn">Honors Program</a>
               </li>
               <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Financial Aid</a>
+                <a href="https://www.xavier.edu/financial-aid" class="nav-list__link c-btn">Financial Aid</a>
               </li>
             </ul>
           </div><!-- /panel -->
@@ -231,39 +215,15 @@
       <div class="spacer spacer--72"></div>
       <section class="wrapper">
         <div class="flex">
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Internship Opportunities</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=2' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Study Abroad</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=3' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
         </div>
       </section>
       <div class="spacer spacer--64"></div>
-      <div class="wrapper flex cdn">
-        <img class="cdn__image" src="//lorempixel.com/730/532/people/4" alt="" />
-        
-        <div class="cdn__content">
-          <h2 class="title">Get to know Xavier's Art Professors</h2>
-          <p>We asked 10 professors in our Art Department about their work, their favorite classes to teach and their advice for incoming art students.</p>
-          <p><a href="#">&gt; Lorem Ipsum</a></p>
-        </div>
-      </div>
+      include "includes/cdn.html"
       <div class="spacer spacer--64"></div>
     </main>
     <!-- End site or application content -->

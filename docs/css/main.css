@@ -712,19 +712,12 @@ textarea {
        -moz-appearance: none;
             appearance: none;
     box-shadow: none;
-    border: 0 !important;
     background: white;
     background-image: none;
     color: black;
-    -webkit-box-flex: 1;
-            flex: 1;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-    padding-top: 0.25rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem;
     cursor: pointer; }
   .slate-form select::-ms-expand {
     display: none; }
@@ -737,28 +730,33 @@ textarea {
     overflow: hidden;
     border-radius: 0.25rem; }
   .slate-form .form_select .form_responses::after {
-    content: '\25BC';
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 6 11.5' style='enable-background:new 0 0 6 11.5;' xml:space='preserve'%3E%3Ctitle%3EForm_Arrow_Down%3C/title%3E%3Cpolygon class='st0' points='6,6.5 0,6.5 3.2,11.5 '/%3E%3Cpolygon class='st0' points='0,5 6,5 2.8,0 '/%3E%3C/svg%3E%0A");
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.75rem;
+    height: 1rem;
+    width: 0.4375rem;
     background: white;
     cursor: pointer;
     pointer-events: none;
     -webkit-transition: .25s all ease;
-    transition: .25s all ease;
-    padding-top: 0.25rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem; }
+    transition: .25s all ease; }
   .slate-form .form_select .form_responses:hover::after {
     color: #4d4c4c; }
+
+#content a:hover, #content a:focus, #content a:active {
+  color: #004867; }
+
+#content a .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -0.125rem;
+  margin-right: 0.375rem; }
 
 #content a[class=""], #content a:not([class]) {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
-  #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
-    color: #004867; }
 
 .wrapper {
   position: relative;
@@ -1605,21 +1603,22 @@ textarea {
     @media (min-width: 56.25em) {
       .hero--academic {
         height: 38.625rem; } }
+    .hero--academic__title {
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 1.2; }
+      @media (min-width: 56.25em) {
+        .hero--academic__title {
+          font-size: 80px;
+          font-size: 5rem;
+          line-height: 1.2; } }
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;
     letter-spacing: 0.1875rem;
     text-transform: uppercase;
-    font-weight: 400; }
-    .hero__title--large {
-      font-size: 60px;
-      font-size: 3.75rem;
-      line-height: 1.2; }
-      @media (min-width: 56.25em) {
-        .hero__title--large {
-          font-size: 80px;
-          font-size: 5rem;
-          line-height: 1.2; } }
+    font-weight: 400;
+    text-align: center; }
 
 .title {
   font-weight: 400;
@@ -1812,6 +1811,9 @@ textarea {
     background: #cfd0d1;
     height: 0.125rem;
     border: none; }
+  .panel__link {
+    color: #007DB3;
+    text-decoration: none; }
 
 .accordion__btn {
   display: block;
@@ -1938,6 +1940,9 @@ textarea {
   @media (min-width: 56.25em) {
     .cdn__content {
       padding-left: 3.75rem; } }
+  .cdn__link {
+    color: #007DB3;
+    text-decoration: none; }
 
 .sr-only {
   position: absolute !important;

@@ -12,13 +12,21 @@
 
   &--academic{
     height: px-to-rem(618px / 2);
-    @include for-size("tablet-landscape-up"){
-      height: px-to-rem(618px);
-    }
+    
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    @include for-size("tablet-landscape-up"){
+      height: px-to-rem(618px);
+    }
+    
+    &__title{
+      @include font-size(60px);
+      @include for-size("tablet-landscape-up"){
+        @include font-size(80px);
+      }
+    }
   } 
   
   &__title{
@@ -27,12 +35,6 @@
     letter-spacing: px-to-rem(3px);
     text-transform: uppercase;
     font-weight: 400;
-    
-    &--large{
-      @include font-size(60px);
-      @include for-size("tablet-landscape-up"){
-        @include font-size(80px);
-      }
-    }
+    text-align: center;
   }
 }

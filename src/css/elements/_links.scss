@@ -1,10 +1,19 @@
 #content{
+  a{
+    &:hover, &:focus, &:active{
+      color: darken($medBlue, 15%);
+    }
+    
+    .icon{
+      height: px-to-rem(24px);
+      width: px-to-rem(24px);
+      @include margin(- px-to-rem(2px), px-to-rem(6px), null, null);
+    }
+  }
+  
   a[class=""], a:not([class]){
     color: $medBlue;
     font-weight: 300;
     text-decoration: underline;
-    &:hover, &:focus, &:active{
-      color: darken($medBlue, 15%);
-    }  
   }
 }

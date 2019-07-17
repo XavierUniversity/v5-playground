@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 This CSS resource incorporates links to font software which is the valuable copyrighted
 property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
@@ -1467,6 +1468,16 @@ textarea {
     margin-right: auto;
     margin-left: auto; }
 
+.action button {
+  font-weight: 200;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto; }
+  .action button:hover, .action button:focus, .action button:active {
+    margin-right: auto;
+    margin-left: auto; }
+
 .footer {
   background: #0B223F;
   border-top: solid 0.25rem #007DB3;
@@ -1910,7 +1921,6 @@ textarea {
   @media (min-width: 56.25em) {
     .academic-wrapper .sidebar {
       grid-area: 1 / 2 / 3 / 3; } }
-
 .academic-cta {
   display: none; }
   @media (min-width: 37.5em) {

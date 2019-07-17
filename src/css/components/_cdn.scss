@@ -1,6 +1,7 @@
 .cdn{
   align-items: center;
   justify-content: center;
+
   &__image{
     height: auto;
     @include for-size("tablet-landscape-up"){

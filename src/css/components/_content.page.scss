@@ -1,0 +1,187 @@
+.content-page {
+  display: flex;
+  flex-direction: column;
+  @include margin(null, null, px-to-rem(100px), null);
+  @include for-size("tablet-landscape-up"){
+    flex-direction: row;  
+    justify-content: space-between;
+  }
+  
+  
+  &--nav {
+    @include margin(px-to-rem(16px), null, null, null);
+    @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
+    @include for-size("tablet-landscape-up"){
+      @include margin( null, px-to-rem(135px / 2 ), null, null);
+      padding: 0;
+      flex: none;
+      flex-basis: px-to-rem(350px);
+      background: none;
+    }
+    @include for-size("desktop-up"){
+      flex-basis: px-to-rem(300px);
+      @include margin( null, px-to-rem(135px), null, null);
+    }
+    &__controls{
+      // Button styles here
+      display: block;
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-size: 18px !important;
+      font-weight: 300 !important;
+      
+      @include for-size("tablet-landscape-up"){
+        display: none;
+      }
+    }
+    
+    &__list{
+    }
+    
+    &__item {
+      @include font-size(14px);
+      border-top: px-to-rem(1px) #d8d8d8 solid;
+       
+      &:first-child{
+        border-top: none;
+      }
+    }
+    
+    &__link{
+      color: $base-text-color;
+      text-decoration: none;
+      min-height: px-to-rem(56px);
+      display: flex;
+      align-items:center;
+      @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
+      
+      &.active{
+        font-weight: 400;
+      }
+    }
+  }
+  
+  &--subnav{
+    
+    &__list{
+      @include font-size(14px);
+      font-style: italic;
+      @include margin(null, null, px-to-rem(15px), px-to-rem(0px));
+      @include padding(null, null, null, px-to-rem(10px));
+      border-left: px-to-rem(3px) solid #497f90;
+    }
+  }
+  
+  &--main {
+    // Eventually we'll move these. Waiting on JQuelin to define these.
+    h2{
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
+    }
+    
+    h3{
+      color: $base-text-color;
+      font-weight: 300;
+      @include font-size(20px);
+    }
+  }
+}
+
+// VIDEO
+
+#video-overlay{
+  background: rgba(0,0,0,.85);
+  transition: all .75s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999!important;
+  overflow: hidden;
+  user-select: none;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5%;
+}
+
+.video-overlay-container{
+  padding: 5%;
+  vertical-align: middle;
+}
+
+
+// MENU
+
+.sidenav {
+  $self: &;
+  border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+  border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+    @include for-size("tablet-landscape-up"){
+      border:none;
+    }
+  
+    &__btn {
+      width: 100%;
+      border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+      text-align: left;
+      @include font-size(16px);
+      @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
+      @include margin(0, null, null, null);
+      transition: none;
+      
+      &.on{
+      @include padding(null, null, 0, null);
+      
+      #{$self}__icon--plus{
+       display: none;
+      }
+      #{$self}__icon--minus{
+       display: block;
+      }
+  }
+      
+      &:first-child{
+        border-top: none;
+      }
+  }
+
+  &__icon {
+      float: right;
+      height: px-to-rem(28px);
+      width: px-to-rem(28px);
+      color: $darkNavy;
+      border: solid px-to-rem(1.25px) $darkNavy;
+      border-radius: px-to-rem(8px);
+      @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+      
+      &--plus{
+      display: block;
+      color: $darkNavy;
+      }
+      
+      &--minus{
+        display: none;
+        color: $darkNavy;
+      }
+  }
+  
+  &__content {
+    @include for-size("tablet-landscape-up"){
+      display: block;
+    }
+      display: none;
+      
+      &.visible {
+      display: block;
+    }
+  }
+
+}
+
+
+
+
+
+
+

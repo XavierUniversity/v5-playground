@@ -19,7 +19,6 @@
     @include for-size("tablet-landscape-up"){
       height: px-to-rem(618px);
     }
-    
     &__title{ // .hero--academic__title
       @include font-size(60px);
       @include for-size("tablet-landscape-up"){

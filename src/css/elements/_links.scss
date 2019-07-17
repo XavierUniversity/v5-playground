@@ -6,7 +6,6 @@
       @include margin(- px-to-rem(2px), px-to-rem(6px), null, null);
     }
   }
-  
   a[class=""], a:not([class]){
     color: $medBlue;
     font-weight: 300;

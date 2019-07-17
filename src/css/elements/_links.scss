@@ -1,9 +1,5 @@
 #content{
   a{
-    &:hover, &:focus, &:active{
-      color: darken($medBlue, 15%);
-    }
-    
     .icon{
       height: px-to-rem(24px);
       width: px-to-rem(24px);
@@ -15,5 +11,8 @@
     color: $medBlue;
     font-weight: 300;
     text-decoration: underline;
+    &:hover, &:focus, &:active{
+      color: darken($medBlue, 15%);
+    }
   }
 }

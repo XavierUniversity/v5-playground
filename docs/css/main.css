@@ -744,9 +744,6 @@ textarea {
   .slate-form .form_select .form_responses:hover::after {
     color: #4d4c4c; }
 
-#content a:hover, #content a:focus, #content a:active {
-  color: #004867; }
-
 #content a .icon {
   height: 1.5rem;
   width: 1.5rem;
@@ -757,6 +754,8 @@ textarea {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
+  #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
+    color: #004867; }
 
 .wrapper {
   position: relative;

@@ -1788,35 +1788,29 @@ textarea {
     display: block; }
 
 .content-page {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
   margin-bottom: 6.25rem; }
   @media (min-width: 56.25em) {
     .content-page {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-              justify-content: space-between; } }
+      display: grid;
+      grid-template-columns: 18.75rem 1fr;
+      grid-template-rows: 4.75rem 2fr;
+      grid-row-gap: 0;
+      grid-column-gap: 4.21875rem; } }
+  @media (min-width: 75em) {
+    .content-page {
+      grid-column-gap: 8.4375rem; } }
+  .content-page__breadcrumbs {
+    grid-area: 1 / 2 / 2 / 3; }
   .content-page--nav {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
     margin-top: 1rem;
     padding-right: 1rem;
     padding-left: 1rem; }
     @media (min-width: 56.25em) {
       .content-page--nav {
-        margin-right: 4.21875rem;
         padding: 0;
-        -webkit-box-flex: 0;
-                flex: none;
-        flex-basis: 21.875rem;
         background: none; } }
-    @media (min-width: 75em) {
-      .content-page--nav {
-        flex-basis: 18.75rem;
-        margin-right: 8.4375rem; } }
     .content-page--nav__controls {
       display: block;
       text-transform: uppercase;
@@ -1827,9 +1821,6 @@ textarea {
         .content-page--nav__controls {
           display: none; } }
     .content-page--nav__item {
-      font-size: 14px;
-      font-size: 0.875rem;
-      line-height: 1.7142857143;
       border-top: 0.0625rem #d8d8d8 solid; }
       .content-page--nav__item:first-child {
         border-top: none; }
@@ -1846,24 +1837,23 @@ textarea {
       .content-page--nav__link.active {
         font-weight: 400; }
   .content-page--subnav__list {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
     font-style: italic;
     margin-bottom: 0.9375rem;
     margin-left: 0rem;
     padding-left: 0.625rem;
     border-left: 0.1875rem solid #497f90; }
-  .content-page--main h2 {
-    text-transform: uppercase;
-    color: #0B223F;
-    font-weight: 400; }
-  .content-page--main h3 {
-    color: #333;
-    font-weight: 300;
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2; }
+  .content-page--main {
+    grid-area: 2 / 2 / 3 / 3; }
+    .content-page--main h2 {
+      text-transform: uppercase;
+      color: #0B223F;
+      font-weight: 400; }
+    .content-page--main h3 {
+      color: #333;
+      font-weight: 300;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.2; }
 
 #video-overlay {
   background: rgba(0, 0, 0, 0.85);

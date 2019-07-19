@@ -1749,7 +1749,7 @@ textarea {
   .tab--hide-desktop {
     border: none !important; }
     .tab--hide-desktop:not(:first-of-type) {
-      margin-top: 1rem !important;
+      margin-top: 0.5rem !important;
       margin-bottom: 0; }
     @media (min-width: 85rem) {
       .tab--hide-desktop {

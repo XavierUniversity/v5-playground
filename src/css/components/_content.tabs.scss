@@ -55,7 +55,7 @@
   
   &--hide-desktop{
     &:not(:first-of-type){
-      @include margin(px-to-rem(16px) !important, null, 0, null);
+      @include margin(px-to-rem(8px) !important, null, 0, null);
     }
     border: none !important;
     @include for-size("desktop-up"){

@@ -40,7 +40,7 @@
     }
     
     &__item {
-      border-top: px-to-rem(1px) #d8d8d8 solid;
+      border-top: px-to-rem(1px) $darkGrey solid;
        
       &:first-child{
         border-top: none;
@@ -58,6 +58,11 @@
       &.active{
         font-weight: 400;
       }
+      
+      &:hover, &:focus{
+        color: $medBlueHover;
+        text-decoration: underline;
+      }
     }
   }
   
@@ -67,7 +72,7 @@
       font-style: italic;
       @include margin(null, null, px-to-rem(15px), px-to-rem(0px));
       @include padding(null, null, null, px-to-rem(10px));
-      border-left: px-to-rem(3px) solid #497f90;
+      border-left: px-to-rem(3px) solid $medBlue;
     }
   }
   
@@ -115,21 +120,29 @@
 
 .sidenav {
   $self: &;
-  border-top: solid px-to-rem(2px) rgb(207, 208, 209);
-  border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+  border-top: solid px-to-rem(2px) $darkGrey;
+  border-bottom: solid px-to-rem(2px) $darkGrey;
+  @include margin(px-to-rem(24px), null, px-to-rem(24px), null);
+  
   @include for-size("tablet-landscape-up"){
     border:none;
   }
   
   &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+    border-top: solid px-to-rem(2px) $darkGrey;
     text-align: left;
     @include font-size(16px);
-    @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
+    @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
     @include margin(0, null, null, null);
     transition: none;
-      
+    @include for-size("tablet-landscape-up"){
+      display: none;
+    }
     &.on{
       @include padding(null, null, 0, null);
       
@@ -147,13 +160,11 @@
   }
 
   &__icon {
-      float: right;
-      height: px-to-rem(28px);
-      width: px-to-rem(28px);
+      height: px-to-rem(36px);
+      width: px-to-rem(36px);
       color: $darkNavy;
       border: solid px-to-rem(1.25px) $darkNavy;
       border-radius: px-to-rem(8px);
-      @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
       
       &--plus{
       display: block;

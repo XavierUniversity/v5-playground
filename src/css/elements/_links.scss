@@ -1,9 +1,22 @@
 #content{
   a{
+    transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
     .icon{
-      height: px-to-rem(24px);
-      width: px-to-rem(24px);
-      @include margin(- px-to-rem(2px), px-to-rem(6px), null, null);
+      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+      color: $medBlue;
+      border-radius: 100%;
+      display: inline;
+      border: px-to-rem(3px) solid $darkGrey;
+      vertical-align: top;
+      transform: rotate(-90deg);
+      width: px-to-rem(30px);
+      height: px-to-rem(30px);
+      @include margin(- px-to-rem(1.5px), px-to-rem(8px), null, null);
+    }
+    &:hover .icon, &:focus .icon, &:active .icon{
+      color: white;
+      background: $medBlue;
+      border-color: $medBlue;
     }
   }
   a[class=""], a:not([class]){

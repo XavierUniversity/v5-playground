@@ -3,7 +3,7 @@
   &__btn{
     display: block;
     width: 100%;
-    border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+    border-top: solid px-to-rem(2px) $darkGrey;
     text-align: left;
     @include font-size(16px);
     @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
@@ -22,7 +22,7 @@
     }
     
     &:last-of-type{
-      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+      border-bottom: solid px-to-rem(2px) $darkGrey;
     }
     
     &:last-of-type{
@@ -62,7 +62,7 @@
     
     &:last-of-type{
       border-top: none;
-      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+      border-bottom: solid px-to-rem(2px) $darkGrey;
     }
     
     &.visible{

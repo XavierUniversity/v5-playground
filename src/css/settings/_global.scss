@@ -17,10 +17,10 @@ $base-fr-color-border:  #002317 !default;
 //   - tablet-landscape-up
 //   - desktop-up
 //   - big-desktop-up */
-$phone-upper-boundary:                              37.5em;     // ~ 600px
-$tablet-portrait-upper-boundary:                    56.25em;    // ~ 900px
-$tablet-landscape-upper-boundary:                   75em;       // ~ 1200px
-$desktop-upper-boundary:                            112.5em;    // ~ 1800px
+$phone-upper-boundary:                              37.5rem;     // ~ 600px
+$tablet-portrait-upper-boundary:                    56.25rem;    // ~ 900px
+$tablet-landscape-upper-boundary:                   79rem;       // ~ 1200px
+$desktop-upper-boundary:                            112.5rem;    // ~ 1800px
 
 // Colors
 $background:                                        white;
@@ -29,6 +29,7 @@ $darkNavyHover:                                     null;
 $medBlue:                                           #007DB3;
 $medBlueHover:                                      #1B4675;
 $grey:                                              #F0F2F3; // OLD GREY #9ea3a3
+$darkGrey:                                          #d8d8d8;
 $lightBlue:                                         #0099CC;
 $lightBlueHover:                                    #0077AA;
 $link-color:                                        $darkNavy;

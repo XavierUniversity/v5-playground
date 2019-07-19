@@ -18,10 +18,10 @@
   }
   
   &__link{
-    color: $medBlue;
+    color: black;
     text-decoration: none;
     &:hover, &:focus, &:active{
-      color: $medBlueHover;
+      color: $medBlue;
     }
   }
 }

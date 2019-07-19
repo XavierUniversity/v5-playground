@@ -202,7 +202,7 @@
           <div class="tabs">  
             <nav role='navigation' class="tab">
               <ul class="tab__list">
-                <li class="tab__item"><a href="#curriculum" class="tab__link active">Curriculum</a></li>
+                <li class="tab__item"><a href="#curriculum" class="tab__link visible">Curriculum</a></li>
                 <li class="tab__item"><a href="#related" class="tab__link">Related Programs</a></li>
                 <li class="tab__item"><a href="#courses" class="tab__link">Sample Courses</a></li>
                 <li class="tab__item"><a href="#outcomes" class="tab__link">Outcomes</a></li>
@@ -210,7 +210,11 @@
               </ul>
             </nav>
             
-            <div id="curriculum" class="tabs__content active">
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#curriculum">
+              Curriculum <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+
+            <div id="curriculum" class="tabs__content visible">
               <h2 class="sr-only">Curriculum</h2>
               <p>The sample course sequence below illustrates class offerings for the Bachelor of Arts major. Consult the official Xavier University course catalog for detailed registration and advising information.</p>
               <p>Xavier is known for providing an education that's both challenging and personal. Here are some courses that are part of the Art major at Xavier:</p>
@@ -302,6 +306,9 @@
               </div>
             </div>
             
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#related">
+              Related <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
             <div id="related" class="tabs__content">
               <p>View a list of all of Xavier's <a href="#">majors</a> and <a href="#">minors</a>.</p>
               <h3 class="tabs__title">Related Majors</h3>
@@ -329,6 +336,9 @@
               </ul>
             </div>
             
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#courses">
+              Courses <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
             <div id="courses" class="tabs__content">
               <p><strong>Drawing I (ARTS 102)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
               <p><strong>Drawing III (ARTS 105)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
@@ -336,9 +346,16 @@
               <p><strong>Senior Seminar (ARTS 441)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
             </div>
             
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#outcomes">
+              Outcomes <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
             <div id="outcomes" class="tabs__content">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
             </div>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#clubs">
+              Clubs <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
             <div id="clubs" class="tabs__content">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
             </div>
@@ -482,7 +499,7 @@
     	<div class="phone-only">phone-only &lt; 600</div>
     	<div class="portrait-up">tablet-portrait-up &gt;= 600</div>
     	<div class="landscape-up">tablet-landscape-up &gt;= 900</div>
-    	<div class="desktop-up">desktop-up &gt;= 1200</div>
+    	<div class="desktop-up">desktop-up &gt;= 1360</div>
     	<div class="big-desktop-up">big-desktop-up &gt;= 1800</div>
     </div>
 

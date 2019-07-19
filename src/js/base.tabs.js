@@ -6,34 +6,30 @@ var Tabs = {
   bindUIfunctions: function() {
     // Delegation
     $(document)
-      .on("click", ".tabs a[href^='#']:not('.active')", function(event) {
+      .on("click", ".tabs a[href^='#']:not('.visible')", function(event) {
         Tabs.changeTab(this.hash);
         event.preventDefault();
       })
-      .on("click", ".tabs a.active", function(event) {
-        Tabs.toggleMobileMenu(event, this);
+      .on("click", ".tabs a.visible", function(event) {
         event.preventDefault();
       });
   },
   changeTab: function(hash) {
     var anchor = $('[href="' + hash + '"]');
     var div = $(hash);
+    var btn = $('[data-toggle="' + hash + '"]');
     // activate correct anchor (visually)
-    anchor.addClass("active").parent().siblings().find("a").removeClass("active");
+    anchor.addClass("visible").parent().siblings().find("a").removeClass("visible");
+    anchor.addClass('on').parent().siblings().find('a').removeClass('on');
+    btn.addClass('on').parent().siblings().find('button').removeClass('on');
     // activate correct div (visually)
-    div.addClass("active").siblings().removeClass("active");
+    div.addClass("visible").siblings().removeClass("visible");
     // update URL, no history addition
     window.history.replaceState("", "", hash);
-    // Close menu, in case mobile
-    anchor.closest("ul").removeClass("open");
-
   },
   // If the page has a hash on load, go to that tab
   pageLoadCorrectTab: function() {
     this.changeTab(document.location.hash);
-  },
-  toggleMobileMenu: function(event, el) {
-    $(el).closest("ul").toggleClass("open");
   }
 }
 Tabs.init();

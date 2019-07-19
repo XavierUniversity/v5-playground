@@ -1747,9 +1747,10 @@ textarea {
     .tab__link:hover, .tab__link:focus {
       color: #1B4675; }
   .tab--hide-desktop {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
     border: none !important; }
+    .tab--hide-desktop:not(:first-of-type) {
+      margin-top: 1rem !important;
+      margin-bottom: 0; }
     @media (min-width: 85rem) {
       .tab--hide-desktop {
         display: none !important; } }
@@ -1774,7 +1775,7 @@ textarea {
   padding-bottom: 2rem;
   padding-left: 1rem;
   background: #F0F2F3;
-  margin-top: 0.25rem; }
+  margin-top: 0; }
   @media (min-width: 85rem) {
     .tabs__content {
       margin-top: 0;

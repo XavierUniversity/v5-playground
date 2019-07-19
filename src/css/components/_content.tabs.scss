@@ -32,7 +32,7 @@
     text-transform: uppercase;
     font-weight: 300;
     text-align: left;
-    border: none !important;
+    
     @include padding(px-to-rem(24px), px-to-rem(16px), px-to-rem(24px), px-to-rem(16px));
     
     @include font-size(16px, 1);
@@ -45,7 +45,6 @@
       @include padding(px-to-rem(6px), 0, 0, 0);
       border-bottom: solid px-to-rem(6px) white;
       &.visible, &:active {
-        position: relative;
         border-bottom-color: $grey;
       }
     }
@@ -56,8 +55,10 @@
   
   &--hide-desktop{
     @include margin(px-to-rem(8px), null, px-to-rem(8px), null);
+    border: none !important;
     @include for-size("desktop-up"){
       display: none !important;  
+      
     }
   }
 }

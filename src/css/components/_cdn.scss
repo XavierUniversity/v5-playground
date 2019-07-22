@@ -18,6 +18,7 @@
   }
   
   &__link{
+    display: block;
     color: black;
     text-decoration: none;
     &:hover, &:focus, &:active{

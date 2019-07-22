@@ -2002,6 +2002,7 @@ textarea {
     height: 0.125rem;
     border: none; }
   .panel__link {
+    display: block;
     color: black;
     text-decoration: none; }
     .panel__link:hover, .panel__link:focus, .panel__link:active {
@@ -2141,6 +2142,7 @@ textarea {
     .cdn__content {
       padding-left: 3.75rem; } }
   .cdn__link {
+    display: block;
     color: black;
     text-decoration: none; }
     .cdn__link:hover, .cdn__link:focus, .cdn__link:active {

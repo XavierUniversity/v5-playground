@@ -25,6 +25,20 @@
     border-color: darken($darkNavy, 10%);
   }
 
+  &--hero{
+    background-color:transparent;
+    border: 1px solid white;
+    border-radius: px-to-rem(25px);
+    text-align:center;
+    @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  &--feature {
+    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+  }
+
 }
 
 .action{

@@ -77,3 +77,19 @@
   }
 }
 
+.hero-nav{
+  background-color: rgba(white, 0.85);
+  position: absolute; 
+  bottom: 0;
+  &__list{
+    @include margin(0, 0, 0, 0);
+    @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
+  }
+  &__link{
+    display: block;
+    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

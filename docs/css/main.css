@@ -2272,10 +2272,7 @@ textarea {
     color: white;
     display: block; }
   .module__icon {
-    color: black !important;
-    background: white !important;
     border: none !important;
-    background-blend-mode: overlay;
     margin-right: 0.5rem; }
 
 .sr-only {

@@ -64,10 +64,7 @@
     
   }
   &__icon{
-    color: black !important;
-    background: white !important;
     border: none !important; 
-    background-blend-mode: overlay;
     @include margin(null, px-to-rem(8px), null, null);
   }
 }

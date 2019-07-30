@@ -20,7 +20,7 @@ function getDistance() {
 }
 
 window.onscroll = function(e) {
-  if ( document.querySelector("body").classList.contains("homepage") ){
+  if ( document.querySelector(".header").classList.contains("homepage") ){
     var distance = getDistance() - window.pageYOffset;
     var offset = window.pageYOffset;
     if ( (distance < 0) && !stuck) {

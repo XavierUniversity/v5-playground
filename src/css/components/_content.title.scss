@@ -2,10 +2,6 @@
   font-weight: 400;
   text-transform: uppercase;
   @include margin(px-to-rem(32px), 0, 0, 0);
-  @include font-size(26px, 1.25);
-  @include for-size("tablet-portrait-up"){
-    @include font-size(32px, 1.25);  
-  }
   color: $darkNavy;
   
 }

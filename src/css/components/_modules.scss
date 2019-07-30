@@ -29,20 +29,20 @@
   }
   
   &:nth-child(1){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("/images/modules/1@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("/images/modules/1@1x.jpg") 1x, url("/images/modules/1@2x.jpg") 2x );
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/1@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x );
   }
   &:nth-child(2){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("/images/modules/2@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("/images/modules/2@1x.jpg") 1x, url("/images/modules/2@2x.jpg") 2x );
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/2@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x );
   }
   &:nth-child(3){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("/images/modules/1@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("/images/modules/1@1x.jpg") 1x, url("/images/modules/1@2x.jpg") 2x );
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/1@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x );
   }
   &:nth-child(4){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("/images/modules/2@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("/images/modules/2@1x.jpg") 1x, url("/images/modules/2@2x.jpg") 2x );
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/2@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x );
   }
   
   &--rounded{

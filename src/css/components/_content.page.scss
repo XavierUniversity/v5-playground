@@ -48,7 +48,7 @@
     }
     
     &__link{
-      color: $base-text-color;
+      color: #000;
       text-decoration: none;
       min-height: px-to-rem(56px);
       display: flex;
@@ -92,29 +92,6 @@
     }
   }
 }
-
-// VIDEO
-
-#video-overlay{
-  background: rgba(0,0,0,.85);
-  transition: all .75s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999!important;
-  overflow: hidden;
-  user-select: none;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 5%;
-}
-
-.video-overlay-container{
-  padding: 5%;
-  vertical-align: middle;
-}
-
 
 // MENU
 
@@ -185,6 +162,12 @@
       
       &.visible {
       display: block;
+    }
+    
+    ul>li>ul {
+      ul {
+        border-left:none;
+      }
     }
   }
 

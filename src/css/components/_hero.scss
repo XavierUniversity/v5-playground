@@ -62,8 +62,20 @@
     }
     
     &__btn {
-      width: px-to-rem(340px);
+      min-width: px-to-rem(300px);
+      max-width: px-to-rem(450px);
       margin: 0 auto !important;
+      border: solid 0.0625rem $background !important;
+      background: rgba(0, 0, 0, 0.4);
+      
+      &:active, &:hover, &:focus{
+        background: $background;
+        color: $darkNavy;
+      }
+    }
+    
+    &__title {
+      margin-top: 0px;
     }
   }
   

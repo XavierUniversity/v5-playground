@@ -1666,8 +1666,16 @@ textarea {
       -webkit-box-pack: center;
               justify-content: center; }
     .hero--video__btn {
-      width: 21.25rem;
-      margin: 0 auto !important; }
+      min-width: 18.75rem;
+      max-width: 28.125rem;
+      margin: 0 auto !important;
+      border: solid 0.0625rem white !important;
+      background: rgba(0, 0, 0, 0.4); }
+      .hero--video__btn:active, .hero--video__btn:hover, .hero--video__btn:focus {
+        background: white;
+        color: #0B223F; }
+    .hero--video__title {
+      margin-top: 0px; }
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;
@@ -1698,6 +1706,27 @@ textarea {
     color: black;
     text-decoration: none;
     text-transform: uppercase; }
+
+#video-overlay {
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-transition: all .75s ease;
+  transition: all .75s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+  width: 100vw;
+  height: 100vh; }
+
+.video-overlay-container {
+  padding: 5%;
+  vertical-align: middle; }
 
 .title {
   font-weight: 400;
@@ -1839,7 +1868,7 @@ textarea {
       .content-page--nav__item:first-child {
         border-top: none; }
     .content-page--nav__link {
-      color: #333;
+      color: #000;
       text-decoration: none;
       min-height: 3.5rem;
       display: -webkit-box;
@@ -1871,28 +1900,6 @@ textarea {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.2; }
-
-#video-overlay {
-  background: rgba(0, 0, 0, 0.85);
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999 !important;
-  overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 5%; }
-
-.video-overlay-container {
-  padding: 5%;
-  vertical-align: middle; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;
@@ -1953,6 +1960,8 @@ textarea {
         display: block; } }
     .sidenav__content.visible {
       display: block; }
+    .sidenav__content ul > li > ul ul {
+      border-left: none; }
 
 .panel {
   background: #F0F2F3;

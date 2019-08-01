@@ -67,6 +67,7 @@
       margin: 0 auto !important;
       border: solid 0.0625rem $background !important;
       background: rgba(0, 0, 0, 0.4);
+      border-radius: px-to-rem(25px);
       
       &:active, &:hover, &:focus{
         background: $background;

@@ -35,8 +35,7 @@
 }
 
 .featured {
-    width:70%;
-    margin: 0 auto;
+    margin: 0 15em;
     margin-top:-70px;
     background:#fff;
     align-items: center;
@@ -56,28 +55,42 @@
     }
 
     .featured-content { 
+        display: grid;
         
-        display: grid; 
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
         grid-column-gap: 20px;
         grid-row-gap: 20px; 
             >div {
                 height:275px;
-                background-color:#0d2240; 
-                border-radius:16px;       
+                border-radius:16px;    
+                background-position: center center;
+                align-items: center;
+                justify-content: center;
+                position: relative;   
             }
-        .headline { grid-area: 1 / 1 / 2 / 3; } 
-        .instagram { grid-area: 1 / 3 / 2 / 4; } 
-        .headline2 { grid-area: 1 / 4 / 2 / 5; } 
-        .headline3 { grid-area: 2 / 1 / 3 / 2; } 
-        .success-rate { grid-area: 2 / 2 / 3 / 3; } 
-        .headline4 { grid-area: 2 / 3 / 3 / 5; } 
+            .headline { grid-area: 1 / 1 / 2 / 3; } 
+            .headline-third{ grid-area: 2 / 1 / 3 / 2; } 
+            .success-rate { grid-area: 2 / 2 / 3 / 3; } 
+            .instagram { grid-area: 1 / 3 / 2 / 4; } 
+            .headline-fourth { grid-area: 1 / 4 / 2 / 5; } 
+            .headline-last { grid-area: 2 / 3 / 3 / 5; } 
+        }
+        &__news-text {
+            color:#fff;
+            text-transform:uppercase;
+            position: absolute;
+            @include padding(px-to-rem(0px), px-to-rem(0px), px-to-rem(0px), px-to-rem(16px));
+           h2 {
+                margin-top:3em;
+                width:75%;
+                font-size: 2.5rem;
+                
+           } 
         }
 }
 
 .featured-link {
-    background: $darkNavy;
     margin-top: 80px;
     padding:20px;
     h1 {
@@ -90,17 +103,22 @@
 }
 
 .commitment {
-    display: flex;
+    background-position: top center;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-bottom:8rem;
+   
     &__line {
-        width:30%;
         margin: 0 auto;
         border-bottom: solid px-to-rem(2px) #20c3de;
+        width:40%;
+    
     }
-    h4 {
+    &__text {
+        background-color: #fff;
+       
+    }
+    h3 {
         color:#0d2240;
         text-transform: uppercase;
         text-align:center;
@@ -110,5 +128,9 @@
 
     p {
         text-align:center;
+        font-size:28px;
+        padding-left:2em;
+        @include padding(px-to-rem(0px), px-to-rem(16px), px-to-rem(0px), px-to-rem(16px));
+
     }
 }

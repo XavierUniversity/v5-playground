@@ -778,8 +778,8 @@ textarea {
       .wrapper--academic {
         flex-wrap: nowrap; } }
   .wrapper--feature {
-    padding-right: 10rem;
-    padding-left: 10rem; }
+    padding-right: 11rem;
+    padding-left: 11rem; }
 
 .o-btn {
   border: none;
@@ -1315,8 +1315,7 @@ textarea {
       color: #0d2240; }
 
 .featured {
-  width: 70%;
-  margin: 0 auto;
+  margin: 0 15em;
   margin-top: -70px;
   background: #fff;
   -webkit-box-align: center;
@@ -1339,23 +1338,39 @@ textarea {
     grid-row-gap: 20px; }
     .featured .featured-content > div {
       height: 275px;
-      background-color: #0d2240;
-      border-radius: 16px; }
+      border-radius: 16px;
+      background-position: center center;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+              justify-content: center;
+      position: relative; }
     .featured .featured-content .headline {
       grid-area: 1 / 1 / 2 / 3; }
-    .featured .featured-content .instagram {
-      grid-area: 1 / 3 / 2 / 4; }
-    .featured .featured-content .headline2 {
-      grid-area: 1 / 4 / 2 / 5; }
-    .featured .featured-content .headline3 {
+    .featured .featured-content .headline-third {
       grid-area: 2 / 1 / 3 / 2; }
     .featured .featured-content .success-rate {
       grid-area: 2 / 2 / 3 / 3; }
-    .featured .featured-content .headline4 {
+    .featured .featured-content .instagram {
+      grid-area: 1 / 3 / 2 / 4; }
+    .featured .featured-content .headline-fourth {
+      grid-area: 1 / 4 / 2 / 5; }
+    .featured .featured-content .headline-last {
       grid-area: 2 / 3 / 3 / 5; }
+  .featured__news-text {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem; }
+    .featured__news-text h2 {
+      margin-top: 3em;
+      width: 75%;
+      font-size: 2.5rem; }
 
 .featured-link {
-  background: #0B223F;
   margin-top: 80px;
   padding: 20px; }
   .featured-link h1 {
@@ -1366,26 +1381,32 @@ textarea {
     padding-bottom: 3rem; }
 
 .commitment {
-  display: -webkit-box;
-  display: flex;
+  background-position: top center;
   -webkit-box-align: center;
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  position: relative;
-  padding-bottom: 8rem; }
+  position: relative; }
   .commitment__line {
-    width: 30%;
     margin: 0 auto;
-    border-bottom: solid 0.125rem #20c3de; }
-  .commitment h4 {
+    border-bottom: solid 0.125rem #20c3de;
+    width: 40%; }
+  .commitment__text {
+    background-color: #fff; }
+  .commitment h3 {
     color: #0d2240;
     text-transform: uppercase;
     text-align: center;
     padding-top: 2.5rem;
     padding-bottom: 1.5rem; }
   .commitment p {
-    text-align: center; }
+    text-align: center;
+    font-size: 28px;
+    padding-left: 2em;
+    padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem; }
 
 .nav-list {
   font-weight: 200;
@@ -1558,9 +1579,9 @@ textarea {
     display: inline-block;
     margin: 0 auto; }
   .c-btn--feature {
-    padding-top: 1rem;
+    padding-top: 1.5625rem;
     padding-right: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5625rem;
     padding-left: 1rem; }
 
 .action button {

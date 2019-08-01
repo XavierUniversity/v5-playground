@@ -36,7 +36,7 @@
   }
 
   &--feature {
-    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+    @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
   }
 
 }

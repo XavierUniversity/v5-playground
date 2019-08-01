@@ -1,0 +1,174 @@
+.content-page {
+
+  @include margin(null, null, px-to-rem(100px), null);
+  @include for-size("tablet-landscape-up"){
+    display: grid; 
+    grid-template-columns: px-to-rem(300px) 1fr; 
+    grid-template-rows: px-to-rem(76px) 2fr; 
+    grid-row-gap: 0;
+    grid-column-gap: px-to-rem(135px / 2);     
+  }
+  @include for-size("desktop-up"){
+    grid-column-gap: px-to-rem(135px);     
+  }
+  
+  &__breadcrumbs{
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  &--nav {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
+    @include margin(px-to-rem(16px), null, null, null);
+    @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
+    
+    @include for-size("tablet-landscape-up"){
+      padding: 0;
+      background: none;
+    }
+    
+    &__controls{
+      // Button styles here
+      display: block;
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-size: 18px !important;
+      font-weight: 300 !important;
+      
+      @include for-size("tablet-landscape-up"){
+        display: none;
+      }
+    }
+    
+    &__item {
+      border-top: px-to-rem(1px) $darkGrey solid;
+       
+      &:first-child{
+        border-top: none;
+      }
+    }
+    
+    &__link{
+      color: #000;
+      text-decoration: none;
+      min-height: px-to-rem(56px);
+      display: flex;
+      align-items:center;
+      @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
+      
+      &.active{
+        font-weight: 400;
+      }
+      
+      &:hover, &:focus{
+        color: $medBlueHover;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &--subnav{
+    
+    &__list{
+      font-style: italic;
+      @include margin(null, null, px-to-rem(15px), px-to-rem(0px));
+      @include padding(null, null, null, px-to-rem(10px));
+      border-left: px-to-rem(3px) solid $medBlue;
+    }
+  }
+  
+  &--main {
+    grid-area: 2 / 2 / 3 / 3;
+    // Eventually we'll move these. Waiting on JQuelin to define these.
+    h2{
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
+    }
+    
+    h3{
+      color: $base-text-color;
+      font-weight: 300;
+      @include font-size(20px);
+    }
+  }
+}
+
+// MENU
+
+.sidenav {
+  $self: &;
+  border-top: solid px-to-rem(2px) $darkGrey;
+  border-bottom: solid px-to-rem(2px) $darkGrey;
+  @include margin(px-to-rem(24px), null, px-to-rem(24px), null);
+  
+  @include for-size("tablet-landscape-up"){
+    border:none;
+  }
+  
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: solid px-to-rem(2px) $darkGrey;
+    text-align: left;
+    @include font-size(16px);
+    @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
+    @include margin(0, null, null, null);
+    transition: none;
+    @include for-size("tablet-landscape-up"){
+      display: none;
+    }
+    &.on{
+      @include padding(null, null, 0, null);
+      
+      #{$self}__icon--plus{
+       display: none;
+      }
+      #{$self}__icon--minus{
+       display: block;
+      }
+    }
+      
+    &:first-child{
+      border-top: none;
+    }
+  }
+
+  &__icon {
+      height: px-to-rem(36px);
+      width: px-to-rem(36px);
+      color: $darkNavy;
+      border: solid px-to-rem(1.25px) $darkNavy;
+      border-radius: px-to-rem(8px);
+      
+      &--plus{
+      display: block;
+      color: $darkNavy;
+      }
+      
+      &--minus{
+        display: none;
+        color: $darkNavy;
+      }
+  }
+  
+  &__content {
+    @include for-size("tablet-landscape-up"){
+      display: block;
+    }
+      display: none;
+      
+      &.visible {
+      display: block;
+    }
+    
+    ul>li>ul {
+      ul {
+        border-left:none;
+      }
+    }
+  }
+
+}

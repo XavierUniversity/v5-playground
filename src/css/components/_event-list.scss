@@ -1,0 +1,39 @@
+.event-list{
+  display: flex;
+  flex-direction: row;
+  
+  &__date{
+    flex-basis: px-to-rem(58px);
+    min-width: px-to-rem(58px);
+    height: px-to-rem(58px);
+    border: solid px-to-rem(2px) $medBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include margin(null, px-to-rem(24px), null, null);
+    color: $darkNavy;
+  }
+  &__content{
+    @include padding(0, null, null, null)
+
+    @include for-size("desktop-up"){
+      @include padding(px-to-rem(10px), null, null, null);
+    }
+    
+    p{
+      @include margin(0, null, null, null);
+    }
+  }
+  &__title{
+    font-weight: 300;
+    @include font-size(16px, 1);
+    @include margin(0, null, 0, null);
+    @include padding(0, null, 0, null);
+    text-transform: uppercase;
+  }
+  
+}

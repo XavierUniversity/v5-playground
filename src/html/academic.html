@@ -9,21 +9,9 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent 1px,
-          rgba(0, 0, 0, 0.2) 2px
-        ), url("images/hero/ProgamPage_Hero_Art_1x.png");
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent 1px,
-          rgba(0, 0, 0, 0.2) 2px
-        ), -webkit-image-set( url("images/hero/ProgamPage_Hero_Art_1x.png") 1x, url("images/hero/ProgamPage_Hero_Art_2x.png") 2x );
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent 1px,
-          rgba(0, 0, 0, 0.2) 2px
-        ), image-set( "images/hero/ProgamPage_Hero_Art_1x.png" 1x, "images/hero/ProgamPage_Hero_Art_2x.png" 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
       }
     </style>
   </head>
@@ -32,234 +20,45 @@
     <!-- Add your site or application content here -->
     <main id="content">
       <section class="hero hero--academic">
-        <h1 class="hero__title hero__title--large">Art</h1>
+        <h1 class="hero__title hero--academic__title">Art</h1>
       </section>
 
       <div class="wrapper academic-wrapper">
-        <div class="academic-cta">
-          <ul class="nav-list flex list--bare hidden-mobile academic-cta__list">
-            <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Apply</a></li>
-            <li class="nav-list__nav-item academic-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Request Info</a></li>
-          </ul>
-        </div>
+        include "includes/academic.cta.html"
+        
         <div class="content">
           include "includes/breadcrumbs.html"
           
-          <h2 class="title">Degrees Awarded: Bachelor of Arts, Bachelor of Fine Arts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-          <h3 class="sub">Concentrations Offered:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              
-          <h3 class="sub">Scholarships Offered:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          include "includes/academic.description.html"
           
-          <div class="tabs">  
-            <nav role='navigation' class="tab">
-              <ul class="tab__list">
-                <li class="tab__item"><a href="#curriculum" class="tab__link active">Curriculum</a></li>
-                <li class="tab__item"><a href="#related" class="tab__link">Related Programs</a></li>
-                <li class="tab__item"><a href="#courses" class="tab__link">Sample Courses</a></li>
-                <li class="tab__item"><a href="#outcomes" class="tab__link">Outcomes</a></li>
-              </ul>
-            </nav>
-            
-            <div id="curriculum" class="tabs__content active">
-              <h2 class="sr-only">Curriculum</h2>
-              <p>The sample course sequence below illustrates class offerings for the Bachelor of Arts major. Consult the official Xavier University course catalog for detailed registration and advising information.</p>
-              <p>Xavier is known for providing an education that's both challenging and personal. Here are some courses that are part of the Art major at Xavier:</p>
-              
-              <div class="accordion">
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#fy">
-                  First Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="fy" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#soph">
-                  Sophomore Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="soph" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#junior">
-                  Junior Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="junior" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#senior">
-                  Senior Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="senior" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div id="related" class="tabs__content">
-              <p>View a list of all of Xavier's <a href="#">majors</a> and <a href="#">minors</a>.</p>
-              <h3 class="tabs__title">Related Majors</h3>
-              <ul class="list--bare">
-                <li>Graphic Design</li>
-                <li>Digital Innovation, Film, and Television Production</li>
-                <li>Music</li>
-                <li>Theatere</li>
-                <li>Communication Studies</li>
-              </ul>
-              <h3 class="tabs__title">Related Minors</h3>
-              <ul class="list--bare">
-                <li>Psychology</li>
-                <li>Business</li>
-                <li>Communication Studies</li>
-                <li>Art History</li>
-              </ul>
-              <h3 class="tabs__title">Related Graduate Programs</h3>
-              <ul class="list--bare">
-                <li>Master of Business Administration</li>
-                <li>Health Economics and Clinical Outcomes Research</li>
-                <li>Master of Health Services Administration</li>
-                <li>Private Interest and Public Good</li>
-                <li>Urban Sustainability and Resilience</li>
-              </ul>
-            </div>
-            
-            <div id="courses" class="tabs__content">
-              <p><strong>Drawing I (ARTS 102)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>Drawing III (ARTS 105)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>History of Art I (ARTS 270)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>Senior Seminar (ARTS 441)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-            </div>
-            
-            <div id="outcomes" class="tabs__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-            </div>
-          </div><!-- /tabs -->
+          include "includes/academic.tabs.html"
         </div><!-- /content -->
         <div class="sidebar">
           include "includes/sidebar.form.html"
           
-          <div class="panel">
-            <h2 class="panel__title text--centered">Get More Information</h2>
-            <ul class="nav-list list--bare">
-              <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Contact Us</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Program Details</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Honors Program</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="#" class="nav-list__link c-btn">Financial Aid</a>
-              </li>
-            </ul>
-          </div><!-- /panel -->
+          include "includes/academic.quickLinks.html"
         </div><!-- /sidebar -->
       </div><!-- /academic-wrapper -->
+      
       <div class="spacer spacer--72"></div>
+      
       <section class="wrapper">
         <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
         <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
       </section>
       <div class="spacer spacer--72"></div>
+      
       <section class="wrapper">
         <div class="flex">
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Internship Opportunities</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=2' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Study Abroad</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=3' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a href="#">&gt; Learn more</a></p>
-          </div>
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
         </div>
       </section>
       <div class="spacer spacer--64"></div>
-      <div class="wrapper flex cdn">
-        <img class="cdn__image" src="//lorempixel.com/730/532/people/4" alt="" />
-        
-        <div class="cdn__content">
-          <h2 class="title">Get to know Xavier's Art Professors</h2>
-          <p>We asked 10 professors in our Art Department about their work, their favorite classes to teach and their advice for incoming art students.</p>
-          <p><a href="#">&gt; Lorem Ipsum</a></p>
-        </div>
-      </div>
+      include "includes/cdn.html"
       <div class="spacer spacer--64"></div>
     </main>
     <!-- End site or application content -->

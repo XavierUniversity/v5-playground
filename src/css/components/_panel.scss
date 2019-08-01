@@ -55,8 +55,16 @@
   
   &__hr{
     @include margin(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
-    background: rgb(207, 208, 209);
+    background: $darkGrey;
     height: px-to-rem(2px);
     border: none;
+  }
+  &__link{
+    display: block;
+    color: black;
+    text-decoration: none;
+    &:hover, &:focus, &:active{
+      color: $medBlue;
+    }
   }
 }

@@ -3,7 +3,7 @@
   &__btn{
     display: block;
     width: 100%;
-    border-top: solid px-to-rem(2px) rgb(207, 208, 209);
+    border-top: solid px-to-rem(2px) $darkGrey;
     text-align: left;
     @include font-size(16px);
     @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
@@ -11,7 +11,6 @@
     transition: none;
     
     &.on{
-      @include padding(null, null, 0, null);
       
       #{$self}__icon--plus{
         display: none;
@@ -22,7 +21,7 @@
     }
     
     &:last-of-type{
-      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+      border-bottom: solid px-to-rem(2px) $darkGrey;
     }
     
     &:last-of-type{
@@ -38,7 +37,11 @@
     color: $darkNavy;
     border: solid px-to-rem(1.25px) $darkNavy;
     border-radius: px-to-rem(8px);
-    @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+    @include margin(- px-to-rem(2px), px-to-rem(12px), null, null);
+    @include for-size("tablet-landscape-up"){
+      @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
+    }
+    
     &--plus{
       display: block;
     }
@@ -58,7 +61,7 @@
     
     &:last-of-type{
       border-top: none;
-      border-bottom: solid px-to-rem(2px) rgb(207, 208, 209);
+      border-bottom: solid px-to-rem(2px) $darkGrey;
     }
     
     &.visible{
@@ -68,5 +71,14 @@
   
   &__list{
     @include margin(0, null, px-to-rem(32px), px-to-rem(16px));
+  }
+  
+  &--mobile{
+    #{self}__btn{
+      display: block;
+      @include for-size("tablet-landscape-up"){
+        display: none;
+      }
+    }
   }
 }

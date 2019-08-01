@@ -23,14 +23,18 @@
 
 // Hero!
 @import 'hero';
+@import 'video';
 
 // content
 @import 'content.title';
 @import 'content.tabs';
+@import 'content.page';
 @import 'panel';
 @import 'accordion';
-
 // academic specific
 @import 'academic.wrapper';
 @import 'academic.cta';
 @import 'cdn';
+
+@import 'event-list';
+@import 'modules';

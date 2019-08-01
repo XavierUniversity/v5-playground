@@ -1,5 +1,10 @@
 .tab {
   $self : &;
+  display: none;
+  @include for-size("desktop-up"){
+    display: block;
+  }
+  
   &__list {
     list-style: none;
     padding: 0;
@@ -10,82 +15,52 @@
     vertical-align: bottom;
     @include padding(null, 6px, null, null);
     
-    &:first-child, &:last-child{
+    &:first-child, &:nth-child(4), &:last-child{
       #{$self}__link{
         @include padding(px-to-rem(16px), null, null, null);
       }
     }
   }
   &__link {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    height: auto;
     text-decoration: none;
     background: $grey;
     color: $darkNavy;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
-    width: px-to-rem(135px);
-    height: px-to-rem(50px);
-    word-break: break-word;
-    text-align: center;
+    text-align: left;
+    
+    @include padding(px-to-rem(24px), px-to-rem(16px), px-to-rem(24px), px-to-rem(16px));
+    
     @include font-size(16px, 1);
-    @include padding(px-to-rem(6px), null, null, null);
-    border-bottom: solid px-to-rem(6px) white;
-    &.active, &:active {
-      position: relative;
-      border-bottom-color: $grey;
+    @include for-size("desktop-up"){
+      display: inline-block;  
+      width: px-to-rem(135px);
+      height: px-to-rem(50px);
+      word-break: break-word;
+      text-align: center;
+      @include padding(px-to-rem(6px), 0, 0, 0);
+      border-bottom: solid px-to-rem(6px) white;
+      &.visible, &:active {
+        border-bottom-color: $grey;
+      }
     }
     &:hover, &:focus{ 
       color: $medBlueHover;
     }
   }
-  @media (max-width: 1199px) {
-    &__list {
-      border-bottom: 0;
-      overflow: hidden;
-      position: relative;
-      &::after {
-        height: px-to-rem(36px);
-        width: px-to-rem(36px);
-        border-radius: px-to-rem(8px);
-        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 33 33' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Group' transform='translate(9.000000, 9.000000)'%3E%3Cpolygon id='Fill-4' points='0 8 15 8 15 7 0 7'%3E%3C/polygon%3E%3Cpolygon id='Fill-6' points='7 15 8 15 8 0 7 0'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
-        position: absolute;
-        top: px-to-rem(19px);
-        right: px-to-rem(19px);
-        z-index: 1;
-        pointer-events: none;
-        color: $darkNavy;
-        border: solid px-to-rem(1.25px) $darkNavy;
-      }
-      &.open {
-        #{$self}__link {
-          position: relative;
-          display: block;
-        }
-        &::after {
-          content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='33px' height='33px' viewBox='0 0 33 33' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpolygon transform='translate(9.000000, 16.000000)' id='foreground' points='0 1 15 1 15 0 0 0'%3E%3C/polygon%3E%3C/svg%3E");
-        }
-      }
+  
+  &--hide-desktop{
+    &:not(:first-of-type){
+      @include margin(px-to-rem(8px) !important, null, 0, null);
     }
-    &__item {
-      display: block;
+    border: none !important;
+    @include for-size("desktop-up"){
+      display: none !important;  
       
-      @include padding(null, 0, null, null);
-    }
-    &__link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: auto;
-      @include padding(px-to-rem(24px) !important, px-to-rem(16px), px-to-rem(24px), px-to-rem(16px));
-      @include margin(px-to-rem(4px), null, null, null);
-      text-align: left;
-      border: 0;
-      &.active {
-        z-index: 1;
-      }
     }
   }
 }
@@ -103,13 +78,14 @@
   }
   &__content {
     display: none;
-    @include padding(px-to-rem(16px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
+    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));
     background: $grey;
-    @include margin(px-to-rem(4px), null, null, null);
+    @include margin(0, null, null, null);
     @include for-size("desktop-up"){
       @include margin(0, null, null, null);
+      @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
     }
-    &.active{
+    &.visible{
       display: block;
     }
   }

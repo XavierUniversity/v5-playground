@@ -1,0 +1,70 @@
+.modules{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @include margin(px-to-rem(64px), null, null, null);
+  
+  @include for-size("tablet-landscape-up"){
+    flex-direction: row;  
+  }
+}
+
+.module{
+  display: flex;
+  flex-direction: row;
+  height: px-to-rem(286px);
+  background-color: $darkNavy;
+  width: 100%;
+  background-size: cover;
+  background-position: left top;
+  &:not(:last-of-type){
+    @include margin(null, null, px-to-rem(36px), null);  
+  }
+  
+  @include for-size("tablet-landscape-up"){
+    background-position: center center;
+    &:not(:last-of-type){
+      @include margin(null, px-to-rem(36px), 0, null);  
+    }
+  }
+  
+  &:nth-child(1){
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/1@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x );
+  }
+  &:nth-child(2){
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/2@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x );
+  }
+  &:nth-child(3){
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/1@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x );
+  }
+  &:nth-child(4){
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/2@1x.jpg");
+    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x );
+  }
+  
+  &--rounded{
+    border-radius: px-to-rem(16px);
+  }
+  &__content{
+    align-self: flex-end;
+    @include padding(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+  }  
+  &__title{
+    color: white;
+    text-transform: uppercase;
+    @include font-size(28px, 1);
+    @include margin(null, null, px-to-rem(12px), null);
+  }
+  &__link{
+    color: white;
+    display: block;
+    
+  }
+  &__icon{
+    border: none !important; 
+    @include margin(null, px-to-rem(8px), null, null);
+  }
+}

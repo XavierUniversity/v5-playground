@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/plyr.css">
+  </head>
+  <body>
+    include "includes/header.html"
+    <!-- Add your site or application content here -->
+    <main id="content">
+      
+      <section class="hero hero--video">
+       
+        <video autoplay="" loop="" muted="" style="width:100%;"><source src="images/preview.mp4" type="video/mp4"></video>
+        
+       <div class="hero--video__wrapper">
+            <div id="vid-btn" class="hero--video__btn c-btn" data-video="https://www.youtube.com/embed/KsWYS0-rTmg?autoplay=1&cc_load_policy=1&modestbranding=1&rel=0&showinfo=0">CTA GOES HERE</div>
+        </div> 
+        
+      </section>
+      
+      <div class="wrapper academic-wrapper">
+        include "includes/academic.cta.html"
+        <div class="content">
+          include "includes/breadcrumbs.html"
+          
+          include "includes/academic.description.html"
+          
+          include "includes/academic.tabs.html"
+        </div><!-- /content -->
+        <div class="sidebar">
+          include "includes/sidebar.form.html"
+          
+          include "includes/academic.quickLinks.html"
+        </div><!-- /sidebar -->
+      </div><!-- /academic-wrapper -->
+      
+      <div class="spacer spacer--72"></div>
+      
+      <section class="wrapper">
+        <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
+        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
+      </section>
+      <div class="spacer spacer--72"></div>
+      
+      <section class="wrapper">
+        <div class="flex">
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+        </div>
+      </section>
+      <div class="spacer spacer--64"></div>
+      include "includes/cdn.html"
+      <div class="spacer spacer--64"></div>
+      <div id="video-overlay">
+        <div class="video-overlay-container">
+          <button id="close-video-overlay" class="o-btn drawer__btn" aria-label="Close Video">
+            <svg class="icon drawer__icon"><use xlink:href="#xu-close"></use></svg>
+          </button>
+              <div class="plyr__video-embed" id="player" style="position:relative;">
+                <iframe
+                    src=""
+                    frameborder="0"
+                ></iframe>
+              </div>
+        </div>
+      </div>
+      
+    </main>
+     
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

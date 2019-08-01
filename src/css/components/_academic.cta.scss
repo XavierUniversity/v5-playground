@@ -4,7 +4,6 @@
   @include for-size("tablet-portrait-up"){
     display: block;
   }
-  
   @include for-size("tablet-landscape-up"){
     position: absolute;
     top: px-to-rem(-46px);

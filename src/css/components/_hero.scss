@@ -14,6 +14,28 @@
   justify-content: center;
   position: relative;
   
+  &--homepage{
+    height: 95vh;
+    
+    &__title{
+      text-shadow: none;
+      @include font-size(60px, 1);
+      @include for-size("tablet-landscape-up"){
+        @include font-size(65px, 1);
+      }
+    }
+    
+    &__scroll{
+      position: absolute;
+      color: white;
+      bottom: 15vh;
+      @include for-size("tablet-landscape-up"){
+        
+      }
+      
+    }
+  }
+  
   &--academic{
     height: px-to-rem(618px / 2);
     @include for-size("tablet-landscape-up"){
@@ -29,13 +51,7 @@
   } 
 
   &__cta {
-    text-align:center;
-
-    &__title {
-      @include font-size(65px, 1);
-      text-shadow:none;
-      
-    }
+    text-align: center;
   }
   
   &__title{

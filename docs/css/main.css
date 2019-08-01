@@ -1314,66 +1314,68 @@ textarea {
       border: 1px solid #fff;
       color: #0d2240; }
 
-.featured {
-  margin: 0 15em;
-  margin-top: -70px;
-  background: #fff;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  position: relative;
-  padding: 30px; }
-  .featured__drop {
-    box-shadow: 0 20px 20px 0 rgba(153, 153, 153, 0.25);
-    -webkit-transition: height .4s,-webkit-box-shadow 1s linear;
-    -webkit-transition: height .4s,box-shadow 1s linear;
-    transition: height .4s,box-shadow 1s linear;
-    padding: 30px; }
-  .featured .featured-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px; }
-    .featured .featured-content > div {
-      height: 275px;
-      border-radius: 16px;
-      background-position: center center;
-      -webkit-box-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-              justify-content: center;
-      position: relative; }
-    .featured .featured-content .headline {
-      grid-area: 1 / 1 / 2 / 3; }
-    .featured .featured-content .headline-third {
-      grid-area: 2 / 1 / 3 / 2; }
-    .featured .featured-content .success-rate {
-      grid-area: 2 / 2 / 3 / 3; }
-    .featured .featured-content .instagram {
-      grid-area: 1 / 3 / 2 / 4; }
-    .featured .featured-content .headline-fourth {
-      grid-area: 1 / 4 / 2 / 5; }
-    .featured .featured-content .headline-last {
-      grid-area: 2 / 3 / 3 / 5; }
-  .featured__news-text {
-    color: #fff;
-    text-transform: uppercase;
-    position: absolute;
-    padding-top: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 0rem;
+.features {
+  box-shadow: 0 1.25rem 1.25rem 0 rgba(153, 153, 153, 0.25);
+  padding-top: 1.875rem;
+  padding-right: 1.875rem;
+  padding-bottom: 1.875rem;
+  padding-left: 1.875rem; }
+  @media (min-width: 56.25em) {
+    .features {
+      display: grid;
+      grid-column-gap: 1.25rem;
+      grid-row-gap: 1.25rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr; } }
+
+.feature {
+  height: 17.1875rem;
+  border-radius: 1rem;
+  background-position: center center;
+  color: white;
+  display: -webkit-box;
+  display: flex; }
+  .feature__content {
+    align-self: flex-end;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     padding-left: 1rem; }
-    .featured__news-text h2 {
-      margin-top: 3em;
-      width: 75%;
-      font-size: 2.5rem; }
+    .feature__content:not(:first-of-type) {
+      margin-top: 1.25rem; }
+      @media (min-width: 56.25em) {
+        .feature__content:not(:first-of-type) {
+          margin-top: 0; } }
+  .feature:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 3; }
+  .feature:nth-of-type(2) {
+    grid-area: 2 / 1 / 3 / 2; }
+  .feature:nth-of-type(3) {
+    grid-area: 2 / 2 / 3 / 3; }
+  .feature:nth-of-type(4) {
+    grid-area: 1 / 3 / 2 / 4; }
+  .feature:nth-of-type(5) {
+    grid-area: 1 / 4 / 2 / 5; }
+  .feature:nth-of-type(6) {
+    grid-area: 2 / 3 / 3 / 5; }
+
+.featured__news-text {
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem; }
+  .featured__news-text h2 {
+    margin-top: 3em;
+    width: 75%;
+    font-size: 2.5rem; }
 
 .featured-link {
   margin-top: 80px;
   padding: 20px; }
-  .featured-link h1 {
+  .featured-link__title {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -1734,6 +1736,22 @@ textarea {
   -webkit-box-pack: center;
           justify-content: center;
   position: relative; }
+  .hero--homepage {
+    height: 95vh; }
+    .hero--homepage__title {
+      text-shadow: none;
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 1; }
+      @media (min-width: 56.25em) {
+        .hero--homepage__title {
+          font-size: 65px;
+          font-size: 4.0625rem;
+          line-height: 1; } }
+    .hero--homepage__scroll {
+      position: absolute;
+      color: white;
+      bottom: 15vh; }
   .hero--academic {
     height: 19.3125rem; }
     @media (min-width: 56.25em) {
@@ -1750,11 +1768,6 @@ textarea {
           line-height: 1.2; } }
   .hero__cta {
     text-align: center; }
-    .hero__cta__title {
-      font-size: 65px;
-      font-size: 4.0625rem;
-      line-height: 1;
-      text-shadow: none; }
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;

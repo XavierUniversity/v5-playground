@@ -7,63 +7,70 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+      .hero{
+        background-image: url('images/hero/HomePageHero.png');
+      }
+    </style>
   </head>
-  <body class="homepage">
+  <body>
     include "includes/header.html"
     <!-- Add your site or application content here -->
     <main id="content">
       
-      <div class="hero" style="background-image: url('images/hero/HomePageHero.png'); height: 80vh; background-size: cover; background-color: #0c2340;">
+      <div class="hero hero--homepage">
         <div class="hero__cta">
-          <h1 class="hero__title hero__cta__title">Congrats<br/> #XUGrad19!</h1>
+          <h1 class="hero__title hero--homepage__title">Congrats<br/> #XUGrad19!</h1>
           <a href="#" class="c-btn c-btn--hero o-btn">commencement information</a>
-
-          <div style="margin-top:5rem; color:#fff;">Scroll</div>
-
-          
         </div>
-
-        
+        <div class="hero--homepage__scroll">Scroll</div>
       </div>
-
       
-
-      <div class="featured featured__drop">
-        <div class="featured-content">
-          <div class="headline" style="background-image: url('images/news/SummerFest@2x.jpg'); background-size: cover; background-color: #0c2340;">
-            <div class="featured__news-text">
-                <h2>8th annual xavier fest</h2>
-                <p>learn more</p>
+      <section class="wrapper">
+        <div class="features">
+          <div class="feature" style="background-image: url('images/news/SummerFest@2x.jpg'); background-size: cover; background-color: #0c2340;">
+            <div class="feature__content">
+              <h2>8th Annual Xavier Fest</h2>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle"></use></svg> learn more</a>
             </div>
           </div>
-          <div class="headline-third" style="background-color:#007DB3;">
-              <div class="featured__news-text">
-                  <p>7/30/19</p>
-                  <h3>empower our future</h3>
-                  <p>learn more</p>
-              </div>
-          </div>
-          <div class="success-rate" style="background-image: url('images/news/SuccessRate@2x.jpg'); background-size: cover; background-color: #0c2340;"></div>
-          <div class="instagram" style="background-image: url('images/news/Instagram@2x.jpg'); background-size: cover; background-color: #0c2340;"></div>
-          <div class="headline-fourth" style="background-color:#007DB3;">
-            <div class="featured__news-text">
-                <p>6/15/2019</p>
-                <h3>nursing focus: hispanic culture and health</h3>
-                <p>learn more</p>
+          <div class="feature" style="background-color:#007DB3;">
+            <div class="feature__content">
+              <p class="feature__date">7/30/19</p>
+              <h3 class="feature__title">empower our future</h3>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle"></use></svg> Lorem Ipsum</a>
             </div>
           </div>
-          <div class="headline-last" style="background-image: url('images/news/Cafeteria@2x.jpg'); background-size: cover; background-color: #0c2340;">
-            <div class="featured__news-text">
+          <div class="feature" style="background-image: url('images/news/SuccessRate@2x.jpg'); background-size: cover; background-color: #0c2340;">
+            <div class="feature__content">
+            </div>
+          </div>
+          
+          <div class="feature" style="background-image: url('images/news/Instagram@2x.jpg'); background-size: cover; background-color: #0c2340;">
+            <div class="feature__content">
+            </div>
+          </div>
+          
+          <div class="feature" style="background-color:#007DB3;">
+            <div class="feature__content">
+              <p>6/15/2019</p>
+              <h3>nursing focus: hispanic culture and health</h3>
+              <p>learn more</p>
+            </div>
+          </div>
+          
+          <div class="feature" style="background-image: url('images/news/Cafeteria@2x.jpg'); background-size: cover; background-color: #0c2340;">
+            <div class="feature__content">
                 <h2>summer cafeteria hours</h2>
                 <p>learn more</p>
             </div>
           </div>
         </div>
-      </div>  
+      </section>
       
       <div class="featured-link" style="background-image: url('images/hero/FeaturedLinks.png'); background-size: cover; background-color: #0c2340; background-blend-mode: multiply;">
-        <h1>featured links</h1>
           <div class="wrapper wrapper--feature">
+            <h2 class="featured-link__title">Featured Links</h2>
             <ul class="nav-list footer__nav-list flex">
               <li class="footer__nav-item"><a class="nav-list__link c-btn c-btn--feature" href="https://www.xavier.edu/admission/apply">apply</a></li>
               <li class="footer__nav-item"><a class="nav-list__link c-btn c-btn--feature" href="https://www.xavier.edu/admission/request-info">visit</a></li>

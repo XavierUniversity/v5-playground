@@ -133,5 +133,11 @@
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    
+    &:hover, &:focus, &:active{
+      text-decoration: underline;
+      color: $medBlue;
+    }
+    
   }
 }

@@ -755,8 +755,6 @@ textarea {
     display: inline;
     border: 0.1875rem solid #d8d8d8;
     vertical-align: top;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
     width: 1.875rem;
     height: 1.875rem;
     margin-top: -0.09375rem;
@@ -1399,10 +1397,11 @@ textarea {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0) 100%); }
   .feature__link {
+    text-decoration: none;
     color: white;
-    text-decoration: none; }
+    border-radius: 1rem 1rem 0 0; }
     .feature__link:hover, .feature__link:active, .feature__link:focus {
-      text-decoration: underline; }
+      background: rgba(0, 0, 0, 0.5); }
   .feature__caption {
     position: absolute;
     bottom: 0;
@@ -1941,6 +1940,9 @@ textarea {
     color: black;
     text-decoration: none;
     text-transform: uppercase; }
+    .hero-nav__link:hover, .hero-nav__link:focus, .hero-nav__link:active {
+      text-decoration: underline;
+      color: #007DB3; }
 
 #video-overlay {
   background: rgba(0, 0, 0, 0.85);
@@ -2273,6 +2275,9 @@ textarea {
     text-decoration: none; }
     .panel__link:hover, .panel__link:focus, .panel__link:active {
       color: #007DB3; }
+  .panel__icon {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
 
 .accordion__btn {
   display: block;
@@ -2419,7 +2424,9 @@ textarea {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-          flex-direction: row; }
+          flex-direction: row;
+  align-content: center;
+  margin-bottom: 1rem; }
   .event-list__date {
     flex-basis: 3.625rem;
     min-width: 3.625rem;
@@ -2440,12 +2447,10 @@ textarea {
     margin-right: 1.5rem;
     color: #0B223F; }
   .event-list__content {
-    padding-top: 0; }
-    @media (min-width: 85rem) {
-      .event-list__content {
-        padding-top: 0.625rem; } }
+    align-self: center; }
     .event-list__content p {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 0; }
   .event-list__title {
     font-weight: 300;
     font-size: 16px;
@@ -2492,17 +2497,21 @@ textarea {
         margin-right: 2.25rem;
         margin-bottom: 0; } }
   .module:nth-child(1) {
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/1@1x.jpg");
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x); }
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/Programs@1x.jpg");
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/Programs@1x.jpg") 1x, url("../images/modules/Programs@2x.jpg") 2x);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), image-set(url("../images/modules/Programs@1x.jpg") 1x, url("../images/modules/Programs@2x.jpg") 2x); }
   .module:nth-child(2) {
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/2@1x.jpg");
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x); }
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/LifeAtXavier@1x.jpg");
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/LifeAtXavier@1x.jpg") 1x, url("../images/modules/LifeAtXavier@2x.jpg") 2x);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), image-set(url("../images/modules/LifeAtXavier@1x.jpg") 1x, url("../images/modules/LifeAtXavier@2x.jpg") 2x); }
   .module:nth-child(3) {
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/1@1x.jpg");
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/1@1x.jpg") 1x, url("../images/modules/1@2x.jpg") 2x); }
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/Counselor@1x.jpg");
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/Counselor@1x.jpg") 1x, url("../images/modules/Counselor@2x.jpg") 2x);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), image-set(url("../images/modules/Counselor@1x.jpg") 1x, url("../images/modules/Counselor@2x.jpg") 2x); }
   .module:nth-child(4) {
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/2@1x.jpg");
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/2@1x.jpg") 1x, url("../images/modules/2@2x.jpg") 2x); }
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), url("../images/modules/Commitment@1x.jpg");
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), -webkit-image-set(url("../images/modules/Commitment@1x.jpg") 1x, url("../images/modules/Commitment@2x.jpg") 2x);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent 2px, rgba(0, 0, 0, 0.2) 4px, transparent 4px), image-set(url("../images/modules/Commitment@1x.jpg") 1x, url("../images/modules/Commitment@2x.jpg") 2x); }
   .module--rounded {
     border-radius: 1rem; }
   .module__content {
@@ -2516,7 +2525,8 @@ textarea {
     font-size: 28px;
     font-size: 1.75rem;
     line-height: 1;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 0.75rem;
+    font-weight: 400; }
   .module__link {
     color: white;
     display: block; }

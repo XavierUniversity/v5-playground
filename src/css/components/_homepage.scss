@@ -69,10 +69,11 @@
   }
   
   &__link{
-    color: white;  
     text-decoration: none;
+    color: white;
+    border-radius: px-to-rem(16px) px-to-rem(16px) 0 0;
     &:hover, &:active, &:focus{
-      text-decoration: underline;
+      background: rgba(0,0,0,0.50);
     }
   }
   

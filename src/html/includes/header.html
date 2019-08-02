@@ -1,26 +1,18 @@
-<!-- Skip Header & Navigation -->
-<nav aria-label="Skip Link">
-  <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
-</nav>
-<header>
-  <div class="header header--fixed" id="header">
-    <!-- Branding == Logo and Navigation -->
-    <div class="branding">
-      <a href="/" class="branding__link">
-        <span class="branding__text sr-only">Xavier University</span>
-        <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
-      </a>
-    </div>
-    <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
-    include "header.cta.html"
-    <!-- UI Elements == Search and Menu -->
-    <div class="header-ui">
-      <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
-      <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
-				<span>Open Navigation Menu</span>
-			</button>
-    </div>
-  </div>
-  include "header.drawer.html"
-  include "header.form.html"
-</header>
+<!-- Branding == Logo and Navigation -->
+<div class="branding">
+  <a href="/" class="branding__link">
+    <span class="branding__text sr-only">Xavier University</span>
+    <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
+  </a>
+</div>
+<!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
+include "header.cta.html"
+<!-- UI Elements == Search and Menu -->
+<div class="header-ui">
+  <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+  <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
+		<span>Open Navigation Menu</span>
+	</button>
+</div>
+include "header.drawer.html"
+include "header.form.html"

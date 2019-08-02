@@ -936,6 +936,20 @@ textarea {
       padding-left: 5.875rem; } }
   .header--background {
     background: #0B223F; }
+  .header--fixed {
+    top: 0;
+    height: 3.625rem;
+    background: #0B223F;
+    box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.4); }
+    .header--fixed .branding__logo {
+      height: 1.875rem; }
+      .header--fixed .branding__logo--x {
+        width: 2.4375rem; }
+      .header--fixed .branding__logo--wordmark {
+        width: 7rem; }
+    .header--fixed ~ .search-drawer {
+      top: 3.625rem;
+      background: #1b4675; }
 
 .header-ui__btn {
   color: white;

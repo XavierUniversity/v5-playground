@@ -14,18 +14,43 @@
   justify-content: center;
   position: relative;
   
-  &--academic{ // .hero--academic
+  &--homepage{
+    height: 110vh;
+    
+    &__title{
+      text-shadow: none;
+      @include margin(0, null,null,null);
+      @include font-size(48px, 1);
+      @include for-size("tablet-landscape-up"){
+        @include font-size(65px, 1);
+      }
+    }
+    
+    &__scroll{
+      position: absolute;
+      color: white;
+      bottom: 15vh;
+      @include for-size("tablet-landscape-up"){
+        
+      }
+      
+    }
+  }
+  
+  &--academic{
     height: px-to-rem(618px / 2);
     @include for-size("tablet-landscape-up"){
       height: px-to-rem(618px);
     }
-    &__title{ // .hero--academic__title
+    
+    &__title{
       @include font-size(60px);
       @include for-size("tablet-landscape-up"){
         @include font-size(80px);
       }
     }
   } 
+  
   &--content {
     height: px-to-rem(266px);
     text-align: center;
@@ -79,7 +104,12 @@
     }
   }
   
-  &__title{ // .hero__title
+  &__cta{
+    text-align: center;
+    @include margin(-10vh, null, null, null);
+  }
+  
+  &__title{ 
     color: white;
     text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(4px) black;
     letter-spacing: px-to-rem(3px);
@@ -103,5 +133,11 @@
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    
+    &:hover, &:focus, &:active{
+      text-decoration: underline;
+      color: $medBlue;
+    }
+    
   }
 }

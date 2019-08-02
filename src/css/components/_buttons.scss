@@ -26,11 +26,23 @@
   }
 
   &--hero{
-    border-color: white;
-    color: white;
-    background: transparent;
+    background-color:transparent;
+    border: 1px solid white;
+    border-radius: px-to-rem(25px);
+    text-align:center;
+    @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     display: inline-block;
-    text-align: center;
+    @include margin(px-to-rem(16px), null, null, null);
+    
+    &:hover, &:focus, &:active{
+      background: white;
+      color: black;
+      border-color: white;
+    }
+  }
+
+  &--feature {
+    @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
   }
 }
 

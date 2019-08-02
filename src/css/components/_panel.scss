@@ -67,4 +67,8 @@
       color: $medBlue;
     }
   }
+  
+  &__icon{
+    transform: rotate(-90deg);
+  }
 }

@@ -1,0 +1,30 @@
+.hp-social{
+  background: $grey;
+  @include padding(px-to-rem(24px), null, px-to-rem(24px), null);
+  text-align: center;
+  &__title{
+    @extend .title;
+    @include margin(0, null, 0, null);
+    @include padding(px-to-rem(24px), null, px-to-rem(48px), null);
+    @include font-size(48px);
+  }
+}
+
+.j-loading {
+  border-color: $darkNavy !important;
+}
+
+.j-loading:before {
+  background-color: transparent !important;
+}
+
+.juicer-feed .j-paginate.juicer-button {
+  border-color: $darkNavy;
+  color: $darkNavy;
+  background: transparent;
+  
+  &:hover, &:focus, &:active{
+    color: white;
+    background: $darkNavy;
+  }
+}

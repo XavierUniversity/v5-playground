@@ -5,13 +5,18 @@
   &__nav-list{
     @include padding(0, null, px-to-rem(32px), null);
     @include margin(0, null, 0, null);
+    list-style: none;
   } 
   &__nav-item{
     text-transform: uppercase;
     width: 100%;
-    @include for-size("tablet-portrait-up"){
+    @include for-size("tablet-landscape-up"){
       @include margin(null, px-to-rem(16px), null, px-to-rem(16px));
     }
+  }
+  &__nav-feature {
+    padding-bottom:9rem;
+    margin-top:-3rem;
   }
 }
 

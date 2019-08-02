@@ -1,7 +1,8 @@
 .event-list{
   display: flex;
   flex-direction: row;
-  
+  align-content: center;
+  @include margin(null, null, px-to-rem(16px), null);
   &__date{
     flex-basis: px-to-rem(58px);
     min-width: px-to-rem(58px);
@@ -18,14 +19,9 @@
     color: $darkNavy;
   }
   &__content{
-    @include padding(0, null, null, null)
-
-    @include for-size("desktop-up"){
-      @include padding(px-to-rem(10px), null, null, null);
-    }
-    
+    align-self: center;
     p{
-      @include margin(0, null, null, null);
+      @include margin(0, null, 0, null);
     }
   }
   &__title{

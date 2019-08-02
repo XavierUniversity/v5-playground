@@ -8,7 +8,6 @@
       display: inline;
       border: px-to-rem(3px) solid $darkGrey;
       vertical-align: top;
-      transform: rotate(-90deg);
       width: px-to-rem(30px);
       height: px-to-rem(30px);
       @include margin(- px-to-rem(1.5px), px-to-rem(8px), null, null);

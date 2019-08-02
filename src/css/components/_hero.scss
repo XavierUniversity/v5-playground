@@ -15,11 +15,12 @@
   position: relative;
   
   &--homepage{
-    height: 95vh;
+    height: 110vh;
     
     &__title{
       text-shadow: none;
-      @include font-size(60px, 1);
+      @include margin(0, null,null,null);
+      @include font-size(48px, 1);
       @include for-size("tablet-landscape-up"){
         @include font-size(65px, 1);
       }
@@ -49,7 +50,7 @@
       }
     }
   } 
-
+  
   &--content {
     height: px-to-rem(266px);
     text-align: center;
@@ -101,6 +102,11 @@
     &__title {
       margin-top: 0px;
     }
+  }
+  
+  &__cta{
+    text-align: center;
+    @include margin(-10vh, null, null, null);
   }
   
   &__title{ 

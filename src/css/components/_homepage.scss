@@ -1,43 +1,9 @@
-.cta-hero {
-    margin: 0 auto;
-    text-align: center;
-    width:30%;
-   padding-top: 10rem;
-    h1 {
-        color:#fff;
-        text-transform: uppercase;
-        font-size:60px;
-        font-weight: 400;
-        line-height: 3.6rem;
-    }
-    .btn-cta {
-        position:relative;
-        display:inline-block;
-        margin:1em;
-        padding:1em 3.5em;
-        border:0;
-        border-radius:24px;
-        text-align:center;
-        white-space: nowrap;
-        cursor: pointer;
-        background-color:transparent;
-        border:1px solid #fff;
-        color:#fff;
-        text-transform: uppercase;
-        text-decoration:none;
-
-        &:hover {
-            background-color:#fff;
-            border:1px solid #fff;
-            color:#0d2240;
-        }
-    }
-}
-
 .features{
-  box-shadow: 0 px-to-rem(20px) px-to-rem(20px) 0 rgba(153, 153, 153, 0.25);
-  @include padding(px-to-rem(30px), px-to-rem(30px), px-to-rem(30px), px-to-rem(30px));
-  @include for-size("tablet-landscape-up"){
+  @include for-size("desktop-up"){
+    box-shadow: 0 px-to-rem(20px) px-to-rem(20px) 0 rgba(153, 153, 153, 0.25);
+    @include padding(px-to-rem(20px), px-to-rem(20px), px-to-rem(20px), px-to-rem(20px));
+    @include margin(- px-to-rem(70px), null, null, null);
+    background: white;
     display: grid;
     grid-column-gap: px-to-rem(20px);
     grid-row-gap: px-to-rem(20px);   
@@ -46,23 +12,78 @@
   }
 }
 .feature{
-  height: px-to-rem(275px);
+  height: px-to-rem(289px);
   border-radius: px-to-rem(16px);
   background-position: center center;
   color: white;
   display: flex;
   text-align: left;
+  @include margin(px-to-rem(20px), null, px-to-rem(20px), null);
+  @include for-size("tablet-portrait-up"){
+    height: px-to-rem(312px);
+  }
+  @include for-size("desktop-up"){
+    height: px-to-rem(289px);
+    @include margin(0, null, 0, null);
+  }
+  &:not(:first-of-type){
+    @include margin(px-to-rem(30px), null, 0, null);
+    @include for-size("desktop-up"){
+      @include margin(0, null, 0, null);
+    }
+  }
+  
   &__content{
     align-self: flex-end;
     @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+    background-size: cover;
+    background-position: center center;
+    &--insta{
+      position: relative;
+      @include padding(0, 0, 0, 0);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  &__title{
+    text-transform: uppercase;
+    @include font-size(30px, 1.25);
     
-    &:not(:first-of-type){
-      @include margin(px-to-rem(20px), null, null, null);
-      
-      @include for-size("tablet-landscape-up"){
-        @include margin(0, null, null, null);
+    &--large{
+      @include for-size("desktop-up"){
+        @include font-size(48px);  
       }
     }
+  }
+  &__name{
+    border-radius: px-to-rem(16px) px-to-rem(16px) 0 0;
+    @include padding(px-to-rem(8px), px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0) 100%);
+  }
+  
+  &__link{
+    color: white;  
+    text-decoration: none;
+    &:hover, &:active, &:focus{
+      text-decoration: underline;
+    }
+  }
+  
+  &__caption{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba($grey, 0.80);
+    color: black;
+    border-radius: 0 0 px-to-rem(16px) px-to-rem(16px);
+    @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
   }
   
   &:nth-of-type(1){
@@ -85,63 +106,48 @@
   }
 }
 
-.featured {
-  
-    &__news-text {
-      color:#fff;
-      text-transform:uppercase;
-      position: absolute;
-      @include padding(px-to-rem(0px), px-to-rem(0px), px-to-rem(0px), px-to-rem(16px));
-     h2 {
-          margin-top:3em;
-          width:75%;
-          font-size: 2.5rem;
-          
-     } 
-}
-}
-
 .featured-link {
-    margin-top: 80px;
-    padding:20px;
-    &__title {
-        color:#fff;
-        text-transform: uppercase;
-        text-align: center;
-        padding-top:3rem;
-        padding-bottom:3rem;
-    }
+  &__title {
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    @include font-size(48px);
+    @include margin(0, 0, 0, 0);
+  }
+  &__list{
+    list-style: none;
+    flex-wrap: wrap;
+    @include margin(null, null, null, 0);
+    @include padding(null, null, px-to-rem(60px), 0);
+  }
+  &__item{
+    flex-basis: calc(33% - 2rem);
+  }
 }
 
 .commitment {
-    background-position: top center;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-   
-    &__line {
-        margin: 0 auto;
-        border-bottom: solid px-to-rem(2px) #20c3de;
-        width:40%;
+  background-color: rgba(#fff, 0.85);
+  text-align:center;
+  
+  &__title{
+    color: $darkNavy;
+    text-transform: uppercase;
+    @include padding(px-to-rem(40px), null, px-to-rem(24px), null);
+    @include font-size(24px);
+  }
+  &__hr{
+    background-color: $medBlue;
+    height: px-to-rem(2px);
+    border: none;
+    @include margin(null, auto, null, auto);
+    @include for-size("tablet-landscape-up"){
+      width: 35%;
+    }
     
-    }
-    &__text {
-        background-color: #fff;
-       
-    }
-    h3 {
-        color:#0d2240;
-        text-transform: uppercase;
-        text-align:center;
-        padding-top:2.5rem;
-        padding-bottom:1.5rem;
-    }
-
-    p {
-        text-align:center;
-        font-size:28px;
-        padding-left:2em;
-        @include padding(px-to-rem(0px), px-to-rem(16px), px-to-rem(0px), px-to-rem(16px));
-
-    }
+  }
+  
+  &__text {
+    @include padding(0, px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));  
+    @include font-size(28px);
+  }
 }

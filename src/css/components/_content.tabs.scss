@@ -38,7 +38,7 @@
     @include font-size(16px, 1);
     @include for-size("desktop-up"){
       display: inline-block;  
-      width: px-to-rem(135px);
+      width: px-to-rem(125px);
       height: px-to-rem(50px);
       word-break: break-word;
       text-align: center;

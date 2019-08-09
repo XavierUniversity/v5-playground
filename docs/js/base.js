@@ -1,3 +1,12 @@
+var insta = $("[data-image]").data("image");
+$.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
+  var parent = $("[data-image='"+ insta +"']");
+  console.log(parent);
+  parent.css({"background-image": 'url("' +d.thumbnail_url + '")', "background-size": 'cover'});
+  parent.find(".feature__content").attr('href', insta);
+  parent.find(".feature__name").html('<span class="feature__link">'+ d.author_name + '</span>');
+  parent.find(".feature__caption").html(d.title);
+});
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -247,6 +256,42 @@ $('[data-controls="#search"]').on('click', function(e){
   $('.search__results').html('');
   $('.search__sidebar').removeClass('visible');
   $('.search__intro').show();
+});
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
+    }
+  }
 });
 /**
   * base.sticky.js

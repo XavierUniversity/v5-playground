@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("https://loremflickr.com/1400/616?lock=25");
-/*
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
-*/
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/UndergradAdmissions1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
       }
     </style>
   </head>
   <body>
-    include "includes/header.html"
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
     <!-- Add your site or application content here -->
     <main id="content">
       <section class="hero hero--academic">

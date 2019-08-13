@@ -2036,7 +2036,7 @@ textarea {
     @media (min-width: 85rem) {
       .tab__link {
         display: inline-block;
-        width: 8.4375rem;
+        width: 7.8125rem;
         height: 3.125rem;
         word-break: break-word;
         text-align: center;
@@ -2248,6 +2248,16 @@ textarea {
       margin-bottom: 1.6875rem; }
   .panel--academic {
     margin-top: 3rem; }
+  .panel--quicklinks {
+    display: none; }
+    @media (min-width: 56.25rem) {
+      .panel--quicklinks {
+        display: block; } }
+    .panel--quicklinks__mobile {
+      display: block; }
+      @media (min-width: 56.25rem) {
+        .panel--quicklinks__mobile {
+          display: none; } }
   .panel--features {
     padding-top: 2.625rem;
     padding-right: 0;

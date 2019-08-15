@@ -811,6 +811,12 @@ textarea {
         background-image: url("../images/commitment/StudentCommitment_1x.jpg");
         background-image: image-set(url("../images/commitment/StudentCommitment_1x.jpg") 1x, url("../images/commitment/StudentCommitment_2x.jpg") 2x);
         background-image: -webkit-image-set(url("../images/commitment/StudentCommitment_1x.jpg") 1x, url("../images/commitment/StudentCommitment_2x.jpg") 2x); } }
+  @media (max-width: 36.5rem) {
+    .wrapper--features {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0; } }
 
 .o-btn {
   border: none;
@@ -1349,6 +1355,9 @@ textarea {
       height: 18.0625rem;
       margin-top: 0;
       margin-bottom: 0; } }
+  @media (max-width: 36.5rem) {
+    .feature {
+      border-radius: 0; } }
   .feature:not(:first-of-type) {
     margin-top: 1.875rem;
     margin-bottom: 0; }
@@ -1374,6 +1383,7 @@ textarea {
       height: 100%; }
   .feature__title {
     text-transform: uppercase;
+    font-weight: 500;
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 1.25; }
@@ -1394,14 +1404,15 @@ textarea {
     left: 0;
     width: 100%;
     background: black;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0) 100%); }
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0) 100%); }
+    @media (max-width: 36.5rem) {
+      .feature__name {
+        border-radius: 0; } }
   .feature__link {
     text-decoration: none;
     color: white;
     border-radius: 1rem 1rem 0 0; }
-    .feature__link:hover, .feature__link:active, .feature__link:focus {
-      background: rgba(0, 0, 0, 0.5); }
   .feature__caption {
     position: absolute;
     bottom: 0;
@@ -1413,6 +1424,9 @@ textarea {
     padding-right: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem; }
+    @media (max-width: 36.5rem) {
+      .feature__caption {
+        border-radius: 0; } }
   .feature:nth-of-type(1) {
     grid-area: 1 / 1 / 2 / 3; }
   .feature:nth-of-type(2) {
@@ -1425,6 +1439,13 @@ textarea {
     grid-area: 1 / 4 / 2 / 5; }
   .feature:nth-of-type(6) {
     grid-area: 2 / 3 / 3 / 5; }
+
+.feature:hover {
+  background-color: #0e2240 !important;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .featured-link__title {
   color: #fff;
@@ -1459,6 +1480,10 @@ textarea {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1; }
+    @media (max-width: 36.5rem) {
+      .commitment__title {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem; } }
   .commitment__hr {
     background-color: #007DB3;
     height: 0.125rem;
@@ -1476,6 +1501,9 @@ textarea {
     font-size: 28px;
     font-size: 1.75rem;
     line-height: 1.7142857143; }
+    @media (max-width: 36.5rem) {
+      .commitment__text {
+        line-height: 2.8125rem; } }
 
 .hp-social {
   background: #F0F2F3;
@@ -1679,6 +1707,13 @@ textarea {
       background: white;
       color: black;
       border-color: white; }
+    @media (max-width: 36.5rem) {
+      .c-btn--hero {
+        padding-top: 0.9375rem;
+        padding-right: 2rem;
+        padding-bottom: 0.9375rem;
+        padding-left: 2rem;
+        border-radius: 1.4375rem; } }
   .c-btn--feature {
     padding-top: 1.5625rem;
     padding-right: 1rem;
@@ -1848,10 +1883,16 @@ textarea {
           font-size: 65px;
           font-size: 4.0625rem;
           line-height: 1; } }
+      @media (max-width: 36.5rem) {
+        .hero--homepage__title {
+          font-size: 44px;
+          font-size: 2.75rem;
+          line-height: 1; } }
     .hero--homepage__scroll {
       position: absolute;
       color: white;
-      bottom: 15vh; }
+      bottom: 15vh;
+      text-decoration: none; }
   .hero--academic {
     height: 19.3125rem; }
     @media (min-width: 56.25rem) {
@@ -1901,7 +1942,8 @@ textarea {
       max-width: 28.125rem;
       margin: 0 auto !important;
       border: solid 0.0625rem white !important;
-      background: rgba(0, 0, 0, 0.4); }
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 1.5625rem; }
       .hero--video__btn:active, .hero--video__btn:hover, .hero--video__btn:focus {
         background: white;
         color: #0B223F; }
@@ -1910,7 +1952,6 @@ textarea {
   .hero__cta {
     text-align: center;
     margin-top: -10vh; }
-
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;
@@ -2530,7 +2571,8 @@ textarea {
     font-weight: 400; }
   .module__link {
     color: white;
-    display: block; }
+    display: block;
+    text-decoration: none; }
   .module__icon {
     border: none !important;
     margin-right: 0.5rem; }

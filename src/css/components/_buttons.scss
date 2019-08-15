@@ -33,11 +33,14 @@
     @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     display: inline-block;
     @include margin(px-to-rem(16px), null, null, null);
-    
     &:hover, &:focus, &:active{
       background: white;
       color: black;
       border-color: white;
+    }
+    @include for-size("phone-only"){
+      @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
+      border-radius: px-to-rem(23px);
     }
   }
 

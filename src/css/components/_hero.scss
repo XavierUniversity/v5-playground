@@ -24,12 +24,16 @@
       @include for-size("tablet-landscape-up"){
         @include font-size(65px, 1);
       }
+      @include for-size("phone-only"){
+        @include font-size(44px, 1);
+      }
     }
     
     &__scroll{
       position: absolute;
       color: white;
       bottom: 15vh;
+      text-decoration:none;
       @include for-size("tablet-landscape-up"){
         
       }

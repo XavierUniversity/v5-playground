@@ -59,9 +59,12 @@
     @include margin(null, null, px-to-rem(12px), null);
     font-weight: 400;
   }
+
   &__link{
     color: white;
     display: block;
+    text-decoration: none;
+   
     
   }
   &__icon{

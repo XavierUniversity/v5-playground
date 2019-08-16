@@ -28,23 +28,6 @@
     }
   }
   
-  &:nth-child(1){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/Programs@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("../images/modules/Programs@1x.jpg") 1x, url("../images/modules/Programs@2x.jpg") 2x );
-  }
-  &:nth-child(2){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/LifeAtXavier@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("../images/modules/LifeAtXavier@1x.jpg") 1x, url("../images/modules/LifeAtXavier@2x.jpg") 2x );
-  }
-  &:nth-child(3){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/Counselor@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("../images/modules/Counselor@1x.jpg") 1x, url("../images/modules/Counselor@2x.jpg") 2x );
-  }
-  &:nth-child(4){
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("../images/modules/Commitment@1x.jpg");
-    background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("../images/modules/Commitment@1x.jpg") 1x, url("../images/modules/Commitment@2x.jpg") 2x );
-  }
-  
   &--rounded{
     border-radius: px-to-rem(16px);
   }

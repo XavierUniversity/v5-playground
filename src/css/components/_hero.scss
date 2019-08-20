@@ -31,9 +31,13 @@
     
     &__scroll{
       position: absolute;
+      display: block;
       color: white;
       bottom: 15vh;
       text-decoration:none;
+      height: px-to-rem(100px); 
+      padding-top: px-to-rem(70px);
+      vertical-align: bottom;
       @include for-size("tablet-landscape-up"){
         
       }

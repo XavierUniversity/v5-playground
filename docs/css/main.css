@@ -1440,10 +1440,39 @@ textarea {
   .feature:nth-of-type(6) {
     grid-area: 2 / 3 / 3 / 5; }
 
+.date {
+  position: absolute; }
+  @media (min-width: 85rem) {
+    .date {
+      bottom: 36.5rem !important; } }
+  @media (min-width: 56.25rem) {
+    .date {
+      bottom: 38rem; } }
+  @media (min-width: 37.5rem) {
+    .date {
+      bottom: 38rem; } }
+  @media (max-width: 36.5rem) {
+    .date {
+      bottom: 35rem; } }
+  .date__second {
+    position: absolute; }
+    @media (min-width: 85rem) {
+      .date__second {
+        top: 21.5rem !important; } }
+    @media (min-width: 56.25rem) {
+      .date__second {
+        bottom: 102rem; } }
+    @media (min-width: 37.5rem) {
+      .date__second {
+        bottom: 102rem; } }
+    @media (max-width: 36.5rem) {
+      .date__second {
+        bottom: 95rem; } }
+
 .feature:hover {
-  background-color: #0e2240 !important;
+  background-color: #0c2340 !important;
+  opacity: 0.7;
   width: 100%;
-  z-index: 1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
@@ -1504,6 +1533,51 @@ textarea {
     @media (max-width: 36.5rem) {
       .commitment__text {
         line-height: 2.8125rem; } }
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%; }
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  bottom: 4vh;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px; }
+
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll; }
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px); } }
+
+@keyframes scroll {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px); } }
 
 .hp-social {
   background: #F0F2F3;
@@ -1890,9 +1964,13 @@ textarea {
           line-height: 1; } }
     .hero--homepage__scroll {
       position: absolute;
+      display: block;
       color: white;
       bottom: 15vh;
-      text-decoration: none; }
+      text-decoration: none;
+      height: 6.25rem;
+      padding-top: 4.375rem;
+      vertical-align: bottom; }
   .hero--academic {
     height: 19.3125rem; }
     @media (min-width: 56.25rem) {

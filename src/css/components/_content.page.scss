@@ -189,5 +189,16 @@
       }
     }
   }
+  
+  .two-one { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    .col-1 { grid-area: 1 / 1 / 2 / 2; } 
+    .col-2 { grid-area: 1 / 2 / 2 / 3; } 
+  }
+  
 
 }

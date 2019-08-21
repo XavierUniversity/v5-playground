@@ -2177,6 +2177,16 @@ textarea {
       display: block; }
     .sidenav__content ul > li > ul ul {
       border-left: none; }
+  .sidenav .two-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
+    .sidenav .two-one .col-1 {
+      grid-area: 1 / 1 / 2 / 2; }
+    .sidenav .two-one .col-2 {
+      grid-area: 1 / 2 / 2 / 3; }
 
 .panel {
   background: #F0F2F3;

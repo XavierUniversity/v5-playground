@@ -132,8 +132,7 @@ html {
   /* 1 */
   -moz-tab-size: 4;
   /* 4 */
-  -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 4 */
   -ms-text-size-adjust: 100%;
   /* 5 */
@@ -199,8 +198,7 @@ a {
  */
 abbr[title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; }
+  text-decoration: underline dotted; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -522,6 +520,7 @@ select,
 summary,
 textarea,
 [tabindex] {
+  -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation;
   /* 2 */ }
@@ -708,9 +707,7 @@ textarea {
       box-shadow: 0 0 0.3125rem #007DB3;
       border: 0.0625rem solid #007DB3; }
   .slate-form select {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
     box-shadow: none;
     background: white;
     background-image: none;
@@ -956,10 +953,7 @@ textarea {
       margin-top: -0.125rem;
       background-color: white;
       font-size: 0;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
+      user-select: none; }
       .header-ui__btn--menu span:before, .header-ui__btn--menu span:after {
         position: absolute;
         left: 0;
@@ -1282,6 +1276,7 @@ textarea {
 @-webkit-keyframes slide-out {
   100% {
     transform: translateX(100%); } }
+
 
 @keyframes slide-out {
   100% {
@@ -1916,10 +1911,7 @@ textarea {
   left: 0;
   z-index: 99999 !important;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   display: none;
   width: 100vw;
   height: 100vh; }
@@ -2622,4 +2614,5 @@ textarea {
 @media (min-width: 37.5rem) {
   .margin--left-48 {
     margin-left: 3rem; } }
+
 /*# sourceMappingURL=main.css.map */

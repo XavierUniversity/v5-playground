@@ -2102,7 +2102,8 @@ textarea {
       font-weight: 300;
       font-size: 30px;
       font-size: 1.875rem;
-      line-height: 1.6; }
+      line-height: 1.6;
+      line-height: 1.2; }
     .content-page--main h4 {
       color: #333;
       font-weight: 300;

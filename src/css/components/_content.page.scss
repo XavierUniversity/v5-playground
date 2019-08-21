@@ -89,6 +89,7 @@
       color: $base-text-color;
       font-weight: 300;
       @include font-size(30px);
+      line-height: 1.2;
     }
     
     h4{

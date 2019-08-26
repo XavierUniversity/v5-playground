@@ -13,6 +13,13 @@
     @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
   }
   
+  &--fixed{
+    top: 0;
+    height: 3.625rem;
+    background: #0B223F;
+    box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.4);
+  }
+
   &--background{
     background: $darkNavy;
   }

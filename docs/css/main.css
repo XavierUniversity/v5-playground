@@ -940,6 +940,11 @@ textarea {
     .header {
       padding-right: 5.875rem;
       padding-left: 5.875rem; } }
+  .header--fixed {
+    top: 0;
+    height: 3.625rem;
+    background: #0B223F;
+    box-shadow: 0 0.625rem 1rem rgba(0, 0, 0, 0.4); }
   .header--background {
     background: #0B223F; }
 

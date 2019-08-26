@@ -7,6 +7,7 @@
   text-align: center;
   transition: all 0.25s ease;
   text-transform: uppercase;
+  text-decoration: none;
   @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
   
   @include for-size("phone-only"){
@@ -44,6 +45,10 @@
   &--feature {
     @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
   }
+  
+  &--inline{
+      display: inline;
+    }
 }
 
 .action{

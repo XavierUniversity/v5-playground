@@ -1409,6 +1409,16 @@ textarea {
     @media (max-width: 36.5rem) {
       .feature__name {
         border-radius: 0; } }
+  .feature__success {
+    background-image: url("images/modules/placement-rate-bkg.svg");
+    background-position: center center;
+    background-size: cover;
+    background-color: #0c2340;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative; }
   .feature__link {
     text-decoration: none;
     color: white;
@@ -1533,6 +1543,9 @@ textarea {
     @media (max-width: 36.5rem) {
       .commitment__text {
         line-height: 2.8125rem; } }
+
+.success-rate {
+  width: 300px; }
 
 .icon-scroll,
 .icon-scroll:before {

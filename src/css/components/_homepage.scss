@@ -79,7 +79,18 @@
     }
   }
 
- 
+  &__success{
+    background-image:url('images/modules/placement-rate-bkg.svg');
+    background-position:center center;
+    background-size: cover; 
+    background-color: #0c2340;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+
+  }
   
   &__link{
     text-decoration: none;
@@ -185,6 +196,8 @@
   }
 }
 
+
+
 .commitment {
   background-color: rgba(#fff, 0.85);
   text-align:center;
@@ -216,6 +229,10 @@
       line-height: px-to-rem(45px);
     }
   }
+}
+
+.success-rate{
+  width:300px;
 }
 
 .icon-scroll,

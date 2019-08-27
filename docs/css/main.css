@@ -676,6 +676,77 @@ table {
 button > *, a > * {
   pointer-events: none; }
 
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.form__title {
+  color: #0B223F;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%; }
+  .form__title--sub {
+    border-bottom: solid 0.2rem #007DB3; }
+
+.form__label {
+  display: block;
+  font-weight: 300;
+  padding: 0.5rem 0; }
+
+.form__input, .form__textarea, .form__select {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+  width: 85%; }
+  .form__input + span, .form__textarea + span, .form__select + span {
+    padding: 0 1rem;
+    display: none;
+    font-size: 1.6rem;
+    position: relative;
+    display: none; }
+  .form__input:invalid + .validate, .form__textarea:invalid + .validate, .form__select:invalid + .validate {
+    display: inline-block; }
+    .form__input:invalid + .validate:before, .form__textarea:invalid + .validate:before, .form__select:invalid + .validate:before {
+      color: #D8000C;
+      content: "\f071";
+      font-family: 'FontAwesome'; }
+  .form__input:valid + .validate, .form__textarea:valid + .validate, .form__select:valid + .validate {
+    display: inline-block; }
+    .form__input:valid + .validate:before, .form__textarea:valid + .validate:before, .form__select:valid + .validate:before {
+      color: #198644;
+      content: "\f00c";
+      font-family: 'FontAwesome'; }
+
+.form__select {
+  background: none;
+  height: 36px; }
+
+.form__input:disabled, .form__input:-moz-read-only {
+  background: white; }
+
+.form__input:disabled, .form__input:read-only {
+  background: white; }
+
+.form input[type=submit], .form button[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+.form__radio {
+  display: block; }
+  .form__radio input[type=radio] {
+    width: 30px; }
+
+.form__checkbox {
+  display: block; }
+  .form__checkbox input[type=checkbox] {
+    width: 30px; }
+
 input[type="search"] {
   -webkit-appearance: none;
   border-radius: 0; }

@@ -88,8 +88,27 @@
     h3{
       color: $base-text-color;
       font-weight: 300;
+      @include font-size(30px);
+    }
+    
+    h4{
+      color: $base-text-color;
+      font-weight: 300;
       @include font-size(20px);
     }
+    
+    h5{
+      color: $base-text-color;
+      font-weight: 300;
+      @include font-size(18px);
+    }
+    
+    h6{
+      color: $base-text-color;
+      font-weight: 300;
+      @include font-size(16px);
+    }
+    
   }
 }
 
@@ -170,5 +189,4 @@
       }
     }
   }
-
 }

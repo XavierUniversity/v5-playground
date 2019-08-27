@@ -2171,9 +2171,27 @@ textarea {
     .content-page--main h3 {
       color: #333;
       font-weight: 300;
+      font-size: 30px;
+      font-size: 1.875rem;
+      line-height: 1.6; }
+    .content-page--main h4 {
+      color: #333;
+      font-weight: 300;
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.2; }
+    .content-page--main h5 {
+      color: #333;
+      font-weight: 300;
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.3333333333; }
+    .content-page--main h6 {
+      color: #333;
+      font-weight: 300;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

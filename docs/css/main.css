@@ -2401,6 +2401,47 @@ textarea {
     .accordion--mobile self__btn {
       display: none; } }
 
+@media (min-width: 85rem) {
+  .split-1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
+    .split-1-1 .col1 {
+      display: flex;
+      grid-area: 1 / 1 / 2 / 2; }
+    .split-1-1 .col2 {
+      display: flex;
+      grid-area: 1 / 2 / 2 / 3; }
+  .split-2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
+    .split-2-1 .col1 {
+      display: flex;
+      grid-area: 1 / 1 / 2 / 2; }
+    .split-2-1 .col2 {
+      display: flex;
+      grid-area: 1 / 2 / 2 / 3; }
+  .split-1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; }
+    .split-1-1-1 .col1 {
+      display: flex;
+      grid-area: 1 / 1 / 2 / 2; }
+    .split-1-1-1 .col2 {
+      display: flex;
+      grid-area: 1 / 2 / 2 / 3; }
+    .split-1-1-1 .col3 {
+      display: flex;
+      grid-area: 1 / 3 / 2 / 4; } }
+
 .academic-wrapper {
   position: relative; }
   @media (min-width: 56.25rem) {

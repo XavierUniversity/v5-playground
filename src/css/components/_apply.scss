@@ -1,11 +1,32 @@
 .apply{
     background-color: #f0f2f3;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     position: relative;
+    text-align: center;
 
-  &--content{
-      height:100vh;
+   &--content{
+      height:100%;
+  } 
+  h2{
+    font-weight:400;
+    text-transform:uppercase;
+    padding-top:10rem;
+    color:#0b223f;
+    text-align:center;
+    font-size:2rem;
+  }
+  p{
+    font-size:18px;
+    @include for-size("tablet-landscape-up"){
+      margin-left:5rem;
+      margin-right:5rem;
+    }
+    @include for-size("desktop-up"){
+      margin-left:13rem;
+      margin-right:13rem;
+    }
   }
 }
+

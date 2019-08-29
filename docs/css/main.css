@@ -2480,6 +2480,35 @@ textarea {
     .cdn__link:hover, .cdn__link:focus, .cdn__link:active {
       color: #007DB3; }
 
+.apply {
+  background-color: #f0f2f3;
+  display: block;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: relative;
+  text-align: center; }
+  .apply--content {
+    height: 100%; }
+  .apply h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 10rem;
+    color: #0b223f;
+    text-align: center;
+    font-size: 2rem; }
+  .apply p {
+    font-size: 18px; }
+    @media (min-width: 56.25rem) {
+      .apply p {
+        margin-left: 5rem;
+        margin-right: 5rem; } }
+    @media (min-width: 85rem) {
+      .apply p {
+        margin-left: 13rem;
+        margin-right: 13rem; } }
+
 .event-list {
   display: -webkit-box;
   display: flex;

@@ -79,34 +79,41 @@
   &--main {
     grid-area: 2 / 2 / 3 / 3;
     // Eventually we'll move these. Waiting on JQuelin to define these.
+    h1{
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
+      @include font-size(32px);
+    }
+    
     h2{
       text-transform: uppercase;
       color: $darkNavy;
       font-weight: 400;
+      @include font-size(32px);
     }
     
     h3{
-      color: $base-text-color;
-      font-weight: 300;
-      @include font-size(30px);
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
+      @include font-size(24px);
+      line-height: 30px;
+      &.mixed{
+        text-transform: none;
+        font-weight: 300;  
+      } 
     }
     
-    h4{
-      color: $base-text-color;
-      font-weight: 300;
-      @include font-size(20px);
-    }
-    
-    h5{
-      color: $base-text-color;
-      font-weight: 300;
-      @include font-size(18px);
-    }
-    
-    h6{
-      color: $base-text-color;
-      font-weight: 300;
+    h4,h5,h6{
+      text-transform: uppercase;
+      color: $darkNavy;
+      font-weight: 400;
       @include font-size(16px);
+    }
+    
+    h5,h6{
+      text-transform: none;
     }
     
   }

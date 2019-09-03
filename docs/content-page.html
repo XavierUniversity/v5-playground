@@ -479,29 +479,29 @@
               Description list description 03
             </dd>
           </dl>
-
-          <form action="#">
-            <fieldset>
-              <legend>Form legend</legend>
+        <hr>
+          <form action="#" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Form legend</legend>
               <div>
-                <label for="f1">Text input:</label>
-                <input type="text" id="f1" value="input text">
+                <label for="f1" class="form__label">Text input:</label>
+                <input type="text" id="f1" class="form__input" value="input text">
               </div>
               <div>
-                <label for="pw">Password input:</label>
-                <input type="password" id="pw" value="password">
+                <label for="pw" class="form__label">Password input:</label>
+                <input type="password" id="pw" class="form__input" value="password">
               </div>
               <div>
-                <label for="f2">Radio input:</label>
-                <input type="radio" id="f2">
+                <label for="f2" class="form__label">Radio input:</label>
+                <input type="radio" id="f2" class="form__radio">
               </div>
               <div>
-                <label for="f3">Checkbox input:</label>
-                <input type="checkbox" id="f3">
+                <label for="f3" class="form__label">Checkbox input:</label>
+                <input type="checkbox" id="f3" class="form__checkbox">
               </div>
               <div>
-                <label for="f4">Select field:</label>
-                <select id="f4">
+                <label for="f4" class="form__label">Select field:</label>
+                <select id="f4" class="form__select">
                   <option>
                     Option 01
                   </option>
@@ -511,20 +511,20 @@
                 </select>
               </div>
               <div>
-                <label for="f5">Textarea:</label>
-                <textarea id="f5" cols="30" rows="5">Textarea text</textarea>
+                <label for="f5" class="form__label">Textarea:</label>
+                <textarea id="f5" cols="30" rows="5" class="form__textarea">Textarea text</textarea>
               </div>
               <div>
-                <label for="f6">Input Button:</label>
-                <input type="button" id="f6" value="button text">
+                <label for="f6" class="form__label">Input Button:</label>
+                <input type="button" id="f6" class="btn" value="button text">
               </div>
               <div>
-                <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="button"&gt;</span></label>
-                <button class="button positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="button" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="button negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
+                <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="btn"&gt;</span></label>
+                <button class="btn btn--inline positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="btn btn--inline" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="btn btn--inline negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
               </div>
             </fieldset>
           </form>
-
+          <hr>
           I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br />
           I am <a href="something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br />
           I am <a href="http://www.something.com">an external website</a> link, so readers know that I'm not a normal link.<br />
@@ -545,6 +545,25 @@
           <p class="notice">
             <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
           </p>
+          
+          <h2>Buttons</h2>
+          <a class="c-btn" href="#">Button</a>
+          <a class="c-btn c-btn--inline" href="#">Inline Button</a>
+          <hr />
+          <div class="split-1-1"> 
+            <div class="col1">Split 1-1 Column 1</div> 
+            <div class="col2">Split 1-1 Column 2</div> 
+          </div>
+          <div class="split-2-1"> 
+            <div class="col1">Split 2-1 Column 1</div> 
+            <div class="col2">Split 2-1 Column 2</div> 
+          </div>
+          <div class="split-1-1-1"> 
+            <div class="col1">Split 1-1-1 Column 1</div> 
+            <div class="col2">Split 1-1-1 Column 2</div> 
+            <div class="col3">Split 1-1-1 Column 3</div> 
+          </div>
+          
         </div>
         </div>
         

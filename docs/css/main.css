@@ -2197,14 +2197,13 @@ textarea {
         text-transform: none;
         font-weight: 300; }
     .content-page--main h4, .content-page--main h5, .content-page--main h6 {
-      text-transform: uppercase;
       color: #0B223F;
       font-weight: 400;
       font-size: 16px;
       font-size: 1rem;
       line-height: 1.5; }
-    .content-page--main h5, .content-page--main h6 {
-      text-transform: none; }
+    .content-page--main h4 {
+      text-transform: uppercase; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

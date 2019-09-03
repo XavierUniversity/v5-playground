@@ -671,7 +671,22 @@ html {
   font-weight: 200; }
 
 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  max-width: 100%;
   width: 100%; }
+  table th, table td {
+    line-height: 1.1;
+    padding: 0.8rem;
+    text-align: left;
+    vertical-align: top; }
+  table th {
+    border-bottom: solid 2px #F0F2F3;
+    font-weight: 300; }
+  table td {
+    border-top: 1px solid #F0F2F3; }
+  table.striped tbody tr:nth-of-type(odd) {
+    background-color: #F0F2F3; }
 
 button > *, a > * {
   pointer-events: none; }
@@ -2168,34 +2183,39 @@ textarea {
     border-left: 0.1875rem solid #007DB3; }
   .content-page--main {
     grid-area: 2 / 2 / 3 / 3; }
+    .content-page--main h1 {
+      text-transform: uppercase;
+      color: #0B223F;
+      font-weight: 400;
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.5; }
     .content-page--main h2 {
       text-transform: uppercase;
       color: #0B223F;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.5; }
     .content-page--main h3 {
-      color: #333;
-      font-weight: 300;
-      font-size: 30px;
-      font-size: 1.875rem;
-      line-height: 1.6; }
-    .content-page--main h4 {
-      color: #333;
-      font-weight: 300;
-      font-size: 20px;
-      font-size: 1.25rem;
-      line-height: 1.2; }
-    .content-page--main h5 {
-      color: #333;
-      font-weight: 300;
-      font-size: 18px;
-      font-size: 1.125rem;
-      line-height: 1.3333333333; }
-    .content-page--main h6 {
-      color: #333;
-      font-weight: 300;
+      text-transform: uppercase;
+      color: #0B223F;
+      font-weight: 400;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
+      line-height: 30px; }
+      .content-page--main h3.mixed {
+        text-transform: none;
+        font-weight: 300; }
+    .content-page--main h4, .content-page--main h5, .content-page--main h6 {
+      color: #0B223F;
+      font-weight: 400;
       font-size: 16px;
       font-size: 1rem;
       line-height: 1.5; }
+    .content-page--main h4 {
+      text-transform: uppercase; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

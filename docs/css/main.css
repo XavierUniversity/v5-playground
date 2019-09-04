@@ -2020,6 +2020,47 @@ textarea {
   padding: 5%;
   vertical-align: middle; }
 
+.content h1, .content-page h1 {
+  text-transform: uppercase;
+  color: #0B223F;
+  font-weight: 400;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.5; }
+
+.content h2, .content-page h2 {
+  text-transform: uppercase;
+  color: #0B223F;
+  font-weight: 400;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.5; }
+
+.content h3, .content-page h3 {
+  text-transform: uppercase;
+  color: #0B223F;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 30px; }
+  .content h3.mixed, .content-page h3.mixed {
+    text-transform: none;
+    font-weight: 300; }
+
+.content h4, .content h5, .content h6, .content-page h4, .content-page h5, .content-page h6 {
+  color: #0B223F;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.content h4, .content-page h4 {
+  text-transform: uppercase; }
+
+.content table, .content ul, .content-page table, .content-page ul {
+  margin-bottom: 1.5rem; }
+
 .title, .hp-social__title {
   font-weight: 400;
   text-transform: uppercase;
@@ -2185,41 +2226,6 @@ textarea {
     border-left: 0.1875rem solid #007DB3; }
   .content-page--main {
     grid-area: 2 / 2 / 3 / 3; }
-    .content-page--main h1 {
-      text-transform: uppercase;
-      color: #0B223F;
-      font-weight: 400;
-      font-size: 32px;
-      font-size: 2rem;
-      line-height: 1.5; }
-    .content-page--main h2 {
-      text-transform: uppercase;
-      color: #0B223F;
-      font-weight: 400;
-      font-size: 32px;
-      font-size: 2rem;
-      line-height: 1.5; }
-    .content-page--main h3 {
-      text-transform: uppercase;
-      color: #0B223F;
-      font-weight: 400;
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1;
-      line-height: 30px; }
-      .content-page--main h3.mixed {
-        text-transform: none;
-        font-weight: 300; }
-    .content-page--main h4, .content-page--main h5, .content-page--main h6 {
-      color: #0B223F;
-      font-weight: 400;
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.5; }
-    .content-page--main h4 {
-      text-transform: uppercase; }
-    .content-page--main table, .content-page--main ul {
-      margin-bottom: 1.5rem; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

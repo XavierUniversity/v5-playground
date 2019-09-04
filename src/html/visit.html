@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Art | Xavier University</title>
+    <title>Visit Campus | Xavier University</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/UndergradAdmissions1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
       }
     </style>
   </head>
@@ -25,47 +25,94 @@
     <!-- Add your site or application content here -->
     <main id="content">
       <section class="hero hero--academic">
-        <h1 class="hero__title hero--academic__title">Art</h1>
+        <h1 class="hero__title hero--academic__title">Visit Campus</h1>
+        
+        
+        <nav class="hero-nav">
+          <ul class="list--bare list--inline hero-nav__list">
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Admission Process</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Tuition &amp; Aid</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Make your Commitment</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Contact Us</a></li>
+          </ul>
+        </nav>
       </section>
 
       <div class="wrapper academic-wrapper">
-        include "includes/academic.cta.html"
         
         <div class="content">
-          include "includes/breadcrumbs.html"
+          <div class="spacer--64"></div>  
           
-          include "includes/academic.description.html"
+          <p>Students say campus has a special kind of atmosphere. They feel welcome here from day one, like they're part of a family. It's a rare quality in a college, and you'll have to experience it to believe it.</p>
           
-          include "includes/academic.tabs.html"
+          <h2>Daily Campus Tours</h2>
+          <p>Daily tours are offered Monday through Friday and on designated Saturdays.</p>
+          <p><a href="#" class="arrow">View Dates</a></p>
+          
+          <h2>Open Houses</h2>
+          <h3>X-Day</h3>
+          <p>Tour campus and speak with current students, faculty and staff during a day of activities catered to your academic interests. Offered at least once a semester on the weekends.</p>
+          <p><a href="#" class="arrow">View Dates</a></p>
+          
+          <h3>Preview Day</h3>
+          <p>Experience what it's really like to be a student here at Xavier. Sit in on classes, participate in club meetings, eat lunch in the cafeteria and meet other students who are considering Xavier. </p>
+          <p><a href="#" class="arrow">View Dates</a></p>
+            
+
+        
         </div><!-- /content -->
         <div class="sidebar">
           include "includes/sidebar.form.html"
-          
-          include "includes/academic.quickLinks.html"
         </div><!-- /sidebar -->
       </div><!-- /academic-wrapper -->
-      
+      <div class="wrapper">      
+        <div class="modules flex">
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Programs</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Life at Xavier</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Find your Counselor</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Make your Commitment</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+        </div>
+      </div>  
       <div class="spacer spacer--72"></div>
-      
       <section class="wrapper">
         <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
         <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
+        
+        <nav aria-label="">
+          <ul class="nav-list footer__nav-list flex">
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="#adult">Adult Students</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="#international">International</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="#transfer">Transfer</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="#vets">Veteran</a></li>
+          </ul>
+        </nav>
+        
       </section>
       <div class="spacer spacer--72"></div>
-      
-      <section class="wrapper">
-        <div class="flex">
-          include "includes/academic.panels.html"
-          
-          include "includes/academic.panels.html"
-          
-          include "includes/academic.panels.html"
-        </div>
-      </section>
-      <div class="spacer spacer--64"></div>
-      include "includes/cdn.html"
-      <div class="spacer spacer--64"></div>
-      include "includes/academic.quickLinksMobile.html"
     </main>
     <!-- End site or application content -->
     include "includes/footer.html"

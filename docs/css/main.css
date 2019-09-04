@@ -2218,6 +2218,8 @@ textarea {
       line-height: 1.5; }
     .content-page--main h4 {
       text-transform: uppercase; }
+    .content-page--main ul {
+      margin-bottom: 1.5rem; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

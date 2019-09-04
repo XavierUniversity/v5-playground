@@ -37,7 +37,14 @@
   }
   
   table, ul{
-    margin-bottom: 1.5rem;
+    @include margin(0, null, px-to-rem(12px), null);
+  }
+  
+  .indent{
+    margin-left: 1rem;
+    @include for-size("tablet-portrait-up"){
+      margin-left: 2rem;
+    }
   }
 
 }

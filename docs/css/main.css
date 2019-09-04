@@ -644,12 +644,14 @@ p {
   font-size: 1rem;
   line-height: 1.65;
   margin-top: 0;
-  margin-bottom: 1.5rem; }
-  p:first-of-type {
-    margin-top: 1rem; }
-    @media (min-width: 37.5rem) {
-      p:first-of-type {
-        margin-top: 1.5rem; } }
+  margin-bottom: 0.75rem;
+  /*&:first-of-type{
+    @include margin(px-to-rem(16px), null, null, null);
+    
+    @include for-size("tablet-portrait-up"){
+      @include margin(px-to-rem(24px), null, null, null);  
+    }
+  }*/ }
 
 img {
   max-width: 100%;
@@ -830,9 +832,9 @@ textarea {
   .slate-form .form_select .form_responses:hover::after {
     color: #4d4c4c; }
 
-#content a {
+.content a, #content a {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
-  #content a .icon {
+  .content a .icon, #content a .icon {
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     color: #007DB3;
     border-radius: 100%;
@@ -843,16 +845,16 @@ textarea {
     height: 1.875rem;
     margin-top: -0.09375rem;
     margin-right: 0.5rem; }
-  #content a:hover .icon, #content a:focus .icon, #content a:active .icon {
+  .content a:hover .icon, .content a:focus .icon, .content a:active .icon, #content a:hover .icon, #content a:focus .icon, #content a:active .icon {
     color: white;
     background: #007DB3;
     border-color: #007DB3; }
 
-#content a[class=""], #content a:not([class]) {
+.content a[class=""], .content a:not([class]), .content a.arrow, #content a[class=""], #content a:not([class]), #content a.arrow {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
-  #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
+  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.arrow:hover, .content a.arrow:focus, .content a.arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.arrow:hover, #content a.arrow:focus, #content a.arrow:active {
     color: #004867; }
 
 .wrapper {
@@ -2059,7 +2061,14 @@ textarea {
   text-transform: uppercase; }
 
 .content table, .content ul, .content-page table, .content-page ul {
-  margin-bottom: 1.5rem; }
+  margin-top: 0;
+  margin-bottom: 0.75rem; }
+
+.content .indent, .content-page .indent {
+  margin-left: 1rem; }
+  @media (min-width: 37.5rem) {
+    .content .indent, .content-page .indent {
+      margin-left: 2rem; } }
 
 .title, .hp-social__title {
   font-weight: 400;

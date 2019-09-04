@@ -675,6 +675,8 @@ table {
   border-collapse: collapse;
   max-width: 100%;
   width: 100%; }
+  table caption {
+    text-align: left; }
   table th, table td {
     line-height: 1.1;
     padding: 0.8rem;

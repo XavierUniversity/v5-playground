@@ -2218,7 +2218,7 @@ textarea {
       line-height: 1.5; }
     .content-page--main h4 {
       text-transform: uppercase; }
-    .content-page--main ul {
+    .content-page--main table, .content-page--main ul {
       margin-bottom: 1.5rem; }
 
 .sidenav {

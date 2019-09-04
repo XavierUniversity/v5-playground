@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Art | Xavier University</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+      }
+    </style>
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+      <section class="hero hero--academic">
+        <h1 class="hero__title hero--academic__title">Art</h1>
+      </section>
+
+      <div class="wrapper academic-wrapper">
+        include "includes/academic.cta.html"
+        
+        <div class="content">
+          include "includes/breadcrumbs.html"
+          
+          include "includes/academic.description.html"
+          
+          include "includes/academic.tabs.html"
+        </div><!-- /content -->
+        <div class="sidebar">
+          include "includes/sidebar.form.html"
+          
+          include "includes/academic.quickLinks.html"
+        </div><!-- /sidebar -->
+      </div><!-- /academic-wrapper -->
+      
+      <div class="spacer spacer--72"></div>
+      
+      <section class="wrapper">
+        <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
+        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
+      </section>
+      <div class="spacer spacer--72"></div>
+      
+      <section class="wrapper">
+        <div class="flex">
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+          
+          include "includes/academic.panels.html"
+        </div>
+      </section>
+      <div class="spacer spacer--64"></div>
+      include "includes/cdn.html"
+      <div class="spacer spacer--64"></div>
+      include "includes/academic.quickLinksMobile.html"
+    </main>
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

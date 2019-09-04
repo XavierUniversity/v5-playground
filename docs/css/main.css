@@ -132,7 +132,8 @@ html {
   /* 1 */
   -moz-tab-size: 4;
   /* 4 */
-  tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
   /* 4 */
   -ms-text-size-adjust: 100%;
   /* 5 */
@@ -198,7 +199,8 @@ a {
  */
 abbr[title] {
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -520,7 +522,6 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation;
   /* 2 */ }
@@ -742,11 +743,16 @@ button > *, a > * {
   background: none;
   height: 36px; }
 
+.form__input:disabled, .form__input:-moz-read-only {
+  background: white; }
+
 .form__input:disabled, .form__input:read-only {
   background: white; }
 
 .form input[type=submit], .form button[type=submit] {
-  appearance: none; }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
 
 .form__radio {
   display: block; }
@@ -790,7 +796,9 @@ textarea {
       box-shadow: 0 0 0.3125rem #007DB3;
       border: 0.0625rem solid #007DB3; }
   .slate-form select {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     box-shadow: none;
     background: white;
     background-image: none;
@@ -1036,7 +1044,10 @@ textarea {
       margin-top: -0.125rem;
       background-color: white;
       font-size: 0;
-      user-select: none; }
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
       .header-ui__btn--menu span:before, .header-ui__btn--menu span:after {
         position: absolute;
         left: 0;
@@ -1348,9 +1359,17 @@ textarea {
     height: 1.25rem;
     width: 1.25rem; }
 
+@-webkit-keyframes slide-in {
+  100% {
+    transform: translateX(0); } }
+
 @keyframes slide-in {
   100% {
     transform: translateX(0); } }
+
+@-webkit-keyframes slide-out {
+  100% {
+    transform: translateX(100%); } }
 
 @keyframes slide-out {
   100% {
@@ -1989,7 +2008,10 @@ textarea {
   left: 0;
   z-index: 99999 !important;
   overflow: hidden;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: none;
   width: 100vw;
   height: 100vh; }
@@ -2059,22 +2081,22 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-.tab {
+.content .tab {
   display: none; }
   @media (min-width: 85rem) {
-    .tab {
+    .content .tab {
       display: block; } }
-  .tab__list {
+  .content .tab__list {
     list-style: none;
     padding: 0;
     margin: 0; }
-  .tab__item {
+  .content .tab__item {
     display: inline-block;
     vertical-align: bottom;
     padding-right: 6px; }
-    .tab__item:first-child .tab__link, .tab__item:nth-child(4) .tab__link, .tab__item:last-child .tab__link {
+    .content .tab__item:first-child .content .tab__link, .content .tab__item:nth-child(4) .content .tab__link, .content .tab__item:last-child .content .tab__link {
       padding-top: 1rem; }
-  .tab__link {
+  .content .tab__link {
     display: block;
     width: 100%;
     height: auto;
@@ -2093,7 +2115,7 @@ textarea {
     font-size: 1rem;
     line-height: 1; }
     @media (min-width: 85rem) {
-      .tab__link {
+      .content .tab__link {
         display: inline-block;
         width: 7.8125rem;
         height: 3.125rem;
@@ -2104,17 +2126,17 @@ textarea {
         padding-bottom: 0;
         padding-left: 0;
         border-bottom: solid 0.375rem white; }
-        .tab__link.visible, .tab__link:active {
+        .content .tab__link.visible, .content .tab__link:active {
           border-bottom-color: #F0F2F3; } }
-    .tab__link:hover, .tab__link:focus {
+    .content .tab__link:hover, .content .tab__link:focus {
       color: #1B4675; }
-  .tab--hide-desktop {
+  .content .tab--hide-desktop {
     border: none !important; }
-    .tab--hide-desktop:not(:first-of-type) {
+    .content .tab--hide-desktop:not(:first-of-type) {
       margin-top: 0.5rem !important;
       margin-bottom: 0; }
     @media (min-width: 85rem) {
-      .tab--hide-desktop {
+      .content .tab--hide-desktop {
         display: none !important; } }
 
 .tabs__title {
@@ -2746,5 +2768,4 @@ textarea {
 @media (min-width: 37.5rem) {
   .margin--left-48 {
     margin-left: 3rem; } }
-
 /*# sourceMappingURL=main.css.map */

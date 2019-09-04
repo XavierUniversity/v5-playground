@@ -132,8 +132,7 @@ html {
   /* 1 */
   -moz-tab-size: 4;
   /* 4 */
-  -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 4 */
   -ms-text-size-adjust: 100%;
   /* 5 */
@@ -199,8 +198,7 @@ a {
  */
 abbr[title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; }
+  text-decoration: underline dotted; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -522,6 +520,7 @@ select,
 summary,
 textarea,
 [tabindex] {
+  -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation;
   /* 2 */ }
@@ -743,16 +742,11 @@ button > *, a > * {
   background: none;
   height: 36px; }
 
-.form__input:disabled, .form__input:-moz-read-only {
-  background: white; }
-
 .form__input:disabled, .form__input:read-only {
   background: white; }
 
 .form input[type=submit], .form button[type=submit] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
+  appearance: none; }
 
 .form__radio {
   display: block; }
@@ -796,9 +790,7 @@ textarea {
       box-shadow: 0 0 0.3125rem #007DB3;
       border: 0.0625rem solid #007DB3; }
   .slate-form select {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
     box-shadow: none;
     background: white;
     background-image: none;
@@ -1044,10 +1036,7 @@ textarea {
       margin-top: -0.125rem;
       background-color: white;
       font-size: 0;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
+      user-select: none; }
       .header-ui__btn--menu span:before, .header-ui__btn--menu span:after {
         position: absolute;
         left: 0;
@@ -1359,17 +1348,9 @@ textarea {
     height: 1.25rem;
     width: 1.25rem; }
 
-@-webkit-keyframes slide-in {
-  100% {
-    transform: translateX(0); } }
-
 @keyframes slide-in {
   100% {
     transform: translateX(0); } }
-
-@-webkit-keyframes slide-out {
-  100% {
-    transform: translateX(100%); } }
 
 @keyframes slide-out {
   100% {
@@ -2008,10 +1989,7 @@ textarea {
   left: 0;
   z-index: 99999 !important;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   display: none;
   width: 100vw;
   height: 100vh; }
@@ -2473,10 +2451,10 @@ textarea {
       display: flex;
       grid-area: 1 / 3 / 2 / 4; } }
 
-.academic-wrapper {
+.designed-wrapper {
   position: relative; }
   @media (min-width: 56.25rem) {
-    .academic-wrapper {
+    .designed-wrapper {
       display: grid;
       grid-template-columns: 1fr 400px;
       grid-template-rows: 1fr 2fr;
@@ -2484,42 +2462,42 @@ textarea {
       grid-row-gap: 0px;
       margin-top: 0; } }
   @media (min-width: 56.25rem) {
-    .academic-wrapper .academic-cta {
+    .designed-wrapper .designed-cta {
       grid-area: 1 / 2 / 2 / 3; } }
   @media (min-width: 56.25rem) {
-    .academic-wrapper .content {
+    .designed-wrapper .content {
       grid-area: 1 / 1 / 3 / 2;
       padding-right: 3rem; } }
   @media (min-width: 85rem) {
-    .academic-wrapper .content {
+    .designed-wrapper .content {
       padding-right: 6rem; } }
   @media (min-width: 56.25rem) {
-    .academic-wrapper .sidebar {
+    .designed-wrapper .sidebar {
       grid-area: 1 / 2 / 3 / 3; } }
 
-.academic-cta {
+.designed-cta {
   display: none; }
   @media (min-width: 37.5rem) {
-    .academic-cta {
+    .designed-cta {
       display: block; } }
   @media (min-width: 56.25rem) {
-    .academic-cta {
+    .designed-cta {
       position: absolute;
       top: -2.875rem;
       width: 100%; } }
-  .academic-cta__link {
+  .designed-cta__link {
     margin-top: 1.5rem;
     margin-bottom: 0; }
     @media (max-width: 36.5rem) {
-      .academic-cta__link {
+      .designed-cta__link {
         padding-top: 1rem;
         padding-bottom: 1rem;
         margin-top: 1rem;
         margin-bottom: 0; } }
-  .academic-cta__item {
+  .designed-cta__item {
     width: 100%; }
     @media (min-width: 56.25rem) {
-      .academic-cta__item:first-child {
+      .designed-cta__item:first-child {
         margin-right: 1rem;
         margin-bottom: 0; } }
 
@@ -2768,4 +2746,5 @@ textarea {
 @media (min-width: 37.5rem) {
   .margin--left-48 {
     margin-left: 3rem; } }
+
 /*# sourceMappingURL=main.css.map */

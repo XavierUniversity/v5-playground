@@ -1891,17 +1891,17 @@ textarea {
       position: absolute;
       color: white;
       bottom: 15vh; }
-  .hero--academic {
+  .hero--large {
     height: 19.3125rem; }
     @media (min-width: 56.25rem) {
-      .hero--academic {
+      .hero--large {
         height: 38.625rem; } }
-    .hero--academic__title {
+    .hero--large__title {
       font-size: 60px;
       font-size: 3.75rem;
       line-height: 1.2; }
       @media (min-width: 56.25rem) {
-        .hero--academic__title {
+        .hero--large__title {
           font-size: 80px;
           font-size: 5rem;
           line-height: 1.2; } }

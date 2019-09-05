@@ -27,7 +27,7 @@
       <section class="hero hero--large">
         <h1 class="hero__title hero--large__title">Visit Campus</h1>
         
-        <nav class="hero-nav">
+        <nav class="hero-nav desktop">
           <ul class="list--bare list--inline hero-nav__list">
             <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Admission Process</a></li>
             <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Tuition &amp; Aid</a></li>
@@ -41,6 +41,37 @@
         
         <div class="content">
           include "includes/breadcrumbs.html"
+          
+        <div class="content-page--nav sidenav mobile">
+          <button aria-label="Toggle Menu" class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu">Menu
+            <svg class="icon sidenav__icon sidenav__icon--plus"> <use xlink:href="#xu-plus"></use> </svg> 
+            <svg class="icon sidenav__icon sidenav__icon--minus"> <use xlink:href="#xu-minus"></use> </svg>
+          </button>
+          
+          <nav aria-label="" class="sidenav__content" id="content-menu">
+            <ul class="nav-list content-page--nav__list"> 
+              <li class="list--inline__item hero-nav__item">
+              <a class="hero-nav__link" href="admission-process/index">Admission Process</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">
+              <a class="hero-nav__link" href="tuition-aid/index">Tuition &amp; Aid</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="images/visit.png">Visit</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="images/apply.png">Apply</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="https://www.xavier.edu/deposit/">Commit to Xavier</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="contact">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        
+        </div>
           
           <p>Students say campus has a special kind of atmosphere. They feel welcome here from day one, like they're part of a family. It's a rare quality in a college, and you'll have to experience it to believe it.</p>
           
@@ -98,28 +129,28 @@
         <div class="modules flex">
           <div class="module module--rounded">
             <div class="module__content">
-              <h4 class="module__title">Programs</h4>
+              <h4 class="module__title">Hotel Information</h4>
               <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
             </div>
           </div>
         
           <div class="module module--rounded">
             <div class="module__content">
-              <h4 class="module__title">Life at Xavier</h4>
+              <h4 class="module__title">Airport Information</h4>
               <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
             </div>
           </div>
         
           <div class="module module--rounded">
             <div class="module__content">
-              <h4 class="module__title">Find your Counselor</h4>
+              <h4 class="module__title">Campus Map</h4>
               <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
             </div>
           </div>
         
           <div class="module module--rounded">
             <div class="module__content">
-              <h4 class="module__title">Make your Commitment</h4>
+              <h4 class="module__title">About Cincinnati</h4>
               <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
             </div>
           </div>

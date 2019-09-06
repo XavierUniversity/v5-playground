@@ -86,7 +86,7 @@
       @include font-size(32px);
       line-height: px-to-rem(32px);
       @include for-size("tablet-portrait-up"){
-        line-height: auto;
+        line-height: 1;
       }
     }
     
@@ -97,7 +97,7 @@
       @include font-size(32px);
       line-height: px-to-rem(32px);
       @include for-size("tablet-portrait-up"){
-        line-height: auto;
+        line-height: 1;
       }
     }
     

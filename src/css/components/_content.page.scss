@@ -56,7 +56,7 @@
       @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
       
       &.active{
-        font-weight: 400;
+        font-weight: 300;
       }
       
       &:hover, &:focus{

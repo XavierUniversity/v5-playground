@@ -2173,7 +2173,7 @@ textarea {
       padding-top: 0.625rem;
       padding-bottom: 0.625rem; }
       .content-page--nav__link.active {
-        font-weight: 400; }
+        font-weight: 300; }
       .content-page--nav__link:hover, .content-page--nav__link:focus {
         color: #1B4675;
         text-decoration: underline; }

@@ -207,7 +207,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: 300; }
 
 /**
  * 1. Use the default monospace user interface font
@@ -1902,7 +1902,11 @@ textarea {
     padding-bottom: 1.5625rem;
     padding-left: 1rem; }
   .c-btn--inline, .btn--inline {
-    display: inline; }
+    display: inline-block;
+    padding-top: 0.65rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.65rem;
+    padding-left: 1.25rem; }
 
 .action button {
   font-weight: 200;
@@ -2356,7 +2360,7 @@ textarea {
       padding-top: 0.625rem;
       padding-bottom: 0.625rem; }
       .content-page--nav__link.active {
-        font-weight: 400; }
+        font-weight: 300; }
       .content-page--nav__link:hover, .content-page--nav__link:focus {
         color: #1B4675;
         text-decoration: underline; }
@@ -2374,14 +2378,19 @@ textarea {
       font-weight: 400;
       font-size: 32px;
       font-size: 2rem;
-      line-height: 1.5; }
+      line-height: 1.5;
+      line-height: 2rem; }
+      @media (min-width: 37.5rem) {
+        .content-page--main h1 {
+          line-height: auto; } }
     .content-page--main h2 {
       text-transform: uppercase;
       color: #0B223F;
       font-weight: 400;
       font-size: 32px;
       font-size: 2rem;
-      line-height: 1.5; }
+      line-height: 1.5;
+      line-height: 2rem; }
     .content-page--main h3 {
       text-transform: uppercase;
       color: #0B223F;
@@ -2389,7 +2398,7 @@ textarea {
       font-size: 24px;
       font-size: 1.5rem;
       line-height: 1;
-      line-height: 30px; }
+      line-height: 1.5rem; }
       .content-page--main h3.mixed {
         text-transform: none;
         font-weight: 300; }

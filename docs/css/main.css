@@ -2208,6 +2208,9 @@ textarea {
       font-size: 2rem;
       line-height: 1.5;
       line-height: 2rem; }
+      @media (min-width: 37.5rem) {
+        .content-page--main h2 {
+          line-height: auto; } }
     .content-page--main h3 {
       text-transform: uppercase;
       color: #0B223F;
@@ -2219,6 +2222,9 @@ textarea {
       .content-page--main h3.mixed {
         text-transform: none;
         font-weight: 300; }
+      @media (min-width: 37.5rem) {
+        .content-page--main h3 {
+          line-height: 1; } }
     .content-page--main h4, .content-page--main h5, .content-page--main h6 {
       color: #0B223F;
       font-weight: 400;

@@ -86,7 +86,7 @@
       @include font-size(32px);
       line-height: px-to-rem(32px);
       @include for-size("tablet-portrait-up"){
-        line-height: auto;
+        line-height: 1;
       }
     }
     
@@ -95,7 +95,10 @@
       color: $darkNavy;
       font-weight: 400;
       @include font-size(32px);
-      line-height: px-to-rem(32px)
+      line-height: px-to-rem(32px);
+      @include for-size("tablet-portrait-up"){
+        line-height: 1;
+      }
     }
     
     h3{
@@ -108,6 +111,9 @@
         text-transform: none;
         font-weight: 300;  
       } 
+      @include for-size("tablet-portrait-up"){
+        line-height: 1;
+      }
     }
     
     h4,h5,h6{

@@ -45,7 +45,7 @@
     }
   }
   
-  &--academic{
+  &--large{
     height: px-to-rem(618px / 2);
     @include for-size("tablet-landscape-up"){
       height: px-to-rem(618px);

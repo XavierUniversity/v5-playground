@@ -207,7 +207,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: 300; }
 
 /**
  * 1. Use the default monospace user interface font

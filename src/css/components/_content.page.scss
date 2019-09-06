@@ -84,6 +84,10 @@
       color: $darkNavy;
       font-weight: 400;
       @include font-size(32px);
+      line-height: px-to-rem(32px);
+      @include for-size("tablet-portrait-up"){
+        line-height: auto;
+      }
     }
     
     h2{
@@ -91,6 +95,7 @@
       color: $darkNavy;
       font-weight: 400;
       @include font-size(32px);
+      line-height: px-to-rem(32px)
     }
     
     h3{
@@ -98,7 +103,7 @@
       color: $darkNavy;
       font-weight: 400;
       @include font-size(24px);
-      line-height: 30px;
+      line-height: px-to-rem(24px);
       &.mixed{
         text-transform: none;
         font-weight: 300;  

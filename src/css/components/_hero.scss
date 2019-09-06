@@ -22,7 +22,7 @@
       @include margin(0, null,null,null);
       @include font-size(48px, 1);
       @include for-size("tablet-landscape-up"){
-        @include font-size(65px, 1);
+      @include font-size(65px, 1);
       }
     }
     
@@ -68,6 +68,7 @@
     &__title {
       color: white;
       text-transform: uppercase;
+      text-decoration: none;
       text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(2px) black;
       margin-top: 0px;
       font-weight: 700;

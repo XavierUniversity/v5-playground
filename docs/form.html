@@ -7,8 +7,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+    
   </head>
   <body>
+    <!-- Skip Header & Navigation -->
+    <nav aria-label="Skip Link">
+      <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
+    </nav>
     <header>
       <div class="header header--fixed" id="header">  
         <!-- Branding == Logo and Navigation -->
@@ -156,319 +169,170 @@
     <!-- Add your site or application content here -->
     <main id="content">
       
-      <div class="hero" style="background-image: url('images/hero/HomePageHero.png'); height: 80vh; background-size: cover; background-color: #0c2340;">
-      </div>
+      <section class="hero hero--content">
+          <h1 class="hero--content__title">Department of Lorem Ipsum</h1>
+      </section>
       
-      <div id="wrapper" xstyle="margin: 0 auto;">
-        <h1>Content Kitchen Sink</h1>
-        <p>This is a basic HTML example of all the attributes we need to style. Including <strong>bolded</strong> or <em>italicized</em> content.</p>
-
-        <table summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
-          <caption>
-            Basic table
-          </caption>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Movie</th>
-              <th>Downloads</th>
-              <th>Grosses</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th colspan="4">torrentfreak.com</th>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <th>1</th>
-              <td>Fast Five</td>
-              <td>9,260,000</td>
-              <td>$626,137,675</td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>The Hangover II</td>
-              <td>8,840,000</td>
-              <td>$581,464,305</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <table class="striped" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
-          <caption>
-            Striped table
-          </caption>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Movie</th>
-              <th>Downloads</th>
-              <th>Grosses</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <th colspan="4">torrentfreak.com</th>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <th>1</th>
-              <td>Fast Five</td>
-              <td>9,260,000</td>
-              <td>$626,137,675</td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>The Hangover II</td>
-              <td>8,840,000</td>
-              <td>$581,464,305</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <blockquote>
-          <p><em>This is a properly formatted blockquote, btw.</em> Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</p>
-          <footer>
-            — <cite><a href="http://www.thegatesnotes.com">Bill Gates</a></cite>
-          </footer>
-        </blockquote>
-
-        <blockquote>
-          <p>
-            “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
-          </p>
-        </blockquote>
-        <hr />
-        <pre>
-        <code>
-        #header h1 a {
-          display: block;
-          width: 300px;
-          height: 80px;
-        }
-        </code>
-        </pre>
-
-        <h1>
-          Level 01 heading
-        </h1>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <h2>
-          Level 02 Heading
-        </h2>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <h3>
-          Level 03 Heading
-        </h3>
-        <h3 class="mixed">
-          1. Apply using either the Xavier application or the Common Application.
-        </h3>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <h4>
-          Level 04 Heading
-        </h4>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <h5>
-          Level 05 Heading
-        </h5>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <h6>
-          Level 06 Heading
-        </h6>
-        <p>
-          Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
-        </p>
-        <blockquote>
-          <p>
-            Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.
-          </p>
-        </blockquote>
-        <address>
-          Address: Example address 224, Sweden
-        </address>
-        <pre>
-        <strong>Preformated:</strong>Testing one row
-             and another
-        </pre>
-        <p>
-          I am <a href="?abc123">the a tag</a> example<br />
-          I am <abbr title="test">the abbr tag</abbr> example<br />
-          I am <acronym>the acronym tag</acronym> example<br />
-          I am <b>the b tag</b> example<br />
-          I am <big>the big tag</big> example<br />
-          I am <cite>the cite tag</cite> example<br />
-          I am <code>the code tag</code> example<br />
-          I am <del>the del tag</del> example<br />
-          I am <dfn>the dfn tag</dfn> example<br />
-          I am <em>the em tag</em> example<br />
-          I am <i>the i tag</i> example<br />
-          I am <ins>the ins tag</ins> example<br />
-          I am <kbd>the kbd tag</kbd> example<br />
-          I am <q>the q tag</q> example<br />
-          I am <samp>the samp tag</samp> example<br />
-          I am <small>the small tag</small> example<br />
-          I am <span>the span tag</span> example<br />
-          I am <strong>the strong tag</strong> example<br />
-          I am <sub>the sub tag</sub> example<br />
-          I am <sup>the sup tag</sup> example<br />
-          I am <tt>the tt tag</tt> example<br />
-          I am <var>the var tag</var> example<br />
-          I am the <span class="small">small class</span> example<br />
-          I am the <span class="large">large class</span> example<br />
-          I am the <span class="quiet">quiet class</span> example<br />
-          I am the <span class="highlight">highlight class</span> example<br />
-        </p>
-
-        <hr>
-
-        <ul>
-          <li>Unordered list 01</li>
-          <li>Unordered list 02</li>
-          <li>Unordered list 03
-            <ul>
-              <li>Unordered list inside list level 2</li>
-              <li>Unordered list inside list level 2
-                <ul>
-                  <li>Unordered list inside list level 3</li>
-                  <li>Unordered list inside list level 3</li>
-                </ul>
-              </li>
+      <section class="wrapper">    
+        <div class="content-page">
+          <div class="content-page__breadcrumbs">
+            <nav aria-label="Breadcrumb">
+              <ul class="crumbs list--inline list--bare">
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="/">Home</a></li>
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Main Site</a></li>
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Parent Index</a></li>
+                <li class="crumbs__item list--inline__item crumbs__current" aria-current="page">Current Page</li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div class="content-page--nav sidenav">
+            <button class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu" aria-label="Toggle Menu">Menu<svg class="icon sidenav__icon sidenav__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon sidenav__icon sidenav__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+            
+            <nav id="content-menu" class="sidenav__content" aria-label="">
+              <ul class="nav-list content-page--nav__list">
+                <li class="content-page--nav__item"><a class="content-page--nav__link active" href="#">Nav Item One</a></li>
+              
+                  <ul class="nav-list content-page--subnav__list">
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Sub Nav Item</a></li>
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Really Long Subnav Item Name That Wraps Around to the Next Line</a></li>
+                  </ul>
+              
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Second Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Nav Item Number Three That is Long and Wraps Around to the Next Line</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Here is the Fourth Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Fifth and Final Nav Item</a></li>
             </ul>
-          </li>
-        </ul>
-        <ol>
-          <li>Ordered list 01</li>
-          <li>Ordered list 02</li>
-          <li>Ordered list 03
-            <ol>
-              <li>Ordered list inside list level 2</li>
-              <li>Ordered list inside list level 2
-                <ol>
-                  <li>Ordered list inside list level 3</li>
-                  <li>Ordered list inside list level 3</li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-        </ol>
-
-        <dl>
-          <dt>
-            Description list title 01
-          </dt>
-          <dd>
-            Description list description 01
-          </dd>
-          <dt>
-            Description list title 02
-          </dt>
-          <dd>
-            Description list description 02
-          </dd>
-          <dd>
-            Description list description 03
-          </dd>
-        </dl>
-      <hr>
-        <form action="#" class="form">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Form legend</legend>
-            <div>
-              <label for="f1" class="form__label">Text input:</label>
-              <input type="text" id="f1" class="form__input" value="input text">
-            </div>
-            <div>
-              <label for="pw" class="form__label">Password input:</label>
-              <input type="password" id="pw" class="form__input" value="password">
-            </div>
-            <div>
-              <label for="f2" class="form__label">Radio input:</label>
-              <input type="radio" id="f2" class="form__radio">
-            </div>
-            <div>
-              <label for="f3" class="form__label">Checkbox input:</label>
-              <input type="checkbox" id="f3" class="form__checkbox">
-            </div>
-            <div>
-              <label for="f4" class="form__label">Select field:</label>
-              <select id="f4" class="form__select">
-                <option>
-                  Option 01
-                </option>
-                <option>
-                  Option 02
-                </option>
-              </select>
-            </div>
-            <div>
-              <label for="f5" class="form__label">Textarea:</label>
-              <textarea id="f5" cols="30" rows="5" class="form__textarea">Textarea text</textarea>
-            </div>
-            <div>
-              <label for="f6" class="form__label">Input Button:</label>
-              <input type="button" id="f6" class="btn" value="button text">
-            </div>
-            <div>
-              <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="btn"&gt;</span></label>
-              <button class="btn btn--inline positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="btn btn--inline" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="btn btn--inline negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
-            </div>
-          </fieldset>
-        </form>
-        <hr>
-        I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="http://www.something.com">an external website</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="something.rss">an rss feed</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="something.xls">an excel spreadsheet</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="aim:something">an AIM screenname</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="mailto:something">an email address</a> link, so readers know that I'm not a normal link.<br />
-        I am <a href="http://yourwebsite.com">an internal link</a>. Change the stylesheet's "http://yourwebsite.com" to your domain name so I don't look like an external link.<br />
-
-        <br />
-
-        <p class="success">
-          <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>.
-        </p>
-        <p class="error">
-          <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> This is a paragraph with class="error" and <a href="http://www.something.com">a link</a>.
-        </p>
-        <p class="notice">
-          <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
-        </p>
-        
-        <h2>Buttons</h2>
-        <a class="c-btn" href="#">Button</a>
-        <a class="c-btn c-btn--inline" href="#">Inline Button</a>
-        <hr />
-        <div class="split-1-1"> 
-          <div class="col1">Split 1-1 Column 1</div> 
-          <div class="col2">Split 1-1 Column 2</div> 
-        </div>
-        <div class="split-2-1"> 
-          <div class="col1">Split 2-1 Column 1</div> 
-          <div class="col2">Split 2-1 Column 2</div> 
-        </div>
-        <div class="split-1-1-1"> 
-          <div class="col1">Split 1-1-1 Column 1</div> 
-          <div class="col2">Split 1-1-1 Column 2</div> 
-          <div class="col3">Split 1-1-1 Column 3</div> 
+          </nav>
         </div>
         
-      </div>
+          <div class="content-page--main"> 
+            <h1>Make Your Commitment</h1> 
+            
+                                <p>We're excited you're taking the next step toward joining the Xavier family - a group of 4,600 undergraduate students and 72,000 alumni. It's a community of values, achievement and care of the whole person. Of course, it wouldn't be the same without you.</p>
+<p>Incoming students who wish to cancel their enrollment at Xavier, excluding those admitted to the College of Nursing, may request a refund of their deposit in writing or via email by May 1.&#160;<strong>All deposits submitted for students admitted to the College of Nursing are non-refundable.</strong></p>
+            
+                        <p>Please complete the information below to pay your tuition deposit and/or housing deposit for <strong>Fall 2019, Spring 2020, or Fall 2020</strong>.</p>
+            
+            <form action="https://commerce.cashnet.com/XAVIERADMDEP" class="form" method="POST">
+                <input name="formID" type="hidden" value="575420724"/>
+                <input id="itemcode1" name="itemcode1" type="hidden" value=""/>
+                <input id="itemcode2" name="itemcode2" type="hidden" value=""/>
+                <input id="amount1" name="amount1" type="hidden" value=""/>
+                <input id="custcode" name="custcode" type="hidden" value=""/>
+                <input id="admdep_dep" name="admdep_dep" type="hidden" value=""/>
+                <input id="idIn" name="idIn" type="hidden" value=""/>
+                <fieldset class="form__fieldset">
+                    <legend class="form__title form__title--sub">Deposit Information</legend>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="term">Entry Term</label>
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <select class="form__select" id="term" name="admdep_term" required="">
+                                <option value="">Select one</option>
+                                                                     <option value="Fall 2019">Fall 2019</option>
+                                    <option value="Spring 2020">Spring 2020</option>
+                                    <option value="Fall 2020">Fall 2020</option>
+                                                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="admdep_type">Student Type</label>
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <select class="form__select" id="admdep_type" name="admdep_type" required="">
+                                <option value="">Select one</option>
+                                <option value="Freshman">Freshman/International Freshman</option>
+                                <option value="Transfer">Transfer/International Transfer</option>
+                                <option value="ESL">English as a Second Language</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="depType">Deposit Type</label>
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <select class="form__select" id="depType" name="depType" required="">
+                                <option value="">Select one</option>
+                                <option value="Tuition">Tuition</option>
+                                 
+                                                                
+                                <option value="Both">Tuition and Housing</option>
+                            </select>
+                        </div>
+                    </div>
+                            <p style="padding-top:15px;">If you are planning on commuting, select <strong>Tuition</strong>. If you will be living on campus (required for traditional-age freshmen and sophomores who live more than 35 miles from campus), select <strong>Tuition and Housing</strong>.</p>
+                        
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__title form__title--sub">Student Information</legend>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="student_firstname">
+                                Student's First/Given Name
+                            </label>    
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <input class="form__input" id="student_firstname" maxlength="100" name="admdep_fname" required="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="student_lastname">
+                                Student's Last/Family Name
+                            </label>    
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <input class="form__input" id="student_lastname" maxlength="100" name="admdep_lname" required="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="date_of_birth">
+                                Student's Birth Date
+                            </label>    
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <input class="form__input" id="date_of_birth" name="admdep_bdate" required="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label class="form__label" for="phone">
+                                Student's Phone Number
+                            </label>    
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                            <input class="form__input" id="phone" name="admdep_phone" required="" type="tel"/>
+                        </div>
+                    </div>
+                    
+                    <p>Xavier accepts electronic checks and the following credit cards: American Express, Discover, MasterCard and Visa. All credit card transactions will be assessed a convenience fee. There are no additional fees for paying by electronic check. To pay by a physical check download the <a href="documents/commitment.pdf">mail-in deposit form</a>.</p>
+                    
+                </fieldset>
+                <button class="btn" type="submit">
+                    Continue <span aria-hidden="true" class="fa fa-arrow-right"></span>
+                </button>
+            </form>
+            
+            <p>If you have any questions regarding your tuition/housing payment, feel free to contact the office of admission at 877-XUADMIT (982-3648) or 513-745-3301. Email us at <a href="mailto:xuadmit@xavier.edu">xuadmit@xavier.edu</a>.<br/></p>
+            <div class="alert alert--info">
+              <div class="alert--info__icon">
+                <span aria-hidden="true" class="fa"></span>
+              </div>
+              <div class="alert__content">
+                <p>Having trouble submitting your deposit? Please call us at 513-745-4296 between the hours of 8am and 4pm EST for further support.</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+        
+      </section>
     </main>
+     
     <!-- End site or application content -->
     <footer class="footer">
       <div class="wrapper">

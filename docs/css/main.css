@@ -1734,7 +1734,11 @@ textarea {
     padding-bottom: 1.5625rem;
     padding-left: 1rem; }
   .c-btn--inline, .btn--inline {
-    display: inline; }
+    display: inline-block;
+    padding-top: 0.65rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.65rem;
+    padding-left: 1.25rem; }
 
 .action button {
   font-weight: 200;

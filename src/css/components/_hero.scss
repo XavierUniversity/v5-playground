@@ -45,6 +45,9 @@
     
     &__title{
       @include font-size(60px);
+      @include for-size("phone-only"){
+        @include font-size(30px);
+      }
       @include for-size("tablet-landscape-up"){
         @include font-size(80px);
       }

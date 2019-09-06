@@ -2058,13 +2058,12 @@ textarea {
       position: absolute;
       display: block;
       color: white;
-      bottom: 15vh; }
-    .hero--large {
       bottom: 15vh;
       text-decoration: none;
       height: 6.25rem;
       padding-top: 4.375rem;
       vertical-align: bottom; }
+  .hero--large {
     height: 19.3125rem; }
     @media (min-width: 56.25rem) {
       .hero--large {
@@ -2074,7 +2073,7 @@ textarea {
       font-size: 3.75rem;
       line-height: 1.2; }
       @media (max-width: 36.5rem) {
-        .hero--academic__title {
+        .hero--large__title {
           font-size: 30px;
           font-size: 1.875rem;
           line-height: 1.6; } }
@@ -2421,7 +2420,7 @@ textarea {
       line-height: 2rem; }
       @media (min-width: 37.5rem) {
         .content-page--main h1 {
-          line-height: auto; } }
+          line-height: 1; } }
     .content-page--main h2 {
       text-transform: uppercase;
       color: #0B223F;
@@ -2432,7 +2431,7 @@ textarea {
       line-height: 2rem; }
       @media (min-width: 37.5rem) {
         .content-page--main h2 {
-          line-height: auto; } }
+          line-height: 1; } }
     .content-page--main h3 {
       text-transform: uppercase;
       color: #0B223F;
@@ -2457,6 +2456,7 @@ textarea {
       text-transform: uppercase; }
     .content-page--main table, .content-page--main ul {
       margin-bottom: 1.5rem; }
+
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;
   border-bottom: solid 0.125rem #d8d8d8;

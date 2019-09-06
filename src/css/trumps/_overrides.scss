@@ -31,3 +31,17 @@
 .hidden{
   display: none;
 }
+
+.mobile {
+  display: block;
+    @include for-size("tablet-landscape-up"){
+      display: none;
+    }
+}
+
+.desktop {
+  display: none;
+    @include for-size("tablet-landscape-up"){
+      display: block;
+    }
+}

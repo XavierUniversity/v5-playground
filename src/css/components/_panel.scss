@@ -24,6 +24,19 @@
     @include margin(px-to-rem(48px), null, null, null);
   }
   
+  &--quicklinks {
+    display: none;
+    @include for-size("tablet-landscape-up"){
+      display: block;
+    }
+    &__mobile {
+      display: block;
+      @include for-size("tablet-landscape-up"){
+      display: none;
+    }
+    }
+  }
+  
   &--features{
     @include padding(px-to-rem(42px), 0, px-to-rem(8px), 0);
     @include for-size('tablet-landscape-up'){

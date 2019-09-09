@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Art | Xavier University</title>
+    <title>Visit Campus | Xavier University</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <style>
       .hero{
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
-        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/Art_Hero@1x.jpg") 1x, url("images/hero/Art_Hero@2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/UndergradAdmissions1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/UndergradAdmissions1x.jpg") 1x, url("images/hero/UndergradAdmissions2x.jpg") 2x );
       }
     </style>
   </head>
@@ -167,16 +167,19 @@
     <!-- Add your site or application content here -->
     <main id="content">
       <section class="hero hero--large">
-        <h1 class="hero__title hero--large__title">Art</h1>
+        <h1 class="hero__title hero--large__title">Visit Campus</h1>
+        
+        <nav class="hero-nav desktop">
+          <ul class="list--bare list--inline hero-nav__list">
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Admission Process</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Tuition &amp; Aid</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Make your Commitment</a></li>
+            <li class="list--inline__item hero-nav__item"><a class="hero-nav__link" href="#process">Contact Us</a></li>
+          </ul>
+        </nav>
       </section>
 
       <div class="wrapper designed-wrapper">
-        <div class="designed-cta">
-          <ul class="nav-list flex list--bare hidden-mobile designed-cta__list">
-            <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Apply</a></li>
-            <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Request Info</a></li>
-          </ul>
-        </div>
         
         <div class="content">
           <nav aria-label="Breadcrumb">
@@ -188,178 +191,80 @@
             </ul>
           </nav>
           
-          <h2>Degrees Awarded: Bachelor of Arts, Bachelor of Fine Arts</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              
-          <h3>Concentrations Offered:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            
-          <h3>Scholarships Offered:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="content-page--nav sidenav mobile">
+          <button aria-label="Toggle Menu" class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu">Menu
+            <svg class="icon sidenav__icon sidenav__icon--plus"> <use xlink:href="#xu-plus"></use> </svg> 
+            <svg class="icon sidenav__icon sidenav__icon--minus"> <use xlink:href="#xu-minus"></use> </svg>
+          </button>
           
-          <div class="tabs">  
-            <nav role='navigation' class="tab">
-              <ul class="tab__list">
-                <li class="tab__item"><a href="#curriculum" class="tab__link visible">Curriculum</a></li>
-                <li class="tab__item"><a href="#related" class="tab__link">Related Programs</a></li>
-                <li class="tab__item"><a href="#courses" class="tab__link">Sample Courses</a></li>
-                <li class="tab__item"><a href="#outcomes" class="tab__link">Outcomes</a></li>
-                <li class="tab__item"><a href="#clubs" class="tab__link">Clubs</a></li>
-              </ul>
-            </nav>
+          <nav aria-label="" class="sidenav__content" id="content-menu">
+            <ul class="nav-list content-page--nav__list"> 
+              <li class="list--inline__item hero-nav__item">
+              <a class="hero-nav__link" href="admission-process/index">Admission Process</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">
+              <a class="hero-nav__link" href="tuition-aid/index">Tuition &amp; Aid</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="images/visit.png">Visit</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="images/apply.png">Apply</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="https://www.xavier.edu/deposit/">Commit to Xavier</a>
+              </li>
+              <li class="list--inline__item hero-nav__item">    
+              <a class="hero-nav__link" href="contact">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        
+        </div>
+          
+          <h2>Daily Campus Tours</h2>
+          <p>Daily tours are offered Monday through Friday and on designated Saturdays.<br>
+            <a href="#">View Dates</a></p>
+          
+          <h2>Open Houses</h2>
+          <div class="indent">
+            <h3>X-Day</h3>
+            <p>Tour campus and speak with current students, faculty and staff during a day of activities catered to your academic interests. Offered at least once a semester on the weekends.<br>
+            <a href="#" >View Daily Visit Options</a></p>
             
-            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn on" data-toggle="#curriculum">
-              Curriculum <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-            </button>
-
-            <div id="curriculum" class="tabs__content visible">
-              <h2 class="sr-only">Curriculum</h2>
-              <p>The sample course sequence below illustrates class offerings for the Bachelor of Arts major. Consult the official Xavier University course catalog for detailed registration and advising information.</p>
-              <p>Xavier is known for providing an education that's both challenging and personal. Here are some courses that are part of the Art major at Xavier:</p>
-              
-              <div class="accordion">
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#fy">
-                  First Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="fy" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#soph">
-                  Sophomore Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="soph" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#junior">
-                  Junior Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="junior" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>                </div>
-                <button class="o-btn tabs__title accordion__btn" aria-label="Toggle Sub Menu" data-toggle="#senior">
-                  Senior Year <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-                </button>
-                <div id="senior" class="accordion__content">
-                  <h3 class="accordion__title">First Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>MATH 150 - Elements of Calculus............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>First Year Seminar............ 3cr.</li>
-                    <li>PHIL 100 - Ethics as Intro to Philosophy............ 3cr.</li>
-                    <li>ENGL 115 - Rhetoric............ 3cr.</li>
-                  </ul>
-                  <h3 class="accordion__title">Second Semester</h3>
-                  <ul class="list--dash accordion__list">
-                    <li>ECON 200 - Microeconmic Principles............ 3cr.</li>
-                    <li>ENGL 205 - Literature &amp; Moral Imagination............ 3cr.</li>
-                    <li>THEO 111 - Ignation Imagination............ 3cr.</li>
-                    <li>Foreign Language Elective............ 3cr.</li>
-                    <li>Scientific Perspectives............ 3cr.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <h3>Destination X</h3>
+            <p>Paired with X-Day events, Destination X is an overnight program designed for admitted multicultural and first-generation students.<br>
+            <a href="#" >Destination X Details</a></p>
+  
+          </div>
+          
+          <h2>Admitted Students</h2>
+          <div class="indent">
+            <h3>XU Preview</h3>
+            <p>For accepted students, XU Preview is the best way to experience what it's really like to be a student here at Xavier. Sit in on classes, participate in club meetings, eat lunch in the cafeteria and meet other students who are considering Xavier.<br>
+            <a href="#" >View XU Preview Dates</a></p>
             
-            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#related">
-              Related <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-            </button>
-            <div id="related" class="tabs__content">
-              <p>View a list of all of Xavier's <a href="#">majors</a> and <a href="#">minors</a>.</p>
-              <h3 class="tabs__title">Related Majors</h3>
-              <ul class="list--bare">
-                <li>Graphic Design</li>
-                <li>Digital Innovation, Film, and Television Production</li>
-                <li>Music</li>
-                <li>Theatere</li>
-                <li>Communication Studies</li>
-              </ul>
-              <h3 class="tabs__title">Related Minors</h3>
-              <ul class="list--bare">
-                <li>Psychology</li>
-                <li>Business</li>
-                <li>Communication Studies</li>
-                <li>Art History</li>
-              </ul>
-              <h3 class="tabs__title">Related Graduate Programs</h3>
-              <ul class="list--bare">
-                <li>Master of Business Administration</li>
-                <li>Health Economics and Clinical Outcomes Research</li>
-                <li>Master of Health Services Administration</li>
-                <li>Private Interest and Public Good</li>
-                <li>Urban Sustainability and Resilience</li>
-              </ul>
-            </div>
+            <h3>Admitted Student Custom Visit</h3>
+            <p>Experience what it's really like to be a student here at Xavier. Sit in on classes, participate in club meetings, eat lunch in the cafeteria and meet other students who are considering Xavier.<br>
+            <a href="#" >Schedule a Custom Accepted Student Visit</a></p>
             
-            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#courses">
-              Courses <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-            </button>
-            <div id="courses" class="tabs__content">
-              <p><strong>Drawing I (ARTS 102)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>Drawing III (ARTS 105)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>History of Art I (ARTS 270)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-              <p><strong>Senior Seminar (ARTS 441)</strong> - This introductory lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-            </div>
+          </div>
             
-            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#outcomes">
-              Outcomes <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-            </button>
-            <div id="outcomes" class="tabs__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-            </div>
+          <h2>Special Events</h2>
+          <div class="indent">
+            <h3>Muskies on the Road</h3>
+            <p>Xavier travels to more than 20 cities across the U.S. to meet admitted seniors near their hometown.<br>
+            <a href="#" >View Muskies on the Road Dates</a></p>
             
-            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#clubs">
-              Clubs <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
-            </button>
-            <div id="clubs" class="tabs__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officiis impedit ut culpa quaerat error pariatur voluptatum sapiente alias quasi itaque voluptas expedita necessitatibus odio dolorem totam veniam quisquam nulla vero placeat corporis cupiditate assumenda amet inventore mollitia quidem similique laudantium maxime aperiam ea reprehenderit iusto a ad tempora harum.</p>
-            </div>
-          </div><!-- /tabs -->
+            <h3>Nursing and Occupational Therapy Info Sessions</h3>
+            <p>Learn more about opportunities in our nursing and occupational therapy programs.<br>
+            <a href="#" >View Information Session Details</a></p>
+            
+            <h3>Group Tours</h3>
+            <p>Chaperoned groups of 15 or more are welcome to tour campus.<br>
+            <a href="#" >Plan a Group Tour</a></p>
+          </div>
+        
         </div><!-- /content -->
         <div class="sidebar">
           <div class="panel panel--academic">
@@ -386,70 +291,39 @@
           </div><!-- /panel -->
         </div><!-- /sidebar -->
       </div><!-- /academic-wrapper -->
-      
-      <div class="spacer spacer--72"></div>
-      
-      <section class="wrapper">
-        <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
-        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
-      </section>
-      <div class="spacer spacer--72"></div>
-      
-      <section class="wrapper">
-        <div class="flex">
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
+      <div class="wrapper">      
+        <div class="modules flex">
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Hotel Information</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
           </div>
-          
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
-          </div>
-          
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
-          </div>
-        </div>
-      </section>
-      <div class="spacer spacer--64"></div>
-      <div class="wrapper flex cdn">
-        <img class="cdn__image" src="//lorempixel.com/730/532/people/4" alt="" />
         
-        <div class="cdn__content">
-          <h2 class="title">Get to know Xavier's Art Professors</h2>
-          <p>We asked 10 professors in our Art Department about their work, their favorite classes to teach and their advice for incoming art students.</p>
-          <p><a href="#" class="cdn__link"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Lorem Ipsum</a></p>
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Airport Information</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">Campus Map</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
+          <div class="module module--rounded">
+            <div class="module__content">
+              <h4 class="module__title">About Cincinnati</h4>
+              <a href="#" class="module__link"><svg class="icon module__icon"><use xlink:href="#xu-arrow-circle" /></svg>Lorem Ipsum</a>
+            </div>
+          </div>
+        
         </div>
-      </div>
-      <div class="spacer spacer--64"></div>
-      <div class="panel panel--quicklinks__mobile">
-        <h2 class="panel__title text--centered">Get More Information</h2>
-        <ul class="nav-list list--bare">
-          <li class="nav-list__item">
-            <a href="#Program-Specific-Contact" class="nav-list__link c-btn">Contact Us</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#Program-Specific-Details" class="nav-list__link c-btn">Program Details</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="https://www.xavier.edu/honors/" class="nav-list__link c-btn">Honors Program</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="https://www.xavier.edu/financial-aid" class="nav-list__link c-btn">Financial Aid</a>
-          </li>
-        </ul>
-      </div><!-- /panel -->
+      </div>  
+      <div class="spacer spacer--72"></div>
     </main>
     <!-- End site or application content -->
     <footer class="footer">
@@ -541,8 +415,7 @@
 
     <svg xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 30 30" id="xu-arrow-circle"> <path class="st0" d="M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0z M17.7,16.8l-3.4,3.4
     	l-1.8-1.8l3.4-3.4l-3.4-3.4l1.8-1.8l3.4,3.4l1.8,1.8L17.7,16.8z"/> </symbol><symbol viewBox="0 0 17 14" id="xu-arrow-right"> <path d="M10.9,4.5l1.3,1.3L9.8,8.2L8.5,9.5L7.2,8.2L4.8,5.8l1.3-1.3l2.4,2.4C8.5,6.9,10.9,4.5,10.9,4.5z"/> </symbol><symbol viewBox="0 0 24 24" id="xu-close">  <polygon points="0 21.9201 1.413 23.3331 23.333 1.4131 21.919 0.0001"/> <polygon points="0 1.4127 21.919 23.3327 23.333 21.9197 1.413 0.0007"/> </symbol><symbol viewBox="0 0 46 45" id="xu-facebook">  <path d="M24.3,19.1v-1.4c0-0.7,0.4-0.8,0.7-0.8h1.9v-2.9h-2.6c-2.9,0-3.6,2.1-3.6,3.5v1.5h-1.7v2v1.3h1.7v8.4h3.4v-8.4h2.5l0.1-1.3
-    	l0.2-2.1H24.3z"/> </symbol><symbol viewBox="0 0 32 16" id="xu-hamburger">  <polygon class="line" points="0.918 1.90816 31.918 1.90816 31.918 0.30976 0.918 0.30976"/> <polygon class="line" points="0.918 15.77616 31.918 15.77616 31.918 14.17776 0.918 14.17776"/> <polygon class="line" points="0.918 8.84176 31.918 8.84176 31.918 7.24336 0.918 7.24336"/> </symbol><symbol viewBox="0 0 30 30" id="xu-hp_arrow"> <path d="M30,15c0-8.3-6.7-15-15-15S0,6.7,0,15s6.7,15,15,15S30,23.3,30,15z M13.2,17.7l-3.4-3.4l1.8-1.8l3.4,3.4l3.4-3.4l1.8,1.8
-    	l-3.4,3.4L15,19.5L13.2,17.7z"/> </symbol><symbol viewBox="0 0 46 45" id="xu-instagram">  <path d="M27.9,22.5c0-2.7-2.2-4.9-4.9-4.9c-2.7,0-4.9,2.2-4.9,4.9c0,2.7,2.2,4.9,4.9,4.9C25.7,27.4,27.9,25.2,27.9,22.5 M27.8,16.9
+    	l0.2-2.1H24.3z"/> </symbol><symbol viewBox="0 0 32 16" id="xu-hamburger">  <polygon class="line" points="0.918 1.90816 31.918 1.90816 31.918 0.30976 0.918 0.30976"/> <polygon class="line" points="0.918 15.77616 31.918 15.77616 31.918 14.17776 0.918 14.17776"/> <polygon class="line" points="0.918 8.84176 31.918 8.84176 31.918 7.24336 0.918 7.24336"/> </symbol><symbol viewBox="0 0 46 45" id="xu-instagram">  <path d="M27.9,22.5c0-2.7-2.2-4.9-4.9-4.9c-2.7,0-4.9,2.2-4.9,4.9c0,2.7,2.2,4.9,4.9,4.9C25.7,27.4,27.9,25.2,27.9,22.5 M27.8,16.9
     	c-0.4,0-0.8,0.4-0.8,0.8c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8C28.6,17.3,28.3,16.9,27.8,16.9 M19,15.8H27
     	c1.5,0,2.7,1.2,2.7,2.7v8.1c0,1.5-1.2,2.7-2.7,2.7H19c-1.5,0-2.7-1.2-2.7-2.7v-8.1C16.2,17,17.5,15.8,19,15.8 M27,14.8H19
     	c-2,0-3.6,1.6-3.6,3.6v8.1c0,2,1.6,3.6,3.6,3.6H27c2,0,3.6-1.6,3.6-3.6v-8.1C30.7,16.5,29,14.8,27,14.8 M19.1,22.5

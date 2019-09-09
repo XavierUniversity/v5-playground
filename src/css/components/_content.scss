@@ -1,0 +1,10 @@
+.content, .content-page {
+  
+  .indent{
+    margin-left: 1rem;
+    @include for-size("tablet-portrait-up"){
+      margin-left: 2rem;
+    }
+  }
+
+}

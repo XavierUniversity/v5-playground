@@ -3,43 +3,80 @@ $heading-font-color:                                $font-color;
 $heading-font-weight:                               300;
 $heading-font-family:                               $font-family;
 $heading-line-height:                               1.25;
+$heading-line-height-mobile:                        1;
 
 // Mobile heading font-size
-$h1-mobile:                                         28px;
-$h2-mobile:                                         26px;
+$h1-mobile:                                         32px;
+$h2-mobile:                                         32px;
 $h3-mobile:                                         24px;
-$h4-mobile:                                         20px;
+$h4-mobile:                                         16px;
+$h5-mobile:                                         16px;
 $h5-mobile:                                         16px;
 
 // Heading font size
-$h1:                                                36px;
+$h1:                                                32px;
 $h2:                                                32px;
 $h3:                                                24px;
-$h4:                                                20px;
+$h4:                                                16px;
 $h5:                                                16px;
+$h6:                                                16px;
 
-h1{ @include font-size($h1-mobile, $heading-line-height); }
-h2{ @include font-size($h2-mobile, $heading-line-height); }
-h3{ @include font-size($h3-mobile, $heading-line-height); }
-h4{ @include font-size($h4-mobile, $heading-line-height); }
-h5{ @include font-size($h5-mobile, $heading-line-height); }
+h1{
+  text-transform: uppercase;
+  color: $darkNavy;
+  font-weight: 400;
+  @include font-size($h1-mobile, $heading-line-height-mobile);
+  line-height: px-to-rem(32px);
+}
+
+h2{
+  text-transform: uppercase;
+  color: $darkNavy;
+  font-weight: 400;
+  @include font-size($h2-mobile, $heading-line-height-mobile);
+  line-height: px-to-rem(32px);
+}
+
+h3{
+  text-transform: uppercase;
+  color: $darkNavy;
+  font-weight: 400;
+  @include font-size($h3-mobile, $heading-line-height-mobile);
+  line-height: px-to-rem(24px);
+  &.mixed{
+    text-transform: none;
+    font-weight: 300;  
+  } 
+}
+
+h4,h5,h6{
+  color: $darkNavy;
+  font-weight: 400;
+  @include font-size($h4-mobile, $heading-line-height-mobile);
+}
+
+h4{
+  text-transform: uppercase;
+}
 
 @include for-size("desktop-up"){
   h1{ @include font-size($h1); }
   h2{ @include font-size($h2, $heading-line-height); }
   h3{ @include font-size($h3, $heading-line-height); }
   h4{ @include font-size($h4, $heading-line-height); }
-  h5{ @include font-size($h5, $heading-line-height); }  
+  h5{ @include font-size($h5, $heading-line-height); } 
+  h5{ @include font-size($h6, $heading-line-height); }  
 }
 
 p{ 
   @include font-size(16px, 1.65); 
-  @include margin(0, null, px-to-rem(24px), null);
-  &:first-of-type{
+  @include margin(0, null, px-to-rem(12px), null);
+  /*&:first-of-type{
     @include margin(px-to-rem(16px), null, null, null);
     
     @include for-size("tablet-portrait-up"){
       @include margin(px-to-rem(24px), null, null, null);  
     }
-  }
+  }*/
 }
+

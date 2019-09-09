@@ -1,4 +1,4 @@
-.academic-wrapper { 
+.designed-wrapper { 
   position: relative;
   
   @include for-size("tablet-landscape-up"){
@@ -10,7 +10,7 @@
     @include margin(0, null, null, null); 
   }
    
-  .academic-cta { 
+  .designed-cta { 
     @include for-size("tablet-landscape-up"){
       grid-area: 1 / 2 / 2 / 3; 
     }

@@ -60,6 +60,7 @@
   &__title{
     text-transform: uppercase;
     font-weight:500;
+    color: white;
     @include font-size(30px, 1.25);
     
     &--large{
@@ -290,6 +291,11 @@
   bottom:16vh;
   position:absolute;
   left:50%;
+  
+  &__icon {
+  width: px-to-rem(50px);
+  height: px-to-rem(50px);
+  }
 }
 .bounce {
   -moz-animation: bounce 2s infinite;

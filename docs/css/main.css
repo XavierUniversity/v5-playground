@@ -870,19 +870,19 @@ textarea {
     background: #007DB3;
     border-color: #007DB3; }
 
-.content a[class=""], .content a:not([class]), .content a.arrow, #content a[class=""], #content a:not([class]), #content a.arrow {
+.content a[class=""], .content a:not([class]), .content a.link-arrow, #content a[class=""], #content a:not([class]), #content a.link-arrow {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
-  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.arrow:hover, .content a.arrow:focus, .content a.arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.arrow:hover, #content a.arrow:focus, #content a.arrow:active {
+  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.link-arrow:hover, .content a.link-arrow:focus, .content a.link-arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.link-arrow:hover, #content a.link-arrow:focus, #content a.link-arrow:active {
     color: #004867; }
 
-.content a.arrow, #content a.arrow {
+.content a.link-arrow, #content a.link-arrow {
   text-decoration: none;
   background: transparent url(/images/arrow-light.jpg) center right no-repeat;
   padding-right: 1.5rem;
   transition: padding 175ms ease; }
-  .content a.arrow:hover, .content a.arrow:active, #content a.arrow:hover, #content a.arrow:active {
+  .content a.link-arrow:hover, .content a.link-arrow:active, #content a.link-arrow:hover, #content a.link-arrow:active {
     background: transparent url(/images/arrow-dark.jpg) center right no-repeat;
     padding-right: 1.875rem; }
 

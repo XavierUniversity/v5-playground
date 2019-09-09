@@ -12,8 +12,7 @@
   h2{
     font-weight:400;
     text-transform:uppercase;
-    padding-top:10rem;
-    color:#0b223f;
+    color:$darkNavy;
     text-align:center;
     font-size:2rem;
   }
@@ -27,6 +26,22 @@
       margin-left:13rem;
       margin-right:13rem;
     }
+  }
+  &__feature{
+    margin-top:px-to-rem(32px);
+  }
+
+  &__title{
+    font-size:18px !important;
+    padding-top:0 !important;
+    
+  }
+  &__top{
+    padding-top:3rem;
+  }
+
+  &__bottom{
+    padding-bottom:10rem;
   }
 }
 

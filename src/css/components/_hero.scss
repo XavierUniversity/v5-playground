@@ -22,14 +22,22 @@
       @include margin(0, null,null,null);
       @include font-size(48px, 1);
       @include for-size("tablet-landscape-up"){
-        @include font-size(65px, 1);
+      @include font-size(65px, 1);
+      }
+      @include for-size("phone-only"){
+        @include font-size(44px, 1);
       }
     }
     
     &__scroll{
       position: absolute;
+      display: block;
       color: white;
       bottom: 15vh;
+      text-decoration:none;
+      height: px-to-rem(100px); 
+      padding-top: px-to-rem(70px);
+      vertical-align: bottom;
       @include for-size("tablet-landscape-up"){
         
       }
@@ -37,7 +45,7 @@
     }
   }
   
-  &--academic{
+  &--large{
     height: px-to-rem(618px / 2);
     @include for-size("tablet-landscape-up"){
       height: px-to-rem(618px);
@@ -45,6 +53,9 @@
     
     &__title{
       @include font-size(60px);
+      @include for-size("phone-only"){
+        @include font-size(30px);
+      }
       @include for-size("tablet-landscape-up"){
         @include font-size(80px);
       }
@@ -65,6 +76,7 @@
     &__title {
       color: white;
       text-transform: uppercase;
+      text-decoration: none;
       text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(2px) black;
       margin-top: 0px;
       font-weight: 700;

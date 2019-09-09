@@ -170,7 +170,7 @@
     <main id="content">
       
       <section class="hero hero--content">
-          <h1 class="hero--content__title">Department of Lorem Ipsum</h1>
+          <a class="hero--content__title" href="#">Department of Lorem Ipsum</a>
       </section>
       
       <section class="wrapper">    
@@ -211,9 +211,9 @@
           <h1>Content Kitchen Sink</h1>
           <p>This is a basic HTML example of all the attributes we need to style. Including <strong>bolded</strong> or <em>italicized</em> content.</p>
 
-          <table class="t1" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+          <table summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
             <caption>
-              Most Downloaded Movies on BitTorrent, 2011
+              Basic table
             </caption>
             <thead>
               <tr>
@@ -241,90 +241,38 @@
                 <td>8,840,000</td>
                 <td>$581,464,305</td>
               </tr>
-              <tr>
-                <th>3</th>
-                <td>Thor</td>
-                <td>8,330,000</td>
-                <td>$449,326,618</td>
-              </tr>
-              <tr>
-                <th>4</th>
-                <td>Source Code</td>
-                <td>7,910,000</td>
-                <td>$123,278,618</td>
-              </tr>
-              <tr>
-                <th>5</th>
-                <td>I Am Number Four</td>
-                <td>7,670,000</td>
-                <td>$144,500,437</td>
-              </tr>
-              <tr>
-                <th>6</th>
-                <td>Sucker Punch</td>
-                <td>7,200,000</td>
-                <td>$89,792,502</td>
-              </tr>
-              <tr>
-                <th>7</th>
-                <td>127 Hours</td>
-                <td>6,910,000</td>
-                <td>$60,738,797</td>
-              </tr>
-              <tr>
-                <th>8</th>
-                <td>Rango</td>
-                <td>6,480,000</td>
-                <td>$245,155,348</td>
-              </tr>
-              <tr>
-                <th>9</th>
-                <td>The King’s Speech</td>
-                <td>6,250,000</td>
-                <td>$414,211,549</td>
-              </tr>
-              <tr>
-                <th>10</th>
-                <td>Harry Potter and the Deathly Hallows Part 2</td>
-                <td>6,030,000</td>
-                <td>$1,328,111,219</td>
-              </tr>
             </tbody>
           </table>
-
-          <table>
+          
+          <table class="striped" summary="Top 10 downloaded movies in 2011 using BitTorrent, in descending order, listing number of downloads and worldwide cinema grosses">
+            <caption>
+              Striped table
+            </caption>
             <thead>
               <tr>
-                <th>
-                  Table Heading
-                </th>
-                <th>
-                  Table Heading
-                </th>
+                <th>Rank</th>
+                <th>Movie</th>
+                <th>Downloads</th>
+                <th>Grosses</th>
               </tr>
             </thead>
             <tfoot>
               <tr>
-                <td>Foot TD</td>
-                <td>Foot TD</td>
+                <th colspan="4">torrentfreak.com</th>
               </tr>
             </tfoot>
             <tbody>
               <tr>
-                <td>
-                  table data
-                </td>
-                <td>
-                  table data
-                </td>
+                <th>1</th>
+                <td>Fast Five</td>
+                <td>9,260,000</td>
+                <td>$626,137,675</td>
               </tr>
               <tr>
-                <td>
-                  table data
-                </td>
-                <td>
-                  table data
-                </td>
+                <th>2</th>
+                <td>The Hangover II</td>
+                <td>8,840,000</td>
+                <td>$581,464,305</td>
               </tr>
             </tbody>
           </table>
@@ -353,25 +301,28 @@
           </pre>
 
           <h1>
-            Level 1 heading
+            Level 01 heading - with potential overflow
           </h1>
           <p>
             Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
           </p>
           <h2>
-            Level 02 Heading
+            Level 02 Heading - with potential overflow
           </h2>
           <p>
             Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
           </p>
           <h3>
-            Level 03 Heading
+            Level 03 Heading - with potential overflow
+          </h3>
+          <h3 class="mixed">
+            1. Apply using either the Xavier application or the Common Application.
           </h3>
           <p>
             Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
           </p>
           <h4>
-            Level 04 Heading
+            Level 04 Heading - with potential overflow
           </h4>
           <p>
             Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus.
@@ -479,29 +430,29 @@
               Description list description 03
             </dd>
           </dl>
-
-          <form action="#">
-            <fieldset>
-              <legend>Form legend</legend>
+        <hr>
+          <form action="#" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Form legend</legend>
               <div>
-                <label for="f1">Text input:</label>
-                <input type="text" id="f1" value="input text">
+                <label for="f1" class="form__label">Text input:</label>
+                <input type="text" id="f1" class="form__input" value="input text">
               </div>
               <div>
-                <label for="pw">Password input:</label>
-                <input type="password" id="pw" value="password">
+                <label for="pw" class="form__label">Password input:</label>
+                <input type="password" id="pw" class="form__input" value="password">
               </div>
               <div>
-                <label for="f2">Radio input:</label>
-                <input type="radio" id="f2">
+                <label for="f2" class="form__label">Radio input:</label>
+                <input type="radio" id="f2" class="form__radio">
               </div>
               <div>
-                <label for="f3">Checkbox input:</label>
-                <input type="checkbox" id="f3">
+                <label for="f3" class="form__label">Checkbox input:</label>
+                <input type="checkbox" id="f3" class="form__checkbox">
               </div>
               <div>
-                <label for="f4">Select field:</label>
-                <select id="f4">
+                <label for="f4" class="form__label">Select field:</label>
+                <select id="f4" class="form__select">
                   <option>
                     Option 01
                   </option>
@@ -511,20 +462,20 @@
                 </select>
               </div>
               <div>
-                <label for="f5">Textarea:</label>
-                <textarea id="f5" cols="30" rows="5">Textarea text</textarea>
+                <label for="f5" class="form__label">Textarea:</label>
+                <textarea id="f5" cols="30" rows="5" class="form__textarea">Textarea text</textarea>
               </div>
               <div>
-                <label for="f6">Input Button:</label>
-                <input type="button" id="f6" value="button text">
+                <label for="f6" class="form__label">Input Button:</label>
+                <input type="button" id="f6" class="btn" value="button text">
               </div>
               <div>
-                <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="button"&gt;</span></label>
-                <button class="button positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="button" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="button negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
+                <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="btn"&gt;</span></label>
+                <button class="btn btn--inline positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="btn btn--inline" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="btn btn--inline negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
               </div>
             </fieldset>
           </form>
-
+          <hr>
           I am <a href="something.doc">a word document</a> link, so readers know that I'm not a normal link.<br />
           I am <a href="something.pdf">a pdf document</a> link, so readers know that I'm not a normal link.<br />
           I am <a href="http://www.something.com">an external website</a> link, so readers know that I'm not a normal link.<br />
@@ -545,6 +496,25 @@
           <p class="notice">
             <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
           </p>
+          
+          <h2>Buttons</h2>
+          <a class="c-btn" href="#">Button</a>
+          <a class="c-btn c-btn--inline" href="#">Inline Button</a>
+          <hr />
+          <div class="split-1-1"> 
+            <div class="col1">Split 1-1 Column 1</div> 
+            <div class="col2">Split 1-1 Column 2</div> 
+          </div>
+          <div class="split-2-1"> 
+            <div class="col1">Split 2-1 Column 1</div> 
+            <div class="col2">Split 2-1 Column 2</div> 
+          </div>
+          <div class="split-1-1-1"> 
+            <div class="col1">Split 1-1-1 Column 1</div> 
+            <div class="col2">Split 1-1-1 Column 2</div> 
+            <div class="col3">Split 1-1-1 Column 3</div> 
+          </div>
+          
         </div>
         </div>
         

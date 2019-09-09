@@ -1,4 +1,4 @@
-.c-btn{
+.c-btn, .btn{
   color: white;
   display: block;
   border: solid px-to-rem(1px) $medBlue;
@@ -7,6 +7,7 @@
   text-align: center;
   transition: all 0.25s ease;
   text-transform: uppercase;
+  text-decoration: none;
   @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
   
   @include for-size("phone-only"){
@@ -33,17 +34,25 @@
     @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     display: inline-block;
     @include margin(px-to-rem(16px), null, null, null);
-    
     &:hover, &:focus, &:active{
       background: white;
       color: black;
       border-color: white;
+    }
+    @include for-size("phone-only"){
+      @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
+      border-radius: px-to-rem(23px);
     }
   }
 
   &--feature {
     @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
   }
+  
+  &--inline{
+      display: inline-block;
+      @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
+    }
 }
 
 .action{

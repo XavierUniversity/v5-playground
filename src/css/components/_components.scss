@@ -26,14 +26,17 @@
 @import 'video';
 
 // content
+@import 'content';
 @import 'content.title';
 @import 'content.tabs';
 @import 'content.page';
 @import 'panel';
 @import 'accordion';
-// academic specific
-@import 'academic.wrapper';
-@import 'academic.cta';
+@import 'columns';
+
+// designed page specific
+@import 'designed.wrapper';
+@import 'designed.cta';
 @import 'cdn';
 @import 'apply';
 

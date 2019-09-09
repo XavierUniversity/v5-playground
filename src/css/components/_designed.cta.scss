@@ -1,0 +1,28 @@
+.designed-cta{
+  display: none;
+  
+  @include for-size("tablet-portrait-up"){
+    display: block;
+  }
+  @include for-size("tablet-landscape-up"){
+    position: absolute;
+    top: px-to-rem(-46px);
+    width: 100%;
+  }
+  
+  &__link{
+    @include margin(px-to-rem(24px), null, 0, null);
+    @include for-size("phone-only"){
+      @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
+      @include margin(px-to-rem(16px), null, 0, null);
+    }
+  }
+  &__item{
+    width: 100%;
+    @include for-size("tablet-landscape-up"){
+      &:first-child{
+        @include margin(null, px-to-rem(16px), 0, null);
+      }
+    }
+  }  
+}

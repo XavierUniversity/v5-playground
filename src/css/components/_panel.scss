@@ -12,6 +12,7 @@
       width:100%;
     }
   }
+  
   &__title{
     @include font-size(20px);
     @include margin(0, null, px-to-rem(40px), null);

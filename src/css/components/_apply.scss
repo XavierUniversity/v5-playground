@@ -1,11 +1,72 @@
 .apply{
-    background-color: #f0f2f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
+  background-color: #f0f2f3;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  
   &--content{
-      height:100vh;
+    height:100%;
+  } 
+  
+  &__top{
+    padding-top:1rem;
+  }
+
+  &__bottom{
+    padding-bottom:10rem;
+  }
+  
+  &__title{
+    margin-left: 30%;
+  }
+  
+  h1{
+    text-transform:uppercase;
+    @include font-size(32px);
+    font-weight:400;
+    color:$darkNavy;
+  }
+  
+  h2{
+    padding-top:0;
+    text-transform: uppercase;
+    @include font-size(18px);
+    color:$darkNavy;   
+    font-weight: 350;
+  }
+  
+  p{
+    @include font-size(16px);  
+    margin-top: .5rem;
+    @include for-size("tablet-landscape-up"){
+      margin-left:5rem;
+      margin-right:5rem;
+    }
+    @include for-size("desktop-up"){
+      margin-left:13rem;
+      margin-right:13rem;
+    }
+  }
+  
+  .panel{
+    text-align: left;
+    @include padding(px-to-rem(24px), px-to-rem(16px), px-to-rem(32px), px-to-rem(0px));
+    .panel__image { 
+      vertical-align: middle;
+      
+      img{
+        @include padding(px-to-rem(4px), px-to-rem(0px), px-to-rem(4px), px-to-rem(16px));
+        border-left: solid px-to-rem(8px) $medBlue;
+        float: left;
+      }
+    }
+    .xpanel__copy { 
+      p{
+        @include margin(px-to-rem(16px), 0, px-to-rem(8px), 0);
+        margin-left: 30%;
+      }
+    }
   }
 }

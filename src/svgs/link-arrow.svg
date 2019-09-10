@@ -1,0 +1,32 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 10" style="enable-background:new 0 0 15 10;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#000000;}
+	.st2{mask:url(#mask-2_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#000000;}
+</style>
+<title>Group 3</title>
+<desc>Created with Sketch.</desc>
+<g id="Welcome">
+	<g id="Desktop-HD" transform="translate(-307.000000, -546.000000)">
+		<g id="Group-6-Copy" transform="translate(203.000000, 544.000000)">
+			<g id="Group-3" transform="translate(104.000000, 2.000000)">
+				<g id="Clip-2">
+				</g>
+				<defs>
+					<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="15" height="10">
+						<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+					</filter>
+				</defs>
+				<mask maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="10" id="mask-2_1_">
+					<g class="st0">
+						<polygon id="path-1_1_" class="st1" points="0,0 15,0 15,10 0,10 						"/>
+					</g>
+				</mask>
+				<path id="Fill-1" class="st2" d="M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5
+					c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

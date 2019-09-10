@@ -875,12 +875,21 @@ textarea {
     background: #007DB3;
     border-color: #007DB3; }
 
-.content a[class=""], .content a:not([class]), .content a.arrow, #content a[class=""], #content a:not([class]), #content a.arrow {
+.content a[class=""], .content a:not([class]), .content a.link-arrow, #content a[class=""], #content a:not([class]), #content a.link-arrow {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
-  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.arrow:hover, .content a.arrow:focus, .content a.arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.arrow:hover, #content a.arrow:focus, #content a.arrow:active {
+  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.link-arrow:hover, .content a.link-arrow:focus, .content a.link-arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.link-arrow:hover, #content a.link-arrow:focus, #content a.link-arrow:active {
     color: #004867; }
+
+.content a.link-arrow, #content a.link-arrow {
+  text-decoration: none;
+  background: transparent url(/images/arrow-light.jpg) center right no-repeat;
+  padding-right: 1.5rem;
+  transition: padding 175ms ease; }
+  .content a.link-arrow:hover, .content a.link-arrow:active, #content a.link-arrow:hover, #content a.link-arrow:active {
+    background: transparent url(/images/arrow-dark.jpg) center right no-repeat;
+    padding-right: 1.875rem; }
 
 .wrapper {
   position: relative;
@@ -922,6 +931,8 @@ textarea {
         background-image: url("../images/commitment/StudentCommitment_1x.jpg");
         background-image: image-set(url("../images/commitment/StudentCommitment_1x.jpg") 1x, url("../images/commitment/StudentCommitment_2x.jpg") 2x);
         background-image: -webkit-image-set(url("../images/commitment/StudentCommitment_1x.jpg") 1x, url("../images/commitment/StudentCommitment_2x.jpg") 2x); } }
+  .wrapper--apply {
+    padding-top: 8rem; }
   @media (max-width: 36.5rem) {
     .wrapper--features {
       padding-top: 0;
@@ -2539,7 +2550,11 @@ textarea {
       padding-top: 3.125rem;
       padding-right: 3.75rem;
       padding-bottom: 3.125rem;
-      padding-left: 3.75rem; } }
+      padding-left: 3.75rem; }
+      .panel--white {
+        background: white;
+        margin-right: 1rem;
+        width: 100%; } }
   .panel__title {
     font-size: 20px;
     font-size: 1.25rem;
@@ -2798,6 +2813,71 @@ textarea {
     text-decoration: none; }
     .cdn__link:hover, .cdn__link:focus, .cdn__link:active {
       color: #007DB3; }
+
+.apply {
+  background-color: #f0f2f3;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center; }
+  .apply--content {
+    height: 100%; }
+  .apply__top {
+    padding-top: 1rem; }
+  .apply__bottom {
+    padding-bottom: 10rem; }
+  .apply__title {
+    margin-left: 30%; }
+  .apply h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #0B223F; }
+  .apply h2 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+    color: #0B223F;
+    font-weight: 350; }
+  .apply p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: .5rem; }
+    @media (min-width: 56.25rem) {
+      .apply p {
+        margin-left: 5rem;
+        margin-right: 5rem; } }
+    @media (min-width: 85rem) {
+      .apply p {
+        margin-left: 13rem;
+        margin-right: 13rem; } }
+  .apply .panel {
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 0rem; }
+    .apply .panel .panel__image {
+      vertical-align: middle; }
+      .apply .panel .panel__image img {
+        padding-top: 0.25rem;
+        padding-right: 0rem;
+        padding-bottom: 0.25rem;
+        padding-left: 1rem;
+        border-left: solid 0.5rem #007DB3;
+        float: left; }
+    .apply .panel .xpanel__copy p {
+      margin-top: 1rem;
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+      margin-left: 0;
+      margin-left: 30%; }
 
 .event-list {
   display: -webkit-box;

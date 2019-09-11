@@ -59,6 +59,9 @@
       img{
         @include padding(px-to-rem(4px), px-to-rem(0px), px-to-rem(4px), px-to-rem(16px));
         border-left: solid px-to-rem(8px) $medBlue;
+        @include for-size("phone-only"){
+          border-left:none;
+        }
         float: left;
       }
     }

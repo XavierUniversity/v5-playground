@@ -1,4 +1,4 @@
-.hp-social{
+.twitter-feed{
   background: $grey;
   @include padding(px-to-rem(24px), null, px-to-rem(24px), null);
   text-align: center;
@@ -7,7 +7,7 @@
     @include margin(0, null, 0, null);
     @include padding(px-to-rem(24px), null, px-to-rem(48px), null);
     @include font-size(48px);
-  }
+    }
 }
 
 .j-loading {
@@ -27,5 +27,9 @@
   &:hover, &:focus, &:active{
     color: white;
     background: $darkNavy;
-  }
+    }
+}
+
+.j-message {
+    color: $base-text-color !important;
 }

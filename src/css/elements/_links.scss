@@ -18,12 +18,26 @@
       border-color: $medBlue;
     }
   }
-  a[class=""], a:not([class]),a.arrow{
+
+  a[class=""], a:not([class]), a.link-arrow{
     color: $medBlue;
     font-weight: 300;
     text-decoration: underline;
     &:hover, &:focus, &:active{
       color: darken($medBlue, 15%);
     }
+  }
+  
+  a.link-arrow{
+    text-decoration: none;
+    background: transparent url(/images/arrow-light.jpg) center right no-repeat;
+    padding-right: px-to-rem(24px);
+    transition: padding 175ms ease;
+  
+    &:hover, &:active{
+      background: transparent url(/images/arrow-dark.jpg) center right no-repeat;
+      padding-right: px-to-rem(30px);
+    }
+    
   }
 }

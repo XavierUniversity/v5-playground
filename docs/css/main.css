@@ -2573,6 +2573,9 @@ textarea {
     background: #fff;
     margin-right: 1rem;
     width: 100%; }
+    @media (max-width: 36.5rem) {
+      .panel--white {
+        border-left: solid 0.5rem #007db3; } }
   .panel__title {
     font-size: 20px;
     font-size: 1.25rem;

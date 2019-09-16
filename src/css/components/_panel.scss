@@ -13,6 +13,9 @@
     background: #fff;
     margin-right:1rem;
     width:100%;
+    @include for-size("phone-only"){
+      border-left: solid 0.5rem #007db3;
+    }
    
   }
   

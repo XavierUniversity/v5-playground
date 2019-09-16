@@ -2849,6 +2849,10 @@ textarea {
     padding-bottom: 10rem; }
   .apply__title {
     margin-left: 30%; }
+    @media (max-width: 36.5rem) {
+      .apply__title {
+        margin-left: 0;
+        text-align: center; } }
   .apply h1 {
     text-transform: uppercase;
     font-size: 32px;
@@ -2885,6 +2889,9 @@ textarea {
     padding-left: 0rem; }
     .apply .panel .panel__image {
       vertical-align: middle; }
+      @media (max-width: 36.5rem) {
+        .apply .panel .panel__image {
+          display: none; } }
       .apply .panel .panel__image img {
         padding-top: 0.25rem;
         padding-right: 0rem;
@@ -2894,13 +2901,30 @@ textarea {
         float: left; }
         @media (max-width: 36.5rem) {
           .apply .panel .panel__image img {
-            border-left: none; } }
+            border-left: none;
+            float: none; } }
+    .apply .panel .panel__mobile__image {
+      vertical-align: middle;
+      text-align: center; }
+      @media (min-width: 85rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
+      @media (min-width: 56.25rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
+      @media (min-width: 37.5rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
     .apply .panel .xpanel__copy p {
       margin-top: 1rem;
       margin-right: 0;
       margin-bottom: 0.5rem;
       margin-left: 0;
       margin-left: 30%; }
+      @media (max-width: 36.5rem) {
+        .apply .panel .xpanel__copy p {
+          margin-left: 0;
+          text-align: center; } }
 
 .event-list {
   display: -webkit-box;

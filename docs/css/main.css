@@ -854,11 +854,10 @@ textarea {
   .slate-form .form_select .form_responses:hover::after {
     color: #4d4c4c; }
 
-
-#content a {
+.content a, #content a {
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
-  #content a .icon {
+  .content a .icon, #content a .icon {
     -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     color: #007DB3;
@@ -886,6 +885,7 @@ textarea {
   text-decoration: none;
   background: transparent url(/images/arrow-light.jpg) center right no-repeat;
   padding-right: 1.5rem;
+  -webkit-transition: padding 175ms ease;
   transition: padding 175ms ease; }
   .content a.link-arrow:hover, .content a.link-arrow:active, #content a.link-arrow:hover, #content a.link-arrow:active {
     background: transparent url(/images/arrow-dark.jpg) center right no-repeat;
@@ -933,6 +933,12 @@ textarea {
         background-image: -webkit-image-set(url("../images/commitment/StudentCommitment_1x.jpg") 1x, url("../images/commitment/StudentCommitment_2x.jpg") 2x); } }
   .wrapper--apply {
     padding-top: 8rem; }
+  @media (max-width: 36.5rem) {
+    .wrapper--applybox {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0; } }
   @media (max-width: 36.5rem) {
     .wrapper--features {
       padding-top: 0;
@@ -1552,6 +1558,7 @@ textarea {
     left: 0;
     width: 100%;
     background: black;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0) 100%); }
     @media (max-width: 36.5rem) {
       .feature__name {
@@ -1561,7 +1568,9 @@ textarea {
     background-position: center center;
     background-size: cover;
     background-color: #0c2340;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     position: relative; }
   .feature__link {
@@ -1628,6 +1637,7 @@ textarea {
   background-color: #0c2340 !important;
   opacity: 0.7;
   width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
 .featured-link__title {
@@ -1725,14 +1735,16 @@ textarea {
     opacity: 1; }
   100% {
     opacity: 0;
-    transform: translateY(46px); } }
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px); } }
 
 @keyframes scroll {
   0% {
     opacity: 1; }
   100% {
     opacity: 0;
-    transform: translateY(46px); } }
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px); } }
 
 .arrow {
   text-align: center;
@@ -1750,19 +1762,25 @@ textarea {
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   40% {
-    transform: translateY(-30px); }
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
   60% {
-    transform: translateY(-15px); } }
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   40% {
-    transform: translateY(-30px); }
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
   60% {
-    transform: translateY(-15px); } }
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
 
 .hp-social {
   background: #F0F2F3;
@@ -2550,11 +2568,14 @@ textarea {
       padding-top: 3.125rem;
       padding-right: 3.75rem;
       padding-bottom: 3.125rem;
-      padding-left: 3.75rem; }
+      padding-left: 3.75rem; } }
+  .panel--white {
+    background: #fff;
+    margin-right: 1rem;
+    width: 100%; }
+    @media (max-width: 36.5rem) {
       .panel--white {
-        background: white;
-        margin-right: 1rem;
-        width: 100%; } }
+        border-left: solid 0.5rem #007db3; } }
   .panel__title {
     font-size: 20px;
     font-size: 1.25rem;
@@ -2817,8 +2838,10 @@ textarea {
 .apply {
   background-color: #f0f2f3;
   display: block;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   position: relative;
   text-align: center; }
   .apply--content {
@@ -2829,6 +2852,10 @@ textarea {
     padding-bottom: 10rem; }
   .apply__title {
     margin-left: 30%; }
+    @media (max-width: 36.5rem) {
+      .apply__title {
+        margin-left: 0;
+        text-align: center; } }
   .apply h1 {
     text-transform: uppercase;
     font-size: 32px;
@@ -2865,6 +2892,9 @@ textarea {
     padding-left: 0rem; }
     .apply .panel .panel__image {
       vertical-align: middle; }
+      @media (max-width: 36.5rem) {
+        .apply .panel .panel__image {
+          display: none; } }
       .apply .panel .panel__image img {
         padding-top: 0.25rem;
         padding-right: 0rem;
@@ -2872,12 +2902,32 @@ textarea {
         padding-left: 1rem;
         border-left: solid 0.5rem #007DB3;
         float: left; }
+        @media (max-width: 36.5rem) {
+          .apply .panel .panel__image img {
+            border-left: none;
+            float: none; } }
+    .apply .panel .panel__mobile__image {
+      vertical-align: middle;
+      text-align: center; }
+      @media (min-width: 85rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
+      @media (min-width: 56.25rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
+      @media (min-width: 37.5rem) {
+        .apply .panel .panel__mobile__image {
+          display: none; } }
     .apply .panel .xpanel__copy p {
       margin-top: 1rem;
       margin-right: 0;
       margin-bottom: 0.5rem;
       margin-left: 0;
       margin-left: 30%; }
+      @media (max-width: 36.5rem) {
+        .apply .panel .xpanel__copy p {
+          margin-left: 0;
+          text-align: center; } }
 
 .event-list {
   display: -webkit-box;

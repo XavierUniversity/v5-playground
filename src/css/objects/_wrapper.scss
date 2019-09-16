@@ -43,6 +43,12 @@
     padding-top:8rem;
   }
 
+  &--applybox{
+    @include for-size("phone-only"){
+      @include padding(0, 0, 0, 0);  
+    }
+  }
+
   &--features {
     @include for-size("phone-only"){
       @include padding(0, 0, 0, 0);  

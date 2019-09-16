@@ -20,6 +20,10 @@
   
   &__title{
     margin-left: 30%;
+    @include for-size("phone-only"){
+      margin-left:0;
+      text-align:center;
+    }
   }
   
   h1{
@@ -55,17 +59,42 @@
     @include padding(px-to-rem(24px), px-to-rem(16px), px-to-rem(32px), px-to-rem(0px));
     .panel__image { 
       vertical-align: middle;
+      @include for-size("phone-only"){
+        display:none;
+      }
       
       img{
         @include padding(px-to-rem(4px), px-to-rem(0px), px-to-rem(4px), px-to-rem(16px));
         border-left: solid px-to-rem(8px) $medBlue;
+        @include for-size("phone-only"){
+          border-left:none;
+          float:none;
+        }
         float: left;
       }
     }
+    .panel__mobile__image {
+      vertical-align:middle;
+      text-align:center;
+      @include for-size("desktop-up"){
+        display:none;
+      }
+      @include for-size("tablet-landscape-up"){
+        display:none;
+      }
+      @include for-size("tablet-portrait-up"){
+        display:none;
+      }
+    }
+
     .xpanel__copy { 
       p{
         @include margin(px-to-rem(16px), 0, px-to-rem(8px), 0);
         margin-left: 30%;
+        @include for-size("phone-only"){
+          margin-left:0;
+          text-align:center;
+        }
       }
     }
   }

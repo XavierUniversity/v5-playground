@@ -5,12 +5,7 @@
   
   @include for-size("tablet-landscape-up"){ 
     @include padding(px-to-rem(50px), px-to-rem(60px), px-to-rem(50px), px-to-rem(60px));  
-
-    &--white{
-      background:white;
-      margin-right:1rem;
-      width:100%;
-    }
+    
   }
   
   &__title{

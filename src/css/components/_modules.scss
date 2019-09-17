@@ -47,11 +47,14 @@
     color: white;
     display: block;
     text-decoration: none;
-   
-    
+    transition: margin 175ms ease;
+    &:hover{
+      margin-left: px-to-rem(12px);
+    }
   }
   &__icon{
-    border: none !important; 
-    @include margin(null, px-to-rem(8px), null, null);
+    width: px-to-rem(22px);
+    height: px-to-rem(30px);
+    margin-right: px-to-rem(10px);
   }
 }

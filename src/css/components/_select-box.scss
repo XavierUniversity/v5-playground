@@ -1,0 +1,58 @@
+.select-box{
+    &__two-box{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    @include for-size("desktop-up") {
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: 1fr; 
+      grid-column-gap: 16px;
+      grid-row-gap: 0px;
+      }
+    }
+    
+    &__container{
+    background:#F0F2F3;
+    margin-top:1.5rem;
+    position:relative;
+    
+      &--content {
+      @include padding(px-to-rem(24px),px-to-rem(42px),px-to-rem(24px),px-to-rem(42px));
+      }
+    }
+    
+    &__apply{
+    background-color: #fff;
+    @include margin(px-to-rem(0px), null, null, null)
+        
+        &--container{
+        @include padding(px-to-rem(24px),px-to-rem(24px),px-to-rem(24px),px-to-rem(24px))
+        text-align: center;
+            @include for-size('tablet-landscape-up') {
+            display: table;
+            @include padding(px-to-rem(24px),px-to-rem(48px),px-to-rem(24px),px-to-rem(24px))
+            height: 100%;
+            text-align: left;
+            }
+        }
+        
+        &--image{
+            @include for-size('tablet-landscape-up') {
+            text-align: center;
+            display: table-cell;
+            width: 72px;
+            vertical-align: middle;
+            }
+        }
+        
+        &--content{
+            @include for-size('tablet-landscape-up') {
+            display: table-cell;
+            padding-left: 16px;
+            }
+        }
+    }
+}

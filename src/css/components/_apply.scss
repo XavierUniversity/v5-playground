@@ -1,28 +1,35 @@
 .apply{
   background-color: #f0f2f3;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
+  min-height: 100vh;
+  @include padding(px-to-rem(96px), null, px-to-rem(64px), null);
   
-  &--content{
-    height:100%;
-  } 
-  
-  &__top{
-    padding-top:1rem;
-  }
-
-  &__bottom{
-    padding-bottom:10rem;
+  &__header{
+    text-align:center;
+    @include padding(null, px-to-rem(0px), px-to-rem(36px), px-to-rem(0px));
+    @include for-size ("tablet-landscape-up") {
+      @include padding(null, px-to-rem(48px), px-to-rem(48px), px-to-rem(48px));
+    }
   }
   
-  &__title{
-    margin-left: 30%;
-    @include for-size("phone-only"){
-      margin-left:0;
-      text-align:center;
+  &__grid{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    @include for-size("tablet-landscape-up"){
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        grid-column-gap: 16px;
+        grid-row-gap: 16px; 
+    }
+    @include for-size("desktop-up") {
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: repeat(2, 1fr); 
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
     }
   }
   
@@ -33,70 +40,4 @@
     color:$darkNavy;
   }
   
-  h2{
-    padding-top:0;
-    text-transform: uppercase;
-    @include font-size(18px);
-    color:$darkNavy;   
-    font-weight: 350;
-  }
-  
-  p{
-    @include font-size(16px);  
-    margin-top: .5rem;
-    @include for-size("tablet-landscape-up"){
-      margin-left:5rem;
-      margin-right:5rem;
-    }
-    @include for-size("desktop-up"){
-      margin-left:13rem;
-      margin-right:13rem;
-    }
-  }
-  
-  .panel{
-    text-align: left;
-    @include padding(px-to-rem(24px), px-to-rem(16px), px-to-rem(32px), px-to-rem(10px));
-    background: #ffffff url("/images/blue-bar.jpg") no-repeat left center;
-    .panel__image { 
-      vertical-align: middle;
-      @include for-size("phone-only"){
-        display:none;
-      }
-      
-      img{
-        @include padding(px-to-rem(4px), px-to-rem(0px), px-to-rem(4px), px-to-rem(16px));
-        //border-left: solid px-to-rem(8px) $medBlue;
-        @include for-size("phone-only"){
-          border-left:none;
-          float:none;
-        }
-        float: left;
-      }
-    }
-    .panel__mobile__image {
-      vertical-align:middle;
-      text-align:center;
-      @include for-size("desktop-up"){
-        display:none;
-      }
-      @include for-size("tablet-landscape-up"){
-        display:none;
-      }
-      @include for-size("tablet-portrait-up"){
-        display:none;
-      }
-    }
-
-    .xpanel__copy { 
-      p{
-        @include margin(px-to-rem(16px), 0, px-to-rem(8px), 0);
-        margin-left: 30%;
-        @include for-size("phone-only"){
-          margin-left:0;
-          text-align:center;
-        }
-      }
-    }
-  }
 }

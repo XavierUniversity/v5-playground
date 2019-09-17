@@ -1,0 +1,26 @@
+.select-box{
+    &__two-box{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 16px; 
+    @include for-size("desktop-up") {
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      grid-template-rows: 1fr; 
+      grid-column-gap: 16px;
+      grid-row-gap: 0px;
+      }
+    }
+    
+    &__container{
+    background:#F0F2F3;
+    margin-top:1.5rem;
+    position:relative;
+    
+      &--content {
+      @include padding(px-to-rem(24px),px-to-rem(42px),px-to-rem(24px),px-to-rem(42px));
+      }
+    }
+}

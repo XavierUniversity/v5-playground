@@ -1,18 +1,4 @@
 .select-box{
-    &__two-box{
-    display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: repeat(2, 1fr); 
-    grid-column-gap: 0px;
-    grid-row-gap: 16px; 
-    @include for-size("desktop-up") {
-      display: grid; 
-      grid-template-columns: repeat(2, 1fr); 
-      grid-template-rows: 1fr; 
-      grid-column-gap: 16px;
-      grid-row-gap: 0px;
-      }
-    }
     
     &__container{
     background:#F0F2F3;
@@ -24,7 +10,7 @@
       }
     }
     
-    &__apply{
+    &__cta-card{
     background-color: #fff;
     @include margin(px-to-rem(0px), null, null, null)
         

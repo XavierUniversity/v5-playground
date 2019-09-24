@@ -5,18 +5,7 @@
   
   @include for-size("tablet-landscape-up"){ 
     @include padding(px-to-rem(50px), px-to-rem(60px), px-to-rem(50px), px-to-rem(60px));  
-
     
-  }
-
-  &--white {
-    background: #fff;
-    margin-right:1rem;
-    width:100%;
-    @include for-size("phone-only"){
-      border-left: solid 0.5rem #007db3;
-    }
-   
   }
   
   &__title{

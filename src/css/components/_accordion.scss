@@ -1,5 +1,9 @@
 .accordion{
   $self: &;
+  &--content-page{
+    background: $grey;
+    @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px),)
+  }
   &__btn{
     display: block;
     width: 100%;

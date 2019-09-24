@@ -16,7 +16,6 @@
   
   &--feature{
   height: px-to-rem(289px);
-  border-radius: px-to-rem(16px);
   background-position: center center;
   color: white;
   display: flex;
@@ -50,6 +49,7 @@
       @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
       background-size: cover;
       background-position: center center;
+      
         &--insta{
           position: relative;
           @include padding(0, 0, 0, 0);

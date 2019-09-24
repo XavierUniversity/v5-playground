@@ -1,38 +1,35 @@
 .modules{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  @include margin(px-to-rem(64px), null, null, null);
-  
-  @include for-size("tablet-landscape-up"){
-    flex-direction: row;  
-  }
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+    @include for-size("tablet-landscape-up"){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    }
+    @media (min-width: 100rem) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    }
 }
 
 .module{
-  display: flex;
-  flex-direction: row;
   height: px-to-rem(286px);
   background-color: $darkNavy;
-  width: 100%;
+  display: table;
   background-size: cover;
   background-position: left top;
-  &:not(:last-of-type){
-    @include margin(null, null, px-to-rem(36px), null);  
-  }
   
-  @include for-size("tablet-landscape-up"){
-    background-position: center center;
-    &:not(:last-of-type){
-      @include margin(null, px-to-rem(36px), 0, null);  
-    }
-  }
-  
-  &--rounded{
-    border-radius: px-to-rem(16px);
-  }
   &__content{
-    align-self: flex-end;
+    display: table-cell;
+    vertical-align: bottom;
     @include padding(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
   }  
   &__title{
@@ -47,14 +44,17 @@
     color: white;
     display: block;
     text-decoration: none;
-    transition: margin 175ms ease;
     &:hover{
-      margin-left: px-to-rem(12px);
+     
+     .module__icon {
+      margin-left: px-to-rem(8px);
+     }
     }
   }
   &__icon{
-    width: px-to-rem(22px);
-    height: px-to-rem(30px);
-    margin-right: px-to-rem(10px);
+    width: px-to-rem(24px);
+    height: px-to-rem(24px);
+    padding-left: px-to-rem(8px);
+    transition: margin 175ms ease;
   }
 }

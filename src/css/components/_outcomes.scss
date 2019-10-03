@@ -12,16 +12,14 @@
 }
 
 .outcomes-grid {
-  position:relative;
+ position:relative;
     display: grid;
     grid-template-columns: 1fr 2fr 7px;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     .year, .success-rate { grid-area: 1 / 2 / 2 / 3; }
-    .programs, .majors { grid-area: 1 / 1 / 2 / 2; }
-
-    
+    .programs, .majors { grid-area: 1 / 1 / 2 / 2; }  
   
 }
 
@@ -49,8 +47,8 @@ hr {
 }
 
 .outcomes-stats {
-  @include margin(px-to-rem(80px), null, px-to-rem(30px), null);
-  @include padding(px-to-rem(56px), null, px-to-rem(80px), null);
+  @include margin(px-to-rem(80px), null, null, null);
+  @include padding(px-to-rem(56px), null, null, null);
   background:url("../images/outcomes/StatsBKG_1x.png");
   background-image:image-set(url('../images/outcomes/StatsBKG_1px.png') 1x, url('../images/outcomes/StatsBKG_2px.png') 2x);
   background-image: -webkit-image-set(url('../images/outcomes/StatsBKG_1px.png') 1x, url('../images/outcomes/StatsBKG_2px.png') 2x);
@@ -62,4 +60,62 @@ hr {
     color:#fff;
     text-align:center;
   }
+}
+
+.percentages {
+  text-align:center;
+}
+
+.percent {
+  @include padding(px-to-rem(0px), px-to-rem(32px), px-to-rem(96px), null);
+  @include margin(px-to-rem(-64px), null, null, null);
+&__wrapper {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(3, 1fr); 
+  grid-column-gap: 0px;
+  grid-row-gap: px-to-rem(16px);
+  @include for-size("desktop-up"){
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1fr; 
+    grid-column-gap: px-to-rem(16px);
+    grid-row-gap: 0px;
+    }
+  }
+ &__content {
+   text-transform:uppercase;
+   font-weight:bold;
+   h1 {
+    font-size: 8rem;
+    letter-spacing:-0.5rem; 
+    margin-top:3rem;
+     @include for-size("tablet-landscape-up"){
+      margin-top:7rem;
+    }
+    @include for-size("tablet-portrait-up"){
+      margin-top:7rem;
+    }
+    @include for-size("phone-only"){
+      margin-top:7rem;
+    }
+
+   }
+   h5 {
+     color:#fff;
+     font-size:1.4rem;
+     @include for-size("desktop-up"){
+     margin-top: -2.1rem !important;
+     }
+     @include for-size("tablet-landscape-up"){
+       margin-top:3rem;
+     }
+     @include for-size("tablet-portrait-up"){
+      margin-top:3rem;
+    }
+    @include for-size("phone-only"){
+      margin-top:3rem;
+    }
+   }
+ } 
 }

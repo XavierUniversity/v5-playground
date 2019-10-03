@@ -2778,9 +2778,7 @@ hr {
 
 .outcomes-stats {
   margin-top: 5rem;
-  margin-bottom: 1.875rem;
   padding-top: 3.5rem;
-  padding-bottom: 5rem;
   background: url("../images/outcomes/StatsBKG_1x.png");
   background-image: image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
   background-image: -webkit-image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
@@ -2790,6 +2788,59 @@ hr {
   .outcomes-stats h1, .outcomes-stats p {
     color: #fff;
     text-align: center; }
+
+.percentages {
+  text-align: center; }
+
+.percent {
+  padding-top: 0rem;
+  padding-right: 2rem;
+  padding-bottom: 6rem;
+  margin-top: -4rem; }
+  .percent__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 1rem; }
+    @media (min-width: 85rem) {
+      .percent__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 0px; } }
+  .percent__content {
+    text-transform: uppercase;
+    font-weight: bold; }
+    .percent__content h1 {
+      font-size: 8rem;
+      letter-spacing: -0.5rem;
+      margin-top: 3rem; }
+      @media (min-width: 56.25rem) {
+        .percent__content h1 {
+          margin-top: 7rem; } }
+      @media (min-width: 37.5rem) {
+        .percent__content h1 {
+          margin-top: 7rem; } }
+      @media (max-width: 36.5rem) {
+        .percent__content h1 {
+          margin-top: 7rem; } }
+    .percent__content h5 {
+      color: #fff;
+      font-size: 1.4rem; }
+      @media (min-width: 85rem) {
+        .percent__content h5 {
+          margin-top: -2.1rem !important; } }
+      @media (min-width: 56.25rem) {
+        .percent__content h5 {
+          margin-top: 3rem; } }
+      @media (min-width: 37.5rem) {
+        .percent__content h5 {
+          margin-top: 3rem; } }
+      @media (max-width: 36.5rem) {
+        .percent__content h5 {
+          margin-top: 3rem; } }
 
 .designed-wrapper {
   position: relative; }

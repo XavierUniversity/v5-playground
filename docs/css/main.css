@@ -2783,6 +2783,7 @@ hr {
   background-image: image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
   background-image: -webkit-image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
   background-size: cover;
+  background-color: #0c2340;
   background-position: center center; }
   .outcomes-stats h1, .outcomes-stats p {
     color: #fff;

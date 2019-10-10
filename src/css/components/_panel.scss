@@ -59,6 +59,19 @@
     }
   }
   
+  &--programs {
+    background: $grey;
+    margin-top: px-to-rem(48px);
+    @include padding(px-to-rem(16px),px-to-rem(20px),px-to-rem(16px),px-to-rem(20px))
+    
+    &__title {
+      margin: 0;
+      color: $darkNavy;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+  
   &__img {
     @include padding(null, px-to-rem(24px), null, px-to-rem(24px));
     display: block;
@@ -87,3 +100,73 @@
     transform: rotate(-90deg);
   }
 }
+
+.filter-list{
+  padding-left: px-to-rem(32px);
+}
+
+.aplOption {
+    display: block;
+    line-height: 1.625rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    padding-left: px-to-rem(25px);
+    color: $medBlue;
+	
+	&:hover {
+		color: $darkNavy;
+		
+		input ~ .newRadio {
+			border: 2px solid $medBlue;
+		  }
+	  }
+	
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+    
+    &:checked ~ .aplOption__text {
+    color: $darkNavy;
+    }
+		
+		&:checked ~ .newRadio {
+		background-color: $background;
+		border: 2px solid $medBlue;
+		
+      &:after {
+        display: block;
+        }
+		}
+	}
+	
+	.newRadio {
+  position: absolute;
+  top: px-to-rem(4px);
+  left: 0;
+  height: px-to-rem(16px);
+  width: px-to-rem(16px);
+  background-color: $background;
+  border-radius: 50%;
+  border: 2px solid $darkGrey;
+  
+  &:after {
+		top: px-to-rem(3px);
+		left: px-to-rem(3px);
+		width: px-to-rem(6px);
+		height: px-to-rem(6px);
+		border-radius: 50%;
+		background: $medBlue;
+    content: "";
+    position: absolute;
+    display: none;
+    }
+  }
+}
+

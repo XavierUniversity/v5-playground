@@ -171,3 +171,11 @@ textarea{
     color: lighten($base-text-color, 10%);
   }
 }
+
+.academic-programs{
+  display: none;
+  
+  &__visible {
+    display: block;
+    } 
+  }

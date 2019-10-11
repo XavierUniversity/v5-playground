@@ -13,7 +13,10 @@
 
 .outcomes-grid {
  position:relative;
-    display: grid;
+    display: block;
+    @include for-size("tablet-landscape-up"){
+      display:grid;
+    }
     grid-template-columns: 1fr 2fr 7px;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
@@ -30,7 +33,10 @@ hr {
 }
 
 .outcomes_wrapper {
-  display:grid;
+  display:block;
+  @include for-size("tablet-landscape-up"){
+    display:grid;
+  }
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap:1rem;

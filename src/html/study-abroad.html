@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Study Abroad | Xavier University</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/StudyAbroad_Hero_1x.png");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/StudyAbroad_Hero_1x.png") 1x, url("images/hero/StudyAbroad_Hero_2x.png") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/StudyAbroad_Hero_1x.png") 1x, url("images/hero/StudyAbroad_Hero_2x.png") 2x );
+      }
+    </style>
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+     <section class="hero hero--large">
+         <h1 class="hero__title hero--large__title">
+             Study Abroad
+         </h1>
+     </section>
+
+     <div class="wrapper designed-wrapper">
+       include "includes/academic.cta.html"
+       
+       <div class="content">
+          include "includes/breadcrumbs.html"
+          
+          include "includes/academic.description.html"
+          
+          <h3>Important Dates</h3>
+          <div class="spacer--16"></div>
+          include "includes/event-list.html"
+          include "includes/event-list.html"
+          include "includes/event-list.html"
+          include "includes/event-list.html"
+          include "includes/event-list.html"
+          
+          include "includes/academic.tabs.html"
+        </div><!-- /content -->
+        <div class="sidebar">
+          include "includes/sidebar.form.html"
+          
+          include "includes/academic.quickLinks.html"
+        </div><!-- /sidebar -->
+     </div>
+       <div class="spacer--64"></div>
+         <!-- Custom grid! -->
+      </div>
+      <div class="wrapper stats">
+        <h2 class="stats__title">fancy headline about success rate</h2>
+        <p class="stats__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+             
+        <div class="flex">
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
+          </div>
+        </div>
+        <div class="spacer spacer--32"></div>
+        <div class="stats__container">
+          <ul class="nav-list footer__nav-list flex">
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/apply">Apply</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/request-info">Request Info</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/visit/">Visit Campus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="spacer spacer--64"></div>
+      include "includes/cdn.html"
+      <div class="spacer spacer--64"></div>
+    </main>
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

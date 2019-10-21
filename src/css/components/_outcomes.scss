@@ -93,14 +93,16 @@ hr {
    text-transform:uppercase;
    font-weight:bold;
    h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     letter-spacing:-0.5rem; 
     margin-top:3rem;
      @include for-size("tablet-landscape-up"){
       margin-top:7rem;
+      font-size: 8rem;
     }
     @include for-size("tablet-portrait-up"){
       margin-top:7rem;
+      font-size: 8rem;
     }
     @include for-size("phone-only"){
       margin-top:7rem;

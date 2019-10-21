@@ -1,0 +1,10 @@
+.seo {
+	background-color: #f0f2f3;
+	padding-top: px-to-rem(24px);
+	padding-bottom: px-to-rem(24px);
+	
+	&--logo{
+		width: 100%;
+		text-align: center;
+	}
+}

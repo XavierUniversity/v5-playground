@@ -11,11 +11,11 @@
 .testimonial{
     background: #F0F2F3;
     @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
-    @include margin(px-to-rem(24px), null, null, null);
   &__wrapper {
+    @include margin(px-to-rem(24px), null, null, null);
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: repeat(3, 1fr); 
+    grid-template-rows: repeat(1, 1fr); 
     grid-column-gap: 0px;
     grid-row-gap: px-to-rem(16px);
     @include for-size("desktop-up"){
@@ -28,7 +28,12 @@
   }
   
   &__content{
+    &--quotemark{
+      width: px-to-rem(35px);
+      height: px-to-rem(25px);
+    }
     &--quote{
+      @include margin(px-to-rem(32px), null, px-to-rem(12px), null)
     }
     &--name{
       font-weight: 300;

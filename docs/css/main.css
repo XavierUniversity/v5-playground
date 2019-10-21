@@ -2779,128 +2779,134 @@ textarea {
       grid-area: 1 / 3 / 2 / 4; } }
 
 .stats {
-  min-height: 100vh;
-  padding-top: 6rem;
-  padding-bottom: 4rem; }
-  .stats__header {
-    text-align: center;
-    padding-right: 0rem;
-    padding-bottom: 2.25rem;
-    padding-left: 0rem; }
+  background: #0B223F;
+  text-align: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  background-image: url("/images/hero/StatsBKG_1x.png");
+  background-image: -webkit-image-set(url("/images/hero/StatsBKG_1x.png") 1x, url("/images/hero/StatsBKG_2x.png") 2x);
+  background-image: image-set(url("/images/hero/StatsBKG_1x.png") 1x, url("/images/hero/StatsBKG_2x.png") 2x);
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .stats__title, .stats__description {
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto; }
+  .stats__title {
+    color: white; }
+  .stats__description {
+    color: white; }
+  .stats__item {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; }
     @media (min-width: 56.25rem) {
-      .stats__header {
-        padding-top: 5rem;
-        padding-right: 3rem;
-        padding-bottom: 3rem;
-        padding-left: 3rem; } }
+      .stats__item {
+        width: calc(100% / 3); } }
+  .stats__number, .stats__label {
+    display: block;
+    font-weight: 300; }
+  .stats__number {
+    font-size: 72px;
+    font-size: 4.5rem;
+    line-height: 1; }
+  .stats__label {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.25; }
+    @media (min-width: 56.25rem) {
+      .stats__label {
+        font-size: 32px;
+        font-size: 2rem;
+        line-height: 1.25; } }
+    .stats__label--alt {
+      display: block;
+      color: #0099CC;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.25; }
+      @media (min-width: 56.25rem) {
+        .stats__label--alt {
+          font-size: 28px;
+          font-size: 1.75rem;
+          line-height: 1.25; } }
+  .stats__container {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; }
+    @media (min-width: 56.25rem) {
+      .stats__container {
+        width: 65%; } }
 
-.outcomes-grid {
-  position: relative;
-  display: block;
+.outcomes {
+  display: grid;
   grid-template-columns: 1fr 2fr 7px;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px; }
-  @media (min-width: 56.25rem) {
-    .outcomes-grid {
-      display: grid; } }
-  .outcomes-grid .year, .outcomes-grid .success-rate {
+  .outcomes__title {
     grid-area: 1 / 2 / 2 / 3; }
-  .outcomes-grid .programs, .outcomes-grid .majors {
+  .outcomes__form, .outcomes__majors {
     grid-area: 1 / 1 / 2 / 2; }
+  .outcomes__stats {
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .outcomes__info {
+    background: #F0F2F3;
+    flex-basis: calc((100%/3) - 0.5rem);
+    padding: 1rem; }
+    .outcomes__info--nobg {
+      background: none;
+      text-align: center; }
 
-hr {
-  color: #dfe0e0;
-  height: 0.2rem;
-  margin: 2rem auto; }
-
-.outcomes_wrapper {
-  display: block;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 1rem;
-  grid-row-gap: 0px; }
-  @media (min-width: 56.25rem) {
-    .outcomes_wrapper {
-      display: grid; } }
-
-.outcomes_info {
-  background: #f0f2f3;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  margin-top: 1.5rem; }
-  .outcomes_info--percent {
-    /* background:#fff; */ }
-
-.outcomes-stats {
-  margin-top: 5rem;
-  padding-top: 3.5rem;
-  background: url("../images/outcomes/StatsBKG_1x.png");
-  background-image: image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
-  background-image: -webkit-image-set(url("../images/outcomes/StatsBKG_1px.png") 1x, url("../images/outcomes/StatsBKG_2px.png") 2x);
-  background-size: cover;
-  background-color: #0c2340;
-  background-position: center center; }
-  .outcomes-stats h1, .outcomes-stats p {
-    color: #fff;
-    text-align: center; }
-
-.percentages {
+.centered {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center; }
 
-.percent {
-  padding-top: 0rem;
-  padding-right: 2rem;
-  padding-bottom: 6rem;
-  margin-top: -4rem; }
-  .percent__wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 1rem; }
-    @media (min-width: 85rem) {
-      .percent__wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 0px; } }
-  .percent__content {
-    text-transform: uppercase;
-    font-weight: bold; }
-    .percent__content h1 {
-      font-size: 7rem;
-      letter-spacing: -0.5rem;
-      margin-top: 3rem; }
-      @media (min-width: 56.25rem) {
-        .percent__content h1 {
-          margin-top: 7rem;
-          font-size: 8rem; } }
-      @media (min-width: 37.5rem) {
-        .percent__content h1 {
-          margin-top: 7rem;
-          font-size: 8rem; } }
-      @media (max-width: 36.5rem) {
-        .percent__content h1 {
-          margin-top: 7rem; } }
-    .percent__content h5 {
-      color: #fff;
-      font-size: 1.4rem; }
-      @media (min-width: 85rem) {
-        .percent__content h5 {
-          margin-top: -2.1rem !important; } }
-      @media (min-width: 56.25rem) {
-        .percent__content h5 {
-          margin-top: 3rem; } }
-      @media (min-width: 37.5rem) {
-        .percent__content h5 {
-          margin-top: 3rem; } }
-      @media (max-width: 36.5rem) {
-        .percent__content h5 {
-          margin-top: 3rem; } }
+.svg {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.svg circle {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset 1s linear;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #dfe0e0;
+  stroke-width: 1em; }
+
+.svg .bar {
+  stroke: #0099CC; }
+
+.cont {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 1rem auto;
+  border-radius: 100%;
+  position: relative; }
+
+.cont:after {
+  color: #0B223F;
+  font-weight: 300;
+  position: absolute;
+  display: block;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  content: attr(data-pct) "%";
+  margin-top: -35px;
+  margin-left: -80px;
+  border-radius: 100%;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center; }
 
 .designed-wrapper {
   position: relative; }

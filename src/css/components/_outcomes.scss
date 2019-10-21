@@ -1,129 +1,73 @@
-.stats {
-    min-height: 100vh;
-    @include padding(px-to-rem(96px), null, px-to-rem(64px), null);
-    
-    &__header{
-        text-align:center;
-        @include padding(null, px-to-rem(0px), px-to-rem(36px), px-to-rem(0px));
-        @include for-size ("tablet-landscape-up") {
-          @include padding(px-to-rem(80px), px-to-rem(48px), px-to-rem(48px), px-to-rem(48px));
-        }
-  }
-}
-
-.outcomes-grid {
- position:relative;
-    display: block;
-    @include for-size("tablet-landscape-up"){
-      display:grid;
-    }
-    grid-template-columns: 1fr 2fr 7px;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    .year, .success-rate { grid-area: 1 / 2 / 2 / 3; }
-    .programs, .majors { grid-area: 1 / 1 / 2 / 2; }  
-  
-}
-
-hr {
-  color:#dfe0e0;
-  height:0.2rem;
-  margin:2rem auto;
-}
-
-.outcomes_wrapper {
-  display:block;
-  @include for-size("tablet-landscape-up"){
-    display:grid;
-  }
-  grid-template-columns: repeat(3, 1fr);
+.outcomes{
+  display: grid;
+  grid-template-columns: 1fr 2fr 7px;
   grid-template-rows: 1fr;
-  grid-column-gap:1rem;
-  grid-row-gap:0px;
-}
-
-.outcomes_info {
-  background: #f0f2f3;
-  @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
-  @include margin(px-to-rem(24px), null, null, null);
-  &--percent {
-    /* background:#fff; */
-  }
-}
-
-.outcomes-stats {
-  @include margin(px-to-rem(80px), null, null, null);
-  @include padding(px-to-rem(56px), null, null, null);
-  background:url("../images/outcomes/StatsBKG_1x.png");
-  background-image:image-set(url('../images/outcomes/StatsBKG_1px.png') 1x, url('../images/outcomes/StatsBKG_2px.png') 2x);
-  background-image: -webkit-image-set(url('../images/outcomes/StatsBKG_1px.png') 1x, url('../images/outcomes/StatsBKG_2px.png') 2x);
-  background-size: cover; 
-  background-color: #0c2340; 
-  background-position: center center;
-
-  h1, p{
-    color:#fff;
-    text-align:center;
-  }
-}
-
-.percentages {
-  text-align:center;
-}
-
-.percent {
-  @include padding(px-to-rem(0px), px-to-rem(32px), px-to-rem(96px), null);
-  @include margin(px-to-rem(-64px), null, null, null);
-&__wrapper {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: repeat(3, 1fr); 
   grid-column-gap: 0px;
-  grid-row-gap: px-to-rem(16px);
-  @include for-size("desktop-up"){
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: 1fr; 
-    grid-column-gap: px-to-rem(16px);
-    grid-row-gap: 0px;
+  grid-row-gap: 0px;
+  
+  &__title{
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  
+  &__form, &__majors{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  &__stats{
+    justify-content: space-between;
+  }
+  
+  &__info{
+    background: $grey;
+    flex-basis: calc((100%/3) - 0.5rem);
+    padding: px-to-rem(16px);
+    
+    &--nobg{
+      background: none;
+      text-align: center;
     }
   }
- &__content {
-   text-transform:uppercase;
-   font-weight:bold;
-   h1 {
-    font-size: 7rem;
-    letter-spacing:-0.5rem; 
-    margin-top:3rem;
-     @include for-size("tablet-landscape-up"){
-      margin-top:7rem;
-      font-size: 8rem;
-    }
-    @include for-size("tablet-portrait-up"){
-      margin-top:7rem;
-      font-size: 8rem;
-    }
-    @include for-size("phone-only"){
-      margin-top:7rem;
-    }
+}
 
-   }
-   h5 {
-     color:#fff;
-     font-size:1.4rem;
-     @include for-size("desktop-up"){
-     margin-top: -2.1rem !important;
-     }
-     @include for-size("tablet-landscape-up"){
-       margin-top:3rem;
-     }
-     @include for-size("tablet-portrait-up"){
-      margin-top:3rem;
-    }
-    @include for-size("phone-only"){
-      margin-top:3rem;
-    }
-   }
- } 
+.centered{
+  width: 75%;
+  @include margin(null, auto, null, auto);
+  text-align: center;
+}
+
+ .svg{
+	 transform: rotate(-90deg);
+}
+ .svg circle {
+	 stroke-dashoffset: 0;
+	 transition: stroke-dashoffset 1s linear;
+	 stroke: #dfe0e0;
+	 stroke-width: 1em;
+}
+ .svg .bar{
+	 stroke: $lightBlue;
+}
+ .cont{
+	 display: block;
+	 height: 200px;
+	 width: 200px;
+	 margin: px-to-rem(16px) auto;
+	 border-radius: 100%;
+	 position: relative;
+}
+ .cont:after {
+	 color: $darkNavy;
+	 font-weight: 300;
+	 position: absolute;
+	 display: block;
+	 height: 160px;
+	 width: 160px;
+	 left: 50%;
+	 top: 50%;
+	 content: attr(data-pct)"%";
+	 margin-top: -35px;
+	 margin-left: -80px;
+	 border-radius: 100%;
+	 @include font-size(32px);
+	 text-align: center;
 }

@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Xavier Index</title>
+    <title>Study Abroad | Xavier University</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/plyr.css">
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/StudyAbroad_Hero_1x.png");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/StudyAbroad_Hero_1x.png") 1x, url("images/hero/StudyAbroad_Hero_2x.png") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/StudyAbroad_Hero_1x.png") 1x, url("images/hero/StudyAbroad_Hero_2x.png") 2x );
+      }
+    </style>
   </head>
   <body>
     <!-- Skip Header & Navigation -->
@@ -158,28 +164,23 @@
         </div>
       </div>
     </header>
-    
     <!-- Add your site or application content here -->
     <main id="content">
-      
-      <section class="hero hero--video">
+     <section class="hero hero--large">
+         <h1 class="hero__title hero--large__title">
+             Study Abroad
+         </h1>
+     </section>
+
+     <div class="wrapper designed-wrapper">
+       <div class="designed-cta">
+         <ul class="nav-list flex list--bare hidden-mobile designed-cta__list">
+           <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Apply</a></li>
+           <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Request Info</a></li>
+         </ul>
+       </div>
        
-        <video autoplay="" loop="" muted="" style="width:100%;"><source src="images/preview.mp4" type="video/mp4"></video>
-        
-       <div class="hero--video__wrapper">
-            <div id="vid-btn" class="hero--video__btn c-btn" data-video="https://www.youtube.com/embed/KsWYS0-rTmg?autoplay=1&cc_load_policy=1&modestbranding=1&rel=0&showinfo=0">CTA GOES HERE</div>
-        </div> 
-        
-      </section>
-      
-      <div class="wrapper academic-wrapper">
-        <div class="designed-cta">
-          <ul class="nav-list flex list--bare hidden-mobile designed-cta__list">
-            <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Apply</a></li>
-            <li class="nav-list__nav-item designed-cta__item"><a href="#" class="nav-list__link academic-cta__link c-btn">Request Info</a></li>
-          </ul>
-        </div>
-        <div class="content">
+       <div class="content">
           <nav aria-label="Breadcrumb">
             <ul class="crumbs list--inline list--bare">
               <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="/">Home</a></li>
@@ -199,6 +200,59 @@
             
           <h3>Scholarships Offered:</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          
+          <h3>Important Dates</h3>
+          <div class="spacer--16"></div>
+          <div class="event-list">
+            <div class="event-list__date">
+              <span class="event-list__day">1</span>
+              <span class="event-list__month">Aug</span>
+            </div>
+            <div class="event-list__content">
+              <h3 class="event-list__title">Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="event-list">
+            <div class="event-list__date">
+              <span class="event-list__day">1</span>
+              <span class="event-list__month">Aug</span>
+            </div>
+            <div class="event-list__content">
+              <h3 class="event-list__title">Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="event-list">
+            <div class="event-list__date">
+              <span class="event-list__day">1</span>
+              <span class="event-list__month">Aug</span>
+            </div>
+            <div class="event-list__content">
+              <h3 class="event-list__title">Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="event-list">
+            <div class="event-list__date">
+              <span class="event-list__day">1</span>
+              <span class="event-list__month">Aug</span>
+            </div>
+            <div class="event-list__content">
+              <h3 class="event-list__title">Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="event-list">
+            <div class="event-list__date">
+              <span class="event-list__day">1</span>
+              <span class="event-list__month">Aug</span>
+            </div>
+            <div class="event-list__content">
+              <h3 class="event-list__title">Lorem Ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
           
           <div class="tabs">  
             <nav role='navigation' class="tab">
@@ -386,43 +440,39 @@
             </ul>
           </div><!-- /panel -->
         </div><!-- /sidebar -->
-      </div><!-- /academic-wrapper -->
+     </div>
+       <div class="spacer--64"></div>
+         <!-- Custom grid! -->
+      </div>
       
-      <div class="spacer spacer--72"></div>
-      
-      <section class="wrapper">
-        <h2 class="title text--centered"><span class="mobile-break">All for one.</span> <span class="mobile-break">One for all.</span></h2>
-        <p class="text--centered">Xavier is ranked #1 for our excellent academic reputation among top competitors in the region. We get the most out of our education, from our rigorous classroom studies to experiential learning in the real world.</p>
-      </section>
-      <div class="spacer spacer--72"></div>
-      
-      <section class="wrapper">
+      <div class="wrapper stats">
+        <h2 class="stats__title">fancy headline about success rate</h2>
+        <p class="stats__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+             
         <div class="flex">
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
           </div>
-          
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
           </div>
-          
-          <div class="panel panel--features">
-            <h2 class="panel__title panel--features__title">Studio and Gallery Space</h2>
-            <img src='https://loremflickr.com/320/240/art?locked=1' alt='' class="panel__img" />
-            <p class="panel__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr class="panel__hr" />
-            <p class="panel__content"><a class="panel__link" href="#"><svg class="icon panel__icon"><use xlink:href="#xu-arrow-right" /></svg> Learn more</a></p>
+          <div class="stats__item">
+            <span class="stats__number">000</span>
+            <span class="stats__label">First part of label <span class="stats__label--alt">alternate color</span></span>
           </div>
         </div>
-      </section>
+        <div class="spacer spacer--32"></div>
+        <div class="stats__container">
+          <ul class="nav-list footer__nav-list flex">
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/apply">Apply</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/request-info">Request Info</a></li>
+            <li class="footer__nav-item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/visit/">Visit Campus</a></li>
+          </ul>
+        </div>
+      </div>
+      
       <div class="spacer spacer--64"></div>
       <div class="wrapper flex cdn">
         <img class="cdn__image" src="//lorempixel.com/730/532/people/4" alt="" />
@@ -434,22 +484,7 @@
         </div>
       </div>
       <div class="spacer spacer--64"></div>
-      <div id="video-overlay">
-        <div class="video-overlay-container">
-          <button id="close-video-overlay" class="o-btn drawer__btn" aria-label="Close Video">
-            <svg class="icon drawer__icon"><use xlink:href="#xu-close"></use></svg>
-          </button>
-              <div class="plyr__video-embed" id="player" style="position:relative;">
-                <iframe
-                    src=""
-                    frameborder="0"
-                ></iframe>
-              </div>
-        </div>
-      </div>
-      
     </main>
-     
     <!-- End site or application content -->
     <footer class="footer">
       <div class="wrapper">

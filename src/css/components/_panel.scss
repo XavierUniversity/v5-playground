@@ -102,20 +102,37 @@
 }
 
 .filter-list{
-  padding-left: px-to-rem(32px);
+  padding-left: 0px;
+  @include for-size("tablet-landscape-up"){ 
+  padding-left: px-to-rem(20px);
+  }
 }
 
 .aplOption {
-    display: block;
-    line-height: 1.625rem;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: relative;
-    padding-left: px-to-rem(25px);
-    color: $medBlue;
+  border-top: 1px solid $grey;
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+  padding: 10px;
+  display: block;
+  line-height: 1.625rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  padding-left: px-to-rem(25px);
+  color: $medBlue;
+  @include for-size("tablet-landscape-up"){  
+    @include padding(px-to-rem(0px), px-to-rem(0px), px-to-rem(0px), px-to-rem(25px));
+    border: none;
+  }
+  
+  &:last-child{
+    @include for-size("phone-only"){
+    border-bottom: 1px solid $grey;
+    }
+  }
 	
 	&:hover {
 		color: $darkNavy;
@@ -155,6 +172,10 @@
   background-color: $background;
   border-radius: 50%;
   border: 2px solid $darkGrey;
+  display: none;
+  @include for-size("tablet-landscape-up"){
+    display: block;
+  }
   
   &:after {
 		top: px-to-rem(3px);

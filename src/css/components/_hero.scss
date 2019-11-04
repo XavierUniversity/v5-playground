@@ -85,9 +85,12 @@
   
   &--video{
     width: 100%;
-    display: table;
+    display: none;
     position: relative;
     @include margin(px-to-rem(58px), null, null, null);
+    @include for-size("tablet-portrait-up"){
+      display: table;
+    }
   
     &__wrapper{
       position: absolute;
@@ -115,6 +118,13 @@
     
     &__title {
       margin-top: 0px;
+    }
+    
+    &__img {
+      display: flex;
+       @include for-size("tablet-portrait-up"){
+       display: none;
+       }
     }
   }
   

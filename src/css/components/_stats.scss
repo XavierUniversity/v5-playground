@@ -2,8 +2,8 @@
   background: $darkNavy;
   text-align: center;
   justify-content: space-between;
-  background-image: url("/images/hero/StatsBKG_1x.png");
-  background-image: image-set( url("/images/hero/StatsBKG_1x.png") 1x, url("/images/hero/StatsBKG_2x.png") 2x );
+  background-image: url("/_V5/_assets/images/stats/statsbkg_1x.png");
+  background-image: image-set( url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x );
   background-size: cover;
   @include padding(px-to-rem(32px), null, px-to-rem(32px), null);
   &__title, &__description{

@@ -1,0 +1,16 @@
+.image-content{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+  margin-bottom: 16px;
+  
+  &--photo{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  &--text{
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}

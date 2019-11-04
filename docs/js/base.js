@@ -1,21 +1,25 @@
-$("#all-button").click(function() {
+$("#all-button").click(function(e) {
+  e.preventDefault();
      $(".select-box__container").addClass("academic-programs__visible");
      $("h2").show();
      $(".undergraduate-categories").hide();
      $(".graduate-categories").hide();
 });
 
-$("#undergrad-button").click(function() {
+$("#undergrad-button").click(function(e) {
+  e.preventDefault();
     $(".undergraduate-categories").show();
     $(".graduate-categories").hide();
 });
 
-$("#grad-button").click(function() {
+$("#grad-button").click(function(e) {
+  e.preventDefault();
     $(".undergraduate-categories").hide();
     $(".graduate-categories").show();
 });
 
-$("#undergrad-button, #grad-button").click(function() {
+$("#undergrad-button, #grad-button").click(function(e) {
+  e.preventDefault();
   var val1 = $('[name=degree-radio]:checked').val();
   var degree = $(this).data('degree');
   $(".select-box__container[data-degree!='"+degree+"']").removeClass("academic-programs__visible");
@@ -28,7 +32,8 @@ $("#undergrad-button, #grad-button").click(function() {
   });
 });
 
-$(".cats-btn-u").click(function() {
+$(".cats-btn-u").click(function(e) {
+  e.preventDefault();
   var category = $(this).data('category');
   $(".select-box__container[data-category!='"+category+"'][data-degree='undergraduate']").removeClass("academic-programs__visible");
   $(".select-box__container[data-category*='"+category+"'][data-degree='undergraduate']").addClass("academic-programs__visible");
@@ -40,7 +45,8 @@ $(".cats-btn-u").click(function() {
   });
 });
 
-$(".cats-btn-g").click(function() {
+$(".cats-btn-g").click(function(e) {
+  e.preventDefault();
   var category = $(this).data('category');
   $(".select-box__container[data-category!='"+category+"'][data-degree='graduate']").removeClass("academic-programs__visible");
   $(".select-box__container[data-category*='"+category+"'][data-degree='graduate']").addClass("academic-programs__visible");
@@ -52,7 +58,8 @@ $(".cats-btn-g").click(function() {
   });
 });
 
-$("#all-u-button").click(function() {
+$("#all-u-button").click(function(e) {
+  e.preventDefault();
      $(".select-box__container[data-degree='undergraduate']").addClass("academic-programs__visible");
      $("h2").show();
   $( ".select-box" ).each(function( index ) { // Loop each of the groups
@@ -61,7 +68,8 @@ $("#all-u-button").click(function() {
     }
   });
 });
-$("#all-g-button").click(function() {
+$("#all-g-button").click(function(e) {
+  e.preventDefault();
      $(".select-box__container[data-degree='graduate']").addClass("academic-programs__visible");
      $("h2").show();
   $( ".select-box" ).each(function( index ) { // Loop each of the groups

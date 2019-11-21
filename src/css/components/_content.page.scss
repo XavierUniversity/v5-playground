@@ -12,6 +12,10 @@
     grid-column-gap: px-to-rem(135px);     
   }
   
+  &--no-nav{
+    display: block;
+  }
+  
   &__breadcrumbs{
     grid-area: 1 / 2 / 2 / 3;
   }

@@ -9,6 +9,16 @@
     grid-row-gap: 0px; 
     @include margin(0, null, null, null); 
   }
+  
+  &__no-sidebar{
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      margin-bottom: px-to-rem(32px);
+    }
+  }
    
   .designed-cta { 
     @include for-size("tablet-landscape-up"){
@@ -29,4 +39,8 @@
       grid-area: 1 / 2 / 3 / 3; 
     }
   }
+}
+
+.statement {
+  margin-bottom: px-to-rem(16px);
 }

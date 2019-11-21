@@ -5,7 +5,7 @@
   background-image: url("/_V5/_assets/images/stats/statsbkg_1x.png");
   background-image: image-set( url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x );
   background-size: cover;
-  @include padding(px-to-rem(32px), null, px-to-rem(32px), null);
+  @include padding(px-to-rem(72px), null, px-to-rem(72px), null);
   &__title, &__description{
     max-width: 75%;
     @include margin(null, auto, null, auto);
@@ -13,6 +13,7 @@
   
   &__title{
     color: white;
+    margin-top: 0;
   }
   &__description{
     color: white;
@@ -33,21 +34,21 @@
   }
   
   &__number{
-    @include font-size(72px);
+    @include font-size(100px);
   }
   
   &__label{
     text-transform: uppercase;
-    @include font-size(26px, 1.25);
+    @include font-size(26px, 1);
     @include for-size("tablet-landscape-up"){
-      @include font-size(32px, 1.25);
+      @include font-size(32px, 1);
     }
     &--alt{
       display: block;
       color: $lightBlue;
-      @include font-size(24px, 1.25);
+      @include font-size(24px, 1);
       @include for-size("tablet-landscape-up"){
-        @include font-size(28px, 1.25);  
+        @include font-size(24px, 1);  
       }
       
     }

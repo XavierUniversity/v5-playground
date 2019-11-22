@@ -794,10 +794,7 @@ textarea {
   resize: vertical; }
 
 .slate-form {
-  /* Remove IE arrow */
-  /* Custom Select */
-  /* Arrow */
-  /* Transition */ }
+  /* Remove IE arrow */ }
   .slate-form div[data-required='1'] label::before {
     content: "*"; }
   .slate-form label {
@@ -831,28 +828,18 @@ textarea {
     cursor: pointer; }
   .slate-form select::-ms-expand {
     display: none; }
-  .slate-form .form_select .form_responses {
-    position: relative;
-    display: -webkit-box;
-    display: flex;
-    width: 100%;
-    background: white;
-    overflow: hidden;
-    border-radius: 0.25rem; }
-  .slate-form .form_select .form_responses::after {
-    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 6 11.5' style='enable-background:new 0 0 6 11.5;' xml:space='preserve'%3E%3Ctitle%3EForm_Arrow_Down%3C/title%3E%3Cpolygon class='st0' points='6,6.5 0,6.5 3.2,11.5 '/%3E%3Cpolygon class='st0' points='0,5 6,5 2.8,0 '/%3E%3C/svg%3E%0A");
-    position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
-    height: 1rem;
-    width: 0.4375rem;
-    background: white;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: .25s all ease;
-    transition: .25s all ease; }
-  .slate-form .form_select .form_responses:hover::after {
-    color: #4d4c4c; }
+  .slate-form .form_question select {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 6 11.5' style='enable-background:new 0 0 6 11.5;' xml:space='preserve'%3E%3Ctitle%3EForm_Arrow_Down%3C/title%3E%3Cpolygon class='st0' points='6,6.5 0,6.5 3.2,11.5 '/%3E%3Cpolygon class='st0' points='0,5 6,5 2.8,0 '/%3E%3C/svg%3E%0A");
+    background-position: calc(100% - 0.5rem) center;
+    background-size: 0.4375rem 1rem;
+    background-repeat: no-repeat; }
+
+.form_birthdate select {
+  width: calc(100%/2.65 - 1rem);
+  display: inline-block; }
+  .form_birthdate select:nth-child(2n) {
+    padding-right: 1rem;
+    padding-left: 1rem; }
 
 .academic-programs {
   display: none; }
@@ -2307,22 +2294,22 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-.content .tab {
+.tab {
   display: none; }
   @media (min-width: 85rem) {
-    .content .tab {
+    .tab {
       display: block; } }
-  .content .tab__list {
+  .tab__list {
     list-style: none;
     padding: 0;
     margin: 0; }
-  .content .tab__item {
+  .tab__item {
     display: inline-block;
     vertical-align: bottom;
     padding-right: 6px; }
-    .content .tab__item:first-child .content .tab__link, .content .tab__item:nth-child(4) .content .tab__link, .content .tab__item:last-child .content .tab__link {
+    .tab__item:first-child .tab__link, .tab__item:nth-child(4) .tab__link, .tab__item:last-child .tab__link {
       padding-top: 1rem; }
-  .content .tab__link {
+  .tab__link {
     display: block;
     width: 100%;
     height: auto;
@@ -2341,7 +2328,7 @@ textarea {
     font-size: 1rem;
     line-height: 1; }
     @media (min-width: 85rem) {
-      .content .tab__link {
+      .tab__link {
         display: inline-block;
         width: 7.8125rem;
         height: 3.125rem;
@@ -2352,17 +2339,17 @@ textarea {
         padding-bottom: 0;
         padding-left: 0;
         border-bottom: solid 0.375rem white; }
-        .content .tab__link.visible, .content .tab__link:active {
+        .tab__link.visible, .tab__link:active {
           border-bottom-color: #F0F2F3; } }
-    .content .tab__link:hover, .content .tab__link:focus {
+    .tab__link:hover, .tab__link:focus {
       color: #1B4675; }
-  .content .tab--hide-desktop {
+  .tab--hide-desktop {
     border: none !important; }
-    .content .tab--hide-desktop:not(:first-of-type) {
+    .tab--hide-desktop:not(:first-of-type) {
       margin-top: 0.5rem !important;
       margin-bottom: 0; }
     @media (min-width: 85rem) {
-      .content .tab--hide-desktop {
+      .tab--hide-desktop {
         display: none !important; } }
 
 .tabs {

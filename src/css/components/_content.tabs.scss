@@ -1,4 +1,4 @@
-.content .tab {
+.tab {
   $self : &;
   display: none;
   @include for-size("desktop-up"){

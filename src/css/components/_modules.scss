@@ -11,7 +11,7 @@
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     }
-    @media (min-width: 100rem) {
+    @include for-size("desktop-up") {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -21,6 +21,7 @@
 }
 
 .module{
+  width: 100%;
   height: px-to-rem(286px);
   background-color: $darkNavy;
   display: table;
@@ -30,12 +31,12 @@
   &__content{
     display: table-cell;
     vertical-align: bottom;
-    @include padding(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+    @include padding(null, px-to-rem(20px), px-to-rem(24px), px-to-rem(20px));
   }  
   &__title{
     color: white;
     text-transform: uppercase;
-    @include font-size(28px, 1);
+    @include font-size(24px, 1);
     @include margin(null, null, px-to-rem(12px), null);
     font-weight: 400;
   }

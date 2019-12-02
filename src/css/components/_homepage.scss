@@ -6,7 +6,7 @@
     background: white;
     display: grid;
     grid-column-gap: px-to-rem(20px);
-    grid-row-gap: px-to-rem(20px);   
+    grid-row-gap: px-to-rem(20px);
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
   }
@@ -15,12 +15,13 @@
     }
   
   &--feature{
-  height: px-to-rem(289px);
-  background-position: center center;
-  color: white;
-  display: flex;
-  text-align: left;
-  @include margin(px-to-rem(20px), null, px-to-rem(20px), null);
+    height: px-to-rem(289px);
+    background-position: center center;
+    color: white;
+    display: flex;
+    text-align: left;
+    position: relative;
+    @include margin(px-to-rem(20px), null, px-to-rem(20px), null);
     @include for-size("desktop-up"){
       @include margin(0, null, 0, null);
     }
@@ -28,17 +29,18 @@
       @include margin(px-to-rem(30px), null, 0, null);
       @include for-size("desktop-up"){
         @include margin(0, null, 0, null);
-      }
-      
+      }      
     }
-    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      /* IE10+ CSS styles go here */
+      display: block;
+      @include margin(px-to-rem(20px) !important, null, px-to-rem(20px) !important, null);
+    }
+      
     &__wrapper{
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0);
-      -webkit-transition: all 175ms ease-in-out;
-      -moz-transition: all 175ms ease-in-out;
-      -o-transition: all 175ms ease-in-out;
       transition: all 175ms ease-in-out;
     
       &:hover{
@@ -63,7 +65,7 @@
       @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
       
         &--insta{
-          position: relative;
+          position: absolute;
           @include padding(0, 0, 0, 0);
           width: 100%;
           height: 100%;
@@ -72,10 +74,6 @@
             background: rgba(0, 0, 0, .3);
           }
         }
-  
-        /* @include for-size("phone-only"){
-          @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(48px), px-to-rem(0px));
-        } */
     } 
     
     &__title{
@@ -147,22 +145,8 @@
     }
     
     &__date {
-      
-      &--first-row{
       position:absolute;
-      bottom: 35rem;
-      @include for-size("desktop-up"){
-        bottom:36.5rem !important;
-      }
-    }
-    
-      &--second-row{
-      position:absolute;
-      bottom: 95rem;
-      @include for-size("desktop-up"){
-        top:21.5rem !important;
-        }
-      }
+      top: px-to-rem(24px);
     }
   }
 }
@@ -308,4 +292,3 @@
     transform: translateY(-15px);
   }
 }
-

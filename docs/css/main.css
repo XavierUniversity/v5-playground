@@ -1472,6 +1472,7 @@ textarea {
   display: -webkit-box;
   display: flex;
   text-align: left;
+  position: relative;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem; }
   @media (min-width: 85rem) {
@@ -1485,6 +1486,12 @@ textarea {
       .news--feature:not(:first-of-type) {
         margin-top: 0;
         margin-bottom: 0; } }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .news--feature {
+      /* IE10+ CSS styles go here */
+      display: block;
+      margin-top: 1.25rem !important;
+      margin-bottom: 1.25rem !important; } }
   .news--feature__wrapper {
     width: 100%;
     height: 100%;
@@ -1506,12 +1513,9 @@ textarea {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
-    /* @include for-size("phone-only"){
-          @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(48px), px-to-rem(0px));
-        } */ }
+    padding-left: 1rem; }
     .news--feature__content--insta {
-      position: relative;
+      position: absolute;
       padding-top: 0;
       padding-right: 0;
       padding-bottom: 0;
@@ -1578,18 +1582,9 @@ textarea {
     grid-area: 1 / 4 / 2 / 5; }
   .news--feature:nth-of-type(6) {
     grid-area: 2 / 3 / 3 / 5; }
-  .news--feature__date--first-row {
+  .news--feature__date {
     position: absolute;
-    bottom: 35rem; }
-    @media (min-width: 85rem) {
-      .news--feature__date--first-row {
-        bottom: 36.5rem !important; } }
-  .news--feature__date--second-row {
-    position: absolute;
-    bottom: 95rem; }
-    @media (min-width: 85rem) {
-      .news--feature__date--second-row {
-        top: 21.5rem !important; } }
+    top: 1.5rem; }
 
 .featured-links {
   margin-top: 5rem;

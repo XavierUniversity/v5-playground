@@ -1,9 +1,5 @@
 .crumbs{
-  display: none;
-  
-  @include for-size("tablet-portrait-up"){
     display: block;
-  }
   
   @include padding(px-to-rem(28px), null, px-to-rem(24px), 0);
   @include font-size(14px);

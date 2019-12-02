@@ -78,7 +78,7 @@
     width: 100%;
   }
   &__content {
-    @include margin(null, px-to-rem(42px), null, px-to-rem(42px));
+    @include margin(px-to-rem(24px), px-to-rem(42px), null, px-to-rem(42px));
   }
   
   &__hr{

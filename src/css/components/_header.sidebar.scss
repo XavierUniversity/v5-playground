@@ -54,6 +54,7 @@ $width: px-to-rem(532px);
      
     &:hover, &:focus, &:active{
       color: white;
+      background: inherit;
     }
     
     &--inverted{

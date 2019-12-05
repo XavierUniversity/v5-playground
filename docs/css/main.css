@@ -877,6 +877,7 @@ textarea {
       content: ' ';
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#007DB3' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
       background-size: 0.9375rem 0.625rem;
+      background-repeat: no-repeat;
       height: 0.625rem;
       width: 0.9375rem;
       margin-left: 0.5rem;

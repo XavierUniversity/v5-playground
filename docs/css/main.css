@@ -2029,10 +2029,7 @@ textarea {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.25;
-    margin-top: 1.5rem; }
-    @media (min-width: 56.25rem) {
-      .colophon__address {
-        margin-top: -0.3rem; } }
+    margin-top: 0.875rem; }
   .colophon__item {
     display: block; }
     @media (min-width: 56.25rem) {
@@ -3222,9 +3219,11 @@ textarea {
 
 .ctaTile {
   height: 400px;
+  width: 100%;
   display: table;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-repeat: no-repeat; }
   .ctaTile__wrapper {
     background: rgba(0, 0, 0, 0); }
     .ctaTile__wrapper:hover {

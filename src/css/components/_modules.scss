@@ -48,14 +48,14 @@
     &:hover{
      
      .module__icon {
-      margin-left: px-to-rem(8px);
+      @include margin(null, null, px-to-rem(8px), null);
      }
     }
   }
   &__icon{
     width: px-to-rem(24px);
     height: px-to-rem(24px);
-    padding-left: px-to-rem(8px);
+    @include padding(null, null, px-to-rem(8px), null);
     transition: margin 175ms ease;
   }
 }

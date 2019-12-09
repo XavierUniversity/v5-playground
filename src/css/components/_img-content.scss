@@ -21,11 +21,11 @@
     margin-bottom: 16px;
   }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .image-content {
-        display: block; }
-        .image-content > div {
+        display: block; 
+        > div {
           margin-top: 1rem;
-          margin-bottom: 1rem; } }
+          margin-bottom: 1rem; }
+        }
   
   &__no-sidebar {
     margin-bottom: px-to-rem(16px);
@@ -38,9 +38,8 @@
       margin-bottom: 32px;
       
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .image-content__no-sidebar {
-        display: block; }
-        .image-content__no-sidebar > div {
+        display: block; 
+        > div {
           margin-top: 1rem;
           margin-bottom: 1rem; } }
     }
@@ -89,9 +88,8 @@
     }
     
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .afo__product {
-        display: block; }
-        .iafo__product > div {
+        display: block; 
+        > div {
           margin-top: 1rem;
           margin-bottom: 1rem; } }
     

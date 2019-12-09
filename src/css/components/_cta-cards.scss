@@ -27,6 +27,14 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px;
     }
+    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
+    
   }
   
   &__3x2{
@@ -49,6 +57,12 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
   }
   
   &__2x1{
@@ -63,6 +77,12 @@
       grid-template-rows: 1fr; 
       grid-column-gap: 16px;
       grid-row-gap: 0px;
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
     }
   }
     
@@ -79,6 +99,12 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px; 
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
   }
     
   &__1x1 {
@@ -87,7 +113,13 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 16px;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
     }
+  }
       
   h1{
     text-transform:uppercase;

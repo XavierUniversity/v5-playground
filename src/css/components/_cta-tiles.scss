@@ -3,7 +3,7 @@
 }
 
 .ctaTile {
-    height: 400px;
+    height: px-to-rem(400px);
     width: 100%;
     display: table;
     background-size: cover;
@@ -18,7 +18,7 @@
             cursor: pointer;
             
             .ctaTile__text{
-                top: 300px;
+                top: px-to-rem(300px);
             }
             
             .ctaTile__text p{
@@ -41,24 +41,21 @@
     &__content{
         position: relative;
         display: table-cell;
-        height: 400px;
+        height: px-to-rem(400px);
     }
     
     &__name{
         color: white;
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: px-to-rem(24px);
         font-weight: 500;
     }
     
     &__text{
         position: absolute;
-        top: 332px;
+        top: px-to-rem(332px);
         @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
-        -webkit-transition: all 450ms ease-in-out;
-        -moz-transition: all 450ms ease-in-out;
-        -o-transition: all 450ms ease-in-out;
         transition: all 450ms ease-in-out;
         
         p {

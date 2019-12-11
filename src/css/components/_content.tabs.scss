@@ -37,11 +37,12 @@
     
     @include font-size(16px, 1);
     @include for-size("desktop-up"){
-      display: inline-block;  
+      display: table-cell;  
       width: px-to-rem(125px);
       height: px-to-rem(50px);
       word-break: break-word;
       text-align: center;
+      vertical-align: middle;
       @include padding(px-to-rem(6px), 0, 0, 0);
       border-bottom: solid px-to-rem(6px) white;
       &.visible, &:active {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 This CSS resource incorporates links to font software which is the valuable copyrighted
 property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
@@ -865,12 +866,34 @@ textarea {
     color: white;
     background: #007DB3;
     border-color: #007DB3; }
+  .content a.link-arrow, #content a.link-arrow {
+    display: inline-block;
+    color: #007DB3;
+    text-decoration: none;
+    font-weight: 300; }
+    .content a.link-arrow:after, #content a.link-arrow:after {
+      fill: #007DB3;
+      display: inline-block;
+      content: ' ';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#007DB3' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
+      background-size: 0.9375rem 0.625rem;
+      background-repeat: no-repeat;
+      height: 0.625rem;
+      width: 0.9375rem;
+      margin-left: 0.5rem;
+      -webkit-transition: all 175ms ease;
+      transition: all 175ms ease; }
+    .content a.link-arrow:hover, .content a.link-arrow:focus, .content a.link-arrow:active, #content a.link-arrow:hover, #content a.link-arrow:focus, #content a.link-arrow:active {
+      color: #004867; }
+      .content a.link-arrow:hover:after, .content a.link-arrow:focus:after, .content a.link-arrow:active:after, #content a.link-arrow:hover:after, #content a.link-arrow:focus:after, #content a.link-arrow:active:after {
+        margin-left: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#004867' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E"); }
 
-.content a[class=""], .content a:not([class]), .content a.link-arrow, #content a[class=""], #content a:not([class]), #content a.link-arrow {
+.content a[class=""], .content a:not([class]), #content a[class=""], #content a:not([class]) {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline; }
-  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, .content a.link-arrow:hover, .content a.link-arrow:focus, .content a.link-arrow:active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active, #content a.link-arrow:hover, #content a.link-arrow:focus, #content a.link-arrow:active {
+  .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
     color: #004867; }
 
 .wrapper {
@@ -1414,7 +1437,8 @@ textarea {
         margin-top: 1.5rem;
         margin-right: 2.5rem; } }
     .drawer__btn:hover, .drawer__btn:focus, .drawer__btn:active {
-      color: white; }
+      color: white;
+      background: inherit; }
     .drawer__btn--inverted {
       color: rgba(11, 34, 63, 0.75); }
       .drawer__btn--inverted:hover, .drawer__btn--inverted:focus, .drawer__btn--inverted:active {
@@ -2005,10 +2029,7 @@ textarea {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.25;
-    margin-top: 1.5rem; }
-    @media (min-width: 56.25rem) {
-      .colophon__address {
-        margin-top: -0.3rem; } }
+    margin-top: 0.875rem; }
   .colophon__item {
     display: block; }
     @media (min-width: 56.25rem) {
@@ -2378,8 +2399,11 @@ textarea {
   margin-bottom: 6.25rem; }
   @media (min-width: 56.25rem) {
     .content-page {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 18.75rem 1fr;
       grid-template-columns: 18.75rem 1fr;
+      -ms-grid-rows: 4.75rem 2fr;
       grid-template-rows: 4.75rem 2fr;
       grid-row-gap: 0;
       grid-column-gap: 4.21875rem; } }
@@ -2389,8 +2413,16 @@ textarea {
   .content-page--no-nav {
     display: block; }
   .content-page__breadcrumbs {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: 1 / 2 / 2 / 3; }
   .content-page--nav {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 3 / 2;
     width: 100%;
     margin-top: 1rem;
@@ -2400,6 +2432,13 @@ textarea {
       .content-page--nav {
         padding: 0;
         background: none; } }
+  @media all and (min-width: 56.25rem) and (-ms-high-contrast: none), (min-width: 56.25rem) and (-ms-high-contrast: active) {
+    .content-page--nav {
+      /* IE10+ CSS styles go here */
+      padding-right: 4.21875rem; } }
+  @media all and (min-width: 56.25rem) and (-ms-high-contrast: none), (min-width: 56.25rem) and (-ms-high-contrast: active) {
+    .content-page--nav {
+      padding-right: 4.21875rem; } }
     .content-page--nav__controls {
       display: block;
       text-transform: uppercase;
@@ -2435,6 +2474,10 @@ textarea {
     padding-left: 0.625rem;
     border-left: 0.1875rem solid #007DB3; }
   .content-page--main {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3; }
 
 .sidenav {
@@ -2657,6 +2700,8 @@ textarea {
   padding-bottom: 3.125rem;
   padding-left: 1.875rem;
   margin-top: 1.5rem; }
+  .panel:first-child {
+    margin-top: 3rem; }
   @media (min-width: 56.25rem) {
     .panel {
       padding-top: 3.125rem;
@@ -2676,8 +2721,6 @@ textarea {
       text-align: center; }
     .panel__title--form {
       margin-bottom: 1.6875rem; }
-  .panel--academic {
-    margin-top: 3rem; }
   .panel--quicklinks {
     display: none; }
     @media (min-width: 56.25rem) {
@@ -2839,6 +2882,9 @@ textarea {
   margin-top: 0;
   -webkit-transition: none;
   transition: none; }
+  .accordion__btn:focus {
+    background: inherit;
+    color: inherit; }
   .accordion__btn.on .accordion__icon--plus {
     display: none; }
   .accordion__btn.on .accordion__icon--minus {
@@ -3092,8 +3138,11 @@ textarea {
   position: relative; }
   @media (min-width: 56.25rem) {
     .designed-wrapper {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr 400px;
       grid-template-columns: 1fr 400px;
+      -ms-grid-rows: 1fr 2fr;
       grid-template-rows: 1fr 2fr;
       grid-column-gap: 0px;
       grid-row-gap: 0px;
@@ -3105,9 +3154,21 @@ textarea {
     margin-bottom: 2rem; }
   @media (min-width: 56.25rem) {
     .designed-wrapper .designed-cta {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 2 / 3; } }
+  @media all and (min-width: 56.25rem) and (-ms-high-contrast: none), (min-width: 56.25rem) and (-ms-high-contrast: active) {
+    .designed-wrapper .designed-cta {
+      /* IE10+ CSS styles go here */
+      max-width: 400px; } }
   @media (min-width: 56.25rem) {
     .designed-wrapper .content {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 1 / 3 / 2;
       padding-right: 3rem; } }
   @media (min-width: 85rem) {
@@ -3115,6 +3176,10 @@ textarea {
       padding-right: 6rem; } }
   @media (min-width: 56.25rem) {
     .designed-wrapper .sidebar {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 3 / 3; } }
 
 .statement {
@@ -3260,6 +3325,12 @@ textarea {
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px; } }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cta-card__3x1 {
+        display: block; }
+        .cta-card__3x1 > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
   .cta-card__3x2 {
     display: grid;
     grid-template-columns: 1fr;
@@ -3280,6 +3351,12 @@ textarea {
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px; } }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cta-card__3x2 {
+        display: block; }
+        .cta-card__3x2 > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
   .cta-card__2x1 {
     display: grid;
     grid-template-columns: 1fr;
@@ -3293,6 +3370,12 @@ textarea {
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px; } }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cta-card__2x1 {
+        display: block; }
+        .cta-card__2x1 > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
   .cta-card__2x2 {
     display: grid;
     grid-template-columns: 1fr;
@@ -3306,12 +3389,24 @@ textarea {
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px; } }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cta-card__2x2 {
+        display: block; }
+        .cta-card__2x2 > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
   .cta-card__1x1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 16px; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .cta-card__1x1 {
+        display: block; }
+        .cta-card__1x1 > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
   .cta-card h1 {
     text-transform: uppercase;
     font-size: 32px;
@@ -3324,17 +3419,19 @@ textarea {
   margin-bottom: 1.5rem; }
 
 .ctaTile {
-  height: 400px;
+  height: 25rem;
+  width: 100%;
   display: table;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-repeat: no-repeat; }
   .ctaTile__wrapper {
     background: rgba(0, 0, 0, 0); }
     .ctaTile__wrapper:hover {
       background: rgba(0, 0, 0, 0.3);
       cursor: pointer; }
       .ctaTile__wrapper:hover .ctaTile__text {
-        top: 300px; }
+        top: 18.75rem; }
       .ctaTile__wrapper:hover .ctaTile__text p {
         opacity: 1; }
   .ctaTile__header {
@@ -3345,7 +3442,7 @@ textarea {
   .ctaTile__content {
     position: relative;
     display: table-cell;
-    height: 400px; }
+    height: 25rem; }
   .ctaTile__name {
     color: white;
     text-transform: uppercase;
@@ -3354,7 +3451,7 @@ textarea {
     font-weight: 500; }
   .ctaTile__text {
     position: absolute;
-    top: 332px;
+    top: 20.75rem;
     padding-right: 2rem;
     padding-left: 2rem;
     -webkit-transition: all 450ms ease-in-out;
@@ -3604,9 +3701,69 @@ textarea {
 .j-message {
   color: #333 !important; }
 
+/*
+	Improved screen reader only CSS class
+	@author Gaël Poupard
+		@note Based on Yahoo!'s technique
+		@author Thierry Koblentz
+		@see https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+	* 1.
+		@note `clip` is deprecated but works everywhere
+		@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+	* 2.
+		@note `clip-path` is the future-proof version, but not very well supported yet
+		@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+		@see http://caniuse.com/#search=clip-path
+		@author Yvain Liechti
+		@see https://twitter.com/ryuran78/status/778943389819604992
+	* 3.
+		@note preventing text to be condensed
+		author J. Renée Beach
+		@see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+		@note Drupal 8 goes with word-wrap: normal instead
+		@see https://www.drupal.org/node/2045151
+		@see http://cgit.drupalcode.org/drupal/commit/?id=5b847ea
+	* 4.
+		@note !important is important
+		@note Obviously you wanna hide something
+		@author Harry Roberts
+		@see https://csswizardry.com/2016/05/the-importance-of-important/
+*/
 .sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
   position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px); }
+  width: 1px !important;
+  white-space: nowrap !important;
+  /* 3 */ }
+
+/*
+	Use in conjunction with .sr-only to only display content when it's focused.
+	@note Useful for skip links 
+	@see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+	@note Based on a HTML5 Boilerplate technique, included in Bootstrap
+	@note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+		@author Sylvain Pigeard
+		@see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important; }
 
 .nav-open {
   overflow: hidden !important;

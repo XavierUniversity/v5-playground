@@ -55,10 +55,7 @@
   text-align: center;
   &__address{
     @include font-size(14px, 1.25);
-    @include margin(px-to-rem(24px), null, null, null);  
-    @include for-size("tablet-landscape-up"){
-      @include margin(- px-to-rem(4.8px), null, null, null);  
-    }
+    @include margin(px-to-rem(14px), null, null, null);
   }
   &__item{
     display: block; 

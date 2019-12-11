@@ -2,8 +2,11 @@
   position: relative;
   
   @include for-size("tablet-landscape-up"){
+    display: -ms-grid;
     display: grid; 
+    -ms-grid-columns: 1fr 400px; 
     grid-template-columns: 1fr 400px; 
+    -ms-grid-rows: 1fr 2fr; 
     grid-template-rows: 1fr 2fr; 
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
@@ -22,11 +25,23 @@
    
   .designed-cta { 
     @include for-size("tablet-landscape-up"){
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 2 / 3; 
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        max-width:400px;
+      }
     }
   }
   .content { 
     @include for-size("tablet-landscape-up"){
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 1 / 3 / 2;
       @include padding(null, px-to-rem(96px / 2), null,  null);
     }
@@ -36,6 +51,10 @@
   } 
   .sidebar { 
     @include for-size("tablet-landscape-up"){
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 3 / 3; 
     }
   }

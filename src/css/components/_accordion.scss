@@ -1,5 +1,6 @@
 .accordion{
   $self: &;
+  
   &--content-page{
     background: $grey;
     @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px),)
@@ -13,7 +14,10 @@
     @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
     @include margin(0, null, null, null);
     transition: none;
-    
+    &:focus{
+      background: inherit;
+      color: inherit;
+    }
     &.on{
       
       #{$self}__icon--plus{

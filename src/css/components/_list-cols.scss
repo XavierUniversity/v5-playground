@@ -1,0 +1,29 @@
+.list-col{
+  column-count: 1;
+  column-gap: px-to-rem(16px);
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  &--four{
+    @include for-size("tablet-landscape-up"){
+      column-count: 4;
+      column-width: calc((100% / 3) - (#{px-to-rem(16px)} * 3));
+    }    
+  }
+  &--three{
+    @include for-size("tablet-landscape-up"){
+      column-count: 3;
+      column-width: calc((100% / 3) - (#{px-to-rem(16px)} * 2));
+    }
+  }
+  &--two{
+    @include for-size("tablet-landscape-up"){
+      column-count: 2;
+      column-width: calc((100% / 3) - (#{px-to-rem(16px)} * 1));
+    }
+  }
+  a{
+    display: block;
+    @include padding( px-to-rem(8px), null, px-to-rem(8px), null);
+  }
+}

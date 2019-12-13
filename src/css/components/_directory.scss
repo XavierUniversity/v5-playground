@@ -119,6 +119,7 @@
     list-style: none;
     font-size: 1rem;
     margin: 0;
+    padding-left: 0;
     &--social {
       margin: 0;
       
@@ -186,11 +187,34 @@
     margin: 0;
     margin-bottom: 0.75rem;
     font-size: 1rem;
+    padding-left: 0;
     li {
       padding: 0.5rem 0.25rem;
       &:not(:last-child) {
         border-bottom: solid 1px #dfe0e0;
       }
     }
+  }
+}
+
+.region-list{
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: 1fr; 
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+  @include for-size("tablet-portrait-up"){
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: 1fr; 
+      grid-column-gap: 16px;
+      grid-row-gap: 8px;
+    }
+  @include for-size("desktop-up"){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 8px;
   }
 }

@@ -3508,50 +3508,50 @@ textarea {
 .ctaTile {
   height: 25rem;
   width: 100%;
-  display: table;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
-  .ctaTile__wrapper {
-    background: rgba(0, 0, 0, 0); }
-    .ctaTile__wrapper:hover {
-      background: rgba(0, 0, 0, 0.3);
-      cursor: pointer; }
-      .ctaTile__wrapper:hover .ctaTile__text {
-        top: 18.75rem; }
-      .ctaTile__wrapper:hover .ctaTile__text p {
-        opacity: 1; }
+  .ctaTile__content {
+    padding-right: 2rem;
+    padding-left: 2rem; }
   .ctaTile__header {
     text-align: center;
     margin-bottom: 2rem; }
     .ctaTile__header p {
       margin-top: 1.5rem; }
   .ctaTile__content {
-    position: relative;
-    display: table-cell;
-    height: 25rem; }
+    position: absolute;
+    bottom: -3.75rem;
+    -webkit-transition: bottom 450ms ease-in-out;
+    transition: bottom 450ms ease-in-out;
+    min-height: 7.8125rem; }
   .ctaTile__name {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-top: 0;
+    padding-top: 0; }
   .ctaTile__text {
-    position: absolute;
-    top: 20.75rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    -webkit-transition: all 450ms ease-in-out;
-    transition: all 450ms ease-in-out; }
-    .ctaTile__text p {
-      color: rgba(255, 255, 255, 0.8);
-      opacity: 0; }
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+    opacity: 0; }
   .ctaTile__link {
-    display: table;
+    display: block;
     width: 100%;
     height: 100%;
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: background 400ms ease-in-out;
+    transition: background 400ms ease-in-out; }
+    .ctaTile__link:hover {
+      background: rgba(0, 0, 0, 0.3); }
+      .ctaTile__link:hover .ctaTile__content {
+        bottom: 0; }
+      .ctaTile__link:hover .ctaTile__text {
+        opacity: 1; }
 
 .testimonials {
   text-align: center; }

@@ -1,4 +1,6 @@
 .cta-card{
+  background-image: url(/_V5/_assets/images/cards/cards_bg.png);
+  background-size: cover;
   background-color: #f0f2f3;
   min-height: 85vh;
   @include for-size ("phone-only") {

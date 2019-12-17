@@ -1,0 +1,19 @@
+.highlight {
+  width: 100%;
+  margin: auto 0;
+  background-size: cover;
+  @include padding(px-to-rem(125px),null,px-to-rem(125px),null);
+  
+  &--container{
+    @include for-size("tablet-landscape-up") {
+      width: 75%;
+    }
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    @include padding(px-to-rem(75px),px-to-rem(50px),px-to-rem(75px),px-to-rem(50px));
+    
+    h2 {
+      @include margin(px-to-rem(0px),null,px-to-rem(25px),null);;
+    }
+  }
+}

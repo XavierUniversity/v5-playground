@@ -42,15 +42,8 @@
   }
 
   &__link{
-    color: white;
     display: block;
     text-decoration: none;
-    &:hover{
-     
-     .module__icon {
-      @include margin(null, null, px-to-rem(8px), null);
-     }
-    }
   }
   &__icon{
     width: px-to-rem(24px);

@@ -3047,6 +3047,8 @@ textarea {
   .image-content--text p {
     text-align: left !important;
     margin-bottom: 1rem !important; }
+  .image-content--text ul {
+    padding-left: 0.5rem; }
 
 .afo__product {
   display: grid;
@@ -3562,6 +3564,50 @@ textarea {
         bottom: 0; }
       .ctaTile__link:hover .ctaTile__text {
         opacity: 1; }
+.highlight {
+  width: 100%;
+  margin: auto 0;
+  background-size: cover;
+  padding-top: 7.8125rem;
+  padding-bottom: 7.8125rem; }
+  .highlight--container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding-top: 4.6875rem;
+    padding-right: 3.125rem;
+    padding-bottom: 4.6875rem;
+    padding-left: 3.125rem; }
+    @media (min-width: 56.25rem) {
+      .highlight--container {
+        width: 75%; } }
+    .highlight--container h2 {
+      margin-top: 0rem;
+      margin-bottom: 1.5625rem; }
+
+.recommended--grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
+  grid-column-gap: 96px;
+  grid-row-gap: 32px; }
+  @media (min-width: 56.25rem) {
+    .recommended--grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 96px;
+      grid-row-gap: 0px; } }
+
+.recommended--container {
+  max-width: 15.25rem; }
+  .recommended--container__image {
+    max-height: 13.875rem;
+    margin-bottom: 1rem; }
+  .recommended--container__text {
+    text-transform: uppercase;
+    color: #0B223F;
+    font-weight: 400; }
 
 .testimonials {
   text-align: center; }

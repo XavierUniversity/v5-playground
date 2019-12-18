@@ -3564,7 +3564,6 @@ textarea {
         bottom: 0; }
       .ctaTile__link:hover .ctaTile__text {
         opacity: 1; }
-
 .highlight {
   width: 100%;
   margin: auto 0;
@@ -3714,6 +3713,37 @@ textarea {
   .seo--logo {
     width: 100%;
     text-align: center; }
+
+.icon_block {
+  margin-right: -2rem;
+  margin-left: -2rem;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  background: #F0F2F3; }
+  @media (min-width: 85rem) {
+    .icon_block {
+      margin-right: -5.875rem;
+      margin-left: -5.875rem;
+      padding-right: 5.875rem;
+      padding-left: 5.875rem; } }
+  .icon_block__title {
+    margin-bottom: 2rem; }
+  .icon_block__wrapper {
+    -webkit-box-pack: space-evenly;
+            justify-content: space-evenly; }
+  .icon_block__single {
+    text-align: center; }
+  .icon_block__stat {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+    .icon_block__stat--2 {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.3333333333; }
 
 .event-list {
   display: -webkit-box;

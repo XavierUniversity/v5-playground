@@ -47,6 +47,10 @@
 
   &--featured-links {
     @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
+    @include for-size("tablet-landscape-up"){
+      @include margin(px-to-rem(16px), null, null, null);
+    }
+    
   }
   
   &--inline{

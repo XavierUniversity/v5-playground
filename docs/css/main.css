@@ -906,6 +906,13 @@ textarea {
   .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
     color: #004867; }
 
+a[href^=tel] {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
 .wrapper {
   position: relative;
   padding-right: 2rem;
@@ -2055,6 +2062,11 @@ textarea {
         padding-right: 1rem;
         padding-bottom: 0;
         padding-left: 1rem; } }
+  .colophon__link {
+    color: white;
+    text-decoration: none; }
+    .colophon__link:hover {
+      text-decoration: underline; }
 
 .footer-flex {
   display: -webkit-box;

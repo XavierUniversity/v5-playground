@@ -42,13 +42,19 @@
   }
 
   &__link{
+	  color: white;
     display: block;
     text-decoration: none;
+    
+    &:hover{
+      .module__icon {
+        margin-left: 0.5rem;
+      }
+    }
   }
   &__icon{
-    width: px-to-rem(24px);
-    height: px-to-rem(24px);
-    @include padding(null, null, px-to-rem(8px), null);
+    width: px-to-rem(20px);
+    height: px-to-rem(20px);
     transition: margin 175ms ease;
   }
 }

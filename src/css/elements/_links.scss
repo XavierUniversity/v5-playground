@@ -70,5 +70,12 @@
       color: darken($medBlue, 15%);
     }
   }
-  
+}
+
+a[href^=tel]{
+  color:inherit;
+  text-decoration: inherit;
+  font-size:inherit;
+  font-style:inherit;
+  font-weight:inherit;
 }

@@ -64,6 +64,13 @@
       @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
     }
   }
+  &__link{
+    color: white;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer-flex{

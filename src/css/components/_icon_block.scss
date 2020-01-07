@@ -16,8 +16,11 @@
   }
   &__single{
     text-align: center;
+    width: calc( 100% / 4 );
   }
-  &__icon{}
+  &__image{
+    width: px-to-rem(115px);
+  }
   &__stat{
     text-transform: uppercase;
     @include font-size(20px);

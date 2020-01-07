@@ -1822,6 +1822,8 @@ a[href^=tel] {
   .nav-list--border-top {
     border-top: solid 0.0625rem #007DB3;
     margin-top: 5rem; }
+  .nav-list--no-user {
+    margin-top: 5rem; }
   .nav-list__item--border-bottom {
     border-bottom: solid 0.0625rem #007DB3;
     padding-top: 1rem;
@@ -1841,12 +1843,14 @@ a[href^=tel] {
   .nav-list__link {
     color: white;
     text-decoration: none;
-    -webkit-transition: margin 175ms ease;
-    transition: margin 175ms ease; }
+    -webkit-transition: padding 175ms ease;
+    transition: padding 175ms ease; }
     .nav-list__link--upper {
       text-transform: uppercase; }
     .nav-list__link:hover, .nav-list__link:active {
-      margin-left: 0.75rem; }
+      padding-left: 0.75rem; }
+    .nav-list__link:focus {
+      color: white; }
   .nav-list__btn {
     float: right;
     background: #13355A;
@@ -1914,11 +1918,13 @@ a[href^=tel] {
       content: '';
       -webkit-transform-origin: right top;
               transform-origin: right top; }
-    .nav-header__link:hover::after, .nav-header__link:focus::after, .nav-header__link:active::after {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-      -webkit-transform-origin: left top;
-              transform-origin: left top; }
+    .nav-header__link:hover, .nav-header__link:focus, .nav-header__link:active {
+      color: white; }
+      .nav-header__link:hover::after, .nav-header__link:focus::after, .nav-header__link:active::after {
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+        -webkit-transform-origin: left top;
+                transform-origin: left top; }
 
 .crumbs {
   display: block;

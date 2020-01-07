@@ -57,6 +57,10 @@
       -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 3 / 3; 
     }
+    
+    > .panel:first-child{
+      @include margin(px-to-rem(48px), null, null, null);
+    }
   }
 }
 

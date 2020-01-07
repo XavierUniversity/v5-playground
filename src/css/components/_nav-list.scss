@@ -7,7 +7,9 @@
     border-top: solid px-to-rem(1px) $medBlue;
     @include margin(px-to-rem(80px), null, null, null)
   }
-  
+  &--no-user{
+    @include margin(px-to-rem(80px), null, null, null)
+  }
   &__item{
     &--border-bottom{
       border-bottom: solid px-to-rem(1px) $medBlue; 
@@ -30,13 +32,16 @@
   &__link{
     color: white;
     text-decoration: none;
-    transition: margin 175ms ease;
+    transition: padding 175ms ease;
     &--upper{
       text-transform: uppercase;
     }
     
     &:hover, &:active{
-      margin-left: px-to-rem(12px);
+      padding-left: px-to-rem(12px);
+    }
+    &:focus{
+      color: white;
     }
   }
   &__btn{
@@ -118,6 +123,7 @@
     }
     
     &:hover, &:focus, &:active{
+      color: white;
       &::after{
         transform: scale(1,1);
         transform-origin: left top;  

@@ -3,10 +3,6 @@
   @include padding(px-to-rem(50px), px-to-rem(30px), px-to-rem(50px), px-to-rem(30px));
   @include margin(px-to-rem(24px), null, null, null);
   
-  &:first-child{
-    @include margin(px-to-rem(48px), null, null, null);
-  }
-  
   @include for-size("tablet-landscape-up"){ 
     @include padding(px-to-rem(50px), px-to-rem(60px), px-to-rem(50px), px-to-rem(60px));  
     

@@ -2798,8 +2798,6 @@ a[href^=tel] {
   padding-bottom: 3.125rem;
   padding-left: 1.875rem;
   margin-top: 1.5rem; }
-  .panel:first-child {
-    margin-top: 3rem; }
   @media (min-width: 56.25rem) {
     .panel {
       padding-top: 3.125rem;
@@ -3322,6 +3320,8 @@ a[href^=tel] {
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
       grid-area: 1 / 2 / 3 / 3; } }
+  .designed-wrapper .sidebar > .panel:first-child {
+    margin-top: 3rem; }
 
 .statement {
   margin-bottom: 1rem; }

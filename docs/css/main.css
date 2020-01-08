@@ -1229,11 +1229,13 @@ a[href^=tel] {
   box-shadow: 0 0.9375rem 1rem rgba(0, 0, 0, 0.1); }
 
 .drawer--search.visible .search__header {
+  margin-top: 0;
   top: 0;
   position: relative; }
 
 .site-search {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0; }
   .site-search__btn {
     color: white;
     background: #007DB3;
@@ -1688,8 +1690,9 @@ a[href^=tel] {
     margin-left: 0;
     padding-bottom: 3.75rem;
     padding-left: 0; }
-    .featured-links--list__item {
-      flex-basis: calc(33% - 2rem); }
+    @media (min-width: 37.5rem) {
+      .featured-links--list__item {
+        flex-basis: calc(33% - 2rem); } }
 
 .commitment {
   background-color: rgba(255, 255, 255, 0.85);
@@ -2200,7 +2203,10 @@ a[href^=tel] {
           justify-content: center;
   position: relative; }
   .hero--homepage {
-    height: 110vh; }
+    height: 100vh; }
+    @media (min-width: 85rem) {
+      .hero--homepage {
+        height: 110vh; } }
     .hero--homepage__title {
       text-shadow: none;
       font-size: 48px;

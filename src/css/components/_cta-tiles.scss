@@ -9,7 +9,8 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-        
+  overflow: hidden;
+  
   &__content{
     @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
   }

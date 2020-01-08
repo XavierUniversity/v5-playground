@@ -3611,7 +3611,8 @@ a[href^=tel] {
   width: 100%;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow: hidden; }
   .ctaTile__content {
     padding-right: 2rem;
     padding-left: 2rem; }

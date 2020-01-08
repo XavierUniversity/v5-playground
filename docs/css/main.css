@@ -2028,7 +2028,11 @@ a[href^=tel] {
     .c-btn--hero:hover, .c-btn--hero:focus, .c-btn--hero:active, .btn--hero:hover, .btn--hero:focus, .btn--hero:active {
       background: white;
       color: black;
-      border-color: white; }
+      border-color: white;
+      padding-top: 0.9375rem;
+      padding-right: 4.375rem;
+      padding-bottom: 0.9375rem;
+      padding-left: 4.375rem; }
     @media (max-width: 36.5rem) {
       .c-btn--hero, .btn--hero {
         padding-top: 0.9375rem;

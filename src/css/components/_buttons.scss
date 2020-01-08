@@ -38,6 +38,7 @@
       background: white;
       color: black;
       border-color: white;
+      @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     }
     @include for-size("phone-only"){
       @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));

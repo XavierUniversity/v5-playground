@@ -14,7 +14,8 @@
   }
   &__text{
     color: white;
-    @include font-size(14px);
+    @include font-size(14px, 1.5);
+    @include margin(null, null, 0, null)
     &--name{
       font-weight: 300;
     }

@@ -1,37 +1,28 @@
 .recommended {
   
-  &--grid{
-    @include margin(px-to-rem(32px),null,null,null)
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2fr;
-    grid-column-gap: 96px;
-    grid-row-gap: 32px;
-      @include for-size("tablet-landscape-up"){
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 96px;
-      grid-row-gap: 0px;
+  &__container{
+    @include margin(px-to-rem(32px),null,null,null);
+    @include for-size("tablet-landscape-up"){
+      width: 25%;
+      @include margin(null, px-to-rem(24px), null, px-to-rem(24px));
+      &:first-child{
+        @include margin(null, px-to-rem(24px), null, 0);
+      }
+      &:last-child{
+        @include margin(null, 0, null, px-to-rem(24px));
+      }
     }
+    
   }
-  
-  &--container{
-    max-width: px-to-rem(244px);
-    
-    &__image{
-      max-height: px-to-rem(222px);
-      @include margin(null,null,px-to-rem(16px),null)
-    }
-    
-    &__text{
-      text-transform: uppercase;
-      color: $darkNavy;
-      font-weight: 400;
-    }
-    
-    &__link{
-      
-    }
+  &__image{
+     @include margin(null,null,px-to-rem(16px),null);
   }
+    
+  &__text{
+    text-transform: uppercase;
+    color: $darkNavy;
+    font-weight: 400;
+  }
+    
+  &__link{}
 }

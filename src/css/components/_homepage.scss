@@ -176,7 +176,9 @@
     @include padding(null, null, px-to-rem(60px), 0);
     
     &__item{
-    flex-basis: calc(33% - 2rem);
+      @include for-size("tablet-portrait-up"){
+        flex-basis: calc(33% - 2rem);
+      }
     }
   }
 }

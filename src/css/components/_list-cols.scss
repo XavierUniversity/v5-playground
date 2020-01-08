@@ -23,7 +23,7 @@
     }
   }
   a{
-    display: block;
+    display: inline-block;
     @include padding( px-to-rem(8px), null, px-to-rem(8px), null);
   }
 }

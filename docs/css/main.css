@@ -1450,6 +1450,8 @@ a[href^=tel] {
     .drawer {
       padding-right: 3rem;
       padding-left: 3rem; } }
+  .drawer > div:first-child, .drawer > nav:first-child {
+    margin-top: 5rem; }
   .drawer--search {
     background: #F9FAFB;
     width: 100%;
@@ -1839,7 +1841,8 @@ a[href^=tel] {
     color: white;
     font-size: 14px;
     font-size: 0.875rem;
-    line-height: 1.7142857143; }
+    line-height: 1.5;
+    margin-bottom: 0; }
     .user-panel__text--name {
       font-weight: 300; }
   .user-panel__link {
@@ -1852,10 +1855,7 @@ a[href^=tel] {
   padding: 0;
   margin: 0; }
   .nav-list--border-top {
-    border-top: solid 0.0625rem #007DB3;
-    margin-top: 5rem; }
-  .nav-list--no-user {
-    margin-top: 5rem; }
+    border-top: solid 0.0625rem #007DB3; }
   .nav-list__item--border-bottom {
     border-bottom: solid 0.0625rem #007DB3;
     padding-top: 1rem;
@@ -4043,7 +4043,7 @@ a[href^=tel] {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 100;
     /* places the modal overlay between the main page and the modal dialog*/
     -webkit-transition: all 250ms;
     transition: all 250ms;

@@ -110,6 +110,7 @@
       -webkit-box-pack: center;
       justify-content: center;
       position: relative;
+      display: grid;
       
       img {
         max-height: px-to-rem(289px);

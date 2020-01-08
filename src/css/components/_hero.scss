@@ -73,7 +73,7 @@
       
       @include for-size("tablet-landscape-up"){
       font-size: px-to-rem(36px);
-      }
+    }
     
     &__title {
       color: white;
@@ -142,8 +142,11 @@
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    margin-top: 0px;
     max-width: px-to-rem(1200px);
+    
+    @include for-size("tablet-landscape-up"){
+      margin-top: 0px;
+    }
   }
 }
 

@@ -2319,8 +2319,10 @@ a[href^=tel] {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    margin-top: 0px;
     max-width: 75rem; }
+    @media (min-width: 56.25rem) {
+      .hero__title {
+        margin-top: 0px; } }
 
 .hero-nav {
   background-color: rgba(255, 255, 255, 0.85);

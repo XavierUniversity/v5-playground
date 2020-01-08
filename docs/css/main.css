@@ -3791,8 +3791,10 @@ a[href^=tel] {
     -webkit-box-pack: space-evenly;
             justify-content: space-evenly; }
   .icon_block__single {
-    text-align: center;
-    width: calc( 100% / 4); }
+    text-align: center; }
+    @media (min-width: 56.25rem) {
+      .icon_block__single {
+        width: calc( 100% / 4); } }
   .icon_block__image {
     width: 7.1875rem; }
   .icon_block__stat {

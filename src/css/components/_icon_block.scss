@@ -16,7 +16,9 @@
   }
   &__single{
     text-align: center;
-    width: calc( 100% / 4 );
+    @include for-size("tablet-landscape-up"){
+      width: calc( 100% / 4 );
+    }
   }
   &__image{
     width: px-to-rem(115px);

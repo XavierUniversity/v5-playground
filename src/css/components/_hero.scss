@@ -89,9 +89,8 @@
     width: 100%;
     display: none;
     position: relative;
-    @include margin(px-to-rem(58px), null, null, null);
     @include for-size("tablet-portrait-up"){
-      display: table;
+      display: flex;
     }
   
     &__wrapper{

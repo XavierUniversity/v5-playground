@@ -5,11 +5,8 @@
   margin: 0;
   &--border-top{
     border-top: solid px-to-rem(1px) $medBlue;
-    @include margin(px-to-rem(80px), null, null, null)
   }
-  &--no-user{
-    @include margin(px-to-rem(80px), null, null, null)
-  }
+  
   &__item{
     &--border-bottom{
       border-bottom: solid px-to-rem(1px) $medBlue; 

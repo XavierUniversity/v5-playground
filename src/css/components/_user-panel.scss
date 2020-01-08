@@ -1,0 +1,28 @@
+.user-panel{
+  @include margin(px-to-rem(80px), null, px-to-rem(20px), null)
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__img{
+    border: solid px-to-rem(2px) $medBlue;
+    border-radius: 100%;
+    width: px-to-rem(64px);
+    height: px-to-rem(64px);
+    object-fit: scale-down;
+    
+    @include margin(null, px-to-rem(20px), null, null);
+  }
+  &__text{
+    color: white;
+    @include font-size(14px);
+    &--name{
+      font-weight: 300;
+    }
+  }
+  &__link{
+    color: white;
+    &:hover, &:focus, &:active{
+      color: lighten($medBlue, 5%);
+    }
+  }
+}

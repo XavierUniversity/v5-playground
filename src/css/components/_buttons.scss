@@ -19,7 +19,7 @@
     background: #1B4675;
     border-color: #1B4675;
     color: white;
-    padding-left: 0;
+    @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 
   &--dark-navy{

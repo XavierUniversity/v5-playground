@@ -2010,7 +2010,8 @@ a[href^=tel] {
     background: #1B4675;
     border-color: #1B4675;
     color: white;
-    padding-left: 0; }
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
   .c-btn--dark-navy, .btn--dark-navy {
     border-color: #030b14; }
   .c-btn--hero, .btn--hero {

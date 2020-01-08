@@ -54,9 +54,13 @@
   }
   
   &--inline{
-      display: inline-block;
+    display: inline-block;
+    @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
+    
+    &:hover, &:focus, &:active{
       @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
     }
+  }
 }
 
 .action{

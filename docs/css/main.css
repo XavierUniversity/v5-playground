@@ -2050,6 +2050,11 @@ a[href^=tel] {
     padding-right: 1.25rem;
     padding-bottom: 0.65rem;
     padding-left: 1.25rem; }
+    .c-btn--inline:hover, .c-btn--inline:focus, .c-btn--inline:active, .btn--inline:hover, .btn--inline:focus, .btn--inline:active {
+      padding-top: 0.65rem;
+      padding-right: 1.25rem;
+      padding-bottom: 0.65rem;
+      padding-left: 1.25rem; }
 
 .action button {
   font-weight: 200;

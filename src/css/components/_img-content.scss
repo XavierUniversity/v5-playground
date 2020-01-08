@@ -58,7 +58,9 @@
      }
      
      h3 {
-      margin-top: 0;
+       @include for-size("tablet-landscape-up"){
+         @include margin(0, null, null, null);
+       }
      }
      
      p{

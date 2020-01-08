@@ -3093,8 +3093,9 @@ a[href^=tel] {
   @media (min-width: 56.25rem) {
     .image-content--text {
       grid-area: 1 / 2 / 2 / 3; } }
-  .image-content--text h3 {
-    margin-top: 0; }
+  @media (min-width: 56.25rem) {
+    .image-content--text h3 {
+      margin-top: 0; } }
   .image-content--text p {
     text-align: left !important;
     margin-bottom: 1rem !important; }

@@ -1187,7 +1187,8 @@ a[href^=tel] {
               transform: translateY(0.625rem); }
   .header-ui__btn--search {
     margin-right: 1.875rem;
-    margin-left: 3rem; }
+    margin-left: 3rem;
+    display: inline-block; }
     .header-ui__btn--search:hover .header-ui__icon--search, .header-ui__btn--search:active .header-ui__icon--search, .header-ui__btn--search:focus .header-ui__icon--search {
       -webkit-transform: scale(1.25);
               transform: scale(1.25); }
@@ -1628,6 +1629,7 @@ a[href^=tel] {
     -webkit-box-pack: center;
     justify-content: center;
     position: relative;
+    display: -ms-grid;
     display: grid; }
     .news--feature__infographic img {
       max-height: 18.0625rem; }

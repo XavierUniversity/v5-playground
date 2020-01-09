@@ -2279,11 +2279,11 @@ a[href^=tel] {
   .hero--video {
     width: 100%;
     display: none;
-    position: relative;
-    margin-top: 3.625rem; }
+    position: relative; }
     @media (min-width: 37.5rem) {
       .hero--video {
-        display: table; } }
+        display: -webkit-box;
+        display: flex; } }
     .hero--video__wrapper {
       position: absolute;
       top: 0;

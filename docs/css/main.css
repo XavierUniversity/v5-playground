@@ -2847,6 +2847,13 @@ a[href^=tel] {
       grid-column-gap: 16px;
       grid-row-gap: 8px; } }
 
+.regionselect {
+  margin-right: 15px;
+  display: -webkit-inline-box;
+  display: inline-flex; }
+  .regionselect:last-of-type {
+    margin-right: 0px; }
+
 .panel {
   background: #F0F2F3;
   padding-top: 3.125rem;

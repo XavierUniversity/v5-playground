@@ -218,3 +218,11 @@
     grid-row-gap: 8px;
   }
 }
+
+.regionselect {
+    margin-right: 15px;
+    display:inline-flex;
+    &:last-of-type{
+      margin-right: 0px;
+  }
+}

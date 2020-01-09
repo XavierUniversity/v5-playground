@@ -4063,7 +4063,7 @@ a[href^=tel] {
     /* places the modal overlay between the main page and the modal dialog*/
     -webkit-transition: all 250ms;
     transition: all 250ms;
-    cursor: url('data:image/svg+xml,%3Csvg height="24" width="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E\a   %3Ctitle%3EClose%3C/title%3E\a   %3Cpolygon fill="#0B223F" points="0 21.9201 1.413 23.3331 23.333 1.4131 21.919 0.0001"%3E%3C/polygon%3E\a   %3Cpolygon fill="#0B223F" points="0 1.4127 21.919 23.3327 23.333 21.9197 1.413 0.0007"%3E%3C/polygon%3E\a%3C/svg%3E'), pointer; }
+    cursor: url('data:image/svg+xml,%3Csvg height="24" width="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E\a   %3Ctitle%3EClose%3C/title%3E\a   %3Cpolygon fill="%230B223F" points="0 21.9201 1.413 23.3331 23.333 1.4131 21.919 0.0001"%3E%3C/polygon%3E\a   %3Cpolygon fill="%230B223F" points="0 1.4127 21.919 23.3327 23.333 21.9197 1.413 0.0007"%3E%3C/polygon%3E\a%3C/svg%3E'), pointer; }
 
 .hidden {
   display: none; }

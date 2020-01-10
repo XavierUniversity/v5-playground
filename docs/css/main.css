@@ -1709,7 +1709,7 @@ a[href^=tel] {
     margin-left: 0;
     padding-bottom: 3.75rem;
     padding-left: 0; }
-    @media (min-width: 37.5rem) {
+    @media (min-width: 56.25rem) {
       .featured-links--list__item {
         flex-basis: calc(33% - 2rem); } }
 

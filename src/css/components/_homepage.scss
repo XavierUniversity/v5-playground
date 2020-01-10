@@ -205,7 +205,7 @@
     @include padding(null, null, px-to-rem(60px), 0);
     
     &__item{
-      @include for-size("tablet-portrait-up"){
+      @include for-size("tablet-landscape-up"){
         flex-basis: calc(33% - 2rem);
       }
     }

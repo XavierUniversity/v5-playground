@@ -1578,9 +1578,9 @@ a[href^=tel] {
     background: rgba(0, 0, 0, 0);
     -webkit-transition: all 175ms ease-in-out;
     transition: all 175ms ease-in-out; }
-    .news--feature__wrapper:hover {
+    .news--feature__wrapper:hover, .news--feature__wrapper:focus {
       background: rgba(0, 0, 0, 0.3); }
-      .news--feature__wrapper:hover .module__icon {
+      .news--feature__wrapper:hover .module__icon, .news--feature__wrapper:focus .module__icon {
         margin-left: 8px; }
   .news--feature__link {
     display: table;

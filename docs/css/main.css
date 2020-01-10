@@ -1560,7 +1560,7 @@ a[href^=tel] {
       margin-top: 0;
       margin-bottom: 0; } }
   .news--feature:not(:first-of-type) {
-    margin-top: 1.875rem;
+    margin-top: 1.25rem;
     margin-bottom: 0; }
     @media (min-width: 37.5rem) {
       .news--feature:not(:first-of-type) {

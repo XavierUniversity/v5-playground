@@ -1,3 +1,21 @@
+function detectmob() { 
+
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+      // If mobile, then we do all this
+      return true;
+    }
+    else {
+      // If not mobile then do this
+      return false;
+    }
+} // detectmob
 if ( $('meta[property="id"]').attr('content') !== undefined ){
   $("#editorAccess").attr('href', "https://cascade.xavier.edu/entity/open.act?id="+ $('meta[property="id"]').attr('content') +"&type=page");
 }
@@ -373,3 +391,12 @@ $("[data-toggle]").on('click', function(e){
   $(list).toggleClass("visible");
   $('[data-toggle='+list+']').toggleClass("on");
 });
+
+// Need to see if we are on a mobile device. If we aren't, let's post the video!
+if ( !detectmob() ){
+  var vid = $(".hero video");
+  console.log(vid);
+  if ( vid.length > 0 ){
+    vid.html('<source src="'+vid.data("bgvideo") + '" type="video/mp4" />');
+  }
+}

@@ -1807,11 +1807,13 @@ a[href^=tel] {
             transform: translateY(46px); } }
 
 .arrow {
+  display: inline-block;
   text-align: center;
-  margin-left: -20px;
+  border-radius: 100%;
   bottom: 16vh;
-  position: absolute;
-  left: 50%; }
+  position: absolute; }
+  .arrow:hover, .arrow:focus {
+    background: #0B223F; }
   .arrow--icon {
     width: 3.125rem;
     height: 3.125rem; }

@@ -297,15 +297,17 @@
 }
 
 .arrow {
+  display: inline-block;
   text-align: center;
-  margin-left:-20px;
+  border-radius: 100%;
   bottom:16vh;
   position:absolute;
-  left:50%;
-  
+  &:hover, &:focus{
+    background: $darkNavy;
+  }
   &--icon {
-  width: px-to-rem(50px);
-  height: px-to-rem(50px);
+    width: px-to-rem(50px);
+    height: px-to-rem(50px);
   }
 }
 .bounce {

@@ -2868,12 +2868,15 @@ a[href^=tel] {
       grid-column-gap: 16px;
       grid-row-gap: 8px; } }
 
-.regionselect {
+.ohio-btn {
   margin-right: 15px;
   display: -webkit-inline-box;
   display: inline-flex; }
-  .regionselect:last-of-type {
+  .ohio-btn:last-of-type {
     margin-right: 0px; }
+
+a.cincyselect, a.clandselect {
+  color: #007DB3; }
 
 .panel {
   background: #F0F2F3;

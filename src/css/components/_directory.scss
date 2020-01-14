@@ -219,10 +219,14 @@
   }
 }
 
-.regionselect {
+.ohio-btn {
     margin-right: 15px;
     display:inline-flex;
     &:last-of-type{
       margin-right: 0px;
   }
+}
+
+a.cincyselect, a.clandselect {
+    color: #007DB3;
 }

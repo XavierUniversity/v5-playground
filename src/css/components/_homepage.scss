@@ -49,7 +49,7 @@
       background: rgba(0, 0, 0, 0);
       transition: all 175ms ease-in-out;
     
-      &:hover{
+      &:hover, &:focus{
         background: rgba(0, 0, 0, .3);
       
         .module__icon{
@@ -205,7 +205,7 @@
     @include padding(null, null, px-to-rem(60px), 0);
     
     &__item{
-      @include for-size("tablet-portrait-up"){
+      @include for-size("tablet-landscape-up"){
         flex-basis: calc(33% - 2rem);
       }
     }
@@ -297,15 +297,17 @@
 }
 
 .arrow {
+  display: inline-block;
   text-align: center;
-  margin-left:-20px;
+  border-radius: 100%;
   bottom:16vh;
   position:absolute;
-  left:50%;
-  
+  &:hover, &:focus{
+    background: $darkNavy;
+  }
   &--icon {
-  width: px-to-rem(50px);
-  height: px-to-rem(50px);
+    width: px-to-rem(50px);
+    height: px-to-rem(50px);
   }
 }
 .bounce {

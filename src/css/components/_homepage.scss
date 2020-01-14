@@ -215,18 +215,6 @@
 .commitment {
   background-color: rgba(#fff, 0.85);
   text-align:center;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
-  @include for-size("tablet-portrait-up"){
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 62.5rem;
-    background-size: cover;
-    background-position: center top;
-    background-image: url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg);
-    background-image: image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-    background-image: -webkit-image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-  }
   
   &--title{
     color: $darkNavy;

@@ -9,9 +9,10 @@
 .image-content{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   grid-column-gap: 0px;
-  grid-row-gap: 16px;
+  grid-row-gap: 0px;
+  margin-bottom: 32px;
   @include for-size("tablet-landscape-up") {
     display: grid;
     grid-template-columns: 1fr 3fr;

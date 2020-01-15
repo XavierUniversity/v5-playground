@@ -212,51 +212,6 @@
   }
 }
 
-.commitment {
-  background-color: rgba(#fff, 0.85);
-  text-align:center;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
-  @include for-size("tablet-portrait-up"){
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 62.5rem;
-    background-size: cover;
-    background-position: center top;
-    background-image: url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg);
-    background-image: image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-    background-image: -webkit-image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-  }
-  
-  &--title{
-    color: $darkNavy;
-    text-transform: uppercase;
-    @include padding(px-to-rem(40px), null, px-to-rem(24px), null);
-    @include font-size(24px);
-    @include for-size("phone-only"){
-      @include padding(px-to-rem(40px), null, px-to-rem(32px), null);
-    }
-  }
-  &--hr{
-    background-color: $medBlue;
-    height: px-to-rem(2px);
-    border: none;
-    @include margin(null, auto, null, auto);
-    @include for-size("tablet-landscape-up"){
-      width: 35%;
-    }
-    
-  }
-  
-  &--text {
-    @include padding(0, px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));  
-    @include font-size(28px);
-    @include for-size("phone-only"){
-      line-height: px-to-rem(45px);
-    }
-  }
-}
-
 .icon-scroll,
 .icon-scroll:before{
   position: absolute;

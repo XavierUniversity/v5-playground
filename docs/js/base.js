@@ -19,14 +19,19 @@ function detectmob() {
 if ( $('meta[property="id"]').attr('content') !== undefined ){
   $("#editorAccess").attr('href', "https://cascade.xavier.edu/entity/open.act?id="+ $('meta[property="id"]').attr('content') +"&type=page");
 }
-var insta = $("[data-image]").data("image");
-$.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
-  var parent = $("[data-image='"+ insta +"']");
-  parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
-  parent.find(".news--feature__content").attr('href', insta);
-  parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
-  parent.find(".news--feature__caption").html(d.title);
-});
+var instas = $("[data-image]");
+if ( instas.length > 0 ){
+  for ( var i = 0; i < instas.length; i++){
+    var insta = $(instas[i]).data('image');
+    $.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
+      var parent = $("[data-image='"+ insta +"']");
+      parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
+      parent.find(".news--feature__content").attr('href', insta);
+      parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
+      parent.find(".news--feature__caption").html(d.title);
+    });
+  }
+}
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -395,7 +400,6 @@ $("[data-toggle]").on('click', function(e){
 // Need to see if we are on a mobile device. If we aren't, let's post the video!
 if ( !detectmob() ){
   var vid = $(".hero video");
-  console.log(vid);
   if ( vid.length > 0 ){
     vid.html('<source src="'+vid.data("bgvideo") + '" type="video/mp4" />');
   }

@@ -1719,54 +1719,6 @@ a[href^=tel] {
       .featured-links--list__item {
         flex-basis: calc(33% - 2rem); } }
 
-.commitment {
-  background-color: rgba(255, 255, 255, 0.85);
-  text-align: center;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem; }
-  @media (min-width: 37.5rem) {
-    .commitment {
-      padding-top: 0;
-      padding-bottom: 0;
-      height: 62.5rem;
-      background-size: cover;
-      background-position: center top;
-      background-image: url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg);
-      background-image: image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-      background-image: -webkit-image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x); } }
-  .commitment--title {
-    color: #0B223F;
-    text-transform: uppercase;
-    padding-top: 2.5rem;
-    padding-bottom: 1.5rem;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1; }
-    @media (max-width: 36.5rem) {
-      .commitment--title {
-        padding-top: 2.5rem;
-        padding-bottom: 2rem; } }
-  .commitment--hr {
-    background-color: #007DB3;
-    height: 0.125rem;
-    border: none;
-    margin-right: auto;
-    margin-left: auto; }
-    @media (min-width: 56.25rem) {
-      .commitment--hr {
-        width: 35%; } }
-  .commitment--text {
-    padding-top: 0;
-    padding-right: 1rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    font-size: 28px;
-    font-size: 1.75rem;
-    line-height: 1.7142857143; }
-    @media (max-width: 36.5rem) {
-      .commitment--text {
-        line-height: 2.8125rem; } }
-
 .icon-scroll,
 .icon-scroll:before {
   position: absolute;
@@ -2874,12 +2826,15 @@ a[href^=tel] {
       grid-column-gap: 16px;
       grid-row-gap: 8px; } }
 
-.regionselect {
+.ohio-btn {
   margin-right: 15px;
   display: -webkit-inline-box;
   display: inline-flex; }
-  .regionselect:last-of-type {
+  .ohio-btn:last-of-type {
     margin-right: 0px; }
+
+a.cincyselect, a.clandselect {
+  color: #007DB3; }
 
 .panel {
   background: #F0F2F3;
@@ -3135,9 +3090,10 @@ a[href^=tel] {
 .image-content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   grid-column-gap: 0px;
-  grid-row-gap: 16px; }
+  grid-row-gap: 0px;
+  margin-bottom: 32px; }
   @media (min-width: 56.25rem) {
     .image-content {
       display: grid;
@@ -3983,6 +3939,48 @@ a[href^=tel] {
     height: 1.25rem;
     -webkit-transition: margin 175ms ease;
     transition: margin 175ms ease; }
+
+.commitment {
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center; }
+  .commitment--title {
+    color: #0B223F;
+    text-transform: uppercase;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1; }
+    @media (max-width: 36.5rem) {
+      .commitment--title {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem; } }
+  .commitment--hr {
+    background-color: #007DB3;
+    height: 0.125rem;
+    border: none;
+    margin-right: auto;
+    margin-left: auto; }
+    @media (min-width: 56.25rem) {
+      .commitment--hr {
+        width: 35%; } }
+  .commitment--text {
+    padding-top: 0;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.7142857143; }
+    @media (max-width: 36.5rem) {
+      .commitment--text {
+        line-height: 2.8125rem; } }
+
+.cincyMap {
+  display: none; }
+  @media (min-width: 37.5rem) {
+    .cincyMap {
+      display: block; } }
 
 .twitter-feed {
   background: #F0F2F3;

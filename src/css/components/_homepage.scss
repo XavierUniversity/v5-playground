@@ -100,14 +100,14 @@
     }
     
     &__name{
-      @include padding(px-to-rem(8px), px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
+      @include padding(px-to-rem(8px), px-to-rem(16px), px-to-rem(8px), 0);
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
       width: 100%;
       background: rgb(0,0,0);
-      background: linear-gradient(180deg, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0) 100%);
     }
   
     &__infographic{

@@ -1629,15 +1629,15 @@ a[href^=tel] {
     padding-top: 0.5rem;
     padding-right: 1rem;
     padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding-left: 0;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
     background: black;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 25%, rgba(0, 0, 0, 0) 100%); }
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0) 100%); }
   .news--feature__infographic {
     -webkit-box-align: center;
     align-items: center;
@@ -2298,7 +2298,6 @@ a[href^=tel] {
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;
-    letter-spacing: 0.1875rem;
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
@@ -3223,11 +3222,15 @@ a.cincyselect, a.clandselect {
   -webkit-box-pack: justify;
           justify-content: space-between;
   background-image: url("/_V5/_assets/images/stats/statsbkg_1x.png");
-  background-image: -webkit-image-set(url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x);
-  background-image: image-set(url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x);
   background-size: cover;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem; }
+  @media (min-width: 56.25rem) {
+    .stats {
+      background-image: -webkit-image-set(url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x);
+      background-image: image-set(url("/_V5/_assets/images/stats/statsbkg_1x.png") 1x, url("/_V5/_assets/images/stats/statsbkg_2x.png") 2x);
+      padding-top: 9rem;
+      padding-bottom: 9rem; } }
   .stats__title, .stats__description {
     max-width: 75%;
     margin-right: auto;
@@ -3480,17 +3483,17 @@ a.cincyselect, a.clandselect {
       margin-left: 0.5rem; }
 
 .cta-card {
-  background-image: url(/_V5/_assets/images/cards/cards_bg.png);
+  background-image: url("/_V5/_assets/images/cards/cards_bg.png");
+  background-position: left;
   background-size: cover;
   background-color: #f0f2f3;
-  min-height: 85vh;
-  padding-top: 6rem;
-  padding-bottom: 4rem; }
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
   @media (max-width: 36.5rem) {
     .cta-card {
       padding-top: 6rem;
       padding-right: 1rem;
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
       padding-left: 1rem; } }
   .cta-card__header {
     text-align: center;

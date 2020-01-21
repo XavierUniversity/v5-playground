@@ -43,6 +43,10 @@
     @include for-size("phone-only"){
       @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
       border-radius: px-to-rem(23px);
+      
+      &:hover, &:focus{
+        @include padding(null, px-to-rem(32px), null, px-to-rem(32px));  
+      }
     }
   }
 

@@ -64,6 +64,11 @@
 .nav-open{
   overflow: hidden !important;
   height: 100%;
+  
+  .header{
+    z-index: 99;
+  }
+  
   .overlay{
     display: initial;
     background-color: rgba(255,255,255,0.75);

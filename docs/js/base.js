@@ -19,6 +19,15 @@ function detectmob() {
 if ( $('meta[property="id"]').attr('content') !== undefined ){
   $("#editorAccess").attr('href', "https://cascade.xavier.edu/entity/open.act?id="+ $('meta[property="id"]').attr('content') +"&type=page");
 }
+$('.track').on('click', function(e){
+  // Collect
+  var dis = $(this),
+      category = (dis.data('category') ? dis.data('category') : 'link'),
+      action = (dis.data('action') ? dis.data('action') : 'click'),
+      label = (dis.data('label') ? dis.data('label') : dis.text());
+  // Push to GTM
+  dataLayer.push({'event' : 'customEvent', 'eventCategory' : category, 'eventAction' : action, 'eventLabel' : label});
+});
 var instas = $("[data-image]");
 if ( instas.length > 0 ){
   for ( var i = 0; i < instas.length; i++){

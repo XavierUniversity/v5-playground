@@ -2,12 +2,8 @@ img {
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
-  
+  height: auto;
   // if an explicit height/width is defined, let's not make it fluid...
-  
-  &[width], &[height]{
-    max-width: none;
-  }
 }
 
 body > svg {

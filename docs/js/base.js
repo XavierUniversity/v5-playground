@@ -220,6 +220,29 @@ function buildResult(object){
   return html;
 }
 
+function buildBestBets(object){
+  var title = object.titleHtml;
+  var summary  = object.descriptionHtml;
+  var url   = '<span class="search__url">' + object.displayUrl + '</span>';
+  var link  = object.linkUrl;
+  
+  var open = '<a href="https://search.xavier.edu' + link + '" class="search__result search__result--bet">';
+  var close = '</a>';
+  var html = '$open';
+      html += '<h2 class="search__title">$title</h2>';
+      html += '<p class="search__content">';
+      html += "$liveUrl";
+      html += '<span class="search__description">$description</span>';
+      html += '</p>$close';
+      html = html.replace("$open", open);
+      html = html.replace("$title", title);
+      html = html.replace("$liveUrl", url);
+      html = html.replace("$description", summary);
+      html = html.replace("$close", close);
+  
+  return html;
+}
+
 function search(query){
   var resultHTML = '';
   $.ajax({
@@ -232,6 +255,9 @@ function search(query){
     var summary = a.response.resultPacket.resultsSummary;
     var results = a.response.resultPacket.results;
     buildTabs(tabs.allValues);
+    $.each(a.response.curator.exhibits, function(index, item){
+      resultHTML += buildBestBets(item);
+    });
     resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
     
     $.each(results, function(index, item){

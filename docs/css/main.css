@@ -1367,6 +1367,16 @@ a[href^=tel] {
       .search__result a:hover, .search__result a:focus, .search__result a:active {
         color: #004867;
         text-decoration: underline; }
+    .search__result--bet {
+      border-right: solid 0.3125rem #007DB3;
+      background: white;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+      padding-right: 1rem;
+      padding-bottom: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem; }
+      .search__result--bet:hover, .search__result--bet:focus, .search__result--bet:active {
+        background: #fafafa; }
   .search__title {
     font-size: 20px;
     font-size: 1.25rem;

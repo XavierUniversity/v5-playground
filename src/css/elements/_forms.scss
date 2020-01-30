@@ -104,15 +104,22 @@ textarea{
 
 .slate-form{
   
-  div[data-required='1']{
-    label{
-      &::before{
-        content: "*";
-      }
+  &--landing{
+    @include for-size('tablet-landscape-up'){
+      width: 60vw;
     }
   }
   
-  label{
+  /* We may need this again...but for now we'll remove 
+    div[data-required='1']{
+    label{
+      &::after{
+        content: "* ";
+      }
+    }
+  }*/
+  
+  label, div.form_p .form_label{
     font-weight: 200;
     @include padding(null, null, px-to-rem(10px), null);
   }
@@ -151,13 +158,17 @@ textarea{
     background-size: px-to-rem(7px) px-to-rem(16px);
     background-repeat: no-repeat;
   }
-}
-
-.form_birthdate select{
-  width: calc(100%/2.65 - #{px-to-rem(16px)});
-  display: inline-block;
-  &:nth-child(2n){
-    @include padding(null, px-to-rem(16px), null, px-to-rem(16px));  
+  
+  .form_birthdate .form_responses{
+    display: flex;
+    justify-content: space-between;
+  }
+  .form_birthdate select{
+    width: calc(100%/3 - #{px-to-rem(8px)});
+    display: inline-block;
+    &:nth-child(2n){
+      @include padding(null, px-to-rem(16px), null, px-to-rem(16px));  
+    }
   }
 }
 

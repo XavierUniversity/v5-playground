@@ -795,10 +795,19 @@ textarea {
   resize: vertical; }
 
 .slate-form {
+  /* We may need this again...but for now we'll remove 
+    div[data-required='1']{
+    label{
+      &::after{
+        content: "* ";
+      }
+    }
+  }*/
   /* Remove IE arrow */ }
-  .slate-form div[data-required='1'] label::before {
-    content: "*"; }
-  .slate-form label {
+  @media (min-width: 56.25rem) {
+    .slate-form--landing {
+      width: 60vw; } }
+  .slate-form label, .slate-form div.form_p .form_label {
     font-weight: 200;
     padding-bottom: 0.625rem; }
   .slate-form input, .slate-form textarea, .slate-form select {
@@ -834,13 +843,17 @@ textarea {
     background-position: calc(100% - 0.5rem) center;
     background-size: 0.4375rem 1rem;
     background-repeat: no-repeat; }
-
-.form_birthdate select {
-  width: calc(100%/2.65 - 1rem);
-  display: inline-block; }
-  .form_birthdate select:nth-child(2n) {
-    padding-right: 1rem;
-    padding-left: 1rem; }
+  .slate-form .form_birthdate .form_responses {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .slate-form .form_birthdate select {
+    width: calc(100%/3 - 0.5rem);
+    display: inline-block; }
+    .slate-form .form_birthdate select:nth-child(2n) {
+      padding-right: 1rem;
+      padding-left: 1rem; }
 
 .academic-programs {
   display: none; }

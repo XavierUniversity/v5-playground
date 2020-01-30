@@ -2072,7 +2072,9 @@ a[href^=tel] {
   margin-left: auto; }
   .action button:hover, .action button:focus, .action button:active {
     margin-right: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    padding-right: 3rem;
+    padding-left: 3rem; }
 
 .footer {
   background: #0B223F;

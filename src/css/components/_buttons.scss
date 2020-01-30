@@ -76,6 +76,7 @@
     @include margin(null, auto, null, auto);
     &:hover, &:focus, &:active{
       @include margin(null, auto, null, auto);
+      @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
     }
   }
 }

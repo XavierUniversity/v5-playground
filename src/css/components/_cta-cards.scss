@@ -1,12 +1,13 @@
 .cta-card{
-  background-image: url(/_V5/_assets/images/cards/cards_bg.png);
+  background-image: url('/_V5/_assets/images/cards/cards_bg.png');
+  background-position: left;
   background-size: cover;
   background-color: #f0f2f3;
-  min-height: 85vh;
+  //min-height: 85vh;
   @include for-size ("phone-only") {
-    @include padding(px-to-rem(96px), px-to-rem(16px), px-to-rem(64px), px-to-rem(16px));
+    @include padding(px-to-rem(96px), px-to-rem(16px), px-to-rem(96px), px-to-rem(16px));
   }
-  @include padding(px-to-rem(96px), null, px-to-rem(64px), null);
+  @include padding(px-to-rem(128px), null, px-to-rem(128px), null);
   
   &__header{
     text-align:center;

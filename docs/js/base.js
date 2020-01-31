@@ -19,14 +19,28 @@ function detectmob() {
 if ( $('meta[property="id"]').attr('content') !== undefined ){
   $("#editorAccess").attr('href', "https://cascade.xavier.edu/entity/open.act?id="+ $('meta[property="id"]').attr('content') +"&type=page");
 }
-var insta = $("[data-image]").data("image");
-$.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
-  var parent = $("[data-image='"+ insta +"']");
-  parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
-  parent.find(".news--feature__content").attr('href', insta);
-  parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
-  parent.find(".news--feature__caption").html(d.title);
+$('.track').on('click', function(e){
+  // Collect
+  var dis = $(this),
+      category = (dis.data('category') ? dis.data('category') : 'link'),
+      action = (dis.data('action') ? dis.data('action') : 'click'),
+      label = (dis.data('label') ? dis.data('label') : dis.text());
+  // Push to GTM
+  dataLayer.push({'event' : 'customEvent', 'eventCategory' : category, 'eventAction' : action, 'eventLabel' : label});
 });
+var instas = $("[data-image]");
+if ( instas.length > 0 ){
+  for ( var i = 0; i < instas.length; i++){
+    var insta = $(instas[i]).data('image');
+    $.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
+      var parent = $("[data-image='"+ insta +"']");
+      parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
+      parent.find(".news--feature__content").attr('href', insta);
+      parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
+      parent.find(".news--feature__caption").html(d.title.slice(0, 100) + ( d.title.length > 100 ? "&hellip;" : ''));
+    });
+  }
+}
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -206,6 +220,29 @@ function buildResult(object){
   return html;
 }
 
+function buildBestBets(object){
+  var title = object.titleHtml;
+  var summary  = object.descriptionHtml;
+  var url   = '<span class="search__url">' + object.displayUrl + '</span>';
+  var link  = object.linkUrl;
+  
+  var open = '<a href="https://search.xavier.edu' + link + '" class="search__result search__result--bet">';
+  var close = '</a>';
+  var html = '$open';
+      html += '<h2 class="search__title">$title</h2>';
+      html += '<p class="search__content">';
+      html += "$liveUrl";
+      html += '<span class="search__description">$description</span>';
+      html += '</p>$close';
+      html = html.replace("$open", open);
+      html = html.replace("$title", title);
+      html = html.replace("$liveUrl", url);
+      html = html.replace("$description", summary);
+      html = html.replace("$close", close);
+  
+  return html;
+}
+
 function search(query){
   var resultHTML = '';
   $.ajax({
@@ -218,6 +255,9 @@ function search(query){
     var summary = a.response.resultPacket.resultsSummary;
     var results = a.response.resultPacket.results;
     buildTabs(tabs.allValues);
+    $.each(a.response.curator.exhibits, function(index, item){
+      resultHTML += buildBestBets(item);
+    });
     resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
     
     $.each(results, function(index, item){
@@ -395,7 +435,6 @@ $("[data-toggle]").on('click', function(e){
 // Need to see if we are on a mobile device. If we aren't, let's post the video!
 if ( !detectmob() ){
   var vid = $(".hero video");
-  console.log(vid);
   if ( vid.length > 0 ){
     vid.html('<source src="'+vid.data("bgvideo") + '" type="video/mp4" />');
   }

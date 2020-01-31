@@ -7,11 +7,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    
     <style>
       .hero{
-        background-image: url('images/hero/HomePageHero.png');
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
       }
     </style>
+    
   </head>
   <body>
     <!-- Skip Header & Navigation -->
@@ -19,7 +23,7 @@
       <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
     </nav>
     <header>
-      <div class="header homepage" id="header">  
+      <div class="header header--fixed" id="header">  
         <!-- Branding == Logo and Navigation -->
         <div class="branding">
           <a href="/" class="branding__link">
@@ -165,112 +169,33 @@
     </header>
     <!-- Add your site or application content here -->
     <main id="content">
-      <div class="hero hero--homepage">
-        <div class="hero__cta">
-            <h1 class="hero__title hero--homepage__title">Congrats<br>#XUGRAD19!</h1>
-            <a class="c-btn c-btn--hero o-btn" href="/fakepages/undergrad">Commencement Information</a>
-        </div>
-          <a id="bouncyarrow" class="arrow bounce" href="#bouncyarrow"><svg class="arrow--icon"><use xlink:href="#xu-hp-arrow"></use></svg></a>
-    </div>
-     <section class="wrapper" id="news">
-      <div class="news">
-        <h2 class="sr-only">Latest News from Xavier University</h2>
       
-        <!-- FEATURE 1 -->
-      
-        <div class="news--feature" style="background-image: url('/images/news/summerfest2x.jpg'); background-size: cover; background-color: #0c2340;">
-          <div class="news--feature__wrapper"> <a class="news--feature__link" href="/fakepages/academics"> <span class="news--feature__content">
-            <h3 class="news--feature__title news--feature__title--large">8th Annual Xavier Fest</h3>
-            <span class="module__link">Learn more
-            <svg class="module__icon">
-              <use xlink:href="#xu-link-arrow"></use>
-            </svg>
-            </span> </span> </a> </div>
-        </div>
-          
-          <!-- BLOCK 3 -->
-          
-          <div class="news--feature" style="background-color:#007DB3;">
-            <div class="news--feature__wrapper"> <a class="news--feature__link" href="https://www.xavier.edu/now/2019/ben-urmston"> <span class="news--feature__content"> <span class="news--feature__date">3/20/19</span>
-              <h3 class="news--feature__title">Ben Urmston, S.J., Retires</h3>
-              <span class="module__link">Learn More
-              <svg class="module__icon">
-                <use xlink:href="#xu-link-arrow"></use>
-              </svg>
-              </span> </span> </a> </div>
-          </div>
-          
-          <!-- BLOCK 4 -->
-          
-          <div class="news--feature news--feature__infographic" style="background-image: url('/images/news/placement-rate-bkg.svg'); background-size: cover; background-color: #0c2340;"> <img alt="" src="/images/news/placement-rate.svg"> </div>
-          
-          <!-- BLOCK 1 -->
-          
-          <div class="news--feature" data-image="https://www.instagram.com/p/B7WrO9KhgkW/">
-            <a class="news--feature__content news--feature__content--insta">
-                <div class="news--feature__name"></div>
-                <div class="news--feature__caption"></div>
-            </a>
-          </div>
-          
-          <!-- BLOCK 2 -->
-          
-          <div class="news--feature" style="background-color:#007DB3;">
-            <div class="news--feature__wrapper"> <a class="news--feature__link" href="https://www.xavier.edu/now/2019/2019-xavier-commencement"> <span class="news--feature__content"> <span class="news--feature__date">5/17/19</span>
-              <h3 class="news--feature__title">2019 Xavier Grads Celebrate</h3>
-              <span class="module__link">Learn More
-              <svg class="module__icon">
-                <use xlink:href="#xu-link-arrow"></use>
-              </svg>
-              </span> </span> </a> </div>
-          </div>
-          
-          <!-- FEATURE 2 -->
-          
-          <div class="news--feature" style="background-image: url('/images/news/cafeteria2x.jpg'); background-size: cover; background-color: #0c2340;">
-            <div class="news--feature__wrapper"> <a class="news--feature__link" href="/fakepages/accessibility"> <span class="news--feature__content">
-              <h3 class="news--feature__title news--feature__title--large">Summer Cafeteria Hours</h3>
-              <span class="module__link">Learn more
-              <svg class="module__icon">
-                <use xlink:href="#xu-link-arrow"></use>
-              </svg>
-              </span> </span> </a> </div>
-          </div>
-        </div>
+      <section class="hero hero--content">
+          <a class="hero--content__title" href="#">Department of Lorem Ipsum</a>
       </section>
       
-      <div class="wrapper featured-links">
-    <h2 class="featured-links--title">Featured Links</h2>
-    <ul class="flex featured-links--list">
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/apply">Apply</a></li>
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/visit">Visit Campus</a></li>
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/tuition">Tuition</a></li>
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/financial-aid">Financial Aid</a></li>
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/majors">Majors</a></li>
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/calendar">Calendar</a></li>
-            </ul>
-</div>
-      
-      <section class="wrapper commitment"  style="background-image: url(https://wfe.xavier.edu/_V5/_assets/images/homepage/studentcommitment_1x.jpg);"> 
-    
-    <h3 class="commitment--title">Xavier's Student Commitment</h3>
-        <hr class="commitment--hr">
-    <p class="commitment--text">We are Xavier Musketeers.<br>
-    We come together in the spirit of St. Ignatius to learn, serve and <br>
-    succeed on changing the world.<br>
-    <strong>All for one and one for all.</strong>
-    </p>
-
-</section>
-      
-      <section class="wrapper twitter-feed">
-        <h2 class="twitter-feed__title">Connect with Us</h2>
-        <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-        <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-        <ul class="juicer-feed" data-feed-id="xavier-university" data-per="6" data-gutter="24"></ul>
+      <section class="wrapper">    
+          <div class="content-page__breadcrumbs">
+            <nav aria-label="Breadcrumb">
+              <ul class="crumbs list--inline list--bare">
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="/">Home</a></li>
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Main Site</a></li>
+                <li class="crumbs__item list--inline__item"><a class="crumbs__link" href="#">Parent Index</a></li>
+                <li class="crumbs__item list--inline__item crumbs__current" aria-current="page">Current Page</li>
+              </ul>
+            </nav>
+          </div>
+        
+          <div class="content-page--main"> 
+            <div class="slate-form slate-form--landing" id="form_dfc6887d-1753-4356-872f-72844c9b1b2e">Loading...</div>
+            <script>// <![CDATA[
+              var script = document.createElement('script'); script.async = 1; script.src = 'https://admissions.xavier.edu/register/?id=dfc6887d-1753-4356-872f-72844c9b1b2e&output=embed&div=form_dfc6887d-1753-4356-872f-72844c9b1b2e' + ((location.search.length > 1) ? '&' + location.search.substring(1) : ''); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);// ]]>
+            </script>
+          </div>
+        
       </section>
-      <!-- include "includes/kitchen-sink.html" -->
     </main>
+     
     <!-- End site or application content -->
     <footer class="footer">
       <div class="wrapper">

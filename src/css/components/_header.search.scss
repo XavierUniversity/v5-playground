@@ -158,6 +158,18 @@
       }  
     }
     
+    &--bet{
+      border-right: solid px-to-rem(5px) $medBlue;
+      background: white;
+      box-shadow: 0 0 px-to-rem(8px) rgba(black, 0.15);
+      @include padding( null, px-to-rem(16px), px-to-rem(24px), null);
+      @include margin ( px-to-rem(16px), null, px-to-rem(32px), null)
+      
+      &:hover, &:focus, &:active{
+        background: darken(white, 2%);
+      }
+    }
+    
   }
   &__title{
     @include font-size(20px, 1.25);

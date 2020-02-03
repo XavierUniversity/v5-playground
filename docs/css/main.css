@@ -4059,7 +4059,6 @@ a.cincyselect, a.clandselect {
   background-position: left top; }
   .module__content {
     display: table-cell;
-    vertical-align: bottom;
     padding-right: 1.25rem;
     padding-bottom: 1.5rem;
     padding-left: 1.25rem; }
@@ -4073,7 +4072,8 @@ a.cincyselect, a.clandselect {
     font-weight: 400; }
   .module__link {
     color: white;
-    display: block;
+    display: table-cell;
+    vertical-align: bottom;
     text-decoration: none; }
     .module__link:hover .module__icon {
       margin-left: 0.5rem; }

@@ -30,7 +30,6 @@
   
   &__content{
     display: table-cell;
-    vertical-align: bottom;
     @include padding(null, px-to-rem(20px), px-to-rem(24px), px-to-rem(20px));
   }  
   &__title{
@@ -43,7 +42,8 @@
 
   &__link{
 	  color: white;
-    display: block;
+    display: table-cell;
+    vertical-align: bottom;
     text-decoration: none;
     
     &:hover{

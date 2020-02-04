@@ -102,6 +102,30 @@
   @include for-size("tablet-landscape-up"){ 
   padding-left: px-to-rem(20px);
   }
+  
+  &__mobile {
+    background-color: #0B223F;
+    color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 200 !important;
+    line-height: 1;
+    margin-top: 16px;
+    padding-bottom: 16px !important;
+    
+    svg.sidenav__icon--plus {
+    color: #fff;
+    border: solid 0.078125rem #fff;
+    background-color: #13355a;
+    }
+    
+    svg.sidenav__icon--minus {
+    color: #fff;
+    border: solid 0.078125rem #fff;
+    background-color: #13355a;
+    }
+    
+  }
 }
 
 .aplOption {
@@ -122,6 +146,10 @@
   @include for-size("tablet-landscape-up"){  
     @include padding(px-to-rem(0px), px-to-rem(0px), px-to-rem(0px), px-to-rem(25px));
     border: none;
+  }
+  
+  &__mobile {
+    padding: 16px;
   }
   
   &:last-child{
@@ -186,4 +214,6 @@
     }
   }
 }
+
+
 

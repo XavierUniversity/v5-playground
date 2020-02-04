@@ -2960,6 +2960,23 @@ a.cincyselect, a.clandselect {
   @media (min-width: 56.25rem) {
     .filter-list {
       padding-left: 1.25rem; } }
+  .filter-list__mobile {
+    background-color: #0B223F;
+    color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 200 !important;
+    line-height: 1;
+    margin-top: 16px;
+    padding-bottom: 16px !important; }
+    .filter-list__mobile svg.sidenav__icon--plus {
+      color: #fff;
+      border: solid 0.078125rem #fff;
+      background-color: #13355a; }
+    .filter-list__mobile svg.sidenav__icon--minus {
+      color: #fff;
+      border: solid 0.078125rem #fff;
+      background-color: #13355a; }
 
 .aplOption {
   border-top: 1px solid #F0F2F3;
@@ -2983,6 +3000,8 @@ a.cincyselect, a.clandselect {
       padding-bottom: 0rem;
       padding-left: 1.5625rem;
       border: none; } }
+  .aplOption__mobile {
+    padding: 16px; }
   @media (max-width: 36.5rem) {
     .aplOption:last-child {
       border-bottom: 1px solid #F0F2F3; } }

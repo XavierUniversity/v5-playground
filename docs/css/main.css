@@ -2455,8 +2455,6 @@ a[href^=tel] {
     display: inline-block;
     vertical-align: bottom;
     padding-right: 6px; }
-    .tab__item:first-child .tab__link, .tab__item:nth-child(4) .tab__link, .tab__item:last-child .tab__link {
-      padding-top: 1rem; }
   .tab__link {
     display: block;
     width: 100%;

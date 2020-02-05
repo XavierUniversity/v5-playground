@@ -11,7 +11,7 @@
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     }
-    @media (min-width: 100rem) {
+    @include for-size("desktop-up") {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -21,6 +21,7 @@
 }
 
 .module{
+  width: 100%;
   height: px-to-rem(286px);
   background-color: $darkNavy;
   display: table;
@@ -29,32 +30,32 @@
   
   &__content{
     display: table-cell;
-    vertical-align: bottom;
-    @include padding(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+    @include padding(null, px-to-rem(20px), px-to-rem(24px), px-to-rem(20px));
   }  
   &__title{
     color: white;
     text-transform: uppercase;
-    @include font-size(28px, 1);
+    @include font-size(24px, 1);
     @include margin(null, null, px-to-rem(12px), null);
     font-weight: 400;
   }
 
   &__link{
-    color: white;
-    display: block;
+	  color: white;
+    display: table-cell;
+    vertical-align: bottom;
     text-decoration: none;
+    
     &:hover{
-     
-     .module__icon {
-      margin-left: px-to-rem(8px);
-     }
+      .module__icon {
+        margin-left: 0.5rem;
+      }
     }
   }
   &__icon{
-    width: px-to-rem(24px);
-    height: px-to-rem(24px);
-    padding-left: px-to-rem(8px);
+    width: px-to-rem(20px);
+    height: px-to-rem(20px);
     transition: margin 175ms ease;
   }
 }
+

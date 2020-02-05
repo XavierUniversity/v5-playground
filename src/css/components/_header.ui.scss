@@ -54,6 +54,7 @@
     
     &--search{
       @include margin(null, px-to-rem(30px), null, px-to-rem(48px));
+      display: inline-block;
       &:hover, &:active, &:focus{
         @include for-size(tablet-portrait-up){
 

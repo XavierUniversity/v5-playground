@@ -15,11 +15,13 @@
   position: relative;
   
   &--homepage{
-    height: 110vh;
+    height: 100vh;
+    @include for-size("desktop-up"){
+      height: 110vh;  
+    }
     
     &__title{
       text-shadow: none;
-      @include margin(0, null,null,null);
       @include font-size(48px, 1);
       @include for-size("tablet-landscape-up"){
       @include font-size(65px, 1);
@@ -71,7 +73,7 @@
       
       @include for-size("tablet-landscape-up"){
       font-size: px-to-rem(36px);
-      }
+    }
     
     &__title {
       color: white;
@@ -85,9 +87,11 @@
   
   &--video{
     width: 100%;
-    display: table;
+    display: none;
     position: relative;
-    @include margin(px-to-rem(58px), null, null, null);
+    @include for-size("tablet-portrait-up"){
+      display: flex;
+    }
   
     &__wrapper{
       position: absolute;
@@ -116,6 +120,13 @@
     &__title {
       margin-top: 0px;
     }
+    
+    &__img {
+      display: flex;
+       @include for-size("tablet-portrait-up"){
+       display: none;
+       }
+    }
   }
   
   &__cta{
@@ -126,12 +137,14 @@
   &__title{ 
     color: white;
     text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(4px) black;
-    letter-spacing: px-to-rem(3px);
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    margin-top: 0px;
     max-width: px-to-rem(1200px);
+    
+    @include for-size("tablet-landscape-up"){
+      margin-top: 0px;
+    }
   }
 }
 

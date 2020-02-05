@@ -1,9 +1,9 @@
 .select-box{
-    
+    @include margin( px-to-rem(24px), null, null, null);
     &__container{
-    background:#F0F2F3;
-    margin-top: px-to-rem(24px);
-    position:relative;
+      background:#F0F2F3;
+      @include margin( px-to-rem(16px), null, null, null);
+      position:relative;
     
       &--content {
       @include padding(px-to-rem(24px),px-to-rem(42px),px-to-rem(24px),px-to-rem(42px));

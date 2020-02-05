@@ -49,8 +49,12 @@ function buildResult(object){
     open = '<div class="search__result">';
     close = '</div>';
     url = '';
+    var email = ( object.metaData.stencilsPeopleEmail != undefined ? '<a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a>' : '' ); 
+    var img = object.metaData.I != undefined ? '<img class="search__image" src="'+object.metaData.I+'" alt="" />' : '';
+    var phone = object.metaData.stencilsPeoplePhone != undefined ? '<span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span>' : '';
+    var loc = object.metaData.stencilsPeopleLocation != undefined ? '<span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>' : '';
     title = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'">' + object.metaData.stencilsPeopleFirstName + '</a>';
-    summary = '<img class="search__image" src="'+object.metaData.I+'" alt="" /><strong>' + object.metaData.stencilsPeoplePosition + '</strong><br /><a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a> <span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span><span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>';
+    summary = img + '<strong>' + object.metaData.stencilsPeoplePosition + '</strong><br />' + email + phone + loc;
   }
   if ( object.collection == "xavu-programs" ){
     summary = object.metaData.stencilsCourseDesc;
@@ -60,6 +64,29 @@ function buildResult(object){
   html = html.replace("$liveUrl", url);
   html = html.replace("$description", summary);
   html = html.replace("$close", close);
+  return html;
+}
+
+function buildBestBets(object){
+  var title = object.titleHtml;
+  var summary  = object.descriptionHtml;
+  var url   = '<span class="search__url">' + object.displayUrl + '</span>';
+  var link  = object.linkUrl;
+  
+  var open = '<a href="https://search.xavier.edu' + link + '" class="search__result search__result--bet">';
+  var close = '</a>';
+  var html = '$open';
+      html += '<h2 class="search__title">$title</h2>';
+      html += '<p class="search__content">';
+      html += "$liveUrl";
+      html += '<span class="search__description">$description</span>';
+      html += '</p>$close';
+      html = html.replace("$open", open);
+      html = html.replace("$title", title);
+      html = html.replace("$liveUrl", url);
+      html = html.replace("$description", summary);
+      html = html.replace("$close", close);
+  
   return html;
 }
 
@@ -75,6 +102,9 @@ function search(query){
     var summary = a.response.resultPacket.resultsSummary;
     var results = a.response.resultPacket.results;
     buildTabs(tabs.allValues);
+    $.each(a.response.curator.exhibits, function(index, item){
+      resultHTML += buildBestBets(item);
+    });
     resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
     
     $.each(results, function(index, item){

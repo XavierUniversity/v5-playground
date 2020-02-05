@@ -1,0 +1,99 @@
+%alert-icon{
+  border: solid 0.1rem;
+  text-align: center;
+  width: 4.5rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 1.5rem;    
+    
+  span{
+    font-size: 2.25rem;
+    color: white;
+    left: calc(0% + (2.25rem/2));
+    top: 45%;
+    margin-top: -1rem;
+    position: absolute;
+  }
+}
+
+.alert{
+  display: none;
+  background: #fdfdfd;
+  border-right: solid 0.5rem;
+  color: $font-color;
+  position: relative;
+  margin-bottom: 1.5rem;
+  margin-top: 58px;
+  &--campus-alert{
+    margin-bottom: 0;
+  }
+  
+  &__title{
+    color: $font-color;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__content{
+    padding: 1rem 1rem 1rem 6rem;
+    border-bottom: solid 0.1rem lighten($grey, 25%);
+    border-top: solid 0.1rem lighten($grey, 25%);
+    
+    p{
+      margin-bottom: 0;
+    }
+  }
+  
+  &--success, &--info, &--warning, &--danger{
+    display: block;
+  }
+  
+  &--success{
+    border-right-color: $color-success;
+    &__icon {
+      @extend %alert-icon;
+      border-color: $color-success;
+      background: $color-success;
+      span:before{
+        content: '\f058';  
+      }
+    }
+  }
+  &--info{
+    border-right-color: $color-info;
+    &__icon {
+      @extend %alert-icon;
+      background: $color-info;
+      border-color: $color-info;
+      span:before{
+        content: '\f05a';  
+      }
+    }
+  }
+  &--warning{
+    border-right-color: $color-warning;
+    &__icon {
+      @extend %alert-icon;
+      background: $color-warning;
+      border-color: $color-warning;
+      span:before{
+        content: '\f071';
+      }
+    }
+  }
+  
+  &--danger{
+    border-right-color: $color-error;
+    &__icon {
+      @extend %alert-icon;
+      background: $color-error;
+      border-color: $color-error;
+      span:before{
+       content:'\f06a'; 
+      }
+    }
+  }
+}

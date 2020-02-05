@@ -23,6 +23,9 @@ $width: px-to-rem(532px);
   @include for-size(tablet-landscape-up){
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
+  > div:first-child, > nav:first-child{
+    @include margin(px-to-rem(80px), null, null, null)
+  }
   
   &--search{
     background: #F9FAFB;
@@ -54,6 +57,7 @@ $width: px-to-rem(532px);
      
     &:hover, &:focus, &:active{
       color: white;
+      background: inherit;
     }
     
     &--inverted{

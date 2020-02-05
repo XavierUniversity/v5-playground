@@ -2,20 +2,35 @@
 
   @include margin(null, null, px-to-rem(100px), null);
   @include for-size("tablet-landscape-up"){
+    display: -ms-grid;
     display: grid; 
+    -ms-grid-columns: px-to-rem(300px) 1fr; 
     grid-template-columns: px-to-rem(300px) 1fr; 
+    -ms-grid-rows: px-to-rem(76px) 2fr; 
     grid-template-rows: px-to-rem(76px) 2fr; 
     grid-row-gap: 0;
-    grid-column-gap: px-to-rem(135px / 2);     
+    grid-column-gap: px-to-rem(135px / 2);
   }
   @include for-size("desktop-up"){
-    grid-column-gap: px-to-rem(135px);     
+    grid-column-gap: px-to-rem(135px);
+  }
+  
+  &--no-nav{
+    display: block;
   }
   
   &__breadcrumbs{
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: 1 / 2 / 2 / 3;
   }
   &--nav {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-area: 1 / 1 / 3 / 2;
     width: 100%;
     @include margin(px-to-rem(16px), null, null, null);
@@ -24,6 +39,13 @@
     @include for-size("tablet-landscape-up"){
       padding: 0;
       background: none;
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        @include padding(null, px-to-rem(135px / 2), null, null);
+      } 
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @include padding(null, px-to-rem(135px / 2), null, null);
+      }
     }
     
     &__controls{
@@ -78,6 +100,10 @@
   }
   
   &--main {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3;
   }
 }

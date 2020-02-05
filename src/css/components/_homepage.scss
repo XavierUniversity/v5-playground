@@ -1,12 +1,18 @@
 .news{
-  @include for-size("desktop-up"){
+  
+  @include for-size("tablet-portrait-up"){
     box-shadow: 0 px-to-rem(20px) px-to-rem(20px) 0 rgba(153, 153, 153, 0.25);
     @include padding(px-to-rem(20px), px-to-rem(20px), px-to-rem(20px), px-to-rem(20px));
     @include margin(- px-to-rem(70px), null, null, null);
     background: white;
     display: grid;
     grid-column-gap: px-to-rem(20px);
-    grid-row-gap: px-to-rem(20px);   
+    grid-row-gap: px-to-rem(20px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  @include for-size("desktop-up"){
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
   }
@@ -15,33 +21,35 @@
     }
   
   &--feature{
-  height: px-to-rem(289px);
-  background-position: center center;
-  color: white;
-  display: flex;
-  text-align: left;
-  @include margin(px-to-rem(20px), null, px-to-rem(20px), null);
-    @include for-size("desktop-up"){
+    height: px-to-rem(289px);
+    background-position: center center;
+    color: white;
+    display: flex;
+    text-align: left;
+    position: relative;
+    @include margin(px-to-rem(20px), null, px-to-rem(20px), null);
+    @include for-size("tablet-portrait-up"){
       @include margin(0, null, 0, null);
     }
     &:not(:first-of-type){
-      @include margin(px-to-rem(30px), null, 0, null);
-      @include for-size("desktop-up"){
+      @include margin(px-to-rem(20px), null, 0, null);
+      @include for-size("tablet-portrait-up"){
         @include margin(0, null, 0, null);
-      }
-      
+      }      
     }
-    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      /* IE10+ CSS styles go here */
+      display: block;
+      @include margin(px-to-rem(20px) !important, null, px-to-rem(20px) !important, null);
+    }
+      
     &__wrapper{
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0);
-      -webkit-transition: all 175ms ease-in-out;
-      -moz-transition: all 175ms ease-in-out;
-      -o-transition: all 175ms ease-in-out;
       transition: all 175ms ease-in-out;
     
-      &:hover{
+      &:hover, &:focus{
         background: rgba(0, 0, 0, .3);
       
         .module__icon{
@@ -63,7 +71,7 @@
       @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
       
         &--insta{
-          position: relative;
+          position: absolute;
           @include padding(0, 0, 0, 0);
           width: 100%;
           height: 100%;
@@ -72,10 +80,6 @@
             background: rgba(0, 0, 0, .3);
           }
         }
-  
-        /* @include for-size("phone-only"){
-          @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(48px), px-to-rem(0px));
-        } */
     } 
     
     &__title{
@@ -96,14 +100,14 @@
     }
     
     &__name{
-      @include padding(px-to-rem(8px), px-to-rem(16px), px-to-rem(8px), px-to-rem(16px));
+      @include padding(px-to-rem(8px), px-to-rem(16px), px-to-rem(8px), 0);
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
       width: 100%;
       background: rgb(0,0,0);
-      background: linear-gradient(180deg, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0) 100%);
     }
   
     &__infographic{
@@ -112,6 +116,8 @@
       -webkit-box-pack: center;
       justify-content: center;
       position: relative;
+      display:-ms-grid;
+      display: grid;
       
       img {
         max-height: px-to-rem(289px);
@@ -126,44 +132,53 @@
       color: black;
       @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
     }
-  
-    &:nth-of-type(1){
-      grid-area: 1 / 1 / 2 / 3;
-    }
-    &:nth-of-type(2){
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    &:nth-of-type(3){
-      grid-area: 2 / 2 / 3 / 3;
-    }
-    &:nth-of-type(4){
-      grid-area: 1 / 3 / 2 / 4;
-    }
-    &:nth-of-type(5){
-      grid-area: 1 / 4 / 2 / 5;
-    }
-    &:nth-of-type(6){
-      grid-area: 2 / 3 / 3 / 5;
-    }
     
     &__date {
-      
-      &--first-row{
       position:absolute;
-      bottom: 35rem;
-      @include for-size("desktop-up"){
-        bottom:36.5rem !important;
+      top: px-to-rem(24px);
+    }
+    
+    @include for-size("tablet-portrait-up"){
+      &:nth-of-type(1){
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      &:nth-of-type(2){
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      &:nth-of-type(3){
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      &:nth-of-type(4){
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      &:nth-of-type(5){
+        grid-area: 3 / 2 / 4 / 3;
+      }
+      &:nth-of-type(6){
+        grid-area: 4 / 1 / 5 / 3;
+      }
+    }
+    @include for-size("desktop-up"){
+      &:nth-of-type(1){
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      &:nth-of-type(2){
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      &:nth-of-type(3){
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      &:nth-of-type(4){
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      &:nth-of-type(5){
+        grid-area: 1 / 4 / 2 / 5;
+      }
+      &:nth-of-type(6){
+        grid-area: 2 / 3 / 3 / 5;
       }
     }
     
-      &--second-row{
-      position:absolute;
-      bottom: 95rem;
-      @include for-size("desktop-up"){
-        top:21.5rem !important;
-        }
-      }
-    }
   }
 }
 
@@ -190,52 +205,9 @@
     @include padding(null, null, px-to-rem(60px), 0);
     
     &__item{
-    flex-basis: calc(33% - 2rem);
-    }
-  }
-}
-
-.commitment {
-  background-color: rgba(#fff, 0.85);
-  text-align:center;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
-  @include for-size("tablet-portrait-up"){
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 62.5rem;
-    background-size: cover;
-    background-position: center top;
-    background-image: url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg);
-    background-image: image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-    background-image: -webkit-image-set(url(/_V5/_assets/images/homepage/studentcommitment_1x.jpg) 1x, url(/_V5/_assets/images/homepage/studentcommitment_2x.jpg) 2x);
-  }
-  
-  &--title{
-    color: $darkNavy;
-    text-transform: uppercase;
-    @include padding(px-to-rem(40px), null, px-to-rem(24px), null);
-    @include font-size(24px);
-    @include for-size("phone-only"){
-      @include padding(px-to-rem(40px), null, px-to-rem(32px), null);
-    }
-  }
-  &--hr{
-    background-color: $medBlue;
-    height: px-to-rem(2px);
-    border: none;
-    @include margin(null, auto, null, auto);
-    @include for-size("tablet-landscape-up"){
-      width: 35%;
-    }
-    
-  }
-  
-  &--text {
-    @include padding(0, px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));  
-    @include font-size(28px);
-    @include for-size("phone-only"){
-      line-height: px-to-rem(45px);
+      @include for-size("tablet-landscape-up"){
+        flex-basis: calc(33% - 2rem);
+      }
     }
   }
 }
@@ -280,15 +252,17 @@
 }
 
 .arrow {
+  display: inline-block;
   text-align: center;
-  margin-left:-20px;
+  border-radius: 100%;
   bottom:16vh;
   position:absolute;
-  left:50%;
-  
+  &:hover, &:focus{
+    background: $darkNavy;
+  }
   &--icon {
-  width: px-to-rem(50px);
-  height: px-to-rem(50px);
+    width: px-to-rem(50px);
+    height: px-to-rem(50px);
   }
 }
 .bounce {
@@ -308,4 +282,3 @@
     transform: translateY(-15px);
   }
 }
-

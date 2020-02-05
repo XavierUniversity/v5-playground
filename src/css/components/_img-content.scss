@@ -1,0 +1,112 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .image-content {
+        display: block; }
+        .image-content > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
+
+
+.image-content{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-bottom: 32px;
+  @include for-size("tablet-landscape-up") {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    margin-bottom: 16px;
+  }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block; 
+        > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; }
+        }
+  
+  &__no-sidebar {
+    margin-bottom: px-to-rem(16px);
+    @include for-size("tablet-landscape-up") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 48px;
+      grid-row-gap: 0px;
+      margin-bottom: 32px;
+      
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block; 
+        > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
+    }
+  }
+  
+  
+  &--photo{
+     @include for-size("tablet-landscape-up") {
+    grid-area: 1 / 1 / 2 / 2;
+     }
+  }
+  
+  &--text{
+     @include for-size("tablet-landscape-up") {
+    grid-area: 1 / 2 / 2 / 3;
+     }
+     
+     h3 {
+       @include for-size("tablet-landscape-up"){
+         @include margin(0, null, null, null);
+       }
+     }
+     
+     p{
+      text-align: left !important;
+      margin-bottom: px-to-rem(16px) !important;
+     }
+     
+     ul {
+      padding-left: px-to-rem(8px);
+     }
+  }
+}
+
+.afo {
+  @include padding(px-to-rem(64px), null, px-to-rem(64px), null);
+  &__product {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    margin-top: px-to-rem(32px);
+      @include for-size("tablet-landscape-up"){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 2fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      }
+      @include for-size("desktop-up") {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 0px;
+    }
+    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block; 
+        > div {
+          margin-top: 1rem;
+          margin-bottom: 1rem; } }
+    
+    &--image{
+      text-align: center;
+    }
+  }
+}

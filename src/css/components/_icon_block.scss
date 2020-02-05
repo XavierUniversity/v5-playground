@@ -1,0 +1,33 @@
+.icon_block{
+  @include margin(null, -#{px-to-rem(32px)}, null, -#{px-to-rem(32px)})
+  @include padding(px-to-rem(24px), px-to-rem(32px), px-to-rem(24px), px-to-rem(32px));
+  @include for-size("desktop-up"){
+    @include margin(null, -#{px-to-rem(94px)}, null, -#{px-to-rem(94px)});
+    @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
+  }
+  background: $grey;
+  
+  &__title{
+    @include margin(null, null, px-to-rem(32px), null);
+  }
+  
+  &__wrapper{
+    justify-content: space-evenly;
+  }
+  &__single{
+    text-align: center;
+    @include for-size("tablet-landscape-up"){
+      width: calc( 100% / 4 );
+    }
+  }
+  &__image{
+    width: px-to-rem(115px);
+  }
+  &__stat{
+    text-transform: uppercase;
+    @include font-size(20px);
+    &--2{
+      @include font-size(18px);
+    }
+  }
+}

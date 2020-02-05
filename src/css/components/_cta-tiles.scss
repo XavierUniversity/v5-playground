@@ -1,0 +1,69 @@
+.ctaTile-container {
+  margin-bottom: px-to-rem(24px);
+}
+
+.ctaTile {
+  $self: &;
+  height: px-to-rem(400px);
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  
+  &__content{
+    @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
+  }
+    
+  &__header {
+    text-align: center;
+    margin-bottom: px-to-rem(32px);
+    p{
+        margin-top: px-to-rem(24px);
+    }
+  }
+    
+  &__content{
+    position: absolute;
+    bottom: -#{px-to-rem(60px)};
+    transition: bottom 450ms ease-in-out;
+    min-height: px-to-rem(125px);
+  }
+    
+  &__name{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: px-to-rem(24px);
+    font-weight: 500;
+    @include margin(0, null, null,null);
+    @include padding(0, null, null,null);
+  }
+    
+  &__text{
+    transition: opacity 400ms ease-in-out;
+    opacity: 0;
+  }
+    
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: background 400ms ease-in-out;
+    &:hover{
+      background: rgba(0, 0, 0, 0.3);
+      
+      #{$self}__content{
+        bottom: 0;
+      }
+      
+      #{$self}__text{
+        opacity: 1;
+      }      
+    }
+  }    
+}
+

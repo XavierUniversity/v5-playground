@@ -5,8 +5,43 @@
     justify-content: space-around;
   }
   
+  &--between{
+    justify-content: space-between;
+  }
+  
+  &--evenly{
+    justify-content: space-evenly;
+  }
+  
   @include for-size("tablet-landscape-up"){
     flex-direction: row;
   }
   
+  &__item {
+    @include padding(0, 1.25rem, 0, 1.25rem);
+    
+    @include for-size("tablet-landscape-up"){
+      @include padding(1.25rem, 0, 1.25rem, 0);
+      &:only-child{
+        width: 100%;
+      }
+      /* two items */
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ div {
+          width: 50%;
+      }
+      
+      /* three items */
+      &:first-child:nth-last-child(3),
+      &:first-child:nth-last-child(3) ~ div {
+          width: 33.3333%;
+      }
+      
+      /* four items */
+      &:first-child:nth-last-child(4),
+      &:first-child:nth-last-child(4) ~ div {
+          width: 25%;
+      } 
+    } 
+  } 
 }

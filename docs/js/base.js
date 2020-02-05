@@ -1,86 +1,46 @@
-$("#all-button").click(function() {
-     $(".select-box__container").addClass("academic-programs__visible");
-     $("h2").show();
-     $(".undergraduate-categories").hide();
-     $(".graduate-categories").hide();
-});
+function detectmob() { 
 
-$("#undergrad-button").click(function() {
-    $(".undergraduate-categories").show();
-    $(".graduate-categories").hide();
-});
-
-$("#grad-button").click(function() {
-    $(".undergraduate-categories").hide();
-    $(".graduate-categories").show();
-});
-
-$("#undergrad-button, #grad-button").click(function() {
-  var val1 = $('[name=degree-radio]:checked').val();
-  var degree = $(this).data('degree');
-  $(".select-box__container[data-degree!='"+degree+"']").removeClass("academic-programs__visible");
-  $(".select-box__container[data-degree='"+degree+"']").addClass("academic-programs__visible");
-  $("h2").show();
-  $( ".select-box" ).each(function( index ) { // Loop each of the groups
-    if($( this ).children('.academic-programs__visible').length === 0 ) { // Check the visible list length; if literally equals 0
-      $( this ).prev().hide(); // Hide the previous element
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+      // If mobile, then we do all this
+      return true;
     }
-  });
-});
-
-$(".cats-btn-u").click(function() {
-  var category = $(this).data('category');
-  $(".select-box__container[data-category!='"+category+"'][data-degree='undergraduate']").removeClass("academic-programs__visible");
-  $(".select-box__container[data-category*='"+category+"'][data-degree='undergraduate']").addClass("academic-programs__visible");
-  $("h2").show();
-  $( ".select-box" ).each(function( index ) { // Loop each of the groups
-    if($( this ).children('.academic-programs__visible').length === 0 ) { // Check the visible list length; if literally equals 0
-      $( this ).prev().hide(); // Hide the previous element
+    else {
+      // If not mobile then do this
+      return false;
     }
-  });
+} // detectmob
+if ( $('meta[property="id"]').attr('content') !== undefined ){
+  $("#editorAccess").attr('href', "https://cascade.xavier.edu/entity/open.act?id="+ $('meta[property="id"]').attr('content') +"&type=page");
+}
+$('.track').on('click', function(e){
+  // Collect
+  var dis = $(this),
+      category = (dis.data('category') ? dis.data('category') : 'link'),
+      action = (dis.data('action') ? dis.data('action') : 'click'),
+      label = (dis.data('label') ? dis.data('label') : dis.text());
+  // Push to GTM
+  dataLayer.push({'event' : 'customEvent', 'eventCategory' : category, 'eventAction' : action, 'eventLabel' : label});
 });
-
-$(".cats-btn-g").click(function() {
-  var category = $(this).data('category');
-  $(".select-box__container[data-category!='"+category+"'][data-degree='graduate']").removeClass("academic-programs__visible");
-  $(".select-box__container[data-category*='"+category+"'][data-degree='graduate']").addClass("academic-programs__visible");
-  $("h2").show();
-  $( ".select-box" ).each(function( index ) { // Loop each of the groups
-    if($( this ).children('.academic-programs__visible').length === 0 ) { // Check the visible list length; if literally equals 0
-      $( this ).prev().hide(); // Hide the previous element
-    }
-  });
-});
-
-$("#all-u-button").click(function() {
-     $(".select-box__container[data-degree='undergraduate']").addClass("academic-programs__visible");
-     $("h2").show();
-  $( ".select-box" ).each(function( index ) { // Loop each of the groups
-    if($( this ).children('.academic-programs__visible').length === 0 ) { // Check the visible list length; if literally equals 0
-      $( this ).prev().hide(); // Hide the previous element
-    }
-  });
-});
-$("#all-g-button").click(function() {
-     $(".select-box__container[data-degree='graduate']").addClass("academic-programs__visible");
-     $("h2").show();
-  $( ".select-box" ).each(function( index ) { // Loop each of the groups
-    if($( this ).children('.academic-programs__visible').length === 0 ) { // Check the visible list length; if literally equals 0
-      $( this ).prev().hide(); // Hide the previous element
-    }
-  });
-});
-var insta = $("[data-image]").data("image");
-$.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
-  var parent = $("[data-image='"+ insta +"']");
-  console.log(parent);
-  parent.css({"background-image": 'url("' +d.thumbnail_url + '")', "background-size": 'cover'});
-  parent.find(".news--feature__content").attr('href', insta);
-  parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<img src="images/news/instagram.png" style="padding-right:.3rem;">' + d.author_name + '</span>');
-  parent.find(".news--feature__caption").html(d.title);
-});
-
-
+var instas = $("[data-image]");
+if ( instas.length > 0 ){
+  for ( var i = 0; i < instas.length; i++){
+    var insta = $(instas[i]).data('image');
+    $.get("https://api.instagram.com/oembed?url=" + insta + "&hidecaption=true&omitscript=true", function(d){
+      var parent = $("[data-image='"+ insta +"']");
+      parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
+      parent.find(".news--feature__content").attr('href', insta);
+      parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
+      parent.find(".news--feature__caption").html(d.title.slice(0, 100) + ( d.title.length > 100 ? "&hellip;" : ''));
+    });
+  }
+}
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -180,15 +140,8 @@ function openDrawer(obj){
   jQuery('body').on('focusin', '#content', function(){
     setFocusToFirstItem(jQuery(obj));
   });
-  $('.drawer').bind('mouseenter touchstart', function(e) {
-    var current = $(window).scrollTop();
-      $(window).scroll(function(event) {
-          $(window).scrollTop(current);
-      });
-  });
   // save current focus
   focusedElementBeforeModal = jQuery(':focus');
-
   setFocusToFirstItem(obj);
 }
 
@@ -199,9 +152,6 @@ function closeDrawer(){
   jQuery("#content").attr('aria-hidden', false); // make content visible again
   // Remove listener
   jQuery('body').off('focusin', "#content");
-  $('.drawer').bind('mouseleave touchend', function(e) {
-      $(window).off('scroll');
-  });
   // set focus back to element that had focus before modal.
   focusedElementBeforeModal.focus();
 }
@@ -329,8 +279,12 @@ function buildResult(object){
     open = '<div class="search__result">';
     close = '</div>';
     url = '';
+    var email = ( object.metaData.stencilsPeopleEmail != undefined ? '<a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a>' : '' ); 
+    var img = object.metaData.I != undefined ? '<img class="search__image" src="'+object.metaData.I+'" alt="" />' : '';
+    var phone = object.metaData.stencilsPeoplePhone != undefined ? '<span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span>' : '';
+    var loc = object.metaData.stencilsPeopleLocation != undefined ? '<span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>' : '';
     title = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'">' + object.metaData.stencilsPeopleFirstName + '</a>';
-    summary = '<img class="search__image" src="'+object.metaData.I+'" alt="" /><strong>' + object.metaData.stencilsPeoplePosition + '</strong><br /><a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a> <span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span><span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>';
+    summary = img + '<strong>' + object.metaData.stencilsPeoplePosition + '</strong><br />' + email + phone + loc;
   }
   if ( object.collection == "xavu-programs" ){
     summary = object.metaData.stencilsCourseDesc;
@@ -340,6 +294,29 @@ function buildResult(object){
   html = html.replace("$liveUrl", url);
   html = html.replace("$description", summary);
   html = html.replace("$close", close);
+  return html;
+}
+
+function buildBestBets(object){
+  var title = object.titleHtml;
+  var summary  = object.descriptionHtml;
+  var url   = '<span class="search__url">' + object.displayUrl + '</span>';
+  var link  = object.linkUrl;
+  
+  var open = '<a href="https://search.xavier.edu' + link + '" class="search__result search__result--bet">';
+  var close = '</a>';
+  var html = '$open';
+      html += '<h2 class="search__title">$title</h2>';
+      html += '<p class="search__content">';
+      html += "$liveUrl";
+      html += '<span class="search__description">$description</span>';
+      html += '</p>$close';
+      html = html.replace("$open", open);
+      html = html.replace("$title", title);
+      html = html.replace("$liveUrl", url);
+      html = html.replace("$description", summary);
+      html = html.replace("$close", close);
+  
   return html;
 }
 
@@ -355,6 +332,9 @@ function search(query){
     var summary = a.response.resultPacket.resultsSummary;
     var results = a.response.resultPacket.results;
     buildTabs(tabs.allValues);
+    $.each(a.response.curator.exhibits, function(index, item){
+      resultHTML += buildBestBets(item);
+    });
     resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
     
     $.each(results, function(index, item){
@@ -528,3 +508,11 @@ $("[data-toggle]").on('click', function(e){
   $(list).toggleClass("visible");
   $('[data-toggle='+list+']').toggleClass("on");
 });
+
+// Need to see if we are on a mobile device. If we aren't, let's post the video!
+if ( !detectmob() ){
+  var vid = $(".hero video");
+  if ( vid.length > 0 ){
+    vid.html('<source src="'+vid.data("bgvideo") + '" type="video/mp4" />');
+  }
+}

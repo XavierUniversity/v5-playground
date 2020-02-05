@@ -1,10 +1,13 @@
 .cta-card{
+  background-image: url('/_V5/_assets/images/cards/cards_bg.png');
+  background-position: left;
+  background-size: cover;
   background-color: #f0f2f3;
-  min-height: 100vh;
+  //min-height: 85vh;
   @include for-size ("phone-only") {
-    @include padding(px-to-rem(96px), px-to-rem(16px), px-to-rem(64px), px-to-rem(16px));
+    @include padding(px-to-rem(96px), px-to-rem(16px), px-to-rem(96px), px-to-rem(16px));
   }
-  @include padding(px-to-rem(96px), null, px-to-rem(64px), null);
+  @include padding(px-to-rem(128px), null, px-to-rem(128px), null);
   
   &__header{
     text-align:center;
@@ -20,13 +23,21 @@
     grid-template-rows: 1fr;  
     grid-column-gap: 0px;
     grid-row-gap: 16px;
-    @include for-size("tablet-landscape-up"){
+    @include for-size("desktop-up"){
       display: grid; 
       grid-template-columns: repeat(3, 1fr); 
       grid-template-rows: 1fr; 
       grid-column-gap: 16px;
       grid-row-gap: 16px;
     }
+    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
+    
   }
   
   &__3x2{
@@ -49,6 +60,12 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
   }
   
   &__2x1{
@@ -63,6 +80,12 @@
       grid-template-rows: 1fr; 
       grid-column-gap: 16px;
       grid-row-gap: 0px;
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
     }
   }
     
@@ -79,6 +102,12 @@
       grid-column-gap: 16px;
       grid-row-gap: 16px; 
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
+    }
   }
     
   &__1x1 {
@@ -87,7 +116,13 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 16px;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+      > div{
+        @include margin( px-to-rem(16px), null, px-to-rem(16px), null);
+      }
     }
+  }
       
   h1{
     text-transform:uppercase;

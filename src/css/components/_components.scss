@@ -12,6 +12,7 @@
 @import 'header.search';
 @import 'header.sidebar';
 @import 'homepage';
+@import 'user-panel';
 
 // Navigation Items
 @import 'nav-list';
@@ -31,10 +32,14 @@
 @import 'content.title';
 @import 'content.tabs';
 @import 'content.page';
+@import 'directory';
 @import 'panel';
 @import 'accordion';
+@import 'img-content';
 @import 'columns';
 @import 'stats';
+@import 'list-cols';
+@import 'news';
 
 // designed page specific
 @import 'outcomes';
@@ -43,13 +48,17 @@
 @import 'cdn';
 @import 'select-box';
 @import 'cta-cards';
+@import 'cta-tiles';
+@import 'highlight';
+@import 'recommended';
 @import 'testimonial';
 @import 'select-box';
 @import 'seo';
-
-
+@import 'statement';
+@import 'icon_block';
 @import 'event-list';
 @import 'modules';
+@import 'callouts';
 
 @import 'twitter';
-
+@import 'alerts';

@@ -97,15 +97,8 @@ function openDrawer(obj){
   jQuery('body').on('focusin', '#content', function(){
     setFocusToFirstItem(jQuery(obj));
   });
-  $('.drawer').bind('mouseenter touchstart', function(e) {
-    var current = $(window).scrollTop();
-      $(window).scroll(function(event) {
-          $(window).scrollTop(current);
-      });
-  });
   // save current focus
   focusedElementBeforeModal = jQuery(':focus');
-
   setFocusToFirstItem(obj);
 }
 
@@ -116,9 +109,6 @@ function closeDrawer(){
   jQuery("#content").attr('aria-hidden', false); // make content visible again
   // Remove listener
   jQuery('body').off('focusin', "#content");
-  $('.drawer').bind('mouseleave touchend', function(e) {
-      $(window).off('scroll');
-  });
   // set focus back to element that had focus before modal.
   focusedElementBeforeModal.focus();
 }

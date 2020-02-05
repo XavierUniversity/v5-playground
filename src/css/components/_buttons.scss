@@ -19,7 +19,7 @@
     background: #1B4675;
     border-color: #1B4675;
     color: white;
-    margin-left: 0;
+    @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 
   &--dark-navy{
@@ -27,7 +27,7 @@
   }
 
   &--hero{
-    background-color:transparent;
+    background-color:rgba(0,0,0,0.55);
     border: 1px solid white;
     border-radius: px-to-rem(25px);
     text-align:center;
@@ -38,21 +38,34 @@
       background: white;
       color: black;
       border-color: white;
+      @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     }
     @include for-size("phone-only"){
       @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
       border-radius: px-to-rem(23px);
+      
+      &:hover, &:focus{
+        @include padding(null, px-to-rem(32px), null, px-to-rem(32px));  
+      }
     }
   }
 
   &--featured-links {
     @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
+    @include for-size("tablet-landscape-up"){
+      @include margin(px-to-rem(16px), null, null, null);
+    }
+    
   }
   
   &--inline{
-      display: inline-block;
+    display: inline-block;
+    @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
+    
+    &:hover, &:focus, &:active{
       @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
     }
+  }
 }
 
 .action{
@@ -63,6 +76,7 @@
     @include margin(null, auto, null, auto);
     &:hover, &:focus, &:active{
       @include margin(null, auto, null, auto);
+      @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
     }
   }
 }

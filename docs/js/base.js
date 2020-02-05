@@ -206,8 +206,12 @@ function buildResult(object){
     open = '<div class="search__result">';
     close = '</div>';
     url = '';
+    var email = ( object.metaData.stencilsPeopleEmail != undefined ? '<a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a>' : '' ); 
+    var img = object.metaData.I != undefined ? '<img class="search__image" src="'+object.metaData.I+'" alt="" />' : '';
+    var phone = object.metaData.stencilsPeoplePhone != undefined ? '<span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span>' : '';
+    var loc = object.metaData.stencilsPeopleLocation != undefined ? '<span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>' : '';
     title = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'">' + object.metaData.stencilsPeopleFirstName + '</a>';
-    summary = '<img class="search__image" src="'+object.metaData.I+'" alt="" /><strong>' + object.metaData.stencilsPeoplePosition + '</strong><br /><a href="mailto:'+object.metaData.stencilsPeopleEmail+'@xavier.edu" class="search__contact">' + object.metaData.stencilsPeopleEmail + '@xavier.edu</a> <span class="search__contact">'+ object.metaData.stencilsPeoplePhone + '</span><span class="search__contact">' + object.metaData.stencilsPeopleLocation + '</span>';
+    summary = img + '<strong>' + object.metaData.stencilsPeoplePosition + '</strong><br />' + email + phone + loc;
   }
   if ( object.collection == "xavu-programs" ){
     summary = object.metaData.stencilsCourseDesc;

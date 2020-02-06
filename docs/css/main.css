@@ -3958,11 +3958,17 @@ a.cincyselect, a.clandselect {
 
 .seo {
   background-color: #f0f2f3;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-  .seo--logo {
-    width: 100%;
-    text-align: center; }
+  text-align: center; }
+  .seo__image {
+    margin-bottom: 1rem; }
+    .seo__image img {
+      max-height: 75px; }
+  .seo__text {
+    font-size: 8px !important;
+    font-size: 0.5rem !important;
+    line-height: 3 !important; }
+  .seo__title {
+    text-transform: uppercase; }
 
 .statement--text {
   margin-top: 1rem; }

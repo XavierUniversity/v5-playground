@@ -3966,8 +3966,8 @@ a.cincyselect, a.clandselect {
     .seo__image img {
       max-height: 75px; }
   .seo__text {
-    font-size: 8px !important;
-    font-size: 0.5rem !important;
+    font-size: 10px !important;
+    font-size: 0.625rem !important;
     line-height: 2 !important; }
   .seo__title {
     text-transform: uppercase; }

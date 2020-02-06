@@ -3958,7 +3958,9 @@ a.cincyselect, a.clandselect {
 
 .seo {
   background-color: #f0f2f3;
-  text-align: center; }
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   .seo__image {
     margin-bottom: 1rem; }
     .seo__image img {

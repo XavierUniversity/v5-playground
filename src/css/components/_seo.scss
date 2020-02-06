@@ -1,6 +1,8 @@
 .seo {
 	background-color: #f0f2f3;
 	text-align: center;
+	padding-top: px-to-rem(16px);
+	padding-bottom: px-to-rem(16px);
 	
 	&__image{
 		margin-bottom: px-to-rem(16px);

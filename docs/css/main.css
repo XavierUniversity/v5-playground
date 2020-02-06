@@ -3959,15 +3959,15 @@ a.cincyselect, a.clandselect {
 .seo {
   background-color: #f0f2f3;
   text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; }
   .seo__image {
     margin-bottom: 1rem; }
     .seo__image img {
       max-height: 75px; }
   .seo__text {
-    font-size: 10px !important;
-    font-size: 0.625rem !important;
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
     line-height: 2 !important; }
   .seo__title {
     text-transform: uppercase; }

@@ -1,10 +1,22 @@
 .seo {
 	background-color: #f0f2f3;
-	padding-top: px-to-rem(24px);
-	padding-bottom: px-to-rem(24px);
+	text-align: center;
+	padding-top: px-to-rem(40px);
+	padding-bottom: px-to-rem(40px);
 	
-	&--logo{
-		width: 100%;
-		text-align: center;
+	&__image{
+		margin-bottom: px-to-rem(16px);
+		
+		img {
+			max-height: 75px;
+		}
+	}
+	
+	&__text{
+		@include font-size(12px, 2, important);
+	}
+	
+	&__title {
+		text-transform: uppercase;
 	}
 }

@@ -2529,6 +2529,12 @@ a[href^=tel] {
     .tabs__content.visible {
       display: block; }
 
+.related_programs ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding-left: 1rem; }
+
 .content-page {
   margin-bottom: 6.25rem; }
   @media (min-width: 56.25rem) {
@@ -3598,10 +3604,6 @@ a.cincyselect, a.clandselect {
   .designed-wrapper .sidebar > .panel:first-child {
     margin-top: 3rem; }
 
-.statement {
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
-
 .designed-cta {
   display: none; }
   @media (min-width: 37.5rem) {
@@ -4025,14 +4027,25 @@ a.cincyselect, a.clandselect {
 
 .seo {
   background-color: #f0f2f3;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-  .seo--logo {
-    width: 100%;
-    text-align: center; }
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; }
+  .seo__image {
+    margin-bottom: 1rem; }
+    .seo__image img {
+      max-height: 75px; }
+  .seo__text {
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
+    line-height: 2 !important; }
+  .seo__title {
+    text-transform: uppercase; }
 
-.statement--text {
-  margin-top: 1rem; }
+.statement {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .statement--text {
+    margin-top: 1rem; }
 
 .icon_block {
   margin-right: -2rem;

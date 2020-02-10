@@ -86,3 +86,9 @@
     }
   }
 }
+
+.related_programs ul {
+    list-style-type: none;
+    @include margin(null, null, px-to-rem(16px), 0);
+    padding-left: px-to-rem(16px);
+}

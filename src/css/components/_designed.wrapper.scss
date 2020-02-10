@@ -63,8 +63,3 @@
     }
   }
 }
-
-.statement {
-  @include padding(px-to-rem(64px), null, px-to-rem(64px), null);
-//   margin-bottom: px-to-rem(16px);
-}

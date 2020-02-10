@@ -1,0 +1,73 @@
+.outcomes{
+  display: grid;
+  grid-template-columns: 1fr 2fr 7px;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+  &__title{
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  
+  &__form, &__majors{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  &__stats{
+    justify-content: space-between;
+  }
+  
+  &__info{
+    background: $grey;
+    flex-basis: calc((100%/3) - 0.5rem);
+    padding: px-to-rem(16px);
+    
+    &--nobg{
+      background: none;
+      text-align: center;
+    }
+  }
+}
+
+.centered{
+  width: 75%;
+  @include margin(null, auto, null, auto);
+  text-align: center;
+}
+
+ .svg{
+	 transform: rotate(-90deg);
+}
+ .svg circle {
+	 stroke-dashoffset: 0;
+	 transition: stroke-dashoffset 1s linear;
+	 stroke: #dfe0e0;
+	 stroke-width: 1em;
+}
+ .svg .bar{
+	 stroke: $lightBlue;
+}
+ .cont{
+	 display: block;
+	 height: 200px;
+	 width: 200px;
+	 margin: px-to-rem(16px) auto;
+	 border-radius: 100%;
+	 position: relative;
+}
+ .cont:after {
+	 color: $darkNavy;
+	 font-weight: 300;
+	 position: absolute;
+	 display: block;
+	 height: 160px;
+	 width: 160px;
+	 left: 50%;
+	 top: 50%;
+	 content: attr(data-pct)"%";
+	 margin-top: -35px;
+	 margin-left: -80px;
+	 border-radius: 100%;
+	 @include font-size(32px);
+	 text-align: center;
+}

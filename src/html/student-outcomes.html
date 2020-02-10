@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Student Outcomes | Xavier University</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/outcomes/Outcomes_Hero_1x.png");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/outcomes/Outcomes_Hero_1x.png") 1x, url("images/outcomes/Outcomes_Hero_2x.png") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/outcomes/Outcomes_Hero_2x.png") 1x, url("images/outcomes/Outcomes_Hero_2x.png") 2x );
+      }
+    </style>
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+     <section class="hero hero--large">
+         <h1 class="hero__title hero--large__title">
+             Student<br/>Outcomes
+         </h1>
+     </section>
+
+     <div class="wrapper">
+       <div class="centered">
+          <h2 class="title text-center">lorem ipsum dolor</h2>
+          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>
+       
+       <div class="outcomes">
+         <h3 class="outcomes__title">Student Outcomes for 2019</h3>
+         
+         <form class="form outcomes__form">
+           <label class="form__label" for="swapper">Available programs</label>
+            <select class="form__select" id="swapper" name="swapper">
+              <option value="all">All</option>
+              <option value="art">Art</option>
+              <option value="athletics">Athletics</option>
+              <option value="business">Business</option>
+              <option value="communication">Communication</option>
+              <option value="education">Education</option>
+              <option value="health">Health &amp; Medicine</option>
+              <option value="honors">Honors</option>
+              <option value="humanities">Humanities</option>
+              <option value="language">Language &amp; International Affairs</option>
+              <option value="politics">Politics</option>
+              <option value="social">Social Impact</option>
+              <option value="stem">STEM (Science, Technology, Engineering, Mathematics)</option>
+              <option value="sustainability">Sustainability &amp; the Environment</option>
+            </select>
+         </form>
+       </div>
+       
+       <div class="outcomes__stats flex">
+         <div class="outcomes__info">
+           <h3 class="outcomes__title--sub">Success Rate</h3>
+            <div class="cont" data-pct="0" id="success-cont"><svg xmlns="http://www.w3.org/2000/svg" class="svg" height="200" id="success" version="1.1" viewport="0 0 100 100" width="200"> <circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> <circle class="bar" cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> </svg></div>
+         </div>
+         <div class="outcomes__info">
+           <h3 class="outcomes__title--sub">Top Employers</h3>
+           <div id="employers"></div>
+         </div>
+         <div class="outcomes__info">
+           <h3 class="outcomes__title--sub">Top Jobs</h3>
+           <div id="jobs"></div>
+         </div>
+       </div>
+       <div class="spacer--64"></div>
+      <div class="outcomes">
+        <div class="outcomes__title">
+          <h3>Success Rate Components</h3>
+          <p>View <a href="#">Additional Information</a> from our Office of Institutional Research.</p>
+          
+          <div class="outcomes_stats flex">
+            <div class="outcomes__info outcomes__info--nobg">
+              <div class="cont" data-pct="0" id="employed-cont"><svg xmlns="http://www.w3.org/2000/svg" class="svg" height="200" id="employed" version="1.1" viewport="0 0 100 100" width="200"> <circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> <circle class="bar" cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> </svg></div>
+              <p class="text-center">Employed</p>
+            </div>
+
+            <div class="outcomes__info outcomes__info--nobg">
+              <div class="cont" data-pct="0" id="continuing-ed-cont"><svg xmlns="http://www.w3.org/2000/svg" class="svg" height="200" id="continuing-ed" version="1.1" viewport="0 0 100 100" width="200"> <circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> <circle class="bar" cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> </svg></div>
+              <p class="text-center">Continuing Education</p>
+            </div>
+
+            <div class="outcomes__info outcomes__info--nobg">
+              <div class="cont" data-pct="0" id="serving-cont"><svg xmlns="http://www.w3.org/2000/svg" class="svg" height="200" id="serving" version="1.1" viewport="0 0 100 100" width="200"> <circle cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> <circle class="bar" cx="100" cy="100" fill="transparent" r="90" stroke-dasharray="565.48" stroke-dashoffset="0"/> </svg></div>
+              <p class="text-center">Serving in the Military or a Volunteer Program</p>
+            </div> 
+          </div>  
+        </div>
+        <div class="outcomes__majors">
+          <h5>Majors in this category</h5>
+          <div id="majors_list"></div>
+        </div>
+      </div>
+      <div class="spacer--64"></div>
+      <hr />
+      <div class="testimonial_wrapper flex"> 
+        <div class="testimonials">
+          <h2 class="testimonials__header">Fancy Headline About Our Testimonials</h2>
+          <p class="testimonials__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="testimonial__wrapper flex">
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <div class="testimonial__content--quotemark">(quote SVG)</div>
+                <p class="testimonial__content--quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="testimonial__content--name">Student Name</p>
+                <p class="testimonial__content--attr">Class Year</p>
+              </div>
+            </div>
+          
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <div class="testimonial__content--quotemark">(quote SVG)</div>
+                <p class="testimonial__content--quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="testimonial__content--name">Student Name</p>
+                <p class="testimonial__content--attr">Class Year</p>
+              </div>
+            </div>
+          
+            <div class="testimonial">
+              <div class="testimonial__content">
+                <div class="testimonial__content--quotemark">(quote SVG)</div>
+                <p class="testimonial__content--quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p class="testimonial__content--name">Student Name</p>
+                <p class="testimonial__content--attr">Class Year</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div> 
+      <div class="spacer--64"></div>
+    </div> <!-- wrapper -->
+    include "includes/stats.html"
+      <div class="spacer spacer--64"></div>
+        include "includes/cdn.html"
+      <div class="spacer spacer--64"></div>
+    </main>
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

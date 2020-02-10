@@ -2529,6 +2529,12 @@ a[href^=tel] {
     .tabs__content.visible {
       display: block; }
 
+.related_programs ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding-left: 1rem; }
+
 .content-page {
   margin-bottom: 6.25rem; }
   @media (min-width: 56.25rem) {
@@ -3531,10 +3537,6 @@ a.cincyselect, a.clandselect {
   .designed-wrapper .sidebar > .panel:first-child {
     margin-top: 3rem; }
 
-.statement {
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
-
 .designed-cta {
   display: none; }
   @media (min-width: 37.5rem) {
@@ -3972,8 +3974,11 @@ a.cincyselect, a.clandselect {
   .seo__title {
     text-transform: uppercase; }
 
-.statement--text {
-  margin-top: 1rem; }
+.statement {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .statement--text {
+    margin-top: 1rem; }
 
 .icon_block {
   margin-right: -2rem;

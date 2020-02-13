@@ -926,6 +926,9 @@ a[href^=tel] {
   font-style: inherit;
   font-weight: inherit; }
 
+a img {
+  display: inline-block; }
+
 .wrapper {
   position: relative;
   padding-right: 2rem;

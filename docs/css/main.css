@@ -2636,6 +2636,15 @@ a[href^=tel] {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3; }
+  @media (min-width: 56.25rem) {
+    .content-page img {
+      float: left;
+      margin-right: 1.5rem;
+      margin-bottom: 0.125rem;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 300px;
+      height: 230px; } }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;
@@ -3516,7 +3525,7 @@ a.cincyselect, a.clandselect {
   .outcomes__title {
     grid-area: 1 / 2 / 2 / 3; }
     .outcomes__title--sub {
-      margin-top: 0.5rem;
+      margin-top: 0;
       margin-right: 0;
       margin-bottom: 1rem;
       margin-left: 0;
@@ -3531,6 +3540,8 @@ a.cincyselect, a.clandselect {
       border-bottom: solid 0.125rem #F0F2F3; }
   .outcomes__form, .outcomes__majors {
     grid-area: 1 / 1 / 2 / 2; }
+  .outcomes__form {
+    padding-bottom: 1.5rem; }
   .outcomes__stats {
     -webkit-box-pack: justify;
             justify-content: space-between; }
@@ -3595,7 +3606,7 @@ a.cincyselect, a.clandselect {
   #majors_list ul li {
     padding-top: 1rem;
     padding-bottom: 1rem; }
-    @media (min-width: 37.5rem) {
+    @media (min-width: 56.25rem) {
       #majors_list ul li {
         max-width: 75%; } }
     #majors_list ul li a {

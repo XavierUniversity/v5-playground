@@ -12,7 +12,7 @@
   &__title{
     grid-area: 1 / 2 / 2 / 3;
     &--sub{
-      @include margin(px-to-rem(8px), 0, px-to-rem(16px), 0);
+      @include margin(0, 0, px-to-rem(16px), 0);
       color: black;
       text-transform: none !important;
       font-weight: 300;
@@ -26,6 +26,9 @@
   
   &__form, &__majors{
     grid-area: 1 / 1 / 2 / 2;
+  }
+  &__form{
+    @include padding(null, null, px-to-rem(24px), null);
   }
   
   &__stats{

@@ -5,8 +5,8 @@
     display: grid;
     grid-template-columns: 1fr 2fr 7px;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-column-gap: px-to-rem(0px);
+    grid-row-gap: px-to-rem(0px); 
   }
   
   &__title{
@@ -60,15 +60,15 @@
 	 stroke-dashoffset: 0;
 	 transition: stroke-dashoffset 1s linear;
 	 stroke: #dfe0e0;
-	 stroke-width: 1em;
+	 stroke-width: px-to-rem(16px);
 }
  .svg .bar{
 	 stroke: $lightBlue;
 }
  .cont{
 	 display: block;
-	 height: 200px;
-	 width: 200px;
+	 height: px-to-rem(200px);
+	 width: px-to-rem(200px);
 	 margin: px-to-rem(16px) auto;
 	 border-radius: 100%;
 	 position: relative;
@@ -78,13 +78,10 @@
 	 font-weight: 300;
 	 position: absolute;
 	 display: block;
-	 height: 160px;
-	 width: 160px;
-	 left: 50%;
-	 top: 50%;
+	 height: px-to-rem(200px);
+	 width: px-to-rem(200px);
 	 content: attr(data-pct)"%";
-	 margin-top: -35px;
-	 margin-left: -80px;
+	 margin-top: -60%;
 	 border-radius: 100%;
 	 @include font-size(32px);
 	 text-align: center;
@@ -93,8 +90,8 @@
 #majors_list{
   ul{
     list-style: none;
-    margin: 0;
-    padding:0;
+    @include margin(0, 0, 0, 0);
+    @include padding(0, 0, 0, 0);
     li{
       @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
       

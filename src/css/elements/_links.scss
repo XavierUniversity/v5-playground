@@ -70,6 +70,7 @@ $encodedWhite: encodeColor(#ffffff);
     color: $medBlue;
     font-weight: 300;
     text-decoration: underline;
+    display: inline-block;
     &:hover, &:focus, &:active{
       color: darken($medBlue, 15%);
     }

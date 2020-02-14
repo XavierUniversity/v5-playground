@@ -78,7 +78,7 @@
   }
   
   &__hr{
-    @include margin(null, px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+    @include margin(px-to-rem(24px), px-to-rem(42px), px-to-rem(24px), px-to-rem(42px));
     background: $darkGrey;
     height: px-to-rem(2px);
     border: none;

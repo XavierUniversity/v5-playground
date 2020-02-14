@@ -1,5 +1,5 @@
 .outcomes{
-  @include margin(px-to-rem(24px), null, null, null);
+  @include margin(px-to-rem(36px), null, null, null);
   
   @include for-size("tablet-landscape-up"){
     display: grid;

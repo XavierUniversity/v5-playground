@@ -943,6 +943,11 @@ a[href^=tel] {
   font-style: inherit;
   font-weight: inherit; }
 
+hr {
+  border-color: #F0F2F3;
+  border-width: 0.09375rem;
+  border-style: solid; }
+
 .wrapper {
   position: relative;
   padding-right: 2rem;
@@ -3514,7 +3519,7 @@ a.cincyselect, a.clandselect {
   width: 100%; }
 
 .outcomes {
-  margin-top: 1.5rem; }
+  margin-top: 2.25rem; }
   @media (min-width: 56.25rem) {
     .outcomes {
       display: grid;

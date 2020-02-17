@@ -115,6 +115,15 @@
       width: 300px;
       height: 230px;
     }
+    
+    &--fw {
+      max-width : 100% !important;
+      -ob-object-fit : unset !important;
+      object-fit : unset !important;
+      width : auto !important;
+      height : auto !important;
+      float: none !important;
+    }
   }
 }
 

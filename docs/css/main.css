@@ -2650,14 +2650,15 @@ hr {
          object-fit: cover;
       width: 300px;
       height: 230px; } }
-  .content-page img--fw {
-    max-width: 100% !important;
-    -ob-object-fit: unset !important;
-    -o-object-fit: unset !important;
-       object-fit: unset !important;
-    width: auto !important;
-    height: auto !important;
-    float: none !important; }
+
+.img--fw {
+  max-width: 100% !important;
+  -ob-object-fit: unset !important;
+  -o-object-fit: unset !important;
+     object-fit: unset !important;
+  width: auto !important;
+  height: auto !important;
+  float: none !important; }
 
 .sidenav {
   border-top: solid 0.125rem #d8d8d8;

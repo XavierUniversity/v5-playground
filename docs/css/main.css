@@ -2654,7 +2654,7 @@ hr {
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3; }
   @media (min-width: 56.25rem) {
-    .content-page img {
+    .content-page p > img {
       float: left;
       margin-right: 1.5rem;
       margin-bottom: 0.125rem;

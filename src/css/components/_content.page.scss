@@ -106,8 +106,7 @@
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3;
   }
-  
-  img{
+  p > img{
     @include for-size("tablet-landscape-up"){
       float: left;
       @include margin(null, px-to-rem(24px), px-to-rem(2px), null);

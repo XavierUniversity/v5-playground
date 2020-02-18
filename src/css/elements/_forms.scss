@@ -26,11 +26,17 @@
   }
   
   &__input, &__textarea, &__select{
-    display: inline-block;
-    margin: 0.5rem 0;
-    padding: 0.25rem;
-    border-radius: 0.2rem;
+    display: block;
     width: 85%;
+    outline: none;
+    border: px-to-rem(1px) solid rgb(230, 232, 236);
+    border-radius: px-to-rem(4px);
+    font-weight: 200;
+    @include padding(px-to-rem(6px), px-to-rem(24px), px-to-rem(6px), px-to-rem(24px));
+    &:focus, &:active{
+      box-shadow: 0 0 px-to-rem(5px) $medBlue;
+      border: px-to-rem(1px) solid $medBlue;
+    }
     
     + span {  
       padding: 0 1rem;

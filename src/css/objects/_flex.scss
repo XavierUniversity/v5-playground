@@ -18,10 +18,15 @@
   }
   
   &__item {
-    @include padding(0, 1.25rem, 0, 1.25rem);
-    
+    @include padding(0.5rem, 0, 0.5rem, 0);
     @include for-size("tablet-landscape-up"){
-      @include padding(1.25rem, 0, 1.25rem, 0);
+      @include padding(null, 1.25rem, null, 1.25rem);
+      &:first-child{
+        @include padding(null, 1.25rem, null, 0);  
+      }
+      &:last-child{
+        @include padding(null, 0, null, 1.25rem);
+      }
       &:only-child{
         width: 100%;
       }

@@ -738,11 +738,19 @@ button > *, a > * {
   padding: 0.5rem 0; }
 
 .form__input, .form__textarea, .form__select {
-  display: inline-block;
-  margin: 0.5rem 0;
-  padding: 0.25rem;
-  border-radius: 0.2rem;
-  width: 85%; }
+  display: block;
+  width: 85%;
+  outline: none;
+  border: 0.0625rem solid #e6e8ec;
+  border-radius: 0.25rem;
+  font-weight: 200;
+  padding-top: 0.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.375rem;
+  padding-left: 1.5rem; }
+  .form__input:focus, .form__input:active, .form__textarea:focus, .form__textarea:active, .form__select:focus, .form__select:active {
+    box-shadow: 0 0 0.3125rem #007DB3;
+    border: 0.0625rem solid #007DB3; }
   .form__input + span, .form__textarea + span, .form__select + span {
     padding: 0 1rem;
     display: none;
@@ -1045,19 +1053,23 @@ hr {
       -webkit-box-direction: normal;
               flex-direction: row; } }
   .flex__item {
-    padding-top: 0;
-    padding-right: 1.25rem;
-    padding-bottom: 0;
-    padding-left: 1.25rem; }
+    padding-top: 0.5rem;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    padding-left: 0; }
     @media (min-width: 56.25rem) {
       .flex__item {
-        padding-top: 1.25rem;
-        padding-right: 0;
-        padding-bottom: 1.25rem;
-        padding-left: 0;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
         /* two items */
         /* three items */
         /* four items */ }
+        .flex__item:first-child {
+          padding-right: 1.25rem;
+          padding-left: 0; }
+        .flex__item:last-child {
+          padding-right: 0;
+          padding-left: 1.25rem; }
         .flex__item:only-child {
           width: 100%; }
         .flex__item:first-child:nth-last-child(2),

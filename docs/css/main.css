@@ -4416,6 +4416,97 @@ a.cincyselect, a.clandselect {
       .alert--danger__icon span:before {
         content: '\f06a'; }
 
+.quick-links {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem; }
+  @media (min-width: 56.25rem) {
+    .quick-links.flex__item {
+      width: 70% !important; } }
+  @media (min-width: 85rem) {
+    .quick-links.flex__item {
+      width: 80% !important; } }
+  @media (min-width: 56.25rem) {
+    .quick-links + .flex__item {
+      width: 30% !important; } }
+  @media (min-width: 85rem) {
+    .quick-links + .flex__item {
+      width: 20% !important; } }
+  @media (min-width: 37.5rem) {
+    .quick-links {
+      -webkit-box-pack: justify;
+              justify-content: space-between; } }
+  .quick-links .fa {
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6; }
+  .quick-links__link {
+    display: block;
+    text-decoration: none;
+    color: #007DB3;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease; }
+  .quick-links__item {
+    display: none;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    flex-basis: calc( (100% / 4) - 0.5rem); }
+    @media (min-width: 37.5rem) {
+      .quick-links__item {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.7142857143;
+        text-transform: uppercase;
+        flex-basis: calc( (100% / 8) - 0.5rem); } }
+    .quick-links__item:hover, .quick-links__item:focus {
+      color: #1B4675; }
+      .quick-links__item:hover span, .quick-links__item:focus span {
+        background: #F0F2F3; }
+  .quick-links__active {
+    display: block; }
+  .quick-links__icon {
+    border: 0.0625rem solid #F0F2F3;
+    color: #0B223F;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem; }
+    @media (min-width: 56.25rem) {
+      .quick-links__icon {
+        padding: 2.5rem; } }
+  .quick-links__btn {
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    padding-top: 1rem;
+    padding-right: 3.125rem;
+    padding-bottom: 1rem;
+    padding-left: 3.125rem; }
+
 /*
 	Improved screen reader only CSS class
 	@author Gaël Poupard

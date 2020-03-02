@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <title>Custom Page | Xavier University</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .hero{
+        background-image: url('images/hero/HomePageHero.png');
+        background-color: #0c2340;
+        background-blend-mode: overlay;
+      }
+      
+      .header-bg{
+      	position: absolute; 
+      	top: 0;
+      	right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 390px 140px 0;
+      	border-color: transparent #0099cc transparent transparent;
+      	z-index: 10;
+      }
+      
+      .logo{
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	margin: 24px 42px;
+      	height: 48px;
+      	width: 50px;
+      	padding: 0;
+      	z-index: 11;
+      }
+      
+      section{
+      	position: relative;
+      }
+      
+      .white{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 64px 65vw;
+      	border-color: transparent transparent white transparent;
+      }
+      .white-2{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 155px 100vw;
+      	border-color: transparent transparent white transparent;
+      }
+      .navy{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 155px 100vw;
+      	border-color: transparent transparent #0c2340 transparent;
+      }
+      
+      .blue{
+      	position: absolute;
+      	bottom: 0;
+      	left: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 36px 0 0 45vw;
+      	border-color: transparent transparent transparent #007DB3;
+      }
+      
+      .hero__title--alt{
+        font-weight: 200;
+        display: block;
+        font-size: 24px;
+        text-shadow: none;
+        letter-spacing: 0.5rem;
+      }
+      .hero__title--heavy{
+        display: block;
+      }
+      .influencers{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 150px;
+        padding-bottom: 240px;
+      }
+      .influencer{
+        flex-basis: 50%;
+        padding: 0 3.5rem 0 0;
+      }
+      
+      .influencer:nth-of-type(2n){
+        margin-top: 62px;
+        padding: 0 0 0 3.5rem ;
+      }
+      .influencer__img{
+
+      }
+      .instagrams{
+        padding-bottom: 240px;
+      }
+      
+      .instagrams__title{
+        color: white;
+        margin: 0;
+        padding: 2rem 0;
+      }
+      
+      .instagrams__grid{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .instagrams__link{
+        color: white;
+        margin-top: 1rem;
+      }
+      .instagram{
+        flex-basis: calc( 33% - 1rem );
+        margin: 0.5rem 0.5rem;
+      }
+      .instagram img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    	<div class="header-bg"></div>
+    	<div class="logo">
+        <svg class="branding__logo branding__logo--x branding__logo--alt"><use xlink:href="#xu-logo-alt" /></svg>
+    	</div>
+    </header>
+    <main id="content">
+      <section class="hero" style="height: 755px;">
+        <div class="hero__cta">
+            <h1 class="hero__title hero--homepage__title">
+              <span class="hero__title--alt">Xavier Student</span>
+              <span class="hero__title--heavy">Influencers</span>
+            </h1>
+            <a class="c-btn c-btn--hero o-btn" href="/fakepages/undergrad">Lorem Ipsum</a>
+        </div>
+        <a id="bouncyarrow" class="arrow bounce" href="#bouncyarrow"><svg class="arrow--icon"><use xlink:href="#xu-hp-arrow"></use></svg></a>
+      	<div class="blue"></div>
+      	<div class="white"></div>
+      </section>    
+      <section class="wrapper">
+        <h2 class="fancy text--centered">Some Fancy <br /><span class="fancy--alt">Intro Header Here</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <div class="influencers">
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+        </div>
+        <div class="navy"></div>
+      </section>
+      <section class="instagrams wrapper" style="background: #0c2340;">
+        <h2 class="instagrams__title text--centered">#XUAllForOne</h2>
+        <div class="instagrams__grid">
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+            </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+        </div>
+        <p class="text--centered">
+          <a href="#" class="instagrams__link">@xustudentinfluencers</a></p>
+        <div class="white-2"></div>
+      </section>
+      <section class="wrapper">
+        <h2 class="text--centered">Another Fancy Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <p>[ insert form ]</p>
+        
+      </section>
+    </main>
+    
+    include "includes/footer.html"
+  </body>
+</html>

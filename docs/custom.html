@@ -1,171 +1,247 @@
-<!doctype html>
-<html class="no-js" lang="">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Xavier Home</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Page | Xavier University</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-      .site-header--fixed{
-        position: fixed;
-        top: 0;
+      .hero{
+        background-image: url('images/hero/HomePageHero.png');
+        background-color: #0c2340;
+        background-blend-mode: overlay;
+      }
+      
+      .header-bg{
+      	position: absolute; 
+      	top: 0;
+      	right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 390px 140px 0;
+      	border-color: transparent #0099cc transparent transparent;
+      	z-index: 10;
+      }
+      
+      .logo{
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	margin: 24px 42px;
+      	height: 48px;
+      	width: 50px;
+      	padding: 0;
+      	z-index: 11;
+      }
+      
+      section{
+      	position: relative;
+      }
+      
+      .white{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 64px 65vw;
+      	border-color: transparent transparent white transparent;
+      }
+      .white-2{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 155px 100vw;
+      	border-color: transparent transparent white transparent;
+      }
+      .navy{
+      	position: absolute;
+      	bottom: 0; right: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 0 0 155px 100vw;
+      	border-color: transparent transparent #0c2340 transparent;
+      }
+      
+      .blue{
+      	position: absolute;
+      	bottom: 0;
+      	left: 0;
+      	width: 0;
+      	height: 0;
+      	border-style: solid;
+      	border-width: 36px 0 0 45vw;
+      	border-color: transparent transparent transparent #007DB3;
+      }
+      
+      .hero__title--alt{
+        font-weight: 200;
+        display: block;
+        font-size: 24px;
+        text-shadow: none;
+        letter-spacing: 0.5rem;
+      }
+      .hero__title--heavy{
+        display: block;
+      }
+      .influencers{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 150px;
+        padding-bottom: 240px;
+      }
+      .influencer{
+        flex-basis: 50%;
+        padding: 0 3.5rem 0 0;
+      }
+      
+      .influencer:nth-of-type(2n){
+        margin-top: 62px;
+        padding: 0 0 0 3.5rem ;
+      }
+      .influencer__img{
+
+      }
+      .instagrams{
+        padding-bottom: 240px;
+      }
+      
+      .instagrams__title{
+        color: white;
+        margin: 0;
+        padding: 2rem 0;
+      }
+      
+      .instagrams__grid{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .instagrams__link{
+        color: white;
+        margin-top: 1rem;
+      }
+      .instagram{
+        flex-basis: calc( 33% - 1rem );
+        margin: 0.5rem 0.5rem;
+      }
+      .instagram img{
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <!-- Skip Header & Navigation -->
-    <nav aria-label="Skip Link">
-      <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
-    </nav>
     <header>
-      <div class="header header--fixed" id="header">  
-        <!-- Branding == Logo and Navigation -->
-        <div class="branding">
-          <a href="/" class="branding__link">
-            <span class="branding__text sr-only">Xavier University</span>
-            <svg class="branding__logo branding__logo--x"><use xlink:href="#xu-logo" /></svg><svg class="branding__logo branding__logo--wordmark"><use xlink:href="#xu-wordmark" /></svg>
-          </a>
-        </div>
-        <!-- Main Navigation == CTA Nav List, horizontal layout, hidden on small? -->
-        <nav class="navigation" aria-label="Quick Links">
-          <ul class="nav-list nav-header">
-            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Apply</a></li>
-            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Request Info</a></li>
-            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Visit Campus</a></li>
-            <li class="nav-list__item nav-header__item"><a class="nav-header__link" href="#">Give</a></li>
-          </ul>
-        </nav>
-        <!-- UI Elements == Search and Menu -->
-        <div class="header-ui">
-          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
-          <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
-        		<span>Open Navigation Menu</span>
-        	</button>
-        </div>
-        <div id="main-nav" class="drawer" aria-hidden="true" role="dialog">
-            <nav id="" aria-label="Main Navigation">
-              <ul class="nav-list nav-list--border-top">
-                <li class="nav-list__item nav-list__item--border-bottom">
-                  <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/admission/">Admission</a>
-                  <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#admission-sub">
-                    <svg class="icon nav-list__icon nav-list__icon--plus">
-                      <use xlink:href="#xu-plus" />
-                    </svg>
-                    <svg class="icon nav-list__icon nav-list__icon--minus">
-                      <use xlink:href="#xu-minus" />
-                    </svg>
-                  </button>
-                  <ul id="admission-sub" class="nav-list nav-list--child" >
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/undergraduate-admission/">Undergraduate</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/graduate-admission/">Graduate</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="http://online.xavier.edu/?utm_medium=organic&utm_source=campus&utm_campaign=onlineadmissions">Online</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/adult-and-professional/">Adult Students</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/international-admission/">International</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/transfer-admission/">Transfer</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/veterans/">Veterans</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom nav-list--child__item"><a class="nav-list__link" href="https://www.xavier.edu/undergraduate-admission/family">Family</a></li>
-                    <li class="sr-only"><a href="#" data-toggle="#admission-sub">Close Admission submenu</a></li>
-                  </ul>
-                </li>
-                <li class="nav-list__item nav-list__item--border-bottom">
-                  <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/academics/">Academics</a>
-                  <button class="o-btn nav-list__btn" aria-label="Toggle Sub Menu" data-toggle="#academic-sub">
-                    <svg class="icon nav-list__icon nav-list__icon--plus">
-                      <use xlink:href="#xu-plus" />
-                    </svg>
-                    <svg class="icon nav-list__icon nav-list__icon--minus">
-                      <use xlink:href="#xu-minus" />
-                    </svg>
-                  </button>
-                  <ul id="academic-sub" class="nav-list nav-list--child" >
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/academics/undergraduate">Undergraduate</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/graduate-admission/index">Graduate</a></li>
-                    <li class="sr-only"><a href="#" data-toggle="#academic-sub">Close Academic submenu</a></li>
-                  </ul>
-                </li>
-                <li class="nav-list__item nav-list__item--border-bottom">
-                  <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/life-at-xavier/">Life at Xavier</a>
-                  <button class="o-btn nav-list__btn" aria-label="Toggle Campus Life Sub Menu" data-toggle="#life-sub">
-                    <svg class="icon nav-list__icon nav-list__icon--plus">
-                      <use xlink:href="#xu-plus" />
-                    </svg>
-                    <svg class="icon nav-list__icon nav-list__icon--minus">
-                      <use xlink:href="#xu-minus" />
-                    </svg>
-                  </button>
-                  <ul id="life-sub" class="nav-list nav-list--child" >
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/residence-halls">Residence Halls</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/residence-halls">Dining</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/clubs">Clubs</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/faith-service">Faith &amp; Service</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/diversity/index">Diversity</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/health-wellness">Health &amp; Wellness</a></li>
-                    <li class="nav-list__item nav-list__item--border-bottom"><a class="nav-list__link" href="https://www.xavier.edu/life-at-xavier/sports">Sports</a></li>
-                    <li class="sr-only"><a href="#" data-toggle="#life-sub">Close Life at Xavier submenu</a></li>
-                  </ul>
-                </li>
-                <li class="nav-list__item nav-list__item--border-bottom">
-                  <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/athletics/">Athletics</a>
-                </li>
-                <li class="nav-list__item nav-list__item--border-bottom">
-                  <a class="nav-list__link nav-list__link--upper" href="https://www.xavier.edu/about/">About Xavier</a>
-                </li>
-              </ul>
-            </nav>
-            
-            <nav aria-label="CTA Items">
-              <ul class="nav-list nav-list--cta">
-                <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/apply">Apply</a></li>
-                <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/admission/request-info">Request Info</a></li>
-                <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/undergraduate-admission/visit/">Visit Campus</a></li>
-                <li class="nav-list__item"><a class="nav-list__link c-btn" href="https://www.xavier.edu/giving/">Give</a></li>
-              </ul>
-            </nav>
-            
-            <nav aria-label="Secondary links">
-              <ul class="nav-list nav-list--secondary">
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/about/map">Maps &amp; Directions</a></li>
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/working-at-xavier/">Employment Opportunities</a></li>
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/students/">Current Students</a></li>
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/alumni/">Alumni</a></li>
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/employees/">Employees</a></li>
-                <li class="nav-list__item nav-list--secondary__item"><a class="nav-list__link nav-list--secondary__link" href="https://www.xavier.edu/family-hub/">Parents</a></li>
-              </ul>
-            </nav>
-            <button class="o-btn drawer__btn drawer-close" aria-label="Close Main Navigation" data-controls="#main-nav">
-              <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-            </button>
-          </div>
-        <div id="search" class="drawer drawer--search" aria-hidden="true" aria-describedby="search_intro">
-          <div class="search__header">
-            <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search" aria-controls="search-results">
-              <input type="hidden" name="collection" value="xavu-meta" />
-              <label class="sr-only" for="query">Search Xavier University:</label>
-              <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
-              <svg class="icon site-search__icon"><use xlink:href="#xu-search" /></svg>
-              <button class="o-btn site-search__btn sr-only" type="submit" aria-label="Submit Search">Search</button>
-            </form>
-            <button class="o-btn drawer__btn drawer__btn--inverted drawer-close search__close" aria-label="Close Search" data-controls="#search">
-              <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
-            </button>
-          </div>
-          <div class="search">
-            <p class="search__intro" id="search_intro">Find anything about Xavier University, our faculty, staff and more. Enter a query in the search input above, and results will be displayed as you type.</p>
-            <div class="search__sidebar">
-              <h2 class="search__heading">Filter Results</h2>
-              <ul class="search__facets" id="search-tabs">
-              </ul>
-            </div>
-            <div class="search__results" id="search-results" aria-live="polite">
-            </div>
-          </div>
-        </div>
-      </div>
+    	<div class="header-bg"></div>
+    	<div class="logo">
+        <svg class="branding__logo branding__logo--x branding__logo--alt"><use xlink:href="#xu-logo-alt" /></svg>
+    	</div>
     </header>
-    <!-- Add your site or application content here -->
-    <!-- End site or application content -->
+    <main id="content">
+      <section class="hero" style="height: 755px;">
+        <div class="hero__cta">
+            <h1 class="hero__title hero--homepage__title">
+              <span class="hero__title--alt">Xavier Student</span>
+              <span class="hero__title--heavy">Influencers</span>
+            </h1>
+            <a class="c-btn c-btn--hero o-btn" href="/fakepages/undergrad">Lorem Ipsum</a>
+        </div>
+        <a id="bouncyarrow" class="arrow bounce" href="#bouncyarrow"><svg class="arrow--icon"><use xlink:href="#xu-hp-arrow"></use></svg></a>
+      	<div class="blue"></div>
+      	<div class="white"></div>
+      </section>    
+      <section class="wrapper">
+        <h2 class="fancy text--centered">Some Fancy <br /><span class="fancy--alt">Intro Header Here</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <div class="influencers">
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+          <div class="influencer">
+            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
+            <h3 class="influencer__title">Influencer</h3>
+            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
+            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a class="c-btn btn--inline" href="#">Lorem Ipsum</a></p>
+          </div>
+        </div>
+        <div class="navy"></div>
+      </section>
+      <section class="instagrams wrapper" style="background: #0c2340;">
+        <h2 class="instagrams__title text--centered">#XUAllForOne</h2>
+        <div class="instagrams__grid">
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+            </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+          <div class="instagram">
+            <img src="https://placehold.it/364" />
+          </div>
+        </div>
+        <p class="text--centered">
+          <a href="#" class="instagrams__link">@xustudentinfluencers</a></p>
+        <div class="white-2"></div>
+      </section>
+      <section class="wrapper">
+        <h2 class="text--centered">Another Fancy Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <p>[ insert form ]</p>
+        
+      </section>
+    </main>
+    
     <footer class="footer">
       <div class="wrapper">
         <nav aria-label="">

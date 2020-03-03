@@ -1070,12 +1070,6 @@ hr {
         /* two items */
         /* three items */
         /* four items */ }
-        .flex__item:first-child {
-          padding-right: 1.25rem;
-          padding-left: 0; }
-        .flex__item:last-child {
-          padding-right: 0;
-          padding-left: 1.25rem; }
         .flex__item:only-child {
           width: 100%; }
         .flex__item:first-child:nth-last-child(2),

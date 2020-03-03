@@ -940,7 +940,7 @@ textarea {
   color: #007DB3;
   font-weight: 300;
   text-decoration: underline;
-  display: inline-block; }
+  display: inline; }
   .content a[class=""]:hover, .content a[class=""]:focus, .content a[class=""]:active, .content a:not([class]):hover, .content a:not([class]):focus, .content a:not([class]):active, #content a[class=""]:hover, #content a[class=""]:focus, #content a[class=""]:active, #content a:not([class]):hover, #content a:not([class]):focus, #content a:not([class]):active {
     color: #004867; }
 

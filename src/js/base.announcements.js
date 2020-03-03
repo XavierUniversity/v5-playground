@@ -16,7 +16,7 @@ if ( $("#announcements").length ){
         announcement = 
         '<button class="o-btn tabs__title accordion__btn" data-toggle="#'+item.id+'" role="tab">'
         +item.title+' - ' + ellapsed + '<svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>';
-        announcement += "<div class='accordion__content visible' id='"+item.id+"' role='tabpanel'>";
+        announcement += "<div class='accordion__content' id='"+item.id+"' role='tabpanel'>";
         announcement += "<p>Posted: "+item.created+"</p>";
         announcement += item.content;
         announcement += (item.link !== "" ? '<p><a href="' + item.link + '" title="Additional information for ' + item.title + '">Additional information</a></p>' : '' );

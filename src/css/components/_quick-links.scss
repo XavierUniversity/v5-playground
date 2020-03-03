@@ -2,31 +2,8 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	margin-top: 2rem;
-	
-	&.flex__item{
-    @include for-size("tablet-landscape-up"){
-      width: 70% !important;
-    }
-    @include for-size("desktop-up"){
-      width: 80% !important;
-    }
-  }
-	
-	+.flex__item{
-  	@include for-size("tablet-landscape-up"){
-      width: 30% !important;
-    }
-    @include for-size("desktop-up"){
-      width: 20% !important;
-    }
-
-	}
-	
-	@include for-size("tablet-portrait-up"){
-  	justify-content: space-between;
-	}
 	
 	.fa {
   	display: block;
@@ -47,10 +24,10 @@
   &__item{
     display: none;
     @include font-size(13px, 1.25);
-    @include margin (null, px-to-rem(8px), px-to-rem(16px), null);
+    @include margin (null, px-to-rem(4px), px-to-rem(16px), px-to-rem(4px));
   	text-align: center;
   	flex-basis: calc( (100% / 4) - #{px-to-rem(8px)});
-  	
+  	flex-grow: 0;
   	@include for-size("tablet-portrait-up"){
       @include font-size(14px);
       text-transform: uppercase;
@@ -76,10 +53,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  	@include margin ( null, null, px-to-rem(24px), null);
-    @include padding ( px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px) );
+    @include padding ( px-to-rem(32px), null, px-to-rem(32px), null );
   	@include for-size("tablet-landscape-up"){
-    	padding: 2.5rem;
+    	@include padding ( px-to-rem(32px), null, px-to-rem(32px), null );
   	}
   }
   &__btn{

@@ -10,7 +10,7 @@
   * Improvements:
   *  - Hide entities that were open when a new item is clicked
 **/
-$("[data-toggle]").on('click', function(e){
+$(document).on("click", "[data-toggle]", function(e){
   e.preventDefault();
   var list = $(this).data("toggle");
   $(list).toggleClass("visible");

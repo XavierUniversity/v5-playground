@@ -1,6 +1,12 @@
 .flex{
   display: flex;
   flex-direction: column;
+  @include margin( null, -0.5rem, null, -0.5rem);
+  @include for-size("tablet-landscape-up"){
+    @include margin( null, -1.25rem, null, -1.25rem);  
+  }
+  
+  
   &--around{
     justify-content: space-around;
   }

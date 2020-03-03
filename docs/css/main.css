@@ -1038,7 +1038,13 @@ hr {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column; }
+          flex-direction: column;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem; }
+  @media (min-width: 56.25rem) {
+    .flex {
+      margin-right: -1.25rem;
+      margin-left: -1.25rem; } }
   .flex--around {
     justify-content: space-around; }
   .flex--between {

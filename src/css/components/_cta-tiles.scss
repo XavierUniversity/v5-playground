@@ -62,8 +62,24 @@
       
       #{$self}__text{
         opacity: 1;
-      }      
+      }
     }
   }    
+  
+  &--insta{
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    #{$self}__link{
+      &:hover, &:focus{
+        background-color: rgba($lightBlueHover, 0.80);
+      }
+      
+      #{$self}__content{
+        bottom: 25%;
+      }  
+    }
+  }
+  
 }
 

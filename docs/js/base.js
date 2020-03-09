@@ -75,6 +75,19 @@ if ( instas.length > 0 ){
     });
   }
 }
+
+var custInstas = $("[data-insta]");
+var parent;
+if ( custInstas.length > 0 ){ 
+  $.each(custInstas, function(i, k){
+    console.log(k);
+
+    $.get('https://api.instagram.com/oembed?url='+$(k).data("insta")+'&hidecaption=true&omitscript=true', function(d){
+      $(k).css({ 'background-image' : 'url(' + $(k).data('insta') +  'media?size=l)'});
+      $(k).html('<a class="ctaTile__link" href="'+$(k).data('insta')+'" target="_blank" rel="nofollow noreferrer"><div class="ctaTile__content"><p class="ctaTile__text">'+d.title+'</p></div></a>');
+    });
+  });
+}
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 

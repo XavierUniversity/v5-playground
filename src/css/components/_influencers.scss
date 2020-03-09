@@ -1,0 +1,97 @@
+section{
+	position: relative;
+}
+
+.white{
+	position: absolute;
+	bottom: 0; right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 64px 65vw;
+	border-color: transparent transparent white transparent;
+}
+.white-2{
+	position: absolute;
+	bottom: 0; right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 155px 100vw;
+	border-color: transparent transparent white transparent;
+}
+.navy{
+	position: absolute;
+	bottom: 0; right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 155px 100vw;
+	border-color: transparent transparent #0c2340 transparent;
+}
+
+.blue{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 36px 0 0 45vw;
+	border-color: transparent transparent transparent #007DB3;
+}
+
+.influencers{
+  @include for-size("tablet-landscape-up"){
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 150px;
+    padding-bottom: 240px; 
+  }
+  
+  .influencer{
+    flex-basis: calc( 50% - 3.5rem );
+    @include margin ( 0, px-to-rem(64px), px-to-rem(64px), 0)
+    
+    &:nth-of-type(2n){
+      @include for-size("tablet-landscape-up"){
+        @include margin( px-to-rem(64px), 0, null, null);
+      }
+    }
+    
+    &__img{
+      width: 100%;
+      max-width: 100%;
+    }
+    &__link{
+      
+    }
+  }
+}
+
+
+.instagrams{
+  padding-bottom: 240px;
+}
+
+.instagrams__title{
+  color: white;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.instagrams__grid{
+  display: flex;
+  flex-flow: row wrap;
+}
+.instagrams__link{
+  color: white;
+  margin-top: 1rem;
+}
+.instagram{
+  flex-basis: calc( 33% - 1rem );
+  margin: 0.5rem 0.5rem;
+}
+.instagram img{
+  width: 100%;
+}

@@ -9,10 +9,10 @@
   	display: block;
   	text-align: center;
   	@include margin(0, auto, 0, auto);
-  	@include for-size("tablet-ladnscape-up"){
-      @include font-size(45px);	
+  	@include font-size(30px);
+  	@include for-size("tablet-landscape-up"){
+      @include font-size(40px);	
   	}
-    @include font-size(30px)
 	}
 	
   &__link{
@@ -48,7 +48,7 @@
   	display: block;
 	}
   &__icon{
-    border: px-to-rem(1px) solid $grey; 
+    border: px-to-rem(1px) solid darken($grey, 15%); 
     color: $darkNavy;
     display: flex;
     flex-direction: column;

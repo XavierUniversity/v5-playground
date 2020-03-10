@@ -49,6 +49,13 @@
       }
     }
   }
+  
+  &--hero-alt{
+    @extend .btn--hero;
+    border-radius: px-to-rem(10px);
+    border-width: px-to-rem(2px);
+    @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
+  }
 
   &--featured-links {
     @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));

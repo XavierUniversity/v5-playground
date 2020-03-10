@@ -2060,7 +2060,7 @@ hr {
     padding-left: 0.5rem; }
   .c-btn--dark-navy, .btn--dark-navy {
     border-color: #030b14; }
-  .c-btn--hero, .btn--hero {
+  .c-btn--hero, .btn--hero, .c-btn--hero-alt, .btn--hero-alt {
     background-color: rgba(0, 0, 0, 0.55);
     border: 1px solid white;
     border-radius: 1.5625rem;
@@ -2071,7 +2071,7 @@ hr {
     padding-left: 4.375rem;
     display: inline-block;
     margin-top: 1rem; }
-    .c-btn--hero:hover, .c-btn--hero:focus, .c-btn--hero:active, .btn--hero:hover, .btn--hero:focus, .btn--hero:active {
+    .c-btn--hero:hover, .c-btn--hero:focus, .c-btn--hero:active, .btn--hero:hover, .c-btn--hero-alt:hover, .btn--hero-alt:hover, .btn--hero:focus, .c-btn--hero-alt:focus, .btn--hero-alt:focus, .btn--hero:active, .c-btn--hero-alt:active, .btn--hero-alt:active {
       background: white;
       color: black;
       border-color: white;
@@ -2080,15 +2080,20 @@ hr {
       padding-bottom: 0.9375rem;
       padding-left: 4.375rem; }
     @media (max-width: 36.5rem) {
-      .c-btn--hero, .btn--hero {
+      .c-btn--hero, .btn--hero, .c-btn--hero-alt, .btn--hero-alt {
         padding-top: 0.9375rem;
         padding-right: 2rem;
         padding-bottom: 0.9375rem;
         padding-left: 2rem;
         border-radius: 1.4375rem; }
-        .c-btn--hero:hover, .c-btn--hero:focus, .btn--hero:hover, .btn--hero:focus {
+        .c-btn--hero:hover, .c-btn--hero:focus, .btn--hero:hover, .c-btn--hero-alt:hover, .btn--hero-alt:hover, .btn--hero:focus, .c-btn--hero-alt:focus, .btn--hero-alt:focus {
           padding-right: 2rem;
           padding-left: 2rem; } }
+  .c-btn--hero-alt, .btn--hero-alt {
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem; }
   .c-btn--featured-links, .btn--featured-links {
     padding-top: 1.5625rem;
     padding-right: 1rem;
@@ -2367,6 +2372,8 @@ hr {
   .hero__cta {
     text-align: center;
     margin-top: -10vh; }
+    .hero__cta--65 {
+      max-width: 65%; }
   .hero__title {
     color: white;
     text-shadow: 0.125rem 0.125rem 0.25rem black;
@@ -2377,6 +2384,14 @@ hr {
     @media (min-width: 56.25rem) {
       .hero__title {
         margin-top: 0px; } }
+  .hero__content {
+    color: white;
+    font-weight: 100;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.0909090909; }
 
 .hero-nav {
   background-color: rgba(255, 255, 255, 0.85);
@@ -4582,6 +4597,11 @@ section {
   .influencers .influencer__img {
     width: 100%;
     max-width: 100%; }
+  .influencers .influencer__profile {
+    color: #0099CC;
+    font-style: italic; }
+    .influencers .influencer__profile:hover, .influencers .influencer__profile:focus {
+      color: #0077AA; }
 
 .instagrams {
   padding-bottom: 240px; }

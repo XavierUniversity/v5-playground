@@ -132,6 +132,10 @@
   &__cta{
     text-align: center;
     @include margin(-10vh, null, null, null);
+    
+    &--65{
+      max-width: 65%;
+    }
   }
   
   &__title{ 
@@ -145,6 +149,13 @@
     @include for-size("tablet-landscape-up"){
       margin-top: 0px;
     }
+  }
+  
+  &__content{
+    color: white;
+    font-weight: 100;
+    @include margin ( px-to-rem(16px), null, px-to-rem(24px), null);
+    @include font-size(22px);
   }
 }
 

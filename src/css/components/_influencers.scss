@@ -63,8 +63,12 @@ section{
       width: 100%;
       max-width: 100%;
     }
-    &__link{
-      
+    &__profile{
+      color: $lightBlue;
+      font-style: italic;
+      &:hover, &:focus{
+        color: $lightBlueHover;
+      }
     }
   }
 }

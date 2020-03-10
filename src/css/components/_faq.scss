@@ -1,6 +1,7 @@
 .faq{
   &__q{
-    @include font-size(18px);    
+    @include font-size(18px);
+    @include margin(2rem, null, null, null);
   }
   
   &__hr{

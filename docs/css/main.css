@@ -4634,7 +4634,8 @@ section {
 .faq__q {
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.3333333333; }
+  line-height: 1.3333333333;
+  margin-top: 2rem; }
 
 .faq__hr {
   margin-top: 2rem;

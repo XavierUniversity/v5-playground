@@ -3,10 +3,19 @@
   
   &--content-page{
     background: $grey;
-    @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px),)
+    @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
+    
+    
+    #{$self}__btn{
+      text-transform: uppercase;
+    }
+    
   }
   &__btn{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
     width: 100%;
     border-top: solid px-to-rem(2px) $darkGrey;
     text-align: left;
@@ -14,10 +23,18 @@
     @include padding(px-to-rem(20px), null, px-to-rem(20px), null);
     @include margin(0, null, null, null);
     transition: none;
-    &:focus{
+    text-transform: none;
+    flex-grow: 0;
+    &:hover, &:focus{
       background: inherit;
       color: inherit;
+      
+      #{$self}__icon{
+        color: white;
+        background: $darkNavy;
+      }
     }
+    
     &.on{
       
       #{$self}__icon--plus{
@@ -39,13 +56,16 @@
     }
   }
   &__icon{
+    flex-grow: 0;
+    flex-shrink: 0;
     float: right;
     height: px-to-rem(28px);
     width: px-to-rem(28px);
+    flex-basis: px-to-rem(28px);
     color: $darkNavy;
     border: solid px-to-rem(1.25px) $darkNavy;
     border-radius: px-to-rem(8px);
-    @include margin(- px-to-rem(2px), px-to-rem(12px), null, null);
+    @include margin(- px-to-rem(2px), px-to-rem(12px), null, px-to-rem(12px));
     @include for-size("tablet-landscape-up"){
       @include margin(- px-to-rem(2px), px-to-rem(24px), null, null);
     }

@@ -2628,8 +2628,7 @@ hr {
     grid-area: 1 / 1 / 3 / 2;
     width: 100%;
     margin-top: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem; }
+    padding-right: 0.75rem; }
     @media (min-width: 56.25rem) {
       .content-page--nav {
         padding: 0;
@@ -2741,8 +2740,8 @@ hr {
     .sidenav__btn:first-child {
       border-top: none; }
   .sidenav__icon {
-    height: 2.25rem;
-    width: 2.25rem;
+    height: 1.75rem;
+    width: 1.75rem;
     color: #0B223F;
     border: solid 0.078125rem #0B223F;
     border-radius: 0.5rem; }
@@ -3139,9 +3138,17 @@ a.cincyselect, a.clandselect {
   padding-right: 2rem;
   padding-bottom: 2rem;
   padding-left: 2rem; }
+  .accordion--content-page .accordion__btn {
+    text-transform: uppercase; }
 
 .accordion__btn {
-  display: block;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  align-content: center;
+  -webkit-box-align: center;
+          align-items: center;
   width: 100%;
   border-top: solid 0.125rem #d8d8d8;
   text-align: left;
@@ -3152,10 +3159,16 @@ a.cincyselect, a.clandselect {
   padding-bottom: 1.25rem;
   margin-top: 0;
   -webkit-transition: none;
-  transition: none; }
-  .accordion__btn:focus {
+  transition: none;
+  text-transform: none;
+  -webkit-box-flex: 0;
+          flex-grow: 0; }
+  .accordion__btn:hover, .accordion__btn:focus {
     background: inherit;
     color: inherit; }
+    .accordion__btn:hover .accordion__icon, .accordion__btn:focus .accordion__icon {
+      color: white;
+      background: #0B223F; }
   .accordion__btn.on .accordion__icon--plus {
     display: none; }
   .accordion__btn.on .accordion__icon--minus {
@@ -3166,14 +3179,19 @@ a.cincyselect, a.clandselect {
     border-bottom: none; }
 
 .accordion__icon {
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
   float: right;
   height: 1.75rem;
   width: 1.75rem;
+  flex-basis: 1.75rem;
   color: #0B223F;
   border: solid 0.078125rem #0B223F;
   border-radius: 0.5rem;
   margin-top: -0.125rem;
-  margin-right: 0.75rem; }
+  margin-right: 0.75rem;
+  margin-left: 0.75rem; }
   @media (min-width: 56.25rem) {
     .accordion__icon {
       margin-top: -0.125rem;

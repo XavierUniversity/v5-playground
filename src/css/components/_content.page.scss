@@ -34,7 +34,7 @@
     grid-area: 1 / 1 / 3 / 2;
     width: 100%;
     @include margin(px-to-rem(16px), null, null, null);
-    @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
+    @include padding(null, px-to-rem(12px), null, null);
     
     @include for-size("tablet-landscape-up"){
       padding: 0;
@@ -170,8 +170,8 @@
   }
 
   &__icon {
-      height: px-to-rem(36px);
-      width: px-to-rem(36px);
+      height: px-to-rem(28px);
+      width: px-to-rem(28px);
       color: $darkNavy;
       border: solid px-to-rem(1.25px) $darkNavy;
       border-radius: px-to-rem(8px);

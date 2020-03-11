@@ -23,13 +23,14 @@
   background: #fdfdfd;
   border-right: solid 0.5rem;
   color: $font-color;
-  position: fixed;
-  margin-bottom: 0;
-  z-index: 10;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
   &--campus-alert{
     margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
   }
   
   &__title{

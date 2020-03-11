@@ -23,22 +23,24 @@
   background: #fdfdfd;
   border-right: solid 0.5rem;
   color: $font-color;
-  position: relative;
-  margin-bottom: 1.5rem;
-  margin-top: 58px;
+  position: fixed;
+  margin-bottom: 0;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
   &--campus-alert{
     margin-bottom: 0;
   }
   
   &__title{
     color: $font-color;
-    font-size: 1.8rem;
+    @include font-size(24px);
     margin: 0;
     padding: 0;
   }
   
   &__content{
-    padding: 1rem 1rem 1rem 6rem;
+    padding: 0.75rem 1rem 0.75rem 6rem;
     border-bottom: solid 0.1rem lighten($grey, 25%);
     border-top: solid 0.1rem lighten($grey, 25%);
     

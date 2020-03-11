@@ -4404,18 +4404,22 @@ a.cincyselect, a.clandselect {
   background: #fdfdfd;
   border-right: solid 0.5rem;
   color: #333333;
-  position: relative;
-  margin-bottom: 1.5rem;
-  margin-top: 58px; }
+  position: fixed;
+  margin-bottom: 0;
+  z-index: 10;
+  bottom: 0;
+  width: 100%; }
   .alert--campus-alert {
     margin-bottom: 0; }
   .alert__title {
     color: #333333;
-    font-size: 1.8rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
     margin: 0;
     padding: 0; }
   .alert__content {
-    padding: 1rem 1rem 1rem 6rem;
+    padding: 0.75rem 1rem 0.75rem 6rem;
     border-bottom: solid 0.1rem white;
     border-top: solid 0.1rem white; }
     .alert__content p {

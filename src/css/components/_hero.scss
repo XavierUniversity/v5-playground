@@ -134,6 +134,7 @@
     @include margin(-10vh, null, null, null);
     
     &--65{
+      @include margin(0, null, null, null);
       @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
       @include for-size("tablet-landscape-up"){
         max-width: 65%;  

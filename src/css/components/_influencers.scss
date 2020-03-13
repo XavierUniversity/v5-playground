@@ -79,13 +79,19 @@ section{
     flex-flow: row wrap;
     justify-content: space-between;
     @include margin(px-to-rem(150px), null, null, null);
-    @include padding( null, null, px-to-rem(120px), null); 
   }
   &__header{
     position: absolute;
     overflow: hidden;
     height: px-to-rem(128px);
     width: 100%;
+  }
+  
+  &__hero{
+    @include margin( null, null, px-to-rem(32px), null);
+    @include for-size("phone-only"){
+      @include margin( null, null, px-to-rem(32px), null);  
+    }
   }
   
   .influencer{
@@ -138,8 +144,10 @@ section{
 
 
 .instagrams{
-  padding-bottom: 240px;
-
+  @include padding( px-to-rem(32px), null, px-to-rem(32px), null );
+  @include for-size("tablet-portrait-up"){
+    @include padding( px-to-rem(240px), null, px-to-rem(240px), null );
+  }
   &__title{
     color: white;
     margin: 0;
@@ -149,19 +157,47 @@ section{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    @include padding( null, px-to-rem(24px), null, px-to-rem(24px));
     @include for-size("tablet-portrait-up"){
-      flex-flow: row wrap;  
+      flex-flow: row wrap;
+      @include padding( null, 0, null, 0);
     }
   }
   &__link{
     color: white;
     margin-top: 1rem;
   }
+  @include for-size("tablet-portrait-up"){
+    &::before{
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-top: 200px solid #fff;
+      border-right: 100vw solid transparent;
+    }
+    &::after{
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 200px solid #fff;
+      border-left: 100vw solid transparent;
+    }    
+  }
 }
 
 .instagram{
   position: relative;
-  @include margin( px-to-rem(8px), null, px-to-rem(8px), null);
+  @include margin( px-to-rem(12px), null, px-to-rem(12px), null);
   @include for-size("tablet-portrait-up"){
     flex-basis: calc( 50% - #{px-to-rem(16px)} );
   }
@@ -249,6 +285,9 @@ section{
       margin: 0 auto; 
     } 
   }
+  &__form{
+    @include padding(0, null, px-to-rem(64px), null);
+  }
 }
 
 .triangles{
@@ -287,7 +326,7 @@ section{
     -ms-transform: rotate(8deg) translateY(210px);
     transform: rotate(8deg) translateY(210px);
     z-index: 0;
-    top: -67%;
+    top: -14%;
     background: $lightBlue;
     width: 150%;
     height: 50vh;

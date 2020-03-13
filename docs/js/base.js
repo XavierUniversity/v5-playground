@@ -80,11 +80,9 @@ var custInstas = $("[data-insta]");
 var parent;
 if ( custInstas.length > 0 ){ 
   $.each(custInstas, function(i, k){
-    console.log(k);
-
     $.get('https://api.instagram.com/oembed?url='+$(k).data("insta")+'&hidecaption=true&omitscript=true', function(d){
-      $(k).css({ 'background-image' : 'url(' + $(k).data('insta') +  'media?size=l)'});
-      $(k).html('<a class="ctaTile__link" href="'+$(k).data('insta')+'" target="_blank" rel="nofollow noreferrer"><div class="ctaTile__content"><p class="ctaTile__text">'+d.title+'</p></div></a>');
+      var html = '<div class="content"><div class="text">'+d.title+'</div></div>';
+      $(k).find(".instagram__link").append(html);
     });
   });
 }

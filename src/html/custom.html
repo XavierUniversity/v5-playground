@@ -7,29 +7,7 @@
         background-image: url('images/hero/HomePageHero.png');
         background-color: #0c2340;
         background-blend-mode: overlay;
-      }
-      
-      .header-bg{
-      	position: absolute; 
-      	top: 0;
-      	right: 0;
-      	width: 0;
-      	height: 0;
-      	border-style: solid;
-      	border-width: 0 390px 140px 0;
-      	border-color: transparent #0099cc transparent transparent;
-      	z-index: 10;
-      }
-      
-      .logo{
-      	position: absolute;
-      	top: 0;
-      	right: 0;
-      	margin: 24px 42px;
-      	height: 48px;
-      	width: 50px;
-      	padding: 0;
-      	z-index: 11;
+        height: 100vh;
       }
       
       .hero__title--alt{
@@ -45,105 +23,88 @@
     </style>
   </head>
   <body>
-    <header>
-    	<div class="header-bg"></div>
-    	<div class="logo">
+    <header class="influencers__header">
+    	<div class="logo--influencers">
         <svg class="branding__logo branding__logo--x branding__logo--alt"><use xlink:href="#xu-logo-alt" /></svg>
     	</div>
     </header>
     <main id="content">
-      <section class="hero" style="height: 755px;">
+      <section class="hero">
         <div class="hero__cta hero__cta--65">
             <h1 class="hero__title hero--homepage__title">
-              <span class="hero__title--alt">Xavier Student</span>
-              <span class="hero__title--heavy">Influencers</span>
+              <span class="hero__title--alt">Experience</span>
+              <span class="hero__title--heavy">Musketeer Life</span>
             </h1>
-            <p class="hero__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Lorem Ipsum</a> <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Lorem Ipsum</a> <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Lorem Ipsum</a>
+            <p class="hero__content">
+              Take a virtual tour, explore life at Xavier, or visit campus and see what Musketeer Life is all about.
+            </p>
+            <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Virtual Tour</a> <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Life at Xavier</a> <a class="c-btn c-btn--hero-alt o-btn" href="/fakepages/undergrad">Visit Campus</a>
         </div>
-      	<div class="blue"></div>
-      	<div class="white"></div>
+        <div class="triangles" aria-hidden="true">
+          <div class="triangles__white"></div>
+          <div class="triangles__lblue"></div>
+        </div>
       </section>    
+      <section class="wrapper influencers__bg">
+        <h2 class="fancy text--centered">Meet Xavier's <span class="fancy--alt">Student Influencers</span></h2>
+        <p class="fancy__content">Every Musketeer has the chance to create their own unique experience. Xavier offers the opportunity for students to embrace exactly who they are and discover who they will become. Get to know some of Xavier's students by joining the Instagram community.</p>
+        <p class="text--centered"><a href="#" class="c-btn o-btn btn--inline">Follow #XUALLFORONE</a></p>
+      </section>
       <section class="wrapper wrapper--narrow">
-        <h2 class="fancy text--centered">Some Fancy <br /><span class="fancy--alt">Intro Header Here</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        
         <div class="influencers">
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
-          <div class="influencer">
-            <img src="https://placehold.it/500x400" alt="" class="influencer__img" />
-            <h3 class="influencer__title">Influencer</h3>
-            <p><a href="#" class="influencer__profile">@XUInfluencer</a></p>
-            <p class="influencer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          </div>
+          include "includes/influencers.html"
+          include "includes/influencers.html"
+          include "includes/influencers.html"
+          include "includes/influencers.html"
+          include "includes/influencers.html"
         </div>
-        <div class="navy"></div>
+        <div class="triangles triangles--clear" aria-hidden="true">
+          <div class="triangles__navy"></div>
+        </div>
       </section>
       <section class="instagrams wrapper wrapper--narrow" style="background: #0c2340;">
         <h2 class="instagrams__title text--centered">#XUAllForOne</h2>
         <div class="instagrams__grid">
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B5tM_QwhUF2/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B5tM_QwhUF2/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
-          <div class="instagram ctaTile ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+          <div class="instagram ctaTile--insta" data-insta="https://www.instagram.com/p/B9XjB1SB4LO/">
+            <a href="" class="instagram__link">
+              <img src="https://www.instagram.com/p/B9XjB1SB4LO/media?size=l" alt="" />
+            </a>
           </div>
         </div>
         <p class="text--centered">
           <a href="#" class="instagrams__link">@xustudentinfluencers</a></p>
-        <div class="white-2"></div>
+        <div class="triangles" aria-hidden="true">
+          <div class="triangles__white"></div>
+        </div>
       </section>
-      <section class="wrapper wrapper--narrow">
-        <h2 class="text--centered">Another Fancy Header</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <section class="wrapper">
+        <h2 class="text--centered fancy">X-Guide: <span class="fancy--alt">Top College Majors</span></h2>
+        <p class="fancy__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         
         <p>[ insert form ]</p>
         

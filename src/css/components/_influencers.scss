@@ -2,6 +2,38 @@ section{
 	position: relative;
 }
 
+.logo--influencers{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	z-index: 11;
+	@include margin(px-to-rem(16px), px-to-rem(10px), px-to-rem(16px), px-to-rem(10px));
+	@include for-size("tablet-landscape-up"){
+  	@include margin(px-to-rem(24px), px-to-rem(42px), px-to-rem(24px), px-to-rem(42px));
+	}
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: px-to-rem(600px);
+    height: px-to-rem(600px);
+    -ms-transform: rotate(17deg) translateY(-102%);
+    transform: rotate(17deg) translateY(-102%);
+    background-color: $lightBlue;
+    z-index: -1;
+    
+    @include for-size("tablet-landscape-up"){
+      width: px-to-rem(800px);
+      height: px-to-rem(800px);
+    }
+    
+  }	
+}
+
 .white{
 	position: absolute;
 	bottom: 0; right: 0;
@@ -45,13 +77,23 @@ section{
   @include for-size("tablet-landscape-up"){
     display: flex;
     flex-flow: row wrap;
-    margin-top: 150px;
-    padding-bottom: 240px; 
+    justify-content: space-between;
+    @include margin(px-to-rem(150px), null, null, null);
+    @include padding( null, null, px-to-rem(120px), null); 
+  }
+  &__header{
+    position: absolute;
+    overflow: hidden;
+    height: px-to-rem(128px);
+    width: 100%;
   }
   
   .influencer{
-    flex-basis: calc( 50% - 3.5rem );
-    @include margin ( 0, px-to-rem(64px), px-to-rem(64px), 0)
+    @include margin(px-to-rem(54px), null, null, null);
+    @include for-size("tablet-landscape-up"){
+      flex-basis: calc( 50% - 3.5rem );
+      @include margin ( 0, px-to-rem(64px), px-to-rem(64px), 0)  
+    }
     
     &:nth-of-type(2n){
       @include for-size("tablet-landscape-up"){
@@ -59,10 +101,22 @@ section{
       }
     }
     
+    &:last-of-type{
+      @include padding(null, null, px-to-rem(64px), null);
+    }
+    
     &__img{
       width: 100%;
       max-width: 100%;
     }
+    
+    &__content{
+      @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
+      @include for-size("tablet-landscape-up"){
+        @include padding(null, 0, null, 0);
+      }
+    }
+    
     &__profile{
       color: $lightBlue;
       font-style: italic;
@@ -71,31 +125,181 @@ section{
       }
     }
   }
+  &__bg{
+     background-image: url('../images/influencers/influencer-text-bg.svg'); 
+     background-position: center top;
+     background-size: cover;
+     @include for-size("desktop-up"){
+      background-size: contain;   
+     }
+     @include margin(px-to-rem(100px), 0, 0, 0);
+  }
 }
 
 
 .instagrams{
   padding-bottom: 240px;
+
+  &__title{
+    color: white;
+    margin: 0;
+    padding: 2rem 0;
+  }
+  &__grid{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    @include for-size("tablet-portrait-up"){
+      flex-flow: row wrap;  
+    }
+  }
+  &__link{
+    color: white;
+    margin-top: 1rem;
+  }
 }
 
-.instagrams__title{
-  color: white;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.instagrams__grid{
-  display: flex;
-  flex-flow: row wrap;
-}
-.instagrams__link{
-  color: white;
-  margin-top: 1rem;
-}
 .instagram{
-  flex-basis: calc( 33% - 1rem );
-  margin: 0.5rem 0.5rem;
+  position: relative;
+  @include margin( px-to-rem(8px), null, px-to-rem(8px), null);
+  @include for-size("tablet-portrait-up"){
+    flex-basis: calc( 50% - #{px-to-rem(16px)} );
+  }
+  
+  @include for-size("tablet-landscape-up"){
+    flex-basis: calc( 33% - #{px-to-rem(16px)} );  
+  }  
+  
+  &__link{
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 2;
+    &::after{
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    &:hover, &:focus{
+      .content{
+        opacity: 1;
+      }
+    }
+  }
+  
+  .content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba($lightBlueHover, 0.80);
+    color: white;
+    opacity: 0;
+    z-index: 1;
+    transition: all 500ms ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .text{
+    @include padding(null,px-to-rem(16px),null,px-to-rem(16px));
+  }
+  
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-.instagram img{
+
+.fancy{
+  padding-top: 28px;
+  @include font-size(26px, 1.25);
+  @include for-size("tablet-portrait-up"){
+    @include font-size(56px);  
+  }
+  position: relative;
+  padding-bottom: 28px;
+      
+  &--alt{
+    display: block;
+    color: #0099cc;
+  }
+      
+  &::after{
+    content: '';
+    border-bottom: solid 2px #09c;
+    width: 70px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  &__content{
+    padding-top: 28px;
+    padding-bottom: 28px;
+    text-align: justify;
+    @include for-size("tablet-landscape-up"){
+      width: 700px;
+      margin: 0 auto; 
+    } 
+  }
+}
+
+.triangles{
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 20vh;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  
+  &__white{
+    background: white;
+    width: 150%;
+    height: 50vh;
+    display: block;
+    position: absolute;
+    -ms-transform: rotate(-4deg) translateY(112px);
+    transform: rotate(-4deg) translateY(112px);
+    z-index: 1;
+  }
+  &__navy{
+    background: $darkNavy;
+    width: 150%;
+    height: 50vh;
+    display: block;
+    position: absolute;
+    -ms-transform: rotate(-4deg) translateY(112px);
+    transform: rotate(-4deg) translateY(112px);
+    z-index: 1;
+  }
+  &__lblue{
+    -ms-transform: rotate(8deg) translateY(210px);
+    transform: rotate(8deg) translateY(210px);
+    z-index: 0;
+    top: -67%;
+    background: $lightBlue;
+    width: 150%;
+    height: 50vh;
+    display: block;
+    position: absolute;
+    left: -10%;
+    z-index: 0;  
+    // Larger
+    @include for-size("tablet-portrait-up"){
+      -ms-transform: rotate(4deg) translateY(210px);
+      transform: rotate(4deg) translateY(210px);
+    }    
+    
+  }
 }

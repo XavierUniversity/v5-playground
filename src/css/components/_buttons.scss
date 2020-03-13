@@ -52,9 +52,13 @@
   
   &--hero-alt{
     @extend .btn--hero;
+    display: block;
     border-radius: px-to-rem(10px);
     border-width: px-to-rem(2px);
     @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
+    @include for-size("tablet-landscape-up"){
+      display: inline-block;
+    }
   }
 
   &--featured-links {

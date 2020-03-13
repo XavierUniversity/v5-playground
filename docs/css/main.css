@@ -2395,6 +2395,14 @@ hr {
     @media (min-width: 56.25rem) {
       .hero__title {
         margin-top: 0px; } }
+    .hero__title--alt {
+      font-weight: 200;
+      display: block;
+      font-size: 26px;
+      text-shadow: none;
+      letter-spacing: 0.5rem; }
+    .hero__title--heavy {
+      display: block; }
   .hero__content {
     color: white;
     font-weight: 100;
@@ -4659,6 +4667,7 @@ section {
   width: 100%; }
 
 .influencers__hero {
+  height: 100vh;
   margin-bottom: 2rem; }
   @media (max-width: 36.5rem) {
     .influencers__hero {

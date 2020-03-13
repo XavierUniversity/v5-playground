@@ -153,6 +153,17 @@
     @include for-size("tablet-landscape-up"){
       margin-top: 0px;
     }
+    
+    &--alt{
+      font-weight: 200;
+      display: block;
+      font-size: 26px;
+      text-shadow: none;
+      letter-spacing: 0.5rem;
+    }
+    &--heavy{
+      display: block;
+    }
   }
   
   &__content{

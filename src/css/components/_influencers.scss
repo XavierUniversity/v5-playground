@@ -88,6 +88,7 @@ section{
   }
   
   &__hero{
+    height: 100vh;
     @include margin( null, null, px-to-rem(32px), null);
     @include for-size("phone-only"){
       @include margin( null, null, px-to-rem(32px), null);  

@@ -133,7 +133,6 @@ section{
     }
   }
   &__bg{
-     background-image: url('../images/influencers/influencer-text-bg.svg'); 
      background-position: center top;
      background-size: cover;
      @include for-size("desktop-up"){

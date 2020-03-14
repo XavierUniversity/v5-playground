@@ -4705,7 +4705,6 @@ section {
       color: #0077AA; }
 
 .influencers__bg {
-  background-image: url("../images/influencers/influencer-text-bg.svg");
   background-position: center top;
   background-size: cover;
   margin-top: 6.25rem;

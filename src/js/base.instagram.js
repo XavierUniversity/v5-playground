@@ -11,14 +11,3 @@ if ( instas.length > 0 ){
     });
   }
 }
-
-var custInstas = $("[data-insta]");
-var parent;
-if ( custInstas.length > 0 ){ 
-  $.each(custInstas, function(i, k){
-    $.get('https://api.instagram.com/oembed?url='+$(k).data("insta")+'&hidecaption=true&omitscript=true', function(d){
-      var html = '<div class="content"><div class="text">'+d.title+'</div></div>';
-      $(k).find(".instagram__link").append(html);
-    });
-  });
-}

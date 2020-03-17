@@ -29,7 +29,6 @@ function buildTabs(tabArray, id){
 }
 
 function buildResult(object){
-  console.log(object);
   var title = object.title.replace(" | Xavier University", '');
   var open = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'" class="search__result">';
   var close = '</a>';

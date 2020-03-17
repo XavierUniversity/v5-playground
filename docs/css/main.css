@@ -2400,9 +2400,11 @@ hr {
       display: block;
       font-size: 26px;
       text-shadow: none;
-      letter-spacing: 0.5rem; }
+      letter-spacing: 0.5rem;
+      text-shadow: none; }
     .hero__title--heavy {
-      display: block; }
+      display: block;
+      text-shadow: none; }
   .hero__content {
     color: white;
     font-weight: 100;

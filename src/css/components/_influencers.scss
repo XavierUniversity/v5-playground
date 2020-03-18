@@ -95,6 +95,13 @@ section{
     }
   }
   
+  &__contact{
+    @include padding( null, null, px-to-rem(32px), null );
+    @include for-size("tablet-portrait-up"){
+      @include padding( null, null, px-to-rem(120px), null );
+    }
+  }
+  
   .influencer{
     @include margin(px-to-rem(54px), null, null, null);
     @include for-size("tablet-landscape-up"){

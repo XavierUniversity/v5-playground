@@ -1035,7 +1035,7 @@ hr {
     margin-left: 0; }
 
 .list--inline__item {
-  display: inline-block; }
+  display: inline; }
 
 .list--dash {
   list-style: none;

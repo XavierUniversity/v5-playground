@@ -10,7 +10,7 @@
 .list--inline{
   @extend .list--bare;
   &__item{
-    display: inline-block;
+    display: inline;
   }
 }
 .list--dash{

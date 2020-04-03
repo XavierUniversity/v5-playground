@@ -2399,12 +2399,19 @@ hr {
       font-weight: 200;
       display: block;
       font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 1.25;
       text-shadow: none;
       letter-spacing: 0.5rem;
       text-shadow: none; }
     .hero__title--heavy {
       display: block;
       text-shadow: none; }
+      @media (max-width: 36.5rem) {
+        .hero__title--heavy {
+          font-size: 35px;
+          font-size: 2.1875rem;
+          line-height: 1.3714285714; } }
   .hero__content {
     color: white;
     font-weight: 100;

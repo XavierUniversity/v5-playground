@@ -157,7 +157,7 @@
     &--alt{
       font-weight: 200;
       display: block;
-      font-size: 26px;
+      @include font-size(26px, 1.25);
       text-shadow: none;
       letter-spacing: 0.5rem;
       text-shadow: none;
@@ -165,6 +165,9 @@
     &--heavy{
       display: block;
       text-shadow: none;
+      @include for-size("phone-only"){
+        @include font-size(35px);
+      }
     }
   }
   

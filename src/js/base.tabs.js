@@ -29,7 +29,9 @@ var Tabs = {
   },
   // If the page has a hash on load, go to that tab
   pageLoadCorrectTab: function() {
-    this.changeTab(document.location.hash);
+    if ( document.location.hash != ""){
+      this.changeTab(document.location.hash);
+    }
   }
 }
 Tabs.init();

@@ -75,6 +75,17 @@ if ( instas.length > 0 ){
     });
   }
 }
+$('.ajax-logout').on('click', function(e){
+  e.preventDefault();
+  url = $(this).data('url');
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: { 'action': $(this).data('action'), 'token': $(this).data('token') },
+  }).always(function(d, t, j){
+    window.location.href = "/" + d.destination + "/";
+  });
+});
 // jQuery formatted selector to search for focusable items
 var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
 
@@ -447,8 +458,8 @@ var Tabs = {
   },
   // If the page has a hash on load, go to that tab
   pageLoadCorrectTab: function() {
-    if ( document.location.hash != ''){
-      this.changeTab(document.location.hash);  
+    if ( document.location.hash != ""){
+      this.changeTab(document.location.hash);
     }
   }
 }

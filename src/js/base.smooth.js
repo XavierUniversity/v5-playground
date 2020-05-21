@@ -1,9 +1,9 @@
 // Select all links with hashes
 $('a[href*="#"]')
 // Remove links that don't actually link to anything
-.not('a[href="#"]')
-.not('a[href="#0"]')
-.not('a[class*=".tab__link"]')
+.not('[href="#"]')
+.not('[href="#0"]')
+.not('[class*="tab__link"]')
 .click(function(event) {
   // On-page links
   if (

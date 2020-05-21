@@ -37,6 +37,6 @@
   },
   "homepage": "https://github.com/XavierUniversity/v5-playground#readme",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.14.1"
   }
 }

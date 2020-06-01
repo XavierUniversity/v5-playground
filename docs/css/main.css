@@ -1350,7 +1350,10 @@ hr {
   margin-left: 3rem;
   display: -webkit-box;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse; }
   .search__close {
     position: absolute;
     margin-top: 1.6875rem !important;

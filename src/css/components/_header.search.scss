@@ -69,6 +69,7 @@
   @include margin(2rem, px-to-rem(48px), px-to-rem(48px), px-to-rem(48px));
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   &__close{
     position: absolute;
     @include margin(px-to-rem(27px) !important, null, null, px-to-rem(10px));

@@ -481,9 +481,14 @@ $(document).on("click", "[data-toggle]", function(e){
   e.preventDefault();
   var list = $(this).data("toggle");
   $(list).toggleClass("visible");
+  $(this).attr('aria-expanded', function (i, attr) {
+    return attr == 'true' ? 'false' : 'true'
+  });
+  $(this).prev().attr('aria-expanded', function (i, attr) {
+    return attr == 'true' ? 'false' : 'true'
+  });
   $('[data-toggle='+list+']').toggleClass("on");
 });
-
 // Need to see if we are on a mobile device. If we aren't, let's post the video!
 if ( !detectmob() ){
   var vid = $(".hero video");

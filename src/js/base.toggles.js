@@ -14,5 +14,11 @@ $(document).on("click", "[data-toggle]", function(e){
   e.preventDefault();
   var list = $(this).data("toggle");
   $(list).toggleClass("visible");
+  $(this).attr('aria-expanded', function (i, attr) {
+    return attr == 'true' ? 'false' : 'true'
+  });
+  $(this).prev().attr('aria-expanded', function (i, attr) {
+    return attr == 'true' ? 'false' : 'true'
+  });
   $('[data-toggle='+list+']').toggleClass("on");
 });

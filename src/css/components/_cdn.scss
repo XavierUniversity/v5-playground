@@ -2,8 +2,8 @@
 
   &__wrapper{
     margin: 0 auto;
-    @include for-size("tablet-portrait-up"){
-      width: 75%;
+    @include for-size("tablet-landscape-up"){
+      width: 66%;
     }
   }
   
@@ -26,21 +26,21 @@
 	 text-align: center;
 	 line-height: 1.4;
 	 -webkit-font-smoothing: antialiased;
-   @include for-size("desktop-up") {
+   @include for-size("tablet-landscape-up") {
 		 max-width: 25rem;
 		 padding: 0 15px;
 		 position: relative;
 		 border: none;
     }
       &--right {
-        @include for-size("desktop-up") {
+        @include for-size("tablet-landscape-up") {
        border-left: solid #09c 5px;
        float: right;
        margin: 25px -80px 25px 25px;
         }
       }
       &--left {
-        @include for-size("desktop-up") {
+        @include for-size("tablet-landscape-up") {
        border-right: solid #09c 5px;
        float: left;
        margin: 25px 25px 25px -80px;

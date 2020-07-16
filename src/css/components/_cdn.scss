@@ -2,13 +2,14 @@
 
   &__wrapper{
     margin: 0 auto;
-    @include for-size("desktop-up"){
+    @include for-size("tablet-portrait-up"){
       width: 75%;
     }
   }
   
   &__header {
     max-width: 100% !important;
+    display: block !important;
     margin-bottom: 1.5rem;
   }
   
@@ -31,14 +32,14 @@
 		 position: relative;
 		 border: none;
     }
-      &__right {
+      &--right {
         @include for-size("desktop-up") {
        border-left: solid #09c 5px;
        float: right;
        margin: 25px -80px 25px 25px;
         }
       }
-      &__left {
+      &--left {
         @include for-size("desktop-up") {
        border-right: solid #09c 5px;
        float: left;

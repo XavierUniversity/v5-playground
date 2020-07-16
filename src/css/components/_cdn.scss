@@ -1,28 +1,62 @@
 .cdn{
-  align-items: center;
-  justify-content: center;
 
-  &__image{
-    height: auto;
-    @include for-size("tablet-landscape-up"){
-      width: px-to-rem(580px);
-    }
+  &__wrapper{
+    margin: 0 auto;
     @include for-size("desktop-up"){
-      width: auto;
-    }
-  }
-  &__content{
-    @include for-size("tablet-landscape-up"){
-      @include padding( null, null, null, px-to-rem(60px));  
+      width: 75%;
     }
   }
   
-  &__link{
-    display: block;
-    color: black;
-    text-decoration: none;
-    &:hover, &:focus, &:active{
-      color: $medBlue;
+  & __header {
+    max-width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__pullquote {
+	 color: #007db3;
+	 max-width: 100%;
+	 display: block;
+	 padding: 25px 15px;
+	 border-top: solid #09c 5px;
+	 border-bottom: solid #09c 5px;
+	 margin: 20px 0;
+	 font-size: 1.2rem;
+	 width: 100%;
+	 text-align: center;
+	 line-height: 1.4;
+	 -webkit-font-smoothing: antialiased;
+   @include for-size("desktop-up") {
+		 max-width: 25rem;
+		 padding: 0 15px;
+		 position: relative;
+		 border: none;
     }
+      &__right {
+        @include for-size("desktop-up") {
+       border-left: solid #09c 5px;
+       float: right;
+       margin: 25px -80px 25px 25px;
+        }
+      }
+      &__left {
+        @include for-size("desktop-up") {
+       border-right: solid #09c 5px;
+       float: left;
+       margin: 25px 25px 25px -80px;
+        }
+      }
+  }
+  
+  img {
+    @include for-size("desktop-up"){
+      display: block;
+      float: right;
+      margin-left: 1rem;
+      max-width: 30%;
+    }
+    display: none;
   }
 }
+
+ 
+    

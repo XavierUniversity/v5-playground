@@ -3800,9 +3800,9 @@ a.cincyselect, a.clandselect {
 
 .cdn__wrapper {
   margin: 0 auto; }
-  @media (min-width: 37.5rem) {
+  @media (min-width: 56.25rem) {
     .cdn__wrapper {
-      width: 75%; } }
+      width: 66%; } }
 
 .cdn__header {
   max-width: 100% !important;
@@ -3822,18 +3822,18 @@ a.cincyselect, a.clandselect {
   text-align: center;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased; }
-  @media (min-width: 85rem) {
+  @media (min-width: 56.25rem) {
     .cdn__pullquote {
       max-width: 25rem;
       padding: 0 15px;
       position: relative;
       border: none; } }
-  @media (min-width: 85rem) {
+  @media (min-width: 56.25rem) {
     .cdn__pullquote--right {
       border-left: solid #09c 5px;
       float: right;
       margin: 25px -80px 25px 25px; } }
-  @media (min-width: 85rem) {
+  @media (min-width: 56.25rem) {
     .cdn__pullquote--left {
       border-right: solid #09c 5px;
       float: left;

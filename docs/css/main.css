@@ -3800,12 +3800,13 @@ a.cincyselect, a.clandselect {
 
 .cdn__wrapper {
   margin: 0 auto; }
-  @media (min-width: 85rem) {
+  @media (min-width: 37.5rem) {
     .cdn__wrapper {
       width: 75%; } }
 
 .cdn__header {
   max-width: 100% !important;
+  display: block !important;
   margin-bottom: 1.5rem; }
 
 .cdn__pullquote {
@@ -3828,12 +3829,12 @@ a.cincyselect, a.clandselect {
       position: relative;
       border: none; } }
   @media (min-width: 85rem) {
-    .cdn__pullquote__right {
+    .cdn__pullquote--right {
       border-left: solid #09c 5px;
       float: right;
       margin: 25px -80px 25px 25px; } }
   @media (min-width: 85rem) {
-    .cdn__pullquote__left {
+    .cdn__pullquote--left {
       border-right: solid #09c 5px;
       float: left;
       margin: 25px 25px 25px -80px; } }

@@ -49,7 +49,7 @@
   }
   
   img {
-    @include for-size("desktop-up"){
+    @include for-size("tablet-portrait-up"){
       display: block;
       float: right;
       margin-left: 1rem;

@@ -3841,7 +3841,7 @@ a.cincyselect, a.clandselect {
 
 .cdn img {
   display: none; }
-  @media (min-width: 85rem) {
+  @media (min-width: 37.5rem) {
     .cdn img {
       display: block;
       float: right;

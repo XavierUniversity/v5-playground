@@ -1,4 +1,33 @@
 .cdn{
+  align-items: center;
+  justify-content: center;
+
+  &__image{
+    height: auto;
+    @include for-size("tablet-landscape-up"){
+      width: px-to-rem(580px);
+    }
+    @include for-size("desktop-up"){
+      width: auto;
+    }
+  }
+  &__content{
+    @include for-size("tablet-landscape-up"){
+      @include padding( null, null, null, px-to-rem(60px));  
+    }
+  }
+  
+  &__link{
+    display: block;
+    color: black;
+    text-decoration: none;
+    &:hover, &:focus, &:active{
+      color: $medBlue;
+    }
+  }
+}
+
+.cdnStory{
 
   &__wrapper{
     margin: 0 auto;

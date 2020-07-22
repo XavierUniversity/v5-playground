@@ -3615,6 +3615,82 @@ a.cincyselect, a.clandselect {
   margin-bottom: 0.75rem;
   width: 100%; }
 
+.social_highlight {
+  background: #0099CC;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  .social_highlight .flex__item-40 {
+    flex-basis: 40%; }
+  .social_highlight .flex__item-60 {
+    flex-basis: 60%; }
+  .social_highlight__title {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: left; }
+  .social_highlight__items {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .social_highlight__item {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+    font-weight: 300;
+    background: #007DB3;
+    color: white;
+    -webkit-box-flex: 0;
+            flex: 0 calc(50% - 0.5rem);
+    text-align: center;
+    text-decoration: none;
+    height: 6.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center; }
+  .social_highlight__content {
+    align-self: center; }
+  .social_highlight__link:hover, .social_highlight__link:active {
+    background: #004867; }
+  .social_highlight__subtitle {
+    color: white;
+    text-transform: none;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .social_highlight__list {
+    margin-top: -0.25rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; }
+  .social_highlight__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    @media (min-width: 37.5rem) {
+      .social_highlight__icon {
+        height: 3rem;
+        width: 3rem; } }
+  .social_highlight__social-link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none; }
+    .social_highlight__social-link:hover .social_highlight__icon, .social_highlight__social-link:active .social_highlight__icon {
+      color: white; }
+
 .outcomes {
   margin-top: 2.25rem; }
   @media (min-width: 56.25rem) {

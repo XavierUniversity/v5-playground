@@ -1,0 +1,86 @@
+.social_highlight{
+  
+  .flex__item-40{
+    flex-basis: 40%;
+  }
+  .flex__item-60{
+    flex-basis: 60%;
+  }
+  
+  $self : &;
+  background: $lightBlue;
+  color: white;
+  @include padding(3rem, null, 3rem, null);
+  
+  &__title{
+    @include font-size(32px);
+    text-align: left;
+  }
+  
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  &__item{
+    @include font-size(18px);
+    font-weight: 300;
+    background: $medBlue;
+    color: white;
+    flex: 0 calc(50% - 0.5rem);
+    text-align: center;
+    text-decoration: none;
+    height: px-to-rem(100px);
+    @include margin(0.5rem, null, 0.5rem, null);
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__content{
+    align-self: center;
+  }
+  
+  &__link{
+    &:hover, &:active{
+      background: darken($medBlue, 15%);
+    }
+  }
+  
+  &__subtitle{
+    color: white;
+    text-transform: none;
+    @include font-size(18px);
+    font-weight: 300;
+    @include margin(0, null, 0, null);
+  }
+  
+  &__list{
+    @include margin(-0.25rem, 0, 0, 0);
+  }
+  
+  &__icon{
+    height: px-to-rem(40px);
+    width: px-to-rem(40px);
+    
+    @include for-size("tablet-portrait-up"){
+      height: px-to-rem(48px);
+      width: px-to-rem(48px);
+    }
+
+    transition: all 0.25s ease;
+  }
+  
+  &__social-link{
+    display: inline-block;
+    color: rgba(white, 0.75);
+    text-decoration: none;
+    
+    &:hover, &:active {
+      #{$self}__icon{
+        color: white;
+      }
+    }
+  }
+}

@@ -15,20 +15,25 @@
   &__title{
     @include font-size(32px);
     text-align: left;
+    @include margin(0, null, null, null);
   }
   
   &__items{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    @include for-size("tablet-portrait-up"){
+      flex-direction: row;
+      justify-content: space-between;  
+    }
   }
   
   &__item{
-    @include font-size(18px);
+    @include font-size(20px);
     font-weight: 300;
     background: $medBlue;
     color: white;
-    flex: 0 calc(50% - 0.5rem);
+    flex: 1;
     text-align: center;
     text-decoration: none;
     height: px-to-rem(100px);
@@ -36,6 +41,11 @@
     @include padding(1rem, 1rem, 1rem, 1rem);
     display: flex;
     justify-content: center;
+    
+    @include for-size("tablet-portrait-up"){
+      flex: 0 calc(50% - 0.5rem);
+    }
+    
   }
   
   &__content{
@@ -61,12 +71,12 @@
   }
   
   &__icon{
-    height: px-to-rem(40px);
-    width: px-to-rem(40px);
+    height: px-to-rem(48px);
+    width: px-to-rem(48px);
     
     @include for-size("tablet-portrait-up"){
-      height: px-to-rem(48px);
-      width: px-to-rem(48px);
+      height: px-to-rem(52px);
+      width: px-to-rem(52px);
     }
 
     transition: all 0.25s ease;

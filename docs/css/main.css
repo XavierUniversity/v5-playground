@@ -3628,22 +3628,31 @@ a.cincyselect, a.clandselect {
     font-size: 32px;
     font-size: 2rem;
     line-height: 1.5;
-    text-align: left; }
+    text-align: left;
+    margin-top: 0; }
   .social_highlight__items {
     display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-            justify-content: space-between; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    flex-wrap: wrap; }
+    @media (min-width: 37.5rem) {
+      .social_highlight__items {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+                justify-content: space-between; } }
   .social_highlight__item {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.3333333333;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
     font-weight: 300;
     background: #007DB3;
     color: white;
-    -webkit-box-flex: 0;
-            flex: 0 calc(50% - 0.5rem);
+    -webkit-box-flex: 1;
+            flex: 1;
     text-align: center;
     text-decoration: none;
     height: 6.25rem;
@@ -3657,6 +3666,10 @@ a.cincyselect, a.clandselect {
     display: flex;
     -webkit-box-pack: center;
             justify-content: center; }
+    @media (min-width: 37.5rem) {
+      .social_highlight__item {
+        -webkit-box-flex: 0;
+                flex: 0 calc(50% - 0.5rem); } }
   .social_highlight__content {
     align-self: center; }
   .social_highlight__link:hover, .social_highlight__link:active {
@@ -3676,14 +3689,14 @@ a.cincyselect, a.clandselect {
     margin-bottom: 0;
     margin-left: 0; }
   .social_highlight__icon {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease; }
     @media (min-width: 37.5rem) {
       .social_highlight__icon {
-        height: 3rem;
-        width: 3rem; } }
+        height: 3.25rem;
+        width: 3.25rem; } }
   .social_highlight__social-link {
     display: inline-block;
     color: rgba(255, 255, 255, 0.75);

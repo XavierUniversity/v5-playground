@@ -3952,13 +3952,17 @@ a.cincyselect, a.clandselect {
       margin: 25px 25px 25px -80px; } }
 
 .cdnStory img {
-  display: none; }
+  display: block;
+  max-width: 100%;
+  max-height: 200px; }
   @media (min-width: 37.5rem) {
     .cdnStory img {
       display: block;
       float: right;
       margin-left: 1rem;
       max-width: 30%; } }
+  .cdnStory img.img--fw {
+    display: block; }
 
 .select-box {
   margin-top: 1.5rem; }

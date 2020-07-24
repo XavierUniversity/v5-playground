@@ -54,12 +54,12 @@
     }
     
     &__link {
-        color: $lightBlue;
+        color: $medBlue;
         font-weight: 300;
         text-decoration: none;
         
         &:hover {
-           color: $darkNavy;
+           color: darken($medBlue, 15%);
            
            .select-box__icon {
             margin-left: px-to-rem(8px);

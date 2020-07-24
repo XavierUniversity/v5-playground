@@ -3962,7 +3962,8 @@ a.cincyselect, a.clandselect {
       margin-left: 1rem;
       max-width: 30%; } }
   .cdnStory img.img--fw {
-    display: block; }
+    display: block;
+    max-height: 100%; }
 
 .select-box {
   margin-top: 1.5rem; }

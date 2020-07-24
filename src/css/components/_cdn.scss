@@ -38,6 +38,7 @@
   
   &__header {
     max-width: 100% !important;
+    max-height: 100% !important;
     display: block !important;
     margin-bottom: 1.5rem;
   }
@@ -87,6 +88,7 @@
     &.img--fw {
       display: block;
       max-height: 100%;
+      margin-left: 0;
     }
     display: block;
     max-width: 100%;

@@ -3622,8 +3622,7 @@ a.cincyselect, a.clandselect {
   padding-bottom: 3rem; }
   @media (min-width: 56.25rem) {
     .social_highlight .flex__item-40 {
-      flex-basis: 40%; } }
-  @media (min-width: 56.25rem) {
+      flex-basis: 40%; }
     .social_highlight .flex__item-60 {
       flex-basis: 60%; } }
   .social_highlight__title {

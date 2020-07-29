@@ -3620,10 +3620,12 @@ a.cincyselect, a.clandselect {
   color: white;
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  .social_highlight .flex__item-40 {
-    flex-basis: 40%; }
-  .social_highlight .flex__item-60 {
-    flex-basis: 60%; }
+  @media (min-width: 37.5rem) {
+    .social_highlight .flex__item-40 {
+      flex-basis: 40%; } }
+  @media (min-width: 37.5rem) {
+    .social_highlight .flex__item-60 {
+      flex-basis: 60%; } }
   .social_highlight__title {
     font-size: 32px;
     font-size: 2rem;
@@ -3651,8 +3653,6 @@ a.cincyselect, a.clandselect {
     font-weight: 300;
     background: #007DB3;
     color: white;
-    -webkit-box-flex: 1;
-            flex: 1;
     text-align: center;
     text-decoration: none;
     height: 6.25rem;
@@ -3661,13 +3661,15 @@ a.cincyselect, a.clandselect {
     padding-top: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-            justify-content: center; }
+    padding-left: 1rem; }
     @media (min-width: 37.5rem) {
       .social_highlight__item {
+        -webkit-box-pack: center;
+                justify-content: center;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-flex: 1;
+                flex: 1;
         -webkit-box-flex: 0;
                 flex: 0 calc(50% - 0.5rem); } }
   .social_highlight__content {

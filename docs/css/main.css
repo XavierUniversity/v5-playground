@@ -2329,18 +2329,18 @@ hr {
     height: 16.625rem;
     text-align: center;
     width: 100%;
-    font-size: 1.5rem;
     margin-top: 3.625rem; }
-    @media (min-width: 56.25rem) {
-      .hero--content {
-        font-size: 2.25rem; } }
     .hero--content__title {
       color: white;
       text-transform: uppercase;
       text-decoration: none;
       text-shadow: 0.125rem 0.125rem 0.125rem black;
       margin-top: 0px;
-      font-weight: 700; }
+      font-weight: 700;
+      font-size: 1.5rem; }
+      @media (min-width: 56.25rem) {
+        .hero--content__title {
+          font-size: 2.25rem; } }
   .hero--video {
     width: 100%;
     display: none;

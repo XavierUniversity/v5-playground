@@ -12,7 +12,7 @@
     grid-template-rows: repeat(4, 1fr);
   }
   
-  @include for-size("desktop-up"){
+  @include for-size("tablet-landscape-up"){
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
   }
@@ -158,7 +158,7 @@
         grid-area: 4 / 1 / 5 / 3;
       }
     }
-    @include for-size("desktop-up"){
+    @include for-size("tablet-landscape-up"){
       &:nth-of-type(1){
         grid-area: 1 / 1 / 2 / 3;
       }

@@ -71,7 +71,7 @@ if ( instas.length > 0 ){
       parent.css({"background-image": 'url("' + insta + 'media?size=l")', "background-size": 'cover'});
       parent.find(".news--feature__content").attr('href', insta);
       parent.find(".news--feature__name").html('<span class="news--feature__link">'+ '<svg height="45" width="46"><use xlink:href="#xu-instagram"></use></svg>' + d.author_name + '</span>');
-      parent.find(".news--feature__caption").html(d.title.slice(0, 100) + ( d.title.length > 100 ? "&hellip;" : ''));
+      parent.find(".news--feature__caption").html(d.title.slice(0, 75) + ( d.title.length > 75 ? "&hellip;" : ''));
     });
   }
 }

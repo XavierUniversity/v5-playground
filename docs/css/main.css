@@ -3705,6 +3705,28 @@ a.cincyselect, a.clandselect {
     .social_highlight__social-link:hover .social_highlight__icon, .social_highlight__social-link:active .social_highlight__icon {
       color: white; }
 
+.mo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+  margin: 0 0 1rem 0; }
+
+.mo:not(:last-child) {
+  border-bottom: solid 2px #e3e3e3; }
+
+.mo > img, .mo > a {
+  width: 150px;
+  margin: 0 1rem 0 0; }
+
+.mo > div {
+  -webkit-box-flex: 1;
+          flex: 1; }
+
+.mo h3 {
+  margin: 0; }
+
 .outcomes {
   margin-top: 2.25rem; }
   @media (min-width: 56.25rem) {

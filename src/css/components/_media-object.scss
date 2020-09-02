@@ -1,0 +1,22 @@
+.mo {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.mo:not(:last-child){
+    border-bottom: solid 2px #e3e3e3;
+}
+
+.mo > img, .mo > a {
+  width: 150px;
+  margin: 0 1rem 0 0;
+}
+.mo > div {
+  flex: 1;
+}
+
+.mo h3{
+    margin: 0;
+}

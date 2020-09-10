@@ -2848,8 +2848,7 @@ hr {
     margin-bottom: 1rem; }
   .directory__image {
     max-width: 100%;
-    margin: 0 auto;
-    width: 100%; }
+    margin: 0 auto; }
   .directory__content {
     font-size: 1rem; }
     .directory__content ul {

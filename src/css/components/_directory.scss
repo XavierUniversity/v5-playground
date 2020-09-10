@@ -42,11 +42,6 @@
         flex-basis: 20%;
       }
       
-      .directory__content, .directory__social, .directory__contact {
-//         flex-basis: 100%;
-      }
-      
-      
       @media ( min-width: 992px){
         .directory__content{
           flex-basis: 45%;

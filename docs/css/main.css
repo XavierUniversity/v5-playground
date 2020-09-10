@@ -2835,8 +2835,6 @@ hr {
                   flex-direction: row; } }
       .directory__listing--single .directory__image-holder {
         flex-basis: 20%; }
-      .directory__listing--single .directory__content, .directory__listing--single .directory__social, .directory__listing--single .directory__contact {
-        flex-basis: 100%; }
       @media (min-width: 992px) {
         .directory__listing--single .directory__content {
           flex-basis: 45%;

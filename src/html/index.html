@@ -111,7 +111,7 @@
       <div class="wrapper featured-links">
     <h2 class="featured-links--title">Featured Links</h2>
     <ul class="flex featured-links--list">
-                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/apply">Apply</a></li>
+                <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" data-modal="test" href="/fakepages/apply">Apply</a></li>
                 <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/visit">Visit Campus</a></li>
                 <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/tuition">Tuition</a></li>
                 <li class="footer__nav-item featured-links--list__item"><a class="nav-list__link c-btn c-btn--featured-links" href="/fakepages/financial-aid">Financial Aid</a></li>
@@ -140,6 +140,40 @@
       </section>
       <!-- include "includes/kitchen-sink.html" -->
     </main>
+    
+    <div class="modal modal--login" id="modal-login" aria-hidden="true">
+      <div id="message" class="alert alert--info">
+        <div class="alert--info__icon">
+          <span class="fa" aria-hidden="true"></span>
+        </div>
+        <div class="alert__content">    
+          <p>Enter your Xavier username and password</p>
+        </div>
+      </div>
+      <form id="login-form" action="" method="post" class="form form--ajax ">
+        <fieldset class="form__fieldset">
+          <legend class="form__title">Current account login</legend>
+          <input type="hidden" name="token" value="ebd934ef161712794dc97a8910170ef5cb5dc2a4">
+          <input type="hidden" name="action" value="d56b699830e77ba53855679cb1d252da">
+          
+          <div class="form__group">
+            <label for="username" class="form__label">Username</label>
+            <input type="text" name="user[username]" id="username" class="form__input" required="">
+          </div>
+          
+          <div class="form__group">
+            <label for="userpass" class="form__label">Password</label>
+            <input type="password" name="user[password]" id="userpass" class="form__input" required="">
+          </div>
+      
+          <label class="form__checkbox">
+            <input type="checkbox" name="user[remember_me]" id="remember_me" value="Yes"> remember me
+          </label>
+          
+          <input type="submit" value="Log In" class="o-btn btn">
+        </fieldset>
+      </form>  <button id="cancel" class="o-btn">Cancel</button>
+    </div>
     <!-- End site or application content -->
     include "includes/footer.html"
   </body>

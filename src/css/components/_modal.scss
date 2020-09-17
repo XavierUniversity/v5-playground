@@ -1,0 +1,93 @@
+// MODALS!!!!!
+#modalOverlay {
+	background-color: rgba(0,0,0,0.65);
+	display: none;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	  top: 0;
+  	left: 0;
+  width: 100%;
+	z-index: 100; /* places the modal overlay between the main page and the modal dialog*/
+}
+
+.modal {
+  background-color: #fff;
+	border-radius: 0.5rem;
+	box-shadow: 0.05rem 0.05rem 0.5rem rgba(0,0,0,1);
+  display: none;
+  left: 1%;
+	padding: 1.5rem;
+	position: fixed;
+	top: 10%;
+	width: 98%;
+	z-index: 101;
+	
+	@media screen and (min-width: 992px) {
+//   	top: 25%;
+//   	left: 25%;
+  	width: 50%;
+	}
+	
+	&--login{
+  	border-radius: 0;
+    max-height: calc(100vh - 1rem);
+    overflow-y: auto;
+    top: 1rem;
+    bottom: 1rem;
+    @media ( min-width: 992px ){
+      top: 8.4rem;
+      bottom: auto;
+      left: calc( (100% / 2) - (50rem / 2) );
+      width: 50rem;
+    }
+    
+    > * {
+      @media ( min-width: 992px ){
+        &:last-child{ 
+          margin-bottom: 3rem;
+        }
+        margin: 0 6rem;
+      }
+    }
+    
+    .form__input{
+      width: 100%;
+      border-radius: 0;
+    }
+    .form__title{
+      position: absolute;
+    	width: 1px;
+    	height: 1px;
+    	padding: 0;
+    	margin: -1px;
+    	overflow: hidden;
+    	clip: rect(0,0,0,0);
+    	border: 0;
+    }
+    > .alert{
+      position: relative !important;
+      top: 0;
+      left: 0;
+      margin-bottom: 1rem;
+  	}
+	}
+	
+	&__title{
+  	font-size: 2rem;
+  	font-weight: 300;
+	}
+	
+	&__logo{
+  	width: 27rem;
+  	margin: 2.5rem auto 3.5rem;
+	}
+	
+	&__group{
+  	margin: 0.5rem 0;
+  	&:last-child{
+    	margin-bottom:0;
+  	}
+	}
+}

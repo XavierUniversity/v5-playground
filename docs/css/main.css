@@ -4563,6 +4563,78 @@ a.cincyselect, a.clandselect {
     .cincyMap {
       display: block; } }
 
+#modalOverlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  display: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* places the modal overlay between the main page and the modal dialog*/ }
+
+.modal {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.05rem 0.5rem black;
+  display: none;
+  left: 1%;
+  padding: 1.5rem;
+  position: fixed;
+  top: 10%;
+  width: 98%;
+  z-index: 101; }
+  @media screen and (min-width: 992px) {
+    .modal {
+      width: 50%; } }
+  .modal--login {
+    border-radius: 0;
+    max-height: calc(100vh - 1rem);
+    overflow-y: auto;
+    top: 1rem;
+    bottom: 1rem; }
+    @media (min-width: 992px) {
+      .modal--login {
+        top: 8.4rem;
+        bottom: auto;
+        left: calc( (100% / 2) - (50rem / 2));
+        width: 50rem; } }
+    @media (min-width: 992px) {
+      .modal--login > * {
+        margin: 0 6rem; }
+        .modal--login > *:last-child {
+          margin-bottom: 3rem; } }
+    .modal--login .form__input {
+      width: 100%;
+      border-radius: 0; }
+    .modal--login .form__title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0; }
+    .modal--login > .alert {
+      position: relative !important;
+      top: 0;
+      left: 0;
+      margin-bottom: 1rem; }
+  .modal__title {
+    font-size: 2rem;
+    font-weight: 300; }
+  .modal__logo {
+    width: 27rem;
+    margin: 2.5rem auto 3.5rem; }
+  .modal__group {
+    margin: 0.5rem 0; }
+    .modal__group:last-child {
+      margin-bottom: 0; }
+
 .twitter-feed {
   background: #F0F2F3;
   padding-top: 1.5rem;

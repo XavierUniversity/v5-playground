@@ -33,12 +33,24 @@
         <div class="content">
           include "includes/breadcrumbs.html"
           
-          <div class="mo mo--road">
+          <div class="mo mo--road" id="1">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
             </div>
             <div class="mo__content">
-              <button class="o-btn mo--road__btn"><span>&hellip;</span></button>
+              <button class="o-btn mo--road__btn tooltip" data-uid="1">
+                <span>&hellip;</span>
+              </button>
+              <h3>Testing</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          
+          <div class="mo mo--road" id="2">
+            <div class="mo__content mo__content--full">
+              <button class="o-btn mo--road__btn tooltip" data-uid="2">
+                <span>&hellip;</span>
+              </button>
               <h3>Testing</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -79,8 +91,46 @@
       
       <div class="spacer spacer--72"></div>
             
+      <div id="template">
+        <ul class="list--bare">
+          <li><a href="#" class="pin">pin item</a></li>
+          <li><a href="#" class="dismiss">dismiss</a></li>
+        </ul>
+      </div>
     </main>
     <!-- End site or application content -->
     include "includes/footer.html"
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      const template = document.getElementById('template');
+      var itemId = null;
+      template.style.display = 'none';
+      
+      tippy('.tooltip', {
+        theme: 'light-border',
+        content: template.innerHTML,
+        allowHTML: true,
+        interactive: true,
+        hideOnClick: false,
+        interactiveDebounce: 75,
+        onShown(instance){ // Sets the Item Id as soon as the tooltip starts to show
+          // Sets the Item ID, so we can reference it later.
+          itemId = instance.reference.getAttribute('data-uid');
+          console.log(itemId);
+          $('.dismiss').on('click', function(e){
+            e.preventDefault();
+            document.getElementById(itemId).style.display = 'none';
+            instance.hide();
+            
+            
+          });
+        },
+        onHide(instance){ // Clears out the Item Id when the tooltip is closing
+          itemId = null;
+        }
+      });
+      
+    </script>
   </body>
 </html>

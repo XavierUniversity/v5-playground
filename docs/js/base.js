@@ -695,6 +695,7 @@ var Tabs = {
   }
 }
 Tabs.init();
+
 /**
   * base.toggles.js
   * =======================

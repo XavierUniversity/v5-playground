@@ -13,9 +13,13 @@
     @include margin(0, px-to-rem(16px), 0, 0);  
   }
   
-  > div:last-of-type{
+  > div:last-of-type, &__content{
     flex: 1;
+    &--full{
+      flex-grow: 1;   
+    }
   }
+  
   
   h3{
     @include margin(0, null, 0, null);
@@ -51,7 +55,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      
       position: absolute;
       top: px-to-rem(8px);
       right: px-to-rem(8px);

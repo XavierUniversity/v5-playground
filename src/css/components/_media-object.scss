@@ -1,22 +1,48 @@
 .mo {
+  $self: &;
   display: flex;
   align-items: flex-start;
-  padding: 1rem;
-  margin: 0 0 1rem 0;
-}
-
-.mo:not(:last-child){
-    border-bottom: solid 2px #e3e3e3;
-}
-
-.mo > img, .mo > a {
-  width: 150px;
-  margin: 0 1rem 0 0;
-}
-.mo > div {
-  flex: 1;
-}
-
-.mo h3{
-    margin: 0;
+  @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+  @include margin(0, 0, px-to-rem(16px), 0);
+  
+  &:not(:last-child){
+    border-bottom: solid px-to-rem(2px) #e3e3e3;
+  }
+  > img, .mo > a {
+    width: px-to-rem(150px);
+    @include margin(0, px-to-rem(16px), 0, 0);  
+  }
+  
+  > div:last-of-type{
+    flex: 1;
+  }
+  
+  h3{
+    @include margin(0, null, 0, null);
+  }
+  
+  &--road{
+    @include padding(0, 0, 0, 0);
+    @include margin(0, 0, px-to-rem(32px), 0);
+    box-shadow: 0 0 px-to-rem(12px) 0 rgba(black, 0.4);
+    border-bottom: none !important;
+    
+    #{$self}__img{
+      display: none;
+      @include for-size("tablet-portrait-up"){
+        object-fit: contain;
+        display: block;
+        width: px-to-rem(230px);  
+      }
+    }
+    
+    #{$self}__content{
+      @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+    }
+    
+    h3{
+      @include font-size(18px);
+//       @include margin(null, null, px-to-rem(12px), null);
+    }
+  }
 }

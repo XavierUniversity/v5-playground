@@ -1,5 +1,6 @@
 .panel{
   background: $grey;
+  position: relative;
   @include padding(px-to-rem(50px), px-to-rem(30px), px-to-rem(50px), px-to-rem(30px));
   @include margin(px-to-rem(24px), null, null, null);
   

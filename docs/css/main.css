@@ -2135,6 +2135,31 @@ hr {
     padding-right: 3rem;
     padding-left: 3rem; }
 
+.tt__btn {
+  background: white;
+  border-radius: 100%;
+  border: solid 0.125rem #007DB3;
+  color: #007DB3;
+  height: 2rem;
+  width: 2rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem; }
+  .tt__btn span {
+    margin-top: -0.25rem; }
+  .tt__btn:hover, .tt__btn:focus {
+    background: #007DB3;
+    color: white; }
+
 .footer {
   background: #0B223F;
   border-top: solid 0.25rem #007DB3;
@@ -2973,6 +2998,7 @@ a.cincyselect, a.clandselect {
 
 .panel {
   background: #F0F2F3;
+  position: relative;
   padding-top: 3.125rem;
   padding-right: 1.875rem;
   padding-bottom: 3.125rem;
@@ -3707,6 +3733,7 @@ a.cincyselect, a.clandselect {
   display: flex;
   -webkit-box-align: start;
           align-items: flex-start;
+  background: white;
   padding-top: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
@@ -3757,29 +3784,6 @@ a.cincyselect, a.clandselect {
       padding-right: 1.25rem;
       padding-bottom: 1.25rem;
       padding-left: 1.25rem; }
-    .mo--road__btn {
-      border-radius: 100%;
-      border: solid 0.125rem #007DB3;
-      color: #007DB3;
-      height: 2rem;
-      width: 2rem;
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1;
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-              align-items: center;
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem; }
-      .mo--road__btn span {
-        margin-top: -0.25rem; }
-      .mo--road__btn:hover, .mo--road__btn:focus {
-        background: #007DB3;
-        color: white; }
     .mo--road h3 {
       font-size: 18px;
       font-size: 1.125rem;

@@ -91,3 +91,30 @@
     }
   }
 }
+
+.tt{
+  &__btn{
+    background: white;
+    border-radius: 100%;
+    border: solid px-to-rem(2px) $medBlue;
+    color: $medBlue;
+    height: px-to-rem(32px);
+    width: px-to-rem(32px);
+    @include font-size(16px, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: px-to-rem(8px);
+    right: px-to-rem(8px);
+    
+    span{
+      @include margin(-#{px-to-rem(4px)}, null, null, null);
+    }
+    
+    &:hover, &:focus{
+      background: $medBlue;
+      color: white;
+    }
+  }
+}

@@ -188,7 +188,7 @@
               <img src="http://lorempixel.com/230/180/city/1" />
             </div>
             <div class="mo__content">
-              <button class="o-btn mo--road__btn tooltip" data-uid="1">
+              <button class="o-btn tt__btn" data-uid="1">
                 <span>&hellip;</span>
               </button>
               <h3>Testing</h3>
@@ -196,9 +196,13 @@
             </div>
           </div>
           
+          <div class="panel">
+            <button class="o-btn tt__btn" data-uid="2">
+                <span>&hellip;</span>
+              </button>
           <div class="mo mo--road" id="2">
             <div class="mo__content mo__content--full">
-              <button class="o-btn mo--road__btn tooltip" data-uid="2">
+              <button class="o-btn tt__btn" data-uid="2">
                 <span>&hellip;</span>
               </button>
               <h3>Testing</h3>
@@ -215,7 +219,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          
+          </div>
         </div><!-- /content -->
         <div class="sidebar">
           <div class="panel panel--academic">
@@ -431,7 +435,7 @@
       var itemId = null;
       template.style.display = 'none';
       
-      tippy('.tooltip', {
+      tippy('.tt__btn', {
         theme: 'light-border',
         content: template.innerHTML,
         allowHTML: true,

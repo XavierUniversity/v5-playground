@@ -183,6 +183,10 @@
             </ul>
           </nav>
           
+          <div class="video__container">
+            <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="BHiWygziyso"></div>
+          </div>
+          
           <div class="mo mo--road" id="1">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -328,9 +332,6 @@
     <!-- <script src="js/plugins.js"></script> -->
     <script src="js/base.min.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
-
-    <script src="js/plyr.js"></script>
-        
         <script>
             $("#vid-btn").click(function(){
               $("iframe").attr('src', $(this).data('video'));
@@ -430,6 +431,7 @@
     	c0.5-0.6,0.7-1.9,0.7-1.9s0.2-1.5,0.2-3v-1.2v-0.3C32,20.3,31.8,18.8,31.8,18.8z"/> </symbol></svg>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
     <script>
       const template = document.getElementById('template');
       var itemId = null;
@@ -459,6 +461,7 @@
         }
       });
       
+      const player = new Plyr('#player');
     </script>
   </body>
 </html>

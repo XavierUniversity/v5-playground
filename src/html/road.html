@@ -33,6 +33,10 @@
         <div class="content">
           include "includes/breadcrumbs.html"
           
+          <div class="video__container">
+            <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="BHiWygziyso"></div>
+          </div>
+          
           <div class="mo mo--road" id="1">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -106,6 +110,7 @@
     include "includes/footer.html"
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
     <script>
       const template = document.getElementById('template');
       var itemId = null;
@@ -135,6 +140,7 @@
         }
       });
       
+      const player = new Plyr('#player');
     </script>
   </body>
 </html>

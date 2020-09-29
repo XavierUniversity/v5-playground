@@ -48,3 +48,14 @@
    padding-top: 0;
   }
 }
+
+:root{
+  --plyr-color-main: #{$darkNavy};
+}
+
+.video{
+  
+  &__container{
+    @include margin(px-to-rem(32px), null, px-to-rem(32px), null)
+  }
+}

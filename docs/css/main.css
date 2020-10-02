@@ -2138,7 +2138,7 @@ hr {
 .tt__btn {
   background: white;
   border-radius: 100%;
-  border: solid 0.125rem #007DB3;
+  border: solid 0.0625rem #007DB3;
   color: #007DB3;
   height: 2rem;
   width: 2rem;
@@ -4650,62 +4650,124 @@ a.cincyselect, a.clandselect {
 
 .modal {
   background-color: #fff;
-  border-radius: 0.5rem;
   box-shadow: 0.05rem 0.05rem 0.5rem black;
   display: none;
-  left: 1%;
-  padding: 1.5rem;
+  left: 0;
   position: fixed;
-  top: 10%;
-  width: 98%;
-  z-index: 101; }
-  @media screen and (min-width: 992px) {
-    .modal {
-      width: 50%; } }
-  .modal--login {
-    border-radius: 0;
+  top: 5%;
+  width: 100%;
+  z-index: 101;
+  max-height: 90%;
+  /*
+	&--login{
+  	border-radius: 0;
     max-height: calc(100vh - 1rem);
     overflow-y: auto;
     top: 1rem;
-    bottom: 1rem; }
-    @media (min-width: 992px) {
-      .modal--login {
-        top: 8.4rem;
-        bottom: auto;
-        left: calc( (100% / 2) - (50rem / 2));
-        width: 50rem; } }
-    @media (min-width: 992px) {
-      .modal--login > * {
-        margin: 0 6rem; }
-        .modal--login > *:last-child {
-          margin-bottom: 3rem; } }
-    .modal--login .form__input {
+    bottom: 1rem;
+    @media ( min-width: 992px ){
+      top: 8.4rem;
+      bottom: auto;
+      left: calc( (100% / 2) - (50rem / 2) );
+      width: 50rem;
+    }
+    
+    > * {
+      @media ( min-width: 992px ){
+        &:last-child{ 
+          margin-bottom: 3rem;
+        }
+        margin: 0 6rem;
+      }
+    }
+    
+    .form__input{
       width: 100%;
-      border-radius: 0; }
-    .modal--login .form__title {
+      border-radius: 0;
+    }
+    .form__title{
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0; }
-    .modal--login > .alert {
+    	width: 1px;
+    	height: 1px;
+    	padding: 0;
+    	margin: -1px;
+    	overflow: hidden;
+    	clip: rect(0,0,0,0);
+    	border: 0;
+    }
+    > .alert{
       position: relative !important;
       top: 0;
       left: 0;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+  	}
+	}
+	
+	&__title{
+  	font-size: 2rem;
+  	font-weight: 300;
+	}
+	
+	&__logo{
+  	width: 27rem;
+  	margin: 2.5rem auto 3.5rem;
+	}
+	
+	&__group{
+  	margin: 0.5rem 0;
+  	&:last-child{
+    	margin-bottom:0;
+  	}
+	}
+*/ }
+  .modal.visible {
+    display: block;
+    overflow-y: scroll; }
+  @media (orientation: portrait) and (min-width: 37.5rem) {
+    .modal {
+      top: 25%;
+      max-height: 50%; } }
+  @media (min-width: 56.25rem) {
+    .modal {
+      left: 10%;
+      width: 80%;
+      top: 12.5%;
+      max-height: 75%; } }
+  @media (min-width: 85rem) {
+    .modal {
+      top: 25%;
+      left: 25%;
+      width: 50%;
+      max-height: 50%; } }
+  .modal__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.75rem;
+    padding-right: 2rem;
+    padding-bottom: 3.75rem;
+    padding-left: 2rem; }
+    @media (min-width: 37.5rem) {
+      .modal__content {
+        padding-right: 3rem;
+        padding-left: 3rem; } }
+    @media (min-width: 56.25rem) {
+      .modal__content {
+        padding-top: 5.625rem;
+        padding-right: 11.875rem;
+        padding-bottom: 5.625rem;
+        padding-left: 11.875rem; } }
+  .modal__close {
+    position: absolute;
+    z-index: 10;
+    top: 1.5rem;
+    right: 1.5rem; }
+    @media (min-width: 56.25rem) {
+      .modal__close {
+        top: 2.8125rem;
+        right: 4.6875rem; } }
   .modal__title {
-    font-size: 2rem;
-    font-weight: 300; }
-  .modal__logo {
-    width: 27rem;
-    margin: 2.5rem auto 3.5rem; }
-  .modal__group {
-    margin: 0.5rem 0; }
-    .modal__group:last-child {
-      margin-bottom: 0; }
+    margin: 0; }
 
 .twitter-feed {
   background: #F0F2F3;

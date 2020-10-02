@@ -240,8 +240,23 @@
             </form>          
           </div><!-- /panel -->
           
-          <div class="panel">
+          <div class="panel panel--academic tasks">
             <h2 class="panel__title panel__title--form text--centered">To Do List</h2>
+            <template>
+              <button v-for="task in tasks" class="btn" v-on:click.prevent="modal(task.ID)" :aria-controls="task.ID" aria-expanded="false">{{ task.title }}</button>
+              <div v-for="task in tasks" class="modal" :id="task.ID">
+                <button aria-label="close task window" class="o-btn modal__close" data-controls="#task" id="cancelButton" style="float: right;" v-on:click="hideModal(task.ID);" aria-hidden="true">
+                  <svg class="icon drawer__icon">
+                    <use xlink:href="#xu-close" />
+                  </svg>
+                </button>
+                <div class="modal__content">
+                  <h2 class="modal__title">{{ task.title }}</h2>
+                  <div v-html="task.activeCopy"></div>
+                  <p><a :href="task.linkURL" class="link-arrow">{{ task.linkCopy }}</a></p>
+                </div>
+              </div>
+           </template>
           </div>
 
         </div><!-- /sidebar -->
@@ -432,7 +447,65 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+      // Vue component for Task List
+      new Vue({ el: '.tasks',
+        data: {
+          tasks: [
+            {
+              ID: 1,
+              title: "EARN A $500 GRANT BY SUBMITTING YOUR FAFSA EARLY",
+              activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
+            },
+            {
+              ID: 2,
+              title: "Hello world!",
+              activeCopy: "<p>Hello world!</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
+            },
+            {
+              ID: 3,
+              title: "Hello world!",
+              activeCopy: "<p>Hello world!</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
+            }
+          ],
+          task: '',
+        },
+        mounted: function(){
+          // For Dev...CORS is blocking this
+          // this.getTasks();
+          this.modal('1');
+        },
+        methods: { 
+          getTasks: function(){
+            axios.get('https://www.xavier.edu/api/1.0/tasks/list', {
+              params:{
+                status: 'active',
+                limit: 5,
+              }
+            }).then( response => {
+              this.tasks = response.data;
+            }).catch( error => console.log(error));
+          },
+          hideModal: function(taskId){
+            hideModal($("#"+taskId+".modal"));
+          },
+          modal: function(taskId){
+            console.log(taskId);
+            showModal($("#"+taskId+".modal"));
+          }
+        }
+      });
+    </script>
+    <script>
+      // Tippy updates. Should be fun...
       const template = document.getElementById('template');
       var itemId = null;
       template.style.display = 'none';

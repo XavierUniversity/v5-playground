@@ -101,7 +101,7 @@
           <div class="panel panel--academic tasks">
             <h2 class="panel__title panel__title--form text--centered">To Do List</h2>
             <template>
-              <button v-for="task in tasks" class="btn" v-on:click.prevent="modal(task.ID)" :aria-controls="task.ID" aria-expanded="false">{{ task.title }}</button>
+              <button v-for="task in tasks" class="o-btn btn" v-on:click.prevent="modal(task.ID)" :aria-controls="task.ID" aria-expanded="false">{{ task.title }}</button>
               <div v-for="task in tasks" class="modal" :id="task.ID" role="dialog">
                 <button aria-label="close task window" class="o-btn modal__close" data-controls="#task" id="cancel" style="float: right;" v-on:click="hideModal(task.ID);" aria-hidden="true">
                   <svg class="icon drawer__icon">
@@ -180,7 +180,9 @@
       // Tippy updates. Should be fun...
       const template = document.getElementById('template');
       var itemId = null;
-      template.style.display = 'none';
+      if ( template.length ){
+        template.style.display = 'none';  
+      }
       
       tippy('.tt__btn', {
         theme: 'light-border',

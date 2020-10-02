@@ -180,16 +180,16 @@
       // Tippy updates. Should be fun...
       const template = document.getElementById('template');
       var itemId = null;
-      if ( template.length ){
-        template.style.display = 'none';  
-      }
+      template.style.display = 'none';  
+
       
       tippy('.tt__btn', {
         theme: 'light-border',
+        trigger: 'click',
         content: template.innerHTML,
         allowHTML: true,
         interactive: true,
-        hideOnClick: false,
+        hideOnClick: 'toggle',
         interactiveDebounce: 75,
         onShown(instance){ // Sets the Item Id as soon as the tooltip starts to show
           // Sets the Item ID, so we can reference it later.
@@ -199,8 +199,6 @@
             e.preventDefault();
             document.getElementById(itemId).style.display = 'none';
             instance.hide();
-            
-            
           });
         },
         onHide(instance){ // Clears out the Item Id when the tooltip is closing

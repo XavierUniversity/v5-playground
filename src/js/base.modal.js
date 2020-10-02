@@ -151,8 +151,8 @@ function showModal(obj) {
   jQuery('body').css('overflow', 'hidden');
   jQuery('#content-wrap').attr('aria-hidden', 'true'); // mark the main page as hidden
   jQuery('#modalOverlay').css('display', 'block'); // insert an overlay to prevent clicking and make a visual change to indicate the main apge is not available
-  jQuery('.modal').css('display', 'block'); // make the modal window visible
-  jQuery('.modal').attr('aria-hidden', 'false'); // mark the modal window as visible
+  jQuery(obj).css('display', 'block'); // make the modal window visible
+  jQuery(obj).attr('aria-hidden', 'false'); // mark the modal window as visible
 
   // attach a listener to redirect the tab to the modal window if the user somehow gets out of the modal window
   jQuery('body').on('focusin','#mainPage',function() {

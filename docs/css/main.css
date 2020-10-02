@@ -6865,6 +6865,32 @@ section {
   margin-bottom: 2rem;
   margin-left: 0; }
 
+.tour {
+  position: relative;
+  height: 380px;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center; }
+  .tour__btn {
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(11, 34, 63, 0.75);
+    border-radius: 100%;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem; }
+    .tour__btn:hover, .tour__btn:focus {
+      color: white;
+      background: #0B223F; }
+  .tour__icon {
+    height: 3rem;
+    width: 3rem; }
+
 /*
 	Improved screen reader only CSS class
 	@author Gaël Poupard

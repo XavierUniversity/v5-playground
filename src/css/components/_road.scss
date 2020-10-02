@@ -1,0 +1,26 @@
+.tour{
+  position: relative;
+  height: 380px;
+  width: 100%;
+//   background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &__btn{
+    color: rgba(white, 0.75);
+    background: rgba($darkNavy, 0.75);
+    border-radius: 100%;
+    @include padding( px-to-rem(24px), px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+    
+    &:hover, &:focus{
+      color: white;
+      background: $darkNavy;
+    }
+  }
+  &__icon{
+    height: px-to-rem(48px);
+    width: px-to-rem(48px);
+  }
+}

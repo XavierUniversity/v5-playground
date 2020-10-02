@@ -58,13 +58,21 @@ jQuery('#enter').click(function(e) {
 jQuery('.modalCloseButton').click(function(e) {
   hideModal();
 });
-jQuery('.modal').keydown(function(event) {
+
+jQuery('.modal.visible').on('keydown', function(event) {
   trapTabKey($(this), event);
 });
-jQuery('.modal').keydown(function(event) {
+jQuery('.modal.visible').on('keydown', function(event) {
   trapEscapeKey($(this), event);
 });
-
+function trapEscapeKey(obj, e){
+  if ( e.which == 27){
+    var o = obj.find('*');
+    var cancelElement = o.filter(".drawer-close");
+    cancelElement.click();
+    e.preventDefault();
+  }
+}
 function trapEscapeKey(obj, evt) {
   // if escape pressed
   if (evt.which == 27) {

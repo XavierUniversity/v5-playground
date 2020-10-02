@@ -159,7 +159,8 @@
         },
         mounted: function(){
           // For Dev...CORS is blocking this
-          this.getTasks();
+          // this.getTasks();
+          this.modal('1');
         },
         methods: { 
           getTasks: function(){
@@ -203,6 +204,8 @@
             e.preventDefault();
             document.getElementById(itemId).style.display = 'none';
             instance.hide();
+            
+            
           });
         },
         onHide(instance){ // Clears out the Item Id when the tooltip is closing

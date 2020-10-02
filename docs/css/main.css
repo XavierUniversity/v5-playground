@@ -2140,10 +2140,10 @@ hr {
   border-radius: 100%;
   border: solid 0.0625rem #007DB3;
   color: #007DB3;
-  height: 2rem;
-  width: 2rem;
-  font-size: 16px;
-  font-size: 1rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1;
   display: -webkit-box;
   display: flex;
@@ -2155,7 +2155,7 @@ hr {
   top: 0.5rem;
   right: 0.5rem; }
   .tt__btn span {
-    margin-top: -0.25rem; }
+    margin-top: -0.375rem; }
   .tt__btn:hover, .tt__btn:focus {
     background: #007DB3;
     color: white; }

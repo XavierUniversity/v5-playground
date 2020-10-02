@@ -399,7 +399,6 @@ function setFocusToFirstItemInModal(obj){
 
 function showModal(obj) {
   var overlay = "<div id=\"modalOverlay\"></div>";
-  console.log(jQuery('#modalOverlay').length)
   if ( !jQuery('#modalOverlay').length ){
     jQuery('body').append(overlay);  
   }

@@ -32,14 +32,19 @@
         
         <div class="content">
           include "includes/breadcrumbs.html"
-          
           <div class="video__container" id="0">
             <button class="o-btn tt__btn" data-uid="0">
               <span>&hellip;</span>
             </button>
-            <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="BHiWygziyso"></div>
+            <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="MFVXsnq230c"></div>
           </div>
           
+          <div class="video__container" id="40">
+            <button class="o-btn tt__btn" data-uid="40">
+              <span>&hellip;</span>
+            </button>
+            <div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="122375452"></div>
+          </div>
           <div class="mo mo--road" id="1">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -201,7 +206,7 @@
         }
       });
       
-      const player = new Plyr('#player');
+      const players = Array.from(document.querySelectorAll('.plyr')).map(p => new Plyr(p));
     </script>
   </body>
 </html>

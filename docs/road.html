@@ -184,6 +184,9 @@
           </nav>
           
           <div class="video__container">
+            <button class="o-btn tt__btn" data-uid="0">
+              <span>&hellip;</span>
+            </button>
             <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="BHiWygziyso"></div>
           </div>
           
@@ -460,28 +463,13 @@
               activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
               linkCopy: "Click Here",
               linkURL: "https://google.com",
-            },
-            {
-              ID: 2,
-              title: "Hello world!",
-              activeCopy: "<p>Hello world!</p>",
-              linkCopy: "Click Here",
-              linkURL: "https://google.com",
-            },
-            {
-              ID: 3,
-              title: "Hello world!",
-              activeCopy: "<p>Hello world!</p>",
-              linkCopy: "Click Here",
-              linkURL: "https://google.com",
             }
           ],
           task: '',
         },
         mounted: function(){
           // For Dev...CORS is blocking this
-          // this.getTasks();
-          this.modal('1');
+          this.getTasks();
         },
         methods: { 
           getTasks: function(){

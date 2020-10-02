@@ -107,7 +107,7 @@
     position: absolute;
     top: px-to-rem(8px);
     right: px-to-rem(8px);
-    
+    z-index: 1;   
     span{
       @include margin(-#{px-to-rem(6px)}, null, null, null);
     }

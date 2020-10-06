@@ -38,6 +38,9 @@
       border: px-to-rem(1px) solid $medBlue;
     }
     
+    &--full{
+      width: 100%;
+    }
     + span {  
       padding: 0 1rem;
       display: none;

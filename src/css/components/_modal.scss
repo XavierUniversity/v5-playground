@@ -70,68 +70,6 @@
 	}
 	
 	&__title{
-  	margin: 0;
+  	@include margin(0, null, px-to-rem(10px), null);
 	}
-/*
-	&--login{
-  	border-radius: 0;
-    max-height: calc(100vh - 1rem);
-    overflow-y: auto;
-    top: 1rem;
-    bottom: 1rem;
-    @media ( min-width: 992px ){
-      top: 8.4rem;
-      bottom: auto;
-      left: calc( (100% / 2) - (50rem / 2) );
-      width: 50rem;
-    }
-    
-    > * {
-      @media ( min-width: 992px ){
-        &:last-child{ 
-          margin-bottom: 3rem;
-        }
-        margin: 0 6rem;
-      }
-    }
-    
-    .form__input{
-      width: 100%;
-      border-radius: 0;
-    }
-    .form__title{
-      position: absolute;
-    	width: 1px;
-    	height: 1px;
-    	padding: 0;
-    	margin: -1px;
-    	overflow: hidden;
-    	clip: rect(0,0,0,0);
-    	border: 0;
-    }
-    > .alert{
-      position: relative !important;
-      top: 0;
-      left: 0;
-      margin-bottom: 1rem;
-  	}
-	}
-	
-	&__title{
-  	font-size: 2rem;
-  	font-weight: 300;
-	}
-	
-	&__logo{
-  	width: 27rem;
-  	margin: 2.5rem auto 3.5rem;
-	}
-	
-	&__group{
-  	margin: 0.5rem 0;
-  	&:last-child{
-    	margin-bottom:0;
-  	}
-	}
-*/
 }

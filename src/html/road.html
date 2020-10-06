@@ -36,7 +36,7 @@
             <button class="o-btn tt__btn" data-uid="0">
               <span>&hellip;</span>
             </button>
-            <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="MFVXsnq230c"></div>
+            <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
           </div>
                     
           <div class="panel">
@@ -96,10 +96,12 @@
               <fieldset class="form__fieldset">
                 <legend class="form__title sr-only">Account Login</legend>
                 <label class="form__label">Username</label>
-                <input type="text" class="form__input" />
+                <input type="text" class="form__input form__input--full" />
                 <label class="form__label">Password</label>
-                <input type="password" class="form__input" />
-                <button class="o-btn c-btn">Sign In</button>
+                <input type="password" class="form__input form__input--full" />
+                <div class="action">
+                  <button class="o-btn c-btn">Sign In</button>
+                </div>
               </fieldset>
             </form>          
           </div><!-- /panel -->
@@ -107,6 +109,7 @@
           <div class="panel panel--academic tasks">
             <h2 class="panel__title panel__title--form text--centered">To Do List</h2>
             <template>
+              <p v-if="!tasks.length">Good job! Nothing to do.</p>
               <button v-for="task in tasks" class="o-btn btn" v-on:click.prevent="modal(task.ID)" :aria-controls="task.ID" aria-expanded="false">{{ task.title }}</button>
               <div v-for="task in tasks" class="modal" :id="task.ID" role="dialog">
                 <button aria-label="close task window" class="o-btn modal__close" data-controls="#task" id="cancel" style="float: right;" v-on:click="hideModal(task.ID);" aria-hidden="true">
@@ -153,6 +156,27 @@
               activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
               linkCopy: "Click Here",
               linkURL: "https://google.com",
+            },
+            {
+              ID: 2,
+              title: "EARN A $500 GRANT BY SUBMITTING YOUR FAFSA EARLY",
+              activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
+            },
+            {
+              ID: 3,
+              title: "EARN A $500 GRANT BY SUBMITTING YOUR FAFSA EARLY",
+              activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
+            },
+            {
+              ID: 4,
+              title: "EARN A $500 GRANT BY SUBMITTING YOUR FAFSA EARLY",
+              activeCopy: "<p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at xavier.edu/grant-details.</p><p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA) online or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. When applying, be sure to list Xavier’s federal school code: 003144. If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>",
+              linkCopy: "Click Here",
+              linkURL: "https://google.com",
             }
           ],
           task: '',
@@ -187,7 +211,6 @@
       const template = document.getElementById('template');
       var itemId = null;
       template.style.display = 'none';  
-
       
       tippy('.tt__btn', {
         theme: 'light-border',
@@ -211,8 +234,60 @@
           itemId = null;
         }
       });
-      
-      const players = Array.from(document.querySelectorAll('.plyr')).map(p => new Plyr(p));
+      // 
+      const controls = `
+        <div class="plyr__controls">
+          <button type="button" class="plyr__control" data-plyr="restart">
+              <svg role="presentation"><use xlink:href="#plyr-restart"></use></svg>
+              <span class="plyr__tooltip" role="tooltip">Restart</span>
+          </button>
+          <button type="button" class="plyr__control" data-plyr="rewind">
+              <svg role="presentation"><use xlink:href="#plyr-rewind"></use></svg>
+              <span class="plyr__tooltip" role="tooltip">Rewind {seektime} secs</span>
+          </button>
+          <button type="button" class="plyr__control" aria-label="Play, {title}" data-plyr="play">
+              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-pause"></use></svg>
+              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-play"></use></svg>
+              <span class="label--pressed plyr__tooltip" role="tooltip">Pause</span>
+              <span class="label--not-pressed plyr__tooltip" role="tooltip">Play</span>
+          </button>
+          <button type="button" class="plyr__control" data-plyr="fast-forward">
+              <svg role="presentation"><use xlink:href="#plyr-fast-forward"></use></svg>
+              <span class="plyr__tooltip" role="tooltip">Forward {seektime} secs</span>
+          </button>
+          <div class="plyr__progress">
+              <input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" aria-label="Seek">
+              <progress class="plyr__progress__buffer" min="0" max="100" value="0">% buffered</progress>
+              <span role="tooltip" class="plyr__tooltip">00:00</span>
+          </div>
+          <div class="plyr__time plyr__time--current" aria-label="Current time">00:00</div>
+          <div class="plyr__time plyr__time--duration" aria-label="Duration">00:00</div>
+          <button type="button" class="plyr__control" aria-label="Mute" data-plyr="mute">
+              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-muted"></use></svg>
+              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-volume"></use></svg>
+              <span class="label--pressed plyr__tooltip" role="tooltip">Unmute</span>
+              <span class="label--not-pressed plyr__tooltip" role="tooltip">Mute</span>
+          </button>
+          <div class="plyr__volume">
+              <input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" aria-label="Volume">
+          </div>
+          <button type="button" class="plyr__control" data-plyr="captions">
+              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-captions-on"></use></svg>
+              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-captions-off"></use></svg>
+              <span class="label--pressed plyr__tooltip" role="tooltip">Disable captions</span>
+              <span class="label--not-pressed plyr__tooltip" role="tooltip">Enable captions</span>
+          </button>
+          <button type="button" class="plyr__control" data-plyr="fullscreen">
+              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-exit-fullscreen"></use></svg>
+              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-enter-fullscreen"></use></svg>
+              <span class="label--pressed plyr__tooltip" role="tooltip">Exit fullscreen</span>
+              <span class="label--not-pressed plyr__tooltip" role="tooltip">Enter fullscreen</span>
+          </button>
+      </div>`;
+        
+      const players = Array.from(document.querySelectorAll('.plyr')).map(p => new Plyr(p, {
+//         controls: controls
+      }));
     </script>
   </body>
 </html>

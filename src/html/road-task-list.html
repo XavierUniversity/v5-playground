@@ -1,3 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+      </head>
+      <body>
+        include "includes/header.accessibility.html"
+        <section aria-labelledby="campus-alert-heading">
+          <div class="alert alert--danger">
+            <div class="alert--danger__icon">
+              <span class="fa" aria-hidden="true"></span>
+            </div>
+            <div class="alert__content">
+                <h2 class="alert__title" id="campus-alert-heading">Campus Alert</h2>
+              
+              <p>TESTING</p>
+            </div>
+          </div>
+        </section>
+        <header>
+          <div class="header header--fixed" id="header">  
+            include "includes/header.html"
+          </div>
+        </header>
+        <!-- Add your site or application content here -->
+        <main id="content">
+          
+          <section class="hero hero--content">
+              <a class="hero--content__title" href="#">Department of Lorem Ipsum</a>
+          </section>
+          
+          <section class="wrapper">    
+            <div class="content-page">
+              <div class="content-page__breadcrumbs">
+                include "includes/breadcrumbs.html"
+              </div>
+              
+              <div class="content-page--nav sidenav">
+                <button class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu" aria-label="Toggle Menu">Menu<svg class="icon sidenav__icon sidenav__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon sidenav__icon sidenav__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+                
+                <nav id="content-menu" class="sidenav__content" aria-label="">
+                  <ul class="nav-list content-page--nav__list">
+                    <li class="content-page--nav__item"><a class="content-page--nav__link active" href="#">Nav Item One</a></li>
+                  
+                      <ul class="nav-list content-page--subnav__list">
+                        <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Sub Nav Item</a></li>
+                        <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Really Long Subnav Item Name That Wraps Around to the Next Line</a></li>
+                      </ul>
+                  
+                    <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Second Nav Item</a></li>
+                    <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Nav Item Number Three That is Long and Wraps Around to the Next Line</a></li>
+                    <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Here is the Fourth Nav Item</a></li>
+                    <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Fifth and Final Nav Item</a></li>
+                </ul>
+              </nav>
+            </div>
+            
+<div class="content-page--main">
 <div class='accordion task-list'>
     <div class="task ">
       <div class="heading">
@@ -50,3 +121,11 @@
                 </div>
     </div>
 </div>  
+</div>
+</section>
+</main>
+ 
+<!-- End site or application content -->
+include "includes/footer.html"
+</body>
+</html>

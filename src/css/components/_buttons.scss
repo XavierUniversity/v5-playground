@@ -35,12 +35,23 @@
     @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     display: inline-block;
     @include margin(px-to-rem(16px), null, null, null);
+    width: 100%;
+    display: block;
     &:hover, &:focus, &:active{
       background: white;
       color: black;
       border-color: white;
       @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     }
+    
+    @include for-size('tablet-portrait-up'){
+      &:first-of-type:nth-last-child(2),
+      &:first-of-type:nth-last-child(2) ~ a {
+        display: inline-block;
+        width: calc(50% - #{px-to-rem(8px)});
+      }
+    }
+    
     @include for-size("phone-only"){
       @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
       border-radius: px-to-rem(23px);

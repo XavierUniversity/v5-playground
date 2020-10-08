@@ -182,11 +182,11 @@
               <li class="crumbs__item list--inline__item crumbs__current" aria-current="page">Current Page</li>
             </ul>
           </nav>
-          <div class="video__container" id="0">
+          <div class="video__container logged-in" id="0">
             <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
           </div>
                     
-          <div class="panel" id="2">
+          <div class="panel logged-in" id="2">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
             </button>
@@ -215,7 +215,7 @@
             <div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="122375452"></div>
           </div>
           
-          <div class="mo mo--road" id="123">
+          <div class="mo mo--road logged-in" id="123">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
             </div>
@@ -277,6 +277,10 @@
                 </div>
               </fieldset>
             </form>          
+            <div class="text--centered">
+              <p><a href="#">Create account</a> | <a href="#">Forgot password</a></p>
+              <p><a href="#">Parent Access</a></p>
+            </div>
           </div><!-- /panel -->
           
           <div class="panel panel--academic tasks">
@@ -549,13 +553,13 @@
           }
         }
       });
-    </script>
-    <script>
+
       // Tippy updates. Should be fun...
       const template = document.getElementById('template');
       var itemId = null;
       var cardIds = localStorage.getItem('cards') === null ? [] : localStorage.getItem('cards');
       template.style.display = 'none';  
+      
       if ( cardIds !== null && cardIds.length > 0){
         var cards = cardIds.split(',');
         for ( var i = 0; i < cards.length; i++){
@@ -567,7 +571,18 @@
       }
       
       function hideCard(cardId){
-        document.getElementById(cardId).style.display = 'none'; // Get rid of the card itself...
+        let card = document.getElementById(cardId);
+        card.style.display = 'none'; // Hide the card itself, mainly for local users
+        if ( card.classList.contains('logged-in') ){
+          axios.get('https://www.xavier.edu/api/1.0/cards/update-status', {
+            params:{
+              status: 'active',
+              complete: true,
+            }
+          }).then( response => {
+            this.tasks = response.data;
+          }).catch( error => console.log(error));
+        }
         cardIds.push(cardId);
         localStorage.setItem("cards", cardIds);
       }

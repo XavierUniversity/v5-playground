@@ -36,11 +36,11 @@
             <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
           </div>
                     
-          <div class="panel">
+          <div class="panel" id="2">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
             </button>
-            <div class="mo mo--road" id="2">
+            <div class="mo mo--road">
               <div class="mo__content mo__content--full">
                 <h3>Testing</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -64,21 +64,47 @@
             </button>
             <div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="122375452"></div>
           </div>
-          <div class="mo mo--road" id="1">
+          
+          <div class="mo mo--road" id="123">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
             </div>
             <div class="mo__content">
-              <button class="o-btn tt__btn" data-uid="1">
+              <button class="o-btn tt__btn" data-uid="123">
                 <span>&hellip;</span>
               </button>
               <h3>Testing</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-
-          <div class="tour" style="background-image: url('https://lorempixel.com/900/380/city/3');">
-            <button class="o-btn tt__btn" data-uid="40">
+          
+          <div class="mo mo--road" id="900">
+            <div class="mo__img">
+              <img src="http://lorempixel.com/230/180/city/1" />
+            </div>
+            <div class="mo__content">
+              <button class="o-btn tt__btn" data-uid="900">
+                <span>&hellip;</span>
+              </button>
+              <h3>Testing</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          
+          <div class="mo mo--road" id="19">
+            <div class="mo__img">
+              <img src="http://lorempixel.com/230/180/city/1" />
+            </div>
+            <div class="mo__content">
+              <button class="o-btn tt__btn" data-uid="19">
+                <span>&hellip;</span>
+              </button>
+              <h3>Testing</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>
+          <div class="tour" style="background-image: url('https://lorempixel.com/900/380/city/3');" id="41">
+            <button class="o-btn tt__btn" data-uid="41">
               <span>&hellip;</span>
             </button>
             <a href="https://www.youvisit.com/#/vte/?data-platform=v&data-inst=120178&data-image-width=100%&data-image-height=100%&data-loc=142516" class="o-btn tour__btn">
@@ -207,7 +233,23 @@
       // Tippy updates. Should be fun...
       const template = document.getElementById('template');
       var itemId = null;
+      var cardIds = localStorage.getItem('cards') === null ? [] : localStorage.getItem('cards');
       template.style.display = 'none';  
+      if ( cardIds !== null && cardIds.length > 0){
+        var cards = cardIds.split(',');
+        for ( var i = 0; i < cards.length; i++){
+          let cardId = cards[i];
+          if ( document.getElementById(cardId) !== null ){
+            document.getElementById(cardId).style.display = 'none';
+          }
+        }
+      }
+      
+      function hideCard(cardId){
+        document.getElementById(cardId).style.display = 'none'; // Get rid of the card itself...
+        cardIds.push(cardId);
+        localStorage.setItem("cards", cardIds);
+      }
       
       tippy('.tt__btn', {
         theme: 'light-border',
@@ -220,10 +262,9 @@
         onShown(instance){ // Sets the Item Id as soon as the tooltip starts to show
           // Sets the Item ID, so we can reference it later.
           itemId = instance.reference.getAttribute('data-uid');
-          console.log(itemId);
           $('.dismiss').on('click', function(e){
             e.preventDefault();
-            document.getElementById(itemId).style.display = 'none';
+            hideCard(itemId);
             instance.hide();
           });
         },
@@ -273,7 +314,7 @@
           </button>
           <button type="button" class="plyr__control plyr__controls__item" data-plyr="hide">
               <svg class="icon--not-pressed" role="presentation"><use xlink:href="#xu-close"></use></svg>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Hide Video</span>
+              <span class="label--not-pressed plyr__tooltip" role="tooltip">Dismiss Video</span>
           </button>
       </div>`;
       
@@ -285,7 +326,7 @@
         document.querySelector("[data-plyr='hide']").addEventListener("click", function(e){
           var vid = this.parentNode.parentNode.parentNode.id;
           document.getElementById(vid).style.display = 'none';
-          // Need to make this permanent!
+          hideCard(vid);
         });
       });
       

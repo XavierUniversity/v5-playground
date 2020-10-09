@@ -45,6 +45,13 @@
   	max-height: 50%;
 	}
 	
+	@media only screen and ( max-height: 800px ){
+  	left: 10%;
+  	width: 80%;
+  	top: 12.5%;
+  	max-height: 75%;
+	}
+	
 	&__content{
   	position: relative;
   	width: 100%;
@@ -54,7 +61,10 @@
   	  @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
 	  }
     @include for-size("tablet-landscape-up"){
-  	  @include padding(px-to-rem(90px), px-to-rem(190px), px-to-rem(90px), px-to-rem(190px));
+  	  @include padding(px-to-rem(90px), px-to-rem(84px), px-to-rem(90px), px-to-rem(84px));
+    }
+    @media only screen and ( max-height: 800px ){
+      @include padding(null, px-to-rem(48px), null, px-to-rem(48px))
     }
 	}
 	&__close{

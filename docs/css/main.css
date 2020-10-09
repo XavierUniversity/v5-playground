@@ -4693,6 +4693,12 @@ a.cincyselect, a.clandselect {
       left: 25%;
       width: 50%;
       max-height: 50%; } }
+  @media only screen and (max-height: 800px) {
+    .modal {
+      left: 10%;
+      width: 80%;
+      top: 12.5%;
+      max-height: 75%; } }
   .modal__content {
     position: relative;
     width: 100%;
@@ -4708,9 +4714,13 @@ a.cincyselect, a.clandselect {
     @media (min-width: 56.25rem) {
       .modal__content {
         padding-top: 5.625rem;
-        padding-right: 11.875rem;
+        padding-right: 5.25rem;
         padding-bottom: 5.625rem;
-        padding-left: 11.875rem; } }
+        padding-left: 5.25rem; } }
+    @media only screen and (max-height: 800px) {
+      .modal__content {
+        padding-right: 3rem;
+        padding-left: 3rem; } }
   .modal__close {
     position: absolute;
     z-index: 10;

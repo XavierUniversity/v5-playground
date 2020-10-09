@@ -2078,9 +2078,7 @@ hr {
     padding-bottom: 0.9375rem;
     padding-left: 4.375rem;
     display: inline-block;
-    margin-top: 1rem;
-    width: 100%;
-    display: block; }
+    margin-top: 1rem; }
     .c-btn--hero:hover, .c-btn--hero:focus, .c-btn--hero:active, .btn--hero:hover, .c-btn--hero-alt:hover, .btn--hero-alt:hover, .btn--hero:focus, .c-btn--hero-alt:focus, .btn--hero-alt:focus, .btn--hero:active, .c-btn--hero-alt:active, .btn--hero-alt:active {
       background: white;
       color: black;
@@ -2089,14 +2087,6 @@ hr {
       padding-right: 4.375rem;
       padding-bottom: 0.9375rem;
       padding-left: 4.375rem; }
-    @media (min-width: 37.5rem) {
-      .c-btn--hero:first-of-type:nth-last-child(2),
-      .c-btn--hero:first-of-type:nth-last-child(2) ~ a, .btn--hero:first-of-type:nth-last-child(2), .c-btn--hero-alt:first-of-type:nth-last-child(2), .btn--hero-alt:first-of-type:nth-last-child(2),
-      .btn--hero:first-of-type:nth-last-child(2) ~ a,
-      .c-btn--hero-alt:first-of-type:nth-last-child(2) ~ a,
-      .btn--hero-alt:first-of-type:nth-last-child(2) ~ a {
-        display: inline-block;
-        width: calc(50% - 0.5rem); } }
     @media (max-width: 36.5rem) {
       .c-btn--hero, .btn--hero, .c-btn--hero-alt, .btn--hero-alt {
         padding-top: 0.9375rem;

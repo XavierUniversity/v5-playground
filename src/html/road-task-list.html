@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">          
+      <section class="hero hero--content">
+        <a class="hero--content__title" href="#">Department of Lorem Ipsum</a>
+      </section> 
+      <section class="wrapper">    
+        <div class="content-page">
+          <div class="content-page__breadcrumbs">
+            include "includes/breadcrumbs.html"
+          </div>
+          
+          <div class="content-page--nav sidenav">
+            <button class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu" aria-label="Toggle Menu">Menu<svg class="icon sidenav__icon sidenav__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon sidenav__icon sidenav__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+            
+            <nav id="content-menu" class="sidenav__content" aria-label="">
+              <ul class="nav-list content-page--nav__list">
+                <li class="content-page--nav__item"><a class="content-page--nav__link active" href="#">Nav Item One</a></li>
+              
+                  <ul class="nav-list content-page--subnav__list">
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Sub Nav Item</a></li>
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Really Long Subnav Item Name That Wraps Around to the Next Line</a></li>
+                  </ul>
+              
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Second Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Nav Item Number Three That is Long and Wraps Around to the Next Line</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Here is the Fourth Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Fifth and Final Nav Item</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+          <div class="content-page--main">
+            <button aria-label="Toggle Content" class="o-btn tabs__title accordion__btn" data-category="accordion" data-toggle="#item-1">
+              <span>Complete your Road to Xavier Profile (<strong>Due:</strong> TBD)</span> 
+              <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div class="accordion__content" id="item-1">
+              <p>Update your Road to Xavier profile to help you meet other incoming students. You can indicate your interests and share your social links to get to know the class of 2025.</p>                      
+              <p><a class="btn btn--pacific-blue btn--inline" href="https://www.xavier.edu/account/?edit">Update Profile</a></p>
+            </div>
+            
+            <button aria-label="Toggle Content" class="o-btn tabs__title accordion__btn" data-category="accordion" data-toggle="#item-2">
+              <span>Make your Commitment to Xavier (<strong>Due:</strong> TBD)</span>
+              <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div class="accordion__content" id="item-2">
+              <p>Once you have made your final decision that Xavier is the right place for you, all you need to do to secure your spot in the class is make your commitment. The deposit is $500 and can be <a href="https://www.xavier.edu/deposit">submitted online</a> or by check. <a href="https://www.xavier.edu/deposit">Visit the deposit page for more information.</a></p>
+              <p>This task will be automatically marked complete once your deposit has been processed by Road to Xavier, which can take up to 1 business day from the date you make your deposit.</p>                      
+              <p><a class="btn btn--pacific-blue btn--inline" href="https://www.xavier.edu/deposit">Make your commitment to Xavier</a></p>
+            </div>
+            
+            <button aria-label="Toggle Content" class="o-btn tabs__title accordion__btn" data-category="accordion" data-toggle="#item-3">
+              <span>Earn a $500 Grant by Submitting your FAFSA Earl (<strong>Due:</strong> Dec 1, 2020)</span>
+              <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div class="accordion__content" id="item-3">
+              <p>Apply to Xavier and file the FAFSA before December 1 to be eligible for a $500 Early Filers Grant. View more about eligibility details at <a href="https://www.xavier.edu/grant-details">xavier.edu/grant-details</a>.</p>
+              <p>If you want to be considered for need-based financial assistance, complete the Free Application for Federal Student Aid (FAFSA)&#160;<a href="https://xavier.edu/fafsa-tips" rel="noopener" target="_blank">online</a>&#160;or request a paper copy of the FAFSA from 800-4FED-AID.The Free Application for Federal Student Aid opened on October 1. <strong>When applying, be sure to list Xavier&#8217;s federal school code: 003144.</strong> If you have filed your tax return, select the IRS Data Retrieval option to automatically transfer tax information and save time.</p>                      
+              <p><a class="btn btn--pacific-blue btn--inline" href="https://xavier.edu/fafsa-tips">File Your FAFSA</a></p>
+            </div> 
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

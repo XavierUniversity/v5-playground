@@ -6854,6 +6854,182 @@ section {
     height: 3rem;
     width: 3rem; }
 
+.task-list .task {
+  border: solid 0.1rem white; }
+  .task-list .task:nth-child(even) .heading {
+    background: white; }
+
+.task-list .item {
+  background: none;
+  border: none;
+  display: inline-block;
+  width: auto;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.3; }
+  .task-list .item .date {
+    font-size: 1.4rem;
+    font-weight: 200; }
+  .task-list .item .fa {
+    color: #007DB3; }
+
+.task-list .category {
+  float: right;
+  padding: 0.4rem 0.6rem;
+  border: solid 1px;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0.75rem; }
+  .task-list .category.academic {
+    border-color: #007DB3;
+    color: #007DB3; }
+  .task-list .category.housing {
+    border-color: #0B223F;
+    color: #0B223F; }
+  .task-list .category.financial {
+    border-color: #198644;
+    color: #198644; }
+  .task-list .category.student-success {
+    border-color: #007DB3;
+    color: #007DB3; }
+  .task-list .category.student-involvement {
+    border-color: #9F6000;
+    color: #9F6000; }
+
+.task-list .item-data {
+  background: white;
+  border: none;
+  border-top: solid 0.1rem white; }
+
+.task-list .checkbox {
+  display: inline-block; }
+  .task-list .checkbox input[type="checkbox"] {
+    opacity: 0; }
+    .task-list .checkbox input[type="checkbox"] + label::after {
+      content: none; }
+    .task-list .checkbox input[type="checkbox"]:checked + label::after {
+      content: ""; }
+    .task-list .checkbox input[type="checkbox"]:checked + label::before {
+      background: #007DB3; }
+    .task-list .checkbox input[type="checkbox"]:focus + label::before {
+      outline: #3b99fc auto 5px; }
+    .task-list .checkbox input[type="checkbox"]:disabled + label::before {
+      background: white;
+      border: 1px solid #F0F2F3;
+      cursor: not-allowed; }
+  .task-list .checkbox label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    top: -0.75rem; }
+    .task-list .checkbox label::before, .task-list .checkbox label::after {
+      position: absolute;
+      content: "";
+      display: inline-block; }
+    .task-list .checkbox label::before {
+      height: 24px;
+      width: 24px;
+      border: 1px solid #007DB3;
+      left: 0px; }
+    .task-list .checkbox label::after {
+      height: 7px;
+      width: 16px;
+      border-left: 3px solid white;
+      border-bottom: 3px solid white;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      left: 4px;
+      top: 7px; }
+
+.task-list .completed .item {
+  text-decoration: line-through;
+  color: #666666;
+  font-style: italic; }
+
+.button--task {
+  margin-top: 1.5rem; }
+
+#taskList [type='range'] {
+  -webkit-appearance: none;
+  margin: 12px 0; }
+  #taskList [type='range']:focus {
+    outline: 0; }
+    #taskList [type='range']:focus::-webkit-slider-runnable-track {
+      background: #fbfbfc; }
+    #taskList [type='range']:focus::-ms-fill-lower {
+      background: #eceff1; }
+    #taskList [type='range']:focus::-ms-fill-upper {
+      background: #fbfbfc; }
+  #taskList [type='range']::-webkit-slider-runnable-track {
+    cursor: pointer;
+    height: 8px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%;
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px; }
+  #taskList [type='range']::-webkit-slider-thumb {
+    background: #0099CC;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    -webkit-appearance: none;
+    margin-top: -10px; }
+  #taskList [type='range']::-moz-range-track {
+    cursor: pointer;
+    height: 8px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%;
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px; }
+  #taskList [type='range']::-moz-range-thumb {
+    background: #0099CC;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem; }
+  #taskList [type='range']::-ms-track {
+    cursor: pointer;
+    height: 8px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    border-width: 12px 0;
+    color: transparent; }
+  #taskList [type='range']::-ms-fill-lower {
+    background: #dde3e6;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px; }
+  #taskList [type='range']::-ms-fill-upper {
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px; }
+  #taskList [type='range']::-ms-thumb {
+    background: #0099CC;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-top: 0; }
+
+#taskList output {
+  background: #007DB3;
+  color: white;
+  padding: 0.5rem;
+  margin: -10rem 1rem 0;
+  display: inline-block; }
+
 /*
 	Improved screen reader only CSS class
 	@author Gaël Poupard

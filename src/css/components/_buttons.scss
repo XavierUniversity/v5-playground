@@ -44,7 +44,7 @@
     
     @include for-size("phone-only"){
       width: 80% !important;
-      @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
+      @include padding(px-to-rem(25px), px-to-rem(16px), px-to-rem(25px), px-to-rem(16px));
       border-radius: px-to-rem(23px);
       
       &:hover, &:focus{

@@ -2090,10 +2090,11 @@ hr {
     @media (max-width: 36.5rem) {
       .c-btn--hero, .btn--hero, .c-btn--hero-alt, .btn--hero-alt {
         width: 80% !important;
-        padding-top: 1.5625rem;
-        padding-right: 1rem;
-        padding-bottom: 1.5625rem;
-        padding-left: 1rem;
+        margin-bottom: 0;
+        padding-top: 0.9375rem;
+        padding-right: 2rem;
+        padding-bottom: 0.9375rem;
+        padding-left: 2rem;
         border-radius: 1.4375rem; }
         .c-btn--hero:hover, .c-btn--hero:focus, .btn--hero:hover, .c-btn--hero-alt:hover, .btn--hero-alt:hover, .btn--hero:focus, .c-btn--hero-alt:focus, .btn--hero-alt:focus {
           padding-right: 2rem;

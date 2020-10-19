@@ -81,6 +81,17 @@
       @include padding(px-to-rem(10.4px), px-to-rem(20px), px-to-rem(10.4px), px-to-rem(20px));
     }
   }
+  
+  &--secondary {
+	  background: transparent;
+    border-color: #007DB3;
+    color: #007DB3;
+    &:hover, &:focus, &:active {
+	    background: #007DB3;
+      border-color: #007DB3;
+      color: white;
+    }
+  }
 }
 
 .action{

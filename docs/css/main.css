@@ -2127,6 +2127,14 @@ hr {
       padding-right: 1.25rem;
       padding-bottom: 0.65rem;
       padding-left: 1.25rem; }
+  .c-btn--secondary, .btn--secondary {
+    background: transparent;
+    border-color: #007DB3;
+    color: #007DB3; }
+    .c-btn--secondary:hover, .c-btn--secondary:focus, .c-btn--secondary:active, .btn--secondary:hover, .btn--secondary:focus, .btn--secondary:active {
+      background: #007DB3;
+      border-color: #007DB3;
+      color: white; }
 
 .action button {
   font-weight: 200;

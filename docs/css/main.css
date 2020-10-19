@@ -6854,49 +6854,60 @@ section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  padding-right: 3rem;
-  padding-left: 3rem; }
-  @media (min-width: 112.5rem) {
+  padding-top: 2.1875rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem; }
+  @media (min-width: 37.5rem) {
+    .tour {
+      padding-right: 3rem;
+      padding-left: 3rem; } }
+  @media (min-width: 85rem) {
     .tour {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-              flex-direction: row;
-      -webkit-box-pack: center;
-              justify-content: center; } }
+              flex-direction: row; } }
   .tour__content {
-    align-self: center;
     color: white;
-    padding-top: 4.375rem;
-    padding-bottom: 4.375rem;
-    padding-right: 4.375rem;
-    padding-left: 4.375rem; }
+    padding-bottom: 1.75rem; }
     .tour__content p {
       font-size: 18px;
       font-size: 1.125rem;
       line-height: 1.3333333333; }
   .tour__title {
-    color: white;
-    font-size: 48px;
-    font-size: 3rem;
-    line-height: 1; }
-  .tour__btn {
-    padding-top: 1.75rem;
-    padding-right: 4.25rem;
-    padding-bottom: 1.75rem;
-    padding-left: 4.25rem;
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.3333333333;
-    margin-right: auto;
-    margin-left: auto; }
-    .tour__btn:hover, .tour__btn:active, .tour__btn:focus {
-      padding-top: 1.75rem;
-      padding-right: 4.25rem;
-      padding-bottom: 1.75rem;
-      padding-left: 4.25rem; }
+    color: white; }
+    @media (min-width: 37.5rem) {
+      .tour__title {
+        font-size: 48px;
+        font-size: 3rem;
+        line-height: 1; } }
   .tour__img {
-    align-self: flex-end;
-    float: right; }
+    align-self: center;
+    display: block;
+    width: 65%; }
+    @media (min-width: 56.25rem) {
+      .tour__img {
+        display: none; } }
+    @media (min-width: 112.5rem) {
+      .tour__img {
+        display: block;
+        align-self: flex-end; } }
+  .tour__btn {
+    background: #1B4675;
+    color: white;
+    display: inline-block;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding-top: 1.125rem;
+    padding-right: 2rem;
+    padding-bottom: 1.125rem;
+    padding-left: 2rem; }
+    .tour__btn:hover, .tour__btn:focus {
+      background: #0B223F; }
 
 .task-list .task {
   border: solid 0.1rem white; }

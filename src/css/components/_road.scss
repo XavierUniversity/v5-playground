@@ -5,23 +5,19 @@
   background-position: center center;
   display: flex;
   flex-direction: column;
-  @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
+  @include padding(px-to-rem(35px), px-to-rem(20px), null, px-to-rem(20px));
   
-  @include for-size("big-desktop-up"){
-    flex-direction: row;
-    justify-content: center;  
+  @include for-size("tablet-portrait-up"){
+    @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
+  
+  @include for-size("desktop-up"){
+    flex-direction: row;
+  }
+  
   &__content{
-    align-self: center;
     color: white;
-    @include padding(px-to-rem(70px), null, px-to-rem(70px), null); 
-//     @include for-size('tablet-portrait-up'){
-//       @include padding(null, px-to-rem(30px), null, px-to-rem(30px));   
-//     }
-//     @include for-size('big-desktop-up'){
-      @include padding(null, px-to-rem(70px), null, px-to-rem(70px)); 
-//     }
-    
+    @include padding(null, null, px-to-rem(28px), null);
     p{
       @include font-size(18px);
     }
@@ -29,30 +25,41 @@
   
   &__title{
     color: white;
-//     @include for-size('desktop-up'){
+    @include for-size("tablet-portrait-up"){
       @include font-size(48px);  
-//     }
+    }
+  }
+  
+  &__img{
+    align-self: center;
+    display: block;
+    width: 65%;
     
+    @include for-size("tablet-landscape-up"){
+      display: none;
+    }
+    
+    @include for-size("big-desktop-up"){
+      display: block;
+      align-self: flex-end;
+    }
   }
   
   &__btn{
-    @include padding(px-to-rem(28px), px-to-rem(68px), px-to-rem(28px), px-to-rem(68px));
-    @include font-size(18px);
-    @include margin(null, auto, null, auto);
-    
-//     @include for-size('desktop-up'){
-//       @include margin(null, none, null, none);  
-//     }
-    
-    &:hover, &:active, &:focus{
-      @include padding(px-to-rem(28px), px-to-rem(68px), px-to-rem(28px), px-to-rem(68px));
+    background: $medBlueHover;
+    color: white;
+    display: inline-block;
+    border-radius: px-to-rem(8px);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: max-content;
+    @include padding(px-to-rem(18px), px-to-rem(32px), px-to-rem(18px), px-to-rem(32px));
+    @include for-size("tablet-portrait-up"){
     }
-  }
-  &__img{
-    align-self: flex-end;
-    float: right;
-//     @include for-size('desktop-up'){
-//       display: inline;
-//     }
+    
+    &:hover, &:focus {
+      background: $darkNavy;
+    }
   }
 }

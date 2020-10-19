@@ -6846,29 +6846,57 @@ section {
 
 .tour {
   position: relative;
-  height: 380px;
-  width: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding-right: 3rem;
+  padding-left: 3rem; }
+  @media (min-width: 112.5rem) {
+    .tour {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-pack: center;
+              justify-content: center; } }
+  .tour__content {
+    align-self: center;
+    color: white;
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    padding-right: 4.375rem;
+    padding-left: 4.375rem; }
+    .tour__content p {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.3333333333; }
+  .tour__title {
+    color: white;
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 1; }
   .tour__btn {
-    color: rgba(255, 255, 255, 0.75);
-    background: rgba(11, 34, 63, 0.75);
-    border-radius: 100%;
-    padding-top: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem; }
-    .tour__btn:hover, .tour__btn:focus {
-      color: white;
-      background: #0B223F; }
-  .tour__icon {
-    height: 3rem;
-    width: 3rem; }
+    padding-top: 1.75rem;
+    padding-right: 4.25rem;
+    padding-bottom: 1.75rem;
+    padding-left: 4.25rem;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+    margin-right: auto;
+    margin-left: auto; }
+    .tour__btn:hover, .tour__btn:active, .tour__btn:focus {
+      padding-top: 1.75rem;
+      padding-right: 4.25rem;
+      padding-bottom: 1.75rem;
+      padding-left: 4.25rem; }
+  .tour__img {
+    align-self: flex-end;
+    float: right; }
 
 .task-list .task {
   border: solid 0.1rem white; }

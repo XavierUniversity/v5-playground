@@ -1,26 +1,58 @@
 .tour{
   position: relative;
-  height: 380px;
-  width: 100%;
-//   background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   
-  &__btn{
-    color: rgba(white, 0.75);
-    background: rgba($darkNavy, 0.75);
-    border-radius: 100%;
-    @include padding( px-to-rem(24px), px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+  @include for-size("big-desktop-up"){
+    flex-direction: row;
+    justify-content: center;  
+  }
+  &__content{
+    align-self: center;
+    color: white;
+    @include padding(px-to-rem(70px), null, px-to-rem(70px), null); 
+//     @include for-size('tablet-portrait-up'){
+//       @include padding(null, px-to-rem(30px), null, px-to-rem(30px));   
+//     }
+//     @include for-size('big-desktop-up'){
+      @include padding(null, px-to-rem(70px), null, px-to-rem(70px)); 
+//     }
     
-    &:hover, &:focus{
-      color: white;
-      background: $darkNavy;
+    p{
+      @include font-size(18px);
     }
   }
-  &__icon{
-    height: px-to-rem(48px);
-    width: px-to-rem(48px);
+  
+  &__title{
+    color: white;
+//     @include for-size('desktop-up'){
+      @include font-size(48px);  
+//     }
+    
+  }
+  
+  &__btn{
+    @include padding(px-to-rem(28px), px-to-rem(68px), px-to-rem(28px), px-to-rem(68px));
+    @include font-size(18px);
+    @include margin(null, auto, null, auto);
+    
+//     @include for-size('desktop-up'){
+//       @include margin(null, none, null, none);  
+//     }
+    
+    &:hover, &:active, &:focus{
+      @include padding(px-to-rem(28px), px-to-rem(68px), px-to-rem(28px), px-to-rem(68px));
+    }
+  }
+  &__img{
+    align-self: flex-end;
+    float: right;
+//     @include for-size('desktop-up'){
+//       display: inline;
+//     }
   }
 }

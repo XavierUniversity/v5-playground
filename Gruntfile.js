@@ -22,6 +22,7 @@ module.exports = function (grunt) {
 		// Compile SASS (uses Compass, follow Ruby Install instructions)
 		sass: {
   		options: {
+    		outputStyle: 'compressed',
   			implementation: sass,
   			sourceMap: true
   		},

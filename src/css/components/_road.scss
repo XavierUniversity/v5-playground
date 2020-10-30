@@ -33,7 +33,6 @@
     display: block;
     align-self: flex-end;
     @include for-size("phone-only"){
-      width: 65%;  
       align-self: center;
     }
   }

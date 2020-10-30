@@ -729,16 +729,16 @@ $(document).on("click", "[data-toggle]", function(e){
 var vid = document.querySelector(".hero video");
 if ( !detectmob() && vid !== null ) { 
   var button = document.createElement("button");
-  button.innerHTML = '<svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
+  button.innerHTML = '<span class="sr-only">Pause Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
   button.style.cssText = "position: absolute; bottom: 3rem; right: 2rem; z-index: 100; padding: 1rem;";
   button.className = "o-btn";
   button.addEventListener('click', function(e){
     if ( vid.paused ) {
       vid.play();
-      button.innerHTML = '<svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
+      button.innerHTML = '<span class="sr-only">Play Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
     } else {
       vid.pause();
-      button.innerHTML = '<svg height="32" width="32" fill="white"><use xlink:href="#xu-play"/></svg>';
+      button.innerHTML = '<span class="sr-only">Pause Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-play"/></svg>';
     }
   });
   vid.innerHTML = '<source src="'+vid.getAttribute('data-bgvideo')+'" type="video/mp4" />';

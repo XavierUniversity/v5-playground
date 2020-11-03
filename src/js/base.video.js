@@ -9,11 +9,11 @@ if ( !detectmob() && vid !== null ) {
     if ( vid.paused ) {
       vid.play();
       button.innerHTML = '<span class="sr-only">Play Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
-      dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'video', 'eventAction' : 'click', 'eventLabel' : 'play'});
+      dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'BG Video', 'eventAction' : 'click', 'eventLabel' : 'play'});
     } else {
       vid.pause();
       button.innerHTML = '<span class="sr-only">Pause Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-play"/></svg>';
-      dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'video', 'eventAction' : 'click', 'eventLabel' : 'pause'});
+      dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'BG Video', 'eventAction' : 'click', 'eventLabel' : 'pause'});
     }
   });
   vid.innerHTML = '<source src="'+vid.getAttribute('data-bgvideo')+'" type="video/mp4" />';

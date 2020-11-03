@@ -5,6 +5,7 @@
   background-position: center center;
   display: flex;
   flex-direction: column;
+//   justify-content: space-between;
 
   @include padding(px-to-rem(35px), px-to-rem(20px), null, px-to-rem(20px));
   
@@ -31,6 +32,7 @@
   
   &__img{
     display: block;
+    width: 100%;
     align-self: flex-end;
     @include for-size("phone-only"){
       align-self: center;

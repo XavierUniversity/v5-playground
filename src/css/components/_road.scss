@@ -13,7 +13,7 @@
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
   }
   
-  @include for-size("desktop-up"){
+  @include for-size("tablet-portrait-up"){
     flex-direction: row;
   }
   
@@ -32,7 +32,7 @@
   
   &__img{
     display: block;
-    width: 100%;
+    width: 200%;
     align-self: flex-end;
     @include for-size("phone-only"){
       align-self: center;

@@ -723,7 +723,7 @@ $(document).on("click", "[data-toggle]", function(e){
   $(this).prev().attr('aria-expanded', function (i, attr) {
     return attr == 'true' ? 'false' : 'true'
   });
-  $('[data-toggle='+list+']').toggleClass("on");
+  $('[data-toggle="'+list+'"]').toggleClass("on");
 });
 // Need to see if we are on a mobile device. If we aren't, let's post the video!
 var vid = document.querySelector(".hero video");

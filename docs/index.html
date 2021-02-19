@@ -18,7 +18,7 @@
     <nav aria-label="Skip Link">
       <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
     </nav>
-    <section aria-labelledby="campus-alert-heading" style="top: 0;">
+    <section aria-labelledby="campus-alert-heading">
       <div class="alert alert--danger">
         <div class="alert--danger__icon">
           <span class="fa" aria-hidden="true"></span>
@@ -28,6 +28,7 @@
           
           <p>Xavier University will move to a remote learning format. More information at <a href="/coronavirus">xavier.edu/coronavirus</a>.</p>
         </div>
+        <button id="close-alert" class="o-btn" style="position: absolute;top: 1rem;right: 1rem;">X <span class="sr-only">Close Alert</span></button>
       </div>
     </section>
     <header>
@@ -391,7 +392,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <!-- <script src="js/plugins.js"></script> -->
-    <script src="js/base.min.js"></script>
+    <script src="js/base.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
         <script>
             $("#vid-btn").click(function(){

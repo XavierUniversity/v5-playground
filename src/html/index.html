@@ -15,7 +15,7 @@
   </head>
   <body>
     include "includes/header.accessibility.html"
-    <section aria-labelledby="campus-alert-heading" style="top: 0;">
+    <section aria-labelledby="campus-alert-heading">
       <div class="alert alert--danger">
         <div class="alert--danger__icon">
           <span class="fa" aria-hidden="true"></span>
@@ -25,6 +25,7 @@
           
           <p>Xavier University will move to a remote learning format. More information at <a href="/coronavirus">xavier.edu/coronavirus</a>.</p>
         </div>
+        <button id="close-alert" class="o-btn" style="position: absolute;top: 1rem;right: 1rem;">X <span class="sr-only">Close Alert</span></button>
       </div>
     </section>
     <header>

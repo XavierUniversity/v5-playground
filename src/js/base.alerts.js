@@ -1,7 +1,7 @@
 var alert   = document.querySelector('.alert');
 var header  = document.querySelector('.header');
 var button  = document.getElementById('close-alert') !== null;
-var expires = alert.dataset.date;
+var expires = alert !== null ? alert.dataset.date : false;
 
 if ( alert !== null && header.classList.contains('header--fixed') ){
   var styles = 'position: absolute; top: 58px; width: 100%; z-index: 10;';

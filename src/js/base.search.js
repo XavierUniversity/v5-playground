@@ -105,7 +105,7 @@ function search(query){
     $.each(a.response.curator.exhibits, function(index, item){
       resultHTML += buildBestBets(item);
     });
-    resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query + '</em></p>';
+    resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query.replace(/(<([^>]+)>)/ig, '') + '</em></p>';
     
     $.each(results, function(index, item){
       resultHTML += buildResult(item);

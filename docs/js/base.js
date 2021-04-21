@@ -87,7 +87,7 @@ $('.track').on('click', function(e){
 $(".form--ajax").on('submit', function(e){
   e.preventDefault();
   $form = $(this);
-  url = '/includes/data.php';
+  url = '/includes/data';
   $.ajax({
     type: "POST",
     url: url,
@@ -118,7 +118,7 @@ $(".form--ajax").on('submit', function(e){
 $(".form--ajax--lookup").on('submit', function(e){
   e.preventDefault();
   $form = $(this);
-  url = '/includes/data.php';
+  url = '/includes/data';
   $.ajax({
     type: "POST",
     url: url,
@@ -139,7 +139,7 @@ if ( instas.length > 0 ){
     var insta = $(instas[i]).data('image');
     $.ajax({
       dataType: "json",
-      url: "https://www.xavier.edu/_V5/api/insta.php",
+      url: "https://www.xavier.edu/_V5/api/insta",
       data: { instagram_post : insta }
     }).done(function(d){
       var parent = $("[data-image='"+ insta +"']");
@@ -685,6 +685,14 @@ window.onscroll = function(e) {
   }
   
 }
+function wrap(top, selector, bottom){
+  var matches = document.querySelectorAll(selector);
+  for (var i = 0; i < matches.length; i++){
+    var modified = top + matches[i].outerHTML + bottom;
+    matches[i].outerHTML = modified;
+  }
+}
+wrap("<div style='display: grid;'><div class='resp-table'>", "table:not(.no-resp)", "</div></div>"); 
 var Tabs = {
   init: function() {
     this.bindUIfunctions();

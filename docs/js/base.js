@@ -1,4 +1,4 @@
-var alert   = document.querySelector('.alert');
+var alert   = document.querySelector('.alert--campus-alert');
 var header  = document.querySelector('.header');
 var button  = document.getElementById('close-alert') !== null;
 var expires = alert !== null ? alert.dataset.date : false;
@@ -685,11 +685,7 @@ window.onscroll = function(e) {
   }
   
 }
-const tables = document.querySelectorAll("table");
-tables.forEach(table => {
-  if ( table.classList.contains("no-resp")){
-  } else {
-    function wrap(top, selector, bottom){
+function wrap(top, selector, bottom){
   var matches = document.querySelectorAll(selector);
   for (var i = 0; i < matches.length; i++){
     var modified = top + matches[i].outerHTML + bottom;
@@ -697,45 +693,7 @@ tables.forEach(table => {
   }
 }
 wrap("<div style='display: grid;'><div class='resp-table'>", "table:not(.no-resp)", "</div></div>");
-   }; 
-});
-var Tabs = {
-  init: function() {
-    this.bindUIfunctions();
-    this.pageLoadCorrectTab();
-  },
-  bindUIfunctions: function() {
-    // Delegation
-    $(document)
-      .on("click", ".tabs a[href^='#']:not('.visible')", function(event) {
-        Tabs.changeTab(this.hash);
-        event.preventDefault();
-      })
-      .on("click", ".tabs a.visible", function(event) {
-        event.preventDefault();
-      });
-  },
-  changeTab: function(hash) {
-    var anchor = $('[href="' + hash + '"]');
-    var div = $(hash);
-    var btn = $('[data-toggle="' + hash + '"]');
-    // activate correct anchor (visually)
-    anchor.addClass("visible").parent().siblings().find("a").removeClass("visible");
-    anchor.addClass('on').parent().siblings().find('a').removeClass('on');
-    btn.addClass('on').parent().siblings().find('button').removeClass('on');
-    // activate correct div (visually)
-    div.addClass("visible").siblings().removeClass("visible");
-    // update URL, no history addition
-    window.history.replaceState("", "", hash);
-  },
-  // If the page has a hash on load, go to that tab
-  pageLoadCorrectTab: function() {
-    if ( document.location.hash != ""){
-      this.changeTab(document.location.hash);
-    }
-  }
-}
-Tabs.init();
+
 /**
   * base.toggles.js
   * =======================

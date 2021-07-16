@@ -68,12 +68,12 @@ function buildResult(object){
 }
 
 function buildBestBets(object){
-  var title = object.titleHtml;
-  var summary  = object.descriptionHtml;
-  var url   = '<span class="search__url">' + object.displayUrl + '</span>';
-  var link  = object.linkUrl;
+  var title = object.title;
+  var summary  = object.bodyLines[0].title;
+  var url   = '<span class="search__url">' + object.link + '</span>';
+  var link  = object.link;
   
-  var open = '<a href="https://search.xavier.edu' + link + '" class="search__result search__result--bet">';
+  var open = '<a href="' + link + '" class="search__result search__result--bet">';
   var close = '</a>';
   var html = '$open';
       html += '<h2 class="search__title">$title</h2>';
@@ -91,19 +91,12 @@ function buildBestBets(object){
 }
 
 function search(query){
-  
-  // New API URL 10,000 query per day: https://www.googleapis.com/customsearch/v1?[parameters]
-  // Site Restricted (no limit): https://www.googleapis.com/customsearch/v1/siterestrict?[parameters]
-  // New API Key: ***REMOVED***
-  // OLD search API: url: 'https://search.xavier.edu/s/search.json',
   var resultHTML = '';
   $.ajax({
     url: 'https://www.googleapis.com/customsearch/v1/siterestrict',
     method: 'GET',
     data: query
   }).done(function(a, b){
-    console.log(a);
-    
 //     var tabs = searchArray("Tabs", 'name', a.response.facets);
     var queries = a.queries; // Query information, including Next, Previous and request details
     var request = queries.request[0]; // Contains the current count, startIndex and total results
@@ -111,11 +104,12 @@ function search(query){
     var results = a.items;
     
 //     buildTabs(tabs.allValues);
-//     $.each(a.response.curator.exhibits, function(index, item){
-//       resultHTML += buildBestBets(item);
-//     });
+    if ( a.promotions !== undefined ) {
+      $.each(a.promotions, function(index, item){
+        resultHTML += buildBestBets(item);
+      });
+    }
     resultHTML += '<p class="search__count">Showing results '+ request.startIndex + '-' + (request.startIndex + request.count) +' out of '+ summary.formattedTotalResults +' results for: <em>' + request.searchTerms + '</em></p>';
-    
 
     $.each(results, function(index, item){
       resultHTML += buildResult(item);

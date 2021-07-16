@@ -30,21 +30,18 @@ function buildTabs(tabArray, id){
 
 function buildResult(object){
   var title = object.title.replace(" | Xavier University", '');
-  var open = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'" class="search__result">';
+  var open = '<a href="'+object.link+'" class="search__result">';
   var close = '</a>';
-  var url = '<span class="search__url">'+object.liveUrl+'</span>';
-  var summary = object.summary;
+  var url = '<span class="search__url">'+object.htmlFormattedUrl+'</span>';
+  var summary = object.htmlSnippet;
   var html = '$open';
       html += '<h2 class="search__title">$title</h2>';
       html += '<p class="search__content">';
       html += '$liveUrl';
       html += '<span class="search__description">$description</span>';
-      html += '<span class="search__tag">'+object.collection.replace('xavu-','')+'</span>';
-      if ( typeof object.metaData.stencilsCourseLevel !== 'undefined' ){
-        html += '<span class="search__tag">' + object.metaData.stencilsCourseLevel + '</span>';
-      }
       html += '</p>$close';
   var tags = '';
+/*
   if ( object.collection == "xavu-people" ){
     open = '<div class="search__result">';
     close = '</div>';
@@ -56,9 +53,12 @@ function buildResult(object){
     title = '<a href="https://search.xavier.edu'+object.clickTrackingUrl+'">' + object.metaData.stencilsPeopleFirstName + '</a>';
     summary = img + '<strong>' + object.metaData.stencilsPeoplePosition + '</strong><br />' + email + phone + loc;
   }
+*/
+/*
   if ( object.collection == "xavu-programs" ){
     summary = object.metaData.stencilsCourseDesc;
   }
+*/
   html = html.replace("$open", open);
   html = html.replace("$title", title);
   html = html.replace("$liveUrl", url);
@@ -91,28 +91,38 @@ function buildBestBets(object){
 }
 
 function search(query){
+  
+  // New API URL 10,000 query per day: https://www.googleapis.com/customsearch/v1?[parameters]
+  // Site Restricted (no limit): https://www.googleapis.com/customsearch/v1/siterestrict?[parameters]
+  // New API Key: AIzaSyAdc6aUcU8cbvUqDTGhMaYRUf0wNkRWTHM
+  // OLD search API: url: 'https://search.xavier.edu/s/search.json',
   var resultHTML = '';
   $.ajax({
-    url: 'https://search.xavier.edu/s/search.json',
+    url: 'https://www.googleapis.com/customsearch/v1/siterestrict',
     method: 'GET',
-    data: query 
+    data: query
   }).done(function(a, b){
-    var tabs = searchArray("Tabs", 'name', a.response.facets);
-    var nav = a.response.customData.stencilsPaging;
-    var summary = a.response.resultPacket.resultsSummary;
-    var results = a.response.resultPacket.results;
-    buildTabs(tabs.allValues);
-    $.each(a.response.curator.exhibits, function(index, item){
-      resultHTML += buildBestBets(item);
-    });
-    resultHTML += '<p class="search__count">Showing results '+ summary.currStart + '-' + summary.currEnd +' out of '+ summary.totalMatching +' results for: <em>' + a.question.query.replace(/(<([^>]+)>)/ig, '') + '</em></p>';
+    console.log(a);
     
+//     var tabs = searchArray("Tabs", 'name', a.response.facets);
+    var queries = a.queries; // Query information, including Next, Previous and request details
+    var request = queries.request[0]; // Contains the current count, startIndex and total results
+    var summary = a.searchInformation; // Contains human readable information
+    var results = a.items;
+    
+//     buildTabs(tabs.allValues);
+//     $.each(a.response.curator.exhibits, function(index, item){
+//       resultHTML += buildBestBets(item);
+//     });
+    resultHTML += '<p class="search__count">Showing results '+ request.startIndex + '-' + (request.startIndex + request.count) +' out of '+ summary.formattedTotalResults +' results for: <em>' + request.searchTerms + '</em></p>';
+    
+
     $.each(results, function(index, item){
       resultHTML += buildResult(item);
     });
-    
-    var prev = ( nav.previousUrl !== null ) ? '<a href="'+nav.previousUrl+'" class="search__nav" title="Previous page of search results">Previous</a>' : '';
-    var next = ( nav.nextUrl !== null ) ? '<a href="'+nav.nextUrl+'" class="search__nav" title="Next page of search results">Next</a>' : '';
+
+    var prev = ( queries.previousPage !== undefined ) ? '<a href="#" data-start="'+queries.previousPage[0].startIndex+'" class="search__nav" title="Previous page of search results">Previous</a>' : '';
+    var next = ( queries.nextPage !== undefined ) ? '<a href="#" data-start="'+queries.nextPage[0].startIndex+'" class="search__nav" title="Next page of search results">Next</a>' : '';
     resultHTML += '<div class="search__nav-container">' + prev + next + '</div>';
     if ( resultHTML.length > 1 ){
       $(".search__results").html('<h1 class="sr-only">Search Results</h1>' + resultHTML);
@@ -139,7 +149,8 @@ $("#header-search").on("submit", function(e){
 
 $(document).on('click', '.search__nav', function(e){
   e.preventDefault();
-  search($(this).attr('href').replace('?',''));
+  $('#start').val($(this).data('start'));
+  $("#header-search").submit();
   
 });
 

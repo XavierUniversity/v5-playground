@@ -5,4 +5,4 @@ function wrap(top, selector, bottom){
     matches[i].outerHTML = modified;
   }
 }
-wrap("<div style='display: grid;'><div class='resp-table'>", "table:not(.no-resp)", "</div></div>"); 
+wrap("<div style='display: grid;'><div class='resp-table'>", "table:not(.no-resp)", "</div></div>");

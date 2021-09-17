@@ -1,4 +1,4 @@
-var alert   = document.querySelector('.alert');
+var alert   = document.querySelector('.alert--campus-alert');
 var header  = document.querySelector('.header');
 var button  = document.getElementById('close-alert') !== null;
 var expires = alert !== null ? alert.dataset.date : false;

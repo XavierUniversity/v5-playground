@@ -5,12 +5,16 @@
   background-size: cover;
   background-position: center bottom;
   @include padding(px-to-rem(24px), px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
-  @include margin(px-to-rem(48px), null, px-to-rem(48px), null);
+  @include margin(px-to-rem(24px), null, px-to-rem(24px), null);
   color: white;
-  display: flex;
-  flex: 0 1;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  
+  @include for-size("tablet-landscape-up"){
+    display: flex;
+    flex: 0 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
   &__title{
     color: white;
     flex-basis: 100%;
@@ -18,7 +22,12 @@
   &__profile{
     flex-basis: calc((100%/3) - 1rem);
     &:not(:last-child){
-      @include margin(null, px-to-rem(16px), null, null) 
+      @include margin(null, null, px-to-rem(16px), null);
+    }
+    @include for-size("tablet-landscape-up"){
+      &:not(:last-child){
+        @include margin(null, px-to-rem(16px), null, 0);
+      }  
     }
   }
   

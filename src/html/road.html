@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
       .hero{
         background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/Art_Hero@1x.jpg");
@@ -32,10 +33,27 @@
         
         <div class="content">
           include "includes/breadcrumbs.html"
+          
+          <!-- Make this mobile only, hide on desktop
+            Add in the modal for login window
+          -->
+          <div class="alert alert--info">
+            <div class="alert--info__icon">
+              <span class="fa" aria-hidden="true"></span>
+            </div>
+            <div class="alert__content">
+                <h2 class="alert__title" id="campus-alert-heading">Current Students</h2>
+                <ul class="list">
+                  <li><a href="#" class="link-arrow">Login</a></li>
+                  <li><a href="#">Create account</a> | <a href="#">Forgot password</a></li>
+                  <li><a href="#">Parent access</a></li>
+                </ul>
+            </div>
+          </div>
 
           <div class="video__container logged-in" id="0">
             <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
-          </div>                
+          </div>
 
           <div class="panel logged-in" id="2">
             <button class="o-btn tt__btn" data-uid="2">
@@ -56,6 +74,45 @@
                 <h3>Testing</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
+            </div>
+          </div>
+          
+          <div class="r-profiles">
+            <button class="o-btn tt__btn" data-uid="41">
+              <span>&hellip;</span>
+            </button>
+            <h3 class="r-profiles__title">Recent Updates</h3>
+            <div class="r-profiles__profile">
+              <img src="http://placehold.it/270x270" alt="" />
+              <h4 class="r-profiles__title">Person Name</h4>
+              <p>Hometown: <a href="#" class="r-profiles__link">Link</a></p>
+            </div>
+            <div class="r-profiles__profile">
+              <img src="http://placehold.it/270x270" alt="" />
+              <h4 class="r-profiles__title">Person Name</h4>
+              <p>Hometown: <a href="#" class="r-profiles__link">Link</a></p>
+            </div>
+            <div class="r-profiles__profile">
+              <img src="http://placehold.it/270x270" alt="" />
+              <h4 class="r-profiles__title">Person Name</h4>
+              <p>Hometown: <a href="#" class="r-profiles__link">Link</a></p>
+            </div>
+          </div>
+          
+          <div class="mo mo--road">
+            <div class="mo__img">
+              <img src="http://lorempixel.com/230/180/city/2" />
+            </div>
+            <div class="mo__content">
+              <h3>Person</h3>
+              <p>Hometown: <a href="#">Link</a></p>
+            </div>
+            <div class="mo__img">
+              <img src="http://lorempixel.com/230/180/city/2" />
+            </div>
+            <div class="mo__content">
+              <h3>Person</h3>
+              <p>Hometown: <a href="#">Link</a></p>
             </div>
           </div>
          <!-- 
@@ -120,6 +177,9 @@
           </div>
         </div><!-- /content -->
         <div class="sidebar">
+          <!-- Hide this on mobile
+            Show on desktop
+          -->
           <div class="panel panel--academic">
             <h2 class="panel__title panel__title--form text--centered">Account Login</h2>
             <form class="form">

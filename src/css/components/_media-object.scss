@@ -58,3 +58,45 @@
     }
   }
 }
+
+.content_cta{
+  display: flex;
+  align-items: flex-start;
+  background-image: url('../images/content_cta/bkg_graphic.jpg');
+  background-size: cover;
+  width: 100%;
+  justify-content: space-around;
+  color: white;
+  flex-direction: column;
+  
+  @include for-size("tablet-portrait-up"){
+    flex-direction: row;
+  }
+  &__title{
+    color: white;
+  }
+  img{
+    max-width: 100%;
+    object-fit: cover;
+    @include padding(null, px-to-rem(24px), null, px-to-rem(24px));
+    @include margin(px-to-rem(24px),px-to-rem(24px),px-to-rem(24px),px-to-rem(24px));
+    align-self: center;
+    @include for-size('tablet-portrait-up'){
+      @include padding(null,0,null,0);
+      max-width: px-to-rem(284px);
+      @include margin(null,px-to-rem(40px),null,px-to-rem(40px));
+      flex-basis: fit-content;
+    }
+    @include for-size('tablet-landscape-up'){
+    }
+    
+    
+  }
+  &__content{
+    @include margin( null ,px-to-rem(24px),px-to-rem(24px),px-to-rem(24px));
+    flex-grow: 1;
+    @include for-size('tablet-portrait-up'){
+      @include margin(px-to-rem(24px),px-to-rem(40px),null,px-to-rem(40px));
+    }
+  }
+}

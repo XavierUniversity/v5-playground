@@ -20,5 +20,5 @@ $(document).on("click", "[data-toggle]", function(e){
   $(this).prev().attr('aria-expanded', function (i, attr) {
     return attr == 'true' ? 'false' : 'true'
   });
-  $('[data-toggle='+list+']').toggleClass("on");
+  $('[data-toggle="'+list+'"]').toggleClass("on");
 });

@@ -1,0 +1,1442 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Edit Account</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+    
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+      
+      <section class="hero hero--content">
+          <a class="hero--content__title" href="#">My Account</a>
+      </section>
+      
+      <section class="wrapper">    
+        <div class="content-page">
+          <div class="content-page__breadcrumbs">
+            include "includes/breadcrumbs.html"
+          </div>
+          
+          <div class="content-page--nav sidenav">
+            <button class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu" aria-label="Toggle Menu">Menu<svg class="icon sidenav__icon sidenav__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon sidenav__icon sidenav__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+            
+            <nav id="content-menu" class="sidenav__content" aria-label="">
+              <ul class="nav-list content-page--nav__list">
+                <li class="content-page--nav__item"><a class="content-page--nav__link active" href="#">Nav Item One</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Second Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Nav Item Number Three That is Long and Wraps Around to the Next Line</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Here is the Fourth Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Fifth and Final Nav Item</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="content-page--main">
+          <h2>Edit Profile</h2>
+          
+          <div class="tabs">  
+            <nav role="navigation" class="tab">
+              <ul class="tab__list">
+                <li class="tab__item"><a href="#profile" class="tab__link visible">Profile</a></li>
+                <li class="tab__item"><a href="#interests" class="tab__link">Interests</a></li>
+                <li class="tab__item"><a href="#courses" class="tab__link">Academic Profile</a></li>
+                <li class="tab__item"><a href="#outcomes" class="tab__link">Password</a></li>
+                <li class="tab__item"><a href="#clubs" class="tab__link">Account Settings</a></li>
+              </ul>
+            </nav>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn on" data-toggle="#profile">
+              Profile <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div id="profile" class="tabs__content visible">
+              <form action="" method="post" class="form form--ajax">
+                <fieldset class="form__fieldset">
+                  <legend class="form__title">Update your Profile</legend>
+                  <p>Use the fields below to update your public profile.</p>
+                  <input type="hidden" name="token" value="8357003062f992b30d31a66b942354e40a6397e3">
+                  <input type="hidden" name="action" value="dab9de0d0b4637d418046aa91f3f37b1">
+                  
+                  <fieldset class="form__fieldset">
+                    <legend class="form__title form__title--sub">Basic Information</legend>
+                        <label for="first_name" class="form__label">Preferred Name</label>
+                        <input type="text" id="first_name" name="user[first_name]" class="form__input" value="Gregory" required="">
+                      
+                        <label for="last_name" class="form__label">Last</label>
+                        <input type="text" id="last_name" name="user[last_name]" class="form__input" value="McMullen" required="">
+                    
+                        <label for="pronouns" class="form__label">Personal Pronouns</label>  
+                        <select class="form__select" id="pronouns" name="user[pronouns]">
+                          <option value="">--Select--</option>
+                          <option value="She, Her, Her">She, Her, Hers</option>
+                          <option value="He, Him, His" selected="">He, Him, His</option>
+                          <option value="They, Them, Their">They, Them, Their</option>
+                          <option value="Ze, Hir, Hirs">Ze, Hir, Hirs</option>
+                        </select>
+                      
+                        <label class="form__label" for="biography">Bio</label>
+                        <textarea class="form__textarea" name="user[biography]" id="biography" maxlength="160">Web Developer for Xavier University</textarea>
+                    
+                        <label class="form__label" for="pesonal_email">Personal Email</label>
+                        <input class="form__input" type="email" name="user[personal_email]" id="pesonal_email" value="">
+                      
+                        <label class="form__label" for="phone">Phone</label>
+                        <input class="form__input" type="phone" name="user[phone]" id="phone" value="(513) 745-3924">
+                        <p style="font-size: 1.0rem; width: 85%;">This phone number may be used for text-based messaging if permitted. Manage your <a href="/account/?edit#user-account-settings" data-show="user-account-settings">text and privacy settings</a>.</p>
+                    
+                      
+                        <label class="form__label" for="address_street1">Address Line 1</label>
+                        <input class="form__input" type="text" name="user[address_street1]" id="address_street1" value="">
+                    
+                      
+                        <label class="form__label" for="address_street2">Address Line 2</label>
+                        <input class="form__input" type="text" name="user[address_street2]" id="address_street2" value="">
+                      
+                        <label class="form__label" for="address_street3">Address Line 3</label>
+                        <input class="form__input" type="text" name="user[address_street3]" id="address_street3" value="">
+                    
+                        <label class="form__label" for="address_city">City</label>
+                        <input class="form__input" type="text" name="user[address_city]" id="address_city" value="">
+                    
+                      
+                        <label class="form__label" for="address_state">State / Province</label>
+                        <input class="form__input" type="text" name="user[address_state]" id="address_state" value="">
+                    
+                        <label class="form__label" for="address_zip">Zip Code</label>
+                        <input class="form__input" type="text" name="user[address_zip]" id="address_zip" value="">
+
+                        <label class="form__label" for="address_country">Country</label>
+                        <input class="form__input" type="text" name="user[address_country]" id="address_country" value="">
+                    
+                  </fieldset>
+                  <fieldset class="form__fieldset">
+                    <legend class="form__title form__title--sub">Social Media Links</legend>
+                    <p>Please include the full URL to your social media profile.</p>
+                    
+                        <label class="form__label" for="social-link-facebook">Facebook</label>
+                        <input type="url" name="user[Facebook_Profile]" id="social-link-facebook" class="form__input" pattern="(?:https?:\/\/)(?:www\.)?facebook\.com\/(?:.+\/)*([\w\.\-]+)\/?" value="">
+                      
+                        <label class="form__label" for="social-link-instagram">Instagram</label>
+                        <input type="url" name="user[Instagram_Profile]" id="social-link-instagram" class="form__input" pattern="(?:https?:\/\/)(?:www\.)?instagram\.com\/(?:.+\/)*([\w\.\-]+)\/?" value="https://www.instagram.com/mcmullen_greg/">
+                    
+                      
+                        <label class="form__label" for="social-link-twitter">Twitter</label>
+                        <input type="url" name="user[Twitter_Profile]" id="social-link-twitter" class="form__input" pattern="(?:https?:\/\/)(?:www\.)?twitter\.com\/(?:.+\/)*([\w\.\-]+)\/?" value="https://twitter.com/mcmullen_greg/">
+                    
+                      
+                        <label class="form__label" for="social-link-snapchat">Snapchat</label>
+                        <input type="url" name="user[Snapchat_Profile]" id="social-link-snapchat" class="form__input" pattern="(?:https?:\/\/)(?:www\.)?snapchat\.com\/add\/(?:.+\/)*([\w\.\-]+)\/?" value="">
+
+                  </fieldset>
+                  <fieldset class="form__fieldset">
+                    <legend class="form__title form__title--sub">My Favorites</legend>
+                    <p>What are some of your favorite movies, bands, or books? After entering a name or title, press enter to add it to your list of favorites.</p>
+                    <div id="favorites-list">
+              						<label class="form__label" for="movies">Movies</label>
+                					<div class="tags" id="movie-list">
+                  					<input name="user[movies]" type="hidden" id="movies-list" value="The Boondocks Saints">
+                  					<button class="tag active" title="Remove The Boondocks Saints from your favorite movies list">The Boondocks Saints <span class="fa fa-close" aria-hidden="true"></span></button>
+                  					<input class="form__input" type="text" value="" id="movies" placeholder="Add a movie">
+                          </div>
+              					
+              						<label class="form__label" for="bands" id="band-list">Bands/Artists</label>
+                					<div class="tags" id="bands-list">
+                  					<input name="user[bands]" type="hidden" class="form__input" value="">
+                            <input class="form__input" type="text" value="" id="bands" placeholder="Add a band or artist">
+                          </div>
+                                					
+              						<label class="form__label" for="books">Books</label>
+                					<div class="tags" id="books-list">
+                  					<input name="user[books]" type="hidden" class="form__input" value="The Culture Code|Thank You Coach">
+                  					<button class="tag active" title="Remove The Culture Code from your favorite books list">The Culture Code <span class="fa fa-close" aria-hidden="true"></span></button><button class="tag active" title="Remove Thank You Coach from your favorite books list">Thank You Coach <span class="fa fa-close" aria-hidden="true"></span></button>
+                  					<input class="form__input" type="text" value="" id="books" placeholder="Add a book">
+                          </div>
+              					
+              						<label class="form__label" for="tvshows">TV Shows</label>
+                					<div class="tags" id="tvshow-list">
+                  					<input name="user[tvshows]" type="hidden" class="form__input" value="Game of Thrones">
+                  					<button class="tag active" title="Remove Game of Thrones from your favorite TV shows list.">Game of Thrones <span class="fa fa-close" aria-hidden="true"></span></button>
+                  					<input class="form__input" type="text" value="" id="tvshows" placeholder="Add a tv show">
+                          </div>
+              					
+              						<label class="form__label" for="videogames">Video Games</label>
+                					<div class="tags" id="videogame-list">
+                  					<input name="user[videogames]" type="hidden" class="form__input" value="Call of Duty|Diablo III">
+                  					<button class="tag active" title="Remove Call of Duty from your favorite video games list.">Call of Duty <span class="fa fa-close" aria-hidden="true"></span></button><button class="tag active" title="Remove Diablo III from your favorite video games list.">Diablo III <span class="fa fa-close" aria-hidden="true"></span></button>                            <input class="form__input" type="text" value="" id="videogames" placeholder="Add a video game">
+                          </div>
+                      
+              						<label class="form__label" for="food">Food</label>
+                					<div class="tags" id="food-list">
+                  					<input name="user[food]" type="hidden" class="form__input" value="Chipotle|Five Guys">
+                  					<button class="tag active" title="Remove Chipotle from your favorite food list.">Chipotle <span class="fa fa-close" aria-hidden="true"></span></button><button class="tag active" title="Remove Five Guys from your favorite food list.">Five Guys <span class="fa fa-close" aria-hidden="true"></span></button>                            <input class="form__input" type="text" value="" id="food" placeholder="Add food/restaurant">
+                      </div>
+                    </div>
+                  </fieldset>
+                  <input class="btn btn--navy btn--inline" type="submit" value="Update Profile">
+                </fieldset>
+              </form>
+            </div>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#interests">
+              Insterests <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div id="interests" class="tabs__content">
+              <form action="" method="post" class="form form--ajax">
+                <input type="hidden" name="token" value="53760a90410af1c886f6b107a613de6dbefb9527">
+                <input type="hidden" name="action" value="1313101b5133e37a0ac99bf0c0d31773">
+                <fieldset class="form__fieldset">
+                  <legend class="form__title">My Interests</legend>
+                  <p>Use the list below to select your interests. These will be displayed on your public profile.</p>
+                  <fieldset class="form__fieldset">
+                                    <div class="tags" id="interest-list">
+                    <input type="hidden" name="user[interest-list]" class="form__input" id="interest-list-input" value="">
+                  </div>
+                  
+                                          <legend class="form__title form__title--sub">Academics</legend>
+                                        <button class="tag " id="9" data-group="interest-list">Art  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="176" data-group="interest-list">Athletic Training  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="21" data-group="interest-list">Business  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="31" data-group="interest-list">Communications  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="174" data-group="interest-list">Computer Science  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="35" data-group="interest-list">Cultural/Gender Studies  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="49" data-group="interest-list">Education  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="50" data-group="interest-list">English  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="61" data-group="interest-list">Foreign Language  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="73" data-group="interest-list">History  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="77" data-group="interest-list">Honors Program  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="82" data-group="interest-list">International Studies  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="175" data-group="interest-list">Latin/Classics/Classic Languages  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="91" data-group="interest-list">Law  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="173" data-group="interest-list">Mathematics  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="96" data-group="interest-list">Music  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="103" data-group="interest-list">Nursing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="104" data-group="interest-list">Occupational Therapy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="107" data-group="interest-list">Philosophy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="109" data-group="interest-list">Political Science  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="114" data-group="interest-list">Pre-Med  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="118" data-group="interest-list">Psychology  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="133" data-group="interest-list">Sciences  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="139" data-group="interest-list">Social Work  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="143" data-group="interest-list">Sports Marketing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="150" data-group="interest-list">Theatre  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="152" data-group="interest-list">Theology  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="160" data-group="interest-list">Undecided  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Extracurricular</legend>
+                                        <button class="tag " id="12" data-group="interest-list">Band/Pep Band  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="25" data-group="interest-list">Cheerleading  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="26" data-group="interest-list">Choir  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="32" data-group="interest-list">Community Service  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="39" data-group="interest-list">Dance Team  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="44" data-group="interest-list">Diversity/Culture  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="179" data-group="interest-list">Film/Television/AV Production  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="56" data-group="interest-list">Fitness  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="71" data-group="interest-list">Health and Fitness  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="76" data-group="interest-list">Honor Societies  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="83" data-group="interest-list">Intramural sports  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="86" data-group="interest-list">Job  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="87" data-group="interest-list">Journalism  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="92" data-group="interest-list">Leadership Organizations  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="105" data-group="interest-list">Orchestra/Musical Ensemble  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="106" data-group="interest-list">Philanthrophy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="110" data-group="interest-list">Politics  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="127" data-group="interest-list">ROTC  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="123" data-group="interest-list">Religious/Spiritual  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="135" data-group="interest-list">Show Choir  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="142" data-group="interest-list">Spirit/Pep Squad  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="144" data-group="interest-list">Student Government  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="145" data-group="interest-list">Student Newspaper  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="146" data-group="interest-list">Study Abroad  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="151" data-group="interest-list">Theatre  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="164" data-group="interest-list">Visual Arts  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="171" data-group="interest-list">Work/Internship  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Hobbies</legend>
+                                        <button class="tag " id="10" data-group="interest-list">Arts &amp; Crafts  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="11" data-group="interest-list">Baking  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="38" data-group="interest-list">Dance  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="53" data-group="interest-list">Fantasy Sports  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="54" data-group="interest-list">Fashion  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="58" data-group="interest-list">Fitness/Working Out  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="64" data-group="interest-list">Gaming  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="69" data-group="interest-list">Hanging with Friends  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="206" data-group="interest-list">Irish Dancing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="93" data-group="interest-list">Live Concerts  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="94" data-group="interest-list">Live Sporting Events  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="97" data-group="interest-list">Musical Instrument  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="108" data-group="interest-list">Photography  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="122" data-group="interest-list">Reading  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="134" data-group="interest-list">Shopping  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="158" data-group="interest-list">Social Media  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="157" data-group="interest-list">Traveling  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="166" data-group="interest-list">Volunteering  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="167" data-group="interest-list">Watching Movies  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="172" data-group="interest-list">Writing/Journaling  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Sports</legend>
+                                        <button class="tag " id="3" data-group="interest-list">Action Sports  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="13" data-group="interest-list">Baseball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="14" data-group="interest-list">Basketball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="177" data-group="interest-list">Bass Fishing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="17" data-group="interest-list">Boating   <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="18" data-group="interest-list">Boxing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="34" data-group="interest-list">Crew  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="37" data-group="interest-list">Cycling  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="51" data-group="interest-list">Equestrian  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="55" data-group="interest-list">Fencing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="57" data-group="interest-list">Fitness/Weights  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="60" data-group="interest-list">Football  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="65" data-group="interest-list">Golf  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="68" data-group="interest-list">Gymnastics  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="75" data-group="interest-list">Hockey  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="79" data-group="interest-list">Ice Skating  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="88" data-group="interest-list">Lacrosse  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="98" data-group="interest-list">NASCAR  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="111" data-group="interest-list">Polo  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="128" data-group="interest-list">Rugby  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="129" data-group="interest-list">Running/Jogging  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="130" data-group="interest-list">Sand Volleyball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="136" data-group="interest-list">Skiing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="137" data-group="interest-list">Snowboarding  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="138" data-group="interest-list">Soccer  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="140" data-group="interest-list">Softball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="147" data-group="interest-list">Swimming  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="149" data-group="interest-list">Tennis  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="156" data-group="interest-list">Track &amp; Field  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="178" data-group="interest-list">Triathlon  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="159" data-group="interest-list">Ultimate Frisbee  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="165" data-group="interest-list">Volleyball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="168" data-group="interest-list">Water Polo  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Movies</legend>
+                                        <button class="tag " id="2" data-group="interest-list">Action  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="4" data-group="interest-list">Adventure/Fantasy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="7" data-group="interest-list">Animated  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="8" data-group="interest-list">Anime  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="20" data-group="interest-list">Bro-mance/Buddy Comedy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="29" data-group="interest-list">Comedy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="45" data-group="interest-list">Documentary  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="46" data-group="interest-list">Drama  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="78" data-group="interest-list">Horror  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="81" data-group="interest-list">Indie  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="125" data-group="interest-list">Romance  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="126" data-group="interest-list">Romantic Comedy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="132" data-group="interest-list">Sci-Fi  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="153" data-group="interest-list">Thriller  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Music</legend>
+                                        <button class="tag " id="5" data-group="interest-list">Alternative  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="16" data-group="interest-list">Bluegrass  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="27" data-group="interest-list">Classic Rock  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="28" data-group="interest-list">Classical  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="33" data-group="interest-list">Country  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="40" data-group="interest-list">Dance/House Music  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="47" data-group="interest-list">Dubstep  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="66" data-group="interest-list">Gospel  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="72" data-group="interest-list">Hip Hop  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="80" data-group="interest-list">Indie  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="85" data-group="interest-list">Jazz  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="90" data-group="interest-list">Latin  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="112" data-group="interest-list">Pop/Top 40  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="119" data-group="interest-list">Punk  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="120" data-group="interest-list">R&amp;B  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="121" data-group="interest-list">Rap  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="124" data-group="interest-list">Rock  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="141" data-group="interest-list">Soul  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="148" data-group="interest-list">Techno  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                  </fieldset><fieldset class="form__fieldset">                        <legend class="form__title form__title--sub">Television</legend>
+                                        <button class="tag " id="180" data-group="interest-list">American Horror Story  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="181" data-group="interest-list">Big Bang Theory  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="182" data-group="interest-list">Bobs Burgers  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="183" data-group="interest-list">Chopped  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="184" data-group="interest-list">Criminal Minds  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="185" data-group="interest-list">Empire  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="186" data-group="interest-list">Family Guy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="187" data-group="interest-list">Friends  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="207" data-group="interest-list">Game of Thrones  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="205" data-group="interest-list">Gotham  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="188" data-group="interest-list">Grey's Anatomy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="189" data-group="interest-list">How I Met your Mother  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="190" data-group="interest-list">How to Get Away with Murder  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="191" data-group="interest-list">It's Always Sunny in Philadelphia  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="192" data-group="interest-list">Louie  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="193" data-group="interest-list">Mad Men  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="194" data-group="interest-list">Once Upon a Time  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="195" data-group="interest-list">Orange is the New Black  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="196" data-group="interest-list">Parks &amp; Rec  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="208" data-group="interest-list">Planet Earth  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="197" data-group="interest-list">Prison Break  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="198" data-group="interest-list">Revenge  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="199" data-group="interest-list">SNL  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="200" data-group="interest-list">Sons of Anarchy  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="201" data-group="interest-list">Supernatural  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="209" data-group="interest-list">That 70's Show  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="202" data-group="interest-list">The Office  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="203" data-group="interest-list">The Voice  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                        <button class="tag " id="204" data-group="interest-list">Walking Dead  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                    
+                  </fieldset>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                  <legend class="form__title form__title--sub">Clubs of Interest</legend>
+                  <p>Use the list below to select your clubs of interests. These will be displayed on your public profile.</p>
+                  <button class="btn btn--link" id="club-descriptions">Show Club Descriptions</button>
+                                    <div class="tags" id="club-list">
+                    <input type="hidden" name="user[club-list]" class="form__input" id="club-list-input" value="">
+                  </div>
+                  <fieldset class="form__fieldset">
+                    
+                                              <legend class="form__title form__title--sub">Arts</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="1" data-group="club-list">A caBellas  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            A caBellas is a women's a cappella group that performs on and off Xavier's campus. A caBellas sings a variety of songs ranging from old classics to music that is popular today.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="17" data-group="club-list">Art Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Art Society consists of a group of students working in art related fields that are dedicated to providing opportunities for career growth, development of skills, networking, and involvement in the community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="60" data-group="club-list">Don't Tell Anna  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Don't Tell Anna (DTA) is an improvisational comedy group that provides an alternative entertainment option to students on campus. The troupe combines the two types of improv, long-form and short-form, into monthly performances that are free of charge.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="181" data-group="club-list">Harmon-X  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="81" data-group="club-list">International Animation  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The International Animation Club (XUIAC) would like to support the Jesuit Mission of Xavier by cultivating diversity among peers through the different mediums of animation from all over the globe. Animation is considered a cultural force and XUIAC wants to bring it to campus for all Xavier students to enjoy and be a part of. XUIAC's discussions range from anime, cartoons, comics, video games and more.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="211" data-group="club-list">Singers  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University Singers is a student run, auditioned performance group comprised of around 15-20 students from all majors and class levels. The students work rigorously to put on 1-2 shows each semester. Shows consist of dancing, comedy, and, of course, a whole lot of singing. All routines are expertly choreographed and accompanied by a  live band of Xavier students. The song repertoire consists of selections from traditional Broadway Musicals, Vocal Jazz, Pop, Rock, and even Country. Recent shows have included a college themed show, as well as a show about selling-out (Advertisements, but also musicians selling out). Keeping involved, the group stays active with various fundraising and events.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Business</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="3" data-group="club-list">Accounting Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Accounting Society seeks to provide students majoring in or interested in accounting opportunities to network with professionals, faculty and other students. In addition to networking opportunities, the Accounting Society provides opportunities for professional development and leadership, and is involved in various community service projects throughout the academic year.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="15" data-group="club-list">American Marketing Association at Xavier  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            All marketing majors are encouraged to join the American Marketing Association (AMA) chapter at Xavier. AMA seeks to offer marketing majors and other students the opportunity to gain a broader, realistic, more practically oriented exposure to marketing activities. These experiences enhance and augment the material being presented in the classroom. AMA strives to improve each member's marketability in today's highly competitive job market. AMA attempts to provide career guidance by functioning as a personal career-oriented liaison between club members and the marketing faculty. AMA functions as a marketing-consulting service for numerous clubs and organizations on campus.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="22" data-group="club-list">Beta Alpha Psi - Finance Honor Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Beta Alpha Psi is an honorary organization for financial information students and professionals. The primary objective of Beta Alpha Psi is to encourage and give recognition to scholastic and professional excellence in the business information field. This includes promoting the study and practice of accounting, finance and information systems; providing opportunities for self-development, service and association among members and practicing professionals; and encouraging a sense of ethical, social, and public responsibility.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="27" data-group="club-list">Business Leaders for Tomorrow  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Business Leaders for Tomorrow is a student organization that is dedicated to furthering the career goals of students in all majors by going out into the community and exploring business processes firsthand.  Business Leaders for Tomorrow continues to provide experiences for students and build the network into a tight-knit community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="57" data-group="club-list">Delta Sigma Pi - Professional Fraternity  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Delta Sigma Pi is a professional fraternity organized to foster the study of business in universities; to encourage scholarship, social activity and the association of students for their mutual advancement by research and practice; to promote closer affiliation between the commercial world and students of commerce; and to further a higher standard of commercial ethics and culture and the civic and commercial welfare of the community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="61" data-group="club-list">Economics Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier University Economics Association is a campus club dedicated to allowing Economics and Business majors to explore opportunities that the field of Economics has to offer.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="64" data-group="club-list">Entrepreneurship Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Entrepreneurship Club allows members to collaborate, innovate, and discover what it means to be an entrepreneur. The club is partnering with Xavier's new student run business program, D'Artagnan Enterprises. This will provide students with the finest opportunity for experiential learning. Members will also engage with Cincinnati's StartUp Ecosystem. Visits to the Brandery, Cintrifuse, OCEAN, and UpTech will be common throughout the year.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="68" data-group="club-list">Finance Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Financial Management Association enhances the experience of Xavier Finance undergraduate students by providing opportunities to network with finance executives, learn about finance careers, and bond with fellow finance majors.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="187" data-group="club-list">Human Resources Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Xavier University's HR Club is to provide a wide variety of experiences to students that will allow them to expand their knowledge and skills to become HR Professionals in the future, aligning with the Jesuit Tradition. From company visits to professional speakers and many more, our club introduces it's members to real world business experiences. XU HR Club is open and highly recommended for ANY AND ALL majors to join. We look forward to seeing you at one of our future meetings.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="82" data-group="club-list">International Business Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            International Business Association (XIBA) focuses on providing club members with ample opportunities to branch out into global commerce, strengthening ties between the club and the business community.  XIBA has hosted guest speakers, had study abroad Q&amp;A sessions, planned numerous cultural dinners, and are active members of both the European American Chamber of Commerce and the Greater Cincinnati Chinese Chamber of Commerce. The mission of XIBA is to foster an international perspective in students of business, to help develop an understanding of commerce in a global setting, and to encourage intercultural engagement in all members. Also, XIBA aims to interact with the community in a positive way to both better their neighbors and learn themselves.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="102" data-group="club-list">National Association of Black Accountants  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier University Student Chapter of the National Association of Black Accountants (NABA) addresses the professional needs of each member. NABA strives to build leadership and awareness, for the importance of diversity, in a business environment. NABA is eager to stay informed, committed, and successful throughout professional development, and they continue to grow exponentially in the business world.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="114" data-group="club-list">Public Relations Student Society of America  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Public Relations Student Society of America (PRSSA) is an inclusive pre-professional program that exercises career building skills such as networking, personal branding, fundraising, event planning, mentoring, and strategic community outreach.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="214" data-group="club-list">Sports Business Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Sports Business Club's goal is to open up opportunities for students to see many avenues they can explore while still in school and to provide the proper tools, resources and skills to make the most of their education and experiences in order to pursue and excel their career in sport.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="135" data-group="club-list">TEDx Xavier  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            TEDx Xavier is designed to be a platform to cultivate an innovative ecosystem that puts the Xavier Community at the center of an ongoing effort to design, develop and experiment with new education and support solutions that will help shape future generations of innovators. Key to fulfilling the mission is bringing together the innate diversity of students and faculty in order to create internal value for the Xavier Community, and further create external value for community non-profits.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="139" data-group="club-list">Women In Business  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Women In Business (XWIB) is aimed at preparing tomorrow's women leaders. Through professional training, personal development workshops, and mentoring and service, XWIB prepares its members for success in their future careers. The professional and social networks provides a stage for individuals to discover their potentials and build upon them for the benefit of society. XWIB's motto is " Seeking the good of those we serve."                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Club Sports</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="33" data-group="club-list">Club Baseball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Baseball provides the opportunity for students at Xavier University to continue playing baseball at a competitive level while encouraging a well-rounded individual.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="35" data-group="club-list">Club Boxing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Boxing offers competitive training for those wishing to compete in the National Collegiate Boxing Association and non competitive training for physical fitness.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="37" data-group="club-list">Club Equestrian Team  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier Club Equestrian Team (XUET) participates and competes in the Intercollegiate Horse Show Association (IHSA) during the school year.  It is a team sport, with each rider in a class competing for points for the whole team, and is also an individual sport with a chance to participate at nationals every year (team or individual). XUET has lessons twice a week at CMC Show Stables, located in Union, Kentucky, with the coach Callie Miller. Horses are provided for lessons and shows. XUET goes to four-five shows a year, ranging 2-3 a semester. Since XUET competes in a larger region, the shows take place on the weekend, and there are two show days, Saturday and Sunday. XUET stays overnight in a hotel and carpools to the shows. Riders of any skill level can compete, from just starting out to seasoned riders. XUET is a young team looking for many new committed riders.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="38" data-group="club-list">Club Fencing  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier's Club Fencing team is a great experience that provides students with the opportunity to enjoy fencing and find community within Xavier Club Sports. Club Fencing competes against 21 other teams in the Midwestern Fencing Conference (MFC) throughout the year, including the MFC Championship Tournament. Club Fencing is also part of the United States Association of Collegiate Fencing Clubs (USACFC) and competes in the USACFC national championship tournament against approximately 40 other teams. Many of the members also compete in the United States Fencing Association (USFA) independently from team competition in order to pursue individual ranking and recognition. 
+
+Xavier Club Fencing is open to fencers of all experience and skill levels. It is a great opportunity for students to be introduced to fencing and learn the sport at a high economic value, and for experienced fencers to further develop their skills in a competitive environment. Club Fencing is a strong community of teammates and friends that offers a support system for our members so that all Xavier fencers can find opportunities to grow as an athlete and as a person.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="39" data-group="club-list">Club Field Hockey  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University Club Field Hockey welcomes athletes with all levels of experience to establish a foundation of moral integrity and personal growth on and off the field. Xavier University Field Hockey's goal is to promote academic achievement, mental and physical health, and foster a positive team environment to develop both skills and love of the game.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="40" data-group="club-list">Club Golf  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Club Golf team is in its 10th year as a Club Sport at Xavier. Its inaugural season was in the Fall of 2007. The club has had constant growth since the first season, in both the number of team members and college teams that they compete against. Club Golf competes against colleges across the Midwest, including Miami (OH), Dayton, Ohio State, Louisville, Wright State, Ohio University, and Cincinnati.
+
+Along with one on one matches against some of these college club teams, the Xavier team joined the National Collegiate Club Golf Association (NCCGA) in the Spring 2010 season. The NCCGA is a league where college club golf teams come together to compete in two regional tournaments with a chance to travel to the national tournament to compete against the best college club teams in the United States.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="41" data-group="club-list">Club Gymnastics  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier Men's and Women's Gymnastics Club is a part of the National Association of Intercollegiate Gymnastics Clubs (NAIGC). The club competes in about 4-6 meets each year. The team travels around the Midwest during the regular season, competing against other universities, and around the country for a national championship each spring. Most of the competition season is during the spring semester, but practices run from October through April. Club Gymnastics is open to all people interested in trying the sport of gymnastics or keeping up with their gymnastics skills. There is no experience needed to be on the team.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="42" data-group="club-list">Club Ice Hockey  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Ice Hockey is a ACHA Division II &amp; III club ice hockey team. Club Ice Hockey provides an unique experience of continuing to play hockey at the collegiate level (ACHA), and to develop skills essential for life outside the rink.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="43" data-group="club-list">Club Running  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Running is dedicated to running of all levels. Club Running's mission is to promote a healthy lifestyle through running; to provide support and motivation to other runners at Xavier University; to inspire members of the Xavier community to help organize, volunteer, and participate in charitable running events; and to help each member achieve their personal goals.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="44" data-group="club-list">Club Softball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Softball creates a fun and competitive outlet for Xavier women to become involved in the Xavier community and play softball during the Fall and Spring semesters.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="45" data-group="club-list">Club Sports Council  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Club Sports Council is designed to serve the interests of Xavier University by providing opportunities for Xavier University students, faculty, and staff to continue participating or learn a new sport/recreational activity. While Club Sports fall on a competitive level between intramurals and intercollegiate athletics, the member's involvement in the Clubs is structured to be a learning experience for the members through their involvement in the organization and administration of club activities as well as the development of sports skills.
+
+As the members are active participants in the leadership and decision making process of the clubs, clubs may vary in focus and programming. The teams hold practices two to four times per week and all of clubs are required to have a coach. The clubs do not have large budgets; therefore the clubs must fundraise and charge membership dues to subsidize their existence. The teams compete against other club teams from universities throughout the Midwest such as Indiana University, University of Kentucky, Ohio State University, Miami of Ohio, and the University of Cincinnati. Many of the club sports play in leagues and can compete for a national championship. Participation in the Club Sports Council is an excellent way to develop leadership skills, meet new friends with similar interests, stay in shape and enhance athletic skills.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="46" data-group="club-list">Club Swimming  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Club Swimming is a co-ed swimming program at the collegiate club level. Club Swimming holds four practices per week with one of those practices as a dry land. Club swimming relatively attends frequent meets and invitationals both at home and at other schools. All skill levels are welcome.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="47" data-group="club-list">Club Tennis  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University Club Tennis strives to provide an enjoyable and competitive way for Xavier students to play tennis with other students, as well as other competing schools. Club Tennis is intended to be much less time consuming than a varsity tennis program would be. The aim is to include all Xavier students and uphold the Jesuit tradition.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="48" data-group="club-list">Club Triathlon  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Triathlon Club aims to provide students with the opportunity to participate in multi-sport races and to promote an active lifestyle through competition, training, and team-building.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="49" data-group="club-list">Club Water Polo  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Water Polo offers a competitive environment in which players, new and experienced, can travel to nearby schools and tournaments to compete. All are welcome.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="87" data-group="club-list">Men's Club Lacrosse  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Men's Club Lacrosse's mission is to have a fun time playing lacrosse while also being very competitive on the playing field.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="88" data-group="club-list">Men's Club Rugby  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Men's Club Rugby is to provide a competitive team for collegiate players to play rugby at Xavier University. Rugby games are on Saturdays at 1:00 PM. Men's Club Rugby plays nearly every weekend in both the fall and spring.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="89" data-group="club-list">Men's Club Soccer  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Men's Club Soccer is a competitive team who strives to compete well on the field and be role models off the field.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="175" data-group="club-list">Men's Club Squash  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            We are the Xavier Men's Squash Team established in 2017. We are a new team with a lot of potential. Squash is an indoor racquet sport that requires endurance and hand eye coordination. The team is made up of players from every grade level and we are always open to new players joining.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="90" data-group="club-list">Men's Club Ultimate Frisbee  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Men's Club Ultimate Frisbee is a competitive club sports program that practices a few days a week and travels the country to play in tournaments throughout the year. The club is a fun-loving bunch of people, most of whom come in with no previous ultimate experience. They encourage anyone and everyone to come out and join.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="91" data-group="club-list">Men's Club Volleyball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Men's Club Volleyball provides an opportunity for students to join an organization outside of academics. Xavier Men's Club Volleyball practices twice a week, and they approximately go to 2-3 tournaments a semester as well as Nationals. Whether you have prior volleyball experience or not, anyone is able to join the team.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="266" data-group="club-list">Powerlifting  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Our mission is to provide an entertaining, educational, friendly and inviting, functional and innovative experience of uncompromising quality that helps to meet the health and fitness needs of Xavier students through strength training.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="287" data-group="club-list">Spikeball Group  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Some say that if volleyball and foursquare had a baby it'd be named Spikeball. We like to say we're building the next great American sport.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="140" data-group="club-list">Women's Club Lacrosse  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Women's Lacrosse is an organization that is focused on keeping active, the formation of a team bond, and continuing to play a sport they love. Xavier Women's Lacrosse is able to play lacrosse on a competitive level while maintaining strong grades in the classroom.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="141" data-group="club-list">Women's Club Soccer  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Women's Club Soccer (XUWCS) is dedicated to providing those interested with the opportunity to play soccer at a semi-competitive level. They practice twice a week during the fall and have games almost every weekend until the end of October. XUWCS also participates in an indoor league during the winter and has practice and friendly games in the spring.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="272" data-group="club-list">Women's Club Squash  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Women's Club Squash is a competitive team that strives to create an open environment to share the sport of squash and promote an active lifestyle.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="142" data-group="club-list">Women's Club Ultimate Frisbee  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Women's Club Ultimate Frisbee is a competitive, intercollegiate ultimate frisbee team on Xavier's campus. Women's Club Ultimate Frisbee aims to provide a welcoming environment as a competitive team within the Cincinnati ultimate community and throughout the midwest. The club strives to provide athletes with an opportunity to improve themselves athletically, socially, and mentally, as it focuses on sportsmanship and community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="143" data-group="club-list">Women's Club Volleyball  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Women's Club Volleyball accepts anyone who loves playing volleyball, wants to continue their high school volleyball experience, and wants to make friends with those who have similar interests. Women's Club Volleyball loves having fun playing competitive volleyball.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="146" data-group="club-list">Xavier Dance Team  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The nationally ranked Xavier University Dance Team is dedicated to improving and promoting school spirit. They pride themselves on representing Xavier University in a positive manner and strive to be the best they can be in the gym and in the classroom. Annually, the Xavier University Dance Team strives to compete at the National Dance Alliance (NDA) National Competition in Daytona Beach, Florida. Each year, the team spends approximately three days competing for the top ten rankings in Division 1. The Dance Team is committed to serving the community in a variety of ways which include the All for One Golf Outing, Relay for Life, Making Strides Against Breast Cancer Walk, Dance Marathon, and other events throughout the year.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Education</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="14" data-group="club-list">American Choral Directors Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            American Choral Directors Association (ACDA) works to promote excellence in choral music at Xavier and the surrounding community. ACDA hosts guest speakers and performers, attends concerts and performances promoting choral music, encourages attendance at annual conferences, and holds regular meetings to discuss and advocate for choral music. ACDA seeks to serve both the national organization and the university.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="62" data-group="club-list">Educators for Justice  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Educators for Justice's mission is to foster an individual's spiritual, intellectual, and moral growth through professional development, service, and community building. Educators for Justice strives to unite all education majors in an attempt to network, accept diversity, and build lasting relationships.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="260" data-group="club-list">Kappa Delta Pi  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Kappa Delta Pi (KDP) is an international honors society for education students.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="95" data-group="club-list">Montessori Education Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Montessori Education Club works to build on the sense of community for Montessori majors both on and off campus.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="101" data-group="club-list">National Association for Music Education  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            National Association for Music Education (NAfME) is a club through Xavier University and is affiliated with the National Association of Music Education. NAfME aims to bring music to all people and enhance their education, as musicians and teachers. NAfME is open to all music majors and minors.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">General Interests</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="166" data-group="club-list">4 Paws for Ability at XU  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            4 Paws for Ability at XU is a chapter of the primary organization 4 Paws for Ability, located in Xenia, Ohio. The main focus of Puppy Raisers and Babysitters is to socialize 4 Paws Service Dogs in Training (SDIT) and to get them used to anything and everything they may come across in everyday life - new places, sounds, sights, smells, people, children, etc. Anyone can join the club to learn about service dogs, fostering/babysitting, and experiencing some canine love!                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="227" data-group="club-list">Climbing Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            This club rooted in the love of rock climbing as a sport and activity. Climbing club believes that rock climbing is an activity that everyone can participate in and love.  Climbing club believes that climbing develops the whole self: it forces you to exert yourself physically, mentally, and even socially.                            </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="54" data-group="club-list">Commuter Activities Board  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Commuter Council serves as a resource for commuter students and to advocate for the unique needs and challenges of this student population. We are committed to providing services and programs that will enhance commuter involvement and connections to the Xavier community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="79" data-group="club-list">In The Loop  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            In The Loop's purpose as an organization is to bring members together through fiber art and yarn craft. In knitting, crocheting, weaving, spinning, cross stitching, and the like, they strive to promote and improve on the craft together. In The Loop seeks to enrich the Xavier and Cincinnati communities enthusiastically and skillfully through education of craft and collection of project donations. They are focused on creating group-wide projects to donate to local causes and charities. In The Loop also strives to teach fellow club members and any individual who demonstrates interest in learning fiber art and yarn crafts. Through participating in traditionally social events, In The Loop promotes inclusivity and connection between fiber artists of all skill levels and varieties.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="263" data-group="club-list">Network of Enlightened Women  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Network of enlightened Women is a national organization dedicated to building a community among conservative women and promoting intellectual diversity on college campuses. Specifically to Xavier, the club aims to create an atmosphere where women of similar values can come together and discuss their beliefs over book discussions, arts and crafts and other enriching activities.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="104" data-group="club-list">Outdoor Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Outdoor Club offers day and overnight trips for all students interested in exploring the great outdoors. Past trips include: backpacking, white water rafting, indoor rock climbing, day hikes, kayaking, and much more.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="106" data-group="club-list">Pershing Rifles  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Pershing Rifles (Battery G-1) is a unit of the National Society of Pershing Rifles. Battery G-1 is a military-oriented, honors fraternity that stresses excellence in military science, bearing, leadership, drill and ceremony. Membership is open to any Xavier student: military, civilian, male, or female of any racial or ethnic background. Pershing Rifles' name is derived from the late General of the Armies, John Joseph Pershing.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="115" data-group="club-list">Rangers  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier Rangers selects, educates, and trains US Army Cadets both physically and mentally in order to develop students to be future officers and leaders of character in the United States Army; while instilling the values of citizenship, national and community service, personal responsibility, and a sense of accomplishment.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="116" data-group="club-list">Resident Student Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Resident Student Association (RSA) is a subordinate body of the Student Government Association (SGA), representing the issues and concerns specific to students living in University owned housing (Residents) within the SGA and to other campus offices and organizations in the matters affecting the University owned housing and their residents. The mission of RSA is to provide an important forum for the expression of resident issues and concerns; provide community service, educational, and social programming for all residents; recognize the contributions of students, faculty, and staff to the betterment of living in university owned housing, provide residents the opportunity for leadership and community building, maintain good standing affiliation with the National Association of College and University Residence Halls (NACURH), and actively participate in regional and national activities.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="122" data-group="club-list">Student Activities Council  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Student Activities Council (SAC) is the campus programming, or event planning, board made of 31 dedicated students.  SAC strives to provide meaningful and enjoyable social, cultural, and educational programs that appeal to the widest group of students possible and are accessible for all students.  Traditional SAC events include: Muskies After Dark, Late Night Movies, Boat Dance, Mr. Muskie, Late Night Snacks, Free Rides, WEBN Fireworks, Oktoberfest, Taste of Cincinnati Night, and Ski Trip.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="123" data-group="club-list">Student Alumni Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier University Student Alumni Association (SAA) is committed to spreading awareness of the importance of philanthropy, strengthening the bond between students and alumni, and creating a community that nurtures the communication and mutual appreciation between students and alumni. SAA's vision is to spearhead student philanthropy projects that help to bring campus wide understanding of the importance of service and giving back to the Xavier community in accordance with the Jesuit ideals and education that students and alumni value so highly. As a group, they value giving back not only to the Xavier community, but also the surrounding communities. The Jesuit education teaches us all to live a life of service and solidarity. SAA values the idea of applying these Jesuit teachings back to the community that gave them to us. SAA recognizes and values the importance of staying involved as alumni and hopes to establish a variety of avenues to interact with them.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="124" data-group="club-list">Student Athlete Advisory Committee  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Student Athlete Advisory Committee (SAAC) represents the voice of the Xavier varsity student-athlete population. SAAC is responsible for the communication between student-athletes, staff, and faculty. SAAC also coordinates community service initiatives for athletic teams, and runs social and educational programs geared towards the student-athlete population.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="125" data-group="club-list">Student Government Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier University Student Government Association (SGA) exists to continuously improve the University and develop all students undergraduate and graduate, part-time and full-time, traditional and nontraditional alike as responsible and involved members and leaders of society. It provides a forum for civic training and student participation in University governance and strives to preserve the rights and freedoms of all students.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="131" data-group="club-list">Student Veterans of Xavier  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Student Veterans of Xavier seeks to provide military veterans and dependents with the resources, support and advocacy needed to succeed in higher education and following graduation. Student Veterans of Xavier is run out of the Veteran Affairs Office in partnership with Xavier University and Student Veterans of America as another resource for veteran support on campus.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="136" data-group="club-list">The Gathering  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Members of The Gathering play various table-top, card and board games that fit the fantasy genre such as MTG, Dungeons and Dragons (and RPG in general) and Munchkin. All these games have a heavy emphasis on strategy. Some are competitive, but others require players to work together to solve obstacles, puzzles, and problems to achieve a common goal. The members organized various drafts and RPG groups last year. The Gathering also goes to tournaments outside the university to support participating members.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="160" data-group="club-list">X-treme Fans  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            X-treme Fans promotes school spirit through participation in supporting Xavier athletic teams.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="144" data-group="club-list">Xavier Cheerleading &amp; Mascots  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Squad members of Xavier Cheerleading &amp; Mascots consist of males and females that cheer at all home men's and women's Basketball games, Big East, and NCAA tournaments. Responsibilities include: travel to conference tournaments, fundraising, and special appearances. Members are selected through a tryout process.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Health &amp; Wellness</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="8" data-group="club-list">Alpha Epsilon Delta - Pre-Med Honor Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Alpha Epsilon Delta (AED) is the National Health Pre-professional Honor Society dedicated to the encouragement and recognition of excellence in pre-professional health scholarship, including medicine, dentistry, veterinary, and others. The Society welcomes students engaged in the pursuit of a professional healthcare career. AED offers opportunities for intellectual and professional development, provides a forum for students with common interests, and extends a program of service to benefit the college/university community.  Acceptance is granted to students who have high academic achievements and have excelled in their extracurricular activities.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="28" data-group="club-list">Changing Health, Attitudes, and Action to Recreate Girls  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Changing Health, Attitudes, and Actions to Recreate Girls (CHAARG) is a national organization that is dedicated to liberating girls from the elliptical since 2012. Currently at 18 chapters nationwide and with over two thousand members, CHAARG has expanded to Xavier University. CHAARG has main events once a week where they bring in group fitness instructors (such as yoga, self defense, boxing, etc.) to Xavier University, as well as a few excursions to the fitness studios themselves. CHAARG also offers small group workouts that are lead by each member of the exec team that girls have an option to choose from. The CHAARG headquarters offers various events such as annual fit plans and the CHAARG National Retreat. CHAARG offers a unique community feel and is a fantastic way to meet new people while finding the best way to get started on a health and fitness journey.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="74" data-group="club-list">Health Services Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Health Services Society is designed to provide students entering the management aspect of the health care field an opportunity to develop effective leadership skills, access to information on careers, as well as work hands on in their career field. It is open to any Xavier Students that are interested in health care.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="110" data-group="club-list">Pre-Dental Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Pre-Dental Society is a support group for students who are Pre-Dental. Pre-Dental Society provides knowledge, volunteer opportunities, and observation opportunities in the dental field.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="112" data-group="club-list">Pre-Med Student Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Pre-Med Student Association is a club for students interested in pursuing a career in the health professions. Pre-Med Student Association's goal is to unite, educate, and empower future health professionals. They bring in various speakers, provide information about future careers, and provide insight from upperclassmen.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="113" data-group="club-list">Psi Chi - Psychology Honor Society and Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Psi Chi and Psychology Club are the official clubs of Xavier's Psychology Department. The Psi Chi chapter is an official chapter of the National Honor Society of Psychology. Psychology Club is open to all students of any major or minor in an effort to raise awareness and interest in all fields of psychology.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="127" data-group="club-list">Student Nurse Organization  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Student Nurse Organization is to enhance the development of student nurses as professional persons. Club activities are designed to foster nursing students' understanding of the role of the nurse in today's health care system, to encourage participation in community service projects, to facilitate interaction between nursing students and other Xavier Clubs, and to provide a supportive social network for students in the nursing program.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="128" data-group="club-list">Student Occupational Therapy Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Student Occupational Therapy Association (XUSOTA) is a group formed on the Xavier University campus by the current students enrolled in the occupational therapy program to provide networking opportunities among classmates, a forum for student focus on professional activities, sharing of professional information, participating in service, and the opportunity to become involved in the American Occupational Therapy Association from a student level.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="130" data-group="club-list">Student Social Work Organization  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Student Social Work Organization (SSWO) brings awareness and education to the importance of the social work profession while directly increasing the well-being and justice of the community through service.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="158" data-group="club-list">Xavier University, One Heart  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University, One Heart (XUOH) is an organization that raises awareness of heart disease by means of education, implementing a heart healthy lifestyle, and fundraising.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="161" data-group="club-list">Yoga and Holistic Awareness Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Yoga and Holistic Awareness Club is to direct Xavier students on holistic habits, yoga positions, and breathing techniques. They have weekly one-hour yoga sessions taught by a yoga instructor.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Health Professions</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="190" data-group="club-list">Institute for Healthcare Improvement Chapter  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Institute for Healthcare Improvement is a world-wide organization geared to improving healthcare around the world. The Xavier Chapter is geared towards learning and assisting young healthcare professionals during their undergraduate career. We aim to conduct quality improvement projects around the Xavier campus and discuss greater issues we see in the United States Healthcare system. 
+
+The IHI mission and vision statements are;
+Our vision: Everyone has the best care and health possible.
+
+Our mission: Improve health and health care worldwide.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="205" data-group="club-list">Pre-Vet Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier University Pre-Vet Society is a club for Xavier students interested in veterinary medicine or animals in general.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="217" data-group="club-list">Sports Medicine Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Sports Medicine Club is a club for anyone in a healthcare or exercise science major that is interested in working in the Sports Medicine field. Xavier Sports Medicine Club uses guest speakers and workshops to further the knowledge of the professions offered within the field of Sports Medicine. They also hold club events with professionals within the Sports Medicine field and student members to build stronger relationships among those that are interested or pursuing careers in the Sports Medicine field.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="275" data-group="club-list">Xavier ABSN Student Advisory  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The ABSN student advisory is committed to creating a thriving, productive student body through the free exchange of ideas with faculty, co-creating solutions, providing networking opportunities, and strengthening the legacy of the program through the power of community.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">History, Law &amp; Politics</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="51" data-group="club-list">College Democrats  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            College Democrats promotes liberal, progressive causes on campus and to engage the student body in constructive dialogue on various political issues.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="52" data-group="club-list">College Republicans  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            College Republicans is a political student organization credentialed by the Ohio College Republican Federation, dedicated to the advancement of the ideals, motives, and values of the Grand Old Party, the Republican National Committee, and any local, state, or national Republican candidate identifying themselves for the cause. The XU College Republicans shall educate members of the Xavier University community about the values and principles of the Republican Party. The XU College Republicans shall aid in the campaigning for and election of Republican candidates at the local, state and national levels.
+The XU College Republicans shall actively seek to develop and improve upon the political skills and leadership abilities of its members in preparation for future service to the Republican Party and their community. The XU College Republicans shall provide support for any student within the scope of Xavier University's community who chooses to identify himself/herself as a Conservative or a Republican.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="56" data-group="club-list">Criminal Justice Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Criminal Justice Society (CJUS Society) is the official club of the Criminal Justice Department. Open to all Criminal Justice majors, minors, and those who are interested in the field, the CJUS Society provides an opportunity to learn about the large variety of areas of study within the Criminal Justice System.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="76" data-group="club-list">History Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of the History Club is to enhance and promote the appreciation of history and historical scholarship in the Xavier University community and to make such proceeding enjoyable.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="93" data-group="club-list">Mock Trial Team  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Mock Trial Team is a club that consists of students interested in law or acting. Students interested in law have the option to play the role of a mock attorney, and students who are interested in acting have the option to play a mock witness (without having to do the legal work). However, students do have the option of playing the part of both an attorney and a witness. All members will assist in preparing the case given, and all members compete in invitationals at the regional tournament, the super-regional tournament, and potentially the national tournament. Each tournament consists of four rounds. During each round the mock attorneys and witnesses present one side of the case against another school's team in a courtroom. 
+
+The overall purpose of Mock Trial Team is to develop legal and trial skills and to prepare prospective law students for law school and the legal world. Members will gain trial experience in a "mock" setting and also learn from a team of Cincinnati area attorneys and former Mock Trial participants who serve as coaches.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="108" data-group="club-list">Pi Sigma Alpha - Political Science Honors Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Pi Sigma Alpha, the National Political Science Honor Society, is the only honor society for college and university students of government in the United States. The number of Pi Sigma Alpha chapters on campuses across the country is rapidly approaching 700. Pi Sigma Alpha is a member of the Association of College Honor Societies. Pi Sigma Alpha strives to recognize excellence in academic achievement by college and university students in the fields of political science, government, international and public affairs; to stimulate scholarship and interest in political science; to promote worthwhile curricular and extracurricular activities related to political science; to promote civil dialog; and to engage in any other activities that further these purposes.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="109" data-group="club-list">Political Science Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The mission of the Political Science Club is to give students a non-partisan platform to discuss politics and social issues, as well as host guest speakers and other events in service of educating the student body and informing students interested in Political Science of careers in the field.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="111" data-group="club-list">Pre-Law Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Pre-Law Society is a club for all students who are interested in going to law school after Xavier. Meetings help prepare/inform students about applying to law school and what the life of a lawyer entails. Meetings typically revolve around a guest speaker or panel of speakers, followed by an informal Q&amp;A session. It is a great opportunity for students who are interested in law school to come, learn, and socialize with other students who hold similar interests.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="278" data-group="club-list">Xavier Socialists  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Our primary mission is to foster discussion around socialism and socialist ideas on Xavier's campus.                           </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="162" data-group="club-list">Young Americans for Liberty  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Young Americans for Liberty is a classically liberal and traditionally conservative. Young Americans for Liberty believes in ending corporate welfare, low taxes, free markets, private charity, peaceful &amp; diplomatic foreign policy, ending the drug war, stopping the NSA and government surveillance, and the protection of civil liberties.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Honors</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="11" data-group="club-list">Alpha Sigma Nu - Jesuit Honor Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="78" data-group="club-list">Honors Council  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Honors Council promotes engagement between honors and non-honors students, to provide opportunities for extracurricular intellectual and artistic expression, and to encourage informal academic discourse among the Xavier community; all in order to further Xavier's primary mission of interactive education.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="96" data-group="club-list">Mortar Board  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Mortar Board is the premier national honor society recognizing college seniors for superior achievement in scholarship, leadership, and service. Mortar Board provides opportunities for continued leadership development, promotes service to colleges and universities, and encourages lifelong contributions to the global community.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Identity</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="6" data-group="club-list">African Student Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of African Student Association (ASA) is to expose African values, culture, and current events to the Xavier community. ASA seeks to address the misrepresentation of the African continent while simultaneously acknowledging the challenges facing the continent and upholding the foundations of the African culture.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="9" data-group="club-list">Alpha Kappa Alpha Sorority Inc.  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Alpha Kappa Alpha Sorority, Inc. is to cultivate and encourage high scholastic and ethical standards, promote unity and friendship among college women, alleviate problems concerning girls and women, maintain a progressive interest in college life, and to provide service to all mankind.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="10" data-group="club-list">Alpha Phi Alpha Fraternity Inc.  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Alpha Phi Alpha Fraternity, Inc. develops leaders, promotes brotherhood and academic excellence, and provides service and advocacy for communities.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="18" data-group="club-list">Asian &amp; American Students In Action (ASIA)  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Asian &amp; American Students in Action (ASIA) is dedicated to promoting the culture of Asian &amp; American heritage students by sharing customs, values, and cultural experiences. By building relationships with the campus community, ASIA creates a support system for students that will serve as a lobbying voice for their political, cultural, and social interests and needs through solidarity.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="25" data-group="club-list">Black Student Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Black Student Association (BSA) promotes the interests of the Black students of Xavier University, advocates their rights and privileges, and teaches the Xavier community and the public as a whole the significance of Black culture.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="32" data-group="club-list">Citizens of the World  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Citizens of the World (CoW) at Xavier University is dedicated to provide the Xavier community with the opportunity to discover the diverse cultures which exist at Xavier University. Also, CoW is dedicated to help international students adapt to American culture through different kinds of activities, where American students and international students can have an enriching and satisfying experience. Xavier students are encouraged to join and enjoy CoW where they will have the opportunity to meet students from all over the world and participate in various academic, social, service, and fundraising activities. CoW is open for those interested in cultures, languages, and traditions of other countries.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="58" data-group="club-list">Delta Sigma Theta Sorority, Inc.  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Delta Sigma Theta Sorority, Inc. is a non-profit organization of college educated women committed to constructive development of its members and to public service with a primary focus on the Black community. The major programs of the sorority are based upon the organization's Five Point: programmatic thrust, economic development, educational development, international awareness and involvement, physical and mental health, and political awareness and involvement.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="70" data-group="club-list">Gentlemen Organized for Achievement and Leadership  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Gentlemen Organized for Achievement and Leadership (GOAL), equip men of color with the values of academic excellence, progressive professionalism, and a commitment to their communities. Through knowledge of the past and confidence in their abilities, GOAL fulfills their obligation to promote a more inclusive Xavier University and greater society.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="184" data-group="club-list">Hispanic Organization and LatinX Awareness  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Hispanic Organization and LatinX Awareness (HOLA) is a cultural club at Xavier University. HOLA hosts many events throughout the year to inform the Xavier community about Latinx/Hispanic issues, shares cultural holidays and celebrations from Latin America and Spain, and fundraises and provides community service around the Cincinnati area.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="196" data-group="club-list">Kappa Alpha Psi Fraternity, Incorporated  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Kappa Alpha Psi is the 2nd oldest existing collegiate historically Black Greek Letter Fraternity and the 1st intercollegiate Fraternity incorporated as a national body.  It remains the only Greek letter organization with its Alpha Chapter on Indiana University's campus.  The Fraternity has over 125,000 members with 700 undergraduate and alumni chapters in nearly every state of the United States, and international chapters in Nigeria, South Africa, the West Indies, the United Kingdom, Germany, Korea and Japan.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="84" data-group="club-list">LGBTQ+ Alliance  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Xavier LGBTQ+ Alliance is established to provide a safe place for people of all sexual orientations and gender identity to meet, offer opportunities to learn, teach and discuss the challenges surrounding sexual orientation and gender identity within the Jesuit teachings of being people for others. The Xavier LGBTQ Alliance is open to people of any sexual orientation and gender identity and their goal is to bridge the gaps between persons of all sexual and gender identities. Meetings are open to anyone, no matter how you identify; no pressure is put on any member and there are no assumptions made about anyone in the group. All meetings are confidential and attendees need only share what they want. Please e-mail them with any questions, comments, or concerns.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="83" data-group="club-list">Ladies with Emphasis on Achievement and Distinction  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Ladies with Emphasis on Achievement and Distinction's (L.E.A.D.) duty is to enrich their lives and minds through academic achievement and personal development; empowering themselves to achieve success in an environment that is positive and nurturing to the purpose of sisterhood. L.E.A.D.promotes and encourages distinction, and seeks to improve their character through education, exploration, and professionalism. L.E.A.D. recognizes that in order to grow together, they must move as one.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="100" data-group="club-list">Muslim Student Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Muslim Student Association (MSA) is to coordinate Islamic worship and holy day services. MSA's function is to foster an environment wherein Muslims can interact with each other through a variety of social, educational, and religious activities. MSA aims to reach out to other faiths in the spirit of understanding service and cooperation. MSA intends to service the broader campus community, Muslim and non-Muslim alike.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="103" data-group="club-list">National Pan-Hellenic Council  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier's chapter of The National Pan-Hellenic Council (NPHC) is currently composed of five Greek letter Sororities and Fraternities: Alpha Phi Alpha Fraternity, Inc., Alpha Kappa Alpha Sorority, Inc., Delta Sigma Theta Sorority, Inc., Phi Beta Sigma Fraternity, Inc., and Sigma Gamma Rho Sorority, Inc. NPHC promotes interaction through forums, meetings, and other mediums for the exchange of information, and engages in cooperative programming and initiatives through various activities and functions.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="119" data-group="club-list">Sigma Gamma Rho Sorority Inc.  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Sigma Gamma Rho Sorority, Inc. was created on November 12, 1922 in Indianapolis, Indiana by seven young educators. The group became an incorporated national collegiate sorority on December 30, 1929, when a charter was granted to Alpha chapter at Butler University. It is the mission of Sigma Gamma Rho Sorority to enhance the quality of life for women and their families in the U.S. and globally through community service. Sigma Gamma Rho Sorority's goal is to achieve greater progress in the areas of education, healthcare, and leadership development. Members, affiliates, staff and community partners work to create and support initiatives that align with their vision.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Language &amp; Culture</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="65" data-group="club-list">Eta Sigma Phi - Classics Honor Society  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Eta Sigma Phi is the national honorary collegiate society for students of Latin and/or Greek. The purposes of the Society, in the words of the Constitution, are "to develop and promote interest in classical study among the students of colleges and universities; to promote closer fraternal relationship among students who are interested in classical study, including inter-campus relationship; to engage generally in an effort to stimulate interest in classical study, and in the history, art, and literature of ancient Greece and Rome."                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="69" data-group="club-list">French Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            French Club aims to engage students in programming related to the French language and the cultures of Francophone (French-speaking) countries in order to broaden their international knowledge and understanding.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="71" data-group="club-list">German Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University German Club is open to all German and non German speakers, regardless of level, only requiring an interest in the language and/or culture. German Club attends German events that are happening in the Cincinnati community and makes frequent trips to local German restaurants.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="236" data-group="club-list">Italian Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Italian Club is to explore and appreciate Italian culture.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="120" data-group="club-list">Sign Language Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Sign Language Club is a club in which all Xavier students can participate in and either learn about American Sign Language or enhance and continue to develop their current skills. Additionally, Xavier Sign Language Club strives to plan, develop, and host events on Xavier's campus in conjunction with the Deaf community in Cincinnati in attempt to increase awareness and knowledge about Deaf culture.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="121" data-group="club-list">Spanish Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Xavier University Spanish Club is to serve as an extension of the classroom for those students who are learning Spanish, as well as for those native speakers who are learning English. Spanish Club's goals and objectives are to promote interest in the Hispanic literature and culture, and to sponsor social and cultural events, speakers, concerts, and films to increase intercultural understanding.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Publications &amp; Media</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="172" data-group="club-list">Clocktower Review  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Clocktower Review is Xavier's semesterly literary and art magazine. We publish poetry, prose, and art created by Xavier students as a way to try and foster a creative culture on Xavier's campus.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="75" data-group="club-list">Her Campus Xavier  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Her Campus Xavier (HCXU) is an online magazine with fun articles and how-tos, Campus Profiles, and Xavier relevant articles. HCXU, a chapter of HerCampus, strives to provide interesting and engaging content for the student body at Xavier University.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="281" data-group="club-list">XUFM  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            We are a professional group of students looking to serve the Xavier community through music, the arts, communication, and promotional services. As a student run radio organization our focus is to foster a musically diverse and more informed environment for the student body. Our shows will enable listeners to learn more about various types of music, understand different cultures, and help them broaden their interests and abilities to become a more well- rounded individual.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="149" data-group="club-list">Xavier Newswire  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Newswire is Xavier's weekly campus newspaper that is written and edited by the students of Xavier University. The goal of Xavier Newswire is to inform the campus community, spark conversation, voice student concerns and offer students an outlet to grow as journalists.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="157" data-group="club-list">Xavier University Television Association  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University Television Association (XUTVA) is one of the largest and most important media outlets at Xavier University run solely by students. XUTVA provides a weekly news broadcast along with other shows such as a music video show called Brand X and a sketch comedy show called Musk. XUTVA also competes in movie festivals and local 48 hour contests once a semester to channel the creativeness of the club.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">STEM</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="5" data-group="club-list">Actuarial Science Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Actuarial Science Club provides opportunities for students who are interested in pursuing a career in Actuarial Science such as: meetings and networking events with guest speakers from local insurance companies who provide insight into the profession. Students can expand their knowledge of the Actuarial Science career path. The Actuarial Science Club also seeks to provide an environment in which studying for the professional exams is of the utmost importance through group study sessions. These opportunities will provide support and numerous resources for club members willing to begin their journey to becoming a certified actuary.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="7" data-group="club-list">Alchemyst Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Alchemyst club promotes the enjoyment and knowledge of chemistry while encouraging solidarity and community in the Chemistry Department.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="23" data-group="club-list">Biology Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Biology Club seeks to further the understanding and education of biology by connecting with nature both in the outdoors and through informal interactive lectures. Membership is open to all, regardless of major or career goal.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="24" data-group="club-list">Bird Watching Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Bird Watching Club is for any Xavier student wanting to observe, explore, and find the birds surrounding the greater Cincinnati area. Bird Watching Club's purpose is to educate students about the birds of the greater Cincinnati area. Participants will become accustom to the sights and sounds of the birds, all while experiencing various terrestrial biomes around Xavier. Towards the end of the academic year, participants will be encouraged to attend the annual birdathon, an event in which competitors seek to identify as many birds as possible in the Cincinnati area in a period of 24 hours.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="178" data-group="club-list">Community of Engineers  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Our club is dedicated to promoting interest in the field of Engineering by exposing students to projects, activities, and events related to a future career in Engineering. Additionally, we want to make a space for students outside of class to get to know each other better, especially those in the Engineering Department.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="55" data-group="club-list">Computer Science Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Computer Science Club (CSC) is an academic group of computer inclined people. The goal of CSC is to promote education and interest in computer science fields, along with connecting students sharing an interest in technology.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="80" data-group="club-list">Information Systems Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Information Systems Club is to encourage the relationship between Information Systems students and professionals within the technology industry. Furthermore, the organization hopes to increase awareness and utilization of different IT resources.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="86" data-group="club-list">Mathematics Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of the Xavier University Mathematics Club is to promote the interest of mathematics at Xavier University and to aid mathematics students or anyone with an interest in math to promote an interaction among math undergraduates, graduates, and faculty. Also, Mathematics Club link students to the worldwide mathematical community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="107" data-group="club-list">Physics Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The Physics Club exists to provide events and service opportunities that both explore and promote interests in physics to majors, minors and the entire campus community. Beyond the task of promoting physics, these events and gatherings are meant to develop a sense of friendship and growth in all avenues. The Physics Club also supports the Xavier Chapter of Sigma Pi Sigma, the national Physics Honor Society.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="269" data-group="club-list">TriBeta - Xi Delta Epsilon Chapter  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The purpose of Beta Beta Beta Biological Honor Society shall be to function as an honor and professional society for students of the biological sciences.                           </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Service &amp; Social Justice</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="2" data-group="club-list">A Xavier Christmas  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Christmas is a student run organization that aims to bring the joy of Christmas to local elementary school students. The event is a one time occurrence in December each year, and has been taking place at Xavier for 4 years. The Xavier Christmas Committee works to invite and prepare for 180 local students to come to campus for the afternoon and experience a Christmas celebration. While at Xavier University, the students partake in various activities alongside their Xavier buddy such as: games, arts and crafts, a Harmon-X performance, the lighting of the Christmas tree, and a break for pizza, cookies, and drinks. The children also get to see Santa, as well as a Live Nativity Scene on the Greenspace.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="12" data-group="club-list">Alternative Breaks  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University's Alternative Breaks empowers and challenges all involved to understand his or her relationship with the global community through direct service, education, and reflection, while encouraging personal growth, social awareness, and active citizenship.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="16" data-group="club-list">Animals, People, and the Environment at Xavier  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Animals, People, and the Environment (APEX) educates the Xavier community on the importance of animal rights and its impact on the environment and people.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="21" data-group="club-list">Autism Speaks U  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Autism Speaks U is an initiative that supports college students in awareness, advocacy, and fundraising efforts for Autism Speaks. Autism Speaks has grown into the world's leading autism science and advocacy organization that is dedicated to funding research into the causes, prevention, treatments and a cure for autism; increasing awareness of autism spectrum disorders; and advocating for the needs of individuals with autism and their families.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="169" data-group="club-list">BRAVE: Gender-Based Violence Prevention  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Brave Peer Educators are XU student leaders who are trained to facilitate gender-based violence prevention workshops to their peers. Brave workshops empower students to create a culture that is committed to ensuring the dignity and worth of all members of the community and cultivating a culture of respect and responsibility.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="31" data-group="club-list">Child's Play  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University Child's Play is a game industry charity dedicated to improving the lives of children with toys and games donated to Cincinnati's Children Hospital. These donations allow for children to enjoy age-appropriate entertainment, interact with their peers, friends/family, and can provide vital distraction from an otherwise generally unpleasant experience of receiving treatments. Gamers will raise money for Child's Play by holding late night gaming sessions, and end our efforts with a marathon video game playing event.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="30" data-group="club-list">Children's Charities Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Children's Charities Club is dedicated to serving and advocating on behalf of children and children's charities through a combination of service work and fundraising. Each year Children's Charities Club picks a different charity to focus on and raise money for through fundraising and an annual 5K.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="53" data-group="club-list">Colleges Against Cancer  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Colleges Against Cancer is a club that is based on promoting cancer education, advocacy for bills that will help raise cancer awareness and research, reaching out to those who have been affected by cancer, and supporting the Relay for Life of Xavier University in order to raise money for the American Cancer Society, who promotes cancer research and programs for survivors.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="59" data-group="club-list">Distance4Dreams  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Distance4Dreams is dedicated to raising money through hard work, sweat, and distance to grant the wishes of children with life threatening illnesses. Distance4Dreams aims to grant the wishes of, but is not limited to, children who wish to go to Disney World. Distance4Dreams travels to Disney World at the same time and spends time with the wish child and his or her family. While at Disney, Distance4Dreams members run in the half and/or full marathons as a part of the fundraiser to grant the wishes.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="63" data-group="club-list">Embrace Evanston  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Embrace Evanston addresses educational inequality through an aggressive and intentionally designed youth development campaign in Xavier's neighboring community of Evanston. Embrace Evanston also supports ambitious student-resident and/or university-community initiatives. Embrace Evanston's mission statement is: preparing young boys to become men by instilling academic excellence, combined with morals and values aimed toward self-respect and motivation, positively impacting the community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="67" data-group="club-list">Exceptional Student Assembly  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Exceptional Student Assembly provides professional development and service opportunities for students interested in a career working with children and adults with disabilities.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="233" data-group="club-list">Girl Up XU  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Girl Up XU is a group of individuals who all share the same mission and goal of igniting a passion for change towards a better world through our actions, discussions, and shared experiences and knowledge in the club. We strive to advocate for girls locally and worldwide in the classroom, workplace, and in everyday life.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="72" data-group="club-list">Habitat for Humanity  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Habitat for Humanity's mission is to raise money and awareness for sub-standard housing in the Cincinnati area. Through fundraising and volunteer efforts, Habitat for Humanity supports Cincinnati in the construction of homes in the community.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="193" data-group="club-list">Invisible Disabilities Club  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            True to the Xavier University mission, this club will serve as a facilitator to promote moral, spiritual, and intellectual support for individuals who are afflicted by a disability that may not be easily perceived by others. This club will encourage the entire Xavier University community to stand for the academic and emotional success of this particular group of students. The group of disabilities envisioned includes but is not limited to mental health, chronic pain, learning disabilities, neurological conditions, autoimmune disorders, chronic fatigue, etc.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="92" data-group="club-list">Mini Muskies  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Mini Muskies is a yearlong mentorship club that partners with students from St. Francis de Sales school, five minutes from Xavier's campus. Mentors and mentees build relationships through participation in weekly after-school enrichment activities and semester field trips around Cincinnati. The objectives of the program include: improve students' understanding of the importance of higher education - ultimately increasing their desire to attend college, boost students social and emotional health, and create strong relationships with positive role models.
+
+Mini Muskies has a long history of accomplishing the aforementioned objectives. For example, students measurably increased their self-esteem, hope, and problem-solving skills. Additionally, the program increased students' views of the importance of school and their ability to succeed academically as well as their plans to attend college. The one-on-one relationship building through mentorship has been a rewarding and uplifting factor for both Xavier and St. Francis students. Mini Muskies is looking for mentors willing to be part of this yearlong commitment to the program.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="97" data-group="club-list">Muskie Tigers  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Muskie Tigers is a mentor-based program for the refugee/immigrant population at Withrow High School. Xavier mentors exercise tutoring, socializing, and team-building to evoke a healthy relationship to contribute to the mentees' academic, emotional and social development. Muskie Tigers provides resources through workshops and campus events to initiate the conversation for higher education after high school. This program allows Xavier University students to become leaders in their community outside of the university.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="199" data-group="club-list">MuskieTHON  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier University's MuskieTHON is a philanthropic group dedicated to raising money and awareness for Cincinnati Children's Hospital Medical Center. Each year, the club hosts several events where students work to fundraise for Cincinnati Children's Hospital. The group highlights their fundraising efforts at their signature event 'Dance Marathon.' This event celebrates the fundraising efforts by dancing, participating in games, and listening to the stories of the families who they have worked hard to help.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="134" data-group="club-list">Students For Life  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Students For Life seeks to raise awareness of a consistent ethics of life on campus and throughout the community while promoting the basic dignity of the human being at every stage of life.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="137" data-group="club-list">Unified for Uganda  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Unified for Uganda (U4U) is a non profit organization that emotionally and financially supports destitute children in Northern Uganda through the empowerment of America's youth.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="138" data-group="club-list">Voices of Solidarity  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Voices of Solidarity (VOS) is a club committed to promoting awareness of social justice issues, especially those related to Latin America. In addition to talking about different current topics, VOS plans cultural events on campus to connect Xavier students with the world outside of Cincinnati.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="220" data-group="club-list">Xavier Student Sustainability  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Student Sustainability works under and is supported by the Dorothy Day Center for Faith and Justice. XSS seeks to promote environmental sustainability on campus through action and education.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Spirituality</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="20" data-group="club-list">Athletes in Action  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Athletes in Action (AIA) is a movement of student athletes connecting with God and each other, who by being transformed by grace and truth help one another become the Total Athlete; one who is strong mentally, physically and spiritually.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="50" data-group="club-list">Coalition for Christian Outreach  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Coalition for Christian Outreach (CCO) calls students to serve Jesus Christ with their entire lives. CCO seeks to create a space in which students can explore the claims of Jesus Christ, grow in their faith while developing habits of worship and prayer, and develop an understanding of how their faith impacts every area of life, including academic studies and future vocations.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="85" data-group="club-list">Life After Sunday  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Life After Sunday provides students with practical means for integrating their Catholic faith into everyday life. Life After Sunday does this primarily by praying the Rosary, studying the Bible, sponsoring Eucharistic Adoration, hosting Lord's Day dinners, and hosting Holy Power Hours. The club chose the name "Life After Sunday" because they think that living the Catholic faith is more than just going to Sunday Mass. To live a truly authentic Catholic life, we are called to seek Christ daily through prayer.                          </p>
+                           
+                        </div>
+                    </fieldset><fieldset class="form__fieldset">                          <legend class="form__title form__title--sub">Wellness</legend>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="230" data-group="club-list">EmpowerXU  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            The mission of EmpowerXU is to engage the Xavier campus and our communities, empower them to dismantle systemic power-based violence, and create an environment that supports survivors of sexual violence.                          </p>
+                           
+                        </div>
+                                            <div class="show-descriptions">
+                          <button class="tag " id="223" data-group="club-list">Student Wellness Advocacy Group  <span class="fa fa-plus" aria-title="Add to interest list" aria-hidden="true"></span></button>
+                                                      <p class="description">
+                            Xavier Student Wellness Advocacy Group (SWAG) is the Xavier University Chapter of The BACCHUS Network, a national organization that focuses on college health and safety issues. SWAG develops and facilitates prevention education programming on the critical wellness issues of sexual health, interpersonal relationships, gender identity, and alcohol and/or drug use using a bystander intervention model. SWAG creates dialogue among peers that will positively impact attitudes and behavior; and engage students in meaningful opportunities to create a healthy campus community that supports student success. SWAG encourages the intellectual, moral, and spiritual growth of participants.                          </p>
+                           
+                        </div>
+                                        </fieldset>
+                  <input class="btn btn--navy" type="submit" value="Save Interests">    
+                </fieldset>
+              </form>
+            </div>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#courses">
+              Courses <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div id="courses" class="tabs__content">
+              
+            </div>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#outcomes">
+              Outcomes <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div id="outcomes" class="tabs__content">
+
+            </div>
+            
+            <button class="o-btn tab__link visible tab--hide-desktop accordion__btn" data-toggle="#clubs">
+              Clubs <svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg>
+            </button>
+            <div id="clubs" class="tabs__content">
+
+            </div>
+          </div>
+          
+          
+          
+          
+        </div>
+        
+      </section>
+    </main>
+     
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

@@ -2,16 +2,23 @@
   $self: &;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   background: white;
   @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
   @include margin(0, 0, px-to-rem(16px), 0);
+  @include for-size("desktop-up"){
+    flex-direction: row;
+  }
   
   &:not(:last-child){
     border-bottom: solid px-to-rem(2px) #e3e3e3;
   }
   > img, .mo > a {
-    width: px-to-rem(150px);
+    max-width: 100%;
     @include margin(0, px-to-rem(16px), 0, 0);  
+    @include for-size("desktop-up"){
+      width: px-to-rem(150px);  
+    }
   }
   
   > div:last-of-type, &__content{
@@ -34,7 +41,6 @@
     position: relative;
     
     #{$self}__img{
-      display: none;
       align-self: center;
       @include for-size("tablet-portrait-up"){
         object-fit: contain;
@@ -49,7 +55,6 @@
     
     h3{
       @include font-size(18px);
-//       @include margin(null, null, px-to-rem(12px), null);
     }
   }
 }

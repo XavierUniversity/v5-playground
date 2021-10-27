@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+    
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <section aria-labelledby="campus-alert-heading">
+      <div class="alert alert--danger">
+        <div class="alert--danger__icon">
+          <span class="fa" aria-hidden="true"></span>
+        </div>
+        <div class="alert__content">
+            <h2 class="alert__title" id="campus-alert-heading">Campus Alert</h2>
+          
+          <p>TESTING</p>
+        </div>
+      </div>
+    </section>
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+      
+      <section class="hero hero--content">
+          <a class="hero--content__title" href="#">Department of Lorem Ipsum</a>
+      </section>
+      
+      <section class="wrapper">    
+        <div class="content-page">
+          <div class="content-page__breadcrumbs">
+            include "includes/breadcrumbs.html"
+          </div>
+          
+          <div class="content-page--nav sidenav">
+            <button class="content-page--nav__controls o-btn sidenav__btn" data-toggle="#content-menu" aria-label="Toggle Menu">Menu<svg class="icon sidenav__icon sidenav__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon sidenav__icon sidenav__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+            
+            <nav id="content-menu" class="sidenav__content" aria-label="">
+              <ul class="nav-list content-page--nav__list">
+                <li class="content-page--nav__item"><a class="content-page--nav__link active" href="#">Nav Item One</a></li>
+              
+                  <ul class="nav-list content-page--subnav__list">
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Sub Nav Item</a></li>
+                    <li class="content-page--nav__item"><a class="content-page--nav__link" href="#">Really Long Subnav Item Name That Wraps Around to the Next Line</a></li>
+                  </ul>
+              
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Second Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Nav Item Number Three That is Long and Wraps Around to the Next Line</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Here is the Fourth Nav Item</a></li>
+                <li class="content-page--nav__item active"><a class="content-page--nav__link" href="#">Fifth and Final Nav Item</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="content-page--main">
+          <h2>Testing</h2>
+          
+          
+          <div class="content_cta">
+            <img src="https://placehold.it/284x284" />
+            <div class="content_cta__content">
+              <h2 class="content_cta__title">I am a title</h2>
+              <p>I am the content of the page.</p>
+              <a href="#" class="btn btn--inline">Button</a>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          <div class="accordion"><button aria-label="Toggle Sub Menu" class="o-btn tabs__title accordion__btn" data-toggle="#open"><span>Is the University open?</span><svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+<div class="accordion__content" id="open">
+<p>Xavier University remains open and operations continue as classroom learning shifts to remote options. Employees are expected to report to campus. Those with specific questions or extenuating circumstance should contact their supervisor. For the short term, work-at-home options will be employed on an exception basis, at the approval of the leadership within each division leader’s organization. University events will be minimized to meet health goals and all events will be reviewed in an on-going manner moving forward.</p>
+</div>
+<button aria-label="Toggle Sub Menu" class="o-btn tabs__title accordion__btn" data-toggle="#concern">I am a Xavier employee experiencing concern or distress regarding this situation. Whom can I speak with about these feelings?<svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+<div class="accordion__content" id="concern">
+<p>Reports of the impact of COVID-19 around the world can be troubling, especially for members of the community who are from or have friends and family in affected areas.</p>
+<p><strong>Resources for Emotional Support</strong></p>
+<p>If you or other faculty or staff members are struggling due to this situation, please consider:</p>
+<ul>
+<li>Reaching out to your colleagues for support.</li>
+<li>Speaking with your supervisor, department head or Human Resources about your concerns.</li>
+<li>Contacting the Employee Assistance Program (1-866-440-6556).</li>
+</ul>
+<p>Employees who have concerns about a Xavier student may reach out to the Dean of Students office (513) 745-3166.</p>
+<p>All members of the Xavier community are encouraged to reach out in support of those in need. To mobilize campus resources to support a student, a Student Concern Report may be submitted at: <a href="http://www.xavier.edu/studentconcern">www.xavier.edu/studentconcern</a></p>
+</div>
+<button aria-label="Toggle Sub Menu" class="o-btn tabs__title accordion__btn" data-toggle="#quarantine">If at the recommendation of a health care provider or government agency, I am practicing self-quarantine, am I excused from Xavier University work obligations?<svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+<div class="accordion__content" id="quarantine">
+<p>Employees should contact the Office of Human Resources at 513-745-3638 for support and direction on their options including working from home and using available paid leave such as sick and vacation. For additional information on paid leave, view HR polices at <a href="https://www.xavier.edu/hr/guides-policies/human-resources-policies" rel="noopener" target="_blank">https://www.xavier.edu/hr/guides-policies/human-resources-policies</a>.</p>
+</div>
+<button aria-label="Toggle Sub Menu" class="o-btn tabs__title accordion__btn" data-toggle="#continuity">What resources and support are available for faculty in moving to remote learning?<svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+<div class="accordion__content" id="continuity">
+<p>A new resource has been created to help faculty quickly transition to online classes. Visit the <a href="/entity/open.act?type=page&amp;id=b0cd18160afd01587d9e23cd5c74dec9&amp;confId=1f26cc040afd015800eafaaef14b499e" target="_parent">Instructional Continuity website</a> to access these resources.</p>
+</div>
+<button aria-label="Toggle Sub Menu" class="o-btn tabs__title accordion__btn" data-toggle="#support">What can I do to be supportive of the Xavier University community at this time?<svg class="icon accordion__icon accordion__icon--plus"><use xlink:href="#xu-plus"></use></svg><svg class="icon accordion__icon accordion__icon--minus"><use xlink:href="#xu-minus"></use></svg></button>
+<div class="accordion__content" id="support">
+<p>Xavier University strives to value, support and welcome all to our University through one mission—embracing diversity, community, and providing a safe learning environment where all may thrive. If you have additional questions not addressed above, please email <a href="mailto:safety@xavier.edu">safety@xavier.edu</a>.</p>
+</div>
+</div>
+        </div>
+        
+      </section>
+    </main>
+     
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

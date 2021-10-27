@@ -2,7 +2,7 @@
 $(".form--ajax").on('submit', function(e){
   e.preventDefault();
   $form = $(this);
-  url = '/includes/data.php';
+  url = '/includes/data';
   $.ajax({
     type: "POST",
     url: url,
@@ -33,7 +33,7 @@ $(".form--ajax").on('submit', function(e){
 $(".form--ajax--lookup").on('submit', function(e){
   e.preventDefault();
   $form = $(this);
-  url = '/includes/data.php';
+  url = '/includes/data';
   $.ajax({
     type: "POST",
     url: url,

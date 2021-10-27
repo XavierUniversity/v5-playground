@@ -24,8 +24,9 @@
   border-right: solid 0.5rem;
   color: $font-color;
   position: relative;
-  margin-bottom: 1.5rem;
+  
   &--campus-alert{
+    border-top: solid 1px lighten($grey, 25%);
     margin-bottom: 0;
     position: fixed;
     bottom: 0;

@@ -4,7 +4,7 @@ if ( instas.length > 0 ){
     var insta = $(instas[i]).data('image');
     $.ajax({
       dataType: "json",
-      url: "https://www.xavier.edu/_V5/api/insta.php",
+      url: "https://www.xavier.edu/_V5/api/insta",
       data: { instagram_post : insta }
     }).done(function(d){
       var parent = $("[data-image='"+ insta +"']");

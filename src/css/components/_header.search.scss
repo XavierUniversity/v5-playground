@@ -49,7 +49,7 @@
   &__input-text{
     font-size: 1.25rem;
     font-weight: 200;
-    border: none;
+    border: solid 2px $grey;
     @include margin(null, null, null, 0);
     width: 90%;
     @include padding(px-to-rem(10px), px-to-rem(9.6px), px-to-rem(10px), px-to-rem(9.6px));

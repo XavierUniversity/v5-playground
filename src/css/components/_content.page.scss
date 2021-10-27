@@ -204,3 +204,12 @@
     }
   }
 }
+
+.resp-table {
+  overflow-x: auto;
+  white-space: nowrap;
+  @include for-size("tablet-landscape-up"){
+    overflow-x: unset;
+    white-space: normal;
+  }
+}

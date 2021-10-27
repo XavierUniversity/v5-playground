@@ -1,0 +1,52 @@
+.hero--large__ad {
+    @include for-size("tablet-landscape-up"){
+      height: 31rem;
+    }
+}
+ 
+ .wrapper--ad {
+	 background-color: #011120;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-template-rows: 1fr;
+	 grid-column-gap: 0px;
+	 grid-row-gap: 0px;
+   
+   @include for-size("tablet-landscape-up"){
+		 background-color: #011120;
+		 display: grid;
+		 grid-template-columns: 1fr 2fr;
+		 grid-template-rows: 1fr;
+		 grid-column-gap: 64px;
+		 grid-row-gap: 0px;
+	}
+}
+
+ .panel__title--ad {
+	 font-size: 1.50rem;
+	 text-align: left;
+}
+
+ .main--ad {
+	 margin-top: 2rem;
+}
+
+ .main--ad, .main--ad h2, .wrapper--ad h3, .wrapper-ad h4 {
+	 color: #fff 
+}
+
+ .sidebar--ad {
+	 margin-top: -100px;
+   
+   @include for-size("tablet-landscape-up"){
+		 margin-top: -300px;
+	}
+}
+
+ .sidebar--ad .panel--academic {
+	 box-shadow: 5px -5px 25px -5px rgba(0,0,0,0.75);
+	 -webkit-box-shadow: 5px -5px 25px -5px rgba(0,0,0,0.75);
+	 -moz-box-shadow: 5px -5px 25px -5px rgba(0,0,0,0.75);
+	 padding: 2rem;
+	 background: #fff;
+}

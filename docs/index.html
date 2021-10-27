@@ -18,7 +18,7 @@
     <nav aria-label="Skip Link">
       <a id="skip-nav" class="skip-nav sr-only" href="#content">Skip to content</a>
     </nav>
-    <section aria-labelledby="campus-alert-heading" style="top: 0;">
+    <section aria-labelledby="campus-alert-heading">
       <div class="alert alert--danger">
         <div class="alert--danger__icon">
           <span class="fa" aria-hidden="true"></span>
@@ -28,6 +28,10 @@
           
           <p>Xavier University will move to a remote learning format. More information at <a href="/coronavirus">xavier.edu/coronavirus</a>.</p>
         </div>
+        <button id="close-alert" class="o-btn" style="position: absolute;top: 1rem;right: 1rem;">
+          <svg class="icon drawer__icon"><use xlink:href="#xu-close"></use></svg>
+          <span class="sr-only">Close Alert</span>
+        </button>
       </div>
     </section>
     <header>
@@ -50,7 +54,7 @@
         </nav>
         <!-- UI Elements == Search and Menu -->
         <div class="header-ui">
-          <a href="https://search.xavier.edu/s/search.html?collection=xavu-meta"target="_blank" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
+          <a href="" class="o-btn header-ui__btn header-ui__btn--search drawer-open" data-controls="search" aria-label="Toggle Search Bar"><svg class="icon header-ui__icon header-ui__icon--search"><use xlink:href="#xu-search" /></svg></a>
           <button class="o-btn header-ui__btn header-ui__btn--menu drawer-open" data-controls="main-nav">
         		<span>Open Navigation Menu</span>
         	</button>
@@ -151,26 +155,15 @@
           </div>
         <div id="search" class="drawer drawer--search" aria-hidden="true" aria-describedby="search_intro">
           <div class="search__header">
-            <form action="https://search.xavier.edu/s/search.html" method="GET" role="search" class="form site-search" id="header-search" aria-controls="search-results">
-              <input type="hidden" name="collection" value="xavu-meta" />
-              <label class="sr-only" for="query">Search Xavier University:</label>
-              <input class="input-text site-search__input-text" name="query" id="query" type="search" placeholder="e.g. biology" />
+            <form action="https://www.xavier.edu/search" method="GET" role="search" class="form site-search" id="header-search" aria-controls="search-results">
+              <label class="sr-only" for="q">Search Xavier University:</label>
+              <input class="input-text site-search__input-text" name="q" id="q" type="search" placeholder="e.g. biology" />
               <svg class="icon site-search__icon"><use xlink:href="#xu-search" /></svg>
-              <button class="o-btn site-search__btn sr-only" type="submit" aria-label="Submit Search">Search</button>
+              <button class="o-btn site-search__btn" type="submit" aria-label="Submit Search">Search</button>
             </form>
             <button class="o-btn drawer__btn drawer__btn--inverted drawer-close search__close" aria-label="Close Search" data-controls="#search">
               <svg class="icon drawer__icon"><use xlink:href="#xu-close" /></svg>
             </button>
-          </div>
-          <div class="search">
-            <p class="search__intro" id="search_intro">Find anything about Xavier University, our faculty, staff and more. Enter a query in the search input above, and results will be displayed as you type.</p>
-            <div class="search__results" id="search-results" aria-live="polite">
-            </div>
-            <div class="search__sidebar">
-              <h2 class="search__heading">Filter Results</h2>
-              <ul class="search__facets" id="search-tabs">
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -391,7 +384,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <!-- <script src="js/plugins.js"></script> -->
-    <script src="js/base.min.js"></script>
+    <script src="js/base.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
         <script>
             $("#vid-btn").click(function(){

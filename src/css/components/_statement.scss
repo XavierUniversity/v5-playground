@@ -4,4 +4,24 @@
   &--text {
     @include margin(px-to-rem(16px),null,null,null)
   }
+  &--academic {
+  	@include for-size("tablet-portrait-up"){
+  	display: block;
+  	background-image: url('https://www.xavier.edu/_V5/_assets/images/statement_bg.jpg');
+  	background-size: cover;
+    margin-top: 3rem;
+    padding-bottom: 4rem;
+  	}
+
+  	display: none;
+ 
+
+  	h2 {
+  		color: #fff;
+  	}
+
+  	&__text {
+  		color: #fff;
+  	}
+  }
 }

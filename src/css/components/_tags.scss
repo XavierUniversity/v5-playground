@@ -1,0 +1,18 @@
+.tag{
+  background: #eceded;
+  border: none;
+  border-radius: px-to-rem(5px);
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: px-to-rem(16px);
+  font-weight: 200;
+  margin: px-to-rem(4px);
+  padding: px-to-rem(4px) px-to-rem(8px);
+  
+  &.active{
+    background: $medBlue;
+    color: white;
+  }
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xavier Search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+      .hero{
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), url("images/hero/content_hero-1x.jpg");
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), -webkit-image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+        background-image: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.20), transparent 2px, rgba(0, 0, 0, 0.20) 4px, transparent 4px ), image-set( url("images/hero/content_hero-1x.jpg") 1x, url("images/hero/content_hero-2x.jpg") 2x );
+      }
+    </style>
+    
+  </head>
+  <body>
+    include "includes/header.accessibility.html"
+    <header>
+      <div class="header header--fixed" id="header">  
+        include "includes/header.html"
+      </div>
+    </header>
+    <!-- Add your site or application content here -->
+    <main id="content">
+      
+      <section class="hero hero--content">
+          <h1 class="hero--content__title">Department of Lorem Ipsum</h1>
+      </section>
+      
+      <section class="wrapper">
+        <div class="spacer spacer--64"></div>
+        <div class="content-page--main">
+          <h1>Site Search</h1> 
+          <form action="" class="form site-search" method="GET" role="search">
+          	<label class="sr-only" for="query">Search Xavier University:</label>
+          	<input class="input-text site-search__input-text" name="q" placeholder="e.g. biology" type="search" id="query" value="">
+          	<button aria-label="Submit Search" class="o-btn site-search__btn" type="submit">Search</button>
+          </form>
+          
+          <div class="mo">
+            <img class="img-fluid pl-3" alt="Thumbnail for https://www.xavier.edu/marketing-and-communications/directory/gregory-mcmullen" src="https://www.xavier.edu/marketing-and-communications/images/mcmulleng.jpg">
+            <div class="mo__content">
+              <h4>Greg McMullen</h4>
+              <p><strong>Senior Web Developer, Marketing and Communications</strong>
+                <br /> Marketing and Communications</p>
+                
+                <div class="flex">
+                  <div class="flex__item">
+                    <p><a href="mailto:mcmulleng@xavier.edu">mcmulleng@xavier.edu</a></p>
+                  </div>
+                  <div class="flex__item">
+                    <p><a href="tel:513-745-3924">513-745-3924</a></p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="mo">
+            <img class="" alt="" src="https://www.xavier.edu/marketing-and-communications/images/mcmulleng.jpg">
+            <div class="mo__content">
+              <h4>Greg McMullen</h4>
+              <p><strong>Senior Web Developer, Marketing and Communications</strong>
+                <br /> Marketing and Communications</p>
+                
+                <div class="flex">
+                  <div class="flex__item">
+                    <p><a href="mailto:mcmulleng@xavier.edu">mcmulleng@xavier.edu</a></p>
+                  </div>
+                  <div class="flex__item">
+                    <p><a href="tel:513-745-3924">513-745-3924</a></p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer spacer--64"></div>
+      </section>
+    </main>
+     
+    <!-- End site or application content -->
+    include "includes/footer.html"
+  </body>
+</html>

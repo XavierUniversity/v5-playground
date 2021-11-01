@@ -31,6 +31,9 @@
     }
   }
   
+  &__img{
+    border-radius: px-to-rem(8px);
+  }
   &__link{
     color: $lightBlue;
     font-weight: 300;

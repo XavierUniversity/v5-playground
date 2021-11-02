@@ -1,7 +1,7 @@
 .r-profiles{
   position: relative;
   background: $darkNavy;
-  background-image: url('/images/profiles/background.svg');
+  background-image: url('../images/profiles/background.svg');
   background-size: cover;
   background-position: center bottom;
   @include padding(px-to-rem(24px), px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));

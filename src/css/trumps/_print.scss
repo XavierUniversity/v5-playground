@@ -1,0 +1,79 @@
+@media print {
+/*
+  header
+  ,
+*/ footer
+  , .navigation
+  , .header-ui
+  , #main-nav
+  , #search
+  , .hero
+  , .sidebar
+  , iframe
+  , video
+  , .plyr{
+    display: none;
+  }
+  
+  .header{
+    background: none;
+    box-shadow: none;
+    position: relative;
+    padding: 0; margin: 0;
+  }
+  main {
+    padding: 1rem;
+  }
+  .designed-wrapper{
+    display: block;
+  }
+  .branding{
+    color: white;
+    background-color: #0C2340;
+    display: inline-block;
+    padding: 1rem;
+     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+    color-adjust: exact !important; /* Firefox */
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  
+  main > div, main > section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-image: none !important;
+    background-color: white !important;
+    > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    div{
+      background-image: none !important;
+      background-color: white !important;
+    }
+  }
+  
+  p
+  , h1
+  , h2
+  , h3
+  , h4
+  , h5
+  , h6{
+    color: black !important;
+  }
+  button, a[class*='btn']{
+    background: none !important;
+    border: none !important;
+    color: $link-color !important;
+    text-underline: underline;
+    @include padding(0, 0, 0, 0);
+    @include margin(0, 0, 0, 0);
+    word-wrap: break-word;
+  }
+}

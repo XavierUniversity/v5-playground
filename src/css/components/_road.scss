@@ -1,54 +1,42 @@
 :root{
-  --imageWidth: #{px-to-rem(100px)};
-  @include for-size("tablet-portrait-up"){
-    --imageWidth: ${px-to-rem(150px)};
-  }
-  @include for-size("tablet-landscape-up"){
-    --imageWidth: #{px-to-rem(200px)};
-  }  
-  
+  --imageWidth: #{px-to-rem(245px)};
+  --contentWidth: #{px-to-rem(560px)};
 }
 .tour{
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  @include padding(px-to-rem(35px), px-to-rem(20px), null, px-to-rem(20px));
   @include margin(null, null, px-to-rem(32px), null);
-  @include for-size("tablet-portrait-up"){
-    @include padding(null, px-to-rem(48px), px-to-rem(35px), px-to-rem(48px));
-  }
   
   &__content{
     color: white;
-    @include padding(null, px-to-rem(8px), px-to-rem(28px), null);
+    @include padding(px-to-rem(64px), px-to-rem(48px), px-to-rem(72px), px-to-rem(48px));
     z-index: 10;
     position: relative;
-    @include for-size("tablet-portrait-up"){
-      width: calc( 100% - var(--imageWidth) + #{px-to-rem(80px)} );  
-    }
-    @include for-size("tablet-landscape-up"){
-      width: calc( 100% - var(--imageWidth) + #{px-to-rem(40px)} );  
-    }
+    width: var(--contentWidth);
     p{
-      @include font-size(16px, 1.25);
+      @include font-size(22px, 1.25);
     }
   }
   
   &__title{
     color: white;
-    @include font-size(32px, 1.25);  
+    @include font-size(48px, 1.25);  
   }
   
   &__img{
-    @include for-size("tablet-landscape-up"){
+    display: block;
+    @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
+    @include for-size("desktop-up"){
       position: absolute;
       bottom: 0;
-      right: px-to-rem(20px);
-      width: var(--imageWidth);
+      right: px-to-rem(64px);
+      width: auto;
+      height: 90%;
       z-index: 9;  
     }
-    display: block;
+    
     @media print{
       display: none;
     }
@@ -64,8 +52,7 @@
     text-align: center;
     width: max-content;
     @include padding(px-to-rem(10.4px), px-to-rem(48px), px-to-rem(10.4px), px-to-rem(48px));
-    @include for-size("tablet-portrait-up"){
-    }
+    @include margin(px-to-rem(24px), null, null, null);
     
     &:hover, &:focus {
       background: $darkNavy;

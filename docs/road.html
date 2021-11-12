@@ -189,11 +189,38 @@
                 </ul>
             </div>
           </div>
-
+          
+<!--
           <div class="video__container logged-in" id="0">
             <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
           </div>
-
+-->
+          <div class="r-video r-video--admitted">
+            <div class="r-video__container">
+              <h2 class="r-video--admitted__title r-video__title">I am content!</h2>
+            </div>
+            <div class="r-video__container r-video__container--video">
+              <iframe src="https://www.youtube.com/embed/RMPQOyvgjPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="r-video__container r-video__content text--centered">
+              <a href="#" class="o-btn c-btn btn--inline r-video__btn">View your Acceptance Letter</a>
+            </div>
+          </div>
+          
+          <div class="r-video">
+            <button class="o-btn tt__btn" data-uid="2">
+              <span>&hellip;</span>
+            </button>
+            <div class="r-video__container">
+              <h3 class="r-video__title">I am content!</h3>
+            </div>
+            <div class="r-video__container r-video__container--video">
+              <iframe src="https://www.youtube.com/embed/RMPQOyvgjPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="r-video__container r-video__content">
+              <p>Here is the video explanation. Probably needs some styles attached to it too.</p>
+            </div>
+          </div>
           <div class="panel logged-in" id="2">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
@@ -653,63 +680,6 @@
         onHide(instance){ // Clears out the Item Id when the tooltip is closing
           itemId = null;
         }
-      });
-      // 
-      const controls = `
-        <div class="plyr__controls">
-          <button type="button" class="plyr__control plyr__controls__item" aria-label="Play, {title}" data-plyr="play">
-              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-pause"></use></svg>
-              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-play"></use></svg>
-              <span class="label--pressed plyr__tooltip" role="tooltip">Pause</span>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Play</span>
-          </button>
-          <div class="plyr__progress__container plyr__controls__item">
-            <div class="plyr__progress">
-                <input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" aria-label="Seek">
-                <progress class="plyr__progress__buffer" min="0" max="100" value="0">% buffered</progress>
-                <span role="tooltip" class="plyr__tooltip">00:00</span>
-            </div>
-          </div>
-          <div class="plyr__time plyr__time--current plyr__controls__item" aria-label="Duration">00:00</div>
-          
-          <button type="button" class="plyr__control plyr__controls__item" aria-label="Mute" data-plyr="mute">
-              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-muted"></use></svg>
-              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-volume"></use></svg>
-              <span class="label--pressed plyr__tooltip" role="tooltip">Unmute</span>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Mute</span>
-          </button>
-          
-          <div class="plyr__volume plyr__controls__item">
-              <input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" aria-label="Volume">
-          </div>
-          <button type="button" class="plyr__control" data-plyr="captions">
-              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-captions-on"></use></svg>
-              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-captions-off"></use></svg>
-              <span class="label--pressed plyr__tooltip" role="tooltip">Disable captions</span>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Enable captions</span>
-          </button>
-          <button type="button" class="plyr__control plyr__controls__item" data-plyr="fullscreen">
-              <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-exit-fullscreen"></use></svg>
-              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-enter-fullscreen"></use></svg>
-              <span class="label--pressed plyr__tooltip" role="tooltip">Exit fullscreen</span>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Enter fullscreen</span>
-          </button>
-          <button type="button" class="plyr__control plyr__controls__item" data-plyr="hide">
-              <svg class="icon--not-pressed" role="presentation"><use xlink:href="#xu-close"></use></svg>
-              <span class="label--not-pressed plyr__tooltip" role="tooltip">Dismiss Video</span>
-          </button>
-      </div>`;
-      
-      const players = Array.from(document.querySelectorAll('.plyr')).map(p => new Plyr(p, {
-        controls: controls,
-      }));
-      
-      window.addEventListener("load", function(){
-        document.querySelector("[data-plyr='hide']").addEventListener("click", function(e){
-          var vid = this.parentNode.parentNode.parentNode.id;
-          document.getElementById(vid).style.display = 'none';
-          hideCard(vid);
-        });
       });
       
     </script>

@@ -11,18 +11,34 @@
   
   &__content{
     color: white;
-    @include padding(px-to-rem(64px), px-to-rem(48px), px-to-rem(72px), px-to-rem(48px));
+    @include padding(px-to-rem(16px), px-to-rem(24px), px-to-rem(48px), px-to-rem(24px));
     z-index: 10;
     position: relative;
-    width: var(--contentWidth);
-    p{
-      @include font-size(22px, 1.25);
+    @include for-size("desktop-up"){
+      background: rgba(0,0,0,0.35);
+      @include padding(px-to-rem(64px), px-to-rem(48px), px-to-rem(72px), px-to-rem(48px));  
+      text-shadow: 0 0 0.25rem rgba(black, 0.5);
+      p{
+        @include font-size(20px, 1.25);  
+      }
+    }
+    @include for-size("big-desktop-up"){
+      background: none;
+      width: var(--contentWidth);
+      text-shadow: none;
+      p{
+        @include font-size(22px, 1.25);
+      }
     }
   }
   
   &__title{
     color: white;
-    @include font-size(48px, 1.25);  
+    @include font-size(32px, 1.25);
+    @include for-size("desktop-up"){
+      @include font-size(48px, 1.25);    
+    }
+    
   }
   
   &__img{
@@ -31,11 +47,15 @@
     @include for-size("desktop-up"){
       position: absolute;
       bottom: 0;
-      right: px-to-rem(64px);
+      right: 0;
       width: auto;
       height: 90%;
       z-index: 9;  
     }
+    @include for-size("big-desktop-up"){
+      right: px-to-rem(64px);  
+    }
+    
     
     @media print{
       display: none;

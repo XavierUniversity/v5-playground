@@ -68,9 +68,12 @@
   background-position: center center;
   position: relative;
   @include margin(px-to-rem(32px), null, px-to-rem(32px), null);
-  
   color: white;
-  @include padding(px-to-rem(50px), px-to-rem(48px), px-to-rem(50px), px-to-rem(48px));
+  @include padding(px-to-rem(24px), px-to-rem(24px), px-to-rem(24px), px-to-rem(24px));
+  @include for-size("tablet-landscape-up"){
+    @include padding(px-to-rem(50px), px-to-rem(48px), px-to-rem(50px), px-to-rem(48px));  
+  }
+  
   
   &--admitted{
     background-image: url('../images/videos/acceptance-video.jpg');
@@ -78,6 +81,10 @@
     &__title{
       text-align: center;
     }
+  }
+  
+  &--theNextOne{
+    background-image: url('../images/videos/acceptance-video.jpg');
   }
   
   &__title{
@@ -89,7 +96,6 @@
   }
   
   &__container{
-    max-width: 50vw;
     @include margin(null, auto, null, auto);
     
     &--video{

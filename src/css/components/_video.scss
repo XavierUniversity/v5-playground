@@ -96,7 +96,9 @@
   
   &__container{
     @include margin(null, auto, null, auto);
-    max-width: 50vw;
+    @include for-size("tablet-landscape-up"){
+      max-width: 50vw;
+    }
     
     &--video{
       position: relative;

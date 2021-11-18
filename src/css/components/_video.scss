@@ -97,6 +97,7 @@
   
   &__container{
     @include margin(null, auto, null, auto);
+    max-width: 50vw;
     
     &--video{
       position: relative;

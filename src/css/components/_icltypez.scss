@@ -25,12 +25,8 @@
 		 }
 
 		 &--content {
-		 	padding: 1rem;
+		 	padding: 2rem;
 	 		margin: auto 0;
-
-	 		@include for-size("tablet-landscape-up") {
-	 			padding: 2rem;
-	 		}
 
 	 		@include for-size("desktop-up") {
 	 			padding: 4rem;

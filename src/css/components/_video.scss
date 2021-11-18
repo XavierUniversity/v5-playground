@@ -75,20 +75,19 @@
   }
   
   
-  &--admitted{
+  &--option-one{
     background-image: url('../images/videos/acceptance-video.jpg');
-    
-    &__title{
-      text-align: center;
-    }
   }
   
-  &--theNextOne{
-    background-image: url('../images/videos/acceptance-video.jpg');
+  &--option-two{
+    background-image: url('../images/videos/generic-two.svg');
   }
   
   &__title{
     color: white;
+    &--center{
+      text-align: center;
+    }
   }
   
   &__content{

@@ -28,7 +28,7 @@
 }
 
 .cdnStory{
-
+  
   &__wrapper{
     margin: 0 auto;
     @include for-size("tablet-landscape-up"){
@@ -41,6 +41,16 @@
     max-height: 100% !important;
     display: block !important;
     margin-bottom: 1.5rem;
+  }
+  
+  &__title{
+    @include font-size(22px);
+    text-align: left;
+    
+    @include for-size("tablet-landscape-up"){
+      @include font-size(32px);
+      text-align: center;
+    }
   }
   
   &__pullquote {

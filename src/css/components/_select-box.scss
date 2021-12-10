@@ -1,6 +1,6 @@
 .select-box{
   @include margin( px-to-rem(24px), null, null, null);
-  display: block;
+
   &__container{
     display: block;
     background:#F0F2F3;
@@ -65,6 +65,7 @@
     &-text{
       color: $medBlue;
       display: inline-block;
+
       &:after{
         fill: $medBlue;
         display: inline-block;

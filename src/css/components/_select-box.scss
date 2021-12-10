@@ -1,69 +1,96 @@
 .select-box{
-    @include margin( px-to-rem(24px), null, null, null);
-    &__container{
-      background:#F0F2F3;
-      @include margin( px-to-rem(16px), null, null, null);
-      position:relative;
-    
-      &--content {
+  @include margin( px-to-rem(24px), null, null, null);
+  display: block;
+  &__container{
+    display: block;
+    background:#F0F2F3;
+    @include margin( px-to-rem(16px), null, null, null);
+    position:relative;
+
+    &--content {
       @include padding(px-to-rem(24px),px-to-rem(42px),px-to-rem(24px),px-to-rem(42px));
-      }
     }
-    
-    &__cta-card{
+  }
+
+  &__cta-card{
     background-color: #fff;
     @include margin(px-to-rem(0px), null, null, null)
-        
-        &--container{
-        @include padding(px-to-rem(24px),px-to-rem(24px),px-to-rem(24px),px-to-rem(24px))
+
+    &--container{
+      @include padding(px-to-rem(24px),px-to-rem(24px),px-to-rem(24px),px-to-rem(24px))
+      text-align: center;
+      @include for-size('tablet-landscape-up') {
+        display: table;
+        @include padding(px-to-rem(24px),px-to-rem(48px),px-to-rem(24px),px-to-rem(24px))
+        height: 100%;
+        text-align: left;
+      }
+    }
+
+    &--image{
+      @include for-size('tablet-landscape-up') {
+        width: px-to-rem(72px);    
         text-align: center;
-            @include for-size('tablet-landscape-up') {
-            display: table;
-            @include padding(px-to-rem(24px),px-to-rem(48px),px-to-rem(24px),px-to-rem(24px))
-            height: 100%;
-            text-align: left;
-            }
-        }
-        
-        &--image{
-            @include for-size('tablet-landscape-up') {
-            width: px-to-rem(72px);    
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-            }
-            
-            img {
-            width: px-to-rem(72px)
-            }
-        }
-        
-        &--content{
-            @include for-size('tablet-landscape-up') {
-            display: table-cell;
-            padding-left: px-to-rem(16px);
-            }
-        }
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      img {
+        width: px-to-rem(72px)
+      }
     }
-    
-    &__icon {
-        width: px-to-rem(22px);
-        height:px-to-rem(30px);
-        padding-left: px-to-rem(8px);
-        transition: margin 175ms ease;
+
+    &--content{
+      @include for-size('tablet-landscape-up') {
+        display: table-cell;
+        padding-left: px-to-rem(16px);
+      }
     }
-    
-    &__link {
-        color: $medBlue;
-        font-weight: 300;
-        text-decoration: none;
-        
-        &:hover {
-           color: darken($medBlue, 15%);
-           
-           .select-box__icon {
-            margin-left: px-to-rem(8px);
-            }
+  }
+
+  &__icon {
+    width: px-to-rem(22px);
+    height:px-to-rem(30px);
+    padding-left: px-to-rem(8px);
+    transition: margin 175ms ease;
+  }
+
+  &__link {
+    $self: &;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.3s;
+    color: $base-text-color;
+
+    &-text{
+      color: $medBlue;
+      display: inline-block;
+      &:after{
+        fill: $medBlue;
+        display: inline-block;
+        content: ' ';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlue}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
+        background-size: px-to-rem(15px) px-to-rem(10px);
+        background-repeat: no-repeat;
+        height: px-to-rem(10px);
+        width: px-to-rem(15px);
+        @include margin(null, null, null, px-to-rem(8px));
+        transition: all 175ms ease;
+      }
+    }
+
+    &:hover {
+      transform: scale(0.95);
+      #{$self}-text{
+        color: darken($medBlue, 15%);
+        &:after{
+          @include margin(null, null, null, px-to-rem(16px));
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlueHover}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
         }
+      }
+      .select-box__icon {
+        margin-left: px-to-rem(8px);
+      }
     }
+  }
 }

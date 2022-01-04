@@ -20,13 +20,12 @@
     h2 {
       @include margin(px-to-rem(0px),null,px-to-rem(25px),null);;
     }
-
-    .wrapper {
+  }
+  .wrapper {
       padding: 0;
       @include for-size("tablet-landscape-up"){
         padding-left: 2rem;
         padding-right: 2rem;
       }
     }
-  }
 }

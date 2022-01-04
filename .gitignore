@@ -55,3 +55,7 @@ config.*
 test.*
 src/__trash/*
 package-lock.json
+
+# Ignore Code Editor settings, since we use different editors across the team
+.nova
+.vscode

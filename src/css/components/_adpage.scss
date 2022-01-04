@@ -11,24 +11,37 @@
 	 grid-template-rows: 1fr;
 	 grid-column-gap: 0px;
 	 grid-row-gap: 0px;
+	 padding: 0;
    
    @include for-size("tablet-landscape-up"){
-		 background-color: #011120;
 		 display: grid;
 		 grid-template-columns: 1fr 2fr;
 		 grid-template-rows: 1fr;
 		 grid-column-gap: 64px;
 		 grid-row-gap: 0px;
+		 padding-right: 2rem;
+		 padding-left: 2rem
 	}
 }
 
  .panel__title--ad {
 	 font-size: 1.50rem;
 	 text-align: left;
+
+	 @include for-size("tablet-landscape-up"){
+	 text-align: center;
+	 }
 }
 
  .main--ad {
-	 margin-top: 2rem;
+	 margin-top: 1rem;
+	 margin-right: 2rem;
+	 margin-left: 2rem;
+
+	 @include for-size("tablet-landscape-up"){
+	 	margin-top: 2rem;
+	 	margin-left: 0;
+	 }
 }
 
  .main--ad, .main--ad h2, .wrapper--ad h3, .wrapper-ad h4 {

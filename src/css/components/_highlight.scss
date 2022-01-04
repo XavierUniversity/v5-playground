@@ -2,11 +2,16 @@
   width: 100%;
   margin: auto 0;
   background-size: cover;
-  @include padding(px-to-rem(125px),null,px-to-rem(125px),null);
+  @include padding(px-to-rem(32px),null,px-to-rem(32px),null);
+
+  @include for-size("tablet-landscape-up"){
+      @include padding(px-to-rem(125px),null,px-to-rem(125px),null);
+  }
   
   &--container{
     @include for-size("tablet-landscape-up") {
       width: 75%;
+      @include padding(px-to-rem(32px),px-to-rem(32px),px-to-rem(32px),px-to-rem(32px));
     }
     width: 100%;
     background: rgba(255,255,255,0.8);
@@ -14,6 +19,14 @@
     
     h2 {
       @include margin(px-to-rem(0px),null,px-to-rem(25px),null);;
+    }
+
+    .wrapper {
+      padding: 0;
+      @include for-size("tablet-landscape-up"){
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
     }
   }
 }

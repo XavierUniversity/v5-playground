@@ -49,10 +49,10 @@
       }
 
       $flex-widths: (20, 30, 35, 40, 50, 60, 65, 70, 80);
-
+      $percent: "%";
       @each $width in $flex-widths{
         &--#{$width} {
-          width: #{$width};
+          width: #{$width}#{$percent} !important;
         }
       }
     }

@@ -16,10 +16,26 @@
   }
     
   &__header {
-    text-align: center;
+    text-align: left;
     margin-bottom: px-to-rem(32px);
+
+    @include for-size("tablet-landscape-up"){
+      text-align: center;
+    }
+
+    h2 {
+    font-size: 1.8rem;
+      @include for-size("tablet-landscape-up"){
+        font-size: 2rem;
+      }
+    
+    }
+
     p{
-        margin-top: px-to-rem(24px);
+      margin-top: px-to-rem(16px);
+        @include for-size("tablet-landscape-up"){
+          margin-top: px-to-rem(24px);
+        }
     }
   }
     

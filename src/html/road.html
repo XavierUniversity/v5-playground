@@ -19,7 +19,7 @@
   <body>
     include "includes/header.accessibility.html"
     <header>
-      <div class="header header--fixed" id="header">  
+      <div class="header header--fixed" id="header">
         include "includes/header.html"
       </div>
     </header>
@@ -30,10 +30,10 @@
       </section>
 
       <div class="wrapper designed-wrapper">
-        
+
         <div class="content">
           include "includes/breadcrumbs.html"
-          
+
           <!-- Make this mobile only, hide on desktop
             Add in the modal for login window
           -->
@@ -50,7 +50,7 @@
                 </ul>
             </div>
           </div>
-          
+
 <!--
           <div class="video__container logged-in" id="0">
             <div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="RMPQOyvgjPs" data-poster="https://source.unsplash.com/random/1280x720"></div>
@@ -67,7 +67,7 @@
               <a href="#" class="o-btn c-btn btn--inline r-video__btn">View your Acceptance Letter</a>
             </div>
           </div>
-          
+
           <div class="r-video r-video--option-two">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
@@ -82,7 +82,7 @@
               <p>Here is the video explanation. Probably needs some styles attached to it too.</p>
             </div>
           </div>
-          
+
           <div class="r-video">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
@@ -97,7 +97,7 @@
               <p>Here is the video explanation. Probably needs some styles attached to it too.</p>
             </div>
           </div>
-          
+
           <div class="panel logged-in" id="2">
             <button class="o-btn tt__btn" data-uid="2">
               <span>&hellip;</span>
@@ -108,7 +108,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
             </div>
-          
+
             <div class="mo mo--road">
               <div class="mo__img">
                 <img src="http://lorempixel.com/230/180/city/2" />
@@ -119,7 +119,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="r-profiles">
             <button class="o-btn tt__btn" data-uid="41">
               <span>&hellip;</span>
@@ -147,15 +147,15 @@
               </div>
             </div>
           </div>
-          
-         <!-- 
+
+         <!--
           <div class="video__container" id="40">
             <button class="o-btn tt__btn" data-uid="40">
               <span>&hellip;</span>
             </button>
             <div class="plyr" data-plyr-provider="vimeo" data-plyr-embed-id="122375452"></div>
           </div>
-          
+
           <div class="mo mo--road logged-in" id="123">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -168,7 +168,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          
+
           <div class="mo mo--road" id="900">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -181,7 +181,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          
+
           <div class="mo mo--road" id="19">
             <div class="mo__img">
               <img src="http://lorempixel.com/230/180/city/1" />
@@ -208,6 +208,20 @@
             </div>
             <img src="images/tour/phone.svg" alt="" class="tour__img" />
           </div>
+          <div class="tour tour--centered" style="background-image: url('images/tour/background.svg');" id="41">
+            <button class="o-btn tt__btn" data-uid="41">
+              <span>&hellip;</span>
+            </button>
+            <div class="tour__content">
+              <h3 class="tour__title">Virtual <br />Campus Tour</h3>
+              <p>Explore our virtual tour to get a 360-degree view of Xavier’s academic buildings, beautifully landscaped lawns, dorms and our brand new recreational health and wellness center.</p>
+              <a href="https://www.youvisit.com/#/vte/?data-platform=v&data-inst=120178&data-image-width=100%&data-image-height=100%&data-loc=142516" class="tour__btn">
+                Tour Campus
+              </a>
+            </div>
+            <img src="images/tour/phone.svg" alt="" class="tour--centered__img" />
+          </div>
+
         </div><!-- /content -->
         <div class="sidebar">
           <!-- Hide this on mobile
@@ -226,13 +240,13 @@
                   <button class="o-btn c-btn">Sign In</button>
                 </div>
               </fieldset>
-            </form>          
+            </form>
             <div class="text--centered">
               <p><a href="#">Create account</a> | <a href="#">Forgot password</a></p>
               <p><a href="#">Parent Access</a></p>
             </div>
           </div><!-- /panel -->
-          
+
           <div class="panel panel--academic tasks">
             <h2 class="panel__title panel__title--form text--centered">To Do List</h2>
             <template>
@@ -255,9 +269,9 @@
 
         </div><!-- /sidebar -->
       </div><!-- /academic-wrapper -->
-      
+
       <div class="spacer spacer--72"></div>
-            
+
       <div id="template">
         <ul class="list--bare">
           <li><a href="#" class="pin">pin item</a></li>
@@ -312,7 +326,7 @@
           // For Dev...CORS is blocking this
           this.getTasks();
         },
-        methods: { 
+        methods: {
           getTasks: function(){
             axios.get('https://www.xavier.edu/api/1.0/tasks/list', {
               params:{
@@ -337,8 +351,8 @@
       const template = document.getElementById('template');
       var itemId = null;
       var cardIds = localStorage.getItem('cards') === null ? [] : localStorage.getItem('cards');
-      template.style.display = 'none';  
-      
+      template.style.display = 'none';
+
       if ( cardIds !== null && cardIds.length > 0){
         var cards = cardIds.split(',');
         for ( var i = 0; i < cards.length; i++){
@@ -348,7 +362,7 @@
           }
         }
       }
-      
+
       function hideCard(cardId){
         let card = document.getElementById(cardId);
         card.style.display = 'none'; // Hide the card itself, mainly for local users
@@ -365,7 +379,7 @@
         cardIds.push(cardId);
         localStorage.setItem("cards", cardIds);
       }
-      
+
       tippy('.tt__btn', {
         theme: 'light-border',
         trigger: 'click',
@@ -387,7 +401,7 @@
           itemId = null;
         }
       });
-      
+
     </script>
   </body>
 </html>

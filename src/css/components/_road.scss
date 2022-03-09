@@ -7,7 +7,22 @@
   background-repeat: no-repeat;
   background-position: center center;
   @include margin(null, null, px-to-rem(32px), null);
-  
+
+  &--centered{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include for-size("desktop-up"){
+      flex-direction: row;
+    }
+    &__img{
+      @include padding(null, px-to-rem(48px), null, px-to-rem(48px));
+      @include for-size("desktop-up"){
+        @include padding(null, px-to-rem(24px), null, 0);
+      }
+
+    }
+  }
   &__content{
     color: white;
     @include padding(px-to-rem(8px), px-to-rem(24px), px-to-rem(48px), px-to-rem(24px));
@@ -23,7 +38,7 @@
       text-shadow: 0 0 0.25rem rgba(black, 0.5);
       width: var(--contentWidth);
     }
-    
+
     @include for-size("big-desktop-up"){
       background: none;
       text-shadow: none;
@@ -32,16 +47,16 @@
       }
     }
   }
-  
+
   &__title{
     color: white;
     @include font-size(32px, 1.25);
     @include for-size("big-desktop-up"){
-      @include font-size(48px, 1.25);    
+      @include font-size(48px, 1.25);
     }
-    
+
   }
-  
+
   &__img{
     @include padding(null, px-to-rem(48px), 0, px-to-rem(48px));
     @include for-size("tablet-landscape-up"){
@@ -56,16 +71,15 @@
       @include padding(null, px-to-rem(24px), null, 0);
     }
     @include for-size("big-desktop-up"){
-      right: px-to-rem(64px);  
+      right: px-to-rem(64px);
       height: 90%;
     }
-    
-    
+
     @media print{
       display: none;
     }
   }
-  
+
   &__btn{
     background: $medBlueHover;
     color: white;
@@ -77,7 +91,7 @@
     width: max-content;
     @include padding(px-to-rem(10.4px), px-to-rem(48px), px-to-rem(10.4px), px-to-rem(48px));
     @include margin(px-to-rem(24px), null, null, null);
-    
+
     &:hover, &:focus {
       background: $darkNavy;
     }

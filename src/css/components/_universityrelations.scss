@@ -1,0 +1,170 @@
+.programTemplate {
+  
+  &--hero {
+   height: auto;
+   background-size: contain;
+   background-repeat-y: repeat;
+    @include for-size("tablet-landscape-up"){
+      height: 80vh;
+    }
+
+   &__grid_2x1 {
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+       grid-template-rows: 1fr;
+       grid-column-gap: 0px;
+       grid-row-gap: 0px;
+        @include for-size("tablet-landscape-up"){
+            display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           grid-template-rows: 1fr;
+           grid-column-gap: 0px;
+           grid-row-gap: 0px;
+           height: 100%;
+        }
+    }
+
+   &__img {
+      display: none;
+          @include for-size("tablet-landscape-up"){
+              display: block;
+              background-size: cover;
+          }
+    }
+
+   &__content {
+      padding-top: 100px;
+      padding-bottom: 50px;
+          @include for-size("tablet-landscape-up"){
+              padding-top: 150px;
+              padding-bottom: 100px;
+          }
+    }
+
+   h1 {
+     font-size: 2.4rem;
+     font-weight: 300;
+     line-height: 2.8rem;
+          @include for-size("tablet-landscape-up"){
+                font-size: 2.7rem;
+                line-height: 3rem;
+          }
+    }
+
+  }
+
+  &--description {
+    color: #fff;
+    background-size: cover;
+
+    &__content {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      width: auto;
+      background-size: cover;
+            @include for-size("tablet-landscape-up"){
+                width: 70%;
+                 margin: 0 auto;
+                 background-size: cover;
+            }
+
+      h2 {
+        color: #fff;
+        text-align: left;
+              @include for-size("tablet-landscape-up"){
+                  text-align: center;
+              }
+      }
+
+      h3 {
+        color: #fff;
+      }
+
+      ul {
+        margin-left: 0;
+        padding-left: 1rem;
+            @include for-size("tablet-landscape-up"){
+                  margin-left: 0.5rem;
+                  padding-left: 0;
+            }
+      }
+
+    }
+
+  }
+
+  &--content {
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+     background-size: contain;
+     background-repeat-y: repeat;
+
+      &__block {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+                @include for-size("tablet-landscape-up"){
+                      padding-top: 5rem;
+                      padding-bottom: 5rem;
+                }
+      }
+
+      &__img {
+            @include for-size("tablet-landscape-up"){
+                 position: sticky;
+                 top: 120px;
+                 left: 652px;
+            }
+      }
+
+      &__grid_2x1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 0px;
+
+            @include for-size("tablet-landscape-up"){
+                 display: grid;
+                 grid-template-columns: repeat(2, 1fr);
+                 grid-template-rows: 1fr;
+                 grid-column-gap: 16px;
+                 grid-row-gap: 0px;
+            }
+
+         .grid-box1 {
+           grid-area: 2 / 1 / 3 / 2;
+                  @include for-size("tablet-landscape-up"){
+                      grid-area: unset;
+                  }
+            }
+         .grid-box2 {
+           grid-area: 1 / 1 / 2 / 2;
+           margin: auto;
+           margin-bottom: 1.5rem;
+                  @include for-size("tablet-landscape-up"){
+                      grid-area: unset;
+                      margin: 0;
+                  }
+            }
+      }
+  }
+
+  &--info {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: auto 0;
+    text-align: center;
+
+    .pt-btn {
+       max-width: fit-content;
+       padding-left: 4rem;
+       padding-right: 4rem;
+       margin: 0 auto;
+       border-radius: 2rem;
+    }
+
+  }
+
+}
+
+

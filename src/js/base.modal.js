@@ -39,6 +39,14 @@ var focusableElementsString = "a[href], area[href], input:not([disabled]), selec
 // store the item that has focus before opening the modal window
 var focusedElementBeforeModal;
 
+const hash = window.location.hash;
+var modal = $(`${hash}`);
+console.log(hash);
+console.log(modal);
+if ( hash.length > 0 && modal.length > 0 ){
+  showModal(modal);
+}
+
 jQuery('[data-modal]').click(function(e) {
   e.preventDefault();
   id = $(this).data("modal");
@@ -71,7 +79,7 @@ function trapEscapeKey(obj, evt) {
     // get list of all children elements in given object
     var o = obj.find('*');
     // get list of focusable items
-    
+
     var cancelElement;
     cancelElement = o.filter("#cancel");
 
@@ -86,23 +94,23 @@ function trapTabKey(obj, evt) {
   if (evt.which == 9) {
     // get list of all children elements in given object
     var o = obj.find('*');
-    
+
     // get list of focusable items
     var focusableItems;
     focusableItems = o.filter(focusableElementsString).filter(':visible');
-    
+
     // get currently focused item
     var focusedItem;
     focusedItem = jQuery(':focus');
-    
+
     // get the number of focusable items
     var numberOfFocusableItems;
     numberOfFocusableItems = focusableItems.length;
-    
+
     // get the index of the currently focused item
     var focusedItemIndex;
     focusedItemIndex = focusableItems.index(focusedItem);
-  
+
     if (evt.shiftKey) {
       //back tab
       // if focused on first item and user preses back-tab, go to the last focusable item
@@ -148,7 +156,7 @@ function setFocusToFirstItemInModal(obj){
 function showModal(obj) {
   var overlay = "<div id=\"modalOverlay\"></div>";
   if ( !jQuery('#modalOverlay').length ){
-    jQuery('body').append(overlay);  
+    jQuery('body').append(overlay);
   }
   jQuery('body').css('overflow', 'hidden');
   jQuery('#content-wrap').attr('aria-hidden', 'true'); // mark the main page as hidden

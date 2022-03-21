@@ -40,11 +40,9 @@ var focusableElementsString = "a[href], area[href], input:not([disabled]), selec
 var focusedElementBeforeModal;
 
 const hash = window.location.hash;
-var modal = $(`${hash}`);
-console.log(hash);
-console.log(modal);
-if ( hash.length > 0 && modal.length > 0 ){
-  showModal(modal);
+const hashModal = $(`${hash}`);
+if ( hash.length > 0 && hashModal.length > 0 ){
+  showModal(hashModal);
 }
 
 jQuery('[data-modal]').click(function(e) {

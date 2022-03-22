@@ -22,16 +22,34 @@
 	width: 100%;
 	z-index: 101;
 	max-height: 90%;
-	
+
 	&.visible{
     display: block;
-  	overflow-y: scroll; 
+  	overflow-y: scroll;
 	}
 	// Ensure mobile phones in landscape mode DON'T see this.
 	@media ( orientation: portrait ) and ( min-width: $phone-upper-boundary ){
   	top: 25%;
   	max-height: 50%;
 	}
+
+
+    .content_cta{
+      .content_cta__content{
+        @include for-size('tablet-portrait-up'){
+          margin-left: 1.5rem;
+        }
+      }
+      img{
+        @media ( orientation: portrait ) and ( max-width: $tablet-portrait-upper-boundary ) {
+          margin-top: 4.5rem;
+        }
+        @media ( orientation: landscape ) and ( max-width: $tablet-portrait-upper-boundary ){
+          max-width: 10rem;
+        }
+      }
+    }
+
 	@include for-size("tablet-landscape-up"){
   	left: 10%;
   	width: 80%;
@@ -44,14 +62,14 @@
   	width: 50%;
   	max-height: 50%;
 	}
-	
+
 	@media only screen and ( max-height: 800px ){
   	left: 10%;
   	width: 80%;
   	top: 12.5%;
   	max-height: 75%;
 	}
-	
+
 	&__content{
   	position: relative;
   	width: 100%;
@@ -72,13 +90,13 @@
   	z-index: 10;
   	top: px-to-rem(24px);
   	right: px-to-rem(24px);
-  	
+
   	@include for-size("tablet-landscape-up"){
     	top: px-to-rem(45px);
     	right: px-to-rem(75px);
   	}
 	}
-	
+
 	&__title{
   	@include margin(0, null, px-to-rem(10px), null);
 	}

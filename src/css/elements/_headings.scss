@@ -30,7 +30,6 @@ h1{
 }
 
 h2{
-  text-transform: uppercase;
   color: $darkNavy;
   font-weight: 400;
   @include font-size($h2-mobile, $heading-line-height-mobile);
@@ -38,15 +37,14 @@ h2{
 }
 
 h3{
-  text-transform: uppercase;
   color: $darkNavy;
   font-weight: 400;
   @include font-size($h3-mobile, $heading-line-height-mobile);
   line-height: px-to-rem(24px);
   &.mixed{
     text-transform: none;
-    font-weight: 300;  
-  } 
+    font-weight: 300;
+  }
 }
 
 h4,h5,h6{
@@ -55,27 +53,23 @@ h4,h5,h6{
   @include font-size($h4-mobile, $heading-line-height-mobile);
 }
 
-h4{
-  text-transform: uppercase;
-}
-
 @include for-size("desktop-up"){
   h1{ @include font-size($h1); }
   h2{ @include font-size($h2, $heading-line-height); }
   h3{ @include font-size($h3, $heading-line-height); }
   h4{ @include font-size($h4, $heading-line-height); }
-  h5{ @include font-size($h5, $heading-line-height); } 
-  h5{ @include font-size($h6, $heading-line-height); }  
+  h5{ @include font-size($h5, $heading-line-height); }
+  h5{ @include font-size($h6, $heading-line-height); }
 }
 
-p{ 
-  @include font-size(16px, 1.65); 
+p{
+  @include font-size(16px, 1.65);
   @include margin(0, null, px-to-rem(12px), null);
   /*&:first-of-type{
     @include margin(px-to-rem(16px), null, null, null);
-    
+
     @include for-size("tablet-portrait-up"){
-      @include margin(px-to-rem(24px), null, null, null);  
+      @include margin(px-to-rem(24px), null, null, null);
     }
   }*/
 }

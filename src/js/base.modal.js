@@ -40,7 +40,7 @@ var focusableElementsString = "a[href], area[href], input:not([disabled]), selec
 var focusedElementBeforeModal;
 
 const hash = window.location.hash;
-const hashModal = $(`${hash}`);
+const hashModal = $(`${hash}`+".modal");
 if ( hash.length > 0 && hashModal.length > 0 ){
   showModal(hashModal);
 }

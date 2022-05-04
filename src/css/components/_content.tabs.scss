@@ -84,6 +84,13 @@
     &.visible{
       display: block;
     }
+    &--header {
+      color: #0B223F;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 

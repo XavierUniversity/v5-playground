@@ -99,10 +99,26 @@
   }
 
   &--content {
-     padding-top: 5rem;
-     padding-bottom: 5rem;
+     padding-top: 3rem;
+     padding-bottom: 0rem;
      background-size: contain;
      background-repeat: no-repeat repeat;
+            @include for-size("tablet-landscape-up"){
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+
+      &__wrapper {
+        background-image: none;
+        padding-bottom: 3rem;
+
+            @include for-size("tablet-landscape-up"){
+              background-image:url('https://www.xavier.edu/_V5/_assets/images/ur_images/content_bg.jpg');
+              background-size: contain;
+              background-repeat: no-repeat repeat;
+              padding-bottom: 0rem;
+          }
+      }
 
       &__block {
           padding-top: 1rem;

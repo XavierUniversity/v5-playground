@@ -14,7 +14,7 @@
       @include padding(px-to-rem(32px),px-to-rem(32px),px-to-rem(32px),px-to-rem(32px));
     }
     width: 100%;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.95);
     @include padding(px-to-rem(75px),px-to-rem(50px),px-to-rem(75px),px-to-rem(50px));
     
     h2 {

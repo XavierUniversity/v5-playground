@@ -8,7 +8,8 @@
     @include padding(px-to-rem(40px), null, px-to-rem(24px), null);
     @include font-size(24px);
     @include for-size("phone-only"){
-      @include padding(px-to-rem(40px), null, px-to-rem(32px), null);
+      padding-top: 2.5rem;
+      padding-bottom: 1rem;
     }
   }
   &--hr{
@@ -26,7 +27,8 @@
     @include padding(0, px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));  
     @include font-size(28px);
     @include for-size("phone-only"){
-      line-height: px-to-rem(45px);
+      font-size: 1.25rem;
+      line-height: 2rem;
     }
   }
 }

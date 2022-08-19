@@ -88,3 +88,18 @@
     @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 }
+
+.footer-statement {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    &-text {
+      width: 50%;
+      line-height: 1.2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+    }
+}

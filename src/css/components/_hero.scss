@@ -87,11 +87,22 @@
   
   &--video{
     width: 100%;
-    display: none;
+    display: flex;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
     @include for-size("tablet-portrait-up"){
-      display: flex;
+      height: auto;
     }
+
+    &__mobile {
+      width: auto;
+      height: 100vh;
+      @include for-size("tablet-portrait-up"){
+        width: 100%;
+        height: auto;
+        }
+      }
   
     &__wrapper{
       position: absolute;

@@ -26,9 +26,11 @@
   &--text {
     @include padding(0, px-to-rem(16px), px-to-rem(32px), px-to-rem(16px));  
     @include font-size(28px);
+    text-align: center;
     @include for-size("phone-only"){
-      font-size: 1.25rem;
-      line-height: 2rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: left;
     }
   }
 }

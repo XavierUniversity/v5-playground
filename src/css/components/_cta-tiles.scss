@@ -13,6 +13,14 @@
   
   &__content{
     @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
+    position: absolute;
+    bottom: 0;
+    transition: bottom 450ms ease-in-out;
+    min-height: px-to-rem(125px);
+
+    @include for-size("tablet-landscape-up"){
+      bottom: -#{px-to-rem(60px)};
+    }
   }
     
   &__header {
@@ -39,13 +47,6 @@
     }
   }
     
-  &__content{
-    position: absolute;
-    bottom: -#{px-to-rem(60px)};
-    transition: bottom 450ms ease-in-out;
-    min-height: px-to-rem(125px);
-  }
-    
   &__name{
     color: white;
     text-transform: uppercase;
@@ -58,7 +59,11 @@
     
   &__text{
     transition: opacity 400ms ease-in-out;
-    opacity: 0;
+    opacity: 1;
+
+    @include for-size("tablet-landscape-up"){
+      opacity: 0;
+    }
   }
     
   &__link {
@@ -69,6 +74,11 @@
     text-decoration: none;
     position: relative;
     transition: background 400ms ease-in-out;
+    background: rgba(0, 0, 0, 0.3);
+    @include for-size("tablet-landscape-up"){
+      background: rgba(0,0,0,0);
+    }
+
     &:hover{
       background: rgba(0, 0, 0, 0.3);
       

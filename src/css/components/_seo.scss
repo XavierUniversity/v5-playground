@@ -20,3 +20,39 @@
 		text-transform: uppercase;
 	}
 }
+
+
+ .university-scholars {
+     background-image: url(https://www.xavier.edu/_V5/_assets/images/blue-bg.jpg);
+     background-size: cover;
+     background-position: center center;
+     color: #fff;
+     padding-top: 3rem;
+     padding-bottom: 3rem;
+     text-align: center;
+
+    h2 {
+	  color: #fff;
+	}
+
+	&__wrapper {
+     padding-left: 15%;
+     padding-right: 15%;
+	}
+
+	&__btn {
+     width: fit-content;
+     padding-left: 3rem;
+     padding-right: 3rem;
+     margin: 0 auto;
+
+     &:hover {
+	     width: fit-content;
+	     padding-left: 3rem;
+	     padding-right: 3rem;
+	     margin: 0 auto;
+		}
+
+	}
+
+}

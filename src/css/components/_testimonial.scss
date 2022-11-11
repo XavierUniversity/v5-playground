@@ -1,11 +1,20 @@
 .testimonials{
-  text-align: center;
+  text-align: left;
+
+  @include for-size("tablet-landscape-up"){
+    text-align: center;
+  }
   
   &__header {  
   }
   &__desc{
-    width: 75%;
-    margin: 0 auto;
+    width: auto;
+    margin: auto;
+
+    @include for-size("tablet-landscape-up"){
+      width: 75%;
+      margin: 0 auto;
+    }
   }
 }
 .testimonial{
@@ -33,7 +42,11 @@
       height: px-to-rem(25px);
     }
     &--quote{
-      @include margin(px-to-rem(32px), null, px-to-rem(12px), null)
+      @include margin(px-to-rem(16px), null, px-to-rem(12px), null)
+
+      @include for-size("tablet-landscape-up"){
+        @include margin(px-to-rem(32px), null, px-to-rem(12px), null)
+      }
     }
     &--name{
       font-weight: 300;

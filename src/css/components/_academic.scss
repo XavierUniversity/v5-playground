@@ -36,7 +36,17 @@
          text-transform: none;
          font-weight: 300;
          border-bottom: 3px solid #fff;
+         line-height: 1.2 !important;
+         font-size: clamp(2.7rem, 8vw, 5rem);
 
+        }
+
+        &__long {
+         font-size: clamp(2rem, 5vw, 5rem) !important;
+        }
+
+        &__longest {
+         font-size: clamp(2rem, 3.9vw, 3.3rem) !important;
         }
 
         &__subtitle {

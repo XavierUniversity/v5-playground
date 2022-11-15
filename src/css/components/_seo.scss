@@ -29,22 +29,37 @@
      color: #fff;
      padding-top: 3rem;
      padding-bottom: 3rem;
-     text-align: center;
+     text-align: left;
+
+     @include for-size("tablet-landscape-up"){
+     	text-align: center;
+     }
 
     h2 {
 	  color: #fff;
 	}
 
 	&__wrapper {
-     padding-left: 15%;
-     padding-right: 15%;
+     padding-left: 2rem;
+     padding-right: 2rem;
+
+     @include for-size("tablet-landscape-up"){
+      padding-left: 15%;
+      adding-right: 15%;
+     }
+
 	}
 
 	&__btn {
      width: fit-content;
-     padding-left: 3rem;
-     padding-right: 3rem;
+     padding-left: 1rem;
+     padding-right: 1rem;
      margin: 0 auto;
+
+     @include for-size("tablet-landscape-up"){
+      padding-left: 3rem;
+      padding-right: 3rem;
+     }
 
      &:hover {
 	     width: fit-content;

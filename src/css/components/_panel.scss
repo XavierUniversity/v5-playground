@@ -75,7 +75,11 @@
     width: 100%;
   }
   &__content {
+    @include margin(px-to-rem(24px), px-to-rem(24px), null, px-to-rem(24px));
+
+    @include for-size("tablet-landscape-up"){
     @include margin(px-to-rem(24px), px-to-rem(42px), null, px-to-rem(42px));
+    }
   }
   
   &__hr{

@@ -64,3 +64,20 @@
     @include padding( px-to-rem(16px), px-to-rem(50px),px-to-rem(16px), px-to-rem(50px));
   }
 }
+
+
+.sidebar li.nav-list__item {
+    border-top: 1px solid lightgrey;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidebar li.nav-list__item:last-of-type{
+  border-bottom: 1px solid lightgray;
+}
+
+h2.sidebar--title {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}

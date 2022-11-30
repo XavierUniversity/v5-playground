@@ -1,4 +1,10 @@
 .faq{
+  &--title {
+    margin-bottom: 2rem;
+    font-size: 28px;
+    font-weight: 300;
+  }
+
   &__q{
     @include font-size(18px);
     @include margin(2rem, null, null, null);

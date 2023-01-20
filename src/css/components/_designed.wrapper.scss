@@ -68,7 +68,7 @@
     }
     
     > .panel:first-child{
-      @include margin(px-to-rem(96px), null, null, null);
+      @include margin(px-to-rem(48px), null, null, null);
     }
   }
 }

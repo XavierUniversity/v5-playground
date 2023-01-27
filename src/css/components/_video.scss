@@ -20,8 +20,11 @@
 // Copyright (c) 2011 ZURB, http://www.zurb.com/
 .flex-video {
   padding-top: px-to-rem(25px);
-  height: 340px;
+  height: 50vw;
   text-align: center;
+  @include for-size("tablet-landscape-up"){
+    height: 33vw;
+    }
   
   &--widescreen{
     padding-bottom: 57.25%;

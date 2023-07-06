@@ -27,6 +27,7 @@
     display: none;
     @include for-size("tablet-landscape-up"){
       display: block;
+      padding-top: 1rem;
     }
     &__mobile {
       display: block;
@@ -50,7 +51,6 @@
     }
     &__title{
       @include font-size(16px);
-      border-left: solid px-to-rem(8px) $medBlue;
       
       @include padding( px-to-rem(16px), null, px-to-rem(16px), px-to-rem(24px));
     }

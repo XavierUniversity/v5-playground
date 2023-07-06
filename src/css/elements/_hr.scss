@@ -4,3 +4,43 @@ hr{
   border-style: solid;
   @include margin ( px-to-rem(24px), null, px-to-rem(24px), null);
 }
+
+hr.academic--hero__yellow {
+  border-color: $yellow;
+  border-width: 0.16rem;
+  border-style: solid;
+  margin-top: 0;
+  margin-bottom: -0.6rem;
+  width: calc(100% - 38px);
+  display: inline-block;
+}
+
+hr.morex--yellow {
+    border-color: $yellow;
+    border-width: 0.1rem;
+    border-style: solid;
+    width: 65px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+hr.morex--blue {
+    border-color: $darkNavy;
+    border-width: 0.1rem;
+    border-style: solid;
+    width: 65px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+hr.morex--moreblue {
+    border-color: $medBlue;
+    border-width: 0.1rem;
+    border-style: solid;
+    width: 65px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+}

@@ -13,13 +13,14 @@
     
     &:hover, &:active, &:focus{
       #{$self}__icon{
-        background: #1B4675;
-        border-color: #1B4675;
+        background: $medBlue;
+        border-color: $yellow;
+        color: #fff;
       }
     }
   }
   &__icon{
-    background: lighten($darkNavy, 6%);
+    background: $medBlue;
     border-radius: 100%;
     border: solid px-to-rem(0.715px) $medBlue;
     height: px-to-rem(40px);

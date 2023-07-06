@@ -1,7 +1,7 @@
 .crumbs{
     display: block;
   
-  @include padding(px-to-rem(28px), null, px-to-rem(24px), 0);
+  @include padding(px-to-rem(44px), null, px-to-rem(24px), 0);
   @include font-size(14px);
   &__item{
     font-weight: 300;
@@ -12,13 +12,13 @@
   }
   &__link{
     text-decoration: underline;
-    color: $medBlue;
+    color: $acceptableGrey;
     
     &:hover, &:focus, &:active {
-      color: $medBlueHover;
+      color: $medBlue;
     }
   }
   &__current{
-    color: $medBlue;
+    color: $acceptableGrey;
   }
 }

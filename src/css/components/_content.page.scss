@@ -1,18 +1,19 @@
 .content-page {
 
-  @include margin(null, null, px-to-rem(100px), null);
   @include for-size("tablet-landscape-up"){
+    margin-left: -2rem;
     display: -ms-grid;
     display: grid; 
     -ms-grid-columns: px-to-rem(300px) 1fr; 
-    grid-template-columns: px-to-rem(300px) 1fr; 
+    grid-template-columns: 22rem 1fr; 
     -ms-grid-rows: px-to-rem(76px) 2fr; 
     grid-template-rows: px-to-rem(76px) 2fr; 
     grid-row-gap: 0;
     grid-column-gap: px-to-rem(135px / 2);
   }
   @include for-size("desktop-up"){
-    grid-column-gap: px-to-rem(135px);
+    grid-column-gap: 5rem;
+    margin-left: -5.875rem;
   }
   
   &--no-nav{
@@ -37,15 +38,8 @@
     @include padding(null, px-to-rem(12px), null, null);
     
     @include for-size("tablet-landscape-up"){
-      padding: 0;
+      padding: 3rem 1rem 2rem 5rem;
       background: none;
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        /* IE10+ CSS styles go here */
-        @include padding(null, px-to-rem(135px / 2), null, null);
-      } 
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @include padding(null, px-to-rem(135px / 2), null, null);
-      }
     }
     
     &__controls{
@@ -62,11 +56,12 @@
     }
     
     &__item {
-      border-top: px-to-rem(1px) $darkGrey solid;
-       
-      &:first-child{
-        border-top: none;
-      }
+       position: relative;
+       border-top: 0.0625rem #0C2340 solid;
+
+        &:first-child{
+          border-top: none;
+        }
     }
     
     &__link{
@@ -76,14 +71,57 @@
       display: flex;
       align-items:center;
       @include padding(px-to-rem(10px), null, px-to-rem(10px), null)
-      
-      &.active{
-        font-weight: 300;
+      @include for-size("tablet-landscape-up"){
+        color: #fff;
       }
-      
-      &:hover, &:focus{
-        color: $medBlueHover;
-        text-decoration: underline;
+    }
+
+    &__link:before {
+      @include for-size("tablet-landscape-up"){
+        content: '';
+        position: absolute;
+        width: calc(100% + 1rem);
+        height: 2px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #fcd612;
+        border-color: #fcd612;
+        bottom: 6px;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+    }
+
+    &__link:hover::before {
+      @include for-size("tablet-landscape-up"){
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    &__link:hover {
+        color:$acceptableGrey;
+    }
+
+    &__link.active {
+      font-weight: 700;
+    }
+
+    &__link.active:before{
+      @include for-size("tablet-landscape-up"){
+        content: '';
+        position: absolute;
+        width: calc(100% + 1rem);
+        height: 2px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: $yellow;
+        border-color: $yellow;
+        bottom: 6px;
+        left: 0;
+        transform-origin: left;
       }
     }
   }
@@ -105,6 +143,7 @@
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3;
+    padding-bottom: 4rem;
   }
   p > img{
     @include for-size("tablet-landscape-up"){
@@ -130,12 +169,18 @@
 
 .sidenav {
   $self: &;
-  border-top: solid px-to-rem(2px) $darkGrey;
-  border-bottom: solid px-to-rem(2px) $darkGrey;
-  @include margin(px-to-rem(24px), null, px-to-rem(24px), null);
+    border-top: solid 0.125rem #0C2340;
+    border-bottom: solid 0.125rem #0C2340;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   
   @include for-size("tablet-landscape-up"){
     border:none;
+    background-color: #0C2340;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url(https://www.xavier.edu/_V5/_assets/images/navshape.png);
+    background-size: cover;
   }
   
   &__btn {

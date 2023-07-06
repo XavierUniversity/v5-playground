@@ -2,7 +2,7 @@
   background-image: url('/_V5/_assets/images/cards/cards_bg.png');
   background-position: left;
   background-size: cover;
-  background-color: #f0f2f3;
+  background-color: $grey;
   //min-height: 85vh;
   @include for-size ("phone-only") {
     @include padding(px-to-rem(96px), px-to-rem(16px), px-to-rem(96px), px-to-rem(16px));

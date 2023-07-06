@@ -22,13 +22,21 @@
     
     &__title{
       text-shadow: none;
-      @include font-size(48px, 1);
+      font-family: 'neuemontreal';
+      font-style: normal;
+      @include font-size(55px, 1);
       @include for-size("tablet-landscape-up"){
-      @include font-size(65px, 1);
+      @include font-size(85px, 1);
       }
       @include for-size("phone-only"){
-        @include font-size(44px, 1);
+        @include font-size(40px, 1);
       }
+    }
+
+    &__title2{
+      font-family: 'orpheuspro';
+      font-style: italic;
+      @include font-size(85px, 1);
     }
     
     &__scroll{
@@ -65,23 +73,31 @@
   } 
   
   &--content {
-    height: px-to-rem(266px);
-    text-align: center;
+    height: 12rem;
+    text-align: left;
     width: 100%;
     @include margin(px-to-rem(58px), null, null, null);
+    padding-left: 0rem;
+    justify-content: normal;
+    background-color: $darkNavy;
+    align-items: end;
+    padding-bottom: 2rem;
     
     &__title {
+      font-family: 'orpheuspro';
       color: white;
-      text-transform: uppercase;
+      font-style: italic;
+      text-shadow: none;
+      text-transform: none;
+      font-weight: 300;
+      line-height: 0.6 !important;
+      font-size: clamp(2.2rem, 8vw, 4rem);
       text-decoration: none;
-      text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(2px) black;
-      margin-top: 0px;
-      font-weight: 700;
-      font-size: px-to-rem(24px);
+      padding-left: 2rem;
+      display: block;
       @include for-size("tablet-landscape-up"){
-        font-size: px-to-rem(36px);
+        padding-left: 5rem;
       }
-      
     }
   }
   
@@ -91,8 +107,9 @@
     position: relative;
     height: auto;
     overflow: hidden;
+    padding: 0 !important;
     @include for-size("tablet-portrait-up"){
-      height: auto;
+      height: auto !important;
     }
 
     &__mobile {
@@ -110,14 +127,16 @@
       display: flex;
       width: 100%;
       height: 100%;
-      align-items: center;
-      justify-content: center;
+      align-items: end;
+      justify-content: left;
+      padding-left: 0;
+      padding-bottom: 2.25rem;
     }
     
     &__btn {
       min-width: px-to-rem(300px);
       max-width: px-to-rem(450px);
-      margin: 0 auto !important;
+      margin: 0 0 0 5.875rem !important;
       border: solid 0.0625rem $background !important;
       background: rgba(0, 0, 0, 0.55);
       border-radius: px-to-rem(25px);
@@ -130,6 +149,7 @@
     
     &__title {
       margin-top: 0px;
+      text-shadow: 0.125rem 0.125rem 0.25rem black !important;
     }
     
     &__img {
@@ -155,8 +175,8 @@
   
   &__title{ 
     color: white;
-    text-shadow: px-to-rem(2px) px-to-rem(2px) px-to-rem(4px) black;
-    text-transform: uppercase;
+    text-shadow: 4px 4px 11px rgba(0,0,0,0.8);
+    text-transform: capitalize;
     font-weight: 400;
     text-align: center;
     max-width: px-to-rem(1200px);
@@ -194,6 +214,20 @@
   background-color: rgba(white, 0.85);
   position: absolute; 
   bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @include for-size("tablet-landscape-up"){
+    width: 100%;
+    background-color: #0033a0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+  }
+  @include for-size("desktop-up"){
+    padding-left: 5.875rem;
+  }
   &__list{
     @include margin(0, 0, 0, 0);
     @include padding(0, px-to-rem(16px), 0, px-to-rem(16px));
@@ -216,7 +250,7 @@
     text-decoration: none;
     @include for-size("tablet-landscape-up"){
       text-transform: uppercase;
-      @include padding(px-to-rem(16px), px-to-rem(16px), px-to-rem(16px), px-to-rem(16px));
+      padding: 0;
     }
     
     &:hover, &:focus, &:active{
@@ -225,4 +259,60 @@
     }
     
   }
+
+  ul {
+    @include for-size("tablet-landscape-up"){
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      @include for-size("tablet-landscape-up"){
+        display: inline-block;
+        color: #fff;
+        padding-left: .75rem;
+        padding-right: .75rem;
+        font-size: 15px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      &:first-of-type {
+        @include for-size("tablet-landscape-up"){
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  a {
+    @include for-size("tablet-landscape-up"){
+      color: #fff !important;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      position: relative;
+    }
+    &:before {
+      @include for-size("tablet-landscape-up"){
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #fcd612;
+        border-color: #fcd612;
+        bottom: -4px;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+    }
+    &:hover {
+      &::before {
+        @include for-size("tablet-landscape-up"){
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
 }
+

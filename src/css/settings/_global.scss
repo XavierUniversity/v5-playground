@@ -24,17 +24,21 @@ $desktop-upper-boundary:                            112.5rem;    // ~ 1800px
 
 // Colors
 $background:                                        white;
-$darkNavy:                                          #0B223F;
+$darkNavy:                                          #0C2340; // XAVIER BLUE
 $darkNavyHover:                                     null;
-$medBlue:                                           #0072A3;
-$medBlueHover:                                      #1B4675;
-$grey:                                              #F0F2F3; // OLD GREY #9ea3a3
-$darkGrey:                                          #d8d8d8;
+$medBlue:                                           #1a1aff; // MORE BLUE
+$medBlueHover:                                      #61abe8; // PALE BLUE
+$runningMan:										#0033a0; // RUNNING MAN BLUE
+$grey:                                              #f1f1f9; // AUSTIN GREY
+$darkGrey:                                          #d7d3CC; // WARM GREY
+$darkestGrey:										#9ea2a3; // MORE GREY
+$acceptableGrey:									#6A7071; // AUSTIN GREY II
+$yellow:											#fcd612; // MORE YELLOW
 $lightBlue:                                         #0099CC;
 $lightBlueHover:                                    #0077AA;
 $link-color:                                        $darkNavy;
 $link-hover-color:                                  $darkNavyHover;
-$black:                                              #000000;
+$black:                                             #000000;
 
 $color-info:                                        $medBlue; // OLD INFO COLOR #00529B;
 $color-success:                                     #198644;
@@ -47,7 +51,7 @@ $font-style:                                        normal;
 $font-variant:                                      normal;
 $font-weight:                                       200;
 $font-color:                                        #333333;
-$font-family:                                       "Frutiger W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family:                                       "neuemontreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $line-height:                                       1.6;
 
 // Padding

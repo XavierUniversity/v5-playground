@@ -18,7 +18,7 @@
   }
 }
 .testimonial{
-    background: #F0F2F3;
+    background: $darkGrey;
     @include padding(px-to-rem(32px), px-to-rem(32px), px-to-rem(32px), px-to-rem(32px));
   &__wrapper {
     @include margin(px-to-rem(24px), null, null, null);
@@ -57,4 +57,8 @@
       font-style: italic;
     }
   }
+}
+
+svg.icon.testimonial__content--quotemark {
+    fill: #1a1aff;
 }

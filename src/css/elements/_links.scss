@@ -1,5 +1,5 @@
-$encodedBlue: #{encodeColor($medBlue)};
-$encodedBlueHover: encodeColor(darken($medBlue, 15%));
+$encodedBlue: #{encodeColor($runningMan)};
+$encodedBlueHover: encodeColor(darken($runningMan, 15%));
 $encodedWhite: encodeColor(#ffffff);
 
 .content, #content{
@@ -24,11 +24,11 @@ $encodedWhite: encodeColor(#ffffff);
 
     &.link-arrow{
       display: inline-block;
-      color: $medBlue;
+      color: $runningMan;
       text-decoration: none;
       font-weight: 300;
       &:after{
-        fill: $medBlue;
+        fill: $runningMan;
         display: inline-block;
         content: ' ';
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlue}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
@@ -41,8 +41,9 @@ $encodedWhite: encodeColor(#ffffff);
       }
 
       &:hover, &:focus, &:active{
-        color: darken($medBlue, 15%);
+        color: darken($runningMan, 15%);
         &:after{
+          fill: darken($runningMan, 15%);
           @include margin(null, null, null, px-to-rem(16px));
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlueHover}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
         }
@@ -67,12 +68,12 @@ $encodedWhite: encodeColor(#ffffff);
   }
 
   a[class=""], a:not([class]){
-    color: $medBlue;
+    color: $runningMan;
     font-weight: 300;
     text-decoration: underline;
     display: inline;
     &:hover, &:focus, &:active{
-      color: darken($medBlue, 15%);
+      color: darken($runningMan, 15%);
     }
   }
 }

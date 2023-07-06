@@ -4,12 +4,12 @@
   padding: 0;
   margin: 0;
   &--border-top{
-    border-top: solid px-to-rem(1px) $medBlue;
+    border-top: solid px-to-rem(1px) $yellow;
   }
   
   &__item{
     &--border-bottom{
-      border-bottom: solid px-to-rem(1px) $medBlue; 
+      border-bottom: solid px-to-rem(1px) $yellow; 
       @include padding(px-to-rem(16px), null, px-to-rem(16px), null);
     }
   }
@@ -19,7 +19,7 @@
     font-style: italic;
     display: none;
     &__item{
-      @include padding(px-to-rem(11.6px), null, px-to-rem(11.6px), null);
+      @include padding(px-to-rem(12px), null, px-to-rem(12px), null);
     }
     &.visible{
       display: block;

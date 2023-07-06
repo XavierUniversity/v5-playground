@@ -37,21 +37,21 @@
   }
   
   &__number{
-    @include font-size(100px);
+    @include font-size(84px);
   }
   
   &__label{
     text-transform: uppercase;
-    @include font-size(26px, 1);
+    @include font-size(20px, 1);
     @include for-size("tablet-landscape-up"){
-      @include font-size(32px, 1);
+      @include font-size(24px, 1);
     }
     &--alt{
       display: block;
       color: $lightBlue;
-      @include font-size(24px, 1);
+      @include font-size(20px, 1);
       @include for-size("tablet-landscape-up"){
-        @include font-size(24px, 1);  
+        @include font-size(20px, 1);  
       }
       
     }

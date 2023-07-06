@@ -10,17 +10,23 @@
      justify-content: end;
      position: relative;
      padding-bottom: 1rem;
-     padding-left: 2rem;
+     padding-left: 0;
      padding-right: 2rem;
 
      @include for-size("desktop-up"){
         padding-right: 5.875rem;
+        padding-left: 0;
      }
 
      @include for-size("tablet-landscape-up"){
-         padding-left: 5rem;
-         padding-bottom: 3.25rem;
+         padding-bottom: 2.25rem;
      }
+
+        &__nav {
+            @include for-size("tablet-landscape-up"){
+                padding-bottom: 4.25rem !important;
+            }
+        }
 
         &__large {
             height: 18.75rem;
@@ -32,13 +38,18 @@
         }
 
         &__title {
+         font-family: 'orpheuspro';
          color: white;
+         font-style: italic;
          text-shadow: none;
          text-transform: none;
          font-weight: 300;
-         border-bottom: 3px solid #fff;
          line-height: 1.2 !important;
+         padding-left: 2rem;
          font-size: clamp(2.2rem, 8vw, 5rem);
+         @include for-size("desktop-up"){
+            padding-left: 5.875rem;
+         }
 
         }
 
@@ -60,10 +71,15 @@
          grid-template-rows: repeat(2, 1fr);
          grid-column-gap: 0px;
          grid-row-gap: 4px;
+         padding-left: 2rem;
 
          @include for-size("tablet-landscape-up"){
             font-size: 20px;
             display: inherit;
+         }
+
+         @include for-size("desktop-up"){
+            padding-left: 5.875rem;
          }
 
         }
@@ -121,9 +137,8 @@
 
 .formdiamond{
     height: 125px;
-    background-image: url(https://www.xavier.edu/_V5/_assets/images/formdiamond.png);
-    background-position-x: center;
     margin-top: -6.5rem;
+    text-align: center;
 }
 
  .academic--form {

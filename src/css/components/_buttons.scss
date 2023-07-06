@@ -2,13 +2,13 @@
   color: white;
   display: block;
   border: solid px-to-rem(1px) $medBlue;
-  background: lighten($darkNavy, 6%);
-  border-radius: px-to-rem(8px);
+  background: $medBlue;
+  border-radius: px-to-rem(36px);
   text-align: center;
   transition: all 0.25s ease;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 400;
   @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
   
   @include for-size("phone-only"){
@@ -17,9 +17,9 @@
   
   @include margin (px-to-rem(16px), null, px-to-rem(16px), null);
   &:hover, &:focus, &:active{
-    background: #1B4675;
-    border-color: #1B4675;
-    color: white;
+    background: $medBlue;
+    border-color: $yellow;
+    color: #fff;
     @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 

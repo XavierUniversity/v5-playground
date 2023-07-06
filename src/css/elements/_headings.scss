@@ -67,10 +67,8 @@ p{
   @include margin(0, null, px-to-rem(12px), null);
   /*&:first-of-type{
     @include margin(px-to-rem(16px), null, null, null);
-
     @include for-size("tablet-portrait-up"){
       @include margin(px-to-rem(24px), null, null, null);
     }
   }*/
 }
-

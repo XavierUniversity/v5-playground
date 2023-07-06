@@ -4,6 +4,56 @@ property of Monotype Imaging and/or its suppliers. You may not attempt to copy, 
 redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
 Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
 */ 
+
+
+
+@font-face {
+  font-family: "neuemontreal";
+  src: url("../fonts/ppneuemontreal-regular.woff2") format("woff2"), url("../fonts/ppneuemontreal-regular.woff")
+      format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "neuemontreal";
+  src: url("../fonts/ppneuemontreal-bold_x.woff2") format("woff2"), url("../fonts/ppneuemontreal-bold_x.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+font-family:"orpheuspro";
+src:url("https://use.typekit.net/af/003616/00000000000000007735ebd7/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/003616/00000000000000007735ebd7/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/003616/00000000000000007735ebd7/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"orpheuspro";
+src:url("https://use.typekit.net/af/aeffc0/00000000000000007735ebd6/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/aeffc0/00000000000000007735ebd6/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/aeffc0/00000000000000007735ebd6/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"orpheuspro";
+src:url("https://use.typekit.net/af/4f5611/00000000000000007735ebd5/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4f5611/00000000000000007735ebd5/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4f5611/00000000000000007735ebd5/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"orpheus-pro-condensed";
+src:url("https://use.typekit.net/af/bcc578/000000000000000077368c95/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/bcc578/000000000000000077368c95/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/bcc578/000000000000000077368c95/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"orpheus-pro-condensed";
+src:url("https://use.typekit.net/af/723577/000000000000000077368c96/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/723577/000000000000000077368c96/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/723577/000000000000000077368c96/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
 @font-face{
 font-family:"Frutiger W01_n1";
 src: url("../fonts/7d3671fc-8c26-459c-98e1-997c4f6c8c93.eot?#iefix") format("eot"); 

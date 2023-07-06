@@ -81,23 +81,26 @@
   }
   
   &__title {
-    color: #0c2340;
+    color: $darkNavy;
     margin:0;
     font-size: 1.5rem;
   }
 
   &__subtitle {
-    color: #0c2340;
+    color: $darkNavy;
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 0;
   }
 
   &__name-link {
-    color: #007DB3;
+    color: $runningMan;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    &:hover, &:focus, &:active{
+        color: darken($runningMan, 15%);
+    }
   }
   &__titles {
     font-size: 1rem;

@@ -196,8 +196,11 @@
     color:#fff;
     text-transform: uppercase;
     text-align: center;
-    @include font-size(48px);
+    @include font-size(32px);
     @include margin(0, 0, 0, 0);
+    @include for-size("tablet-landscape-up"){
+      @include font-size(48px);
+    }
   }
   &--list{
     list-style: none;

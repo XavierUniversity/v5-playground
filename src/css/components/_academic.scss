@@ -44,7 +44,7 @@
          text-shadow: none;
          text-transform: none;
          font-weight: 300;
-         line-height: 1.2 !important;
+         line-height: 3rem !important;
          padding-left: 2rem;
          font-size: clamp(2.2rem, 8vw, 5rem);
          @include for-size("desktop-up"){

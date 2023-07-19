@@ -24,9 +24,10 @@
       text-shadow: none;
       font-family: 'neuemontreal';
       font-style: normal;
+      text-transform: none !important;
       @include font-size(55px, 1);
       @include for-size("tablet-landscape-up"){
-      @include font-size(85px, 1);
+        @include font-size(85px, 1);
       }
       @include for-size("phone-only"){
         @include font-size(40px, 1);
@@ -36,7 +37,14 @@
     &__title2{
       font-family: 'orpheuspro';
       font-style: italic;
-      @include font-size(85px, 1);
+      text-transform: none;
+      @include font-size(65px, 1);
+      @include for-size("tablet-landscape-up"){
+        @include font-size(95px, 1);
+      }
+      @include for-size("phone-only"){
+        @include font-size(45px, 1);
+      }
     }
     
     &__scroll{
@@ -98,6 +106,23 @@
       @include for-size("tablet-landscape-up"){
         padding-left: 5rem;
       }
+
+      &__long {
+         font-size: clamp(2rem, 5vw, 5rem) !important;
+         line-height: 1 !important;
+         @include for-size("tablet-portrait-up"){
+          line-height: 0.6 !important;
+         }
+        }
+
+        &__longest {
+         font-size: clamp(1.8rem, 4.8vw, 3.3rem) !important;
+         line-height: 1 !important;
+         @include for-size("tablet-portrait-up"){
+          line-height: 0.6 !important;
+         }
+        }
+
     }
   }
   

@@ -1,0 +1,110 @@
+.card {
+   background: #FFF;
+   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+   border-radius: 5px;
+   overflow: hidden;
+   color: $medBlue;
+}
+ .card__content {
+   padding: 15px;
+   font-size: 14px;
+   line-height: 22px;
+}
+ .glossary__nav{
+   margin-bottom: 28px;
+}
+ .title-style--three {
+   margin-bottom: 15px;
+   position: relative;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+ .title-style--three:after {
+   content: "";
+   background: #0e234a;
+   width: 60px;
+   height: 3px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   border-radius: 30px;
+}
+ .glossary__nav__item {
+   display: inline-block;
+}
+ .glossary__nav__item.active a {
+   color: #FFF;
+   background-color: $darkNavy;
+}
+ .glossary__nav__item a {
+   width: 50px;
+   font-size: 16px;
+   text-decoration: none;
+   text-align: center;
+   display: block;
+}
+ .glossary__nav__item a:hover, .glossary__nav__item a:focus {
+   color: #FFF;
+   background-color: $darkNavy;
+}
+ .glossary__nav__item a.card__content {
+   padding: 13px 10px;
+   margin-bottom: 5px;
+   border-radius: 3px;
+}
+ .glossary__search__form {
+   max-width: 500px;
+   position: relative;
+}
+ .glossary__search__form:before {
+   content: "\f002";
+   color: #aaa;
+   font-family: "FontAwesome";
+   position: absolute;
+   left: 6px;
+   top: 8px;
+   font-size: 14px;
+}
+ .glossary__search__form .form-control {
+   padding-left: 40px;
+}
+ .glossary__results__row {
+   overflow: hidden;
+   margin-bottom: 40px;
+   transition: all 0.4s ease-in-out;
+}
+ .glossary__results__row:last-child {
+   margin-bottom: 0;
+}
+ .glossary__results__row.inactive {
+   opacity: 0;
+   height: 0;
+   margin: 0;
+   width: 100%;
+}
+ .glossary__results__term {
+   color: $darkNavy;
+}
+ .glossary__results__item {
+   margin-bottom: 20px;
+}
+ .glossary__results__item a {
+   display: block;
+   text-decoration: none;
+   color: $medBlue;
+}
+ .glossary__results__item a.card {
+   border: 2px solid transparent;
+}
+ .glossary__results__item a:hover {
+   border-color: $medBlue;
+}
+ .glossary__results__item a:hover .card__title {
+   color: $medBlue;
+}
+ .groupname {
+   border-bottom: $darkNavy 3px solid;
+   width: 50%;
+   margin-top: 3rem;
+   padding-bottom: 1rem 
+}

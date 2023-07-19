@@ -76,6 +76,12 @@ $encodedWhite: encodeColor(#ffffff);
       color: darken($runningMan, 15%);
     }
   }
+  .alt-colors {
+      color: #FCD612;
+      &:hover, &:focus, &:active{
+        color: #ffeb85;
+      }
+  }
 }
 
 a[href^=tel]{

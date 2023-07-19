@@ -6,7 +6,7 @@
   &__item{
     font-weight: 300;
     &:not(:last-child):after{
-      content: ">";
+      content: "+";
       @include padding(null, px-to-rem(1px), null, px-to-rem(4px));
     }
   }

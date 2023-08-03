@@ -3,7 +3,7 @@
   display: block;
   border: solid px-to-rem(1px) $medBlue;
   background: $medBlue;
-  border-radius: px-to-rem(36px);
+  border-radius: 0;
   text-align: center;
   transition: all 0.25s ease;
   text-transform: uppercase;
@@ -30,11 +30,16 @@
   &--hero{
     background-color:rgba(0,0,0,0.55);
     border: 1px solid white;
-    border-radius: px-to-rem(25px);
+    border-radius: 0;
     text-align:center;
     @include padding(px-to-rem(15px), px-to-rem(70px), px-to-rem(15px), px-to-rem(70px));
     display: inline-block;
     @include margin(px-to-rem(16px), null, null, null);
+    @include for-size("tablet-landscape-up"){
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+    }
     &:hover, &:focus, &:active{
       background: white;
       color: black;
@@ -46,7 +51,7 @@
       width: 80% !important;
       margin-bottom: 0;
       @include padding(px-to-rem(15px), px-to-rem(32px), px-to-rem(15px), px-to-rem(32px));
-      border-radius: px-to-rem(23px);
+      border-radius: 0;
       
       &:hover, &:focus{
         @include padding(null, px-to-rem(32px), null, px-to-rem(32px));  
@@ -57,7 +62,7 @@
   &--hero-alt{
     @extend .btn--hero;
     display: block;
-    border-radius: px-to-rem(10px);
+    border-radius: 0;
     border-width: px-to-rem(2px);
     @include margin(null, px-to-rem(8px), null, px-to-rem(8px));
     @include for-size("tablet-landscape-up"){
@@ -110,7 +115,7 @@
 .tt{
   &__btn{
     background: white;
-    border-radius: 100%;
+    border-radius: 0;
     border: solid px-to-rem(1px) $medBlue;
     color: $medBlue;
     height: px-to-rem(28px);

@@ -18,7 +18,7 @@ $width: px-to-rem(532px);
   width: var(--drawer-width);
   height: 100%;
   visibility: hidden;
-  z-index: 101;
+  z-index: 201;
   @include padding(null, px-to-rem(16px), null, px-to-rem(16px));
   @include for-size(tablet-landscape-up){
     @include padding(null, px-to-rem(48px), null, px-to-rem(48px));

@@ -22,14 +22,15 @@
   &__btn{
     color: white;
     background: $medBlue;
-    font-weight: 200;
+    font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     width: px-to-rem(100px);
     @include padding(px-to-rem(9.6px), px-to-rem(6.4px), px-to-rem(9.6px), px-to-rem(6.4px));
     
     &:hover, &:focus, &:active{
-      background: #0077AA;
+      background: $medBlue;
+      border-color: $yellow;
     }
   }
   

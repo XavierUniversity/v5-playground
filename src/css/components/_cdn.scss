@@ -1,31 +1,174 @@
-.cdn{
-  align-items: center;
-  justify-content: center;
+.cdn {
+   height: auto;
+   background: url(https://www.xavier.edu/images/bg-story.jpg);
+   background-size: cover;
+   background-position: center;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   overflow: hidden;
+   padding-bottom: 6rem;
 
-  &__image{
-    height: auto;
-    @include for-size("tablet-landscape-up"){
-      width: px-to-rem(580px);
+   &--wrapper {
+     @include for-size("tablet-landscape-up"){
+       padding-left: 10rem;
+       padding-right: 10rem;
     }
-    @include for-size("desktop-up"){
-      width: auto;
-      max-width: 50%;
-    }
-  }
-  &__content{
-    @include for-size("tablet-landscape-up"){
-      @include padding( null, null, null, px-to-rem(60px));  
-    }
-  }
-  
-  &__link{
-    display: block;
-    color: black;
-    text-decoration: none;
-    &:hover, &:focus, &:active{
-      color: $medBlue;
+
+    &__page {
+      padding-top: 6rem;
+      @include for-size("tablet-landscape-up"){
+        padding-left: 5.875em;
+        padding-right: 5.875rem;
+      }
     }
   }
+
+  &--container{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     @include for-size("tablet-landscape-up"){
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 1fr;
+       grid-column-gap: 32px;
+       grid-row-gap: 32px;
+       padding-bottom: 8rem;
+     }
+
+    &__single {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+       grid-column-gap: 0px;
+       grid-row-gap: 0px;
+    }
+  }
+
+  &--content {
+     background-color: #fff;
+     padding-top: 0;
+     position: relative;
+     height: auto;
+     margin-bottom: 2rem;
+     @include for-size("tablet-landscape-up"){
+      height: calc(100% + 100px);
+      margin-bottom: 0;
+     }
+
+    &__single {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+       grid-column-gap: 0px;
+       grid-row-gap: 0px;
+       @include for-size("tablet-landscape-up"){
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: 1fr;
+         grid-column-gap: 0px;
+         grid-row-gap: 0px;
+         height: auto !important;
+       }
+    }
+
+    &__trio {
+       grid-area: auto;
+       @include for-size("tablet-landscape-up"){
+        grid-area: 1 / 1 / 2 / 3;
+       }
+    }
+
+    &__container {
+       padding: 2rem 2rem 6rem 2rem;
+       position: relative;
+       @include for-size("tablet-landscape-up"){
+        padding-bottom: 0rem;
+       }
+
+       &--single {
+         grid-area: 2 / 1 / 3 / 2;
+         @include for-size("tablet-landscape-up"){
+          grid-area: auto;
+          padding-bottom: 6rem;
+         }
+      }
+    }
+
+  }
+
+  &--headline {
+     color: #fff;
+     text-transform: uppercase;
+     text-align: center;
+     font-size: 2rem;
+     padding-top: 1.5rem;
+     line-height: 1;
+     @include for-size("tablet-landscape-up"){
+      font-size: 3rem;
+     }
+  }
+
+  &--subhead {
+     color: #fff;
+     text-align: center;
+     padding-bottom: 1.5rem;
+  }
+
+  &--title{
+     color: #0B223F;
+     font-size: 1.4rem;
+     line-height: 2rem;
+     font-weight: 300;
+     margin-top: 0;
+     margin-bottom: 1rem;
+     @include for-size("tablet-landscape-up"){
+      font-size: 1.8rem;
+      line-height: 2rem;
+     }
+  }
+
+  &--link {
+     padding-left: 1.5rem !important;
+     padding-right: 1.5rem !important;
+     @include for-size("tablet-landscape-up"){
+      width: fit-content !important;
+      margin: 1.5rem 0 0 0;
+     }
+  }
+
+  &--box {
+     padding: 25px;
+     margin: 0 auto;
+
+    &__single {
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+    }
+
+    &__img {
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+    }
+  }
+
+  &--date {
+     padding-left: 2rem;
+     color: #525557;
+  }
+
+  &--datebox {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+  }
+
 }
 
 .cdnStory{
@@ -47,6 +190,7 @@
   &__title{
     @include font-size(22px);
     text-align: left;
+    text-transform: none;
     
     @include for-size("tablet-landscape-up"){
       @include font-size(32px);
@@ -107,5 +251,8 @@
   }
 }
 
+.Theme-Overlay.FullSize {
+   Top:0px !important;
+}
  
     

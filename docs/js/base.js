@@ -678,15 +678,24 @@ if ( !detectmob() && vid !== null ) {
     if ( vid.paused ) {
       vid.play();
       button.innerHTML = '<span class="sr-only">Play Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-pause"/></svg>';
+      localStorage.setItem("play_video", 1);
       dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'BG Video', 'eventAction' : 'click', 'eventLabel' : 'play'});
     } else {
       vid.pause();
       button.innerHTML = '<span class="sr-only">Pause Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-play"/></svg>';
+      localStorage.setItem("play_video", 0);
       dataLayer.push({'event' : 'customEvent', 'eventCategory' : 'BG Video', 'eventAction' : 'click', 'eventLabel' : 'pause'});
     }
   });
   vid.innerHTML = '<source src="'+vid.getAttribute('data-bgvideo')+'" type="video/mp4" />';
-  console.log(vid.parentNode);
+  
+  //let's decide if we want to play the video
+  const play_video = localStorage.getItem("play_video") !== null ? localStorage.getItem("play_video") : 1;
+  if (play_video != 1){
+    vid.pause();
+    button.innerHTML = '<span class="sr-only">Pause Video</span><svg height="32" width="32" fill="white"><use xlink:href="#xu-play"/></svg>';
+  }
+  
   vid.parentNode.appendChild(button);
 }
 

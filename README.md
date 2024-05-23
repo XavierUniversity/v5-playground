@@ -16,7 +16,7 @@ Templates, HTML, CSS and planning for the v5 website revision.
 5. Run `lando npm i requirejs node-sass && lando npm install` inside of terminal to install the pesky packages that won't work without this
 6. Run `lando npm start` to get the watch command to run. 
   - If you don't stop Lando but need to run grunt simply use `lando npm start` to get it running again.
-  - If you get an error, run the following command first: 'sudo ln -s ~/.docker/run/docker.sock /var/run/docker.sock' 
+  - If you get an error, run the following command first: `sudo ln -s ~/.docker/run/docker.sock /var/run/docker.sock` 
 7. LiveReload will be taking over for BrowserSync, you can simply run whatever URL you want from the `lando start` command in your browser.
 
 ### Stopping or Rebuilding

@@ -62,8 +62,7 @@
 .content_cta{
   display: flex;
   align-items: flex-start;
-  background-image: url('../images/content_cta/bkg_graphic.jpg');
-  background-size: cover;
+  background-color: $xavierBlue;
   width: 100%;
   justify-content: space-around;
   color: white;

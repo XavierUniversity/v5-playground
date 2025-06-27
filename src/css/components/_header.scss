@@ -9,14 +9,6 @@
   justify-content: space-between;
   transition: height 250ms ease, background 100ms ease;
   z-index: 200;
-  @include padding(null, px-to-rem(32px), null, px-to-rem(32px));
-  @include for-size("desktop-up"){
-    @include padding(null, px-to-rem(94px), null, px-to-rem(94px));
-  padding-left: 1rem;
-  @include for-size("tablet-portrait-up"){
-    padding-left: 2rem;
-  }
-}
 
 
 .branding{

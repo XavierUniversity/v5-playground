@@ -1,0 +1,35 @@
+.faq {
+	
+	&__wrapper {
+		padding: 2rem 1rem;
+
+		@include for-size("tablet-landscape-up"){
+			padding: 6rem 2rem;
+		}
+	}
+
+	&__left {
+		grid-area: unset;
+
+		@include for-size("tablet-landscape-up"){
+			grid-area: 1 / 1 / 2 / 2;
+		}
+	}
+
+	&__headline {
+		margin-bottom: 1rem;
+	}
+
+	&__right {
+		grid-area: unset;
+
+		@include for-size("tablet-landscape-up"){
+			grid-area: 1 / 2 / 2 / 4;
+			padding-left: 4rem;
+		}
+
+		.accordion {
+			margin-top: 0 !important;
+		}
+	}
+}

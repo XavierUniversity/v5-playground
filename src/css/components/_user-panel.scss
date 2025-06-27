@@ -1,7 +1,7 @@
 .user-panel{
   @include margin(px-to-rem(80px), null, px-to-rem(20px), null)
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   &__img{
     border: solid px-to-rem(2px) $medBlue;

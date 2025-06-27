@@ -1,0 +1,688 @@
+.statcard {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 15%;
+
+    &__stat {
+        font-size: 4rem;
+        font-family: 'neuemontreal';
+        font-weight: 400;
+        line-height: 4rem;
+        display: inline-block;
+        white-space: nowrap;
+
+        @include for-size("tablet-landscape-up"){
+            font-size: 6vw;
+            line-height: 6vw;
+        }
+    }
+
+    &__context {
+        font-family: 'orpheuspro';
+        font-style: italic;
+        font-size: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            font-size: 2vw;
+        }
+    }
+}
+
+.imagecard {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+
+    &__wrapper {
+        padding: 1rem;
+        display: flex;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,0) 50%);
+    }
+
+    &__content {
+        flex: 1;
+        align-content: end;
+    
+        &--text {
+            line-height: 1rem;
+        }
+    }
+}
+
+.storycard {
+    width: 100%;
+    height: 100%;
+
+    &__wrapper {
+        height: 100%;
+        padding: 2.5rem;
+        min-height: 500px;
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        &--top {
+            flex: 1;
+            flex-grow: 1;
+            align-content: start;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 2.75rem;
+            font-weight: 400;
+            line-height: 3rem;
+
+            @include for-size("tablet-landscape-up"){
+                font-size: 3vw;
+                line-height: 3vw;
+            }
+        }
+
+        &--bottom {
+            flex: 1;
+            align-content: end;
+        }
+
+        &--text {
+            line-height: 1.25rem;
+        }
+    }
+
+    &.palette {
+
+        &__xavierBlue {
+
+            .link__item {
+                border-bottom: 1px solid $white !important;
+            
+                a {
+                    color: $white !important;
+                }
+            }
+        }
+
+        &__moreBlue {
+
+            .link__item {
+                border-bottom: 1px solid $white !important;
+            
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+        &__white {
+
+            .link__item {
+                border-bottom: 1px solid $xavierBlue !important;
+            
+                a {
+                    color: $xavierBlue !important;
+                }
+            }
+        }
+    }
+}
+
+.newscard {
+    width: 80vw;
+    flex-shrink: 0;
+
+    @include for-size("tablet-landscape-up"){
+        width: 38vw;
+    }
+
+    &__wrapper {
+        display: block;
+        margin-right: 2rem;
+
+        @include for-size("tablet-landscape-up"){
+            display: inline-flex;
+        }
+    }
+
+    &__left {
+        width: auto;
+
+        @include for-size("tablet-landscape-up"){
+            width: 40%;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding-left: 0;
+        margin-top: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            width: 60%;
+            padding-left: 1rem;
+            margin-top: 0;
+        }
+    }
+
+    &__kicker {
+        font-family: 'orpheuspro';
+        font-style: italic;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    &__headline {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+    }
+
+    &__link {
+        align-content: end;
+        flex: 1;
+    }
+}
+
+.newscardVert {
+    width: 80vw;
+    flex-shrink: 0;
+
+    @include for-size("tablet-landscape-up"){
+        width: auto;
+    }
+
+    &__wrapper {
+        display: block;
+        margin-right: 2rem;
+
+        @include for-size("tablet-landscape-up"){
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+    }
+
+    &__top {
+        width: auto;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: auto;
+        padding-left: 0;
+        margin-top: 1rem;
+
+        &--wrapper {
+            height: 100%;
+        }
+    }
+
+    &__kicker {
+        font-family: 'orpheuspro';
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    &__headline {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    &__link {
+        align-content: end;
+        flex: 1;
+        margin-top: 2rem;
+    }
+}
+
+.morexcard {
+    background-color: $moreGrey !important;
+    margin-bottom: 1rem;
+
+    @include for-size("tablet-landscape-up"){
+        margin-bottom: 0;
+    }
+    
+    a {
+        color: $xavierBlue !important;
+    }
+
+    .link__item {
+        border-bottom: 1px solid $xavierBlue !important;
+    }
+    
+
+    &__wrapper {
+        padding: 2rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--top {
+            flex: 1;
+            align-content: start;
+        }
+
+        &--bottom {
+            flex: 1;
+            align-content: end;
+
+            @include for-size("tablet-landscape-up"){
+                margin-top: 2rem;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__headline {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    &__content {
+        margin-top: 1rem;
+    }
+
+    &__image {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        margin-top: 1rem;
+        flex: 1;
+    }
+
+}
+
+.featurecard {
+    background-size: cover;
+    height: 100vh;
+    background-position-x: center;
+        
+        @include for-size("tablet-landscape-up"){
+            height: 50vw;
+        }
+
+    &__wrapper {
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    &__content {
+        background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,1) 65%, rgba(12,35,64,0) 100%);
+
+        @include for-size("tablet-landscape-up"){
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,1) 33%, rgba(12,35,64,0) 100%);
+        }
+    }
+
+    &__left {
+        padding: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            flex: 1;
+            padding: 0 2rem;
+            align-content: center;
+        }
+    }
+
+    &__headline {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &__kicker {
+        font-family: 'orpheuspro';
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+
+    &__text {
+
+        @include for-size("tablet-landscape-up"){
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__right {
+        padding: 1rem;
+        border-bottom: 1px solid $xavierBlue;
+
+        @include for-size("tablet-landscape-up"){
+            width: 15vw;
+            height: 12vw;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: end;
+        }
+    }
+}
+
+.tapstorycard {
+    background-size: cover;
+    height: 70vh;
+
+    @include for-size("tablet-landscape-up"){
+        height: 100%;
+    }
+
+    &__wrapper {
+        display: flex;
+        height: 100%;
+        background: none;
+
+        @include for-size("tablet-landscape-up"){
+            background: linear-gradient(90deg, rgba(12,35,64,1) 0%, rgba(12,35,64,0) 50%);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        align-content: end;
+        padding: 0 1rem 1rem 1rem;
+        background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,0) 50%);
+    }
+}
+
+.collagecard {
+    
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    &__wrapper {
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,0) 50%);
+
+        .grid-cell-content {
+          flex: 1;
+          align-content: end;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        align-content: end;
+    }
+}
+
+.tilecard {
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        flex: 0 0 90%;
+        align-content: start;
+    }
+
+    &__link {
+        margin-top: 0.5rem;
+        align-content: end;
+    }
+}
+
+.basiccard {
+    display: flex;
+
+    &__top {
+        flex: 1;
+    }
+
+    &__bottom {
+        flex: 1;
+        margin-top: 1rem;
+    }
+
+    &__content {
+
+    }
+}
+
+.basiccardplus {
+
+    &__top {
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--flourish02 {
+            text-align: right;
+            padding-right: 100px;
+        }
+
+        &--image {
+            display: flex;
+            flex-direction: row;
+
+            img:first-of-type {
+                width: calc(100% - 100px);
+            } 
+
+            img:last-of-type {
+                height: 100px;
+                width: 100px;
+            } 
+        }
+    }
+
+    &__bottom {
+        margin-top: 1rem;
+    }
+
+    &__content {
+
+    }
+}
+
+.statboxcard {
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left {
+        flex: 0 0 50%;
+    }
+
+    &__right {
+        flex: 1;
+        padding: 0 2rem;
+    }
+
+    &__stat {
+        font-size: 5rem;
+        font-weight: 400;
+        line-height: 5rem;
+
+        &--group{
+
+            &:nth-of-type(2) {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &__content {
+        font-family: 'orpheuspro';
+        font-style: italic;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+.studentpath {
+    display: flex;
+
+    &__top {
+        flex: 1;
+    }
+
+    &__bottom {
+        flex: 1;
+        margin-top: 1rem;
+    }
+
+    &__headline {
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+}
+
+.programcard {
+    display: block;
+    margin: 0 0 2rem 0;
+    border-top: solid 1px $altGrey;
+    padding-top: 1.5rem;
+
+    @include for-size("tablet-landscape-up"){
+        display: flex;
+        flex-basis: 100%;
+        flex-flow: wrap;
+    }
+
+    &__image-holder {
+        flex-basis: 10%;
+    }
+
+    &__image {
+
+    }
+
+    &__wrapper {
+        margin-top: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            flex-basis: 90%;
+            display: flex;
+            padding-left: 2rem;
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        flex-basis: 70%;
+        font-size: 1rem;
+    }
+
+    &__name {
+        margin: 0;
+
+        @include for-size("tablet-landscape-up"){
+            font-size: 3rem;
+        }        
+    }
+
+    &__right {
+        margin-top: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            list-style: none;
+            font-size: 1rem;
+            margin: 0;
+            flex-basis: 30%;
+            overflow-x: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        align-content: start;
+    }
+
+    &__link {
+        padding-top: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            flex: 1;
+            align-content: end;
+            padding-top: 0;
+        }
+    }
+
+}
+
+
+.facescard {
+    width: calc(100vw - 55px);
+    height: calc(100vw* 1.25);
+    flex-shrink: 0;
+    background-size: cover;
+    display: flex;
+    position: relative;
+
+    @include for-size("tablet-landscape-up"){
+        width: 30vw;
+        height: 42vw;
+    }
+
+    &__wrapper {
+        align-content: end;
+        width: 100%;
+    }
+
+    &__content {
+        width: 100%;
+        align-content: end;
+        padding: 4rem 1rem 1rem 1rem;
+        background: linear-gradient(0deg, rgba(12,35,64,1) 0%, rgba(12,35,64,0) 100%);
+
+        &--text {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &:first-of-type .faces__overlay--image {
+      display: none;
+    }
+}
+
+
+
+
+
+

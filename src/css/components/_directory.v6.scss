@@ -1,0 +1,182 @@
+.directory {
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: wrap;
+
+  @include for-size("tablet-landscape-up"){
+      margin: 2rem -12rem 2rem 0;
+  }
+
+  &__listing{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 0 0 4rem 0;
+
+    @include for-size("tablet-landscape-up"){
+      flex-direction: row;
+    }
+    
+    &--image-holder {
+      flex-basis: 20%;
+    }
+
+    &--image {
+      
+    }
+
+    &--wrapper {
+
+      @include for-size("tablet-landscape-up"){
+          flex-basis: 80%;
+          display: flex;
+          border-top: solid 1px #dfe0e0;
+          margin-left: 2rem;
+          padding-top: 2rem;
+      }
+    }
+
+    &--content {
+      flex-basis: 50%;
+      font-size: 1rem;
+    }
+
+    &--name {
+      color: $xavierBlue;
+      margin: 0;
+      font-size: 1.5rem !important;
+      margin-top: 0 !important;
+
+      &__creds {
+        color: $altGrey;
+        font-size: 1rem;
+      }
+    }
+
+    &--contact {
+      list-style: none;
+      font-size: 1rem;
+      margin: 0;
+      flex-basis: 50%;
+      overflow-x: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--list {
+      list-style: none;
+      font-size: 1rem;
+      margin: 0;
+      padding-left: 0;
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        margin-bottom: .25rem;
+      }
+    }
+
+    &--titles {
+      font-size: 1.2rem;
+      font-family: 'orpheuspro';
+      font-style: italic;
+      display: block;
+    }
+
+    &--link {
+      flex: 1;
+      align-content: end;
+      padding-top: 1rem;
+
+      @include for-size("tablet-landscape-up"){
+        padding-top: 0;
+      }
+    }
+
+  }
+
+  &__profile {
+
+    @include for-size("tablet-landscape-up"){
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--left {
+      flex-basis: 400px;
+    }
+
+    &--right {
+      flex-basis: 60%;
+      padding-top: 1rem;
+
+      @include for-size("tablet-landscape-up"){
+        padding-left: 2rem;
+        border-top: 1px solid $altGrey;
+        padding-top: 1.5rem;
+      }
+    
+    }
+
+    &--bio {
+
+      @include for-size("tablet-landscape-up"){
+          border-bottom: 1px solid $altGrey;
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+      }
+
+      &__mobile {
+        margin-top: 1rem;
+      }
+    }
+
+    &--list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      @include for-size("tablet-landscape-up"){
+        padding: 1rem 0 0 0;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &--name {
+      font-size: 2rem !important;
+      line-height: 2rem !important;
+    }
+
+  }
+
+  &__titles {
+      font-family: 'orpheuspro';
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+  &__subtitle {
+    font-family: 'orpheuspro';
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    display: block;
+  }
+
+  &__accordion {
+    margin-top: 2rem;
+
+    .accordion__wrapper {
+      border-top: 2px solid $moreBlue;
+    }
+  }
+
+}

@@ -5,8 +5,24 @@
   background: $medBlue;
   border-radius: 0;
   text-align: center;
+
+  a {
+    &.btn {
+      color: $xavierBlue !important;
+      background-color: $moreYellow !important;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none !important;
+      font-weight: 400;
+      padding: .75rem 2rem;
+    }
+  }
+}
+
+.o-btn {
+  border:none;
+  background: none;
   transition: all 0.25s ease;
-  text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
   @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
@@ -60,7 +76,6 @@
   }
   
   &--hero-alt{
-    @extend .btn--hero;
     display: block;
     border-radius: 0;
     border-width: px-to-rem(2px);
@@ -113,6 +128,9 @@
 }
 
 .tt{
+  cursor: pointer;
+  padding: 0;
+
   &__btn{
     background: white;
     border-radius: 0;
@@ -128,6 +146,7 @@
     top: px-to-rem(8px);
     right: px-to-rem(8px);
     z-index: 1;   
+    
     span{
       @include margin(-#{px-to-rem(6px)}, null, null, null);
     }

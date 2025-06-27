@@ -1,0 +1,49 @@
+.programlist {
+	
+	&__wrapper {
+		padding: 2rem;
+
+		@include for-size("tablet-landscape-up"){
+			padding: 6rem 2rem;
+		}
+	}
+
+	&__title {
+		font-family: 'orpheuspro';
+		font-style: italic;
+		font-feature-settings: 'ss02';
+
+		@include for-size("tablet-landscape-up"){
+			font-size: 4rem;
+			line-height: 4rem;
+		}
+	}
+
+	&__cards {
+		margin-top: 1.5rem;
+
+		@include for-size("tablet-landscape-up"){
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 32px;
+			grid-row-gap: 0px;
+		}
+
+		&--content {
+
+			@include for-size("tablet-landscape-up"){
+				grid-area: 1 / 1 / 2 / 2;
+			}
+		}
+
+		&--wrapper {
+
+			@include for-size("tablet-landscape-up"){
+				grid-area: 1 / 2 / 2 / 6;
+			}
+		}
+
+	}
+
+}

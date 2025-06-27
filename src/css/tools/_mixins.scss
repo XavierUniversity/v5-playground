@@ -157,7 +157,7 @@
 // determine the upper boundary.
 @mixin for-size($range) {
   $phone-upper-boundary: 600px !default;
-  $tablet-portrait-upper-boundary: 900px !default;
+  $tablet-portrait-upper-boundary: 1000px !default;
   $tablet-landscape-upper-boundary: 1200px !default;
   $desktop-upper-boundary: 1800px !default;
 

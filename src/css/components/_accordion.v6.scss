@@ -1,10 +1,11 @@
 .accordion{
-  border-bottom: 2px solid $moreYellow;
-  margin: 0;
+  margin: 1rem 0;
+  border-top: 2px solid $moreBlue;
 
-  @include for-size("tablet-landscape-up"){
-    margin: 2rem 0;  
-  }
+  &__wrapper { 
+    border-bottom: 2px solid $moreBlue;
+    padding: 1rem 0;
+  } 
   
   &__btn{
     display: flex;
@@ -12,16 +13,14 @@
     align-content: center;
     align-items: center;
     width: 100%;
-    border-top: 2px solid $moreYellow;
     text-align: left;
     font-size: 1rem;
-    padding: 1.25rem 0;
     margin-top: 0;
     transition: none;
     text-transform: none;
   }
-    
-  &__icon{
+
+   &__icon{
     float: right;
     height: 1rem;
     width: 1rem;
@@ -32,14 +31,26 @@
     
   &__content{
     display: none;
-    padding-left: 0;
-
-    @include for-size("tablet-landscape-up"){
-      padding-left: 2rem;
-    }
+    margin-top: 0.5rem;
 
     &.visible{
       display: block;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    padding-left: 0.25rem;
+  }
+}
+
+.palette__moreBlue {
+  
+  .accordion {
+    border-top: 2px solid $white !important;
+
+    &__wrapper { 
+      border-bottom: 2px solid $white !important;;
     }
   }
 }

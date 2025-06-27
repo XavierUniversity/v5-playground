@@ -1,0 +1,31 @@
+.tilecards {
+	padding: 2rem;
+	
+	@include for-size("tablet-landscape-up"){
+		padding: 6rem 2rem;
+	}
+	
+	&__wrapper {
+		position: relative;
+	}
+
+	&__title {
+		@include for-size("tablet-landscape-up"){
+			grid-area: 1 / 1 / 2 / 2;
+			padding-right: 2rem;
+		}
+	}
+
+	&__content {
+		@include for-size("tablet-landscape-up"){
+			grid-area: 1 / 2 / 2 / 5;
+		}
+
+		&--grid {
+			height: 100%;
+			grid-column-gap: 16px;
+			grid-row-gap: 32px;
+		}
+	}
+
+}

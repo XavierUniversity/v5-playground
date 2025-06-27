@@ -1,0 +1,77 @@
+.faces {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	
+	@include for-size("tablet-landscape-up"){
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+	
+	&__wrapper {
+		position: relative;
+
+		@include for-size("tablet-landscape-up"){
+		}
+	}
+
+	&__overlay {
+
+		&--image{ 
+			position: absolute;
+	        transform: translateX(-50%);
+	        width: 100px;
+	        height: 100px;
+	        pointer-events: none;
+	        top: calc(50% - 50px);
+		}
+	}
+
+	&__content {
+		padding-left: 2rem;
+
+		@include for-size("tablet-landscape-up"){
+			width: 50%;
+		}
+	}
+
+	&__kicker {
+		font-family: 'orpheuspro';
+		font-style: italic;
+    	font-size: 1.5rem;
+	}
+
+	&__headline {
+
+	}
+
+	&__info {
+
+	}
+
+	&__scroll {
+		display: none;
+
+		@include for-size("tablet-landscape-up"){
+		    display: block;
+		    flex: 1;
+		    align-content: center;
+		    padding-bottom: 1rem;
+		    text-align: right;
+		    padding-right: 2rem;
+		 }
+
+	    svg {
+		    width: 24px;
+		    height: 24px;
+		    margin-left: 1rem;
+		}
+    }
+
+    &__cards {
+    	display: flex;
+	    overflow-x: scroll;
+	    scroll-behavior: smooth;
+	    position: relative;
+    }
+
+}

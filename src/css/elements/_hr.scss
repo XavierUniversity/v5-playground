@@ -1,12 +1,12 @@
 hr{
-  border-color: $grey;
+  border-color: $moreGrey;
   border-width: px-to-rem(1.5px);
   border-style: solid;
   @include margin ( px-to-rem(24px), null, px-to-rem(24px), null);
 }
 
 hr.academic--hero__yellow {
-  border-color: $yellow;
+  border-color: $moreYellow;
   border-width: 0.16rem;
   border-style: solid;
   margin-top: 0;
@@ -16,7 +16,7 @@ hr.academic--hero__yellow {
 }
 
 hr.morex--yellow {
-    border-color: $yellow;
+    border-color: $moreYellow;
     border-width: 0.1rem;
     border-style: solid;
     width: 65px;
@@ -26,7 +26,7 @@ hr.morex--yellow {
 }
 
 hr.morex--blue {
-    border-color: $darkNavy;
+    border-color: $xavierBlue;
     border-width: 0.1rem;
     border-style: solid;
     width: 65px;
@@ -36,7 +36,7 @@ hr.morex--blue {
 }
 
 hr.morex--moreblue {
-    border-color: $medBlue;
+    border-color: $moreBlue;
     border-width: 0.1rem;
     border-style: solid;
     width: 65px;

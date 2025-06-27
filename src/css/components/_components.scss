@@ -4,14 +4,55 @@
 //
 // =====================================
 
-@import 'branding';
+
+// New Stuff
+@import 'secnavmenu'; 
+@import 'header.menu';	//replaces header.sidebar
+@import 'header.nav';	//replaces header.ui
+@import 'hero.v6';		//new hero
+@import 'footer.v6';	//new footer
+
+@import 'textimg';
+@import 'highlight.v6';	//new highlight section
+@import 'faq.v6';
+@import 'statrow';
+@import 'pageintro';
+@import 'news.v6';		//new news section
+@import 'programfeatures';
+@import 'morexcardrow';
+@import 'featurecard';
+@import 'ctafeature';
+@import 'tapstory';
+@import 'tilecards';
+@import 'testimonial.v6';	//new testimonial section
+@import 'seo.v6';	//new SEO section
+@import 'programlist';
+@import 'faces';
+@import 'ctabar';
+
+@import 'cards';		//ALL Cards
+@import 'navbar';
+@import 'programs';		//Academic Programs Listing
+@import 'accordion.v6';	//New Accordion
+
+@import 'icl';
+@import 'collage';
+@import 'tiles';
+
+@import 'contentpage.v6';	//new content page
+@import 'directory.v6';		// director page
+@import 'cdn.archive';	//old CDN styles for archiving
+@import 'shorthand';
+@import 'newsblog';		//used to be news, this is for the news and blog pages
+
+@import 'homepage.v6';	//new homepage
 
 @import 'header';
 @import 'header.ui';
 @import 'header.cta';
 @import 'header.search';
 @import 'header.sidebar';
-@import 'homepage';
+// @import 'homepage';
 @import 'user-panel';
 
 // Navigation Items
@@ -20,11 +61,11 @@
 @import 'buttons';
 
 // Footer
-@import 'footer';
+//@import 'footer';
 @import 'social';
 
 // Hero!
-@import 'hero';
+// @import 'hero';
 @import 'video';
 
 // content
@@ -32,16 +73,16 @@
 @import 'content';
 @import 'content.title';
 @import 'content.tabs';
-@import 'content.page';
-@import 'directory';
+//@import 'content.page';
+//@import 'directory';
 @import 'panel';
-@import 'accordion';
+//@import 'accordion';
 @import 'icltypez';
 @import 'img-content';
 @import 'columns';
 @import 'stats';
 @import 'list-cols';
-@import 'news';
+// @import 'news';
 @import 'social-highlight';
 @import 'media-object';
 @import 'adpage';
@@ -52,15 +93,15 @@
 @import 'outcomes';
 @import 'designed.wrapper';
 @import 'designed.cta';
-@import 'cdn';
+//@import 'cdn';
 @import 'select-box';
 @import 'cta-cards';
-@import 'cta-tiles';
-@import 'highlight';
+// @import 'cta-tiles';
+// @import 'highlight';
 @import 'recommended';
-@import 'testimonial';
+// @import 'testimonial';
 @import 'select-box';
-@import 'seo';
+//@import 'seo';
 @import 'statement';
 @import 'icon_block';
 @import 'event-list';
@@ -74,9 +115,10 @@
 @import 'quick-links';
 @import 'tooltip';
 @import 'plyr';
+
 // Custom shiz...
 @import 'influencers';
-@import 'faq';
+// @import 'faq';
 
 // Road
 @import 'road';

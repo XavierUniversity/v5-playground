@@ -1,0 +1,95 @@
+.textimg {
+	
+	&__wrapper {
+		padding: 2rem 1rem;
+
+		@include for-size("tablet-landscape-up"){
+			padding: 4rem 2rem;
+		}
+	}
+
+	&__content {
+
+		&--left {
+			display: flex;
+    		flex-direction: column;
+    		grid-area: 2 / 1 / 3 / 2; 
+
+    		@include for-size("tablet-landscape-up"){
+    			grid-area: unset;
+    		}
+		}
+
+		&--top {
+			align-content: start;
+    		flex: 1;
+
+    		@include for-size("tablet-landscape-up"){
+				padding-right: 100px;
+    		}
+		}
+
+		&--headline {
+			margin-top: 2rem;
+
+			@include for-size("tablet-landscape-up"){
+				margin-top: 0;
+			}
+		}
+
+		&--bottom {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+		}
+
+		&--linkbox {
+			width: 100%;
+			margin-top: 1.5rem;
+		    margin-right: 1rem;
+		    align-content: end;
+
+		    @include for-size("tablet-landscape-up"){
+		    	margin-top: 0;
+		    	margin-bottom: 0;
+		    }
+		}
+
+		&--flourishes {
+			width: fit-content;
+			display: contents;
+
+			@include for-size("tablet-landscape-up"){
+				width: 100px;
+		    	align-content: end;
+		    	display: block;
+		    }
+
+		    img {
+		    	width: 50px;
+		    	height: 50px;
+		    	max-width: none;
+
+		    	@include for-size("tablet-landscape-up"){
+		    		width: 100px;
+		    		height: 100px;
+		    	}
+		    }
+
+		}
+
+		&--right {
+			grid-area: 1 / 1 / 2 / 2;
+
+			@include for-size("tablet-landscape-up"){
+				grid-area: unset;
+			}
+		}
+
+		&--img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+}

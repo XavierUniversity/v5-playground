@@ -1,0 +1,56 @@
+.programFeatures {
+	
+	&__wrapper {
+		padding: 2rem 1rem;
+		display: flex;
+		flex-direction: column;
+
+		@include for-size("tablet-landscape-up"){
+			padding: 6rem 2rem;
+		}
+
+		&--top {
+			flex: 1;
+			display: flex;
+		}
+
+		&--bottom {
+			flex: 1;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 16px;
+			grid-row-gap: 0px;
+			overflow-x: scroll;
+    		padding-bottom: 2rem;
+    		scroll-behavior: smooth;
+
+    		@include for-size("tablet-landscape-up"){
+    			min-height: 300px;
+    		}
+		}
+
+	}
+
+	&__title {
+		font-size: 3rem;
+		line-height: 3rem;
+		font-weight: 400;
+		flex: 1;
+	}
+
+	.storycard {
+		width: 80vw;
+	}
+
+	.storycard__content--bottom{
+		margin-top: 1.5rem;
+	}
+
+}
+
+@media (min-width: 62.5rem) {
+	.programFeatures .storycard {
+		width: 100%;
+	}
+}

@@ -18,17 +18,25 @@ $base-fr-color-border:  #002317 !default;
 //   - desktop-up
 //   - big-desktop-up */
 $phone-upper-boundary:                              37.5rem;     // ~ 600px
-$tablet-portrait-upper-boundary:                    56.25rem;    // ~ 900px
+$tablet-portrait-upper-boundary:                    62.5rem;     // ~ 1000px
 $tablet-landscape-upper-boundary:                   85rem;       // ~ 1360px
 $desktop-upper-boundary:                            112.5rem;    // ~ 1800px
 
 // Colors
+$white:												#ffffff;
+$xavierBlue:										#0C2340;
+$moreBlue:											#1a1aff;
+$moreYellow:										#fcd612;
+$moreGrey:											#d7d3cc;
+$runningMan:										#0033a0;
+$austinGrey:										#f1f0ee;	// Content Page Left Nav
+$altGrey:											#5b5b5b;	
+
 $background:                                        white;
 $darkNavy:                                          #0C2340; // XAVIER BLUE
 $darkNavyHover:                                     null;
 $medBlue:                                           #1a1aff; // MORE BLUE
 $medBlueHover:                                      #61abe8; // PALE BLUE
-$runningMan:										#0033a0; // RUNNING MAN BLUE
 $grey:                                              #f1f1f9; // AUSTIN GREY
 $darkGrey:                                          #d7d3CC; // WARM GREY
 $darkestGrey:										#9ea2a3; // MORE GREY
@@ -50,7 +58,7 @@ $font-size:                                         1rem;       // 1rem     == 1
 $font-style:                                        normal;
 $font-variant:                                      normal;
 $font-weight:                                       200;
-$font-color:                                        #333333;
+$font-color:                                        $xavierBlue;
 $font-family:                                       "neuemontreal", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $line-height:                                       1.6;
 

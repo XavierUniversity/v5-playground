@@ -1,87 +1,46 @@
-$encodedBlue: #{encodeColor($runningMan)};
-$encodedBlueHover: encodeColor(darken($runningMan, 15%));
-$encodedWhite: encodeColor(#ffffff);
 
-.content, #content{
-  a{
-    transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
-    .icon{
-      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
-      color: $medBlue;
-      border-radius: 100%;
-      display: inline;
-      border: px-to-rem(3px) solid $darkGrey;
-      vertical-align: top;
-      width: px-to-rem(30px);
-      height: px-to-rem(30px);
-      @include margin(- px-to-rem(1.5px), px-to-rem(8px), null, null);
-    }
-    &:hover .icon, &:focus .icon, &:active .icon{
-      color: white;
-      background: $medBlue;
-      border-color: $medBlue;
+a{
+  color: $moreBlue;
+  text-decoration: underline;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 400;
+
+    &__item {
+        width: 100%;
+        margin-bottom: 0;
     }
 
-    &.link-arrow{
-      display: inline-block;
-      color: $runningMan;
-      text-decoration: none;
-      font-weight: 300;
-      &:after{
-        fill: $runningMan;
-        display: inline-block;
-        content: ' ';
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlue}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
-        background-size: px-to-rem(15px) px-to-rem(10px);
-        background-repeat: no-repeat;
-        height: px-to-rem(10px);
-        width: px-to-rem(15px);
-        @include margin(null, null, null, px-to-rem(8px));
-        transition: all 175ms ease;
-      }
-
-      &:hover, &:focus, &:active{
-        color: darken($runningMan, 15%);
-        &:after{
-          fill: darken($runningMan, 15%);
-          @include margin(null, null, null, px-to-rem(16px));
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedBlueHover}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
-        }
-      }
-
-      &--white{
-        color: white;
-        &:after{
-          fill: white;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedWhite}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
-        }
-
-        &:hover, &:focus, &:active{
-          color: white;
-          &:after{
-            fill: white;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='xu-link-arrow' fill='#{$encodedWhite}' viewBox='0 0 15 10' %3E%3Cpath d='M10.1,0.2c-0.2-0.2-0.5-0.2-0.8,0c-0.2,0.2-0.2,0.5,0,0.7l3.8,3.6H0.5C0.2,4.5,0,4.7,0,5 c0,0.3,0.2,0.5,0.5,0.5h12.6L9.3,9.1c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.6,0.2,0.8,0l4.7-4.5c0.2-0.2,0.2-0.5,0-0.7L10.1,0.2z' %3E%3C/path%3E%3C/svg%3E");
-          }
-        }
-      }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        line-height: 1;
+        margin-bottom: 0.25rem;
     }
-  }
 
-  a[class=""], a:not([class]){
-    color: $runningMan;
-    font-weight: 300;
-    text-decoration: underline;
-    display: inline;
-    &:hover, &:focus, &:active{
-      color: darken($runningMan, 15%);
+    &__link-arrow {
+        height: 12px;
+        width: 18px;
+        flex-shrink: 0;
+        margin-left: 10px;
     }
-  }
-  .alt-colors {
+
+    .alt-colors {
       color: #FCD612;
-      &:hover, &:focus, &:active{
-        color: #ffeb85;
-      }
-  }
+          &:hover, &:focus, &:active{
+            color: #ffeb85;
+        }
+    }
+}
+
+.back--arrow {
+    height: 16px;
+    width: 32px;
+    padding-bottom: 3px;
 }
 
 a[href^=tel]{

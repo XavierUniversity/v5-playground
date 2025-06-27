@@ -1,0 +1,185 @@
+.palette{
+	
+	&__xavierBlue {
+		background-color: $xavierBlue;
+		color: $white;
+
+		.altcolor {
+			color: $white;
+		}
+
+		.secondarycolor {
+			color: $moreBlue;
+		}
+
+		a {
+			color: $white;
+		}
+
+		.link {
+
+		    &__item {
+		        border-bottom: 1px solid $white;
+		    }
+		}
+
+		.hero {
+			&__menubox {
+		    	background-color: $moreBlue;
+		    }
+		}
+
+		.highlight {
+			&__content {
+				background-color: $xavierBlue;
+				@include for-size("tablet-landscape-up"){
+					background: unset;
+				}
+			}
+			&__right--linkbox {
+				background-color: $xavierBlue;
+			}
+		}
+
+		.accordion {
+			border-top: 2px solid $moreYellow !important;
+
+			&__wrapper {
+    			border-bottom: 1px solid $moreYellow !important;
+    		}
+
+			&__btn {
+				color: $white;
+			}
+
+		}
+
+	}
+
+	&__moreBlue {
+		background-color: $moreBlue;
+		color: $white;
+
+		.altcolor {
+			color: $white;
+		}
+
+		.secondarycolor {
+			color: $xavierBlue;
+		}
+
+		a {
+			color: $white;
+
+		}
+
+		.link {
+    
+		    &__item {
+		        border-bottom: 1px solid $white;
+		    }
+		}
+
+		.hero {
+			&__menubox {
+		    	background-color: $xavierBlue;
+		    }
+		}
+
+		.highlight {
+			&__content {
+				background-color: $moreBlue;
+				@include for-size("tablet-landscape-up"){
+					background: unset;
+				}
+			}
+			&__right--linkbox {
+				background-color: $moreBlue;
+			}
+		}
+
+		.accordion__btn {
+			color: $white;
+		}
+	}
+
+	&__white {
+		background-color: $white;
+		color: $xavierBlue;
+
+		.altcolor {
+			color: $moreBlue;
+
+			a {
+			color: $white;
+
+			}
+
+			.link {
+	    
+			    &__item {
+			        border-bottom: 1px solid $white;
+			    }
+			}
+		}
+
+		.secondarycolor {
+			color: $moreBlue;
+		}
+
+		a {
+			color: $moreBlue;
+
+		}
+
+		.link {
+    
+		    &__item {
+		        border-bottom: 1px solid $moreBlue;
+		    }
+		}
+
+		.hero {
+			&__menubox {
+		    	background-color: $xavierBlue;
+		    }
+		}
+
+		.highlight {
+			&__content {
+				background-color: $white;
+				@include for-size("tablet-landscape-up"){
+					background: unset;
+				}
+			}
+			&__right--linkbox {
+				background-color: $white;
+			}
+		}
+
+		.accordion__btn {
+			color: $xavierBlue;
+		}
+	}
+
+	&__runningMan {
+		background-color: $runningMan;
+		color: $white;
+
+		.altcolor {
+			color: $white;
+		}
+
+		a {
+			color: $white;
+
+		}
+
+		.link {
+    
+		    &__item {
+		        border-bottom: 1px solid $white;
+		    }
+		}
+	}
+}

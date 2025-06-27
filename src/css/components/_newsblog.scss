@@ -1,0 +1,115 @@
+.newsblog {
+
+	&--article{
+		
+		&__grid{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+			@include for-size("tablet-landscape-up"){
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				grid-template-rows: 1fr;
+				grid-column-gap: 16px;
+				grid-row-gap: 0px;
+				}
+		}
+	
+		&__image{
+			display: none;
+			@include for-size("tablet-landscape-up"){
+				display: block;
+			}
+		}
+		
+		&__title{
+			line-height: 1.25;
+			margin-bottom: 1.5rem;
+		}
+		
+		&__date{
+			font-weight: 400;
+			padding-right: px-to-rem(8px);
+		}
+		
+		&__author{
+			font-style: italic;
+			padding-left: px-to-rem(8px);
+		}
+	}
+	
+	&--listing{
+
+		@include for-size("tablet-landscape-up"){
+			margin-right: -7rem;
+		}
+		
+		h1{
+		margin-top: 0;
+		
+		}
+		
+		&__monthList{
+			background-color: #eee;
+			@include padding(px-to-rem(5px),px-to-rem(15px),px-to-rem(5px),px-to-rem(15px));
+			@include margin(px-to-rem(20px),null,px-to-rem(10px),null);
+			@include font-size(20px);
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		
+		&__articleList{
+			border: 1px solid #ededed;
+			display: flex;
+			max-height: px-to-rem(250px);
+			margin-bottom: px-to-rem(32px);
+			
+			&--artImg{
+				display: none;
+				 @include for-size("tablet-landscape-up"){
+					display: block;
+					flex: 2;
+					
+					img{
+						max-width:330px;
+						max-height:245px;
+					}
+				 }
+			}
+			
+			&--artLink {
+				flex: 3;
+				@include padding(px-to-rem(16px),null,null,px-to-rem(24px));
+				overflow: hidden;
+				
+				&__date{
+					font-weight: 400;
+				}
+				
+				&__title {
+					@include font-size(24px);
+					font-weight: 400;
+					color: #007DB3;
+				}
+				
+				&__summary{
+					margin-top: px-to-rem(8px);
+				}
+			}
+		}
+	}
+}
+
+#pagination button:disabled{
+    background: #aaa;
+    color: #fff;
+}
+
+#pagination button {
+    background: white;
+    border: 1px solid #aaa;
+    color: #1a1aff;
+    font-weight: 100;
+}

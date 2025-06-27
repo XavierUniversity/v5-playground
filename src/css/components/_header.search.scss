@@ -1,16 +1,26 @@
 .search__header{
-  background: white;
-  @include padding(px-to-rem(24px), px-to-rem(48px), px-to-rem(24px), px-to-rem(48px));
-  top: px-to-rem(-100px);
+  background-color: #1a1aff;
+  padding: 0;
+  box-shadow: none;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
   transition: all 400ms linear;
-  position: absolute;
   width: 100%;
-  box-shadow: 0 px-to-rem(15px) px-to-rem(16px) rgba(black, 0.10);
+  display: flex;
+
+  &--wrapper {
+    display: flex;
+    width: 70%;
+    margin: 0 2rem;
+    @include for-size(tablet-landscape-up){
+      width: calc(80% - 6rem);
+      margin: 0 auto;
+    }
+  }
 }
 
 .drawer--search.visible {
   .search__header{
-    @include margin(0, null, null, null);
     top:0;
     position: relative;
   }
@@ -18,7 +28,9 @@
 
 .site-search{
   width: 100%;
+  display: flex;
   @include margin(null, null, 0, null);
+  
   &__btn{
     color: white;
     background: $medBlue;
@@ -33,30 +45,23 @@
       border-color: $yellow;
     }
   }
-  
+
   &__icon{
-    color: lighten(black, 45%);
-    cursor: default;
-    height: px-to-rem(20px);
-    width: px-to-rem(20px);
-    position: absolute;
-      top:0;
-      left: 0;
-    @include margin(px-to-rem(40px), null, null, px-to-rem(20px));
-    @include for-size(tablet-landscape-up){
-      @include margin(null, null, null, px-to-rem(40px));
-    }
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    margin:0;
   }
+  
   &__input-text{
-    font-size: 1.25rem;
-    font-weight: 200;
-    border: solid 2px $grey;
-    @include margin(null, null, null, 0);
-    width: 90%;
-    @include padding(px-to-rem(10px), px-to-rem(9.6px), px-to-rem(10px), px-to-rem(9.6px));
-    @include for-size(tablet-landscape-up){
-      @include margin(null, null, null, px-to-rem(24px));  
-    }
+    height: 2rem;
+    font-size: 0.875rem;
+    border: none;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 1rem;
+    
     
     &:focus {
       ~ .site-search__icon{
@@ -71,13 +76,25 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
+
   &__close{
     position: absolute;
-    @include margin(px-to-rem(27px) !important, null, null, px-to-rem(10px));
+    margin: 0;
+    top: 10%;
+    right: 10%;
     @include for-size(tablet-landscape-up){
-      @include margin(null, null, null, px-to-rem(40px));
+      
     }
   }
+
+  &__wrapper {
+    height: 2rem;
+    width: 3rem;
+    background-color: #fcd612;
+    border: none;
+    cursor: pointer;
+  }
+
   &__intro{
     text-align: center;
     font-size: px-to-rem(20px);
@@ -87,6 +104,7 @@
       @include padding(null, 15%, null, 15%);  
     }
   }
+
   &__sidebar{
     display: none;
     width: px-to-rem(150px);

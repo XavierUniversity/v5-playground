@@ -1,0 +1,68 @@
+.ctaFeature {
+
+    &__wrapper {
+        padding: 2rem 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            padding: 6rem 0;
+            background-image:url('https://www.xavier.edu/_v6/_assets/images/common/x-angles.png');
+            background-size: cover;
+        }
+    }
+    
+    &__left {
+
+    }
+
+    &__main {
+
+        @include for-size("tablet-landscape-up"){
+            grid-area: 1 / 2 / 2 / 4;
+            text-align: center;
+            min-height: 25vw;
+            margin: 0px -4rem;
+        }
+    }
+
+    &__right {
+        
+    }
+
+    &__title {
+
+        &--primary {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+
+    &__primary {
+        margin-bottom: 2rem;
+
+        @include for-size("tablet-landscape-up"){
+            margin-bottom: 0;
+        }
+
+        &--multi {
+
+            a.btn.link-arrow {
+                margin: 0.5rem 1rem 0.5rem 0;
+
+                @include for-size("tablet-landscape-up"){
+                    margin: 2rem 1rem 4rem 1rem;
+                }
+            }
+
+        }
+    }
+
+    &__secondary {
+        grid-row-gap: 32px;
+
+        @include for-size("tablet-landscape-up"){
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
+        }
+    }
+
+}

@@ -1,0 +1,90 @@
+.ctabar {
+	background-color: $white;
+	padding: 2rem 0;
+	height: auto;
+
+	@include for-size("tablet-landscape-up") {
+		height: 150px;
+		padding: 0rem 2rem 6rem 2rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@include for-size("tablet-landscape-up") {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		flex-basis: 33vw;
+		height: 150px;
+		background-size: cover;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	    flex: 1;
+	    padding: 1rem;
+	    justify-content: space-between; 
+		align-items: center; 
+
+	    @include for-size("tablet-landscape-up"){
+			flex-basis: 67vw;
+			padding: 2rem;
+			flex-direction: row; 
+		}
+
+		&--text {
+			flex: 1; 
+			padding-right: 0;
+    		padding-bottom: 1rem;
+
+			@include for-size("tablet-landscape-up"){
+				padding-right: 2rem;
+				padding-bottom: 0;
+			}
+		}
+
+		&--kicker {
+			font-family: 'orpheuspro';
+			font-style: italic;
+			font-feature-settings: 'ss02';
+		}
+
+		&--title {
+			font-size: 2rem;
+			line-height: 2rem;
+		}
+
+		&--links {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start; // Align buttons to the left
+			justify-content: center; // Center buttons vertically
+			gap: 1rem; // Space between buttons
+			width: auto; // Adjust to auto width based on content
+		}
+
+		&--button {
+			width: 100%;
+			max-width: 300px;
+			align-content: center;
+			text-align: center;
+
+			a {
+				display: inline-block;
+				width: 100%;
+				white-space: nowrap; // Prevent text wrapping
+				padding: 0.75rem 1.5rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.btn__ctabar {
+    padding: .40rem 2rem !important;
+}

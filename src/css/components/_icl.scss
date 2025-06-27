@@ -1,0 +1,145 @@
+.iclstandard {
+	
+	&__main {
+
+		@include for-size("tablet-landscape-up"){
+			background-image:url('https://www.xavier.edu/_v6/_assets/images/common/x-angles.png');
+        	background-size: cover;
+        }
+
+        a {
+        	color: white !important;
+        }
+
+		&--left {
+			padding: 2rem 1rem;
+
+			@include for-size("tablet-landscape-up"){
+				padding: 6rem 2rem;
+			}
+		}
+
+		&--right {
+			padding: 2rem 1rem;
+
+			@include for-size("tablet-landscape-up"){
+				padding: 6rem 2rem;
+			}
+		}
+
+		&--center {
+			padding: 2rem 1rem;
+
+			@include for-size("tablet-landscape-up"){
+				flex-basis: 70%;
+				padding: 6rem 2rem;
+			}
+		}
+
+		&.palette__xavierBlue .iclstandard__main--svg {
+			color: $moreBlue;
+		}
+
+		&.palette__moreBlue .iclstandard__main--svg {
+			color: $xavierBlue;
+		}
+
+		&.palette__white .iclstandard__main--svg {
+			color: $xavierBlue;
+		}
+
+	}
+
+
+	&__wrapper {
+		padding: 2rem 1rem 3rem 1rem;
+
+		@include for-size("tablet-landscape-up"){
+			padding: 6rem 4rem 6rem 4rem;
+		}
+	}
+
+	&__section {
+	    grid-column-gap: 10vw;
+	    margin-bottom: 3rem;
+
+	    @include for-size("tablet-landscape-up"){
+	    	margin-bottom: 4rem;
+	    	min-height: 400px;
+	    }
+
+	    &:last-of-type {
+		    margin-bottom: 0;
+		}
+
+		&:nth-of-type(even) {
+
+			.iclstandard__section--right__flourish {
+
+				@include for-size("tablet-landscape-up"){
+					align-content: end;
+				}
+			}
+		}
+
+		&--left {
+			grid-area: 2 / 1 / 3 / 2;
+			margin-top:	1rem;
+
+			@include for-size("tablet-landscape-up"){
+				grid-area: 1 / 1 / 2 / 2;
+				margin-top: 0;
+			}
+
+			&__links {
+				margin-top: 3rem;
+
+				&.two-columns{
+					@include for-size("tablet-landscape-up"){
+						display: flex;
+	    				gap: 5rem;
+	    			}
+				}
+
+				.column {
+				    flex: 1;
+				    display: flex;
+				    flex-direction: column;
+				    padding-bottom: 1.5rem;
+				}
+			}
+		}
+
+		&--right {
+		    display: flex;
+		    grid-area: 1 / 1 / 2 / 2;
+
+		    @include for-size("tablet-landscape-up"){
+		    	grid-area: 1 / 2 / 2 / 3;
+		    }
+
+		    &__image {
+		    	width: 100%;
+			    min-height: 200px;
+			    background-size: cover;
+			    background-position: center;
+		    }
+
+		    &__flourish {	
+		    	flex: 0 0 50px;
+
+		    	@include for-size("tablet-landscape-up"){
+			    	flex: 0 0 100px;
+			    }
+			}
+		}
+	}
+
+	.link__item {
+		margin-bottom: 1.5rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

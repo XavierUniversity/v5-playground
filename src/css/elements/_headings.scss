@@ -14,7 +14,7 @@ $h5-mobile:                                         16px;
 $h5-mobile:                                         16px;
 
 // Heading font size
-$h1:                                                32px;
+$h1:                                                48px;
 $h2:                                                32px;
 $h3:                                                24px;
 $h4:                                                16px;
@@ -22,48 +22,57 @@ $h5:                                                16px;
 $h6:                                                16px;
 
 h1{
-  text-transform: uppercase;
-  color: $darkNavy;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin: 0 0 1rem 0;
   font-weight: 400;
-  @include font-size($h1-mobile, $heading-line-height-mobile);
-  line-height: px-to-rem(32px);
+
+  @include for-size("tablet-landscape-up"){
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 
 h2{
-  color: $darkNavy;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0 0 1rem 0;
   font-weight: 400;
-  @include font-size($h2-mobile, $heading-line-height-mobile);
-  line-height: px-to-rem(32px);
+  
+  @include for-size("tablet-landscape-up"){
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 h3{
-  color: $darkNavy;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0 0 1rem 0;
   font-weight: 400;
-  @include font-size($h3-mobile, $heading-line-height-mobile);
-  line-height: px-to-rem(24px);
-  &.mixed{
-    text-transform: none;
-    font-weight: 300;
+  
+  @include for-size("tablet-landscape-up"){
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
 h4,h5,h6{
-  color: $darkNavy;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 0 1rem 0;
   font-weight: 400;
-  @include font-size($h4-mobile, $heading-line-height-mobile);
+  
+  @include for-size("tablet-landscape-up"){
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
 
-@include for-size("desktop-up"){
-  h1{ @include font-size($h1); }
-  h2{ @include font-size($h2, $heading-line-height); }
-  h3{ @include font-size($h3, $heading-line-height); }
-  h4{ @include font-size($h4, $heading-line-height); }
-  h5{ @include font-size($h5, $heading-line-height); }
-  h5{ @include font-size($h6, $heading-line-height); }
-}
 
 p{
-  @include font-size(16px, 1.65);
+  font-size: 1rem;
+  line-height: 1.25rem;
   @include margin(0, null, px-to-rem(12px), null);
   /*&:first-of-type{
     @include margin(px-to-rem(16px), null, null, null);

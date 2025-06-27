@@ -1,0 +1,252 @@
+.footer {
+	 padding-top: 4rem;
+	 height: auto;
+	 background: $moreBlue;
+	 border-top: none;
+	 padding-bottom: 0;
+
+	@include for-size("tablet-landscape-up"){
+		min-height: 40vh;
+		display: flex;
+		flex-direction: column;
+		padding-top: 6rem;
+	}
+
+ 	&--wrapper {
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+		@include for-size("tablet-landscape-up"){
+			 width: 100%;
+			 padding-left: 2rem;
+			 padding-right: 2rem;
+			 flex: auto;
+			 align-content: end;
+		}
+	}
+
+ 	&--morex {
+		 
+		 width: 100%;
+		 margin-bottom: 100px;
+		 text-align: center;
+
+		&__img {
+			height: auto;
+
+			@include for-size("tablet-landscape-up"){
+			 	height: calc(100px + 7vw);
+			}
+		}
+	}
+
+	&--logo {
+		width: 100%;
+		height: auto;
+
+		@include for-size("tablet-landscape-up"){
+			width: 720px;
+			height: 170px;
+		}
+
+	}
+	
+	&--more {
+		 font-size: 4rem;
+		 color: #fff;
+		 line-height: 1;
+		 transform: scale(1);
+
+		 @include for-size("tablet-landscape-up"){
+			 font-size: 7vw;
+		 }
+	}
+
+	&--xavier {
+	 	color: $white;
+	}
+
+	&--policy {
+		 background-color: $xavierBlue;
+		 bottom: 0;
+		 width: 100%;
+
+		&__wrapper {
+		    display: block;
+		    padding-left: 2rem;
+		    padding-right: 2rem;
+		    padding-bottom: 1rem;
+
+			@include for-size("tablet-landscape-up"){
+		        display: grid;
+		        grid-template-columns: repeat(2, 1fr);
+		        grid-template-rows: 1fr;
+		        grid-column-gap: 0px;
+		        grid-row-gap: 0px;
+		        padding-bottom: 0;
+		    }
+		}
+
+		&__left {
+		    align-content: center;
+		    text-align: center;
+		    color: #fff;
+		    font-size: 12px;
+
+			@include for-size("tablet-landscape-up"){
+		        grid-area: 1 / 2 / 2 / 3;
+		        text-align: left;
+		    }
+		}
+
+		&__right {
+		    align-content: center;
+		    text-align: left;
+		    color: #fff;
+		    font-size: 12px;
+
+			@include for-size("tablet-landscape-up"){
+		        grid-area: 1 / 1 / 2 / 2;
+		    }
+		}
+	}
+	
+	&__left {
+		 align-content: center;
+		 text-align: center;
+		 color: #fff;
+		 font-size: 12px;
+
+		 @include for-size("tablet-landscape-up"){
+			 grid-area: 1 / 2 / 2 / 3;
+			 text-align: left;
+		}
+	}
+
+ 	&__right {
+		 align-content: center;
+		 text-align:left;
+		 color: #fff;
+		 font-size: 12px;
+		 
+		@include for-size("tablet-landscape-up"){
+			grid-area: 1 / 1 / 2 / 2;
+		}
+	}
+
+	 &__wrapper {
+		 display: block;
+		 padding-left: 2rem;
+		 padding-right: 2rem;
+		 padding-bottom: 1rem;
+
+		@include for-size("tablet-landscape-up"){
+			 display: grid;
+			 grid-template-columns: repeat(2, 1fr);
+			 grid-template-rows: 1fr;
+			 grid-column-gap: 0px;
+			 grid-row-gap: 0px;
+			 padding-bottom: 0;
+		}
+	}
+}
+
+
+
+.subnav-wrapper {
+	margin-top: 0;
+
+	@include for-size("tablet-landscape-up"){
+		 margin-top: 4rem;
+	}
+}
+
+.footer-flex {
+	display: block;
+	flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+	 @include for-size("tablet-landscape-up"){
+		display: flex;
+        flex-direction: row;
+	}
+
+	&__item {
+		text-align: left;
+
+		@include for-size("tablet-landscape-up"){
+			text-align: left;
+		}
+	}
+}
+
+ .branding__link {
+	 color: $white;
+	 padding-right: 2rem;
+	 font-size: 14px;
+	 font-weight: 400;
+}
+
+ .colophon.footer-flex__item {
+	text-align: center;
+	
+	@include for-size("tablet-landscape-up"){
+		 text-align: right;
+	}
+}
+
+
+ .policy-sub {
+	 display: block;
+	 font-size: 12px;
+	 float: none;
+	 text-align: left;
+	 margin-left: 0;
+	 padding-left: 0;
+	 list-style-type: none;
+	
+	@include for-size("tablet-landscape-up"){
+		 float: right;
+		 display: inline-flex;
+		 text-align: unset;
+	}
+}
+
+ .branding--footer__link {
+	 display: block;
+	 padding-bottom: 1rem;
+	 padding-right: 0;
+	 color: $white;
+	 font-size: 0.85rem;
+	 font-weight: 400;
+	 text-decoration: none;
+	
+	@include for-size("tablet-landscape-up"){
+		 display: inline-block;
+		 padding-right: 2rem;
+		 padding-bottom: 0;
+	}
+
+	&:hover {
+		color: $moreYellow;
+	}
+}
+
+.nav-colophon__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    padding-top: 0;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-left: 0;
+    transition: color 300ms ease;
+
+	@include for-size("tablet-landscape-up"){
+		 padding-left: 1rem;
+	}
+
+	&:hover {
+		color: $moreYellow;
+	}
+}

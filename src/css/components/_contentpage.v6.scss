@@ -1,0 +1,230 @@
+.contentpage {
+    display: block;
+
+    @include for-size("tablet-landscape-up"){
+        display: flex;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.25rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    &__topline {
+      display: none;
+      height: 1rem;
+      background-color: $moreBlue;
+    }
+
+    &__leftnav {
+        flex: none; 
+        background-color: $austinGrey;
+
+        @include for-size("tablet-landscape-up"){
+            flex: 0 0 25%;
+        }
+    }
+
+    &__main {
+        padding: 2rem 1rem;
+        width: 100%;
+
+        @include for-size("tablet-landscape-up"){
+            padding: 5rem 15rem 5rem 8rem;
+        }
+
+        @media only screen and (min-width: 1401px) {
+            padding: 5rem 20rem 5rem 8rem;
+        } 
+
+        >img {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__nav {
+
+        &--list {
+            
+            @include for-size("tablet-landscape-up"){
+                display: block;
+                overflow: unset;
+            }
+        }
+
+        &--item {
+            flex: none;
+            margin-right: 1.5rem;
+            align-content: center;
+            border: none;
+            border-bottom: 2px solid $moreGrey;
+            margin-right: 0;
+            font-weight: 700;
+
+            .active {
+                border-bottom: 2px solid $xavierBlue;
+            }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+        &--link {
+            color: $moreBlue;
+            text-decoration: none;
+            min-height: 3.5rem;
+            display: flex;
+            align-items: center;
+            padding-top: .625rem;
+            padding-bottom: .625rem;
+            line-height: 1.25rem;
+
+            &:hover {
+                color: $xavierBlue;
+            }
+
+            &.active {
+                color: $xavierBlue;
+            }
+        }
+
+        &--controls {
+            display: block;
+            background-color: $moreBlue;
+            color: $white;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: 700 !important;
+
+            svg {
+                margin-right: 1.5rem;
+            }
+
+        }
+    }
+
+    &__subnav {
+
+        &--list {
+            border-left: 2px solid $moreGrey;
+            padding-left: 1rem;
+            margin-top: 1.5rem;
+            margin-left: 0;
+            margin-bottom: 1.5rem;
+
+            .contentpage__nav--item {
+                border-bottom: none;
+                font-weight: 200;
+
+                .active {
+                    border-bottom: none;
+                    font-weight: 700;
+                }
+            }
+
+            .contentpage__nav--link {
+                min-height: 2.5rem;
+            }
+        }
+    }
+
+    &__blueline {
+        width: 100%;
+        height: 1rem;
+        background-color: $moreBlue;
+    }
+
+    &__nonav {
+        @include for-size("tablet-landscape-up"){
+            padding: 5rem 8rem !important;
+        }
+    }
+}
+
+
+.sidenav {
+    margin-top: 0;
+    padding: 0;
+
+    @include for-size("tablet-landscape-up"){
+        border: none;
+        margin-top: 0;
+        padding: 4rem 2rem;
+    }
+
+    &__content {
+        display: none;
+        padding: 1rem;
+
+        @include for-size("tablet-landscape-up"){
+            display: block;
+        }
+
+        &.visible {
+            display: block;
+            border-bottom: solid 0.125rem $moreGrey;
+        }
+    }
+    
+    &__btn {
+        width: 100%;
+        border-top: solid .125rem $moreGrey;
+        text-align: left;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        transition: none;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        @include for-size("tablet-landscape-up"){
+            display: none;
+        }
+    }
+
+    .img--fw {
+        max-width : 100% !important;
+        -ob-object-fit : unset !important;
+        object-fit : unset !important;
+        width : auto !important;
+        height : auto !important;
+        float: none !important;
+    }
+
+}

@@ -85,7 +85,6 @@
   
   &__item{
     flex-grow: 1;
-    @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
   }
 }
 

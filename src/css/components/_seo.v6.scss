@@ -1,0 +1,40 @@
+.seo {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	@include for-size("tablet-landscape-up"){
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
+	&__academic {
+		@include for-size("tablet-landscape-up"){
+			padding-top: 0 !important;
+		}
+	}
+
+	&__wrapper {
+		padding-left: 2rem;
+		padding-right: 2rem;
+
+		@include for-size("tablet-landscape-up"){
+		    width: calc(100vw - 40%);
+		    margin: 0 auto;
+		    padding: 0;
+		}
+	}
+
+	&__title {
+		font-family: 'orpheuspro';
+		font-style: italic;
+		font-size: 1rem !important;
+	}
+
+	&__text {
+		font-size: 0.75rem;
+		line-height: 1.5 !important;
+	}
+
+
+}

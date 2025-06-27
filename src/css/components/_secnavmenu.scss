@@ -1,0 +1,50 @@
+.secondary-menu {
+	display: block;
+    margin-top: 0;
+    margin-bottom: 3rem;
+
+    @include for-size(tablet-portrait-up){
+    	display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 36px;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    &__item {
+    	width: 100%;
+    	border-bottom: 2px solid $white;
+    	margin-bottom: 2rem;
+        font-size: 0.85rem;
+
+    	&:hover {
+		    border-bottom: 2px solid #fcd612;
+		}
+
+    	@include for-size(tablet-portrait-up){
+    		margin-bottom: 0;
+    	}
+
+    	a {
+    		color: $white;
+    		font-weight: 400;
+    		text-decoration: none !important;
+
+    		&:hover {
+			    color: $moreYellow;
+			}
+    	}
+
+    	&--wrapper {
+    		width: 100%;
+    	}
+    }
+
+    &__link-arrow {
+    	height: 12px;
+    	width: 18px;
+    	float: right;
+    }
+}

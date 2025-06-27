@@ -5,19 +5,21 @@
   background: $medBlue;
   border-radius: 0;
   text-align: center;
+}
 
-  a {
-    &.btn {
-      color: $xavierBlue !important;
-      background-color: $moreYellow !important;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none !important;
-      font-weight: 400;
-      padding: .75rem 2rem;
-    }
+a {
+  &.btn {
+    color: $xavierBlue !important;
+    border: none;
+    background-color: $moreYellow !important;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none !important;
+    font-weight: 400;
+    padding: .75rem 2rem;
   }
 }
+
 
 .o-btn {
   border:none;

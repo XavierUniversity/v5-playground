@@ -10,13 +10,9 @@
 		&--content {
 			padding: 0 0 2rem 0;
 
-			@include for-size("tablet-landscape-up"){
-				padding: 6rem 0 4rem 0;
-			}
-
 			&__title {
 				@include for-size("tablet-landscape-up"){
-					text-align: center;
+					text-align: left;
 				}
 			}
 		}

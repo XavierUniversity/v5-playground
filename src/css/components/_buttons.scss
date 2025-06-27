@@ -22,28 +22,12 @@ a {
 
 
 .o-btn {
-  border:none;
-  background: none;
-  transition: all 0.25s ease;
-  text-decoration: none;
-  font-weight: 400;
-  @include padding(px-to-rem(10.4px), px-to-rem(8px), px-to-rem(10.4px), px-to-rem(8px));
-  
-  @include for-size("phone-only"){
-    @include padding(px-to-rem(13px), px-to-rem(8px), px-to-rem(13px), px-to-rem(8px));  
-  }
-  
-  @include margin (px-to-rem(16px), null, px-to-rem(16px), null);
-  &:hover, &:focus, &:active{
-    background: $medBlue;
-    border-color: $yellow;
-    color: #fff;
-    @include padding(null, px-to-rem(8px), null, px-to-rem(8px));
-  }
-
-  &--dark-navy{
-    border-color: darken($darkNavy, 10%);
-  }
+    border: none;
+    background: none;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
 
   &--hero{
     background-color:rgba(0,0,0,0.55);

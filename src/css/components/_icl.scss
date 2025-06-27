@@ -11,29 +11,16 @@
         	color: white !important;
         }
 
-		&--left {
-			padding: 2rem 1rem;
-
-			@include for-size("tablet-landscape-up"){
-				padding: 6rem 2rem;
-			}
-		}
-
-		&--right {
-			padding: 2rem 1rem;
-
-			@include for-size("tablet-landscape-up"){
-				padding: 6rem 2rem;
-			}
-		}
-
 		&--center {
 			padding: 2rem 1rem;
 
 			@include for-size("tablet-landscape-up"){
-				flex-basis: 70%;
 				padding: 6rem 2rem;
 			}
+		}
+
+		&--title {
+			margin-bottom: 2rem !important;
 		}
 
 		&.palette__xavierBlue .iclstandard__main--svg {

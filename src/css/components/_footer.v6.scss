@@ -177,6 +177,7 @@
 
 		@include for-size("tablet-landscape-up"){
 			text-align: left;
+			flex-basis: 50%;
 		}
 	}
 }
